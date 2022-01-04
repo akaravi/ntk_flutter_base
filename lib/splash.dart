@@ -1,159 +1,153 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class Splash extends  StatelessWidget {
-Widget _getLogo() {
-  return Padding(
-    padding: const EdgeInsets.symmetric(vertical: 30.0),
-    child: Column(
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Flutter',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 50.0,
-              ),
-            ),
-            Text(
-              ' Quiz',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30.0,
-                fontFamily: 'Monda',
-              ),
-            ),
-          ],
-        ),
-        Text(
-          'Learn from scoring',
-          textScaleFactor: 0.8,
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20.0,
-              fontFamily: 'MavenPro',
-              letterSpacing: 2.0,
-              wordSpacing: 3.0),
-        ),
-      ],
-    ),
-  );
+class Splash extends StatefulWidget {
+  const Splash({Key key}) : super(key: key);
+
+  @override
+  _SplashState createState() => _SplashState();
 }
 
-Widget _getDescription() {
-  return Padding(
-    padding: const EdgeInsets.all(30.0),
-    child: Text(
-      'The fun app to learn Flutter from answering to questions. The Flutter framework for to build cross platform high quality native apps using single code base.',
-      textAlign: TextAlign.justify,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 17.0,
-        fontFamily: 'MovenPro',
-      ),
-    ),
-  );
-}
+class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
+  AnimationController controller;
+  Animation<double> animation;
 
-Material _getStartedButton() {
-  return Material(
-    color: Colors.white,
-    borderRadius: BorderRadius.circular(30.0),
-    child: InkWell(
-      splashColor: Colors.black12,
-      highlightColor: Colors.lightBlueAccent,
-      onTap: () {
-        print('go to start');
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 30.0),
-        child: Text(
-          'Get Started',
-          style: TextStyle(color: Colors.black, fontSize: 22.0, fontFamily: 'MovenPro'),
-        ),
-      ),
-    ),
-  );
-}
-
-Widget _getHelp() {
-  return Padding(
-    padding: const EdgeInsets.all(10.0),
-    child: GestureDetector(
-      onTap: () {
-        print('help me');
-      },
-      child: Text(
-        'Help',
-        style: TextStyle(color: Colors.white, fontFamily: 'MovenPro', fontSize: 18.0),
-      ),
-    ),
-  );
-}
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Stack(
-      children: <Widget>[
-        SplashBackground(),
-        SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              _getLogo(),
-              _getDescription(),
-              _getStartedButton(),
-              _getHelp(),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
-}
-
-class SplashBackground extends StatelessWidget {
-  Container _getFirstGradient() {
-    return new Container(
-      // margin: new EdgeInsets.only(top: 190.0),
-      // height: 110.0,
-      decoration: new BoxDecoration(
-        gradient: new LinearGradient(
-          colors: <Color>[new Color(0x001E88E5), new Color(0xFF1E88E5)],
-          stops: [0.0, 0.5],
-          begin: const FractionalOffset(0.0, 0.0),
-          end: const FractionalOffset(0.0, 1.0),
-        ),
-      ),
+  @override
+  void initState() {
+    super.initState();
+    controller = new AnimationController(
+      duration: Duration(milliseconds: 1000),
+      vsync: this,
     );
+    animation = Tween(begin: 0.0, end: 1.0).animate(controller)
+      ..addListener(() {
+        setState(() {});
+      });
+    controller.forward();
   }
 
-  Container _getSecondGradient() {
-    return new Container(
-      // margin: new EdgeInsets.only(top: 190.0),
-      // height: 110.0,
-      decoration: new BoxDecoration(
-        gradient: new LinearGradient(
-          colors: <Color>[new Color(0x00039BE5), new Color(0xFF039BE5)],
-          stops: [0.0, 0.5],
-          begin: const FractionalOffset(0.0, 1.0),
-          end: const FractionalOffset(0.0, 0.0),
-        ),
-      ),
-    );
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        _getFirstGradient(),
-        _getSecondGradient(),
-      ],
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
+    final background = Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/drawable/splash_background.jpg"),
+              fit: BoxFit.cover)),
+    );
+    final greenOpacity = Container(
+      color: Colors.black26.withAlpha(150),
+    );
+    final logo = Image.asset(
+      "assets/drawable/app_logo.png",
+      width: 180,
+      height: 180,
+    );
+    final appTitle = Text(
+      "APPNTK",
+      style: TextStyle(color: Colors.white),
+    );
+
+    var cortTextStyle = TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                        );
+    return Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          background,
+          greenOpacity,
+          SafeArea(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+            ),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Container(),
+                  flex: 1,
+                ),
+                ScaleTransition(scale: animation, child: logo),
+                FadeTransition(
+                  opacity: animation,
+                  child: SlideTransition(
+                    child: appTitle,
+                    position: Tween<Offset>(
+                            begin: Offset(0.0, -1.0), end: Offset.zero)
+                        .animate(controller),
+                  ),
+                ),
+                Expanded(
+                  child: Container(),
+                  flex: 2,
+                ),
+                ScaleTransition(
+                  scale: animation,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 42, vertical: 16),
+                    child: LinearProgressIndicator(
+                      value: .2,
+                      color: Colors.amber,
+                      backgroundColor: s[800],
+                      semanticsLabel: 'Linear progress indicator',
+                    ),
+                  ),
+                ),
+                FadeTransition(
+                  opacity: animation,
+                  child: Text(
+                    'getting device token',
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
+                ),
+                Expanded(
+                  child: Container(),
+                  flex: 1,
+                ),
+                FadeTransition(
+                  opacity: animation,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "@NTK CORP",
+                        style: cortTextStyle,
+                      ),
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Text('-',style: cortTextStyle,)
+                      ,   SizedBox(
+                        width: 12,
+                      ),
+                      Text(
+                        "Version 1.22",
+                        style: cortTextStyle,
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 23,
+                )
+              ],
+            ),
+          ))
+        ],
+      ),
     );
   }
+
+  ColorSwatch s = Colors.blueAccent;
 }

@@ -1,6 +1,6 @@
+import 'login.dart';
 import 'package:flutter/material.dart';
 
-import 'sp.dart';
 import 'splash.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new Sp(),
+      home: new Login(),
     );
   }
 }
