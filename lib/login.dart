@@ -213,7 +213,7 @@ class Login extends StatelessWidget {
                                     borderRadius:
                                         new BorderRadius.circular(30.0)),
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 24, vertical: 2),
+                                    horizontal: 24, vertical: 8),
                                 child: Icon(
                                   Icons.arrow_forward,
                                   color: this.primaryColor,
