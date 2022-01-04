@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -202,7 +201,8 @@ class Login extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 8),
                               child: Text('LOGIN...',
-                                  style: TextStyle(color: Colors.white,fontSize: 20)),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20)),
                             ),
                             Expanded(child: Container()),
                             Padding(
@@ -229,7 +229,7 @@ class Login extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 20.0,bottom: 20),
+                margin: const EdgeInsets.only(top: 20.0, bottom: 20),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: new Row(
                   children: <Widget>[
