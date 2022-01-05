@@ -14,7 +14,7 @@ class BlogContentModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkCategoryId')
     int linkCategoryId;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
     String description;
      @JsonKey(name:'Body')
