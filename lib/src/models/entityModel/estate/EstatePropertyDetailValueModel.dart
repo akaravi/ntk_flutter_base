@@ -10,7 +10,7 @@ class EstatePropertyDetailValueModel {
      @JsonKey(name:'LinkPropertyDetailId')
     String linkPropertyDetailId;
      @JsonKey(name:'PropertyDetail')
-    public EstatePropertyDetailModel ropertyDetail;
+    public EstatePropertyDetailModel propertyDetail;
      @JsonKey(name:'Value')
     String value;
      @JsonKey(name:'LinkHistoryId')

@@ -24,7 +24,7 @@ class CoreGuideModel extends BaseEntity<Long> {
      @JsonKey(name:' virtual_Parent')
     public CoreGuideModel  virtual_Parent;
      @JsonKey(name:'Parent')
-    public CoreGuideModel arent;
+    public CoreGuideModel parent;
      @JsonKey(name:'Children')
    List<CoreGuideModel> Children;
 }

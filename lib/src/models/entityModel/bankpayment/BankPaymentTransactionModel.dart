@@ -47,7 +47,7 @@ bool backedFromBank;
      @JsonKey(name:' virtual_PrivateSiteConfig')
     public BankPaymentPrivateSiteConfigModel virtual_PrivateSiteConfig;
      @JsonKey(name:'PrivateSiteConfig')
-    public BankPaymentPrivateSiteConfigModel rivateSiteConfig;
+    public BankPaymentPrivateSiteConfigModel privateSiteConfig;
 
      @JsonKey(name:'LinkModelShopCartId')
     long linkModelShopCartId;

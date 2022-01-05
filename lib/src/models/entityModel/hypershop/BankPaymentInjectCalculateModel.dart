@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 class BankPaymentInjectCalculateModel {
      @JsonKey(name:'Amount')
-   double Amount;
+   double amount;
      @JsonKey(name:'FeeTax')
    double feeTax;
      @JsonKey(name:'FeeTransport')

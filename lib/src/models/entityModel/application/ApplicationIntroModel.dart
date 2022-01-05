@@ -11,7 +11,7 @@ class ApplicationIntroModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Description')
     String description;
      @JsonKey(name:'Priority')
-    int riority;
+    int priority;
      @JsonKey(name:'LinkMainImageId')
     int linkMainImageId;
      @JsonKey(name:'LinkMainVideoId')

@@ -6,7 +6,7 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class HyperShopCategoryModel {
      @JsonKey(name:'Code')
-    String Code;
+    String code;
      @JsonKey(name:'Name')
     String name;
      @JsonKey(name:'Image')

@@ -26,6 +26,6 @@ bool isSearchable;
      @JsonKey(name:'LinkPropertyTypeLanduseId')
     String linkPropertyTypeLanduseId;
      @JsonKey(name:'PropertyDetails')
-   List<EstatePropertyDetailModel> ropertyDetails;
+   List<EstatePropertyDetailModel> propertyDetails;
    List<EstatePropertyDetailValueModel> ropertyValues;
 }

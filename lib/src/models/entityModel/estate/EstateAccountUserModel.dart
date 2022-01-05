@@ -24,16 +24,16 @@ class EstateAccountUserModel extends BaseModuleEntity<String> {
      @JsonKey(name:'DateManufacture')
     String DateManufacture;
      @JsonKey(name:'PlaceProduction')
-    String laceProduction;
+    String placeProduction;
      @JsonKey(name:'SerialRfId')
     String serialRfId;
      @JsonKey(name:'SerialNumber')
     String serialNumber;
      @JsonKey(name:'PhoneNumber')
-    String honeNumber;
+    String phoneNumber;
 
      @JsonKey(name:'Address')
-    String Address;
+    String address;
      @JsonKey(name:'LinkMainImageId')
     int linkMainImageId;
      @JsonKey(name:'LinkMainImageIdSrc')

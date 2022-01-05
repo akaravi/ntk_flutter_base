@@ -19,7 +19,7 @@ class CoreModuleProcessModel {
      @JsonKey(name:'TitleEn')
     String titleEn;
      @JsonKey(name:'ProcessName')
-    String rocessName;
+    String processName;
      @JsonKey(name:'Description')
     String description;
      @JsonKey(name:'LinkModuleId')

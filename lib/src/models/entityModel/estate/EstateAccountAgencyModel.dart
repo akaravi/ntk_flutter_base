@@ -25,9 +25,9 @@ class EstateAccountAgencyModel extends BaseModuleEntity<String> {
     double  geolocationlongitude;
 
      @JsonKey(name:'Address')
-    String Address;
+    String address;
      @JsonKey(name:'PhoneNumber')
-    String honeNumber;
+    String phoneNumber;
      @JsonKey(name:'LinkMainImageId')
     int linkMainImageId;
      @JsonKey(name:'LinkMainImageIdSrc')

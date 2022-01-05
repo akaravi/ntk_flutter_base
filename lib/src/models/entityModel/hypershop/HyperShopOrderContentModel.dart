@@ -12,7 +12,7 @@ class HyperShopOrderContentModel {
      @JsonKey(name:'Order')
     public hyperShopOrderModel order;
      @JsonKey(name:'Code')
-    String Code;
+    String code;
      @JsonKey(name:'Name')
     String name;
      @JsonKey(name:'Memo')
@@ -20,7 +20,7 @@ class HyperShopOrderContentModel {
      @JsonKey(name:'Price')
     double   price;
      @JsonKey(name:'Count')
-    int Count;
+    int count;
      @JsonKey(name:'TotalCount')
     int totalCount;
      @JsonKey(name:'Image')

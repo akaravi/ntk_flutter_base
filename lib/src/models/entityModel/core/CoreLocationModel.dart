@@ -18,7 +18,7 @@ class CoreLocationModel extends BaseEntity<Integer> {
      @JsonKey(name:' virtual_Parent')
        Object  virtual_Parent;
      @JsonKey(name:'Prent')
-       Object arent;
+       Object parent;
      @JsonKey(name:'Children')
       Object children;
 }

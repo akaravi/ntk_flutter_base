@@ -14,17 +14,17 @@ class BankPaymentPrivateSiteConfigModel extends BaseEntity<Long> {
      @JsonKey(name:'FixFeeTransactionAmount')
     int fixFeeTransactionAmount;
      @JsonKey(name:'PercentFeeTransactionAmount')
-    int ercentFeeTransactionAmount;
+    int percentFeeTransactionAmount;
      @JsonKey(name:'LinkPublicConfigId')
     int linkPublicConfigId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_PublicConfig')
     public BankPaymentPublicConfigModel virtual_PublicConfig;
      @JsonKey(name:'PublicConfig')
-    public BankPaymentPublicConfigModel ublicConfig;
+    public BankPaymentPublicConfigModel publicConfig;
 
      @JsonKey(name:'PrivateConfigJsonValues')
-    String rivateConfigJsonValues;
+    String privateConfigJsonValues;
      @JsonKey(name:'Memo')
     String memo;
      @JsonKey(name:'Transactions')

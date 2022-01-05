@@ -8,7 +8,7 @@ class HyperShopContentModel {
     public static String CURRENCY_UNIT = "ریال";
 
      @JsonKey(name:'Code')
-    String Code;
+    String code;
      @JsonKey(name:'Name')
     String name;
      @JsonKey(name:'Category')
@@ -25,7 +25,7 @@ bool Status;
      @JsonKey(name:'Price')
    double  price;
      @JsonKey(name:'Count')
-    int Count;
+    int c`ount;
      @JsonKey(name:'Unit')
     String unit;
 }

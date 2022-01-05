@@ -23,7 +23,7 @@ class CoreSiteModel {
      @JsonKey(name:' virtual_ParentCreator')
     public CoreSiteModel virtual_ParentCreator;
      @JsonKey(name:'ParentCreator')
-    public CoreSiteModel arentCreator;
+    public CoreSiteModel parentCreator;
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'OwnerSiteSetStatus')

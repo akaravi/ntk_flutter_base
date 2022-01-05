@@ -14,10 +14,10 @@ class BankPaymentPublicConfigModel extends BaseEntity<Long> {
      @JsonKey(name:'CurrencyUnit')
     String CurrencyUnit;
      @JsonKey(name:'PublicConfigJsonValues')
-    String ublicConfigJsonValues;
+    String publicConfigJsonValues;
      @JsonKey(name:'Memo')
     String memo;
      @JsonKey(name:'PrivateSiteConfigs')
-    List<BankPaymentPrivateSiteConfigModel> rivateSiteConfigs;
+    List<BankPaymentPrivateSiteConfigModel> privateSiteConfigs;
 
 }
