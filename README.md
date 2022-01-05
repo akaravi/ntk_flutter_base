@@ -1,6 +1,6 @@
-# Ntk_Flutter_Base
+# base
 
-A new Flutter project.
+A base project for ntk
 
 ## Getting Started
 
