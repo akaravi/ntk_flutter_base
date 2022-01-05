@@ -1,12 +1,10 @@
-
-
 import 'package:json_annotation/json_annotation.dart';
+
 @JsonSerializable()
 class SearchBoxThemeDtoModel {
+  @JsonKey(name: 'BgColor')
+  String bgColor;
 
-     @JsonKey(name:'BgColor')
-    String Color;
-
-     @JsonKey(name:'Image')
-    String image;
+  @JsonKey(name: 'Image')
+  String image;
 }

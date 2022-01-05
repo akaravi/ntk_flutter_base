@@ -14,7 +14,7 @@ class CoreCpMainMenuModel {
      @JsonKey(name:'TitleResourceLanguage')
     String titleResourceLanguage;
      @JsonKey(name:'Color')
-    String Color;
+    String color;
      @JsonKey(name:'TitleEn')
     String titleEn;
      @JsonKey(name:'Icon')
