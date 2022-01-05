@@ -50,7 +50,7 @@ bool isFavorite;
     double  geolocationlongitude;
 
      @JsonKey(name:'Address')
-    String Address;
+    String address;
 
      @JsonKey(name:'LinkMainImageId')
     int LinkMainImageId;

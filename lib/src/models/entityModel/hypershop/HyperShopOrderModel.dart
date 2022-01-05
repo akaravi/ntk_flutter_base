@@ -33,12 +33,12 @@ bool SystemMicroServiceIsSuccess;
      @JsonKey(name:'Mobile')
     String mobile;
      @JsonKey(name:'Address')
-    String Address;
+    String address;
 
      @JsonKey(name:'Products')
    List<HyperShopOrderContentModel>  products;
      @JsonKey(name:'Amount')
-   double Amount;
+   double amount;
      @JsonKey(name:'FeeTax')
    double feeTax;
      @JsonKey(name:'FeeTransport')
