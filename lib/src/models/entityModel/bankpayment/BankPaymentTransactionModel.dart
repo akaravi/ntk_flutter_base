@@ -5,9 +5,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BankPaymentTransactionModel extends BaseEntity<int> {
      @JsonKey(name:'TransactionStatus')
-    int TransactionStatus; //as EnumTransactionRecordStatus
+    int transactionStatus; //as EnumTransactionRecordStatus
      @JsonKey(name:'BankStatus')
-    int BankStatus;//as EnumTransactionBankStatus
+    int bankStatus;//as EnumTransactionBankStatus
      @JsonKey(name:'CurrencyUnit')
     String CurrencyUnit;
      @JsonKey(name:'CurrencyUnitRatioByShop')
@@ -15,15 +15,15 @@ class BankPaymentTransactionModel extends BaseEntity<int> {
      @JsonKey(name:'SuccessStatusMessage')
     String SuccessStatusMessage;
      @JsonKey(name:'LastStatusMessage')
-    String LastStatusMessage;
+    String lastStatusMessage;
      @JsonKey(name:'LastTransactionCheckMessage')
-    String LastTransactionCheckMessage;
+    String lastTransactionCheckMessage;
      @JsonKey(name:'BackedFromBank')
-bool BackedFromBank;
+bool backedFromBank;
      @JsonKey(name:'LinkPrivateSiteConfigId')
-    int LinkPrivateSiteConfigId;
+    int linkPrivateSiteConfigId;
      @JsonKey(name:'LinkUserId')
-    int LinkUserId;
+    int linkUserId;
      @JsonKey(name:'Amount')
     int Amount;
      @JsonKey(name:'AmountPure')
@@ -33,28 +33,28 @@ bool BackedFromBank;
      @JsonKey(name:'StampJsonFormatter')
    List<GetPropertiesInfoModel> StampJsonFormatter;
      @JsonKey(name:'RequestBackUserFromBankJsonValues')
-    String RequestBackUserFromBankJsonValues;
+    String requestBackUserFromBankJsonValues;
      @JsonKey(name:'RequestBackUserFromBankJsonFormatter')
-   List<GetPropertiesInfoModel> RequestBackUserFromBankJsonFormatter;
+   List<GetPropertiesInfoModel> requestBackUserFromBankJsonFormatter;
 
      @JsonKey(name:'OnlineDateLock')
-    String OnlineDateLock;
+    String onlineDateLock;
      @JsonKey(name:'OnlineDateUnlock')
-    String OnlineDateUnlock;
+    String onlineDateUnlock;
      @JsonKey(name:'LastUrlAddressInUse')
-    String LastUrlAddressInUse;
+    String lastUrlAddressInUse;
     // tslintdisable-next-line variable-name
      @JsonKey(name:' virtual_PrivateSiteConfig')
     public BankPaymentPrivateSiteConfigModel virtual_PrivateSiteConfig;
      @JsonKey(name:'PrivateSiteConfig')
-    public BankPaymentPrivateSiteConfigModel PrivateSiteConfig;
+    public BankPaymentPrivateSiteConfigModel rivateSiteConfig;
 
      @JsonKey(name:'LinkModelShopCartId')
-    long LinkModelShopCartId;
+    long linkModelShopCartId;
      @JsonKey(name:'ModelShopInvoiceSaleRelease')
-    bool ModelShopInvoiceSaleRelease;
+    bool modelShopInvoiceSaleRelease;
      @JsonKey(name:'ModelShopInvoiceSaleReleaseDate')
-    String ModelShopInvoiceSaleReleaseDate;
+    String modelShopInvoiceSaleReleaseDate;
      @JsonKey(name:'TransactionLogs')
-    public BankPaymentTransactionLogModel TransactionLogs;
+    public BankPaymentTransactionLogModel transactionLogs;
 }

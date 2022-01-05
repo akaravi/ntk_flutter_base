@@ -8,5 +8,5 @@ class ThemeConfigDtoModel {
     String AppForceUpdate;
 
      @JsonKey(name:'LayoutTheme')
-    String LayoutTheme;
+    String layoutTheme;
 }

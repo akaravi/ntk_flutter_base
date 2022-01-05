@@ -1,33 +1,31 @@
-package src.models.entityModel.core;
 
-import com.google.gson.annotations.SerializedName;
-
-import ntk.android.base.entitymodel.base.BaseEntity;
 
 import 'package:json_annotation/json_annotation.dart';
+
+import 'CoreSiteModel.dart';
 @JsonSerializable()
 class CoreDeviceModel extends BaseEntity<Long> {
      @JsonKey(name:'securityKey')
     String securityKey;
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'OSType')
-    int OSType;//as EnumOperatingSystemType
+    int oSType;//as EnumOperatingSystemType
      @JsonKey(name:'DeviceType')
-    int DeviceType;//as EnumDeviceType
+    int deviceType;//as EnumDeviceType
      @JsonKey(name:'PackageName')
-    String PackageName;
+    String packageName;
      @JsonKey(name:'DeviceIPsAllow')
-    String DeviceIPsAllow;
+    String deviceIPsAllow;
      @JsonKey(name:'LinkApplicationId')
-    int LinkApplicationId;
+    int linkApplicationId;
      @JsonKey(name:'LinkSiteId')
-    int LinkSiteId;// tslint:disable-next-line: variable-name
+    int linkSiteId;// tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_CmsSite')
-    public CoreSiteModel  virtual_CmsSite;
+     CoreSiteModel  virtual_CmsSite;
      @JsonKey(name:'CmsSite')
-    public CoreSiteModel CmsSite;
+     CoreSiteModel cmsSite;
 }
 

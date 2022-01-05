@@ -11,43 +11,43 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'CaseCode')
     String CaseCode;
     EnumRecordStatus MainAdminRecordStatus;
      @JsonKey(name:'CreatedYaer')
     int CreatedYaer;
      @JsonKey(name:'Partition')
-    int Partition;
+    int  partition;
      @JsonKey(name:'Area')
     int Area;
      @JsonKey(name:'LinkEstateUserId')
-    String LinkEstateUserId;
+    String linkEstateUserId;
 
      @JsonKey(name:'LinkLocationId')
-    int LinkLocationId;
+    int linkLocationId;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'LinkCmsUserId')
-    int LinkCmsUserId;
+    int linkCmsUserId;
      @JsonKey(name:'LinkPropertyTypeLanduseId')
     String LinkPropertyTypeLanduseId;
      @JsonKey(name:'LinkPropertyTypeUsageId')
     String LinkPropertyTypeUsageId;
      @JsonKey(name:'PropertyTypeLanduse')
-    public  EstatePropertyTypeLanduseModel PropertyTypeLanduse;
+    public  EstatePropertyTypeLanduseModel  propertyTypeLanduse;
      @JsonKey(name:'PropertyTypeUsage')
-    public EstatePropertyTypeUsageModel PropertyTypeUsage;
+    public EstatePropertyTypeUsageModel  propertyTypeUsage;
      @JsonKey(name:'Favorited')
-bool IsFavorite;
+bool isFavorite;
     /// <summary>@NOTIC must be integer
     /// موقعیت جغرافیایی
     /// </summary>
      @JsonKey(name:'Geolocationlatitude')
-    double  Geolocationlatitude;
+    double  geolocationlatitude;
 
      @JsonKey(name:'Geolocationlongitude')
-    double  Geolocationlongitude;
+    double  geolocationlongitude;
 
      @JsonKey(name:'Address')
     String Address;
@@ -72,7 +72,7 @@ bool IsFavorite;
      @JsonKey(name:'ScoreSumPercent')
     int ScoreSumPercent;
      @JsonKey(name:'ViewCount')
-    int ViewCount;
+    int viewCount;
     // * AboutAgent */
      @JsonKey(name:'AboutAgentTel')
     String AboutAgentTel;
@@ -89,9 +89,9 @@ bool IsFavorite;
    List<EstateContractModel> Contracts;
 
      @JsonKey(name:'PropertyDetailValues')
-   List<EstatePropertyDetailValueModel> PropertyDetailValues;
+   List<EstatePropertyDetailValueModel>  propertyDetailValues;
      @JsonKey(name:'PropertyDetailGroups')
-   List<EstatePropertyDetailGroupModel> PropertyDetailGroups;
+   List<EstatePropertyDetailGroupModel>  propertyDetailGroups;
 
      @JsonKey(name:'LinkMainImageIdSrc')
     String LinkMainImageIdSrc;
@@ -103,7 +103,7 @@ bool IsFavorite;
      * برای انتصا مسقیم فایل آپلود شده
      */
      @JsonKey(name:'UploadFileGUID')
-   List<String> UploadFileGUID;
+   List<String> uploadFileGUID;
 
      @JsonKey(name:'LinkLocationIdTitle')
     public  String LinkLocationIdTitle;

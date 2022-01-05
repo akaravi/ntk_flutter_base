@@ -13,9 +13,9 @@ class PollingContentModel extends BaseModuleEntity<int> {
      @JsonKey(name:'ExpireDate')
     String ExpireDate;
      @JsonKey(name:'ViewStatisticsBeforeVote')
-bool ViewStatisticsBeforeVote;
+bool viewStatisticsBeforeVote;
      @JsonKey(name:'ViewStatisticsAfterVote')
-bool ViewStatisticsAfterVote;
+bool viewStatisticsAfterVote;
      @JsonKey(name:' virtual_Category')
      PollingCategoryModel  virtual_Category;
      @JsonKey(name:'Category')
@@ -25,47 +25,47 @@ bool ViewStatisticsAfterVote;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'FromDate')
-    String FromDate;
+    String fromDate;
      @JsonKey(name:'Geolocationlatitude')
-    double  Geolocationlatitude;
+    double  geolocationlatitude;
      @JsonKey(name:'Geolocationlongitude')
-    double  Geolocationlongitude;
+    double  geolocationlongitude;
      @JsonKey(name:'Keyword')
-    String Keyword;
+    String keyword;
      @JsonKey(name:'LinkCategoryId')
-    int LinkCategoryId;
+    int linkCategoryId;
 //     @JsonKey(name:'LinkFileIds')//todo ask karavi must be array
 //    String LinkFileIds;
      @JsonKey(name:'LinkFilePodcastId')
-    int LinkFilePodcastId;
+    int linkFilePodcastId;
      @JsonKey(name:'LinkFileMovieId')
-    int LinkFileMovieId;
+    int linkFileMovieId;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'ScoreClick')
     int ScoreClick;
      @JsonKey(name:'ScoreSumPercent')
     int ScoreSumPercent;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'ViewCount')
-    int ViewCount;
+    int viewCount;
      @JsonKey(name:'Favorited')
-bool Favorited;
+bool favorited;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
      @JsonKey(name:'LinkFilePodcastIdSrc')
-    String LinkFilePodcastIdSrc;
+    String linkFilePodcastIdSrc;
      @JsonKey(name:'LinkFileMovieIdSrc')
-    String LinkFileMovieIdSrc;
+    String linkFileMovieIdSrc;
 //     @JsonKey(name:'LinkFileIdsSrc')//todo ask karavi must be array
 //    String LinkFileIdsSrc;
      @JsonKey(name:'Question')
-    String Question;
+    String question;
      @JsonKey(name:'MaxVoteForThisContent')
-    int MaxVoteForThisContent;
+    int maxVoteForThisContent;
      @JsonKey(name:'MaxVoteForEachOption')
-    int MaxVoteForEachOption;
+    int maxVoteForEachOption;
      @JsonKey(name:'Options')
-   List<PollingOptionModel> Options;
+   List<PollingOptionModel> options;
 }

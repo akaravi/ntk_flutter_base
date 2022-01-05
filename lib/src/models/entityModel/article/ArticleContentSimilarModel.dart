@@ -4,11 +4,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ArticleContentSimilarModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'LinkSourceid')
-    String LinkSourceid;
+    String linkSourceid;
      @JsonKey(name:'LinkDestinationid')
-    String LinkDestinationid;
+    String linkDestinationid;
      @JsonKey(name:' virtual_Source')
     String  virtual_Source;
      @JsonKey(name:'Source')
@@ -16,5 +16,5 @@ class ArticleContentSimilarModel extends BaseModuleEntity<int> {
      @JsonKey(name:' virtual_Destination')
     String  virtual_Destination;
      @JsonKey(name:'Destination')
-    String Destination;
+    String destination;
 }

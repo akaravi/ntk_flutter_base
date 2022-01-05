@@ -4,31 +4,31 @@ import 'package:json_annotation/json_annotation.dart';
 class TicketingAnswerModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'LinkTaskId')
-    int LinkTaskId;
+    int linkTaskId;
      @JsonKey(name:'LinkMemberUserId')
-    int LinkMemberUserId;
+    int linkMemberUserId;
      @JsonKey(name:'HtmlBody')
-    String HtmlBody;
+    String htmlBody;
      @JsonKey(name:' virtual_Ticket')
      TicketingTaskModel  virtual_Ticket;
      @JsonKey(name:'Ticket')
-     TicketingTaskModel Ticket;
+     TicketingTaskModel ticket;
      @JsonKey(name:'LinkTicketingDepartemenId')
-    int LinkTicketingDepartemenId;
+    int linkTicketingDepartemenId;
      @JsonKey(name:' virtual_Departemen')
      TicketingDepartemenModel  virtual_Departemen;
      @JsonKey(name:'Departemen')
-     TicketingDepartemenModeldepartemen;
+     TicketingDepartemenModel departemen;
      @JsonKey(name:'LinkTypeOperatorId')
-    int LinkTypeOperatorId;
+    int linkTypeOperatorId;
      @JsonKey(name:' virtual_DepartemenOperator')
      TicketingDepartemenOperatorModel  virtual_DepartemenOperator;
      @JsonKey(name:'DepartemenOperator')
-     TicketingDepartemenOperatorModeldepartemenOperator;
+     TicketingDepartemenOperatorModel departemenOperator;
      @JsonKey(name:'LinkFileIds')
-    String LinkFileIds;
+    String linkFileIds;
      @JsonKey(name:'LinkFileIdsSrc')
-   List<String> LinkFileIdsSrc;
+   List<String> linkFileIdsSrc;
      @JsonKey(name:'UploadFileGUID')
-   List<String> UploadFileGUID;
+   List<String> uploadFileGUID;
 }

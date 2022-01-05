@@ -4,20 +4,20 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BankPaymentPublicConfigModel extends BaseEntity<Long> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'ClassName')
     String ClassName;
      @JsonKey(name:'LinkModuleFileLogoId')
-    long LinkModuleFileLogoId;
+    long linkModuleFileLogoId;
      @JsonKey(name:'LinkModuleFileLogoIdSrc')
-    String LinkModuleFileLogoIdSrc;
+    String linkModuleFileLogoIdSrc;
      @JsonKey(name:'CurrencyUnit')
     String CurrencyUnit;
      @JsonKey(name:'PublicConfigJsonValues')
-    String PublicConfigJsonValues;
+    String ublicConfigJsonValues;
      @JsonKey(name:'Memo')
-    String Memo;
+    String memo;
      @JsonKey(name:'PrivateSiteConfigs')
-    List<BankPaymentPrivateSiteConfigModel> PrivateSiteConfigs;
+    List<BankPaymentPrivateSiteConfigModel> rivateSiteConfigs;
 
 }

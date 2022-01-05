@@ -8,22 +8,22 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstateContractTypeModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'HasSalePrice')
-bool HasSalePrice;
+bool hasSalePrice;
      @JsonKey(name:'HasRentPrice')
-bool HasRentPrice;
+bool hasRentPrice;
      @JsonKey(name:'HasDepositPrice')
-bool HasDepositPrice;
+bool hasDepositPrice;
      @JsonKey(name:'UnitSalePrice')
-    String UnitSalePrice;
+    String unitSalePrice;
 
      @JsonKey(name:'UnitRentPrice')
-    String UnitRentPrice;
+    String unitRentPrice;
      @JsonKey(name:'UnitDepositPrice')
-    String UnitDepositPrice;
+    String unitDepositPrice;
 
      @JsonKey(name:'SalePriceAllowAgreement')
 bool SalePriceAllowAgreement;
@@ -33,11 +33,11 @@ bool SalePriceAllowAgreement;
     int SalePriceMax;
 
      @JsonKey(name:'RentPriceAllowAgreement')
-bool RentPriceAllowAgreement;
+bool rentPriceAllowAgreement;
      @JsonKey(name:'RentPriceMin')
-    int RentPriceMin;
+    int rentPriceMin;
      @JsonKey(name:'RentPriceMax')
-    int RentPriceMax;
+    int rentPriceMax;
 
      @JsonKey(name:'DepositPriceAllowAgreement')
 bool DepositPriceAllowAgreement;
@@ -47,9 +47,9 @@ bool DepositPriceAllowAgreement;
     int DepositPriceMax;
 
      @JsonKey(name:'TitleSalePrice')
-    String TitleSalePrice;
+    String titleSalePrice;
      @JsonKey(name:'TitleDepositPrice')
-    String TitleDepositPrice;
+    String titleDepositPrice;
      @JsonKey(name:'TitleRentPrice')
-    String TitleRentPrice;
+    String titleRentPrice;
 }

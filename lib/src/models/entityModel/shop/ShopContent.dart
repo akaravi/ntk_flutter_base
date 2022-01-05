@@ -13,44 +13,44 @@ import 'ShopProductSalePrice.dart';
 class ShopContent extends BaseModuleEntity<int> {
 
      @JsonKey(name:'LinkCategoryId')
-    int LinkCategoryId;
+    int linkCategoryId;
 
      @JsonKey(name:'Title')
     String title;
 
      @JsonKey(name:'Description')
-    String Description;
+    String description;
 
      @JsonKey(name:'ProductUnit')
-    String ProductUnit;
+    String  productUnit;
 
      @JsonKey(name:'Price')
-    double  Price;
+    double   price;
 
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
 
      @JsonKey(name:'LinkFileIds')
-    String LinkFileIds;
+    String linkFileIds;
 
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
 
      @JsonKey(name:'MostSaleSerial')
-   bool MostSaleSerial;
+   bool mostSaleSerial;
 
      @JsonKey(name:'InvoiceSaleDetails')
-  List<ShopInvoiceSaleDetail> InvoiceSaleDetails;
+  List<ShopInvoiceSaleDetail> invoiceSaleDetails;
      @JsonKey(name:'ProductProductItems')
-  List<ShopProductProductItem> ProductProductItems;
+  List<ShopProductProductItem>  productProductItems;
      @JsonKey(name:'ProductProductCombines')
-  List<ShopProductProductCombine> ProductProductCombines;
+  List<ShopProductProductCombine>  productProductCombines;
      @JsonKey(name:'ProductProductServices')
-  List<ShopProductProductService> ProductProductServices;
+  List<ShopProductProductService>  productProductServices;
      @JsonKey(name:'ProductProductProcesses')
-  List<ShopProductProductProcess> ProductProductProcesses;
+  List<ShopProductProductProcess>  productProductProcesses;
      @JsonKey(name:'ProductSalePrices')
-  List<ShopProductSalePrice> ProductSalePrices;
+  List<ShopProductSalePrice>  productSalePrices;
 
      @JsonKey(name:'LinkFileIdsSrc')
    List<String> LinkFileIdsSrc;

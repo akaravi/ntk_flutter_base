@@ -4,25 +4,25 @@ import 'package:json_annotation/json_annotation.dart';
 class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'LinkUserId')
-    int LinkUserId;
+    int linkUserId;
      @JsonKey(name:'LinkMemberId')
-    int LinkMemberId;
+    int linkMemberId;
      @JsonKey(name:'DeviceStatus')
-    public EnumDeviceStatus DeviceStatus;
+     EnumDeviceStatus deviceStatus;
      @JsonKey(name:'DeviceId')
-    String DeviceId;
+    String deviceId;
      @JsonKey(name:'DeviceBrand')
-    String DeviceBrand;
+    String deviceBrand;
      @JsonKey(name:'SimCard')
     String SimCard;
      @JsonKey(name:'Country')
-    String Country;
+    String country;
      @JsonKey(name:'Language')
-    String Language;
+    String language;
      @JsonKey(name:'NotificationId')
-    String NotificationId;
+    String notificationId;
      @JsonKey(name:'LinkApplicationId')
-    int LinkApplicationId;
+    int linkApplicationId;
      @JsonKey(name:'Application')
     public ApplicationAppModel Application;
      @JsonKey(name:'AppBuildVer')
@@ -30,11 +30,11 @@ class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
      @JsonKey(name:'AppSourceVer')
     String AppSourceVer;
      @JsonKey(name:'DeviceIP')
-    String DeviceIP;
+    String deviceIP;
      @JsonKey(name:'LocationLat')
-    String LocationLat;
+    String locationLat;
      @JsonKey(name:'LocationLong')
-    String LocationLong;
+    String locationLong;
      @JsonKey(name:'ScorePercent')
     int ScorePercent;
      @JsonKey(name:'ScoreComment')

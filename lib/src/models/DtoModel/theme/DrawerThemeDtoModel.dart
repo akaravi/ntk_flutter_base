@@ -7,10 +7,10 @@ import 'DrawerChildThemeDtoModel.dart';
 class DrawerThemeDtoModel {
 
      @JsonKey(name:'Type')
-    int Type;
+    int type;
 
      @JsonKey(name:'HeaderImage')
-    String HeaderImage;
+    String headerImage;
 
      @JsonKey(name:'CircleImage')
     String CircleImage;

@@ -9,10 +9,10 @@ class ThemeChildDtoModel {
     int SortId;
 
      @JsonKey(name:'LayoutTheme')
-    int LayoutTheme;
+    int layoutTheme;
 
      @JsonKey(name:'LayoutName')
-    String LayoutName;
+    String layoutName;
 
      @JsonKey(name:'LayoutChildConfig')
    List<ThemeChildConfigDtoModel> LayoutChildConfigs;
@@ -21,5 +21,5 @@ class ThemeChildDtoModel {
    List<ThemeChildConfigDtoModel> LayoutConfig;
 
      @JsonKey(name:'LayoutRequest')
-    String LayoutRequest;
+    String layoutRequest;
 }

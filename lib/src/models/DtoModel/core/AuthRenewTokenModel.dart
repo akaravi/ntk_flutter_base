@@ -3,13 +3,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AuthRenewTokenModel {
   @JsonKey(name: 'SiteId')
-  int SiteId;
+  int siteId;
   @JsonKey(name: 'UserId')
-  int UserId;
+  int userId;
   @JsonKey(name: 'UserAccessAdminAllowToAllData')
-  bool UserAccessAdminAllowToAllData;
+  bool userAccessAdminAllowToAllData;
   @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
-  bool UserAccessAdminAllowToProfessionalData;
+  bool userAccessAdminAllowToProfessionalData;
   @JsonKey(name: 'Lang')
-  String Lang;
+  String lang;
 }

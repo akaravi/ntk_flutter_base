@@ -1,28 +1,24 @@
-package src.models.entityModel.core;
 
-import com.google.gson.annotations.SerializedName;
-
-import ntk.android.base.entitymodel.base.BaseEntity;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreLocationModel extends BaseEntity<Integer> {
      @JsonKey(name:'Title')
-  public   String Title;
+     String title;
      @JsonKey(name:'LinkParentId')
-    public  Integer LinkParentId;
+      int linkParentId;
      @JsonKey(name:'LinkParentIdNode')
-    public  String LinkParentIdNode;
+      String linkParentIdNode;
      @JsonKey(name:'GeoLocationLatitude')
-    double  GeoLocationLatitude;
+    double  geoLocationLatitude;
      @JsonKey(name:'GeoLocationLongitude')
-    public  Double GeoLocationLongitude;
+      double geoLocationLongitude;
      @JsonKey(name:'LocationType')
-    public   Integer LocationType;
+       int locationType;
      @JsonKey(name:' virtual_Parent')
-    public   Object  virtual_Parent;
+       Object  virtual_Parent;
      @JsonKey(name:'Prent')
-    public   Object Parent;
+       Object arent;
      @JsonKey(name:'Children')
-    public  Object Children;
+      Object children;
 }

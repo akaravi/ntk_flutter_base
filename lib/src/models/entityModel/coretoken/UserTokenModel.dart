@@ -1,43 +1,36 @@
-package src.models.entityModel.coretoken;
-
-import com.google.gson.annotations.SerializedName;
-
-import ntk.android.base.entitymodel.base.BaseEntity;
-import ntk.android.base.entitymodel.enums.EnumManageUserAccessAreaTypes;
-import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class UserTokenModel extends BaseEntity<String> {
 
      @JsonKey(name:'LinkUserId')
-    int LinkUserId;
+    int linkUserId;
      @JsonKey(name:'LinkMemberUserId')
-    int LinkMemberUserId;
+    int linkMemberUserId;
      @JsonKey(name:'LinkSiteId')
-    int LinkSiteId;
+    int linkSiteId;
      @JsonKey(name:'DeviceClientMAC')
-    String DeviceClientMAC;
+    String deviceClientMAC;
      @JsonKey(name:'LinkDeviceId')
-    int LinkDeviceId;
+    int linkDeviceId;
      @JsonKey(name:'Token')
-    String Token;
+    String token;
      @JsonKey(name:'ExpireDate')
     String ExpireDate;
      @JsonKey(name:'UserAccessAreaType')
-    public EnumManageUserAccessAreaTypes UserAccessAreaType;
+    public EnumManageUserAccessAreaTypes userAccessAreaType;
      @JsonKey(name:'UserType')
-    public EnumManageUserAccessControllerTypes UserType;
+    public EnumManageUserAccessControllerTypes userType;
      @JsonKey(name:'UserAccessAdminAllowToAllData')
-bool UserAccessAdminAllowToAllData;
+bool userAccessAdminAllowToAllData;
      @JsonKey(name:'UserAccessAdminAllowToProfessionalData')
-bool UserAccessAdminAllowToProfessionalData;
+bool userAccessAdminAllowToProfessionalData;
      @JsonKey(name:'RememberOnDevice')
-bool RememberOnDevice;
+bool rememberOnDevice;
      @JsonKey(name:'BrowserLanguage')
-    String BrowserLanguage;
+    String browserLanguage;
      @JsonKey(name:'UserLanguage')
-    int UserLanguage;
+    int userLanguage;
 
 
 }

@@ -6,37 +6,37 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreModuleModel {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'TitleML')
-    String TitleML;
+    String titleML;
      @JsonKey(name:'TitleResourceLanguage')
-    String TitleResourceLanguage;
+    String titleResourceLanguage;
      @JsonKey(name:'ClassName')
-    String ClassName;
+    String className;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'AdministratorIsActivate')
 bool AdministratorIsActivate;
      @JsonKey(name:'ModuleConfigAdminMainJson')
-    String ModuleConfigAdminMainJson;
+    String moduleConfigAdminMainJson;
      @JsonKey(name:'ModuleConfigAdminMainJsonForm')
-    String ModuleConfigAdminMainJsonForm;
+    String moduleConfigAdminMainJsonForm;
      @JsonKey(name:'ModuleConfigSiteAccessDefaultJson')
-    String ModuleConfigSiteAccessDefaultJson;
+    String moduleConfigSiteAccessDefaultJson;
      @JsonKey(name:'ModuleConfigSiteAccessJsonFrom')
-    String ModuleConfigSiteAccessJsonFrom;
+    String moduleConfigSiteAccessJsonFrom;
      @JsonKey(name:'ModuleConfigSiteDefaultJson')
-    String ModuleConfigSiteDefaultJson;
+    String moduleConfigSiteDefaultJson;
      @JsonKey(name:'ModuleConfigSiteJsonForm')
-    String ModuleConfigSiteJsonForm;
+    String moduleConfigSiteJsonForm;
      @JsonKey(name:'ModuleSiteStorageValuesJsonForm')
-    String ModuleSiteStorageValuesJsonForm;
+    String moduleSiteStorageValuesJsonForm;
      @JsonKey(name:'ModuleSites')
-    String ModuleSites;
+    String moduleSites;
      @JsonKey(name:'CmsCpMainMenu')
-    String CmsCpMainMenu;
+    String cmsCpMainMenu;
      @JsonKey(name:'CmsModuleProcess')
-    String CmsModuleProcess;
+    String cmsModuleProcess;
      @JsonKey(name:'CmsSiteCategoryCmsModule')
-    String CmsSiteCategoryCmsModule;
+    String cmsSiteCategoryCmsModule;
 }

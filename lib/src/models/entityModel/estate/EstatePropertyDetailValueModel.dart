@@ -6,13 +6,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyDetailValueModel {
      @JsonKey(name:'Id')
-    String Id;
+    String id;
      @JsonKey(name:'LinkPropertyDetailId')
-    String LinkPropertyDetailId;
+    String linkPropertyDetailId;
      @JsonKey(name:'PropertyDetail')
-    public EstatePropertyDetailModel PropertyDetail;
+    public EstatePropertyDetailModel ropertyDetail;
      @JsonKey(name:'Value')
-    String Value;
+    String value;
      @JsonKey(name:'LinkHistoryId')
-    String LinkHistoryId;
+    String linkHistoryId;
 }

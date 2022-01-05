@@ -10,17 +10,17 @@ class CoreLogLikeModel extends BaseModuleEntity<String> {
 
 
      @JsonKey(name:'ModuleName')
-    String ModuleName;
+    String moduleName;
      @JsonKey(name:'ModuleEntityName')
-    String ModuleEntityName;
+    String moduleEntityName;
      @JsonKey(name:'LinkUserId')
-    int LinkUserId;
+    int linkUserId;
      @JsonKey(name:'LinkMemberUserId')
-    int LinkMemberUserId;
+    int linkMemberUserId;
      @JsonKey(name:'EntityId')
-    int EntityId;
+    int entityId;
      @JsonKey(name:'Likked')
-bool Likked;
+bool likked;
      @JsonKey(name:'ExistBeforAndChangeNow')
-bool ExistBeforAndChangeNow;
+bool existBeforAndChangeNow;
 }

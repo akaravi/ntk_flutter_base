@@ -5,28 +5,28 @@ import 'package:json_annotation/json_annotation.dart';
 class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'TypeId')
-    String TypeId;
+    String typeId;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'LinkSourceId')
-    int LinkSourceId;
+    int linkSourceId;
      @JsonKey(name:' virtual_Source')
     public ApplicationSourceModel  virtual_Source;
      @JsonKey(name:'source')
     public ApplicationSourceModel Source;
      @JsonKey(name:'ThemeConfigBuilderJsonValues')
-    String ThemeConfigBuilderJsonValues;
+    String themeConfigBuilderJsonValues;
      @JsonKey(name:'ThemeConfigRuntimeJsonValues')
-    String ThemeConfigRuntimeJsonValues;
+    String themeConfigRuntimeJsonValues;
      @JsonKey(name:'ThemeConfigLayoutJsonValues')
-    String ThemeConfigLayoutJsonValues;
+    String themeConfigLayoutJsonValues;
      @JsonKey(name:'ThemeConfigJsonValues')
-    String ThemeConfigJsonValues;
+    String themeConfigJsonValues;
      @JsonKey(name:'ThemeConfigLayouts')
-   List<ThemeConfigLayoutModel> ThemeConfigLayouts;
+   List<ThemeConfigLayoutModel> themeConfigLayouts;
      @JsonKey(name:'Applications')
-   List<ApplicationAppModel> Applications;
+   List<ApplicationAppModel> applications;
 
 }

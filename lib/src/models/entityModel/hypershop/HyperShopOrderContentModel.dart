@@ -8,25 +8,25 @@ class HyperShopOrderContentModel {
     public static String CURRENCY_UNIT = "ریال";
 
      @JsonKey(name:'LinkOrderId')
-    int LinkOrderId;
+    int linkOrderId;
      @JsonKey(name:'Order')
-    public HyperShopOrderModel Order;
+    public hyperShopOrderModel order;
      @JsonKey(name:'Code')
     String Code;
      @JsonKey(name:'Name')
-    String Name;
+    String name;
      @JsonKey(name:'Memo')
-    String Memo;
+    String memo;
      @JsonKey(name:'Price')
-    double  Price;
+    double   price;
      @JsonKey(name:'Count')
     int Count;
      @JsonKey(name:'TotalCount')
-    int TotalCount;
+    int totalCount;
      @JsonKey(name:'Image')
-    String Image;
+    String image;
      @JsonKey(name:'Unit')
-    String Unit;
+    String unit;
 
     @Override
 bool equals(Object obj) {

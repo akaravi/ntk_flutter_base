@@ -6,15 +6,15 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BiographyContentOtherInfoModel {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'HtmlBody')
-    String HtmlBody;
+    String htmlBody;
      @JsonKey(name:'Source')
     String Source;
      @JsonKey(name:'LinkContentId')
-    int LinkContentId;
+    int linkContentId;
      @JsonKey(name:'TypeId')
-    integer TypeId;
+    integer typeId;
      @JsonKey(name:'virtual_Content')
     public BiographyContentModel virtual_Content;
      @JsonKey(name:'Content')

@@ -10,21 +10,21 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreGuideModel extends BaseEntity<Long> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'BodyFa')
-    String BodyFa;
+    String bodyFa;
      @JsonKey(name:'BodyEn')
-    String BodyEn;
+    String bodyEn;
      @JsonKey(name:'BodyAr')
-    String BodyAr;
+    String bodyAr;
      @JsonKey(name:'LinkFileIds')
-    String LinkFileIds;
+    String linkFileIds;
      @JsonKey(name:'LinkParentId')
-    int LinkParentId;
+    int linkParentId;
      @JsonKey(name:' virtual_Parent')
     public CoreGuideModel  virtual_Parent;
      @JsonKey(name:'Parent')
-    public CoreGuideModel Parent;
+    public CoreGuideModel arent;
      @JsonKey(name:'Children')
    List<CoreGuideModel> Children;
 }

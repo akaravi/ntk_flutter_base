@@ -4,29 +4,29 @@ import 'package:json_annotation/json_annotation.dart';
 class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'LinkApplicationMemberId')
-    int LinkApplicationMemberId;
+    int linkApplicationMemberId;
      @JsonKey(name:'MemberInfo')
-    public ApplicationMemberInfoModel MemberInfo;
+    public ApplicationMemberInfoModel memberInfo;
      @JsonKey(name:'LinkApplicationId')
-    int LinkApplicationId;
+    int linkApplicationId;
      @JsonKey(name:'Application')
     public ApplicationAppModel Application;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Content')
-    String Content;
+    String content;
      @JsonKey(name:'ContentType')
-    public EnumNotificationType ContentType;
+    public EnumNotificationType contentType;
      @JsonKey(name:'contentJson')
-    String ContentJson;
+    String contentJson;
      @JsonKey(name:'ContentJsonClass')
-    String ContentJsonClass;
+    String contentJsonClass;
      @JsonKey(name:'SmallImageId')
     int SmallImageId;
      @JsonKey(name:'BigImageId')
-    int BigImageId;
+    int bigImageId;
      @JsonKey(name:'SmallImageIdSrc')
     String SmallImageIdSrc;
      @JsonKey(name:'BigImageIdSrc')
-    String BigImageIdSrc;
+    String bigImageIdSrc;
 }

@@ -1,25 +1,32 @@
-
+import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import 'TicketingAnswerModel.dart';
+import 'TicketingDepartemenModel.dart';
+import 'TicketingDepartemenOperatorModel.dart';
+import 'TicketingFaqModel.dart';
+import 'TicketingTaskModel.dart';
+
 @JsonSerializable()
 class TicketingDepartemenLogModel extends BaseModuleEntity<int> {
-     @JsonKey(name:'LinkFromOperatorId')
-    int LinkFromOperatorId;
-     @JsonKey(name:'FromOperator')
-     TicketingDepartemenOperatorModel FromOperator;
-     @JsonKey(name:'LinkFromTicketingDepartemenId')
-    int LinkFromTicketingDepartemenId;
-     @JsonKey(name:'FromTicketingDepartemen')
-     TicketingDepartemenModel FromTicketingDepartemen;
-     @JsonKey(name:'LinkToTicketingDepartemenId')
-    int LinkToTicketingDepartemenId;
-     @JsonKey(name:'ToTicketingDepartemen')
-     TicketingDepartemenModel ToTicketingDepartemen;
-     @JsonKey(name:'Tickets')
-   List<TicketingTaskModel> Tickets;
-     @JsonKey(name:'TicketAnswers')
-   List<TicketingAnswerModel> TicketAnswers;
-     @JsonKey(name:'Faqs')
-   List<TicketingFaqModel> Faqs;
-     @JsonKey(name:'Operators')
-   List<TicketingDepartemenOperatorModel> Operators;
+  @JsonKey(name: 'LinkFromOperatorId')
+  int linkFromOperatorId;
+  @JsonKey(name: 'FromOperator')
+  TicketingDepartemenOperatorModel fromOperator;
+  @JsonKey(name: 'LinkFromTicketingDepartemenId')
+  int linkFromTicketingDepartemenId;
+  @JsonKey(name: 'FromTicketingDepartemen')
+  TicketingDepartemenModel fromTicketingDepartemen;
+  @JsonKey(name: 'LinkToTicketingDepartemenId')
+  int linkToTicketingDepartemenId;
+  @JsonKey(name: 'ToTicketingDepartemen')
+  TicketingDepartemenModel toTicketingDepartemen;
+  @JsonKey(name: 'Tickets')
+  List<TicketingTaskModel> tickets;
+  @JsonKey(name: 'TicketAnswers')
+  List<TicketingAnswerModel> ticketAnswers;
+  @JsonKey(name: 'Faqs')
+  List<TicketingFaqModel> faqs;
+  @JsonKey(name: 'Operators')
+  List<TicketingDepartemenOperatorModel> operators;
 }

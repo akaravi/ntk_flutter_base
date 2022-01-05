@@ -4,15 +4,15 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ArticleCommentModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkContentId')
-    int LinkContentId;
+    int linkContentId;
      @JsonKey(name:'LinkParentId')
-    int LinkParentId;
+    int linkParentId;
      @JsonKey(name:'Writer')
-    String Writer;
+    String writer;
      @JsonKey(name:'Comment')
     String Comment;
      @JsonKey(name:'RegisterDate')
-    String RegisterDate;
+    String registerDate;
      @JsonKey(name:'SumLikeClick')
     int SumLikeClick;
      @JsonKey(name:'SumDisLikeClick')

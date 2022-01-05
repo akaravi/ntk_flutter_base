@@ -10,18 +10,18 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyTypeUsageModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
 
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'IconFont')
-    String IconFont;
+    String iconFont;
      @JsonKey(name:'IconColor')
-    String IconColor;
+    String iconColor;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
      @JsonKey(name:'PropertyTypes')
-   List<EstatePropertyTypeModel> PropertyTypes;
+   List<EstatePropertyTypeModel>  propertyTypes;
 }

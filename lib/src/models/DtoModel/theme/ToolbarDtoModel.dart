@@ -11,7 +11,7 @@ import 'ShoppingCartThemeDtoModel.dart';
 class ToolbarDtoModel {
 
      @JsonKey(name:'Type')
-    int Type;
+    int type;
 
      @JsonKey(name:'BackgroundColor')
     String BackgroundColor;
@@ -20,7 +20,7 @@ class ToolbarDtoModel {
     String ColorBelowLine;
 
      @JsonKey(name:'HamberMenu')
-     HamberMenuThemeDtoModel HamberMenuThemeDtoModel;
+     HamberMenuThemeDtoModel hamberMenuThemeDtoModel;
 
      @JsonKey(name:'SearchBox')
      SearchBoxThemeDtoModel SearchBox;

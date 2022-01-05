@@ -8,7 +8,7 @@ import 'ToolbarDtoModel.dart';
 class ThemeDtoModel {
 
      @JsonKey(name:'Toolbar')
-     ToolbarDtoModel Toolbar;
+     toolbarDtoModel toolbar;
 
      @JsonKey(name:'ThemeConfigLayout')
    List<ThemeChildDtoModel> Childs;

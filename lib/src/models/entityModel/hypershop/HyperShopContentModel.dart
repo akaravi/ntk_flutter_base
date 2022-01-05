@@ -10,7 +10,7 @@ class HyperShopContentModel {
      @JsonKey(name:'Code')
     String Code;
      @JsonKey(name:'Name')
-    String Name;
+    String name;
      @JsonKey(name:'Category')
     String Category;
      @JsonKey(name:'CategoryCode')
@@ -19,13 +19,13 @@ class HyperShopContentModel {
 bool Status;
 
      @JsonKey(name:'Image')
-    String Image;
+    String image;
      @JsonKey(name:'Memo')
-    String Memo;
+    String memo;
      @JsonKey(name:'Price')
-   double Price;
+   double  price;
      @JsonKey(name:'Count')
     int Count;
      @JsonKey(name:'Unit')
-    String Unit;
+    String unit;
 }

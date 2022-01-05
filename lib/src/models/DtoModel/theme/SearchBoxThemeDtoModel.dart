@@ -8,5 +8,5 @@ class SearchBoxThemeDtoModel {
     String Color;
 
      @JsonKey(name:'Image')
-    String Image;
+    String image;
 }

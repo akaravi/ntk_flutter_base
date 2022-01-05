@@ -1,18 +1,18 @@
-
+import 'package:base/src/models/DtoModel/theme/ThemeConfigDtoModel.dart';
+import 'package:base/src/models/DtoModel/theme/ThemeDtoModel.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
 class AppThemeDtoModel {
+  @JsonKey(name: 'AppThemeId')
+  int appThemeId;
 
-     @JsonKey(name:'AppThemeId')
-    int AppThemeId;
+  @JsonKey(name: 'AppThemeTypeId')
+  String appThemeTypeId;
 
-     @JsonKey(name:'AppThemeTypeId')
-    String AppThemeTypeId;
+  @JsonKey(name: 'ThemeConfigLayout')
+  List<ThemeConfigDtoModel> themeConfigLayout;
 
-     @JsonKey(name:'ThemeConfigLayout')
-   List<ThemeConfigDtoModel> ThemeConfigLayout;
-
-     @JsonKey(name:'ThemeConfigJson')
-    public ThemeDtoModel ThemeConfigJson;
+  @JsonKey(name: 'ThemeConfigJson')
+  ThemeDtoModel themeConfigJson;
 }

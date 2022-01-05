@@ -3,27 +3,27 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class MainResponseDtoModel {
   @JsonKey(name: 'AppTitle')
-  String AppTitle;
+  String appTitle;
   @JsonKey(name: 'AppUrl')
-  String AppUrl;
+  String appUrl;
   @JsonKey(name: 'AppId')
-  int AppId;
+  int appId;
   @JsonKey(name: 'AppVersion')
-  int AppVersion;
+  int appVersion;
   @JsonKey(name: 'AppForceUpdate')
-  bool AppForceUpdate;
+  bool appForceUpdate;
   @JsonKey(name: 'AppThemeId')
-  int AppThemeId;
+  int appThemeId;
   @JsonKey(name: 'UserId')
-  int UserId;
+  int userId;
   @JsonKey(name: 'MemberUserId')
-  int MemberUserId;
+  int memberUserId;
   @JsonKey(name: 'SiteId')
-  int SiteId;
+  int siteId;
   @JsonKey(name: 'LastUpdateSource')
-  String LastUpdateSource;
+  String lastUpdateSource;
   @JsonKey(name: 'LastUpdateTheme')
-  String LastUpdateTheme;
+  String lastUpdateTheme;
   @JsonKey(name: 'LastUpdateApp')
-  String LastUpdateApp;
+  String lastUpdateApp;
 }

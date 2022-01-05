@@ -5,11 +5,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AuthUserForgetPasswordModel {
   @JsonKey(name: 'CaptchaKey')
-  String CaptchaKey;
+  String captchaKey;
   @JsonKey(name: 'CaptchaText')
-  String CaptchaText;
+  String captchaText;
   @JsonKey(name: 'Email')
-  String Email;
+  String email;
   @JsonKey(name: 'Mobile')
-  String Mobile;
+  String mobile;
 }

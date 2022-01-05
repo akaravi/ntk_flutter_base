@@ -8,11 +8,11 @@ import 'ShopProductProcess.dart';
 @JsonSerializable()
 class ShopProductProductProcess extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkProductProcessId')
-    int LinkProductProcessId;
+    int linkProductProcessId;
      @JsonKey(name:'LinkProductId')
-    int LinkProductId;
+    int linkProductId;
      @JsonKey(name:'ProductProcess')
-      ShopProductProcess ProductProcess;
+      ShopProductProcess  productProcess;
      @JsonKey(name:'Content')
-     ShopContent Content;
+     ShopContent content;
 }

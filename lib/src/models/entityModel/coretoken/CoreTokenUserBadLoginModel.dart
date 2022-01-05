@@ -8,10 +8,10 @@ class CoreTokenUserBadLoginModel extends UserTokenModel {
      @JsonKey(name:'DeviceId')
     String DeviceId;
      @JsonKey(name:'RequestDate')
-    String RequestDate;
+    String requestDate;
      @JsonKey(name:'UsedUsername')
-    String UsedUsername;
+    String usedUsername;
      @JsonKey(name:'UsedPwd')
-    String UsedPwd;
+    String usedPwd;
 
 }

@@ -8,33 +8,33 @@ import 'package:json_annotation/json_annotation.dart';
 class PollingCategoryModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'CurrencyUnitRatioByShop')
     int CurrencyUnitRatioByShop;
      @JsonKey(name:'MaxTransactionAmount')
-    int MaxTransactionAmount;
+    int maxTransactionAmount;
      @JsonKey(name:'MinTransactionAmount')
-    int MinTransactionAmount;
+    int minTransactionAmount;
      @JsonKey(name:'FixFeeTransactionAmount')
-    int FixFeeTransactionAmount;
+    int fixFeeTransactionAmount;
      @JsonKey(name:'PercentFeeTransactionAmount')
-    int PercentFeeTransactionAmount;
+    int  percentFeeTransactionAmount;
      @JsonKey(name:'LinkPublicConfigId')
-    int LinkPublicConfigId;
+    int linkPublicConfigId;
      @JsonKey(name:' virtual_PublicConfig')
      BankPaymentPublicConfigModel virtual_PublicConfig;
      @JsonKey(name:'PublicConfig')
-     BankPaymentPublicConfigModel PublicConfig;
+     BankPaymentPublicConfigModel  publicConfig;
      @JsonKey(name:'PrivateConfigJsonValues')
-    String PrivateConfigJsonValues;
+    String  privateConfigJsonValues;
      @JsonKey(name:'Memo')
-    String Memo;
+    String memo;
      @JsonKey(name:'Transactions')
-   List<BankPaymentTransactionModel> Transactions;
+   List<BankPaymentTransactionModel> transactions;
      @JsonKey(name:'LinkModuleFileLogoIdSrc')
-    String LinkModuleFileLogoIdSrc;
+    String linkModuleFileLogoIdSrc;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
 }

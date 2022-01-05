@@ -10,23 +10,23 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyTypeLanduseModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'TitleCreatedYaer')
-    String TitleCreatedYaer;
+    String titleCreatedYaer;
      @JsonKey(name:'TitlePartition')
-    String TitlePartition;
+    String titlePartition;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'IconFont')
-    String IconFont;
+    String iconFont;
      @JsonKey(name:'IconColor')
-    String IconColor;
+    String iconColor;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
      @JsonKey(name:'PropertyTypes')
-   List<EstatePropertyTypeModel> PropertyTypes;
+   List<EstatePropertyTypeModel>  propertyTypes;
      @JsonKey(name:'PropertyDetails')
-   List<EstatePropertyDetailModel> PropertyDetails;
+   List<EstatePropertyDetailModel>  propertyDetails;
 }

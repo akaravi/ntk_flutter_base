@@ -3,8 +3,8 @@ package src.models.entityModel.enums;
 public enum EnumTransactionBankStatus {
     None(0),
     Error(1),
-    Paid(2),
-    Pending(3),
+    aid(2),
+    ending(3),
     Confirmed(4),
     DeniedConfirmed(5);
     private final int index;

@@ -8,9 +8,9 @@ class LinkManagementTargetShortLinkSetDtoModel {
      @JsonKey(name:'CaptchaText')
     String CaptchaText;
      @JsonKey(name:'UrlAddress')
-    String UrlAddress;
+    String urlAddress;
      @JsonKey(name:'Description')
     String description;
      @JsonKey(name:'UploadFileKey')
-    String UploadFileKey;
+    String uploadFileKey;
 }

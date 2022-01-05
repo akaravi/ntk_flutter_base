@@ -3,13 +3,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AuthMobileConfirmDtoModel {
     @JsonKey(name: 'CaptchaKey')
-    String CaptchaKey;
+    String captchaKey;
     @JsonKey(name:'CaptchaText')
-    String CaptchaText;
+    String captchaText;
     @JsonKey(name:'LinkUserId')
-    int LinkUserId;
+    int linkUserId;
     @JsonKey(name:'Mobile')
-    String Mobile;
+    String mobile;
     @JsonKey(name:'Code')
-    String Code;
+    String code;
 }

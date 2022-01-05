@@ -5,25 +5,25 @@ class AppMainLayoutMainRequestModel extends BaseModuleEntity<int> {
 
 
      @JsonKey(name:'UserId')
-    int UserId;
+    int userId;
      @JsonKey(name:'MemberUserId')
-    int MemberUserId;
+    int memberUserId;
      @JsonKey(name:'SiteId')
     String SiteId;
      @JsonKey(name:'AppTitle')
-    String AppTitle;
+    String appTitle;
      @JsonKey(name:'AppUrl')
-    String AppUrl;
+    String appUrl;
      @JsonKey(name:'AppId')
-    int AppId;
+    int appId;
      @JsonKey(name:'AppVersion')
-    int AppVersion;
+    int appVersion;
      @JsonKey(name:'LastUpdateSource')
-    String LastUpdateSource;
+    String lastUpdateSource;
      @JsonKey(name:'LastUpdateTheme')
-    String LastUpdateTheme;
+    String lastUpdateTheme;
      @JsonKey(name:'LastUpdateApp')
-    String LastUpdateApp;
+    String lastUpdateApp;
      @JsonKey(name:'AppForceUpdate')
 bool AppForceUpdate;
      @JsonKey(name:'AppThemeId')

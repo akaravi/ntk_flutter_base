@@ -4,73 +4,73 @@ import 'package:json_annotation/json_annotation.dart';
 class ApplicationSourceModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'DefaultAppId')
     int defaultAppId;
      @JsonKey(name:'ClassName')
     String ClassName;
      @JsonKey(name:'PackageName')
-    String PackageName;
+    String packageName;
      @JsonKey(name:'ForceUpdate')
-   bool ForceUpdate;
+   bool forceUpdate;
      @JsonKey(name:'LinkLastSuccessfullyBuildFileId')
-    int LinkLastSuccessfullyBuildFileId;
+    int linkLastSuccessfullyBuildFileId;
      @JsonKey(name:'LastSuccessfullyBuildDate')
-    String LastSuccessfullyBuildDate;
+    String lastSuccessfullyBuildDate;
      @JsonKey(name:'LastBuildCommandDate')
-    String LastBuildCommandDate;
+    String lastBuildCommandDate;
      @JsonKey(name:'LastBuildCommandBy')
-    String LastBuildCommandBy;
+    String lastBuildCommandBy;
      @JsonKey(name:'LastUnsuccessfullyBuildErrorDate')
-    String LastUnsuccessfullyBuildErrorDate;
+    String lastUnsuccessfullyBuildErrorDate;
      @JsonKey(name:'LastUnsuccessfullyBuildErrorMessage')
-    String LastUnsuccessfullyBuildErrorMessage;
+    String lastUnsuccessfullyBuildErrorMessage;
      @JsonKey(name:'Layouts')
-   List<ApplicationLayoutModel> Layouts;
+   List<ApplicationLayoutModel> layouts;
      @JsonKey(name:'Applications')
    List<ApplicationAppModel> Applications;
      @JsonKey(name:'FireBaseServerKey')
-    String FireBaseServerKey;
+    String fireBaseServerKey;
      @JsonKey(name:'DefaultConfigBuilderAdminJsonValues')
     String defaultConfigBuilderAdminJsonValues;
      @JsonKey(name:'DefaultConfigRuntimeAdminJsonValues')
-    String DefaultConfigRuntimeAdminJsonValues;
+    String defaultConfigRuntimeAdminJsonValues;
      @JsonKey(name:'DefaultConfigBuilderSiteJsonValues')
-    String DefaultConfigBuilderSiteJsonValues;
+    String defaultConfigBuilderSiteJsonValues;
      @JsonKey(name:'DefaultConfigRuntimeSiteJsonValues')
-    String DefaultConfigRuntimeSiteJsonValues;
+    String defaultConfigRuntimeSiteJsonValues;
      @JsonKey(name:'BuildKey1String')
-    String BuildKey1String;
+    String buildKey1String;
      @JsonKey(name:'BuildKey1Value')
-    String BuildKey1Value;
+    String buildKey1Value;
      @JsonKey(name:'BuildKey2String')
-    String BuildKey2String;
+    String buildKey2String;
      @JsonKey(name:'BuildKey2Value')
-    String BuildKey2Value;
+    String buildKey2Value;
      @JsonKey(name:'BuildKey3String')
-    String BuildKey3String;
+    String buildKey3String;
      @JsonKey(name:'BuildKey3Value')
-    String BuildKey3Value;
+    String buildKey3Value;
      @JsonKey(name:'BuildKey4String')
-    String BuildKey4String;
+    String buildKey4String;
      @JsonKey(name:'BuildKey4Value')
-    String BuildKey4Value;
+    String buildKey4Value;
      @JsonKey(name:'BuildKey5String')
-    String BuildKey5String;
+    String buildKey5String;
      @JsonKey(name:'BuildKey5Value')
-    String BuildKey5Value;
+    String buildKey5Value;
      @JsonKey(name:'IsPublish')
-   bool IsPublish;
+   bool isPublish;
      @JsonKey(name:'SourceNameGit')
     String SourceNameGit;
      @JsonKey(name:'OsType;')
     int osType;
      @JsonKey(name:'UpdateSourceByGit')
-   bool UpdateSourceByGit;
+   bool updateSourceByGit;
      @JsonKey(name:'IsAbilityGradleBuild')
-bool IsAbilityGradleBuild;
+bool isAbilityGradleBuild;
 
 
 

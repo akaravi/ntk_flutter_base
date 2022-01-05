@@ -1,3 +1,4 @@
+import 'package:base/src/models/entityModel/enums/EnumDeviceStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 class AppMainHeaderDtoModel {
@@ -6,29 +7,29 @@ class AppMainHeaderDtoModel {
   @JsonKey(name: 'DeviceBrand')
   String deviceBrand;
   @JsonKey(name: 'NotificationId')
-  String NotificationId;
+  String notificationId;
   @JsonKey(name: 'DeviceIP')
   String deviceIP;
   @JsonKey(name: 'LocationLong')
-  String LocationLong;
+  String locationLong;
   @JsonKey(name: 'LocationLat')
-  String LocationLat;
+  String locationLat;
   @JsonKey(name: 'Country')
-  String Country;
+  String country;
   @JsonKey(name: 'DeviceStatus')
   EnumDeviceStatus deviceStatus;
   @JsonKey(name: 'SimCard')
-  String SimCard;
+  String simCard;
   @JsonKey(name: 'Language')
-  String Language;
+  String language;
   @JsonKey(name: 'AppSourceVer')
-  String AppSourceVer;
+  String appSourceVer;
   @JsonKey(name: 'AppBuildVer')
-  int AppBuildVer;
+  int appBuildVer;
   @JsonKey(name: 'PackageName')
-  String PackageName;
+  String  packageName;
   @JsonKey(name: 'Layout')
-  String Layout;
+  String layout;
   @JsonKey(name: 'Token')
-  String Token;
+  String token;
 }

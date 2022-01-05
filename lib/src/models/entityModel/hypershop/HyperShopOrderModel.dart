@@ -9,9 +9,9 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class HyperShopOrderModel extends BaseModuleEntity<int> {
-    int OrderType;
+    int orderType;
      @JsonKey(name:'PaymentType')
-    int PaymentType;//as
+    int  paymentType;//as
      @JsonKey(name:'SystemTransactionId')
     int SystemTransactionId;
      @JsonKey(name:'SystemPaymentIsSuccess')
@@ -27,28 +27,28 @@ bool SystemMicroServiceIsSuccess;
      @JsonKey(name:'SystemMicroServiceErrorMessage')
     String SystemMicroServiceErrorMessage;
      @JsonKey(name:'Name')
-    String Name;
+    String name;
      @JsonKey(name:'Family')
-    String Family;
+    String family;
      @JsonKey(name:'Mobile')
-    String Mobile;
+    String mobile;
      @JsonKey(name:'Address')
     String Address;
 
      @JsonKey(name:'Products')
-   List<HyperShopOrderContentModel> Products;
+   List<HyperShopOrderContentModel>  products;
      @JsonKey(name:'Amount')
    double Amount;
      @JsonKey(name:'FeeTax')
-   double FeeTax;
+   double feeTax;
      @JsonKey(name:'FeeTransport')
-   double FeeTransport;
+   double feeTransport;
      @JsonKey(name:'AmountPure')
    double AmountPure;
      @JsonKey(name:'DelivaryPrice')
    double DelivaryPrice;
      @JsonKey(name:'GeoLocationLatitude')
-    String GeoLocationLatitude;
+    String geoLocationLatitude;
      @JsonKey(name:'GeoLocationLongitude')
-    String GeoLocationLongitude;
+    String geoLocationLongitude;
 }

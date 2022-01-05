@@ -8,19 +8,19 @@ class ThemeChildConfigDtoModel {
     int SortId;
 
      @JsonKey(name:'Title')
-    String Title;
+    String title;
 
      @JsonKey(name:'BgColor')
     String BgColor;
 
      @JsonKey(name:'FrontColor')
-    String FrontColor;
+    String frontColor;
 
      @JsonKey(name:'FontSize')
-    String FontSize;
+    String fontSize;
 
      @JsonKey(name:'Href')
-    String Href;
+    String href;
 
      @JsonKey(name:'ActionName')
     String ActionName;

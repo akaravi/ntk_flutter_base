@@ -8,5 +8,5 @@ class HamberMenuThemeDtoModel {
     String Color;
 
      @JsonKey(name:'Image')
-    String Image;
+    String image;
 }

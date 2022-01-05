@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BiographyContentWithSimilarLocationPeriodDtoModel {
      @JsonKey(name:'TagIds')
-   List<int> TagIds;
+   List<int> tagIds;
      @JsonKey(name:'LocationId')
-    int LocationId;
+    int locationId;
 }

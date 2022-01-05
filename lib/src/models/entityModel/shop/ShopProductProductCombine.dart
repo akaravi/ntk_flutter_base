@@ -7,14 +7,14 @@ import 'ShopProductCombine.dart';
 @JsonSerializable()
 class ShopProductProductCombine extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkProductCombineId')
-  int LinkProductCombineId;
+  int linkProductCombineId;
 
   @JsonKey(name: 'LinkProductId')
-  int LinkProductId;
+  int linkProductId;
 
   @JsonKey(name: 'ProductCombines')
-  ShopProductCombine ProductCombines;
+  ShopProductCombine  productCombines;
 
   @JsonKey(name: 'Products')
-  ShopContent Products;
+  ShopContent  products;
 }

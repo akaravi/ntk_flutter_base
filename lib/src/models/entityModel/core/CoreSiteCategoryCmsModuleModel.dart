@@ -9,14 +9,14 @@ import 'package:json_annotation/json_annotation.dart';
 class CoreSiteCategoryCmsModuleModel extends BaseEntity<Long> {
 
      @JsonKey(name:'LinkCmsSiteCategoryId')
-    int LinkCmsSiteCategoryId;
+    int linkCmsSiteCategoryId;
 
      @JsonKey(name:' virtual_CmsSiteCategory')
     public CoreSiteCategoryModel  virtual_CmsSiteCategory;
      @JsonKey(name:'CmsSiteCategory')
     public CoreSiteCategoryModel CmsSiteCategory;
      @JsonKey(name:'LinkCmsModuleId')
-    int LinkCmsModuleId;
+    int linkCmsModuleId;
 
      @JsonKey(name:' virtual_CmsModule')
     public CoreModuleModel  virtual_CmsModule;

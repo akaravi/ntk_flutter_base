@@ -9,9 +9,9 @@ class BankPaymentInjectCalculateModel {
      @JsonKey(name:'Amount')
    double Amount;
      @JsonKey(name:'FeeTax')
-   double FeeTax;
+   double feeTax;
      @JsonKey(name:'FeeTransport')
-   double FeeTransport;
+   double feeTransport;
      @JsonKey(name:'AmountPure')
    double AmountPure;
 }

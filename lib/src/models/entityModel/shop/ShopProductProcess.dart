@@ -8,25 +8,25 @@ import 'ShopProductSalePrice.dart';
 @JsonSerializable()
 class ShopProductProcess extends BaseModuleEntity<int>  {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'AddToInvoicePrint')
-bool AddToInvoicePrint;
+bool addToInvoicePrint;
      @JsonKey(name:'CheckInventory')
-bool CheckInventory;
+bool checkInventory;
      @JsonKey(name:'CurrentInventory')
-   double CurrentInventory;
+   double currentInventory;
      @JsonKey(name:'LinkExternalPaymentProcessCustomizeId')
-    int LinkExternalPaymentProcessCustomizeId;
+    int linkExternalPaymentProcessCustomizeId;
      @JsonKey(name:'ExternalPaymentProcessInputFormSiteAdminClassJsonFormValues')
-    String ExternalPaymentProcessInputFormSiteAdminClassJsonFormValues;
+    String externalPaymentProcessInputFormSiteAdminClassJsonFormValues;
      @JsonKey(name:'Price')
-   double Price;
+   double  price;
      @JsonKey(name:'ProductSalePrices')
-  List<ShopProductSalePrice> ProductSalePrices;
+  List<ShopProductSalePrice>  productSalePrices;
      @JsonKey(name:'InvoiceSaleDetails')
-  List< ShopInvoiceSaleDetail> InvoiceSaleDetails;
+  List< ShopInvoiceSaleDetail> invoiceSaleDetails;
      @JsonKey(name:'ProductProductProcesses')
-  List<ShopProductProductProcess> ProductProductProcesses;
+  List<ShopProductProductProcess>  productProductProcesses;
 }

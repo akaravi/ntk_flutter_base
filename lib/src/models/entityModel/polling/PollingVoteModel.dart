@@ -4,14 +4,14 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class PollingVoteModel extends BaseModuleEntity<String> {
      @JsonKey(name:'LinkPollingContentId')
-    int LinkPollingContentId;
+    int linkPollingContentId;
      @JsonKey(name:'LinkPollingOptionId')
-    int LinkPollingOptionId;
+    int linkPollingOptionId;
      @JsonKey(name:'OptionScore')
-    int OptionScore;
+    int optionScore;
      @JsonKey(name:'DeviceUserSerial')
-    String DeviceUserSerial;
+    String deviceUserSerial;
      @JsonKey(name:'OtherInfo')
-    String OtherInfo;
+    String otherInfo;
 
 }

@@ -10,24 +10,24 @@ import 'ShopProductSalePrice.dart';
 @JsonSerializable()
 class ShopProductItem extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'AddToInvoicePrint')
-bool AddToInvoicePrint;
+bool addToInvoicePrint;
      @JsonKey(name:'CheckInventory')
 bool CheckInventory;
      @JsonKey(name:'CurrentInventory')
    double CurrentInventory;
      @JsonKey(name:'Price')
-   double Price;
+   double  price;
      @JsonKey(name:'InvoiceSaleDetails')
-  List< ShopInvoiceSaleDetail> InvoiceSaleDetails;
+  List< ShopInvoiceSaleDetail> invoiceSaleDetails;
      @JsonKey(name:'ProductSalePrices')
-  List<ShopProductSalePrice> ProductSalePrices;
+  List<ShopProductSalePrice>  productSalePrices;
      @JsonKey(name:'ProductProductItems')
-  List<ShopProductProductItem> ProductProductItems;
+  List<ShopProductProductItem>  productProductItems;
      @JsonKey(name:'ProductItemCombines')
-  List<ShopProductItemCombine> ProductItemCombines;
+  List<ShopProductItemCombine>  productItemCombines;
 
 }

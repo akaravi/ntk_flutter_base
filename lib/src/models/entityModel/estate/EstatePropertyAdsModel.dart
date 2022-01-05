@@ -8,17 +8,17 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyAdsModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'StationLevel')
     int StationLevel;
      @JsonKey(name:'ViewLevel')
-    int ViewLevel;
+    int viewLevel;
      @JsonKey(name:'LinkPropertyId')
-    String LinkPropertyId;
+    String linkPropertyId;
      @JsonKey(name:'FromDate')
-    String FromDate;
+    String fromDate;
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
 }

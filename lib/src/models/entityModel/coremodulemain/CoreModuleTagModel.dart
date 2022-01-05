@@ -8,9 +8,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreModuleTagModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'LinkCategoryId')
-    String LinkCategoryId;
+    String linkCategoryId;
      @JsonKey(name:'Category')
     public CoreModuleTagCategoryModel Category;
 

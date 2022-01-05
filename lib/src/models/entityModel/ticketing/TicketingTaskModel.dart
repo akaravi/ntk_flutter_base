@@ -5,46 +5,46 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class TicketingTaskModel extends BaseModuleEntity<int> {
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'HtmlBody')
-    String HtmlBody;
+    String htmlBody;
      @JsonKey(name:'FullName')
-    String FullName;
+    String fullName;
      @JsonKey(name:'PhoneNo')
-    String PhoneNo;
+    String  phoneNo;
      @JsonKey(name:'Email')
-    String Email;
+    String email;
      @JsonKey(name:'Priority')
-    int Priority;//as EnumTicketingDepartemenPriority
+    int  priority;//as EnumTicketingDepartemenPriority
      @JsonKey(name:'LinkCmsUserId')
-    int LinkCmsUserId;
+    int linkCmsUserId;
      @JsonKey(name:'LinkMemberUserId')
-    int LinkMemberUserId;
+    int linkMemberUserId;
      @JsonKey(name:'LinkTicketingDepartemenId')
-    int LinkTicketingDepartemenId;
+    int linkTicketingDepartemenId;
      @JsonKey(name:'TicketStatus')
-    int TicketStatus;// same as EnumTicketStatus
+    int ticketStatus;// same as EnumTicketStatus
      @JsonKey(name:'UserIpAddress')
-    String UserIpAddress;
+    String userIpAddress;
      @JsonKey(name:'DeviceInformation')
-    String DeviceInformation;
+    String deviceInformation;
      @JsonKey(name:' virtual_Departemen')
-    public TicketingDepartemenModel  virtual_Departemen;
+    public ticketingDepartemenModel  virtual_Departemen;
      @JsonKey(name:'Departemen')
-    public TicketingDepartemenModel Departemen;
+    public TicketingDepartemenModel departemen;
      @JsonKey(name:'LinkOperatorId')
-    int LinkOperatorId;
+    int linkOperatorId;
      @JsonKey(name:'Answers')
-   List<TicketingAnswerModel> Answers;
+   List<TicketingAnswerModel> answers;
      @JsonKey(name:'TicketingDepartemenDefaultAnswerBody')
     String TicketingDepartemenDefaultAnswerBody;
      @JsonKey(name:'LinkFileIds')
-    String LinkFileIds;
+    String linkFileIds;
      @JsonKey(name:'LinkFileIdsSrc')
    List<String> LinkFileIdsSrc;
      @JsonKey(name:'UploadFileGUID')
-   List<String> UploadFileGUID;
+   List<String> uploadFileGUID;
 }
 

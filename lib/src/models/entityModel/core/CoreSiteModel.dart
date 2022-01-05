@@ -13,66 +13,66 @@ class CoreSiteModel {
      @JsonKey(name:'CurrentSiteDomainUrl')
     String CurrentSiteDomainUrl;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
 
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
      @JsonKey(name:'LinkCreatedBySiteId')
-    int LinkCreatedBySiteId;
+    int linkCreatedBySiteId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_ParentCreator')
     public CoreSiteModel virtual_ParentCreator;
      @JsonKey(name:'ParentCreator')
-    public CoreSiteModel ParentCreator;
+    public CoreSiteModel arentCreator;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'OwnerSiteSetStatus')
-    public EnumSiteStatus OwnerSiteSetStatus;
+    public EnumSiteStatus ownerSiteSetStatus;
      @JsonKey(name:'UserLanguage')
-    int UserLanguage;
+    int userLanguage;
      @JsonKey(name:'SubDomain')
     String SubDomain;
      @JsonKey(name:'Domain')
-    String Domain;
+    String domain;
      @JsonKey(name:'Redirect')
-    String Redirect;
+    String redirect;
      @JsonKey(name:'Keyword')
-    String Keyword;
+    String keyword;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'LinkFavIconId')
-    int LinkFavIconId;
+    int linkFavIconId;
      @JsonKey(name:'LinkSiteCategoryId')
-    int LinkSiteCategoryId;
+    int linkSiteCategoryId;
 
      @JsonKey(name:' virtual_CmsSiteCategory')
     public CoreSiteCategoryModel virtual_CmsSiteCategory;
       @JsonKey(name:'CmsSiteCategory')
      public CoreSiteCategoryModel CmsSiteCategory;
      @JsonKey(name:'HasAccountingForm')
-bool HasAccountingForm;
+bool hasAccountingForm;
      @JsonKey(name:'ViewInCmsSiteLIst')
-bool ViewInCmsSiteLIst;
+bool viewInCmsSiteLIst;
      @JsonKey(name:'AccountingFormNo')
-    int AccountingFormNo;
+    int accountingFormNo;
      @JsonKey(name:'AccountingFormCreatedDate')
-    String AccountingFormCreatedDate;
+    String accountingFormCreatedDate;
      @JsonKey(name:'AccountingFormUpdatedDate')
-    String AccountingFormUpdatedDate;
+    String accountingFormUpdatedDate;
      @JsonKey(name:'SiteUsers')
    List<CoreSiteUserModel> SiteUsers;
      @JsonKey(name:'ModuleSites')
-   List<CoreModuleSiteModel> ModuleSites;
+   List<CoreModuleSiteModel> moduleSites;
      @JsonKey(name:'DomainAliases')
-   List<CoreSiteDomainAliasModel> DomainAliases;
+   List<CoreSiteDomainAliasModel> domainAliases;
      @JsonKey(name:'ChildernCreateds')
    List<CoreSiteModel> ChildernCreateds;
      @JsonKey(name:'Devices')
-   List<CoreDeviceModel> Devices;
+   List<CoreDeviceModel> devices;
      @JsonKey(name:'Copyright')
     String Copyright;
      @JsonKey(name:'WebMasterEmail')
-    String WebMasterEmail;
+    String webMasterEmail;
      @JsonKey(name:'WebEditorEmail')
-    String WebEditorEmail;
+    String webEditorEmail;
 }

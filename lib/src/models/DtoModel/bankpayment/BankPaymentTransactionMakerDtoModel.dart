@@ -3,11 +3,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BankPaymentTransactionMakerDtoModel {
      @JsonKey(name:'PaymentPrivateId')
-    int PaymentPrivateId;
+    int aymentPrivateId;
      @JsonKey(name:'Price')
-    int Price;
+    int rice;
      @JsonKey(name:'CartId')
-    int CartId;
+    int cartId;
      @JsonKey(name:'LastUrlAddressInUse')
-    String LastUrlAddressInUse;
+    String lastUrlAddressInUse;
 }

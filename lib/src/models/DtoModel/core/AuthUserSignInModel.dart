@@ -7,15 +7,15 @@ class AuthUserSignInModel {
      @JsonKey(name:'CaptchaText')
     String captchaText;
      @JsonKey(name:'Email')
-    String Email;  
+    String email;
      @JsonKey(name:'Mobile')
-    String Mobile;
+    String mobile;
      @JsonKey(name:'Password')
-    String Password;
+    String assword;
      @JsonKey(name:'IsRemember')
-bool IsRemember;
+bool isRemember;
      @JsonKey(name:'SiteId')
-    int SiteId;
+    int siteId;
      @JsonKey(name:'Lang')
     String lang;
 }

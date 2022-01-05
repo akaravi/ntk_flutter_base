@@ -8,11 +8,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyAccountTypeUserModel extends BaseModuleEntity<String> {
      @JsonKey(name:'User_Id')
-    String User_Id;
+    String user_Id;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:'Type_Id')
-    String Type_Id;
+    String type_Id;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:'Property_Id')
-    String Property_Id;
+    String roperty_Id;
 }

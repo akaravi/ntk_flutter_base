@@ -10,22 +10,22 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'IconFont')
-    String IconFont;
+    String iconFont;
      @JsonKey(name:'IconColor')
-    String IconColor;
+    String iconColor;
      @JsonKey(name:'ShowInFormOrder')
     integer ShowInFormOrder;
      @JsonKey(name:'IsHistoryable')
-bool IsHistoryable;
+bool isHistoryable;
      @JsonKey(name:'IsSearchable')
-bool IsSearchable;
+bool isSearchable;
      @JsonKey(name:'LinkPropertyTypeLanduseId')
-    String LinkPropertyTypeLanduseId;
+    String linkPropertyTypeLanduseId;
      @JsonKey(name:'PropertyDetails')
-   List<EstatePropertyDetailModel> PropertyDetails;
-   List<EstatePropertyDetailValueModel> PropertyValues;
+   List<EstatePropertyDetailModel> ropertyDetails;
+   List<EstatePropertyDetailValueModel> ropertyValues;
 }

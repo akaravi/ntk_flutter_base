@@ -4,31 +4,31 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class TokenDeviceClientInfoDtoModel {
      @JsonKey(name:'SecurityKey')
-    String SecurityKey;
+    String securityKey;
      @JsonKey(name:'ClientMACAddress')
-    String ClientMACAddress;
+    String clientMACAddress;
      @JsonKey(name:'OSType')
-    int OSType;
+    int oSType;
      @JsonKey(name:'DeviceType')
     int deviceType;
      @JsonKey(name:'PackageName')
-    String PackageName;
+    String packageName;
      @JsonKey(name:'NotificationId')
-    String NotificationId;
+    String notificationId;
      @JsonKey(name:'AppBuildVer')
-    int AppBuildVer;
+    int appBuildVer;
      @JsonKey(name:'AppSourceVer')
-    String AppSourceVer;
+    String appSourceVer;
      @JsonKey(name:'Country')
-    String Country;
+    String country;
      @JsonKey(name:'LocationLat')
-    String LocationLat;
+    String locationLat;
      @JsonKey(name:'LocationLong')
-    String LocationLong;
+    String locationLong;
      @JsonKey(name:'SimCard')
     String SimCard;
      @JsonKey(name:'Language')
-    String Language;
+    String language;
      @JsonKey(name:'DeviceBrand')
     String deviceBrand;
  

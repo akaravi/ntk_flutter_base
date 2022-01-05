@@ -3,13 +3,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class DrawerChildThemeDtoModel {
      @JsonKey(name:'Id')
-    int Id;
+    int id;
      @JsonKey(name:'Type')
-    int Type;
+    int type;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Icon')
-    String Icon;
+    String icon;
      @JsonKey(name:'Icon')
     int drawableIcon;
 

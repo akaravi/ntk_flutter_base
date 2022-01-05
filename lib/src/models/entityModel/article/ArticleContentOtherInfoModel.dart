@@ -4,15 +4,15 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ArticleContentOtherInfoModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'HtmlBody')
-    String HtmlBody;
+    String htmlBody;
      @JsonKey(name:'Source')
     String Source;
      @JsonKey(name:'LinkContentid')
-    int LinkContentid;
+    int linkContentid;
      @JsonKey(name:'TypeId')
-    integer TypeId;
+    integer typeId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_Content')
     public ArticleContentModel  virtual_Content;

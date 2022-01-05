@@ -6,5 +6,5 @@ class ShoppingCartThemeDtoModel {
     String Color;
 
      @JsonKey(name:'Image')
-    String Image;
+    String image;
 }

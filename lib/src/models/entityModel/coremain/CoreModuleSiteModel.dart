@@ -12,15 +12,15 @@ class CoreModuleSiteModel extends BaseEntity<Long> {
      @JsonKey(name:'ExpireDate')
     String ExpireDate;
      @JsonKey(name:'LinkSiteId')
-    int LinkSiteId;
+    int linkSiteId;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'LinkModuleId')
-    int LinkModuleId;
+    int linkModuleId;
      @JsonKey(name:'ReNewDate')
-    String ReNewDate;
+    String reNewDate;
      @JsonKey(name:'HasBuyed')
-bool HasBuyed;
+bool hasBuyed;
      @JsonKey(name:' virtual_CmsSite')
     public CoreSiteModel  virtual_CmsSite;
      @JsonKey(name:'CmsSite')
@@ -30,9 +30,9 @@ bool HasBuyed;
      @JsonKey(name:'CmsModule')
     public CoreModuleModel CmsModule;
      @JsonKey(name:'ModuleConfigSiteAccessValuesJson')
-    String ModuleConfigSiteAccessValuesJson;
+    String moduleConfigSiteAccessValuesJson;
      @JsonKey(name:'ModuleConfigSiteValuesJson')
-    String ModuleConfigSiteValuesJson;
+    String moduleConfigSiteValuesJson;
      @JsonKey(name:'ModuleSiteStorageValuesJson')
-    String ModuleSiteStorageValuesJson;
+    String moduleSiteStorageValuesJson;
 }

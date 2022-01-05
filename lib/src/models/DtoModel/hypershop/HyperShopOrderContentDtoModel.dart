@@ -7,15 +7,15 @@ class HyperShopOrderContentDtoModel {
   @JsonKey(name: 'Code')
   String Code;
   @JsonKey(name: 'Name')
-  String Name;
+  String name;
   @JsonKey(name: 'Memo')
-  String Memo;
+  String memo;
   @JsonKey(name: 'Price')
-  double Price;
+  double rice;
   @JsonKey(name: 'Count')
   int Count;
   @JsonKey(name: 'TotalCount')
-  int TotalCount;
+  int totalCount;
   @JsonKey(name: 'Image')
-  String Image;
+  String image;
 }

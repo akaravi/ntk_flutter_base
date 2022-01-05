@@ -3,19 +3,19 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class TicketingDepartemenModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'DefaultAnswerBody')
     String DefaultAnswerBody;
      @JsonKey(name:'Priority')
-     EnumTicketingDepartemenPriority Priority;
+     EnumTicketingDepartemenPriority  priority;
      @JsonKey(name:'AccessToChangeType')
      EnumTicketAccessStatus AccessToChangeType;
      @JsonKey(name:'Tickets')
-   List<TicketingTaskModel> Tickets;
+   List<TicketingTaskModel> tickets;
      @JsonKey(name:'TicketAnswers')
-   List<TicketingAnswerModel> TicketAnswers;
+   List<TicketingAnswerModel> ticketAnswers;
      @JsonKey(name:'Faqs')
-   List<TicketingFaqModel> Faqs;
+   List<TicketingFaqModel> faqs;
      @JsonKey(name:'Operators')
-   List<TicketingDepartemenOperatorModel> Operators;
+   List<TicketingDepartemenOperatorModel> operators;
 }

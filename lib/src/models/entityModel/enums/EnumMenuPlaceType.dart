@@ -6,5 +6,5 @@ public  enum  EnumMenuPlaceType {
     MenuDown,
     MenuRight,
     MenuLeft,
-    MenuMVCUser ,
+    menuMVCUser ,
 }

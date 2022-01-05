@@ -10,17 +10,17 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'TitleResourceLanguage')
-    String TitleResourceLanguage;
+    String titleResourceLanguage;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'FontIcon')
-    String FontIcon;
+    String fontIcon;
      @JsonKey(name:'LinkParentIdNode')
-    String LinkParentIdNode;
+    String linkParentIdNode;
      @JsonKey(name:'LinkParentId')
-    int LinkParentId;
+    int linkParentId;
      @JsonKey(name:'Category')
     public CoreModuleTagCategoryModel Category;
 
@@ -29,6 +29,6 @@ class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Children')
    List<CoreModuleTagCategoryModel> Children;
      @JsonKey(name:'Tags')
-   List<CoreModuleTagModel> Tags;
+   List<CoreModuleTagModel> tags;
 
 }

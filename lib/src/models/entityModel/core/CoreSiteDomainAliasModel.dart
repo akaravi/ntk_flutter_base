@@ -8,15 +8,15 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreSiteDomainAliasModel extends BaseEntity<Long> {
      @JsonKey(name:'CmsSite')
-    public    CoreSiteModel CmsSite;
+    public    CoreSiteModel cmsSite;
      @JsonKey(name:'SubDomain')
-    public   String DubDomain;
+    public   String dubDomain;
      @JsonKey(name:'Domain')
-    public  String Domain;
+    public  String domain;
      @JsonKey(name:'Redirect')
-    public  String Redirect;
+    public  String redirect;
      @JsonKey(name:'LinkCmsSiteId')
-    int LinkCmsSiteId;
+    int linkCmsSiteId;
      @JsonKey(name:' virtual_CmsSite')
     public  CoreSiteModel  virtual_CmsSite;
 }

@@ -7,19 +7,19 @@ import 'PollingContentModel.dart';
 class PollingOptionModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'Option')
-    String Option;
+    String option;
      @JsonKey(name:'OptionAnswer')
-    String OptionAnswer;
+    String optionAnswer;
      @JsonKey(name:'IsCorrectAnswer')
-bool IsCorrectAnswer;
+bool isCorrectAnswer;
      @JsonKey(name:'NumberOfVotes')
-    int NumberOfVotes;
+    int numberOfVotes;
      @JsonKey(name:'ScoreOfVotes')
     int ScoreOfVotes;
      @JsonKey(name:'LinkPollingContentId')
-    int LinkPollingContentId;
+    int linkPollingContentId;
      @JsonKey(name:' virtual_PollingContent')
      PollingContentModel  virtual_PollingContent;
      @JsonKey(name:'PollingContent')
-     PollingContentModel PollingContent;
+     PollingContentModel  pollingContent;
 }

@@ -10,37 +10,37 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyDetailModel {
      @JsonKey(name:'Id')
-    String Id;
+    String id;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
 
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'IconFont')
-    String IconFont;
+    String iconFont;
      @JsonKey(name:'IconColor')
-    String IconColor;
+    String iconColor;
      @JsonKey(name:'InputDataType')//0 string //1 int //2 is bool ,3 is float,4 is date,5 is area
-    int InputDataType;
-    public EnumInputDataType InputDataTypeEnum;
+    int inputDataType;
+    public EnumInputDataType inputDataTypeEnum;
 
      @JsonKey(name:'InvisibleForEndUser')
-   bool InvisibleForEndUser;
+   bool invisibleForEndUser;
 
      @JsonKey(name:'InvisibleForSubmiter')
-   bool InvisibleForSubmiter;
+   bool invisibleForSubmiter;
 
      @JsonKey(name:'Unit')
-    String Unit;
+    String unit;
 
      @JsonKey(name:'Required')
-   bool Required;
+   bool required;
 
      @JsonKey(name:'IsHistoryable')
-bool IsHistoryable;
+bool isHistoryable;
 
      @JsonKey(name:'IsSearchable')
-bool IsSearchable;
+bool isSearchable;
      @JsonKey(name:'ShowInFormOrder')
     integer ShowInFormOrder;
      @JsonKey(name:'LinkPropertyTypeLanduseId')

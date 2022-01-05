@@ -4,17 +4,17 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreSiteAddFirstSiteDtoModel {
      @JsonKey(name:'CaptchaKey')
-    String CaptchaKey;
+    String captchaKey;
      @JsonKey(name:'CaptchaText')
-    String CaptchaText;
+    String captchaText;
      @JsonKey(name:'Domain')
     String domain;
      @JsonKey(name:'Description')
     String description;
      @JsonKey(name:'SubDomain')
-    String SubDomain;
+    String subDomain;
      @JsonKey(name:'LinkSiteCategoryId')
-    String LinkSiteCategoryId;
+    String linkSiteCategoryId;
      @JsonKey(name:'Title')
     String Title;
 }

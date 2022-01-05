@@ -4,31 +4,31 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BankPaymentPrivateSiteConfigModel extends BaseEntity<Long> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'CurrencyUnitRatioByShop')
     int CurrencyUnitRatioByShop;
      @JsonKey(name:'MaxTransactionAmount')
-    int MaxTransactionAmount;
+    int maxTransactionAmount;
      @JsonKey(name:'MinTransactionAmount')
-    int MinTransactionAmount;
+    int minTransactionAmount;
      @JsonKey(name:'FixFeeTransactionAmount')
-    int FixFeeTransactionAmount;
+    int fixFeeTransactionAmount;
      @JsonKey(name:'PercentFeeTransactionAmount')
-    int PercentFeeTransactionAmount;
+    int ercentFeeTransactionAmount;
      @JsonKey(name:'LinkPublicConfigId')
-    int LinkPublicConfigId;
+    int linkPublicConfigId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_PublicConfig')
     public BankPaymentPublicConfigModel virtual_PublicConfig;
      @JsonKey(name:'PublicConfig')
-    public BankPaymentPublicConfigModel PublicConfig;
+    public BankPaymentPublicConfigModel ublicConfig;
 
      @JsonKey(name:'PrivateConfigJsonValues')
-    String PrivateConfigJsonValues;
+    String rivateConfigJsonValues;
      @JsonKey(name:'Memo')
-    String Memo;
+    String memo;
      @JsonKey(name:'Transactions')
-   List<BankPaymentTransactionModel> Transactions;
+   List<BankPaymentTransactionModel> transactions;
      @JsonKey(name:'LinkModuleFileLogoIdSrc')
-    String LinkModuleFileLogoIdSrc;
+    String linkModuleFileLogoIdSrc;
 }

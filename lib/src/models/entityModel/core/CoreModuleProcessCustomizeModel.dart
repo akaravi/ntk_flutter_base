@@ -8,23 +8,23 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreModuleProcessCustomizeModel extends BaseEntity<Long> {
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'TitleEn')
-    String TitleEn;
+    String titleEn;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'LinkModuleProcessId')
-    int LinkModuleProcessId;
+    int linkModuleProcessId;
 
      @JsonKey(name:' virtual_CmsModuleProcess')
     public CoreModuleProcessModel  virtual_CmsModuleProcess;
      @JsonKey(name:'CmsModuleProcess')
     public CoreModuleProcessModel CmsModuleProcess;
      @JsonKey(name:'ProcessInputCustomizeValue')
-    String ProcessInputCustomizeValue;
+    String rocessInputCustomizeValue;
      @JsonKey(name:'ProcessInputValueForm')
-    String ProcessInputValueForm;
+    String rocessInputValueForm;
      @JsonKey(name:'LinkProcessCustomizeDependenceBeforRunId')
-    int LinkProcessCustomizeDependenceBeforRunId;
+    int linkProcessCustomizeDependenceBeforRunId;
 }
 

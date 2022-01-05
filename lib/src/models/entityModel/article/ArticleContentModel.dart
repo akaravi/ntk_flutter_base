@@ -5,45 +5,45 @@ import 'package:json_annotation/json_annotation.dart';
 class ArticleContentModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'LinkCategoryId')
-    int LinkCategoryId;
+    int linkCategoryId;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'Body')
     String Body;
      @JsonKey(name:'FromDate')
     String fromDate;
      @JsonKey(name:'Geolocationlatitude')
-    double  Geolocationlatitude;
+    double  geolocationlatitude;
      @JsonKey(name:'Geolocationlongitude')
-    double  Geolocationlongitude;
+    double  geolocationlongitude;
      @JsonKey(name:'Keyword')
-    String Keyword;
+    String keyword;
      @JsonKey(name:'LinkFileIds')
-    String LinkFileIds;
+    String linkFileIds;
      @JsonKey(name:'LinkFilePodcastId')
-    int LinkFilePodcastId;
+    int linkFilePodcastId;
      @JsonKey(name:'LinkFileMovieId')
-    int LinkFileMovieId;
+    int linkFileMovieId;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'ScoreClick')
     int ScoreClick;
      @JsonKey(name:'ScoreSumPercent')
     int ScoreSumPercent;
      @JsonKey(name:'ViewCount')
-    int ViewCount;
+    int viewCount;
      @JsonKey(name:'Favorited')
-bool Favorited;
+bool favorited;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
      @JsonKey(name:'ExpireDate')
     String ExpireDate;
      @JsonKey(name:'ModuleCoreCreatedBy')
-    public CoreUserModel ModuleCoreCreatedBy;
+    public CoreUserModel moduleCoreCreatedBy;
      @JsonKey(name:'ModuleCoreUpdatedBy')
-    public CoreUserModel ModuleCoreUpdatedBy;
+    public CoreUserModel moduleCoreUpdatedBy;
      @JsonKey(name:'Source')
     String Source;
      @JsonKey(name:'Comments')
@@ -57,13 +57,13 @@ bool Favorited;
      @JsonKey(name:'Similars')
    List<ArticleContentSimilarModel> Similars;
      @JsonKey(name:'OtherInfos')
-    String OtherInfos;
+    String otherInfos;
      @JsonKey(name:'ContentAndParameterValues')
     public Object ContentAndParameterValues;
      @JsonKey(name:'LinkFilePodcastIdSrc')
-    String LinkFilePodcastIdSrc;
+    String linkFilePodcastIdSrc;
      @JsonKey(name:'LinkFileMovieIdSrc')
-    String LinkFileMovieIdSrc;
+    String linkFileMovieIdSrc;
      @JsonKey(name:'LinkFileIdsSrc')
-   List<String> LinkFileIdsSrc;
+   List<String> linkFileIdsSrc;
 }

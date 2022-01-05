@@ -8,5 +8,5 @@ class LinkManagementTargetShortLinkGetDtoModel {
      @JsonKey(name:'CaptchaText')
     String CaptchaText;
      @JsonKey(name:'Key')
-    String Key;
+    String key;
 }

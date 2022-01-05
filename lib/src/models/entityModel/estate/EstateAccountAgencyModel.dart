@@ -10,31 +10,31 @@ import ntk.android.base.entitymodel.enums.EnumRecordStatus;
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstateAccountAgencyModel extends BaseModuleEntity<String> {
-    EnumRecordStatus MainAdminRecordStatus;
+    EnumRecordStatus mainAdminRecordStatus;
      @JsonKey(name:'LinkCmsUserId')
-    int LinkCmsUserId;
+    int linkCmsUserId;
      @JsonKey(name:'Title')
-    String Title;
+    String title;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'LinkLocationId')
-    integer LinkLocationId;
+    integer linkLocationId;
      @JsonKey(name:'Geolocationlatitude')
-    double  Geolocationlatitude;
+    double  geolocationlatitude;
      @JsonKey(name:'Geolocationlongitude')
-    double  Geolocationlongitude;
+    double  geolocationlongitude;
 
      @JsonKey(name:'Address')
     String Address;
      @JsonKey(name:'PhoneNumber')
-    String PhoneNumber;
+    String honeNumber;
      @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
+    int linkMainImageId;
      @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
+    String linkMainImageIdSrc;
 
      @JsonKey(name:'LinkExtraImageIds')
-    String LinkExtraImageIds;
+    String linkExtraImageIds;
      @JsonKey(name:'LinkExtraImageIdsSrc')
    List<String> LinkExtraImageIdsSrc;
 }

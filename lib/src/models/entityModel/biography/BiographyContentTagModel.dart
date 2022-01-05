@@ -8,11 +8,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BiographyContentTagModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkContentId')
-    int LinkContentId;
+    int linkContentId;
      @JsonKey(name:'LinkTagId')
-    int LinkTagId;
+    int linkTagId;
      @JsonKey(name:'virtual_ModuleContent')
     public Object virtual_ModuleContent;
      @JsonKey(name:'ModuleContent')
-    public Object ModuleContent;
+    public Object moduleContent;
 }

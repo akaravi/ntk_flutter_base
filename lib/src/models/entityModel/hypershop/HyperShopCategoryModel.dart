@@ -10,7 +10,7 @@ class HyperShopCategoryModel {
      @JsonKey(name:'Name')
     String name;
      @JsonKey(name:'Image')
-    String Image;
+    String image;
      @JsonKey(name:'Memo')
-    String Memo;
+    String memo;
 }
