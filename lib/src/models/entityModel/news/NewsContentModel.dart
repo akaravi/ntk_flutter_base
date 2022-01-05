@@ -1,12 +1,13 @@
 
-import 'package:Ntk_Flutter_Base/src/models/entityModel/base/BaseModuleEntity.dart';
-import 'package:Ntk_Flutter_Base/src/models/entityModel/core/CoreUserModel.dart';
+import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/core/CoreUserModel.dart';
 
 import 'NewsCategoryModel.dart';
 import 'NewsContentSimilarModel.dart';
 import 'NewsContentTagModel.dart';
 
 class NewsContentModel extends BaseModuleEntity<int> {
+  @JsonKey('wdw')
   int linkCategoryId;
 
   String title;
