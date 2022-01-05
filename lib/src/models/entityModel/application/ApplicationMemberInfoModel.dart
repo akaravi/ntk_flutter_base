@@ -14,7 +14,7 @@ class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
      @JsonKey(name:'DeviceBrand')
     String deviceBrand;
      @JsonKey(name:'SimCard')
-    String SimCard;
+    String simCard;
      @JsonKey(name:'Country')
     String country;
      @JsonKey(name:'Language')
