@@ -1,4 +1,1 @@
-
-
-class BankPaymentTransactionCheckResponceModel {
-}
+class BankPaymentTransactionCheckResponceModel {}
