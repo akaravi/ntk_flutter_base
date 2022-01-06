@@ -8,7 +8,7 @@ class ArticleContentTagModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentid')
   String linkContentId;
   @JsonKey(name: 'LinkTagid')
-  int linkTagid;
+  int linkTaId;
   @JsonKey(name: 'virtual_ModuleContent')
   ArticleContentModel virtual_ModuleContent;
   @JsonKey(name: 'ModuleContent')
