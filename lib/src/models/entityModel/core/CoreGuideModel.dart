@@ -1,11 +1,6 @@
-package src.models.entityModel.core;
 
-import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-import ntk.android.base.entitymodel.base.BaseEntity;
-
+import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreGuideModel extends BaseEntity<int> {
@@ -21,11 +16,11 @@ class CoreGuideModel extends BaseEntity<int> {
     String linkFileIds;
      @JsonKey(name:'LinkParentId')
     int linkParentId;
-     @JsonKey(name:' virtual_Parent')
+     @JsonKey(name:'virtual_Parent')
      CoreGuideModel  virtual_Parent;
      @JsonKey(name:'Parent')
      CoreGuideModel parent;
      @JsonKey(name:'Children')
-   List<CoreGuideModel> Children;
+   List<CoreGuideModel> children;
 }
 
