@@ -1,35 +1,28 @@
-package src.models.entityModel.core;
-
-import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
-
-import ntk.android.base.entitymodel.base.BaseEntity;
-import ntk.android.base.entitymodel.coremain.CoreCpMainMenuCmsUserGroupModel;
-import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
-
+import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/coremain/CoreCpMainMenuCmsUserGroupModel.dart';
+import 'package:base/src/models/entityModel/enums/EnumManageUserAccessControllerTypes.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import 'CoreSiteUserModel.dart';
+
 @JsonSerializable()
 class CoreUserGroupModel extends BaseEntity<int> {
-
-     @JsonKey(name:'TitleML')
-       String titleML;
-     @JsonKey(name:'Title')
-       String title;
-     @JsonKey(name:'TitleResourceLanguage')
-       String titleResourceLanguage;
-     @JsonKey(name:'Description')
-       String description;
-     @JsonKey(name:'UserType')
-       EnumManageUserAccessControllerTypes userType;
-     @JsonKey(name:'UserTypeTitle')
-      String userTypeTitle;
-     @JsonKey(name:'UserTypeDescription')
-    String userTypeDescription;
-     @JsonKey(name:'CmsSiteUsers')
-      List<CoreSiteUserModel> cmsSiteUsers;
-     @JsonKey(name:'CmsCpMainMenuCmsUserGroup')
-      List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
+  @JsonKey(name: 'TitleML')
+  String titleML;
+  @JsonKey(name: 'Title')
+  String title;
+  @JsonKey(name: 'TitleResourceLanguage')
+  String titleResourceLanguage;
+  @JsonKey(name: 'Description')
+  String description;
+  @JsonKey(name: 'UserType')
+  EnumManageUserAccessControllerTypes userType;
+  @JsonKey(name: 'UserTypeTitle')
+  String userTypeTitle;
+  @JsonKey(name: 'UserTypeDescription')
+  String userTypeDescription;
+  @JsonKey(name: 'CmsSiteUsers')
+  List<CoreSiteUserModel> cmsSiteUsers;
+  @JsonKey(name: 'CmsCpMainMenuCmsUserGroup')
+  List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
 }
-
-

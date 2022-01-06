@@ -2,7 +2,7 @@ package src.models.entityModel.hypershop;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 

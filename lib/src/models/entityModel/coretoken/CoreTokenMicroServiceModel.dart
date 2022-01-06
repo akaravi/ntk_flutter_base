@@ -3,7 +3,7 @@ package src.models.entityModel.coretoken;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.entitymodel.base.BaseEntity;
+
 import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 import ntk.android.base.entitymodel.enums.EnumMicroServiceConnectionStatus;
 import ntk.android.base.entitymodel.enums.EnumMicroServiceConnectionType;

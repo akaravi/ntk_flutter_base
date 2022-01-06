@@ -1,4 +1,1 @@
-class CoreUserModel
-{
-
-}
+class CoreUserModel {}

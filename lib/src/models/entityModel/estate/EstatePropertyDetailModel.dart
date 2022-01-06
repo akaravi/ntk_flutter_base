@@ -2,7 +2,7 @@ package src.models.entityModel.estate;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+
 
 import ntk.android.base.entitymodel.enums.EnumInputDataType;
 

@@ -1,5 +1,6 @@
 
 
+import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreSiteModel.dart';
@@ -22,8 +23,8 @@ class CoreDeviceModel extends BaseEntity<int> {
      @JsonKey(name:'LinkApplicationId')
     int linkApplicationId;
      @JsonKey(name:'LinkSiteId')
-    int linkSiteId;// tslint:disable-next-line: variable-name
-     @JsonKey(name:' virtual_CmsSite')
+    int linkSiteId;
+     @JsonKey(name:'virtual_CmsSite')
      CoreSiteModel  virtual_CmsSite;
      @JsonKey(name:'CmsSite')
      CoreSiteModel cmsSite;
