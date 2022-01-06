@@ -1,9 +1,6 @@
-package src.models.entityModel.blog;
 
-import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.entitymodel.base.BaseModuleEntity;
-
+import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BlogContentOtherInfoModel extends BaseModuleEntity<int> {
@@ -14,7 +11,7 @@ class BlogContentOtherInfoModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Source')
     String source;
      @JsonKey(name:'LinkContentid')
-    int linkContentid;
+    int linkContentId;
      @JsonKey(name:'TypeId')
     integer typeId;
     // tslint:disable-next-line: variable-name

@@ -8,7 +8,7 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreGuideModel extends BaseEntity<Long> {
+class CoreGuideModel extends BaseEntity<int> {
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'BodyFa')

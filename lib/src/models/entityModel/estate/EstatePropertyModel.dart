@@ -63,7 +63,7 @@ bool isFavorite;
     /// </summary>
 
      @JsonKey(name:'ScoreClick')
-    int ScoreClick;
+    int scoreClick;
     /// <summary>
     /// مجموع امتیازهای داده شده در آراها
     /// امتیاز از 10 می باشد
@@ -98,7 +98,7 @@ bool isFavorite;
      @JsonKey(name:'LinkExtraImageIdsSrc')
    List<String> LinkExtraImageIdsSrc;
      @JsonKey(name:'LinkFileIdsSrc')
-   List<String> LinkFileIdsSrc;
+   List<String> linkFileIdsSrc;
     /**
      * برای انتصا مسقیم فایل آپلود شده
      */

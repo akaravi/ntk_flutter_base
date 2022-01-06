@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreSiteModel.dart';
 @JsonSerializable()
-class CoreDeviceModel extends BaseEntity<Long> {
+class CoreDeviceModel extends BaseEntity<int> {
      @JsonKey(name:'securityKey')
     String securityKey;
      @JsonKey(name:'ExpireDate')

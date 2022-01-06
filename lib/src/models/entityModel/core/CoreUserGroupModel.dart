@@ -10,7 +10,7 @@ import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreUserGroupModel extends BaseEntity<Long> {
+class CoreUserGroupModel extends BaseEntity<int> {
 
      @JsonKey(name:'TitleML')
     public   String titleML;

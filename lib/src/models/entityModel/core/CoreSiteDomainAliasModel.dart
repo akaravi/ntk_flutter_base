@@ -6,7 +6,7 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreSiteDomainAliasModel extends BaseEntity<Long> {
+class CoreSiteDomainAliasModel extends BaseEntity<int> {
      @JsonKey(name:'CmsSite')
     public    CoreSiteModel cmsSite;
      @JsonKey(name:'SubDomain')

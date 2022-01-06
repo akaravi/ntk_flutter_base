@@ -2,7 +2,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreSiteUserModel extends BaseEntity<Long> {
+class CoreSiteUserModel extends BaseEntity<int> {
      @JsonKey(name:'ExpireDate')
     String expireDate;
      @JsonKey(name:'LinkSiteId')

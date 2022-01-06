@@ -6,7 +6,7 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreModuleProcessCustomizeModel extends BaseEntity<Long> {
+class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'TitleEn')

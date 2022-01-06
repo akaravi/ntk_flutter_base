@@ -1,14 +1,18 @@
+import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumTransactionRecordStatus.dart';
+import 'package:json_annotation/json_annotation.dart';
 
+import 'BankPaymentTransactionModel.dart';
 
-class BankPaymentTransactionLogModel extends BaseEntity<Long> {
-     @JsonKey(name:'TransactionStatus')
-    EnumTransactionRecordStatus transactionStatus;
-     @JsonKey(name:'LinkTransactionId')
-    long linkTransactionId;
+@JsonSerializable()
+class BankPaymentTransactionLogModel extends BaseEntity<int> {
+  @JsonKey(name: 'TransactionStatus')
+  EnumTransactionRecordStatus transactionStatus;
+  @JsonKey(name: 'LinkTransactionId')
+  int linkTransactionId;
 
-    // tslint:disable-next-line: variable-name
-     @JsonKey(name:' virtual_Transaction')
-    BankPaymentTransactionModel  virtual_Transaction;
-     @JsonKey(name:'Transaction')
-    BankPaymentTransactionModel transaction;
+  @JsonKey(name: 'virtual_Transaction')
+  BankPaymentTransactionModel virtual_Transaction;
+  @JsonKey(name: 'Transaction')
+  BankPaymentTransactionModel transaction;
 }

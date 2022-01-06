@@ -18,9 +18,9 @@ class NewsCommentModel extends BaseModuleEntity<int> {
      @JsonKey(name:'RegisterDate')
     String registerDate;
      @JsonKey(name:'SumLikeClick')
-    int SumLikeClick;
+    int sumLikeClick;
      @JsonKey(name:'SumDisLikeClick')
-    int SumDisLikeClick;
+    int sumDisLikeClick;
      @JsonKey(name:' virtual_Content')
     public NewsContentModel  virtual_Content;
      @JsonKey(name:'Content')

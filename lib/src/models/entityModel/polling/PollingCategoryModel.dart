@@ -10,7 +10,7 @@ class PollingCategoryModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'CurrencyUnitRatioByShop')
-    int CurrencyUnitRatioByShop;
+    int currencyUnitRatioByShop;
      @JsonKey(name:'MaxTransactionAmount')
     int maxTransactionAmount;
      @JsonKey(name:'MinTransactionAmount')

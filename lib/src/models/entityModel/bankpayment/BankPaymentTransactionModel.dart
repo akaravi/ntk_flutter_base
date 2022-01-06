@@ -1,60 +1,64 @@
-
-
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/base/feildinfo/GetPropertiesInfoModel.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import 'BankPaymentPrivateSiteConfigModel.dart';
+import 'BankPaymentTransactionLogModel.dart';
+
 @JsonSerializable()
 class BankPaymentTransactionModel extends BaseEntity<int> {
-     @JsonKey(name:'TransactionStatus')
-    int transactionStatus; //as EnumTransactionRecordStatus
-     @JsonKey(name:'BankStatus')
-    int bankStatus;//as EnumTransactionBankStatus
-     @JsonKey(name:'CurrencyUnit')
-    String CurrencyUnit;
-     @JsonKey(name:'CurrencyUnitRatioByShop')
-    int CurrencyUnitRatioByShop;
-     @JsonKey(name:'SuccessStatusMessage')
-    String SuccessStatusMessage;
-     @JsonKey(name:'LastStatusMessage')
-    String lastStatusMessage;
-     @JsonKey(name:'LastTransactionCheckMessage')
-    String lastTransactionCheckMessage;
-     @JsonKey(name:'BackedFromBank')
-bool backedFromBank;
-     @JsonKey(name:'LinkPrivateSiteConfigId')
-    int linkPrivateSiteConfigId;
-     @JsonKey(name:'LinkUserId')
-    int linkUserId;
-     @JsonKey(name:'Amount')
-    int Amount;
-     @JsonKey(name:'AmountPure')
-    int AmountPure;
-     @JsonKey(name:'StampJsonValues')
-    String StampJsonValues;
-     @JsonKey(name:'StampJsonFormatter')
-   List<GetPropertiesInfoModel> StampJsonFormatter;
-     @JsonKey(name:'RequestBackUserFromBankJsonValues')
-    String requestBackUserFromBankJsonValues;
-     @JsonKey(name:'RequestBackUserFromBankJsonFormatter')
-   List<GetPropertiesInfoModel> requestBackUserFromBankJsonFormatter;
+  @JsonKey(name: 'TransactionStatus')
+  int transactionStatus; //as EnumTransactionRecordStatus
+  @JsonKey(name: 'BankStatus')
+  int bankStatus; //as EnumTransactionBankStatus
+  @JsonKey(name: 'CurrencyUnit')
+  String currencyUnit;
+  @JsonKey(name: 'CurrencyUnitRatioByShop')
+  int currencyUnitRatioByShop;
+  @JsonKey(name: 'SuccessStatusMessage')
+  String successStatusMessage;
+  @JsonKey(name: 'LastStatusMessage')
+  String lastStatusMessage;
+  @JsonKey(name: 'LastTransactionCheckMessage')
+  String lastTransactionCheckMessage;
+  @JsonKey(name: 'BackedFromBank')
+  bool backedFromBank;
+  @JsonKey(name: 'LinkPrivateSiteConfigId')
+  int linkPrivateSiteConfigId;
+  @JsonKey(name: 'LinkUserId')
+  int linkUserId;
+  @JsonKey(name: 'Amount')
+  int amount;
+  @JsonKey(name: 'AmountPure')
+  int amountPure;
+  @JsonKey(name: 'StampJsonValues')
+  String stampJsonValues;
+  @JsonKey(name: 'StampJsonFormatter')
+  List<GetPropertiesInfoModel> stampJsonFormatter;
+  @JsonKey(name: 'RequestBackUserFromBankJsonValues')
+  String requestBackUserFromBankJsonValues;
+  @JsonKey(name: 'RequestBackUserFromBankJsonFormatter')
+  List<GetPropertiesInfoModel> requestBackUserFromBankJsonFormatter;
 
-     @JsonKey(name:'OnlineDateLock')
-    String onlineDateLock;
-     @JsonKey(name:'OnlineDateUnlock')
-    String onlineDateUnlock;
-     @JsonKey(name:'LastUrlAddressInUse')
-    String lastUrlAddressInUse;
-    // tslintdisable-next-line variable-name
-     @JsonKey(name:' virtual_PrivateSiteConfig')
-    public BankPaymentPrivateSiteConfigModel virtual_PrivateSiteConfig;
-     @JsonKey(name:'PrivateSiteConfig')
-    public BankPaymentPrivateSiteConfigModel privateSiteConfig;
+  @JsonKey(name: 'OnlineDateLock')
+  String onlineDateLock;
+  @JsonKey(name: 'OnlineDateUnlock')
+  String onlineDateUnlock;
+  @JsonKey(name: 'LastUrlAddressInUse')
+  String lastUrlAddressInUse;
 
-     @JsonKey(name:'LinkModelShopCartId')
-    long linkModelShopCartId;
-     @JsonKey(name:'ModelShopInvoiceSaleRelease')
-    bool modelShopInvoiceSaleRelease;
-     @JsonKey(name:'ModelShopInvoiceSaleReleaseDate')
-    String modelShopInvoiceSaleReleaseDate;
-     @JsonKey(name:'TransactionLogs')
-    public BankPaymentTransactionLogModel transactionLogs;
+  @JsonKey(name: 'virtual_PrivateSiteConfig')
+  BankPaymentPrivateSiteConfigModel virtual_PrivateSiteConfig;
+
+  @JsonKey(name: 'PrivateSiteConfig')
+  BankPaymentPrivateSiteConfigModel privateSiteConfig;
+
+  @JsonKey(name: 'LinkModelShopCartId')
+  int linkModelShopCartId;
+  @JsonKey(name: 'ModelShopInvoiceSaleRelease')
+  bool modelShopInvoiceSaleRelease;
+  @JsonKey(name: 'ModelShopInvoiceSaleReleaseDate')
+  String modelShopInvoiceSaleReleaseDate;
+  @JsonKey(name: 'TransactionLogs')
+  BankPaymentTransactionLogModel transactionLogs;
 }
