@@ -1,4 +1,4 @@
-package src.models.entityModel.enums;
+
 
  enum EnumHyperShopOrderType {
     Open(0),

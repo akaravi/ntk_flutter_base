@@ -1,4 +1,4 @@
-package src.models.entityModel.enums;
+
 
  enum EnumEstateUserType {
     Customer(1),
