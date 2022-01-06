@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumEstateUserType {
+ enum EnumEstateUserType {
     Customer(1),
     Agent(2),
     Agency(3);

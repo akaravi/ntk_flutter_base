@@ -21,13 +21,13 @@ class CoreSiteModel {
     int linkCreatedBySiteId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_ParentCreator')
-    public CoreSiteModel virtual_ParentCreator;
+     CoreSiteModel virtual_ParentCreator;
      @JsonKey(name:'ParentCreator')
-    public CoreSiteModel parentCreator;
+     CoreSiteModel parentCreator;
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'OwnerSiteSetStatus')
-    public EnumSiteStatus ownerSiteSetStatus;
+     EnumSiteStatus ownerSiteSetStatus;
      @JsonKey(name:'UserLanguage')
     int userLanguage;
      @JsonKey(name:'SubDomain')
@@ -46,9 +46,9 @@ class CoreSiteModel {
     int linkSiteCategoryId;
 
      @JsonKey(name:' virtual_CmsSiteCategory')
-    public CoreSiteCategoryModel virtual_CmsSiteCategory;
+     CoreSiteCategoryModel virtual_CmsSiteCategory;
       @JsonKey(name:'CmsSiteCategory')
-     public CoreSiteCategoryModel CmsSiteCategory;
+      CoreSiteCategoryModel CmsSiteCategory;
      @JsonKey(name:'HasAccountingForm')
 bool hasAccountingForm;
      @JsonKey(name:'ViewInCmsSiteLIst')

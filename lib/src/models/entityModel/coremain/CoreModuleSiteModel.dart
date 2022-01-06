@@ -22,13 +22,13 @@ class CoreModuleSiteModel extends BaseEntity<int> {
      @JsonKey(name:'HasBuyed')
 bool hasBuyed;
      @JsonKey(name:' virtual_CmsSite')
-    public CoreSiteModel  virtual_CmsSite;
+     CoreSiteModel  virtual_CmsSite;
      @JsonKey(name:'CmsSite')
-    public CoreSiteModel CmsSite;
+     CoreSiteModel CmsSite;
      @JsonKey(name:' virtual_CmsModule')
-    public CoreModuleModel  virtual_CmsModule;
+     CoreModuleModel  virtual_CmsModule;
      @JsonKey(name:'CmsModule')
-    public CoreModuleModel CmsModule;
+     CoreModuleModel CmsModule;
      @JsonKey(name:'ModuleConfigSiteAccessValuesJson')
     String moduleConfigSiteAccessValuesJson;
      @JsonKey(name:'ModuleConfigSiteValuesJson')

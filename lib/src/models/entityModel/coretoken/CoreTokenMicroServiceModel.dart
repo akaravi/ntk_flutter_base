@@ -21,13 +21,13 @@ class CoreTokenMicroServiceModel extends BaseEntity<String> {
      @JsonKey(name:'DeviceId')
     String DeviceId;
      @JsonKey(name:'DeviceType')
-    public EnumMicroServiceType DeviceType;
+     EnumMicroServiceType DeviceType;
      @JsonKey(name:'UserType')
-    public EnumManageUserAccessControllerTypes userType;
+     EnumManageUserAccessControllerTypes userType;
      @JsonKey(name:'DeviceConnectionType')
-    public EnumMicroServiceConnectionType DeviceConnectionType;
+     EnumMicroServiceConnectionType DeviceConnectionType;
      @JsonKey(name:'DeviceConnectionState')
-    public EnumMicroServiceConnectionStatus DeviceConnectionState;
+     EnumMicroServiceConnectionStatus DeviceConnectionState;
      @JsonKey(name:'RequestDate')
     String requestDate;
      @JsonKey(name:'UsedUsername')

@@ -22,9 +22,9 @@ class CoreGuideModel extends BaseEntity<int> {
      @JsonKey(name:'LinkParentId')
     int linkParentId;
      @JsonKey(name:' virtual_Parent')
-    public CoreGuideModel  virtual_Parent;
+     CoreGuideModel  virtual_Parent;
      @JsonKey(name:'Parent')
-    public CoreGuideModel parent;
+     CoreGuideModel parent;
      @JsonKey(name:'Children')
    List<CoreGuideModel> Children;
 }

@@ -22,7 +22,7 @@ class EstatePropertyDetailModel {
     String iconColor;
      @JsonKey(name:'InputDataType')//0 string //1 int //2 is bool ,3 is float,4 is date,5 is area
     int inputDataType;
-    public EnumInputDataType inputDataTypeEnum;
+     EnumInputDataType inputDataTypeEnum;
 
      @JsonKey(name:'InvisibleForEndUser')
    bool invisibleForEndUser;

@@ -12,6 +12,6 @@ class CoreModuleTagModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkCategoryId')
     String linkCategoryId;
      @JsonKey(name:'Category')
-    public CoreModuleTagCategoryModel Category;
+     CoreModuleTagCategoryModel Category;
 
 }

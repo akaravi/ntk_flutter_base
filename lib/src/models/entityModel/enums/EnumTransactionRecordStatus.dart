@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumTransactionRecordStatus {
+ enum EnumTransactionRecordStatus {
     None(0),
     SendUserToBank(1),
     BackUserFromBank(2),
@@ -24,7 +24,7 @@ public enum EnumTransactionRecordStatus {
         return index;
     }
 
-    public static EnumTransactionRecordStatus get(int v) {
+     static EnumTransactionRecordStatus get(int v) {
         if (v == None.index)
             return None;
         if (v == SendUserToBank.index)

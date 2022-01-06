@@ -22,10 +22,10 @@ class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkParentId')
     int linkParentId;
      @JsonKey(name:'Category')
-    public CoreModuleTagCategoryModel Category;
+     CoreModuleTagCategoryModel Category;
 
      @JsonKey(name:' virtual_Category')
-    public CoreModuleTagCategoryModel  virtual_Category;
+     CoreModuleTagCategoryModel  virtual_Category;
      @JsonKey(name:'Children')
    List<CoreModuleTagCategoryModel> Children;
      @JsonKey(name:'Tags')

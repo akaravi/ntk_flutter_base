@@ -13,23 +13,23 @@ import 'package:json_annotation/json_annotation.dart';
 class CoreUserGroupModel extends BaseEntity<int> {
 
      @JsonKey(name:'TitleML')
-    public   String titleML;
+       String titleML;
      @JsonKey(name:'Title')
-    public   String title;
+       String title;
      @JsonKey(name:'TitleResourceLanguage')
-    public   String titleResourceLanguage;
+       String titleResourceLanguage;
      @JsonKey(name:'Description')
-    public   String description;
+       String description;
      @JsonKey(name:'UserType')
-    public   EnumManageUserAccessControllerTypes userType;
+       EnumManageUserAccessControllerTypes userType;
      @JsonKey(name:'UserTypeTitle')
-    public  String userTypeTitle;
+      String userTypeTitle;
      @JsonKey(name:'UserTypeDescription')
     String userTypeDescription;
      @JsonKey(name:'CmsSiteUsers')
-    public  List<CoreSiteUserModel> cmsSiteUsers;
+      List<CoreSiteUserModel> cmsSiteUsers;
      @JsonKey(name:'CmsCpMainMenuCmsUserGroup')
-    public  List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
+      List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
 }
 
 

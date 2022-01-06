@@ -35,9 +35,9 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
      @JsonKey(name:'LinkPropertyTypeUsageId')
     String LinkPropertyTypeUsageId;
      @JsonKey(name:'PropertyTypeLanduse')
-    public  EstatePropertyTypeLanduseModel  propertyTypeLanduse;
+      EstatePropertyTypeLanduseModel  propertyTypeLanduse;
      @JsonKey(name:'PropertyTypeUsage')
-    public EstatePropertyTypeUsageModel  propertyTypeUsage;
+     EstatePropertyTypeUsageModel  propertyTypeUsage;
      @JsonKey(name:'Favorited')
 bool isFavorite;
     /// <summary>@NOTIC must be integer
@@ -106,7 +106,7 @@ bool isFavorite;
    List<String> uploadFileGUID;
 
      @JsonKey(name:'LinkLocationIdTitle')
-    public  String LinkLocationIdTitle;
+      String LinkLocationIdTitle;
      @JsonKey(name:'LinkLocationIdParentTitle')
-    public   String LinkLocationIdParentTitle;
+       String LinkLocationIdParentTitle;
 }

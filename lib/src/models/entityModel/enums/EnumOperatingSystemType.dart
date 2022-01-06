@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumOperatingSystemType {
+ enum EnumOperatingSystemType {
     none(0),
     Windows(1),
     AppleMacOS(2),

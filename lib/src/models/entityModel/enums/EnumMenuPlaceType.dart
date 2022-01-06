@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public  enum  EnumMenuPlaceType {
+  enum  EnumMenuPlaceType {
     All ,
     MenuUp ,
     MenuDown,

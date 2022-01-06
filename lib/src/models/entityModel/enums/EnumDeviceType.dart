@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumDeviceType {
+ enum EnumDeviceType {
     none(0),
     WebSite(1),
     Windows(2),

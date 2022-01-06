@@ -12,7 +12,7 @@ class EstateContractModel extends BaseModuleEntity<String> {
      @JsonKey(name:'LinkEstateContractTypeId')
     String linkEstateContractTypeId;
      @JsonKey(name:'ContractType')
-    public EstateContractTypeModel ContractType;
+     EstateContractTypeModel ContractType;
      @JsonKey(name:'LinkPropertyId')
     String linkPropertyId;
      @JsonKey(name:'SalePriceByAgreement')

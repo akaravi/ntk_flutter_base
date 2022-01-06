@@ -17,9 +17,9 @@ class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
     int linkModuleProcessId;
 
      @JsonKey(name:' virtual_CmsModuleProcess')
-    public CoreModuleProcessModel  virtual_CmsModuleProcess;
+     CoreModuleProcessModel  virtual_CmsModuleProcess;
      @JsonKey(name:'CmsModuleProcess')
-    public CoreModuleProcessModel CmsModuleProcess;
+     CoreModuleProcessModel CmsModuleProcess;
      @JsonKey(name:'ProcessInputCustomizeValue')
     String processInputCustomizeValue;
      @JsonKey(name:'ProcessInputValueForm')

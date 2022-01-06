@@ -28,9 +28,9 @@ class CoreTokenLogModel extends BaseEntity<String> {
      @JsonKey(name:'ExpireDate')
     String expireDate;
      @JsonKey(name:'UserAccessAreaType')
-    public EnumManageUserAccessAreaTypes userAccessAreaType;
+     EnumManageUserAccessAreaTypes userAccessAreaType;
      @JsonKey(name:'UserType')
-    public EnumManageUserAccessControllerTypes userType;
+     EnumManageUserAccessControllerTypes userType;
      @JsonKey(name:'UserAccessAdminAllowToAllData')
 bool userAccessAdminAllowToAllData;
      @JsonKey(name:'UserAccessAdminAllowToProfessionalData')

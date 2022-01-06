@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum  EnumSortType {
+ enum  EnumSortType {
     Descending(0),
     Ascending(1),
     Random(2);

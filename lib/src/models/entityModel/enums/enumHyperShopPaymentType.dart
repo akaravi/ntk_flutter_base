@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum enumHyperShopPaymentType {
+ enum enumHyperShopPaymentType {
     none(0),
     Online(1),
     OnPLace(2),

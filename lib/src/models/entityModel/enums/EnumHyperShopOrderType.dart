@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumHyperShopOrderType {
+ enum EnumHyperShopOrderType {
     Open(0),
     ayment(1),
     StartDelivery(2),

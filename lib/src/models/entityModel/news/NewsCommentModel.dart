@@ -22,7 +22,7 @@ class NewsCommentModel extends BaseModuleEntity<int> {
      @JsonKey(name:'SumDisLikeClick')
     int sumDisLikeClick;
      @JsonKey(name:' virtual_Content')
-    public NewsContentModel  virtual_Content;
+     NewsContentModel  virtual_Content;
      @JsonKey(name:'Content')
-    public NewsContentModel Content;
+     NewsContentModel Content;
 }

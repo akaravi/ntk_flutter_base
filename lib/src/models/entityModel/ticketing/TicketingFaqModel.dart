@@ -10,9 +10,9 @@ class TicketingFaqModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkTicketingDepartemenId')
     int linkTicketingDepartemenId;
      @JsonKey(name:' virtual_TicketingDepartemen')
-    public TicketingDepartemenModel  virtual_TicketingDepartemen;
+     TicketingDepartemenModel  virtual_TicketingDepartemen;
      @JsonKey(name:'TicketingDepartemen')
-    public TicketingDepartemenModel ticketingDepartemen;
+     TicketingDepartemenModel ticketingDepartemen;
      @JsonKey(name:'LinkFileIds')
     String linkFileIds;
 }

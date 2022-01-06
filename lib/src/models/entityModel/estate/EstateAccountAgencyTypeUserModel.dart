@@ -11,7 +11,7 @@ class EstateAccountAgencyTypeUserModel extends BaseModuleEntity<String> {
      @JsonKey(name:'AccountUserType')
     int accountUserType;
     //not need to serialize
-    public EnumEstateUserType accountUserTypeEnum;
+     EnumEstateUserType accountUserTypeEnum;
      @JsonKey(name:'LinkAccountUserId')
     String linkAccountUserId;
      @JsonKey(name:'LinkAccountAgencyId')

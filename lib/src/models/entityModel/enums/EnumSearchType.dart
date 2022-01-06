@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumSearchType {
+ enum EnumSearchType {
      Equal ( 0),
      NotEqual ( 1),
      LessThan ( 2),

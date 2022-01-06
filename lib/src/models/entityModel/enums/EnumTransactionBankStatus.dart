@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumTransactionBankStatus {
+ enum EnumTransactionBankStatus {
     None(0),
     Error(1),
     aid(2),
@@ -17,7 +17,7 @@ public enum EnumTransactionBankStatus {
         return index;
     }
 
-  public static EnumTransactionBankStatus get(int v) {
+   static EnumTransactionBankStatus get(int v) {
         if (v == None.index)
             return None;
         if (v == Error.index)

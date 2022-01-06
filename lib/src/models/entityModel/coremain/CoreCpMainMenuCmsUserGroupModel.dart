@@ -13,8 +13,8 @@ class CoreCpMainMenuCmsUserGroupModel {
      @JsonKey(name:'CmsUserGroup_Id')
     int CmsUserGroup_Id;
      @JsonKey(name:'CmsCpMainMenu')
-    public CoreCpMainMenuModel CmsCpMainMenu;
+     CoreCpMainMenuModel CmsCpMainMenu;
      @JsonKey(name:'CmsUserGroup')
-    public CoreUserGroupModel CmsUserGroup;
+     CoreUserGroupModel CmsUserGroup;
 
 }

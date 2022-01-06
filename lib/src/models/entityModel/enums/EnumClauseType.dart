@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum  EnumClauseType {
+ enum  EnumClauseType {
     Or ( 1),
     And ( 2);
 

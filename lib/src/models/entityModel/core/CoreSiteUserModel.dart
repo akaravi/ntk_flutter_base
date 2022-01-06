@@ -13,17 +13,17 @@ class CoreSiteUserModel extends BaseEntity<int> {
     int linkUserGroupId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_CmsSite')
-    public CoreSiteModel virtual_CmsSite;
+     CoreSiteModel virtual_CmsSite;
      @JsonKey(name:'CmsSite')
-    public CoreSiteModel cmsSite;
+     CoreSiteModel cmsSite;
 
      @JsonKey(name:' virtual_CmsUser')
-    public CoreUserModel virtual_CmsUser;
+     CoreUserModel virtual_CmsUser;
      @JsonKey(name:'CmsUser')
-    public CoreUserModel cmsUser;
+     CoreUserModel cmsUser;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_CmsUserGroup')
-    public CoreUserGroupModel virtual_CmsUserGroup;
+     CoreUserGroupModel virtual_CmsUserGroup;
      @JsonKey(name:'CmsUserGroup')
-    public CoreUserGroupModel cmsUserGroup;
+     CoreUserGroupModel cmsUserGroup;
 }

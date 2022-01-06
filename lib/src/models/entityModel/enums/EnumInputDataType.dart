@@ -1,6 +1,6 @@
 package src.models.entityModel.enums;
 
-public enum EnumInputDataType {
+ enum EnumInputDataType {
     String(0),
     Int(1),
     Boolean(2),

@@ -5,12 +5,12 @@ import com.google.gson.annotations.SerializedName;
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class HyperShopOrderContentModel {
-    public static String CURRENCY_UNIT = "ریال";
+     static String CURRENCY_UNIT = "ریال";
 
      @JsonKey(name:'LinkOrderId')
     int linkOrderId;
      @JsonKey(name:'Order')
-    public hyperShopOrderModel order;
+     hyperShopOrderModel order;
      @JsonKey(name:'Code')
     String code;
      @JsonKey(name:'Name')

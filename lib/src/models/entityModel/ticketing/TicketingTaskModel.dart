@@ -31,9 +31,9 @@ class TicketingTaskModel extends BaseModuleEntity<int> {
      @JsonKey(name:'DeviceInformation')
     String deviceInformation;
      @JsonKey(name:' virtual_Departemen')
-    public ticketingDepartemenModel  virtual_Departemen;
+     ticketingDepartemenModel  virtual_Departemen;
      @JsonKey(name:'Departemen')
-    public TicketingDepartemenModel departemen;
+     TicketingDepartemenModel departemen;
      @JsonKey(name:'LinkOperatorId')
     int linkOperatorId;
      @JsonKey(name:'Answers')
