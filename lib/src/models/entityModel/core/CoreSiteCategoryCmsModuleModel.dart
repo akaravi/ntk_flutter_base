@@ -6,7 +6,7 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreSiteCategoryCmsModuleModel extends BaseEntity<Long> {
+class CoreSiteCategoryCmsModuleModel extends BaseEntity<int> {
 
      @JsonKey(name:'LinkCmsSiteCategoryId')
     int linkCmsSiteCategoryId;

@@ -16,7 +16,7 @@ class UserTokenModel extends BaseEntity<String> {
      @JsonKey(name:'Token')
     String token;
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
      @JsonKey(name:'UserAccessAreaType')
     public EnumManageUserAccessAreaTypes userAccessAreaType;
      @JsonKey(name:'UserType')

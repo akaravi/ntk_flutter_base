@@ -9,12 +9,12 @@ class NewsContentOtherInfoModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Source')
     String source;
      @JsonKey(name:'LinkContentid')
-    int linkContentid;
+    int linkContentId;
      @JsonKey(name:'TypeId')
-    integer typeId;
+    int typeId;
     // tslint:disable-next-line: variable-name
      @JsonKey(name:' virtual_Content')
-    public NewsContentModel virtual_Content;
+     NewsContentModel virtual_Content;
      @JsonKey(name:'Content')
-    public NewsContentModel content;
+     NewsContentModel content;
 }

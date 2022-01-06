@@ -2,7 +2,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreSiteCategoryModel extends BaseEntity<Long> {
+class CoreSiteCategoryModel extends BaseEntity<int> {
      @JsonKey(name:'TitleML')
     String titleML;
      @JsonKey(name:'Title')

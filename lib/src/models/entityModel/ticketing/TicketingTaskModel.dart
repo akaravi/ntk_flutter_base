@@ -43,7 +43,7 @@ class TicketingTaskModel extends BaseModuleEntity<int> {
      @JsonKey(name:'LinkFileIds')
     String linkFileIds;
      @JsonKey(name:'LinkFileIdsSrc')
-   List<String> LinkFileIdsSrc;
+   List<String> linkFileIdsSrc;
      @JsonKey(name:'UploadFileGUID')
    List<String> uploadFileGUID;
 }

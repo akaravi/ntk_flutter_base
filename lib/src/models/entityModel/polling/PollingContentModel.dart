@@ -11,7 +11,7 @@ class PollingContentModel extends BaseModuleEntity<int> {
      @JsonKey(name:'Source')
     String source;
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
      @JsonKey(name:'ViewStatisticsBeforeVote')
 bool viewStatisticsBeforeVote;
      @JsonKey(name:'ViewStatisticsAfterVote')
@@ -19,9 +19,9 @@ bool viewStatisticsAfterVote;
      @JsonKey(name:' virtual_Category')
      PollingCategoryModel  virtual_Category;
      @JsonKey(name:'Category')
-     PollingCategoryModel Category;
+     PollingCategoryModel category;
      @JsonKey(name:'Body')
-    String Body;
+    String body;
      @JsonKey(name:'Description')
     String Description;
      @JsonKey(name:'FromDate')
@@ -43,9 +43,9 @@ bool viewStatisticsAfterVote;
      @JsonKey(name:'LinkMainImageId')
     int linkMainImageId;
      @JsonKey(name:'ScoreClick')
-    int ScoreClick;
+    int scoreClick;
      @JsonKey(name:'ScoreSumPercent')
-    int ScoreSumPercent;
+    int scoreSumPercent;
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'ViewCount')

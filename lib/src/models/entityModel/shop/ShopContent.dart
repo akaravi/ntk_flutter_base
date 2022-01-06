@@ -53,7 +53,7 @@ class ShopContent extends BaseModuleEntity<int> {
   List<ShopProductSalePrice>  productSalePrices;
 
      @JsonKey(name:'LinkFileIdsSrc')
-   List<String> LinkFileIdsSrc;
+   List<String> linkFileIdsSrc;
 
 
 }

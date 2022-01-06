@@ -8,9 +8,9 @@ import ntk.android.base.entitymodel.core.CoreSiteModel;
 
 import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
-class CoreModuleSiteModel extends BaseEntity<Long> {
+class CoreModuleSiteModel extends BaseEntity<int> {
      @JsonKey(name:'ExpireDate')
-    String ExpireDate;
+    String expireDate;
      @JsonKey(name:'LinkSiteId')
     int linkSiteId;
      @JsonKey(name:'Title')
