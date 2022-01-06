@@ -1,32 +1,30 @@
-package src.models.entityModel.estate;
-
-import com.google.gson.annotations.SerializedName;
-
-import ntk.android.base.entitymodel.base.BaseModuleEntity;
-
+import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import 'EstateContractTypeModel.dart';
+
 @JsonSerializable()
 class EstateContractModel extends BaseModuleEntity<String> {
-     @JsonKey(name:'Description')
-    String description;
-     @JsonKey(name:'LinkEstateContractTypeId')
-    String linkEstateContractTypeId;
-     @JsonKey(name:'ContractType')
-     EstateContractTypeModel ContractType;
-     @JsonKey(name:'LinkPropertyId')
-    String linkPropertyId;
-     @JsonKey(name:'SalePriceByAgreement')
-bool SalePriceByAgreement;
-     @JsonKey(name:'SalePrice')
-    double  SalePrice;
-     @JsonKey(name:'RentPriceByAgreement')
-   bool rentPriceByAgreement;
-     @JsonKey(name:'RentPrice')
-    double  rentPrice;
-     @JsonKey(name:'DepositPriceByAgreement')
-bool DepositPriceByAgreement;
-     @JsonKey(name:'DepositPrice')
-    double  DepositPrice;
-     @JsonKey(name:' unitSalePrice')
-    String unitSalePrice = "تومان";
+  @JsonKey(name: 'Description')
+  String description;
+  @JsonKey(name: 'LinkEstateContractTypeId')
+  String linkEstateContractTypeId;
+  @JsonKey(name: 'ContractType')
+  EstateContractTypeModel contractType;
+  @JsonKey(name: 'LinkPropertyId')
+  String linkPropertyId;
+  @JsonKey(name: 'SalePriceByAgreement')
+  bool salePriceByAgreement;
+  @JsonKey(name: 'SalePrice')
+  double salePrice;
+  @JsonKey(name: 'RentPriceByAgreement')
+  bool rentPriceByAgreement;
+  @JsonKey(name: 'RentPrice')
+  double rentPrice;
+  @JsonKey(name: 'DepositPriceByAgreement')
+  bool depositPriceByAgreement;
+  @JsonKey(name: 'DepositPrice')
+  double depositPrice;
+  @JsonKey(name: ' unitSalePrice')
+  String unitSalePrice = "تومان";
 }

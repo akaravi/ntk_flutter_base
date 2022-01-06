@@ -23,7 +23,7 @@ bool viewStatisticsAfterVote;
      @JsonKey(name:'Body')
     String body;
      @JsonKey(name:'Description')
-    String Description;
+    String description;
      @JsonKey(name:'FromDate')
     String fromDate;
      @JsonKey(name:'Geolocationlatitude')

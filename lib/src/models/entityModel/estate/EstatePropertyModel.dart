@@ -1,112 +1,113 @@
-package src.models.entityModel.estate;
-
-import com.google.gson.annotations.SerializedName;
-
-
-
-import ntk.android.base.entitymodel.base.BaseModuleEntity;
-import ntk.android.base.entitymodel.enums.EnumRecordStatus;
-
+import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import 'EstateContractModel.dart';
+import 'EstatePropertyDetailGroupModel.dart';
+import 'EstatePropertyDetailValueModel.dart';
+import 'EstatePropertyTypeLanduseModel.dart';
+import 'EstatePropertyTypeUsageModel.dart';
+
 @JsonSerializable()
 class EstatePropertyModel extends BaseModuleEntity<String> {
-     @JsonKey(name:'Title')
-    String title;
-     @JsonKey(name:'CaseCode')
-    String CaseCode;
-    EnumRecordStatus MainAdminRecordStatus;
-     @JsonKey(name:'CreatedYaer')
-    int CreatedYaer;
-     @JsonKey(name:'Partition')
-    int  partition;
-     @JsonKey(name:'Area')
-    int Area;
-     @JsonKey(name:'LinkEstateUserId')
-    String linkEstateUserId;
+  @JsonKey(name: 'Title')
+  String title;
+  @JsonKey(name: 'CaseCode')
+  String caseCode;
+  @JsonKey(name: 'MainAdminRecordStatus')
+  EnumRecordStatus mainAdminRecordStatus;
+  @JsonKey(name: 'CreatedYaer')
+  int createdYaer;
+  @JsonKey(name: 'Partition')
+  int partition;
+  @JsonKey(name: 'Area')
+  int area;
+  @JsonKey(name: 'LinkEstateUserId')
+  String linkEstateUserId;
 
-     @JsonKey(name:'LinkLocationId')
-    int linkLocationId;
-     @JsonKey(name:'Description')
-    String Description;
-     @JsonKey(name:'LinkCmsUserId')
-    int linkCmsUserId;
-     @JsonKey(name:'LinkPropertyTypeLanduseId')
-    String LinkPropertyTypeLanduseId;
-     @JsonKey(name:'LinkPropertyTypeUsageId')
-    String LinkPropertyTypeUsageId;
-     @JsonKey(name:'PropertyTypeLanduse')
-      EstatePropertyTypeLanduseModel  propertyTypeLanduse;
-     @JsonKey(name:'PropertyTypeUsage')
-     EstatePropertyTypeUsageModel  propertyTypeUsage;
-     @JsonKey(name:'Favorited')
-bool isFavorite;
-    /// <summary>@NOTIC must be integer
-    /// موقعیت جغرافیایی
-    /// </summary>
-     @JsonKey(name:'Geolocationlatitude')
-    double  geolocationlatitude;
+  @JsonKey(name: 'LinkLocationId')
+  int linkLocationId;
+  @JsonKey(name: 'Description')
+  String description;
+  @JsonKey(name: 'LinkCmsUserId')
+  int linkCmsUserId;
+  @JsonKey(name: 'LinkPropertyTypeLanduseId')
+  String linkPropertyTypeLanduseId;
+  @JsonKey(name: 'LinkPropertyTypeUsageId')
+  String linkPropertyTypeUsageId;
+  @JsonKey(name: 'PropertyTypeLanduse')
+  EstatePropertyTypeLanduseModel propertyTypeLanduse;
+  @JsonKey(name: 'PropertyTypeUsage')
+  EstatePropertyTypeUsageModel propertyTypeUsage;
+  @JsonKey(name: 'Favorited')
+  bool favorited;
 
-     @JsonKey(name:'Geolocationlongitude')
-    double  geolocationlongitude;
+  @JsonKey(name: 'Geolocationlatitude')
+  double geolocationlatitude;
 
-     @JsonKey(name:'Address')
-    String address;
+  @JsonKey(name: 'Geolocationlongitude')
+  double geolocationlongitude;
 
-     @JsonKey(name:'LinkMainImageId')
-    int LinkMainImageId;
-     @JsonKey(name:'LinkExtraImageIds')
-    String LinkExtraImageIds;
-     @JsonKey(name:'LinkFileIds')
-    String LinkFileIds;
-    /// <summary>
-    /// تعداد مجموع آرا
-    /// </summary>
+  @JsonKey(name: 'Address')
+  String address;
 
-     @JsonKey(name:'ScoreClick')
-    int scoreClick;
-    /// <summary>
-    /// مجموع امتیازهای داده شده در آراها
-    /// امتیاز از 10 می باشد
-    /// </summary>
+  @JsonKey(name: 'LinkMainImageId')
+  int linkMainImageId;
+  @JsonKey(name: 'LinkExtraImageIds')
+  String linkExtraImageIds;
+  @JsonKey(name: 'LinkFileIds')
+  String linkFileIds;
 
-     @JsonKey(name:'ScoreSumPercent')
-    int ScoreSumPercent;
-     @JsonKey(name:'ViewCount')
-    int viewCount;
-    // * AboutAgent */
-     @JsonKey(name:'AboutAgentTel')
-    String AboutAgentTel;
-     @JsonKey(name:'AboutAgentMobile')
-    String AboutAgentMobile;
-    // * AboutAgent */
-    // * AboutCustomer */
-     @JsonKey(name:'AboutCustomerTel')
-    String AboutCustomerTel;
-     @JsonKey(name:'AboutCustomerMobile')
-    String AboutCustomerMobile;
-    // * AboutCustomer */
-     @JsonKey(name:'Contracts')
-   List<EstateContractModel> Contracts;
+  @JsonKey(name: 'ScoreClick')
+  int scoreClick;
 
-     @JsonKey(name:'PropertyDetailValues')
-   List<EstatePropertyDetailValueModel>  propertyDetailValues;
-     @JsonKey(name:'PropertyDetailGroups')
-   List<EstatePropertyDetailGroupModel>  propertyDetailGroups;
+  /// <summary>
+  /// مجموع امتیازهای داده شده در آراها
+  /// امتیاز از 10 می باشد
+  /// </summary>
 
-     @JsonKey(name:'LinkMainImageIdSrc')
-    String LinkMainImageIdSrc;
-     @JsonKey(name:'LinkExtraImageIdsSrc')
-   List<String> LinkExtraImageIdsSrc;
-     @JsonKey(name:'LinkFileIdsSrc')
-   List<String> linkFileIdsSrc;
-    /**
-     * برای انتصا مسقیم فایل آپلود شده
-     */
-     @JsonKey(name:'UploadFileGUID')
-   List<String> uploadFileGUID;
+  @JsonKey(name: 'ScoreSumPercent')
+  int scoreSumPercent;
+  @JsonKey(name: 'ViewCount')
+  int viewCount;
 
-     @JsonKey(name:'LinkLocationIdTitle')
-      String LinkLocationIdTitle;
-     @JsonKey(name:'LinkLocationIdParentTitle')
-       String LinkLocationIdParentTitle;
+  // * AboutAgent */
+  @JsonKey(name: 'AboutAgentTel')
+  String aboutAgentTel;
+  @JsonKey(name: 'AboutAgentMobile')
+  String aboutAgentMobile;
+
+  // * AboutAgent */
+  // * AboutCustomer */
+  @JsonKey(name: 'AboutCustomerTel')
+  String aboutCustomerTel;
+  @JsonKey(name: 'AboutCustomerMobile')
+  String aboutCustomerMobile;
+
+  // * AboutCustomer */
+  @JsonKey(name: 'Contracts')
+  List<EstateContractModel> contracts;
+
+  @JsonKey(name: 'PropertyDetailValues')
+  List<EstatePropertyDetailValueModel> propertyDetailValues;
+  @JsonKey(name: 'PropertyDetailGroups')
+  List<EstatePropertyDetailGroupModel> propertyDetailGroups;
+
+  @JsonKey(name: 'LinkMainImageIdSrc')
+  String linkMainImageIdSrc;
+  @JsonKey(name: 'LinkExtraImageIdsSrc')
+  List<String> linkExtraImageIdsSrc;
+  @JsonKey(name: 'LinkFileIdsSrc')
+  List<String> linkFileIdsSrc;
+
+  /**
+   * برای انتصا مسقیم فایل آپلود شده
+   */
+  @JsonKey(name: 'UploadFileGUID')
+  List<String> uploadFileGUID;
+
+  @JsonKey(name: 'LinkLocationIdTitle')
+  String linkLocationIdTitle;
+  @JsonKey(name: 'LinkLocationIdParentTitle')
+  String linkLocationIdParentTitle;
 }

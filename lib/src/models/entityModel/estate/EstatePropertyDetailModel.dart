@@ -1,64 +1,58 @@
-package src.models.entityModel.estate;
-
-import com.google.gson.annotations.SerializedName;
-
-
-
-import ntk.android.base.entitymodel.enums.EnumInputDataType;
-
+import 'package:base/src/models/entityModel/enums/estate/EnumInputDataType.dart';
 import 'package:json_annotation/json_annotation.dart';
+
 @JsonSerializable()
 class EstatePropertyDetailModel {
-     @JsonKey(name:'Id')
-    String id;
-     @JsonKey(name:'Title')
-    String title;
+  @JsonKey(name: 'Id')
+  String id;
+  @JsonKey(name: 'Title')
+  String title;
 
-     @JsonKey(name:'Description')
-    String Description;
-     @JsonKey(name:'IconFont')
-    String iconFont;
-     @JsonKey(name:'IconColor')
-    String iconColor;
-     @JsonKey(name:'InputDataType')//0 string //1 int //2 is bool ,3 is float,4 is date,5 is area
-    int inputDataType;
-     EnumInputDataType inputDataTypeEnum;
+  @JsonKey(name: 'Description')
+  String description;
+  @JsonKey(name: 'IconFont')
+  String iconFont;
+  @JsonKey(name: 'IconColor')
+  String iconColor;
+  @JsonKey(name: 'InputDataType')
+  int inputDataType;
+  EnumInputDataType inputDataTypeEnum;
 
-     @JsonKey(name:'InvisibleForEndUser')
-   bool invisibleForEndUser;
+  @JsonKey(name: 'InvisibleForEndUser')
+  bool invisibleForEndUser;
 
-     @JsonKey(name:'InvisibleForSubmiter')
-   bool invisibleForSubmiter;
+  @JsonKey(name: 'InvisibleForSubmiter')
+  bool invisibleForSubmiter;
 
-     @JsonKey(name:'Unit')
-    String unit;
+  @JsonKey(name: 'Unit')
+  String unit;
 
-     @JsonKey(name:'Required')
-   bool required;
+  @JsonKey(name: 'Required')
+  bool required;
 
-     @JsonKey(name:'IsHistoryable')
-bool isHistoryable;
+  @JsonKey(name: 'IsHistoryable')
+  bool isHistoryable;
 
-     @JsonKey(name:'IsSearchable')
-bool isSearchable;
-     @JsonKey(name:'ShowInFormOrder')
-    integer ShowInFormOrder;
-     @JsonKey(name:'LinkPropertyTypeLanduseId')
-    String LinkPropertyTypeLanduseId;
-     @JsonKey(name:'LinkPropertyDetailGroupId')
-    String LinkPropertyDetailGroupId;
-     @JsonKey(name:'ConfigValueDefaultValueJson')
-    String ConfigValueDefaultValueJson;
-     @JsonKey(name:'ConfigValueDefaultValue')
-   List<String> ConfigValueDefaultValue;
-     @JsonKey(name:'ConfigValueForceUseDefaultValue')
-   bool ConfigValueForceUseDefaultValue;
-     @JsonKey(name:'ConfigValueMultipleChoice')
-   bool ConfigValueMultipleChoice;
+  @JsonKey(name: 'IsSearchable')
+  bool isSearchable;
+  @JsonKey(name: 'ShowInFormOrder')
+  int showInFormOrder;
+  @JsonKey(name: 'LinkPropertyTypeLanduseId')
+  String linkPropertyTypeLanduseId;
+  @JsonKey(name: 'LinkPropertyDetailGroupId')
+  String linkPropertyDetailGroupId;
+  @JsonKey(name: 'ConfigValueDefaultValueJson')
+  String configValueDefaultValueJson;
+  @JsonKey(name: 'ConfigValueDefaultValue')
+  List<String> configValueDefaultValue;
+  @JsonKey(name: 'ConfigValueForceUseDefaultValue')
+  bool configValueForceUseDefaultValue;
+  @JsonKey(name: 'ConfigValueMultipleChoice')
+  bool configValueMultipleChoice;
 
-     @JsonKey(name:'ConfigValueIntValueMin')
-    int ConfigValueIntValueMin;
+  @JsonKey(name: 'ConfigValueIntValueMin')
+  int configValueIntValueMin;
 
-     @JsonKey(name:'ConfigValueIntValueMax')
-    int ConfigValueIntValueMax;
+  @JsonKey(name: 'ConfigValueIntValueMax')
+  int configValueIntValueMax;
 }
