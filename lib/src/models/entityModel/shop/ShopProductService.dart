@@ -20,11 +20,11 @@ class ShopProductService extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkExternalServiceId')
   int linkExternalServiceId;
   @JsonKey(name: 'Price')
-  double  price;
+  double price;
   @JsonKey(name: 'ProductSalePrices')
-  list<ShopProductSalePrice>  productSalePrices;
+  List<ShopProductSalePrice> productSalePrices;
   @JsonKey(name: 'InvoiceSaleDetails')
   List<ShopInvoiceSaleDetail> invoiceSaleDetails;
   @JsonKey(name: 'ProductProductServices')
-  List<ShopProductProductService>  productProductServices;
+  List<ShopProductProductService> productProductServices;
 }

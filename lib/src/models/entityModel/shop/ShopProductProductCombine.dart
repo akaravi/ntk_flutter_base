@@ -13,8 +13,8 @@ class ShopProductProductCombine extends BaseModuleEntity<int> {
   int linkProductId;
 
   @JsonKey(name: 'ProductCombines')
-  ShopProductCombine  productCombines;
+  ShopProductCombine productCombines;
 
   @JsonKey(name: 'Products')
-  ShopContent  products;
+  ShopContent products;
 }
