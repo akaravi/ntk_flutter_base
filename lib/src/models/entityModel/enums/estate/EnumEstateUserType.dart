@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 
-enum EnumMicroServiceConnectionType {
-  @JsonValue(0)
-  restApi,
+enum EnumEstateUserType {
   @JsonValue(1)
-  signalr,
+  customer,
   @JsonValue(2)
-  webSoocket,
+  agent,
+  @JsonValue(3)
+  agency
 }

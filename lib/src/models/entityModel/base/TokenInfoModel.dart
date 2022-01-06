@@ -25,7 +25,7 @@ class TokenInfoModel {
   @JsonKey(name: 'UserAccessAdminAllowToAllData')
   bool userAccessAdminAllowToAllData;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessControllerTypes userType;
+  EnumManageUserAccessUserTypes userType;
   @JsonKey(name: 'UserAccessAreaType')
   EnumManageUserAccessAreaTypes userAccessAreaType;
   @JsonKey(name: 'Username')

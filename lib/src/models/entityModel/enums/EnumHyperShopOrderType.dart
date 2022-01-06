@@ -1,20 +1,18 @@
+import 'package:json_annotation/json_annotation.dart';
 
-
- enum EnumHyperShopOrderType {
-    Open(0),
-    ayment(1),
-    StartDelivery(2),
-    InDelivery(3),
-    EndDelivery(4),
-    Close(10),
-    deleted(11);
-    private final int index;
-
-    EnumHyperShopOrderType(int index) {
-        this.index = index;
-    }
-
-    int index() {
-        return index;
-    }
+enum EnumHyperShopOrderType {
+  @JsonValue(0)
+  open,
+  @JsonValue(1)
+  ayment,
+  @JsonValue(2)
+  startDelivery,
+  @JsonValue(3)
+  inDelivery,
+  @JsonValue(4)
+  endDelivery,
+  @JsonValue(10)
+  close,
+  @JsonValue(11)
+  deleted
 }

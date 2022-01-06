@@ -16,7 +16,7 @@ class CoreTokenMicroServiceModel extends BaseEntity<String> {
   @JsonKey(name: 'DeviceType')
   EnumMicroServiceType deviceType;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessControllerTypes userType;
+  EnumManageUserAccessUserTypes userType;
   @JsonKey(name: 'DeviceConnectionType')
   EnumMicroServiceConnectionType deviceConnectionType;
   @JsonKey(name: 'DeviceConnectionState')

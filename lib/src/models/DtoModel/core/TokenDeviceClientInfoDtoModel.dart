@@ -1,3 +1,4 @@
+import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
@@ -9,7 +10,7 @@ class TokenDeviceClientInfoDtoModel {
   @JsonKey(name: 'OSType')
   int oSType;
   @JsonKey(name: 'DeviceType')
-  int deviceType;
+  EnumDeviceType deviceType;
   @JsonKey(name: 'PackageName')
   String packageName;
   @JsonKey(name: 'NotificationId')

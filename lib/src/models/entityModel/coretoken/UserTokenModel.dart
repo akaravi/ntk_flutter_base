@@ -22,7 +22,7 @@ class UserTokenModel extends BaseEntity<String> {
   @JsonKey(name: 'UserAccessAreaType')
   EnumManageUserAccessAreaTypes userAccessAreaType;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessControllerTypes userType;
+  EnumManageUserAccessUserTypes userType;
   @JsonKey(name: 'UserAccessAdminAllowToAllData')
   bool userAccessAdminAllowToAllData;
   @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')

@@ -1,3 +1,4 @@
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
@@ -13,7 +14,7 @@ class BaseEntity<TKey> {
   @JsonKey(name: 'UpdatedBy')
   int updatedBy;
   @JsonKey(name: 'RecordStatus')
-  int recordStatus;
+  EnumRecordStatus recordStatus;
   @JsonKey(name: 'RecordStatusText')
   String recordStatusText;
   @JsonKey(name: 'AntiInjectionGuid')

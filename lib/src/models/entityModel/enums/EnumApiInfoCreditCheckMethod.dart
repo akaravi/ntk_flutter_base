@@ -1,4 +1,3 @@
-
-
- enum EnumApiInfoCreditCheckMethod {
+enum EnumApiInfoCreditCheckMethod {
+  none,
 }

@@ -1,4 +1,1 @@
-
-
- enum EnumApiPhoneBookMethod {
-}
+enum EnumApiPhoneBookMethod { none }

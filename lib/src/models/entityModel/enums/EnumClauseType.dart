@@ -1,16 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
 
-
- enum  EnumClauseType {
-    Or ( 1),
-    And ( 2);
-
-    private final int index;
-
-    EnumClauseType(int index) {
-        this.index = index;
-    }
-
-    int index() {
-        return index;
-    }
+enum EnumClauseType {
+  @JsonValue(1)
+  or,
+  @JsonValue(2)
+  and
 }

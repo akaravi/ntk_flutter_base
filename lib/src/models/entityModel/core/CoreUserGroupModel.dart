@@ -16,7 +16,7 @@ class CoreUserGroupModel extends BaseEntity<int> {
   @JsonKey(name: 'Description')
   String description;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessControllerTypes userType;
+  EnumManageUserAccessUserTypes userType;
   @JsonKey(name: 'UserTypeTitle')
   String userTypeTitle;
   @JsonKey(name: 'UserTypeDescription')

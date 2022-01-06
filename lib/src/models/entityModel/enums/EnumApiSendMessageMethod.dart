@@ -1,4 +1,3 @@
-
-
- enum EnumApiSendMessageMethod {
+enum EnumApiSendMessageMethod {
+  none,
 }

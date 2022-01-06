@@ -1,12 +1,16 @@
 import 'package:json_annotation/json_annotation.dart';
 
-enum enumHyperShopPaymentType {
+enum EnumInputDataType {
   @JsonValue(0)
-  none,
+  string,
   @JsonValue(1)
-  online,
+  int,
   @JsonValue(2)
-  onPLace,
+  boolean,
   @JsonValue(3)
-  onlineAndOnPlace
+  float,
+  @JsonValue(4)
+  date,
+  @JsonValue(5)
+  textArea
 }

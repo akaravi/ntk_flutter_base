@@ -1,16 +1,10 @@
+import 'package:json_annotation/json_annotation.dart';
 
-
- enum  EnumSortType {
-    Descending(0),
-    Ascending(1),
-    Random(2);
-    private final int index;
-
-    EnumSortType(int index) {
-        this.index = index;
-    }
-
-    int index() {
-        return index;
-    }
+enum EnumSortType {
+  @JsonValue(0)
+  descending,
+  @JsonValue(1)
+  ascending,
+  @JsonValue(2)
+  random
 }

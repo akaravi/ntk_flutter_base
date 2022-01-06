@@ -1,6 +1,7 @@
 
 
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreSiteModel.dart';
@@ -15,7 +16,7 @@ class CoreDeviceModel extends BaseEntity<int> {
      @JsonKey(name:'OSType')
     int oSType;//as EnumOperatingSystemType
      @JsonKey(name:'DeviceType')
-    int deviceType;//as EnumDeviceType
+     EnumDeviceType deviceType;//as EnumDeviceType
      @JsonKey(name:'PackageName')
     String packageName;
      @JsonKey(name:'DeviceIPsAllow')

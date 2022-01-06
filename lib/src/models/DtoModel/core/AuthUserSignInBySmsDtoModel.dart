@@ -14,6 +14,6 @@ class AuthUserSignInBySmsDtoModel {
   bool isRemember;
   @JsonKey(name: 'SiteId')
   int siteId;
-  @JsonKey(name: 'lang')
+  @JsonKey(name: 'Lang')
   String lang;
 }
