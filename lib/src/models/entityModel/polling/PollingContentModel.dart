@@ -9,7 +9,7 @@ import 'PollingOptionModel.dart';
 class PollingContentModel extends BaseModuleEntity<int> {
 
      @JsonKey(name:'Source')
-    String Source;
+    String source;
      @JsonKey(name:'ExpireDate')
     String ExpireDate;
      @JsonKey(name:'ViewStatisticsBeforeVote')

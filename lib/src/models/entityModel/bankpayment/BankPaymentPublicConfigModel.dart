@@ -6,7 +6,7 @@ class BankPaymentPublicConfigModel extends BaseEntity<Long> {
      @JsonKey(name:'Title')
     String title;
      @JsonKey(name:'ClassName')
-    String ClassName;
+    String className;
      @JsonKey(name:'LinkModuleFileLogoId')
     long linkModuleFileLogoId;
      @JsonKey(name:'LinkModuleFileLogoIdSrc')

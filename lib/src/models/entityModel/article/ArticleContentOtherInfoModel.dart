@@ -8,7 +8,7 @@ class ArticleContentOtherInfoModel extends BaseModuleEntity<int> {
      @JsonKey(name:'HtmlBody')
     String htmlBody;
      @JsonKey(name:'Source')
-    String Source;
+    String source;
      @JsonKey(name:'LinkContentid')
     int linkContentid;
      @JsonKey(name:'TypeId')

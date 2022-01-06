@@ -10,7 +10,7 @@ class BiographyContentOtherInfoModel {
      @JsonKey(name:'HtmlBody')
     String htmlBody;
      @JsonKey(name:'Source')
-    String Source;
+    String source;
      @JsonKey(name:'LinkContentId')
     int linkContentId;
      @JsonKey(name:'TypeId')

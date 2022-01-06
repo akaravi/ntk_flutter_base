@@ -49,7 +49,7 @@ bool favorited;
      @JsonKey(name:'ModuleCoreUpdatedBy')
     public CoreUserModel moduleCoreUpdatedBy;
      @JsonKey(name:'Source')
-    String Source;
+    String source;
      @JsonKey(name:'Comments')
     public BiographyCommentModel Comments;
      @JsonKey(name:'virtual_Category')

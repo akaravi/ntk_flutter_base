@@ -12,7 +12,7 @@ class ArticleContentSimilarModel extends BaseModuleEntity<int> {
      @JsonKey(name:' virtual_Source')
     String  virtual_Source;
      @JsonKey(name:'Source')
-    String Source;
+    String source;
      @JsonKey(name:' virtual_Destination')
     String  virtual_Destination;
      @JsonKey(name:'Destination')
