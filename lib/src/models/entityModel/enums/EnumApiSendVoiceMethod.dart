@@ -1,3 +1,0 @@
-enum EnumApiSendVoiceMethod {
-  none,
-}
