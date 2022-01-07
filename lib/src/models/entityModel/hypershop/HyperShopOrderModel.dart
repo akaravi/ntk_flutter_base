@@ -1,7 +1,11 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'HyperShopOrderContentModel.dart';
+
+part 'HyperShopOrderModel.g.dart';
+
 
 @JsonSerializable()
 class HyperShopOrderModel extends BaseModuleEntity<int> {
@@ -46,5 +50,8 @@ class HyperShopOrderModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'GeoLocationLatitude')
   String? geoLocationLatitude;
   @JsonKey(name: 'GeoLocationLongitude')
-  String? geoLocationLongitude;
+  String? geoLocationLongitude;HyperShopOrderModel();
+  factory HyperShopOrderModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HyperShopOrderModelToJson(this);
 }

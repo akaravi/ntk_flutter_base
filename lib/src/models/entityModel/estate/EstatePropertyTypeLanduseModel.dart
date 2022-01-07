@@ -1,8 +1,11 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'EstatePropertyDetailModel.dart';
 import 'EstatePropertyTypeModel.dart';
+
+part 'EstatePropertyTypeLanduseModel.g.dart';
 
 @JsonSerializable()
 class EstatePropertyTypeLanduseModel extends BaseModuleEntity<String> {
@@ -26,4 +29,8 @@ class EstatePropertyTypeLanduseModel extends BaseModuleEntity<String> {
   List<EstatePropertyTypeModel>? propertyTypes;
   @JsonKey(name: 'PropertyDetails')
   List<EstatePropertyDetailModel>? propertyDetails;
+  EstatePropertyTypeLanduseModel();
+  factory EstatePropertyTypeLanduseModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyTypeLanduseModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstatePropertyTypeLanduseModelToJson(this);
 }

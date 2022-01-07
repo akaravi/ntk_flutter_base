@@ -1,7 +1,11 @@
 
 
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+part 'EstatePropertyAdsModel.g.dart';
+
+
 @JsonSerializable()
 class EstatePropertyAdsModel extends BaseModuleEntity<String> {
      @JsonKey(name:'Title')
@@ -17,5 +21,8 @@ class EstatePropertyAdsModel extends BaseModuleEntity<String> {
      @JsonKey(name:'FromDate')
     String? fromDate;
      @JsonKey(name:'ExpireDate')
-    String? expireDate;
+    String? expireDate;EstatePropertyAdsModel();
+     factory EstatePropertyAdsModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyAdsModelFromJson(json);
+
+     Map<String, dynamic> toJson() => _$EstatePropertyAdsModelToJson(this);
 }

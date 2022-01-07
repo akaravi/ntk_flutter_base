@@ -2,6 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'EstatePropertyDetailModel.dart';
 
+part 'EstatePropertyDetailValueModel.g.dart';
+
 @JsonSerializable()
 class EstatePropertyDetailValueModel {
   @JsonKey(name: 'Id')
@@ -14,4 +16,8 @@ class EstatePropertyDetailValueModel {
   String? value;
   @JsonKey(name: 'LinkHistoryId')
   String? linkHistoryId;
+  EstatePropertyDetailValueModel();
+  factory EstatePropertyDetailValueModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailValueModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstatePropertyDetailValueModelToJson(this);
 }

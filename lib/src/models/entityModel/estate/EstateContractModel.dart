@@ -1,7 +1,11 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'EstateContractTypeModel.dart';
+
+part 'EstateContractModel.g.dart';
+
 
 @JsonSerializable()
 class EstateContractModel extends BaseModuleEntity<String> {
@@ -26,5 +30,8 @@ class EstateContractModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'DepositPrice')
   double? depositPrice;
   @JsonKey(name: ' unitSalePrice')
-  String unitSalePrice = "تومان";
+  String unitSalePrice = "تومان";EstateContractModel();
+  factory EstateContractModel.fromJson(Map<String, dynamic> json) => _$EstateContractModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstateContractModelToJson(this);
 }

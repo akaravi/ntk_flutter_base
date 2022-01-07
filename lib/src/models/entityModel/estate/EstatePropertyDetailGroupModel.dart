@@ -1,8 +1,12 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'EstatePropertyDetailModel.dart';
 import 'EstatePropertyDetailValueModel.dart';
+
+part 'EstatePropertyDetailGroupModel.g.dart';
+
 
 @JsonSerializable()
 class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
@@ -24,5 +28,8 @@ class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
   String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'PropertyDetails')
   List<EstatePropertyDetailModel>? propertyDetails;
-  List<EstatePropertyDetailValueModel>? propertyValues;
+  List<EstatePropertyDetailValueModel>? propertyValues;EstatePropertyDetailGroupModel();
+  factory EstatePropertyDetailGroupModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailGroupModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstatePropertyDetailGroupModelToJson(this);
 }

@@ -1,5 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'FileUploadModel.g.dart';
+
+
 @JsonSerializable()
 class FileUploadModel {
   @JsonKey(name: 'FileName')
@@ -19,5 +22,8 @@ class FileUploadModel {
   @JsonKey(name: 'RelativePath')
   String? relativePath;
   @JsonKey(name: 'TotalChunks')
-  int? totalChunks;
+  int? totalChunks;FileUploadModel();
+  factory FileUploadModel.fromJson(Map<String, dynamic> json) => _$FileUploadModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FileUploadModelToJson(this);
 }

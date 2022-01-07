@@ -2,6 +2,9 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'HyperShopOrderModel.dart';
 
+part 'HyperShopOrderContentModel.g.dart';
+
+
 @JsonSerializable()
 class HyperShopOrderContentModel {
   static String CURRENCY_UNIT = "ریال";
@@ -25,5 +28,8 @@ class HyperShopOrderContentModel {
   @JsonKey(name: 'Image')
   String? image;
   @JsonKey(name: 'Unit')
-  String? unit;
+  String? unit;HyperShopOrderContentModel();
+  factory HyperShopOrderContentModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderContentModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HyperShopOrderContentModelToJson(this);
 }

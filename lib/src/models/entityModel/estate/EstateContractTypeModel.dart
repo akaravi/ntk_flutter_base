@@ -1,5 +1,9 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'EstateContractTypeModel.g.dart';
+
 
 @JsonSerializable()
 class EstateContractTypeModel extends BaseModuleEntity<String> {
@@ -47,5 +51,8 @@ class EstateContractTypeModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'TitleDepositPrice')
   String? titleDepositPrice;
   @JsonKey(name: 'TitleRentPrice')
-  String? titleRentPrice;
+  String? titleRentPrice;EstateContractTypeModel();
+  factory EstateContractTypeModel.fromJson(Map<String, dynamic> json) => _$EstateContractTypeModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstateContractTypeModelToJson(this);
 }

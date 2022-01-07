@@ -1,6 +1,8 @@
 import 'package:base/src/models/entityModel/enums/estate/EnumInputDataType.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+part 'EstatePropertyDetailModel.g.dart';
+
 @JsonSerializable()
 class EstatePropertyDetailModel {
   @JsonKey(name: 'Id')
@@ -55,4 +57,8 @@ class EstatePropertyDetailModel {
 
   @JsonKey(name: 'ConfigValueIntValueMax')
   int? configValueIntValueMax;
+  EstatePropertyDetailModel();
+  factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstatePropertyDetailModelToJson(this);
 }

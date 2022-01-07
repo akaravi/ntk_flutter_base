@@ -8,6 +8,9 @@ import 'EstatePropertyDetailValueModel.dart';
 import 'EstatePropertyTypeLanduseModel.dart';
 import 'EstatePropertyTypeUsageModel.dart';
 
+part 'EstatePropertyModel.g.dart';
+
+
 @JsonSerializable()
 class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'Title')
@@ -109,5 +112,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'LinkLocationIdTitle')
   String? linkLocationIdTitle;
   @JsonKey(name: 'LinkLocationIdParentTitle')
-  String? linkLocationIdParentTitle;
+  String? linkLocationIdParentTitle;EstatePropertyModel();
+  factory EstatePropertyModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstatePropertyModelToJson(this);
 }

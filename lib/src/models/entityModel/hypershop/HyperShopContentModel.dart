@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'HyperShopContentModel.g.dart';
+
 @JsonSerializable()
 class HyperShopContentModel {
   static String CURRENCY_UNIT = "ریال";
@@ -25,4 +27,8 @@ class HyperShopContentModel {
   int? count;
   @JsonKey(name: 'Unit')
   String? unit;
+  HyperShopContentModel();
+  factory HyperShopContentModel.fromJson(Map<String, dynamic> json) => _$HyperShopContentModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HyperShopContentModelToJson(this);
 }

@@ -1,5 +1,8 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'EstatePropertyShareAgentModel.g.dart';
 
 @JsonSerializable()
 class EstatePropertyShareAgentModel extends BaseModuleEntity<String> {
@@ -7,4 +10,8 @@ class EstatePropertyShareAgentModel extends BaseModuleEntity<String> {
   String? linkEstateAgentId;
   @JsonKey(name: 'LinkEstatePropertyId')
   String? linkEstatePropertyId;
+  EstatePropertyShareAgentModel();
+  factory EstatePropertyShareAgentModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyShareAgentModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstatePropertyShareAgentModelToJson(this);
 }
