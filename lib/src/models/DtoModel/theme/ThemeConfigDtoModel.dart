@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'ThemeConfigDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class ThemeConfigDtoModel {
@@ -13,4 +10,7 @@ class ThemeConfigDtoModel {
 
   @JsonKey(name: 'LayoutTheme')
   String? layoutTheme;
+  ThemeConfigDtoModel();
+  factory ThemeConfigDtoModel.fromJson(Map<String, dynamic> json) => _$ThemeConfigDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$ThemeConfigDtoModelToJson(this);
 }

@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'DrawerChildThemeDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class DrawerChildThemeDtoModel {
@@ -16,5 +14,7 @@ class DrawerChildThemeDtoModel {
   String? title;
   @JsonKey(name: 'Icon')
   String? icon;
-
+  DrawerChildThemeDtoModel();
+  factory DrawerChildThemeDtoModel.fromJson(Map<String, dynamic> json) => _$DrawerChildThemeDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$DrawerChildThemeDtoModelToJson(this);
 }

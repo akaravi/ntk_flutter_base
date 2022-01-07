@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AuthUserSignInModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class AuthUserSignInModel {
@@ -23,5 +21,7 @@ class AuthUserSignInModel {
   @JsonKey(name: 'SiteId')
   int? siteId;
   @JsonKey(name: 'Lang')
-  String? lang;
+  String? lang;AuthUserSignInModel();
+  factory AuthUserSignInModel.fromJson(Map<String, dynamic> json) => _$AuthUserSignInModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AuthUserSignInModelToJson(this);
 }

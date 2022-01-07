@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'LinkManagementTargetShortLinkSetResponceModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkSetResponceModel {
@@ -16,4 +13,7 @@ class LinkManagementTargetShortLinkSetResponceModel {
   String? shortLinkUrl;
   @JsonKey(name: 'ShortLinkQRCodeBase64')
   String? shortLinkQRCodeBase64;
+  LinkManagementTargetShortLinkSetResponceModel();
+  factory LinkManagementTargetShortLinkSetResponceModel.fromJson(Map<String, dynamic> json) => _$LinkManagementTargetShortLinkSetResponceModelFromJson(json);
+  Map<String, dynamic> toJson() => _$LinkManagementTargetShortLinkSetResponceModelToJson(this);
 }

@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'HyperShopPaymentDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
-class HyperShopPaymentDtoModel {}
+class HyperShopPaymentDtoModel {HyperShopPaymentDtoModel();
+factory HyperShopPaymentDtoModel.fromJson(Map<String, dynamic> json) => _$HyperShopPaymentDtoModelFromJson(json);
+Map<String, dynamic> toJson() => _$HyperShopPaymentDtoModelToJson(this);}

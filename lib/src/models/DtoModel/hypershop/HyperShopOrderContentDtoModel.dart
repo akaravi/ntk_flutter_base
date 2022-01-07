@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'HyperShopOrderContentDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class HyperShopOrderContentDtoModel {
@@ -23,5 +21,7 @@ class HyperShopOrderContentDtoModel {
   @JsonKey(name: 'TotalCount')
   int? totalCount;
   @JsonKey(name: 'Image')
-  String? image;
+  String? image;HyperShopOrderContentDtoModel();
+  factory HyperShopOrderContentDtoModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderContentDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$HyperShopOrderContentDtoModelToJson(this);
 }

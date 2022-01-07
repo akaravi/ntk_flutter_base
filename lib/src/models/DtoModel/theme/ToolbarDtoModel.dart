@@ -5,11 +5,8 @@ import 'HamberMenuThemeDtoModel.dart';
 import 'SearchBoxThemeDtoModel.dart';
 import 'ShoppingCartThemeDtoModel.dart';
 
-part 'nedavaj.g.dart';
+part 'ToolbarDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class ToolbarDtoModel {
@@ -27,4 +24,7 @@ class ToolbarDtoModel {
   ShoppingCartThemeDtoModel? shoppingCart;
   @JsonKey(name: 'Drawer')
   DrawerThemeDtoModel? drawerThemeDtoModel;
+  ToolbarDtoModel();
+  factory ToolbarDtoModel.fromJson(Map<String, dynamic> json) => _$ToolbarDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$ToolbarDtoModelToJson(this);
 }

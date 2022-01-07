@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AboutUsDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class AboutUsDtoModel {
@@ -69,5 +67,7 @@ class AboutUsDtoModel {
   @JsonKey(name: 'TitleYoutube')
   String? titleYoutube;
   @JsonKey(name: 'Youtube')
-  String? youtube;
+  String? youtube;AboutUsDtoModel();
+  factory AboutUsDtoModel.fromJson(Map<String, dynamic> json) => _$AboutUsDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AboutUsDtoModelToJson(this);
 }

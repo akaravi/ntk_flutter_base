@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AuthUserSignOutModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class AuthUserSignOutModel {
@@ -12,4 +9,7 @@ class AuthUserSignOutModel {
   List<String>? tokens;
   @JsonKey(name: 'AllToken')
   bool? allToken;
+  AuthUserSignOutModel();
+  factory AuthUserSignOutModel.fromJson(Map<String, dynamic> json) => _$AuthUserSignOutModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AuthUserSignOutModelToJson(this);
 }

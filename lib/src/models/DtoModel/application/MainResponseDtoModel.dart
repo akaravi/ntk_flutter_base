@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'MainResponseDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class MainResponseDtoModel {
@@ -31,5 +29,7 @@ class MainResponseDtoModel {
   @JsonKey(name: 'LastUpdateTheme')
   String? lastUpdateTheme;
   @JsonKey(name: 'LastUpdateApp')
-  String? lastUpdateApp;
+  String? lastUpdateApp;MainResponseDtoModel();
+  factory MainResponseDtoModel.fromJson(Map<String, dynamic> json) => _$MainResponseDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$MainResponseDtoModelToJson(this);
 }

@@ -1,0 +1,26 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'DrawerThemeDtoModel.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+DrawerThemeDtoModel _$DrawerThemeDtoModelFromJson(Map<String, dynamic> json) =>
+    DrawerThemeDtoModel()
+      ..type = json['Type'] as int?
+      ..headerImage = json['HeaderImage'] as String?
+      ..circleImage = json['CircleImage'] as String?
+      ..drawerChilds = (json['DrawerChilds'] as List<dynamic>?)
+          ?.map((e) =>
+              DrawerChildThemeDtoModel.fromJson(e as Map<String, dynamic>))
+          .toList();
+
+Map<String, dynamic> _$DrawerThemeDtoModelToJson(
+        DrawerThemeDtoModel instance) =>
+    <String, dynamic>{
+      'Type': instance.type,
+      'HeaderImage': instance.headerImage,
+      'CircleImage': instance.circleImage,
+      'DrawerChilds': instance.drawerChilds,
+    };

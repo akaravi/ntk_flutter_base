@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'SearchBoxThemeDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class SearchBoxThemeDtoModel {
@@ -12,5 +10,7 @@ class SearchBoxThemeDtoModel {
   String? bgColor;
 
   @JsonKey(name: 'Image')
-  String? image;
+  String? image;SearchBoxThemeDtoModel();
+  factory SearchBoxThemeDtoModel.fromJson(Map<String, dynamic> json) => _$SearchBoxThemeDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$SearchBoxThemeDtoModelToJson(this);
 }

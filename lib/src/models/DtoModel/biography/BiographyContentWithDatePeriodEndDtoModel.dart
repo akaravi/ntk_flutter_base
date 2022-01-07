@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'BiographyContentWithDatePeriodEndDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class BiographyContentWithDatePeriodEndDtoModel {
@@ -13,5 +11,7 @@ class BiographyContentWithDatePeriodEndDtoModel {
   @JsonKey(name: 'SearchDateMin')
   String? searchDateMin;
   @JsonKey(name: 'SearchDateMax')
-  String? searchDateMax;
+  String? searchDateMax;BiographyContentWithDatePeriodEndDtoModel();
+  factory BiographyContentWithDatePeriodEndDtoModel.fromJson(Map<String, dynamic> json) => _$BiographyContentWithDatePeriodEndDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$BiographyContentWithDatePeriodEndDtoModelToJson(this);
 }

@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AuthUserSignUpModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class AuthUserSignUpModel {
@@ -28,4 +25,7 @@ class AuthUserSignUpModel {
   int? siteId;
   @JsonKey(name: 'Roulaccespt')
   bool? roulaccespt;
+  AuthUserSignUpModel();
+  factory AuthUserSignUpModel.fromJson(Map<String, dynamic> json) => _$AuthUserSignUpModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AuthUserSignUpModelToJson(this);
 }

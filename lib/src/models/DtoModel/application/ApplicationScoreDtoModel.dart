@@ -1,11 +1,9 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'ApplicationScoreDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class ApplicationScoreDtoModel {
@@ -16,5 +14,7 @@ class ApplicationScoreDtoModel {
   @JsonKey(name: 'ScoreComment')
   String? scoreComment;
   @JsonKey(name: 'ScorePercent')
-  int? scorePercent;
+  int? scorePercent;ApplicationScoreDtoModel();
+  factory ApplicationScoreDtoModel.fromJson(Map<String, dynamic> json) => _$ApplicationScoreDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$ApplicationScoreDtoModelToJson(this);
 }

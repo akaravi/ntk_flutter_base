@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AuthUserForgetPasswordModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class AuthUserForgetPasswordModel {
@@ -15,5 +12,8 @@ class AuthUserForgetPasswordModel {
   @JsonKey(name: 'Email')
   String? email;
   @JsonKey(name: 'Mobile')
-  String? mobile;
+  String? mobile;AuthUserForgetPasswordModel();
+  factory AuthUserForgetPasswordModel.fromJson(Map<String, dynamic> json) => _$AuthUserForgetPasswordModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AuthUserForgetPasswordModelToJson(this);
+
 }

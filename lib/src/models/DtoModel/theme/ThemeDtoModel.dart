@@ -3,11 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'ThemeChildDtoModel.dart';
 import 'ToolbarDtoModel.dart';
 
-part 'nedavaj.g.dart';
-
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+part 'ThemeDtoModel.g.dart';
 
 @JsonSerializable()
 class ThemeDtoModel {
@@ -16,4 +12,8 @@ class ThemeDtoModel {
 
   @JsonKey(name: 'ThemeConfigLayout')
   List<ThemeChildDtoModel>? childs;
+  ThemeDtoModel();
+  factory ThemeDtoModel.fromJson(Map<String, dynamic> json) => _$ThemeDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$ThemeDtoModelToJson(this);
+
 }

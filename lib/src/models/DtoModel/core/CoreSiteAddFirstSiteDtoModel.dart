@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'CoreSiteAddFirstSiteDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class CoreSiteAddFirstSiteDtoModel {
@@ -22,4 +19,7 @@ class CoreSiteAddFirstSiteDtoModel {
   String? linkSiteCategoryId;
   @JsonKey(name: 'Title')
   String? title;
+  CoreSiteAddFirstSiteDtoModel();
+  factory CoreSiteAddFirstSiteDtoModel.fromJson(Map<String, dynamic> json) => _$CoreSiteAddFirstSiteDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$CoreSiteAddFirstSiteDtoModelToJson(this);
 }

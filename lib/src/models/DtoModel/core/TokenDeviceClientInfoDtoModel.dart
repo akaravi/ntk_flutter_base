@@ -1,11 +1,8 @@
 import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'TokenDeviceClientInfoDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class TokenDeviceClientInfoDtoModel {
@@ -37,4 +34,7 @@ class TokenDeviceClientInfoDtoModel {
   String? language;
   @JsonKey(name: 'DeviceBrand')
   String? deviceBrand;
+  TokenDeviceClientInfoDtoModel();
+  factory TokenDeviceClientInfoDtoModel.fromJson(Map<String, dynamic> json) => _$TokenDeviceClientInfoDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$TokenDeviceClientInfoDtoModelToJson(this);
 }

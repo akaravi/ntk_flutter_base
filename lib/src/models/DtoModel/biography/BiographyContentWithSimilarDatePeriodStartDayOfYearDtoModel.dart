@@ -1,10 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
-
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+part 'BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel.g.dart';
 
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel {
@@ -14,4 +10,8 @@ class BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel {
   int? dayOfYearMin;
   @JsonKey(name: 'DayOfYearMax')
   int? dayOfYearMax;
+  BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel();
+  factory BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel.fromJson(Map<String, dynamic> json) => _$BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModelToJson(this);
+
 }

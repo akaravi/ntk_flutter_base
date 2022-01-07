@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'HamberMenuThemeDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class HamberMenuThemeDtoModel {
@@ -12,5 +10,7 @@ class HamberMenuThemeDtoModel {
   String? color;
 
   @JsonKey(name: 'Image')
-  String? image;
+  String? image;HamberMenuThemeDtoModel();
+  factory HamberMenuThemeDtoModel.fromJson(Map<String, dynamic> json) => _$HamberMenuThemeDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$HamberMenuThemeDtoModelToJson(this);
 }

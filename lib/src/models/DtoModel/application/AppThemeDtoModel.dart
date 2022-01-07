@@ -2,11 +2,9 @@ import 'package:base/src/models/DtoModel/theme/ThemeConfigDtoModel.dart';
 import 'package:base/src/models/DtoModel/theme/ThemeDtoModel.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AppThemeDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class AppThemeDtoModel {
@@ -20,5 +18,7 @@ class AppThemeDtoModel {
   List<ThemeConfigDtoModel>? themeConfigLayout;
 
   @JsonKey(name: 'ThemeConfigJson')
-  ThemeDtoModel? themeConfigJson;
+  ThemeDtoModel? themeConfigJson;AppThemeDtoModel();
+  factory AppThemeDtoModel.fromJson(Map<String, dynamic> json) => _$AppThemeDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AppThemeDtoModelToJson(this);
 }

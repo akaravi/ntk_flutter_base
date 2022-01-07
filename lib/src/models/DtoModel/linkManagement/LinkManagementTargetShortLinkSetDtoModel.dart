@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'LinkManagementTargetShortLinkSetDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkSetDtoModel {
@@ -17,5 +15,7 @@ class LinkManagementTargetShortLinkSetDtoModel {
   @JsonKey(name: 'Description')
   String? description;
   @JsonKey(name: 'UploadFileKey')
-  String? uploadFileKey;
+  String? uploadFileKey;LinkManagementTargetShortLinkSetDtoModel();
+  factory LinkManagementTargetShortLinkSetDtoModel.fromJson(Map<String, dynamic> json) => _$LinkManagementTargetShortLinkSetDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$LinkManagementTargetShortLinkSetDtoModelToJson(this);
 }

@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'BankPaymentOnlineTransactionModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+
 
 @JsonSerializable()
 class BankPaymentOnlineTransactionModel {
@@ -13,5 +11,7 @@ class BankPaymentOnlineTransactionModel {
   @JsonKey(name: 'BankPaymentPrivateId')
   int? bankPaymentPrivateId;
   @JsonKey(name: 'UrlToPay')
-  String? urlToPay;
+  String? urlToPay;BankPaymentOnlineTransactionModel();
+  factory BankPaymentOnlineTransactionModel.fromJson(Map<String, dynamic> json) => _$BankPaymentOnlineTransactionModelFromJson(json);
+  Map<String, dynamic> toJson() => _$BankPaymentOnlineTransactionModelToJson(this);
 }

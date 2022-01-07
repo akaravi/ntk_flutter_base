@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'nedavaj.g.dart';
+part 'AuthEmailConfirmDtoModel.g.dart';
 
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
 
 @JsonSerializable()
 class AuthEmailConfirmDtoModel {
@@ -17,5 +14,8 @@ class AuthEmailConfirmDtoModel {
   @JsonKey(name: 'Mobile')
   String? mobile;
   @JsonKey(name: 'Code')
-  String? code;
+  String? code;AuthEmailConfirmDtoModel();
+  factory AuthEmailConfirmDtoModel.fromJson(Map<String, dynamic> json) => _$AuthEmailConfirmDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AuthEmailConfirmDtoModelToJson(this);
+
 }

@@ -2,11 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'HyperShopOrderContentDtoModel.dart';
 
-part 'nedavaj.g.dart';
-
-nedavaj();
-factory nedavaj.fromJson(Map<String, dynamic> json) => _$nedavajFromJson(json);
-  Map<String, dynamic> toJson() => _$nedavajToJson(this);
+part 'HyperShopOrderDtoModel.g.dart';
 
 @JsonSerializable()
 class HyperShopOrderDtoModel {
@@ -28,4 +24,8 @@ class HyperShopOrderDtoModel {
   List<HyperShopOrderContentDtoModel>? products;
   @JsonKey(name: 'PaymentType')
   int? paymentType;
+  HyperShopOrderDtoModel();
+  factory HyperShopOrderDtoModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderDtoModelFromJson(json);
+  Map<String, dynamic> toJson() => _$HyperShopOrderDtoModelToJson(this);
+
 }
