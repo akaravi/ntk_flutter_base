@@ -1,6 +1,7 @@
 import 'package:base/src/models/entityModel/enums/EnumMenuPlaceType.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+part 'CoreCpMainMenuModel.g.dart';
 @JsonSerializable()
 class CoreCpMainMenuModel {
   @JsonKey(name: 'Title')
@@ -35,4 +36,8 @@ class CoreCpMainMenuModel {
   EnumMenuPlaceType? menuPlaceType;
   @JsonKey(name: 'Children')
   List<CoreCpMainMenuModel>? children;
+  CoreCpMainMenuModel();
+  factory CoreCpMainMenuModel.fromJson(Map<String, dynamic> json) => _$CoreCpMainMenuModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreCpMainMenuModelToJson(this);
 }

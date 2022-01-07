@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'FilterDataModel.g.dart';
 @JsonSerializable()
 class FilterDataModel {
   @JsonKey(name: 'PropertyName')
@@ -39,4 +40,8 @@ class FilterDataModel {
     filters!.add(d);
     return this;
   }
+  FilterDataModel();
+  factory FilterDataModel.fromJson(Map<String, dynamic> json) => _$FilterDataModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FilterDataModelToJson(this);
 }

@@ -2,6 +2,7 @@ import 'package:base/src/models/entityModel/enums/EnumManageUserAccessAreaTypes.
 import 'package:base/src/models/entityModel/enums/EnumManageUserAccessControllerTypes.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+part 'TokenInfoModel.g.dart';
 @JsonSerializable()
 class TokenInfoModel {
   @JsonKey(name: 'Token')

@@ -1,7 +1,9 @@
 
 
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+part 'CoreGuideModel.g.dart';
 @JsonSerializable()
 class CoreGuideModel extends BaseEntity<int> {
      @JsonKey(name:'Title')
@@ -22,5 +24,9 @@ class CoreGuideModel extends BaseEntity<int> {
      CoreGuideModel? parent;
      @JsonKey(name:'Children')
    List<CoreGuideModel>? children;
+     CoreGuideModel();
+     factory CoreGuideModel.fromJson(Map<String, dynamic> json) => _$CoreGuideModelFromJson(json);
+
+     Map<String, dynamic> toJson() => _$CoreGuideModelToJson(this);
 }
 

@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'PageModel.g.dart';
 @JsonSerializable()
 class PageModel {
   @JsonKey(name: 'PageNumber')

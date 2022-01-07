@@ -2,6 +2,7 @@ import 'package:base/src/models/entityModel/core/CoreCpMainMenuModel.dart';
 import 'package:base/src/models/entityModel/core/CoreUserGroupModel.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+part 'CoreCpMainMenuCmsUserGroupModel.g.dart';
 @JsonSerializable()
 class CoreCpMainMenuCmsUserGroupModel {
   @JsonKey(name: 'CmsCpMainMenu_Id')
@@ -12,4 +13,9 @@ class CoreCpMainMenuCmsUserGroupModel {
   CoreCpMainMenuModel? cmsCpMainMenu;
   @JsonKey(name: 'CmsUserGroup')
   CoreUserGroupModel? cmsUserGroup;
+  CoreCpMainMenuCmsUserGroupModel();
+  factory CoreCpMainMenuCmsUserGroupModel.fromJson(Map<String, dynamic> json) => _$CoreCpMainMenuCmsUserGroupModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreCpMainMenuCmsUserGroupModelToJson(this);
+  
 }

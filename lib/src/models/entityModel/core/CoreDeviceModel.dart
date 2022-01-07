@@ -2,9 +2,11 @@
 
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreSiteModel.dart';
+part 'CoreDeviceModel.g.dart';
 @JsonSerializable()
 class CoreDeviceModel extends BaseEntity<int> {
      @JsonKey(name:'securityKey')
@@ -29,5 +31,9 @@ class CoreDeviceModel extends BaseEntity<int> {
      CoreSiteModel?  virtual_CmsSite;
      @JsonKey(name:'CmsSite')
      CoreSiteModel? cmsSite;
+     CoreDeviceModel();
+     factory CoreDeviceModel.fromJson(Map<String, dynamic> json) => _$CoreDeviceModelFromJson(json);
+
+     Map<String, dynamic> toJson() => _$CoreDeviceModelToJson(this);
 }
 

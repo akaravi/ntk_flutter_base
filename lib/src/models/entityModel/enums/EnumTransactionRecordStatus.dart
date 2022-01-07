@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-
+@JsonEnum()
 enum EnumTransactionRecordStatus {
   @JsonValue(0)
   none,

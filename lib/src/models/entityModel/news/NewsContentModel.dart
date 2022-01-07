@@ -1,14 +1,16 @@
-
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
 import 'package:base/src/models/entityModel/core/CoreUserModel.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'NewsCategoryModel.dart';
 import 'NewsContentSimilarModel.dart';
 import 'NewsContentTagModel.dart';
+
+part 'NewsContentModel.g.dart';
+
 @JsonSerializable()
 class NewsContentModel extends BaseModuleEntity<int> {
-
   @JsonKey(name: 'LinkCategoryId')
   int? linkCategoryId;
   @JsonKey(name: 'Title')
@@ -76,4 +78,10 @@ class NewsContentModel extends BaseModuleEntity<int> {
   String? linkFileMovieIdSrc;
   @JsonKey(name: 'LinkFileIdsSrc')
   List<String>? linkFileIdsSrc;
+
+  NewsContentModel();
+
+  factory NewsContentModel.fromJson(Map<String, dynamic> json) => _$NewsContentModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NewsContentModelToJson(this);
 }

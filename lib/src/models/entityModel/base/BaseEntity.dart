@@ -1,7 +1,7 @@
 import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-@JsonSerializable()
+part 'BaseEntity.g.dart';
+@JsonSerializable(genericArgumentFactories: true )
 class BaseEntity<TKey> {
   @JsonKey(name: 'Id')
   TKey? id;
@@ -29,4 +29,5 @@ class BaseEntity<TKey> {
   String? antiInjectionToken;
   @JsonKey(name: 'AntiInjectionExpireDate')
   DateTime? antiInjectionExpireDate;
+
 }

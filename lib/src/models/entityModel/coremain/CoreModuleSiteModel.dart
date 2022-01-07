@@ -1,8 +1,10 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:base/src/models/entityModel/core/CoreModuleModel.dart';
 import 'package:base/src/models/entityModel/core/CoreSiteModel.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+part 'CoreModuleSiteModel.g.dart';
 @JsonSerializable()
 class CoreModuleSiteModel extends BaseEntity<int> {
   @JsonKey(name: 'ExpireDate')
@@ -31,4 +33,8 @@ class CoreModuleSiteModel extends BaseEntity<int> {
   String? moduleConfigSiteValuesJson;
   @JsonKey(name: 'ModuleSiteStorageValuesJson')
   String? moduleSiteStorageValuesJson;
+  CoreModuleSiteModel();
+  factory CoreModuleSiteModel.fromJson(Map<String, dynamic> json) => _$CoreModuleSiteModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreModuleSiteModelToJson(this);
 }

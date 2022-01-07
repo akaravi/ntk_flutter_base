@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'FilterDataModel.dart';
 
+part 'FilterModel.g.dart';
 @JsonSerializable()
 class FilterModel {
 

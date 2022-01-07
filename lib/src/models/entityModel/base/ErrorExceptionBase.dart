@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'ErrorExceptionBase.g.dart';
 @JsonSerializable()
 class ErrorExceptionBase {
   @JsonKey(name: "IsSuccess")

@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'CoreModuleModel.g.dart';
 @JsonSerializable()
 class CoreModuleModel {
   @JsonKey(name: 'Title')
@@ -36,4 +37,9 @@ class CoreModuleModel {
   String? cmsModuleProcess;
   @JsonKey(name: 'CmsSiteCategoryCmsModule')
   String? cmsSiteCategoryCmsModule;
+
+  CoreModuleModel();
+  factory CoreModuleModel.fromJson(Map<String, dynamic> json) => _$CoreModuleModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreModuleModelToJson(this);
 }

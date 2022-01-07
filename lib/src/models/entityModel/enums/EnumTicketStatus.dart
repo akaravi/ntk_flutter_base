@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+@JsonEnum()
 enum EnumTicketStatus {
   @JsonValue(0)
   unread,

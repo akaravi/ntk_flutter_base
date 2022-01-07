@@ -1,9 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'ItemState.g.dart';
 @JsonSerializable()
 class ItemState<TcClass> {
-  @JsonKey(name: 'Item')
-  TcClass? item;
+  // @JsonKey(name: 'Item')
+  // TcClass? item;
   @JsonKey(name: 'ActionStart')
   bool actionStart = false;
   @JsonKey(name: 'ActionEnd')

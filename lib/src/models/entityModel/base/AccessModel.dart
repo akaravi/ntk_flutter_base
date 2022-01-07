@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'feildinfo/DataFieldInfoModel.dart';
 
+part 'AccessModel.g.dart';
 @JsonSerializable()
 class AccessModel {
   @JsonKey(name: 'AccessDeleteRow')
@@ -29,4 +30,11 @@ class AccessModel {
 
   @JsonKey(name: 'FieldsInfo')
   List<DataFieldInfoModel>? fieldsInfo;
+
+  AccessModel();
+
+  factory AccessModel.fromJson(Map<String, dynamic> json) =>
+      _$AccessModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AccessModelToJson(this);
 }

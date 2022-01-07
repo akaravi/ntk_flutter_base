@@ -1,10 +1,12 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreSiteModel.dart';
 import 'CoreUserGroupModel.dart';
 import 'CoreUserModel.dart';
 
+part 'CoreSiteUserModel.g.dart';
 @JsonSerializable()
 class CoreSiteUserModel extends BaseEntity<int> {
   @JsonKey(name: 'ExpireDate')
@@ -28,4 +30,9 @@ class CoreSiteUserModel extends BaseEntity<int> {
   CoreUserGroupModel? virtual_CmsUserGroup;
   @JsonKey(name: 'CmsUserGroup')
   CoreUserGroupModel? cmsUserGroup;
+
+  CoreSiteUserModel();
+  factory CoreSiteUserModel.fromJson(Map<String, dynamic> json) => _$CoreSiteUserModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreSiteUserModelToJson(this);
 }

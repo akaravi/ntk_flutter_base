@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'CaptchaModel.g.dart';
 @JsonSerializable()
 class CaptchaModel {
   @JsonKey(name: 'Expire')

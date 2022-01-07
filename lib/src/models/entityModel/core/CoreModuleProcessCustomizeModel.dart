@@ -1,8 +1,10 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreModuleProcessModel.dart';
 
+part 'CoreModuleProcessCustomizeModel.g.dart';
 @JsonSerializable()
 class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
   @JsonKey(name: 'Title')
@@ -24,4 +26,9 @@ class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
   String? processInputValueForm;
   @JsonKey(name: 'LinkProcessCustomizeDependenceBeforRunId')
   int? linkProcessCustomizeDependenceBeforRunId;
+
+  CoreModuleProcessCustomizeModel();
+  factory CoreModuleProcessCustomizeModel.fromJson(Map<String, dynamic> json) => _$CoreModuleProcessCustomizeModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreModuleProcessCustomizeModelToJson(this);
 }

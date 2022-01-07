@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'NewsContentSimilarModel.g.dart';
 @JsonSerializable()
 class NewsContentSimilarModel {
   @JsonKey(name: 'Title')
@@ -16,4 +17,9 @@ class NewsContentSimilarModel {
   String? virtual_Destination;
   @JsonKey(name: 'Destination')
   String? destination;
+
+  NewsContentSimilarModel();
+  factory NewsContentSimilarModel.fromJson(Map<String, dynamic> json) => _$NewsContentSimilarModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NewsContentSimilarModelToJson(this);
 }

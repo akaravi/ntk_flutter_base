@@ -1,8 +1,10 @@
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'BaseEntity.dart';
+part 'BaseModuleEntity.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(genericArgumentFactories: true)
 class BaseModuleEntity<TKey> extends BaseEntity<TKey> {
   @JsonKey(name: 'LinkSiteId')
   int? linkSiteId;

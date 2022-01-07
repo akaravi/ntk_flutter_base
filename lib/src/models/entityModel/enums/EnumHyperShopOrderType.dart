@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-
+@JsonEnum()
 enum EnumHyperShopOrderType {
   @JsonValue(0)
   open,
