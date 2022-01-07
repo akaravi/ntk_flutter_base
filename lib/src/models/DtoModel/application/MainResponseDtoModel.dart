@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'MainResponseDtoModel.g.dart';
 
-
-
 @JsonSerializable()
 class MainResponseDtoModel {
   @JsonKey(name: 'AppTitle')
@@ -29,7 +27,12 @@ class MainResponseDtoModel {
   @JsonKey(name: 'LastUpdateTheme')
   String? lastUpdateTheme;
   @JsonKey(name: 'LastUpdateApp')
-  String? lastUpdateApp;MainResponseDtoModel();
-  factory MainResponseDtoModel.fromJson(Map<String, dynamic> json) => _$MainResponseDtoModelFromJson(json);
+  String? lastUpdateApp;
+
+  MainResponseDtoModel();
+
+  factory MainResponseDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$MainResponseDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$MainResponseDtoModelToJson(this);
 }

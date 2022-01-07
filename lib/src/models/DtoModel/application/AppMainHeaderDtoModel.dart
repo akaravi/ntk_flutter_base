@@ -1,7 +1,7 @@
 import 'package:base/src/models/entityModel/enums/EnumDeviceStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
-part 'AppMainHeaderDtoModel.g.dart';
 
+part 'AppMainHeaderDtoModel.g.dart';
 
 @JsonSerializable()
 class AppMainHeaderDtoModel {
@@ -30,14 +30,16 @@ class AppMainHeaderDtoModel {
   @JsonKey(name: 'AppBuildVer')
   int? appBuildVer;
   @JsonKey(name: 'PackageName')
-  String?  packageName;
+  String? packageName;
   @JsonKey(name: 'Layout')
   String? layout;
   @JsonKey(name: 'Token')
   String? token;
 
   AppMainHeaderDtoModel();
-  factory AppMainHeaderDtoModel.fromJson(Map<String, dynamic> json) => _$AppMainHeaderDtoModelFromJson(json);
+
+  factory AppMainHeaderDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$AppMainHeaderDtoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppMainHeaderDtoModelToJson(this);
 }

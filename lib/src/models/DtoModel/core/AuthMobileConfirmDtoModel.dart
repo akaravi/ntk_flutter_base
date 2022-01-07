@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'AuthMobileConfirmDtoModel.g.dart';
 
-
-
 @JsonSerializable()
 class AuthMobileConfirmDtoModel {
   @JsonKey(name: 'CaptchaKey')
@@ -15,7 +13,12 @@ class AuthMobileConfirmDtoModel {
   @JsonKey(name: 'Mobile')
   String? mobile;
   @JsonKey(name: 'Code')
-  String? code;AuthMobileConfirmDtoModel();
-  factory AuthMobileConfirmDtoModel.fromJson(Map<String, dynamic> json) => _$AuthMobileConfirmDtoModelFromJson(json);
+  String? code;
+
+  AuthMobileConfirmDtoModel();
+
+  factory AuthMobileConfirmDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$AuthMobileConfirmDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$AuthMobileConfirmDtoModelToJson(this);
 }

@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'AuthUserSignUpModel.g.dart';
 
-
 @JsonSerializable()
 class AuthUserSignUpModel {
   @JsonKey(name: 'CaptchaKey')
@@ -25,7 +24,11 @@ class AuthUserSignUpModel {
   int? siteId;
   @JsonKey(name: 'Roulaccespt')
   bool? roulaccespt;
+
   AuthUserSignUpModel();
-  factory AuthUserSignUpModel.fromJson(Map<String, dynamic> json) => _$AuthUserSignUpModelFromJson(json);
+
+  factory AuthUserSignUpModel.fromJson(Map<String, dynamic> json) =>
+      _$AuthUserSignUpModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$AuthUserSignUpModelToJson(this);
 }

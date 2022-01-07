@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'AuthRenewTokenModel.g.dart';
 
-
-
 @JsonSerializable()
 class AuthRenewTokenModel {
   @JsonKey(name: 'SiteId')
@@ -15,7 +13,12 @@ class AuthRenewTokenModel {
   @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
   bool? userAccessAdminAllowToProfessionalData;
   @JsonKey(name: 'Lang')
-  String? lang;AuthRenewTokenModel();
-  factory AuthRenewTokenModel.fromJson(Map<String, dynamic> json) => _$AuthRenewTokenModelFromJson(json);
+  String? lang;
+
+  AuthRenewTokenModel();
+
+  factory AuthRenewTokenModel.fromJson(Map<String, dynamic> json) =>
+      _$AuthRenewTokenModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$AuthRenewTokenModelToJson(this);
 }

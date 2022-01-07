@@ -7,7 +7,6 @@ import 'ShoppingCartThemeDtoModel.dart';
 
 part 'ToolbarDtoModel.g.dart';
 
-
 @JsonSerializable()
 class ToolbarDtoModel {
   @JsonKey(name: 'Type')
@@ -24,7 +23,11 @@ class ToolbarDtoModel {
   ShoppingCartThemeDtoModel? shoppingCart;
   @JsonKey(name: 'Drawer')
   DrawerThemeDtoModel? drawerThemeDtoModel;
+
   ToolbarDtoModel();
-  factory ToolbarDtoModel.fromJson(Map<String, dynamic> json) => _$ToolbarDtoModelFromJson(json);
+
+  factory ToolbarDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$ToolbarDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$ToolbarDtoModelToJson(this);
 }

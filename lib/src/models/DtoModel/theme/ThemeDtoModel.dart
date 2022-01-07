@@ -12,8 +12,11 @@ class ThemeDtoModel {
 
   @JsonKey(name: 'ThemeConfigLayout')
   List<ThemeChildDtoModel>? childs;
-  ThemeDtoModel();
-  factory ThemeDtoModel.fromJson(Map<String, dynamic> json) => _$ThemeDtoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$ThemeDtoModelToJson(this);
 
+  ThemeDtoModel();
+
+  factory ThemeDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$ThemeDtoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ThemeDtoModelToJson(this);
 }

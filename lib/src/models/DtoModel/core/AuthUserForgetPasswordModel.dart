@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'AuthUserForgetPasswordModel.g.dart';
 
-
 @JsonSerializable()
 class AuthUserForgetPasswordModel {
   @JsonKey(name: 'CaptchaKey')
@@ -12,8 +11,12 @@ class AuthUserForgetPasswordModel {
   @JsonKey(name: 'Email')
   String? email;
   @JsonKey(name: 'Mobile')
-  String? mobile;AuthUserForgetPasswordModel();
-  factory AuthUserForgetPasswordModel.fromJson(Map<String, dynamic> json) => _$AuthUserForgetPasswordModelFromJson(json);
-  Map<String, dynamic> toJson() => _$AuthUserForgetPasswordModelToJson(this);
+  String? mobile;
 
+  AuthUserForgetPasswordModel();
+
+  factory AuthUserForgetPasswordModel.fromJson(Map<String, dynamic> json) =>
+      _$AuthUserForgetPasswordModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AuthUserForgetPasswordModelToJson(this);
 }

@@ -10,8 +10,14 @@ class BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel {
   int? dayOfYearMin;
   @JsonKey(name: 'DayOfYearMax')
   int? dayOfYearMax;
-  BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel();
-  factory BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel.fromJson(Map<String, dynamic> json) => _$BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModelToJson(this);
 
+  BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel();
+
+  factory BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModelFromJson(
+          json);
+
+  Map<String, dynamic> toJson() =>
+      _$BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModelToJson(this);
 }

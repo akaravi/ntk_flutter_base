@@ -24,8 +24,11 @@ class HyperShopOrderDtoModel {
   List<HyperShopOrderContentDtoModel>? products;
   @JsonKey(name: 'PaymentType')
   int? paymentType;
-  HyperShopOrderDtoModel();
-  factory HyperShopOrderDtoModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderDtoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$HyperShopOrderDtoModelToJson(this);
 
+  HyperShopOrderDtoModel();
+
+  factory HyperShopOrderDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$HyperShopOrderDtoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HyperShopOrderDtoModelToJson(this);
 }

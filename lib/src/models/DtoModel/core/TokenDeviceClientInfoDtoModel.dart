@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'TokenDeviceClientInfoDtoModel.g.dart';
 
-
 @JsonSerializable()
 class TokenDeviceClientInfoDtoModel {
   @JsonKey(name: 'SecurityKey')
@@ -34,7 +33,11 @@ class TokenDeviceClientInfoDtoModel {
   String? language;
   @JsonKey(name: 'DeviceBrand')
   String? deviceBrand;
+
   TokenDeviceClientInfoDtoModel();
-  factory TokenDeviceClientInfoDtoModel.fromJson(Map<String, dynamic> json) => _$TokenDeviceClientInfoDtoModelFromJson(json);
+
+  factory TokenDeviceClientInfoDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$TokenDeviceClientInfoDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$TokenDeviceClientInfoDtoModelToJson(this);
 }

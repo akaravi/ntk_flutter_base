@@ -1,4 +1,3 @@
-
 class RenderModelApplicationSendNotificationInput {
-    //not net in android
+  //not net in android
 }

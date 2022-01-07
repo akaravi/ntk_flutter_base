@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'BankPaymentTransactionMakerDtoModel.g.dart';
 
-
-
 @JsonSerializable()
 class BankPaymentTransactionMakerDtoModel {
   @JsonKey(name: 'PaymentPrivateId')
@@ -13,7 +11,14 @@ class BankPaymentTransactionMakerDtoModel {
   @JsonKey(name: 'CartId')
   int? cartId;
   @JsonKey(name: 'LastUrlAddressInUse')
-  String? lastUrlAddressInUse;BankPaymentTransactionMakerDtoModel();
-  factory BankPaymentTransactionMakerDtoModel.fromJson(Map<String, dynamic> json) => _$BankPaymentTransactionMakerDtoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$BankPaymentTransactionMakerDtoModelToJson(this);
+  String? lastUrlAddressInUse;
+
+  BankPaymentTransactionMakerDtoModel();
+
+  factory BankPaymentTransactionMakerDtoModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$BankPaymentTransactionMakerDtoModelFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$BankPaymentTransactionMakerDtoModelToJson(this);
 }

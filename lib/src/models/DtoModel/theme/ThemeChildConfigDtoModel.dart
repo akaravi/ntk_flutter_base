@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'ThemeChildConfigDtoModel.g.dart';
 
-
 @JsonSerializable()
 class ThemeChildConfigDtoModel {
   @JsonKey(name: 'SortId')
@@ -20,8 +19,12 @@ class ThemeChildConfigDtoModel {
   @JsonKey(name: 'ActionName')
   String? actionName;
   @JsonKey(name: 'ActionRequest')
-  String? actionRequest;ThemeChildConfigDtoModel();
-  factory ThemeChildConfigDtoModel.fromJson(Map<String, dynamic> json) => _$ThemeChildConfigDtoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$ThemeChildConfigDtoModelToJson(this);
+  String? actionRequest;
 
+  ThemeChildConfigDtoModel();
+
+  factory ThemeChildConfigDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$ThemeChildConfigDtoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ThemeChildConfigDtoModelToJson(this);
 }

@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'LinkManagementTargetShortLinkGetResponceModel.g.dart';
 
-
 @JsonSerializable()
 class LinkManagementTargetShortLinkGetResponceModel {
   @JsonKey(name: 'Key')
@@ -19,7 +18,13 @@ class LinkManagementTargetShortLinkGetResponceModel {
   String? shortLinkUrl;
   @JsonKey(name: 'ShortLinkQRCodeBase64')
   String? shortLinkQRCodeBase64;
+
   LinkManagementTargetShortLinkGetResponceModel();
-  factory LinkManagementTargetShortLinkGetResponceModel.fromJson(Map<String, dynamic> json) => _$LinkManagementTargetShortLinkGetResponceModelFromJson(json);
-  Map<String, dynamic> toJson() => _$LinkManagementTargetShortLinkGetResponceModelToJson(this);
+
+  factory LinkManagementTargetShortLinkGetResponceModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$LinkManagementTargetShortLinkGetResponceModelFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$LinkManagementTargetShortLinkGetResponceModelToJson(this);
 }

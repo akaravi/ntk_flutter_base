@@ -20,7 +20,9 @@ class AuthUserSignInBySmsDtoModel {
   String? lang;
 
   AuthUserSignInBySmsDtoModel();
-  factory AuthUserSignInBySmsDtoModel.fromJson(Map<String, dynamic> json) => _$AuthUserSignInBySmsDtoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$AuthUserSignInBySmsDtoModelToJson(this);
 
+  factory AuthUserSignInBySmsDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$AuthUserSignInBySmsDtoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AuthUserSignInBySmsDtoModelToJson(this);
 }

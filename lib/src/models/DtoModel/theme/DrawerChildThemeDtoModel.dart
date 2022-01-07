@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'DrawerChildThemeDtoModel.g.dart';
 
-
-
 @JsonSerializable()
 class DrawerChildThemeDtoModel {
   @JsonKey(name: 'Id')
@@ -14,7 +12,11 @@ class DrawerChildThemeDtoModel {
   String? title;
   @JsonKey(name: 'Icon')
   String? icon;
+
   DrawerChildThemeDtoModel();
-  factory DrawerChildThemeDtoModel.fromJson(Map<String, dynamic> json) => _$DrawerChildThemeDtoModelFromJson(json);
+
+  factory DrawerChildThemeDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$DrawerChildThemeDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$DrawerChildThemeDtoModelToJson(this);
 }

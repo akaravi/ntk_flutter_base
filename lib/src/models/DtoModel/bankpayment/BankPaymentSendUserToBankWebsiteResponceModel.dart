@@ -8,8 +8,13 @@ class BankPaymentSendUserToBankWebsiteResponceModel {
   String? outHtml;
   @JsonKey(name: 'LastUrlAddressInUse')
   String? lastUrlAddressInUse;
-  BankPaymentSendUserToBankWebsiteResponceModel();
-  factory BankPaymentSendUserToBankWebsiteResponceModel.fromJson(Map<String, dynamic> json) => _$BankPaymentSendUserToBankWebsiteResponceModelFromJson(json);
-  Map<String, dynamic> toJson() => _$BankPaymentSendUserToBankWebsiteResponceModelToJson(this);
 
+  BankPaymentSendUserToBankWebsiteResponceModel();
+
+  factory BankPaymentSendUserToBankWebsiteResponceModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$BankPaymentSendUserToBankWebsiteResponceModelFromJson(json);
+
+  Map<String, dynamic> toJson() =>
+      _$BankPaymentSendUserToBankWebsiteResponceModelToJson(this);
 }

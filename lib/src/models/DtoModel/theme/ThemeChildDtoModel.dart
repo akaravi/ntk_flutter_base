@@ -4,7 +4,6 @@ import 'ThemeChildConfigDtoModel.dart';
 
 part 'ThemeChildDtoModel.g.dart';
 
-
 @JsonSerializable()
 class ThemeChildDtoModel {
   @JsonKey(name: 'SortId')
@@ -19,7 +18,11 @@ class ThemeChildDtoModel {
   List<ThemeChildConfigDtoModel>? layoutConfig;
   @JsonKey(name: 'LayoutRequest')
   String? layoutRequest;
+
   ThemeChildDtoModel();
-  factory ThemeChildDtoModel.fromJson(Map<String, dynamic> json) => _$ThemeChildDtoModelFromJson(json);
+
+  factory ThemeChildDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$ThemeChildDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$ThemeChildDtoModelToJson(this);
 }

@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'CoreSiteAddFirstSiteDtoModel.g.dart';
 
-
 @JsonSerializable()
 class CoreSiteAddFirstSiteDtoModel {
   @JsonKey(name: 'CaptchaKey')
@@ -19,7 +18,11 @@ class CoreSiteAddFirstSiteDtoModel {
   String? linkSiteCategoryId;
   @JsonKey(name: 'Title')
   String? title;
+
   CoreSiteAddFirstSiteDtoModel();
-  factory CoreSiteAddFirstSiteDtoModel.fromJson(Map<String, dynamic> json) => _$CoreSiteAddFirstSiteDtoModelFromJson(json);
+
+  factory CoreSiteAddFirstSiteDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreSiteAddFirstSiteDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$CoreSiteAddFirstSiteDtoModelToJson(this);
 }

@@ -4,8 +4,6 @@ import 'DrawerChildThemeDtoModel.dart';
 
 part 'DrawerThemeDtoModel.g.dart';
 
-
-
 @JsonSerializable()
 class DrawerThemeDtoModel {
   @JsonKey(name: 'Type')
@@ -18,7 +16,12 @@ class DrawerThemeDtoModel {
   String? circleImage;
 
   @JsonKey(name: 'DrawerChilds')
-  List<DrawerChildThemeDtoModel>? drawerChilds;DrawerThemeDtoModel();
-  factory DrawerThemeDtoModel.fromJson(Map<String, dynamic> json) => _$DrawerThemeDtoModelFromJson(json);
+  List<DrawerChildThemeDtoModel>? drawerChilds;
+
+  DrawerThemeDtoModel();
+
+  factory DrawerThemeDtoModel.fromJson(Map<String, dynamic> json) =>
+      _$DrawerThemeDtoModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$DrawerThemeDtoModelToJson(this);
 }

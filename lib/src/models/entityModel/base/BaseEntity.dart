@@ -1,5 +1,6 @@
 import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
 part 'BaseEntity.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)

@@ -1,4 +1,3 @@
-
 class SendNotificationModel {
-    //not need in android
+  //not need in android
 }

@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 part 'FieldInputDataSourceModel.g.dart';
 
 @JsonSerializable()
@@ -15,6 +16,7 @@ class FieldInputDataSourceModel {
   String? inputControler;
 
   FieldInputDataSourceModel();
+
   factory FieldInputDataSourceModel.fromJson(Map<String, dynamic> json) =>
       _$FieldInputDataSourceModelFromJson(json);
 
