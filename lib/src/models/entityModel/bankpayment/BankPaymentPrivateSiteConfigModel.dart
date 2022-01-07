@@ -1,8 +1,10 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'BankPaymentPublicConfigModel.dart';
 import 'BankPaymentTransactionModel.dart';
+part 'BankPaymentPrivateSiteConfigModel.g.dart';
 
 @JsonSerializable()
 class BankPaymentPrivateSiteConfigModel extends BaseEntity<int> {
@@ -34,4 +36,9 @@ class BankPaymentPrivateSiteConfigModel extends BaseEntity<int> {
   List<BankPaymentTransactionModel>? transactions;
   @JsonKey(name: 'LinkModuleFileLogoIdSrc')
   String? linkModuleFileLogoIdSrc;
+
+  BankPaymentPrivateSiteConfigModel();
+  factory BankPaymentPrivateSiteConfigModel.fromJson(Map<String, dynamic> json) => _$BankPaymentPrivateSiteConfigModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BankPaymentPrivateSiteConfigModelToJson(this);
 }

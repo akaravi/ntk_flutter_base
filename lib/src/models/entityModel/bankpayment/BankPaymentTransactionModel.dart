@@ -1,10 +1,11 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:base/src/models/entityModel/base/feildinfo/GetPropertiesInfoModel.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'BankPaymentPrivateSiteConfigModel.dart';
 import 'BankPaymentTransactionLogModel.dart';
-
+part 'BankPaymentTransactionModel.g.dart';
 @JsonSerializable()
 class BankPaymentTransactionModel extends BaseEntity<int> {
   @JsonKey(name: 'TransactionStatus')
@@ -61,4 +62,9 @@ class BankPaymentTransactionModel extends BaseEntity<int> {
   String? modelShopInvoiceSaleReleaseDate;
   @JsonKey(name: 'TransactionLogs')
   BankPaymentTransactionLogModel? transactionLogs;
+
+  BankPaymentTransactionModel();
+  factory BankPaymentTransactionModel.fromJson(Map<String, dynamic> json) => _$BankPaymentTransactionModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BankPaymentTransactionModelToJson(this);
 }

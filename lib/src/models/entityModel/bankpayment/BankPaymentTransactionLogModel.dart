@@ -1,9 +1,10 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:base/src/models/entityModel/enums/EnumTransactionRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'BankPaymentTransactionModel.dart';
-
+part 'BankPaymentTransactionLogModel.g.dart';
 @JsonSerializable()
 class BankPaymentTransactionLogModel extends BaseEntity<int> {
   @JsonKey(name: 'TransactionStatus')
@@ -15,4 +16,9 @@ class BankPaymentTransactionLogModel extends BaseEntity<int> {
   BankPaymentTransactionModel? virtual_Transaction;
   @JsonKey(name: 'Transaction')
   BankPaymentTransactionModel? transaction;
+
+  BankPaymentTransactionLogModel();
+  factory BankPaymentTransactionLogModel.fromJson(Map<String, dynamic> json) => _$BankPaymentTransactionLogModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BankPaymentTransactionLogModelToJson(this);
 }
