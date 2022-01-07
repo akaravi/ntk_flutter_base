@@ -1,0 +1,1 @@
+enum EnumApiDeliveryMethod { none }
