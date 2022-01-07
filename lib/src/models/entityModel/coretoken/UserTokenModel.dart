@@ -1,7 +1,11 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:base/src/models/entityModel/enums/EnumManageUserAccessAreaTypes.dart';
 import 'package:base/src/models/entityModel/enums/EnumManageUserAccessControllerTypes.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'UserTokenModel.g.dart';
+
 
 @JsonSerializable()
 class UserTokenModel extends BaseEntity<String> {
@@ -33,4 +37,8 @@ class UserTokenModel extends BaseEntity<String> {
   String? browserLanguage;
   @JsonKey(name: 'UserLanguage')
   int? userLanguage;
+  UserTokenModel();
+  factory UserTokenModel.fromJson(Map<String, dynamic> json) => _$UserTokenModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserTokenModelToJson(this);
 }

@@ -1,7 +1,10 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'CoreModuleTagModel.dart';
+part 'CoreModuleTagCategoryModel.g.dart';
+
 
 @JsonSerializable()
 class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
@@ -25,5 +28,8 @@ class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Children')
   List<CoreModuleTagCategoryModel>? children;
   @JsonKey(name: 'Tags')
-  List<CoreModuleTagModel>? tags;
+  List<CoreModuleTagModel>? tags;CoreModuleTagCategoryModel();
+  factory CoreModuleTagCategoryModel.fromJson(Map<String, dynamic> json) => _$CoreModuleTagCategoryModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreModuleTagCategoryModelToJson(this);
 }

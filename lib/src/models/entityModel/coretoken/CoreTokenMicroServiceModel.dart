@@ -3,7 +3,10 @@ import 'package:base/src/models/entityModel/enums/EnumManageUserAccessController
 import 'package:base/src/models/entityModel/enums/EnumMicroServiceConnectionStatus.dart';
 import 'package:base/src/models/entityModel/enums/EnumMicroServiceConnectionType.dart';
 import 'package:base/src/models/entityModel/enums/EnumMicroServiceType.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'CoreTokenMicroServiceModel.g.dart';
 
 @JsonSerializable()
 class CoreTokenMicroServiceModel extends BaseEntity<String> {
@@ -29,4 +32,8 @@ class CoreTokenMicroServiceModel extends BaseEntity<String> {
   String? iP;
   @JsonKey(name: 'Description')
   String? description;
+  CoreTokenMicroServiceModel();
+  factory CoreTokenMicroServiceModel.fromJson(Map<String, dynamic> json) => _$CoreTokenMicroServiceModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreTokenMicroServiceModelToJson(this);
 }

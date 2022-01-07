@@ -1,7 +1,11 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
 import 'package:base/src/models/entityModel/enums/EnumManageUserAccessAreaTypes.dart';
 import 'package:base/src/models/entityModel/enums/EnumManageUserAccessControllerTypes.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'CoreTokenLogModel.g.dart';
+
 
 @JsonSerializable()
 class CoreTokenLogModel extends BaseEntity<String> {
@@ -34,5 +38,8 @@ class CoreTokenLogModel extends BaseEntity<String> {
   @JsonKey(name: 'BrowserLanguage')
   String? browserLanguage;
   @JsonKey(name: 'UserLanguage')
-  int? userLanguage;
+  int? userLanguage;CoreTokenLogModel();
+  factory CoreTokenLogModel.fromJson(Map<String, dynamic> json) => _$CoreTokenLogModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreTokenLogModelToJson(this);
 }
