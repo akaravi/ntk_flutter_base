@@ -86,8 +86,7 @@ Map<String, dynamic> _$ShopProductCombineToJson(ShopProductCombine instance) =>
 const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.available: 1,
   EnumRecordStatus.disable: 2,
-  EnumRecordStatus
-      .deleted: 3,
+  EnumRecordStatus.deleted: 3,
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,

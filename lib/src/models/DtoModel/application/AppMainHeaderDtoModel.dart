@@ -34,7 +34,9 @@ class AppMainHeaderDtoModel {
   @JsonKey(name: 'Layout')
   String? layout;
   @JsonKey(name: 'Token')
-  String? token;AppMainHeaderDtoModel();
+  String? token;
+
+  AppMainHeaderDtoModel();
   factory AppMainHeaderDtoModel.fromJson(Map<String, dynamic> json) => _$AppMainHeaderDtoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppMainHeaderDtoModelToJson(this);
