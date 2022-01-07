@@ -3,19 +3,19 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AuthUserSignInModel {
   @JsonKey(name: 'CaptchaKey')
-  String captchaKey;
+  String? captchaKey;
   @JsonKey(name: 'CaptchaText')
-  String captchaText;
+  String? captchaText;
   @JsonKey(name: 'Email')
-  String email;
+  String? email;
   @JsonKey(name: 'Mobile')
-  String mobile;
+  String? mobile;
   @JsonKey(name: 'Password')
-  String password;
+  String? password;
   @JsonKey(name: 'IsRemember')
-  bool isRemember;
+  bool? isRemember;
   @JsonKey(name: 'SiteId')
-  int siteId;
+  int? siteId;
   @JsonKey(name: 'Lang')
-  String lang;
+  String? lang;
 }

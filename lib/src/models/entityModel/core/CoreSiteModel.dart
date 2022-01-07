@@ -10,68 +10,68 @@ import 'CoreSiteUserModel.dart';
 @JsonSerializable()
 class CoreSiteModel {
   @JsonKey(name: 'CurrentSiteDomainUrl')
-  String currentSiteDomainUrl;
+  String? currentSiteDomainUrl;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'LinkCreatedBySiteId')
-  int linkCreatedBySiteId;
+  int? linkCreatedBySiteId;
 
   @JsonKey(name: 'virtual_ParentCreator')
-  CoreSiteModel virtual_ParentCreator;
+  CoreSiteModel? virtual_ParentCreator;
   @JsonKey(name: 'ParentCreator')
-  CoreSiteModel parentCreator;
+  CoreSiteModel? parentCreator;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'OwnerSiteSetStatus')
-  EnumSiteStatus ownerSiteSetStatus;
+  EnumSiteStatus? ownerSiteSetStatus;
   @JsonKey(name: 'UserLanguage')
-  int userLanguage;
+  int? userLanguage;
   @JsonKey(name: 'SubDomain')
-  String subDomain;
+  String? subDomain;
   @JsonKey(name: 'Domain')
-  String domain;
+  String? domain;
   @JsonKey(name: 'Redirect')
-  String redirect;
+  String? redirect;
   @JsonKey(name: 'Keyword')
-  String keyword;
+  String? keyword;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'LinkFavIconId')
-  int linkFavIconId;
+  int? linkFavIconId;
   @JsonKey(name: 'LinkSiteCategoryId')
-  int linkSiteCategoryId;
+  int? linkSiteCategoryId;
 
   @JsonKey(name: 'virtual_CmsSiteCategory')
-  CoreSiteCategoryModel virtual_CmsSiteCategory;
+  CoreSiteCategoryModel? virtual_CmsSiteCategory;
   @JsonKey(name: 'CmsSiteCategory')
-  CoreSiteCategoryModel cmsSiteCategory;
+  CoreSiteCategoryModel? cmsSiteCategory;
   @JsonKey(name: 'HasAccountingForm')
-  bool hasAccountingForm;
+  bool? hasAccountingForm;
   @JsonKey(name: 'ViewInCmsSiteLIst')
-  bool viewInCmsSiteLIst;
+  bool? viewInCmsSiteLIst;
   @JsonKey(name: 'AccountingFormNo')
-  int accountingFormNo;
+  int? accountingFormNo;
   @JsonKey(name: 'AccountingFormCreatedDate')
-  String accountingFormCreatedDate;
+  String? accountingFormCreatedDate;
   @JsonKey(name: 'AccountingFormUpdatedDate')
-  String accountingFormUpdatedDate;
+  String? accountingFormUpdatedDate;
   @JsonKey(name: 'SiteUsers')
-  List<CoreSiteUserModel> SiteUsers;
+  List<CoreSiteUserModel>? SiteUsers;
   @JsonKey(name: 'ModuleSites')
-  List<CoreModuleSiteModel> moduleSites;
+  List<CoreModuleSiteModel>? moduleSites;
   @JsonKey(name: 'DomainAliases')
-  List<CoreSiteDomainAliasModel> domainAliases;
+  List<CoreSiteDomainAliasModel>? domainAliases;
   @JsonKey(name: 'ChildernCreateds')
-  List<CoreSiteModel> childernCreateds;
+  List<CoreSiteModel>? childernCreateds;
   @JsonKey(name: 'Devices')
-  List<CoreDeviceModel> devices;
+  List<CoreDeviceModel>? devices;
   @JsonKey(name: 'Copyright')
-  String copyright;
+  String? copyright;
   @JsonKey(name: 'WebMasterEmail')
-  String webMasterEmail;
+  String? webMasterEmail;
   @JsonKey(name: 'WebEditorEmail')
-  String webEditorEmail;
+  String? webEditorEmail;
 }

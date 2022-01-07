@@ -5,45 +5,45 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class TokenInfoModel {
   @JsonKey(name: 'Token')
-  String token;
+  String? token;
   @JsonKey(name: 'DeviceToken')
-  String deviceToken;
+  String? deviceToken;
   @JsonKey(name: 'RefreshToken')
-  String refreshToken;
+  String? refreshToken;
   @JsonKey(name: 'MemberId')
-  int memberId;
+  int? memberId;
   @JsonKey(name: 'UserId')
-  int userId;
+  int? userId;
   @JsonKey(name: 'SiteId')
-  int siteId;
+  int? siteId;
   @JsonKey(name: 'UserGroupId')
-  int userGroupId;
+  int? userGroupId;
   @JsonKey(name: 'UserTypeTitle')
-  String userTypeTitle;
+  String? userTypeTitle;
   @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
-  bool userAccessAdminAllowToProfessionalData;
+  bool? userAccessAdminAllowToProfessionalData;
   @JsonKey(name: 'UserAccessAdminAllowToAllData')
-  bool userAccessAdminAllowToAllData;
+  bool? userAccessAdminAllowToAllData;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessUserTypes userType;
+  EnumManageUserAccessUserTypes? userType;
   @JsonKey(name: 'UserAccessAreaType')
-  EnumManageUserAccessAreaTypes userAccessAreaType;
+  EnumManageUserAccessAreaTypes? userAccessAreaType;
   @JsonKey(name: 'Username')
-  String username;
+  String? username;
   @JsonKey(name: 'Name')
-  String name;
+  String? name;
   @JsonKey(name: 'LastName')
-  String lastName;
+  String? lastName;
   @JsonKey(name: 'FullName')
-  String fullName;
+  String? fullName;
   @JsonKey(name: 'Language')
-  String language;
+  String? language;
   @JsonKey(name: 'Domain')
-  String domain;
+  String? domain;
   @JsonKey(name: 'SubDomain')
-  String subDomain;
+  String? subDomain;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'PhotoUrl')
-  String photoUrl;
+  String? photoUrl;
 }

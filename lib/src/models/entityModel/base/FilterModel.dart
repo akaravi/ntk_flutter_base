@@ -6,32 +6,32 @@ import 'FilterDataModel.dart';
 class FilterModel {
 
   @JsonKey(name: 'Count')
-  bool count;
+  bool? count;
 
   @JsonKey(name: 'TotalRowData')
-  int totalRowData;
+  int? totalRowData;
 
   @JsonKey(name: 'SkipRowData')
-  int skipRowData;
+  int? skipRowData;
 
   @JsonKey(name: 'CurrentPageNumber')
-  int currentPageNumber;
+  int? currentPageNumber;
 
   @JsonKey(name: 'RowPerPage')
-  int rowPerPage;
+  int? rowPerPage;
 
   @JsonKey(name: 'SortType')
-  int sortType;
+  int? sortType;
 
   @JsonKey(name: 'SortColumn')
-  String sortColumn;
+  String? sortColumn;
 
   @JsonKey(name: 'Filters')
-  List<FilterDataModel> filters;
+  List<FilterDataModel>? filters;
 
   FilterModel addFilter(FilterDataModel f) {
   filters??=[];
-  filters.add(f);
+  filters!.add(f);
     return this;
   }
 

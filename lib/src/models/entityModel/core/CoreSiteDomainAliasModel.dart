@@ -6,15 +6,15 @@ import 'CoreSiteModel.dart';
 @JsonSerializable()
 class CoreSiteDomainAliasModel extends BaseEntity<int> {
   @JsonKey(name: 'CmsSite')
-  CoreSiteModel cmsSite;
+  CoreSiteModel? cmsSite;
   @JsonKey(name: 'SubDomain')
-  String dubDomain;
+  String? dubDomain;
   @JsonKey(name: 'Domain')
-  String domain;
+  String? domain;
   @JsonKey(name: 'Redirect')
-  String redirect;
+  String? redirect;
   @JsonKey(name: 'LinkCmsSiteId')
-  int linkCmsSiteId;
+  int? linkCmsSiteId;
   @JsonKey(name: 'virtual_CmsSite')
-  CoreSiteModel virtual_CmsSite;
+  CoreSiteModel? virtual_CmsSite;
 }

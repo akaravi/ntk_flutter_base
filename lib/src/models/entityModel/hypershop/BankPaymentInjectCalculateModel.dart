@@ -3,11 +3,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BankPaymentInjectCalculateModel {
   @JsonKey(name: 'Amount')
-  double amount;
+  double? amount;
   @JsonKey(name: 'FeeTax')
-  double feeTax;
+  double? feeTax;
   @JsonKey(name: 'FeeTransport')
-  double feeTransport;
+  double? feeTransport;
   @JsonKey(name: 'AmountPure')
-  double amountPure;
+  double? amountPure;
 }

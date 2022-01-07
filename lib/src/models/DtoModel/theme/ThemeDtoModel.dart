@@ -6,8 +6,8 @@ import 'ToolbarDtoModel.dart';
 @JsonSerializable()
 class ThemeDtoModel {
   @JsonKey(name: 'Toolbar')
-  ToolbarDtoModel toolbar;
+  ToolbarDtoModel? toolbar;
 
   @JsonKey(name: 'ThemeConfigLayout')
-  List<ThemeChildDtoModel> childs;
+  List<ThemeChildDtoModel>? childs;
 }

@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class HyperShopOrderPaymentDtoModel {
   @JsonKey(name: 'LinkOrderId')
-  int linkOrderId;
+  int? linkOrderId;
   @JsonKey(name: 'BankPaymentPrivateId')
-  int bankPaymentPrivateId;
+  int? bankPaymentPrivateId;
   @JsonKey(name: 'LastUrlAddressInUse')
-  String lastUrlAddressInUse;
+  String? lastUrlAddressInUse;
 }

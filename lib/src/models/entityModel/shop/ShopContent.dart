@@ -11,45 +11,45 @@ import 'ShopProductSalePrice.dart';
 @JsonSerializable()
 class ShopContent extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkCategoryId')
-  int linkCategoryId;
+  int? linkCategoryId;
 
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
 
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
 
   @JsonKey(name: 'ProductUnit')
-  String productUnit;
+  String? productUnit;
 
   @JsonKey(name: 'Price')
-  double price;
+  double? price;
 
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
 
   @JsonKey(name: 'LinkFileIds')
-  String linkFileIds;
+  String? linkFileIds;
 
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 
   @JsonKey(name: 'MostSaleSerial')
-  bool mostSaleSerial;
+  bool? mostSaleSerial;
 
   @JsonKey(name: 'InvoiceSaleDetails')
-  List<ShopInvoiceSaleDetail> invoiceSaleDetails;
+  List<ShopInvoiceSaleDetail>? invoiceSaleDetails;
   @JsonKey(name: 'ProductProductItems')
-  List<ShopProductProductItem> productProductItems;
+  List<ShopProductProductItem>? productProductItems;
   @JsonKey(name: 'ProductProductCombines')
-  List<ShopProductProductCombine> productProductCombines;
+  List<ShopProductProductCombine>? productProductCombines;
   @JsonKey(name: 'ProductProductServices')
-  List<ShopProductProductService> productProductServices;
+  List<ShopProductProductService>? productProductServices;
   @JsonKey(name: 'ProductProductProcesses')
-  List<ShopProductProductProcess> productProductProcesses;
+  List<ShopProductProductProcess>? productProductProcesses;
   @JsonKey(name: 'ProductSalePrices')
-  List<ShopProductSalePrice> productSalePrices;
+  List<ShopProductSalePrice>? productSalePrices;
 
   @JsonKey(name: 'LinkFileIdsSrc')
-  List<String> linkFileIdsSrc;
+  List<String>? linkFileIdsSrc;
 }

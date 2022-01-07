@@ -6,11 +6,11 @@ import 'ArticleContentModel.dart';
 @JsonSerializable()
 class ArticleContentTagModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentid')
-  String linkContentId;
+  String? linkContentId;
   @JsonKey(name: 'LinkTagid')
-  int linkTaId;
+  int? linkTaId;
   @JsonKey(name: 'virtual_ModuleContent')
-  ArticleContentModel virtual_ModuleContent;
+  ArticleContentModel? virtual_ModuleContent;
   @JsonKey(name: 'ModuleContent')
-  ArticleContentModel moduleContent;
+  ArticleContentModel? moduleContent;
 }

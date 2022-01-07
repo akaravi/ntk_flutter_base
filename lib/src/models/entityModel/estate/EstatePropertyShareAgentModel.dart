@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyShareAgentModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'LinkEstateAgentId')
-  String linkEstateAgentId;
+  String? linkEstateAgentId;
   @JsonKey(name: 'LinkEstatePropertyId')
-  String linkEstatePropertyId;
+  String? linkEstatePropertyId;
 }

@@ -6,15 +6,15 @@ import 'TicketingDepartemenModel.dart';
 @JsonSerializable()
 class TicketingFaqModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Question')
-  String question;
+  String? question;
   @JsonKey(name: 'Answer')
-  String answer;
+  String? answer;
   @JsonKey(name: 'LinkTicketingDepartemenId')
-  int linkTicketingDepartemenId;
+  int? linkTicketingDepartemenId;
   @JsonKey(name: ' virtual_TicketingDepartemen')
-  TicketingDepartemenModel virtual_TicketingDepartemen;
+  TicketingDepartemenModel? virtual_TicketingDepartemen;
   @JsonKey(name: 'TicketingDepartemen')
-  TicketingDepartemenModel ticketingDepartemen;
+  TicketingDepartemenModel? ticketingDepartemen;
   @JsonKey(name: 'LinkFileIds')
-  String linkFileIds;
+  String? linkFileIds;
 }

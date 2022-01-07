@@ -3,21 +3,21 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class FileUploadModel {
   @JsonKey(name: 'FileName')
-  String fileName;
+  String? fileName;
   @JsonKey(name: 'FileKey')
-  String fileKey;
+  String? fileKey;
   @JsonKey(name: 'ChunkNumber')
-  int chunkNumber;
+  int? chunkNumber;
   @JsonKey(name: 'ChunkSize')
-  int chunkSize;
+  int? chunkSize;
   @JsonKey(name: 'CurrentChunkSize')
-  int currentChunkSize;
+  int? currentChunkSize;
   @JsonKey(name: 'TotalSize')
-  int totalSize;
+  int? totalSize;
   @JsonKey(name: 'Identifier')
-  String identifier;
+  String? identifier;
   @JsonKey(name: 'RelativePath')
-  String relativePath;
+  String? relativePath;
   @JsonKey(name: 'TotalChunks')
-  int totalChunks;
+  int? totalChunks;
 }

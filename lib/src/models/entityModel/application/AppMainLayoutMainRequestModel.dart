@@ -4,27 +4,27 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AppMainLayoutMainRequestModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'UserId')
-  int userId;
+  int? userId;
   @JsonKey(name: 'MemberUserId')
-  int memberUserId;
+  int? memberUserId;
   @JsonKey(name: 'SiteId')
-  int siteId;
+  int? siteId;
   @JsonKey(name: 'AppTitle')
-  String appTitle;
+  String? appTitle;
   @JsonKey(name: 'AppUrl')
-  String appUrl;
+  String? appUrl;
   @JsonKey(name: 'AppId')
-  int appId;
+  int? appId;
   @JsonKey(name: 'AppVersion')
-  int appVersion;
+  int? appVersion;
   @JsonKey(name: 'LastUpdateSource')
-  String lastUpdateSource;
+  String? lastUpdateSource;
   @JsonKey(name: 'LastUpdateTheme')
-  String lastUpdateTheme;
+  String? lastUpdateTheme;
   @JsonKey(name: 'LastUpdateApp')
-  String lastUpdateApp;
+  String? lastUpdateApp;
   @JsonKey(name: 'AppForceUpdate')
-  bool appForceUpdate;
+  bool? appForceUpdate;
   @JsonKey(name: 'AppThemeId')
-  int appThemeId;
+  int? appThemeId;
 }

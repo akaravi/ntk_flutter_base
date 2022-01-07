@@ -5,23 +5,23 @@ import 'FieldInfoModel.dart';
 @JsonSerializable()
 class DataFieldInfoModel {
   @JsonKey(name: 'FieldName')
-  String fieldName;
+  String? fieldName;
   @JsonKey(name: 'FieldType')
-  String fieldType;
+  String? fieldType;
   @JsonKey(name: 'FieldTypeClass')
-  String fieldTypeClass;
+  String? fieldTypeClass;
   @JsonKey(name: 'FieldTitle')
-  String fieldTitle;
+  String? fieldTitle;
   @JsonKey(name: 'FieldDescription')
-  String fieldDescription;
+  String? fieldDescription;
   @JsonKey(name: 'FieldScriptDescription')
-  String fieldScriptDescription;
+  String? fieldScriptDescription;
   @JsonKey(name: 'FieldDefaultValue')
-  String fieldDefaultValue;
+  String? fieldDefaultValue;
   @JsonKey(name: 'FieldValue')
-  String fieldValue;
+  String? fieldValue;
   @JsonKey(name: 'FieldTypeFullName')
-  String fieldTypeFullName;
+  String? fieldTypeFullName;
   @JsonKey(name: 'AccessSearchField')
   bool accessSearchField = false;
   @JsonKey(name: 'AccessWatchField')
@@ -31,5 +31,5 @@ class DataFieldInfoModel {
   @JsonKey(name: 'AccessAddField')
   bool accessAddField = false;
   @JsonKey(name: 'fieldsInfo')
-  List<FieldInfoModel> fieldsInfo;
+  List<FieldInfoModel>? fieldsInfo;
 }

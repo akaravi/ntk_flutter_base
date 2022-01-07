@@ -5,11 +5,11 @@ import 'NewsContentModel.dart';
 @JsonSerializable()
 class NewsContentTagModel {
   @JsonKey(name: 'LinkContentid')
-  String linkContentId;
+  String? linkContentId;
   @JsonKey(name: 'LinkTagid')
-  int linkTagId;
+  int? linkTagId;
   @JsonKey(name: 'virtual_ModuleContent')
-  NewsContentModel virtual_ModuleContent;
+  NewsContentModel? virtual_ModuleContent;
   @JsonKey(name: 'ModuleContent')
-  NewsContentModel moduleContent;
+  NewsContentModel? moduleContent;
 }

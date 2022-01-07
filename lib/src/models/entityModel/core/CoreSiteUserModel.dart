@@ -8,24 +8,24 @@ import 'CoreUserModel.dart';
 @JsonSerializable()
 class CoreSiteUserModel extends BaseEntity<int> {
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'LinkSiteId')
-  int linkSiteId;
+  int? linkSiteId;
   @JsonKey(name: 'LinkUserId')
-  int linkUserId;
+  int? linkUserId;
   @JsonKey(name: 'LinkUserGroupId')
-  int linkUserGroupId;
+  int? linkUserGroupId;
   @JsonKey(name: 'virtual_CmsSite')
-  CoreSiteModel virtual_CmsSite;
+  CoreSiteModel? virtual_CmsSite;
   @JsonKey(name: 'CmsSite')
-  CoreSiteModel cmsSite;
+  CoreSiteModel? cmsSite;
 
   @JsonKey(name: ' virtual_CmsUser')
-  CoreUserModel virtual_CmsUser;
+  CoreUserModel? virtual_CmsUser;
   @JsonKey(name: 'CmsUser')
-  CoreUserModel cmsUser;
+  CoreUserModel? cmsUser;
   @JsonKey(name: 'virtual_CmsUserGroup')
-  CoreUserGroupModel virtual_CmsUserGroup;
+  CoreUserGroupModel? virtual_CmsUserGroup;
   @JsonKey(name: 'CmsUserGroup')
-  CoreUserGroupModel cmsUserGroup;
+  CoreUserGroupModel? cmsUserGroup;
 }

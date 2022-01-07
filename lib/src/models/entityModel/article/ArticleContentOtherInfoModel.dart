@@ -6,19 +6,19 @@ import 'ArticleContentModel.dart';
 @JsonSerializable()
 class ArticleContentOtherInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'HtmlBody')
-  String htmlBody;
+  String? htmlBody;
   @JsonKey(name: 'Source')
-  String source;
+  String? source;
   @JsonKey(name: 'LinkContentid')
-  int linkContentId;
+  int? linkContentId;
   @JsonKey(name: 'TypeId')
-  int typeId;
+  int? typeId;
 
   @JsonKey(name: ' virtual_Content')
-  ArticleContentModel virtual_Content;
+  ArticleContentModel? virtual_Content;
 
   @JsonKey(name: 'Content')
-  ArticleContentModel content;
+  ArticleContentModel? content;
 }

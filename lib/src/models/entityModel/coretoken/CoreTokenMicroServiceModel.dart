@@ -8,25 +8,25 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreTokenMicroServiceModel extends BaseEntity<String> {
   @JsonKey(name: 'LinkUserId')
-  int linkUserId;
+  int? linkUserId;
   @JsonKey(name: 'LinkSiteId')
-  int linkSiteId;
+  int? linkSiteId;
   @JsonKey(name: 'DeviceId')
-  String deviceId;
+  String? deviceId;
   @JsonKey(name: 'DeviceType')
-  EnumMicroServiceType deviceType;
+  EnumMicroServiceType? deviceType;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessUserTypes userType;
+  EnumManageUserAccessUserTypes? userType;
   @JsonKey(name: 'DeviceConnectionType')
-  EnumMicroServiceConnectionType deviceConnectionType;
+  EnumMicroServiceConnectionType? deviceConnectionType;
   @JsonKey(name: 'DeviceConnectionState')
-  EnumMicroServiceConnectionStatus deviceConnectionState;
+  EnumMicroServiceConnectionStatus? deviceConnectionState;
   @JsonKey(name: 'RequestDate')
-  String requestDate;
+  String? requestDate;
   @JsonKey(name: 'UsedUsername')
-  String usedUsername;
+  String? usedUsername;
   @JsonKey(name: 'IP')
-  String iP;
+  String? iP;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
 }

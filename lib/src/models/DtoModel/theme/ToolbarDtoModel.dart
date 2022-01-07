@@ -8,17 +8,17 @@ import 'ShoppingCartThemeDtoModel.dart';
 @JsonSerializable()
 class ToolbarDtoModel {
   @JsonKey(name: 'Type')
-  int type;
+  int? type;
   @JsonKey(name: 'BackgroundColor')
-  String backgroundColor;
+  String? backgroundColor;
   @JsonKey(name: 'ColorBelowLine')
-  String colorBelowLine;
+  String? colorBelowLine;
   @JsonKey(name: 'HamberMenu')
-  HamberMenuThemeDtoModel hamberMenuThemeDtoModel;
+  HamberMenuThemeDtoModel? hamberMenuThemeDtoModel;
   @JsonKey(name: 'SearchBox')
-  SearchBoxThemeDtoModel searchBox;
+  SearchBoxThemeDtoModel? searchBox;
   @JsonKey(name: 'ShoppingCart')
-  ShoppingCartThemeDtoModel shoppingCart;
+  ShoppingCartThemeDtoModel? shoppingCart;
   @JsonKey(name: 'Drawer')
-  DrawerThemeDtoModel drawerThemeDtoModel;
+  DrawerThemeDtoModel? drawerThemeDtoModel;
 }

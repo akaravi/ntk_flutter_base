@@ -4,15 +4,15 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreLogScoreModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'ModuleName')
-  String moduleName;
+  String? moduleName;
   @JsonKey(name: 'ModuleEntityName')
-  String moduleEntityName;
+  String? moduleEntityName;
   @JsonKey(name: 'LinkUserId')
-  int linkUserId;
+  int? linkUserId;
   @JsonKey(name: 'LinkMemberUserId')
-  int linkMemberUserId;
+  int? linkMemberUserId;
   @JsonKey(name: 'EntityId')
-  int entityId;
+  int? entityId;
   @JsonKey(name: 'ScorePercent')
-  int scorePercent;
+  int? scorePercent;
 }

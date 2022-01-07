@@ -11,19 +11,19 @@ import 'TicketingTaskModel.dart';
 @JsonSerializable()
 class TicketingDepartemenModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'DefaultAnswerBody')
-  String defaultAnswerBody;
+  String? defaultAnswerBody;
   @JsonKey(name: 'Priority')
-  EnumTicketingDepartemenPriority priority;
+  EnumTicketingDepartemenPriority? priority;
   @JsonKey(name: 'AccessToChangeType')
-  EnumTicketAccessStatus accessToChangeType;
+  EnumTicketAccessStatus? accessToChangeType;
   @JsonKey(name: 'Tickets')
-  List<TicketingTaskModel> tickets;
+  List<TicketingTaskModel>? tickets;
   @JsonKey(name: 'TicketAnswers')
-  List<TicketingAnswerModel> ticketAnswers;
+  List<TicketingAnswerModel>? ticketAnswers;
   @JsonKey(name: 'Faqs')
-  List<TicketingFaqModel> faqs;
+  List<TicketingFaqModel>? faqs;
   @JsonKey(name: 'Operators')
-  List<TicketingDepartemenOperatorModel> operators;
+  List<TicketingDepartemenOperatorModel>? operators;
 }

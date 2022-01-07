@@ -7,23 +7,23 @@ class HyperShopOrderContentModel {
   static String CURRENCY_UNIT = "ریال";
 
   @JsonKey(name: 'LinkOrderId')
-  int linkOrderId;
+  int? linkOrderId;
   @JsonKey(name: 'Order')
-  HyperShopOrderModel order;
+  HyperShopOrderModel? order;
   @JsonKey(name: 'Code')
-  String code;
+  String? code;
   @JsonKey(name: 'Name')
-  String name;
+  String? name;
   @JsonKey(name: 'Memo')
-  String memo;
+  String? memo;
   @JsonKey(name: 'Price')
-  double price;
+  double? price;
   @JsonKey(name: 'Count')
-  int count;
+  int? count;
   @JsonKey(name: 'TotalCount')
-  int totalCount;
+  int? totalCount;
   @JsonKey(name: 'Image')
-  String image;
+  String? image;
   @JsonKey(name: 'Unit')
-  String unit;
+  String? unit;
 }

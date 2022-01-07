@@ -3,19 +3,19 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ThemeChildConfigDtoModel {
   @JsonKey(name: 'SortId')
-  int sortId;
+  int? sortId;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'BgColor')
-  String bgColor;
+  String? bgColor;
   @JsonKey(name: 'FrontColor')
-  String frontColor;
+  String? frontColor;
   @JsonKey(name: 'FontSize')
-  String fontSize;
+  String? fontSize;
   @JsonKey(name: 'Href')
-  String href;
+  String? href;
   @JsonKey(name: 'ActionName')
-  String actionName;
+  String? actionName;
   @JsonKey(name: 'ActionRequest')
-  String actionRequest;
+  String? actionRequest;
 }

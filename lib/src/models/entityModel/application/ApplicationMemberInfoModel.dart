@@ -7,39 +7,39 @@ import 'ApplicationAppModel.dart';
 @JsonSerializable()
 class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkUserId')
-  int linkUserId;
+  int? linkUserId;
   @JsonKey(name: 'LinkMemberId')
-  int linkMemberId;
+  int? linkMemberId;
   @JsonKey(name: 'DeviceStatus')
-  EnumDeviceStatus deviceStatus;
+  EnumDeviceStatus? deviceStatus;
   @JsonKey(name: 'DeviceId')
-  String deviceId;
+  String? deviceId;
   @JsonKey(name: 'DeviceBrand')
-  String deviceBrand;
+  String? deviceBrand;
   @JsonKey(name: 'SimCard')
-  String simCard;
+  String? simCard;
   @JsonKey(name: 'Country')
-  String country;
+  String? country;
   @JsonKey(name: 'Language')
-  String language;
+  String? language;
   @JsonKey(name: 'NotificationId')
-  String notificationId;
+  String? notificationId;
   @JsonKey(name: 'LinkApplicationId')
-  int linkApplicationId;
+  int? linkApplicationId;
   @JsonKey(name: 'Application')
-  ApplicationAppModel application;
+  ApplicationAppModel? application;
   @JsonKey(name: 'AppBuildVer')
-  int appBuildVer;
+  int? appBuildVer;
   @JsonKey(name: 'AppSourceVer')
-  String appSourceVer;
+  String? appSourceVer;
   @JsonKey(name: 'DeviceIP')
-  String deviceIP;
+  String? deviceIP;
   @JsonKey(name: 'LocationLat')
-  String locationLat;
+  String? locationLat;
   @JsonKey(name: 'LocationLong')
-  String locationLong;
+  String? locationLong;
   @JsonKey(name: 'ScorePercent')
-  int scorePercent;
+  int? scorePercent;
   @JsonKey(name: 'ScoreComment')
-  String scoreComment;
+  String? scoreComment;
 }

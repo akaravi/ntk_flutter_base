@@ -4,29 +4,29 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BaseEntity<TKey> {
   @JsonKey(name: 'Id')
-  TKey id;
+  TKey? id;
   @JsonKey(name: 'CreatedDate')
-  DateTime createdDate;
+  DateTime? createdDate;
   @JsonKey(name: 'CreatedBy')
-  int createdBy;
+  int? createdBy;
   @JsonKey(name: 'UpdatedDate')
-  DateTime updatedDate;
+  DateTime? updatedDate;
   @JsonKey(name: 'UpdatedBy')
-  int updatedBy;
+  int? updatedBy;
   @JsonKey(name: 'RecordStatus')
-  EnumRecordStatus recordStatus;
+  EnumRecordStatus? recordStatus;
   @JsonKey(name: 'RecordStatusText')
-  String recordStatusText;
+  String? recordStatusText;
   @JsonKey(name: 'AntiInjectionGuid')
-  String antiInjectionGuid;
+  String? antiInjectionGuid;
   @JsonKey(name: 'AntiInjectionDate')
-  DateTime antiInjectionDate;
+  DateTime? antiInjectionDate;
   @JsonKey(name: 'CreateAntiInjectionValue')
-  bool createAntiInjectionValue;
+  bool? createAntiInjectionValue;
   @JsonKey(name: 'AntiInjectionExpiredMinute')
-  int antiInjectionExpiredMinute;
+  int? antiInjectionExpiredMinute;
   @JsonKey(name: 'AntiInjectionToken')
-  String antiInjectionToken;
+  String? antiInjectionToken;
   @JsonKey(name: 'AntiInjectionExpireDate')
-  DateTime antiInjectionExpireDate;
+  DateTime? antiInjectionExpireDate;
 }

@@ -8,21 +8,21 @@ import 'CoreSiteUserModel.dart';
 @JsonSerializable()
 class CoreUserGroupModel extends BaseEntity<int> {
   @JsonKey(name: 'TitleML')
-  String titleML;
+  String? titleML;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TitleResourceLanguage')
-  String titleResourceLanguage;
+  String? titleResourceLanguage;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessUserTypes userType;
+  EnumManageUserAccessUserTypes? userType;
   @JsonKey(name: 'UserTypeTitle')
-  String userTypeTitle;
+  String? userTypeTitle;
   @JsonKey(name: 'UserTypeDescription')
-  String userTypeDescription;
+  String? userTypeDescription;
   @JsonKey(name: 'CmsSiteUsers')
-  List<CoreSiteUserModel> cmsSiteUsers;
+  List<CoreSiteUserModel>? cmsSiteUsers;
   @JsonKey(name: 'CmsCpMainMenuCmsUserGroup')
-  List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
+  List<CoreCpMainMenuCmsUserGroupModel>? cmsCpMainMenuCmsUserGroup;
 }

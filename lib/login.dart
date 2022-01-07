@@ -6,7 +6,7 @@ class Login extends StatelessWidget {
   final AssetImage backgroundImage;
 
   Login({
-    Key key,
+    Key? key,
     this.primaryColor = Colors.green,
     this.backgroundColor = Colors.white,
     this.backgroundImage =

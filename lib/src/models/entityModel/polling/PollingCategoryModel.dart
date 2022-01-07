@@ -6,29 +6,29 @@ import 'PollingContentModel.dart';
 @JsonSerializable()
 class PollingCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TitleResourceLanguage')
-  String titleResourceLanguage;
+  String? titleResourceLanguage;
   @JsonKey(name: 'ContentCount')
-  int contentCount;
+  int? contentCount;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'FontIcon')
-  String fontIcon;
+  String? fontIcon;
   @JsonKey(name: 'LinkParentIdNode')
-  String linkParentIdNode;
+  String? linkParentIdNode;
   @JsonKey(name: 'LinkParentId')
-  int linkParentId;
+  int? linkParentId;
   @JsonKey(name: 'Children')
-  List<PollingCategoryModel> children;
+  List<PollingCategoryModel>? children;
   @JsonKey(name: 'Category')
-  PollingCategoryModel category;
+  PollingCategoryModel? category;
   @JsonKey(name: 'virtual_Category')
-  PollingCategoryModel virtual_Category;
+  PollingCategoryModel? virtual_Category;
   @JsonKey(name: 'Contents')
-  List<PollingContentModel> contents;
+  List<PollingContentModel>? contents;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 }

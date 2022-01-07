@@ -10,169 +10,169 @@ import 'ApplicationThemeConfigModel.dart';
 @JsonSerializable()
 class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'AppKey')
-  String appKey;
+  String? appKey;
   @JsonKey(name: 'Lang')
-  int lang;
+  int? lang;
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'LinkFileIdIcon')
-  int linkFileIdIcon;
+  int? linkFileIdIcon;
   @JsonKey(name: 'LinkFileIdLogo')
-  int linkFileIdLogo;
+  int? linkFileIdLogo;
   @JsonKey(name: 'LinkFileIdSplashScreen')
-  int linkFileIdSplashScreen;
+  int? linkFileIdSplashScreen;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'AppVersion')
-  int appVersion;
+  int? appVersion;
   @JsonKey(name: 'IsPublished')
-  String isPublished;
+  String? isPublished;
   @JsonKey(name: 'IsPublic')
-  bool isPublic;
+  bool? isPublic;
   @JsonKey(name: 'LinkSourceId')
-  int linkSourceId;
+  int? linkSourceId;
   @JsonKey(name: 'Virtual_Source')
-  ApplicationSourceModel virtual_Source;
+  ApplicationSourceModel? virtual_Source;
   @JsonKey(name: 'Source')
-  ApplicationSourceModel source;
+  ApplicationSourceModel? source;
   @JsonKey(name: 'DownloadCount')
-  int downloadCount;
+  int? downloadCount;
   @JsonKey(name: 'IsGlobalUser')
-  bool isGlobalUser;
+  bool? isGlobalUser;
   @JsonKey(name: 'CheckUpdate')
-  bool checkUpdate;
+  bool? checkUpdate;
   @JsonKey(name: 'ForceUpdate')
-  bool forceUpdate;
+  bool? forceUpdate;
   @JsonKey(name: 'QrCode')
-  String qrCode;
+  String? qrCode;
   @JsonKey(name: 'LastBuildAppKey')
-  String lastBuildAppKey;
+  String? lastBuildAppKey;
   @JsonKey(name: 'LastBuildStatus')
-  EnumBuildStatusType lastBuildStatus;
+  EnumBuildStatusType? lastBuildStatus;
   @JsonKey(name: 'LastNotificationOrderDate')
-  String lastNotificationOrderDate;
+  String? lastNotificationOrderDate;
   @JsonKey(name: 'LastBuildOrderDate')
-  String lastBuildOrderDate;
+  String? lastBuildOrderDate;
   @JsonKey(name: 'LastBuildRunDate')
-  String lastBuildRunDate;
+  String? lastBuildRunDate;
   @JsonKey(name: 'LastBuildEndDate')
-  String lastBuildEndDate;
+  String? lastBuildEndDate;
   @JsonKey(name: 'LastBuildErrorMessage')
-  String lastBuildErrorMessage;
+  String? lastBuildErrorMessage;
   @JsonKey(name: 'LastSuccessfullyBuildDate')
-  String lastSuccessfullyBuildDate;
+  String? lastSuccessfullyBuildDate;
   @JsonKey(name: 'LayoutValues')
-  List<ApplicationLayoutValueModel> layoutValues;
+  List<ApplicationLayoutValueModel>? layoutValues;
   @JsonKey(name: 'BuildCount')
-  int buildCount;
+  int? buildCount;
   @JsonKey(name: 'LinkThemeConfigId')
-  int linkThemeConfigId;
+  int? linkThemeConfigId;
   @JsonKey(name: 'virtual_ThemeConfig')
-  ApplicationThemeConfigModel virtual_ThemeConfig;
+  ApplicationThemeConfigModel? virtual_ThemeConfig;
   @JsonKey(name: 'ThemeConfig')
-  ApplicationThemeConfigModel themeConfig;
+  ApplicationThemeConfigModel? themeConfig;
   @JsonKey(name: 'ConfigBuilderAdminJsonValues')
-  String configBuilderAdminJsonValues;
+  String? configBuilderAdminJsonValues;
   @JsonKey(name: 'ConfigRuntimeAdminJsonValues')
-  String configRuntimeAdminJsonValues;
+  String? configRuntimeAdminJsonValues;
   @JsonKey(name: 'ConfigBuilderSiteJsonValues')
-  String configBuilderSiteJsonValues;
+  String? configBuilderSiteJsonValues;
   @JsonKey(name: 'ConfigRuntimeSiteJsonValues')
-  String configRuntimeSiteJsonValues;
+  String? configRuntimeSiteJsonValues;
   @JsonKey(name: 'ScoreClick')
-  int scoreClick;
+  int? scoreClick;
   @JsonKey(name: 'ScoreSumPercent')
-  int scoreSumPercent;
+  int? scoreSumPercent;
   @JsonKey(name: 'AdminConfigFormFormatter')
-  List<GetPropertiesInfoModel> adminConfigFormFormatter;
+  List<GetPropertiesInfoModel>? adminConfigFormFormatter;
   @JsonKey(name: 'userConfigFormFormatter')
-  List<GetPropertiesInfoModel> userConfigFormFormatter;
+  List<GetPropertiesInfoModel>? userConfigFormFormatter;
   @JsonKey(name: 'ThemeConfigJsonValues')
-  String themeConfigJsonValues;
+  String? themeConfigJsonValues;
   @JsonKey(name: 'BuildKey1String')
-  String buildKey1String;
+  String? buildKey1String;
   @JsonKey(name: 'BuildKey1Value')
-  String buildKey1Value;
+  String? buildKey1Value;
   @JsonKey(name: 'BuildKey2String')
-  String buildKey2String;
+  String? buildKey2String;
   @JsonKey(name: 'BuildKey2Value')
-  String buildKey2Value;
+  String? buildKey2Value;
   @JsonKey(name: 'BuildKey3String')
-  String buildKey3String;
+  String? buildKey3String;
   @JsonKey(name: 'BuildKey3Value')
-  String buildKey3Value;
+  String? buildKey3Value;
   @JsonKey(name: 'BuildKey4String')
-  String buildKey4String;
+  String? buildKey4String;
   @JsonKey(name: 'BuildKey4Value')
-  String buildKey4Value;
+  String? buildKey4Value;
   @JsonKey(name: 'BuildKey5String')
-  String buildKey5String;
+  String? buildKey5String;
   @JsonKey(name: 'BuildKey5Value')
-  String buildKey5Value;
+  String? buildKey5Value;
   @JsonKey(name: 'DownloadLinkSrcCustomize')
-  String downloadLinkSrcCustomize;
+  String? downloadLinkSrcCustomize;
   @JsonKey(name: 'DownloadLinkSrc')
-  String downloadLinkSrc;
+  String? downloadLinkSrc;
   @JsonKey(name: 'DownloadLinkUpdateSrc')
-  String downloadLinkUpdateSrc;
+  String? downloadLinkUpdateSrc;
   @JsonKey(name: 'DownloadLinkSrcByDomain')
-  String downloadLinkSrcByDomain;
+  String? downloadLinkSrcByDomain;
   @JsonKey(name: 'DownloadLinkUpdateSrcByDomain')
-  String downloadLinkUpdateSrcByDomain;
+  String? downloadLinkUpdateSrcByDomain;
   @JsonKey(name: 'DownloadLinkSrcByDomainQRCodeBase64')
-  String downloadLinkSrcByDomainQRCodeBase64;
+  String? downloadLinkSrcByDomainQRCodeBase64;
 
   @JsonKey(name: 'FilePathOnServer')
-  String filePathOnServer;
+  String? filePathOnServer;
 
   @JsonKey(name: 'AboutUsTitle')
-  String aboutUsTitle;
+  String? aboutUsTitle;
   @JsonKey(name: 'AboutUsDescription')
-  String aboutUsDescription;
+  String? aboutUsDescription;
   @JsonKey(name: 'AboutUsTel')
-  String aboutUsTel;
+  String? aboutUsTel;
   @JsonKey(name: 'AboutUsMobile')
-  String aboutUsMobile;
+  String? aboutUsMobile;
   @JsonKey(name: 'AboutUsLinkImageIdSrc')
-  String aboutUsLinkImageIdSrc;
+  String? aboutUsLinkImageIdSrc;
   @JsonKey(name: 'AboutUsFax')
-  String aboutUsFax;
+  String? aboutUsFax;
   @JsonKey(name: 'AboutUsEmail')
-  String aboutUsEmail;
+  String? aboutUsEmail;
   @JsonKey(name: 'AboutUsAddress')
-  String aboutUsAddress;
+  String? aboutUsAddress;
   @JsonKey(name: 'AboutUsLinkImageId')
-  String aboutUsLinkImageId;
+  String? aboutUsLinkImageId;
   @JsonKey(name: 'AboutUsGeolocationlatetitude')
-  String aboutUsGeolocationlatetitude;
+  String? aboutUsGeolocationlatetitude;
   @JsonKey(name: 'AboutUsGeolocationlongitude')
-  String aboutUsGeolocationlongitude;
+  String? aboutUsGeolocationlongitude;
   @JsonKey(name: 'AboutUsLinkFacebook')
-  String aboutUsLinkFacebook;
+  String? aboutUsLinkFacebook;
   @JsonKey(name: 'AboutUsLinkTwitter')
-  String aboutUsLinkTwitter;
+  String? aboutUsLinkTwitter;
   @JsonKey(name: 'AboutUsLinkGooglePlus')
-  String aboutUsLinkGooglePlus;
+  String? aboutUsLinkGooglePlus;
   @JsonKey(name: 'AboutUsLinkInstagram')
-  String aboutUsLinkInstagram;
+  String? aboutUsLinkInstagram;
   @JsonKey(name: 'AboutUsLinklinkedin')
-  String aboutUsLinklinkedin;
+  String? aboutUsLinklinkedin;
   @JsonKey(name: 'AboutUsLinkYahoo')
-  String aboutUsLinkYahoo;
+  String? aboutUsLinkYahoo;
   @JsonKey(name: 'AboutUsLinkYoutube')
-  String aboutUsLinkYoutube;
+  String? aboutUsLinkYoutube;
   @JsonKey(name: 'AboutUsLinkTelegram')
-  String aboutUsLinkTelegram;
+  String? aboutUsLinkTelegram;
   @JsonKey(name: 'AboutUsLinkPinterest')
-  String aboutUsLinkPinterest;
+  String? aboutUsLinkPinterest;
   @JsonKey(name: 'AboutUsLinkRss')
-  String aboutUsLinkRss;
+  String? aboutUsLinkRss;
   @JsonKey(name: 'LinkFileIdIconSrc')
-  String linkFileIdIconSrc;
+  String? linkFileIdIconSrc;
   @JsonKey(name: 'LinkFileIdLogoSrc')
-  String linkFileIdLogoSrc;
+  String? linkFileIdLogoSrc;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 }

@@ -6,14 +6,14 @@ import 'ShopContent.dart';
 @JsonSerializable()
 class ShopProductSalePrice extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkProductId')
-  int linkProductId;
+  int? linkProductId;
 
   @JsonKey(name: 'virtual_Product')
-  ShopContent virtual_Product;
+  ShopContent? virtual_Product;
 
   @JsonKey(name: 'SalePrice')
-  double salePrice;
+  double? salePrice;
 
   @JsonKey(name: 'LinkPersonGroupId')
-  int linkPersonGroupId;
+  int? linkPersonGroupId;
 }

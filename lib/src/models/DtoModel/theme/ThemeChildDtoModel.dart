@@ -5,15 +5,15 @@ import 'ThemeChildConfigDtoModel.dart';
 @JsonSerializable()
 class ThemeChildDtoModel {
   @JsonKey(name: 'SortId')
-  int sortId;
+  int? sortId;
   @JsonKey(name: 'LayoutTheme')
-  int layoutTheme;
+  int? layoutTheme;
   @JsonKey(name: 'LayoutName')
-  String layoutName;
+  String? layoutName;
   @JsonKey(name: 'LayoutChildConfig')
-  List<ThemeChildConfigDtoModel> layoutChildConfigs;
+  List<ThemeChildConfigDtoModel>? layoutChildConfigs;
   @JsonKey(name: 'LayoutConfig')
-  List<ThemeChildConfigDtoModel> layoutConfig;
+  List<ThemeChildConfigDtoModel>? layoutConfig;
   @JsonKey(name: 'LayoutRequest')
-  String layoutRequest;
+  String? layoutRequest;
 }

@@ -6,23 +6,23 @@ import 'CoreModuleProcessCustomizeModel.dart';
 @JsonSerializable()
 class CoreModuleProcessModel {
   @JsonKey(name: 'TitleML')
-  String titleML;
+  String? titleML;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TitleResourceLanguage')
-  String titleResourceLanguage;
+  String? titleResourceLanguage;
   @JsonKey(name: 'TitleEn')
-  String titleEn;
+  String? titleEn;
   @JsonKey(name: 'ProcessName')
-  String processName;
+  String? processName;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'LinkModuleId')
-  int linkModuleId;
+  int? linkModuleId;
   @JsonKey(name: 'virtual_CmsModule')
-  CoreModuleModel virtual_CmsModule;
+  CoreModuleModel? virtual_CmsModule;
   @JsonKey(name: 'CmsModule')
-  CoreModuleModel cmsModule;
+  CoreModuleModel? cmsModule;
   @JsonKey(name: 'CmsModuleProcessCustomize')
-  List<CoreModuleProcessCustomizeModel> cmsModuleProcessCustomize;
+  List<CoreModuleProcessCustomizeModel>? cmsModuleProcessCustomize;
 }

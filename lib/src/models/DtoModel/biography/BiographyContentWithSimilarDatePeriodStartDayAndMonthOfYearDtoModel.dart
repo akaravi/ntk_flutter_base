@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel {
   @JsonKey(name: 'TagIds')
-  List<int> tagIds;
+  List<int>? tagIds;
   @JsonKey(name: 'MonthOfYear')
-  int monthOfYear;
+  int? monthOfYear;
   @JsonKey(name: 'DayOfMonth')
-  int dayOfMonth;
+  int? dayOfMonth;
 }

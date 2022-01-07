@@ -7,45 +7,45 @@ import 'TicketingDepartemenModel.dart';
 @JsonSerializable()
 class TicketingTaskModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'HtmlBody')
-  String htmlBody;
+  String? htmlBody;
   @JsonKey(name: 'FullName')
-  String fullName;
+  String? fullName;
   @JsonKey(name: 'PhoneNo')
-  String phoneNo;
+  String? phoneNo;
   @JsonKey(name: 'Email')
-  String email;
+  String? email;
   @JsonKey(name: 'Priority')
-  int priority; //as EnumTicketingDepartemenPriority
+  int? priority; //as EnumTicketingDepartemenPriority
   @JsonKey(name: 'LinkCmsUserId')
-  int linkCmsUserId;
+  int? linkCmsUserId;
   @JsonKey(name: 'LinkMemberUserId')
-  int linkMemberUserId;
+  int? linkMemberUserId;
   @JsonKey(name: 'LinkTicketingDepartemenId')
-  int linkTicketingDepartemenId;
+  int? linkTicketingDepartemenId;
   @JsonKey(name: 'TicketStatus')
-  int ticketStatus; // same as EnumTicketStatus
+  int? ticketStatus; // same as EnumTicketStatus
   @JsonKey(name: 'UserIpAddress')
-  String userIpAddress;
+  String? userIpAddress;
   @JsonKey(name: 'DeviceInformation')
-  String deviceInformation;
+  String? deviceInformation;
   @JsonKey(name: ' virtual_Departemen')
-  TicketingDepartemenModel virtual_Departemen;
+  TicketingDepartemenModel? virtual_Departemen;
   @JsonKey(name: 'Departemen')
-  TicketingDepartemenModel departemen;
+  TicketingDepartemenModel? departemen;
   @JsonKey(name: 'LinkOperatorId')
-  int linkOperatorId;
+  int? linkOperatorId;
   @JsonKey(name: 'Answers')
-  List<TicketingAnswerModel> answers;
+  List<TicketingAnswerModel>? answers;
   @JsonKey(name: 'TicketingDepartemenDefaultAnswerBody')
-  String ticketingDepartemenDefaultAnswerBody;
+  String? ticketingDepartemenDefaultAnswerBody;
   @JsonKey(name: 'LinkFileIds')
-  String linkFileIds;
+  String? linkFileIds;
   @JsonKey(name: 'LinkFileIdsSrc')
-  List<String> linkFileIdsSrc;
+  List<String>? linkFileIdsSrc;
   @JsonKey(name: 'UploadFileGUID')
-  List<String> uploadFileGUID;
+  List<String>? uploadFileGUID;
 }

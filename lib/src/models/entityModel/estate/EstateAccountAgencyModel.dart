@@ -5,31 +5,31 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstateAccountAgencyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'MainAdminRecordStatus')
-  EnumRecordStatus mainAdminRecordStatus;
+  EnumRecordStatus? mainAdminRecordStatus;
   @JsonKey(name: 'LinkCmsUserId')
-  int linkCmsUserId;
+  int? linkCmsUserId;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'LinkLocationId')
-  int linkLocationId;
+  int? linkLocationId;
   @JsonKey(name: 'Geolocationlatitude')
-  double geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
-  double geolocationlongitude;
+  double? geolocationlongitude;
 
   @JsonKey(name: 'Address')
-  String address;
+  String? address;
   @JsonKey(name: 'PhoneNumber')
-  String phoneNumber;
+  String? phoneNumber;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 
   @JsonKey(name: 'LinkExtraImageIds')
-  String linkExtraImageIds;
+  String? linkExtraImageIds;
   @JsonKey(name: 'LinkExtraImageIdsSrc')
-  List<String> linkExtraImageIdsSrc;
+  List<String>? linkExtraImageIdsSrc;
 }

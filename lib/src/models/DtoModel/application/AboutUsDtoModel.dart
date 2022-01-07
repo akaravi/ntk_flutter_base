@@ -3,65 +3,65 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AboutUsDtoModel {
   @JsonKey(name: 'Id')
-  int id;
+  int? id;
   @JsonKey(name: 'TitleWebUrl')
-  String titleWebUrl;
+  String? titleWebUrl;
   @JsonKey(name: 'WebUrl')
-  String webUrl;
+  String? webUrl;
   @JsonKey(name: 'TitleLogoUrl')
-  String titleLogoUrl;
+  String? titleLogoUrl;
   @JsonKey(name: 'LogoUrl')
-  String logoUrl;
+  String? logoUrl;
   @JsonKey(name: 'TitleContent')
-  String titleContent;
+  String? titleContent;
   @JsonKey(name: 'Content')
-  String content;
+  String? content;
   @JsonKey(name: 'TitleEmail')
-  String titleEmail;
+  String? titleEmail;
   @JsonKey(name: 'Email')
-  String email;
+  String? email;
   @JsonKey(name: 'TitleInstagram')
-  String titleInstagram;
+  String? titleInstagram;
   @JsonKey(name: 'Instagram')
-  String instagram;
+  String? instagram;
   @JsonKey(name: 'TitleTelegram')
-  String titleTelegram;
+  String? titleTelegram;
   @JsonKey(name: 'Telegram')
-  String telegram;
+  String? telegram;
   @JsonKey(name: 'TitleTel1')
-  String titleTel1;
+  String? titleTel1;
   @JsonKey(name: 'Tel1')
-  String tel1;
+  String? tel1;
   @JsonKey(name: 'TitleTel2')
-  String titleTel2;
+  String? titleTel2;
   @JsonKey(name: 'Tel2')
-  String tel2;
+  String? tel2;
   @JsonKey(name: 'TitleOfficeNo')
-  String titleOfficeNo;
+  String? titleOfficeNo;
   @JsonKey(name: 'OfficeNo')
-  String officeNo;
+  String? officeNo;
   @JsonKey(name: 'TitleMobileNo')
-  String titleMobileNo;
+  String? titleMobileNo;
   @JsonKey(name: 'MobileNo')
-  String mobileNo;
+  String? mobileNo;
   @JsonKey(name: 'TitleAddress')
-  String titleAddress;
+  String? titleAddress;
   @JsonKey(name: 'Address')
-  String address;
+  String? address;
   @JsonKey(name: 'TitleFaceBook')
-  String titleFaceBook;
+  String? titleFaceBook;
   @JsonKey(name: 'FaceBook')
-  String faceBook;
+  String? faceBook;
   @JsonKey(name: 'TitleTwitter')
-  String titleTwitter;
+  String? titleTwitter;
   @JsonKey(name: 'Twitter')
-  String twitter;
+  String? twitter;
   @JsonKey(name: 'TitlePlayStore')
-  String titlePlayStore;
+  String? titlePlayStore;
   @JsonKey(name: 'PlayStore')
-  String playStore;
+  String? playStore;
   @JsonKey(name: 'TitleYoutube')
-  String titleYoutube;
+  String? titleYoutube;
   @JsonKey(name: 'Youtube')
-  String youtube;
+  String? youtube;
 }

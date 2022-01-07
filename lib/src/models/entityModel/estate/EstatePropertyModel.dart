@@ -11,55 +11,55 @@ import 'EstatePropertyTypeUsageModel.dart';
 @JsonSerializable()
 class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'CaseCode')
-  String caseCode;
+  String? caseCode;
   @JsonKey(name: 'MainAdminRecordStatus')
-  EnumRecordStatus mainAdminRecordStatus;
+  EnumRecordStatus? mainAdminRecordStatus;
   @JsonKey(name: 'CreatedYaer')
-  int createdYaer;
+  int? createdYaer;
   @JsonKey(name: 'Partition')
-  int partition;
+  int? partition;
   @JsonKey(name: 'Area')
-  int area;
+  int? area;
   @JsonKey(name: 'LinkEstateUserId')
-  String linkEstateUserId;
+  String? linkEstateUserId;
 
   @JsonKey(name: 'LinkLocationId')
-  int linkLocationId;
+  int? linkLocationId;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'LinkCmsUserId')
-  int linkCmsUserId;
+  int? linkCmsUserId;
   @JsonKey(name: 'LinkPropertyTypeLanduseId')
-  String linkPropertyTypeLanduseId;
+  String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'LinkPropertyTypeUsageId')
-  String linkPropertyTypeUsageId;
+  String? linkPropertyTypeUsageId;
   @JsonKey(name: 'PropertyTypeLanduse')
-  EstatePropertyTypeLanduseModel propertyTypeLanduse;
+  EstatePropertyTypeLanduseModel? propertyTypeLanduse;
   @JsonKey(name: 'PropertyTypeUsage')
-  EstatePropertyTypeUsageModel propertyTypeUsage;
+  EstatePropertyTypeUsageModel? propertyTypeUsage;
   @JsonKey(name: 'Favorited')
-  bool favorited;
+  bool? favorited;
 
   @JsonKey(name: 'Geolocationlatitude')
-  double geolocationlatitude;
+  double? geolocationlatitude;
 
   @JsonKey(name: 'Geolocationlongitude')
-  double geolocationlongitude;
+  double? geolocationlongitude;
 
   @JsonKey(name: 'Address')
-  String address;
+  String? address;
 
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkExtraImageIds')
-  String linkExtraImageIds;
+  String? linkExtraImageIds;
   @JsonKey(name: 'LinkFileIds')
-  String linkFileIds;
+  String? linkFileIds;
 
   @JsonKey(name: 'ScoreClick')
-  int scoreClick;
+  int? scoreClick;
 
   /// <summary>
   /// مجموع امتیازهای داده شده در آراها
@@ -67,47 +67,47 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   /// </summary>
 
   @JsonKey(name: 'ScoreSumPercent')
-  int scoreSumPercent;
+  int? scoreSumPercent;
   @JsonKey(name: 'ViewCount')
-  int viewCount;
+  int? viewCount;
 
   // * AboutAgent */
   @JsonKey(name: 'AboutAgentTel')
-  String aboutAgentTel;
+  String? aboutAgentTel;
   @JsonKey(name: 'AboutAgentMobile')
-  String aboutAgentMobile;
+  String? aboutAgentMobile;
 
   // * AboutAgent */
   // * AboutCustomer */
   @JsonKey(name: 'AboutCustomerTel')
-  String aboutCustomerTel;
+  String? aboutCustomerTel;
   @JsonKey(name: 'AboutCustomerMobile')
-  String aboutCustomerMobile;
+  String? aboutCustomerMobile;
 
   // * AboutCustomer */
   @JsonKey(name: 'Contracts')
-  List<EstateContractModel> contracts;
+  List<EstateContractModel>? contracts;
 
   @JsonKey(name: 'PropertyDetailValues')
-  List<EstatePropertyDetailValueModel> propertyDetailValues;
+  List<EstatePropertyDetailValueModel>? propertyDetailValues;
   @JsonKey(name: 'PropertyDetailGroups')
-  List<EstatePropertyDetailGroupModel> propertyDetailGroups;
+  List<EstatePropertyDetailGroupModel>? propertyDetailGroups;
 
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkExtraImageIdsSrc')
-  List<String> linkExtraImageIdsSrc;
+  List<String>? linkExtraImageIdsSrc;
   @JsonKey(name: 'LinkFileIdsSrc')
-  List<String> linkFileIdsSrc;
+  List<String>? linkFileIdsSrc;
 
   /**
    * برای انتصا مسقیم فایل آپلود شده
    */
   @JsonKey(name: 'UploadFileGUID')
-  List<String> uploadFileGUID;
+  List<String>? uploadFileGUID;
 
   @JsonKey(name: 'LinkLocationIdTitle')
-  String linkLocationIdTitle;
+  String? linkLocationIdTitle;
   @JsonKey(name: 'LinkLocationIdParentTitle')
-  String linkLocationIdParentTitle;
+  String? linkLocationIdParentTitle;
 }

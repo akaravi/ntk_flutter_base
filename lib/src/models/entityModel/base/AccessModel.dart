@@ -28,5 +28,5 @@ class AccessModel {
   bool accessDeleteRowOtherCreatedBy = false;
 
   @JsonKey(name: 'FieldsInfo')
-  List<DataFieldInfoModel> fieldsInfo;
+  List<DataFieldInfoModel>? fieldsInfo;
 }

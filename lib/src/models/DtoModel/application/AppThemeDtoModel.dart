@@ -5,14 +5,14 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class AppThemeDtoModel {
   @JsonKey(name: 'AppThemeId')
-  int appThemeId;
+  int? appThemeId;
 
   @JsonKey(name: 'AppThemeTypeId')
-  String appThemeTypeId;
+  String? appThemeTypeId;
 
   @JsonKey(name: 'ThemeConfigLayout')
-  List<ThemeConfigDtoModel> themeConfigLayout;
+  List<ThemeConfigDtoModel>? themeConfigLayout;
 
   @JsonKey(name: 'ThemeConfigJson')
-  ThemeDtoModel themeConfigJson;
+  ThemeDtoModel? themeConfigJson;
 }

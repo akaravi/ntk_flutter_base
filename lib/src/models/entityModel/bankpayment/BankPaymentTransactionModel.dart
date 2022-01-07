@@ -8,57 +8,57 @@ import 'BankPaymentTransactionLogModel.dart';
 @JsonSerializable()
 class BankPaymentTransactionModel extends BaseEntity<int> {
   @JsonKey(name: 'TransactionStatus')
-  int transactionStatus; //as EnumTransactionRecordStatus
+  int? transactionStatus; //as EnumTransactionRecordStatus
   @JsonKey(name: 'BankStatus')
-  int bankStatus; //as EnumTransactionBankStatus
+  int? bankStatus; //as EnumTransactionBankStatus
   @JsonKey(name: 'CurrencyUnit')
-  String currencyUnit;
+  String? currencyUnit;
   @JsonKey(name: 'CurrencyUnitRatioByShop')
-  int currencyUnitRatioByShop;
+  int? currencyUnitRatioByShop;
   @JsonKey(name: 'SuccessStatusMessage')
-  String successStatusMessage;
+  String? successStatusMessage;
   @JsonKey(name: 'LastStatusMessage')
-  String lastStatusMessage;
+  String? lastStatusMessage;
   @JsonKey(name: 'LastTransactionCheckMessage')
-  String lastTransactionCheckMessage;
+  String? lastTransactionCheckMessage;
   @JsonKey(name: 'BackedFromBank')
-  bool backedFromBank;
+  bool? backedFromBank;
   @JsonKey(name: 'LinkPrivateSiteConfigId')
-  int linkPrivateSiteConfigId;
+  int? linkPrivateSiteConfigId;
   @JsonKey(name: 'LinkUserId')
-  int linkUserId;
+  int? linkUserId;
   @JsonKey(name: 'Amount')
-  int amount;
+  int? amount;
   @JsonKey(name: 'AmountPure')
-  int amountPure;
+  int? amountPure;
   @JsonKey(name: 'StampJsonValues')
-  String stampJsonValues;
+  String? stampJsonValues;
   @JsonKey(name: 'StampJsonFormatter')
-  List<GetPropertiesInfoModel> stampJsonFormatter;
+  List<GetPropertiesInfoModel>? stampJsonFormatter;
   @JsonKey(name: 'RequestBackUserFromBankJsonValues')
-  String requestBackUserFromBankJsonValues;
+  String? requestBackUserFromBankJsonValues;
   @JsonKey(name: 'RequestBackUserFromBankJsonFormatter')
-  List<GetPropertiesInfoModel> requestBackUserFromBankJsonFormatter;
+  List<GetPropertiesInfoModel>? requestBackUserFromBankJsonFormatter;
 
   @JsonKey(name: 'OnlineDateLock')
-  String onlineDateLock;
+  String? onlineDateLock;
   @JsonKey(name: 'OnlineDateUnlock')
-  String onlineDateUnlock;
+  String? onlineDateUnlock;
   @JsonKey(name: 'LastUrlAddressInUse')
-  String lastUrlAddressInUse;
+  String? lastUrlAddressInUse;
 
   @JsonKey(name: 'virtual_PrivateSiteConfig')
-  BankPaymentPrivateSiteConfigModel virtual_PrivateSiteConfig;
+  BankPaymentPrivateSiteConfigModel? virtual_PrivateSiteConfig;
 
   @JsonKey(name: 'PrivateSiteConfig')
-  BankPaymentPrivateSiteConfigModel privateSiteConfig;
+  BankPaymentPrivateSiteConfigModel? privateSiteConfig;
 
   @JsonKey(name: 'LinkModelShopCartId')
-  int linkModelShopCartId;
+  int? linkModelShopCartId;
   @JsonKey(name: 'ModelShopInvoiceSaleRelease')
-  bool modelShopInvoiceSaleRelease;
+  bool? modelShopInvoiceSaleRelease;
   @JsonKey(name: 'ModelShopInvoiceSaleReleaseDate')
-  String modelShopInvoiceSaleReleaseDate;
+  String? modelShopInvoiceSaleReleaseDate;
   @JsonKey(name: 'TransactionLogs')
-  BankPaymentTransactionLogModel transactionLogs;
+  BankPaymentTransactionLogModel? transactionLogs;
 }

@@ -10,73 +10,73 @@ import 'BiographyContentTagModel.dart';
 @JsonSerializable()
 class BiographyContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkCategoryId')
-  int linkCategoryId;
+  int? linkCategoryId;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'Body')
-  String body;
+  String? body;
   @JsonKey(name: 'FromDate')
-  String fromDate;
+  String? fromDate;
   @JsonKey(name: 'Geolocationlatitude')
-  double geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
-  double geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'Keyword')
-  String keyword;
+  String? keyword;
   @JsonKey(name: 'LinkFileIds')
-  String linkFileIds;
+  String? linkFileIds;
   @JsonKey(name: 'LinkFilePodcastId')
-  int linkFilePodcastId;
+  int? linkFilePodcastId;
   @JsonKey(name: 'LinkFileMovieId')
-  int linkFileMovieId;
+  int? linkFileMovieId;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'ScoreClick')
-  int scoreClick;
+  int? scoreClick;
   @JsonKey(name: 'ScoreSumPercent')
-  int scoreSumPercent;
+  int? scoreSumPercent;
   @JsonKey(name: 'ViewCount')
-  int viewCount;
+  int? viewCount;
   @JsonKey(name: 'Favorited')
-  bool favorited;
+  bool? favorited;
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'ModuleCoreCreatedBy')
-  CoreUserModel moduleCoreCreatedBy;
+  CoreUserModel? moduleCoreCreatedBy;
   @JsonKey(name: 'ModuleCoreUpdatedBy')
-  CoreUserModel moduleCoreUpdatedBy;
+  CoreUserModel? moduleCoreUpdatedBy;
   @JsonKey(name: 'Source')
-  String source;
+  String? source;
   @JsonKey(name: 'Comments')
-  BiographyCommentModel comments;
+  BiographyCommentModel? comments;
   @JsonKey(name: 'virtual_Category')
-  BiographyCategoryModel virtual_Category;
+  BiographyCategoryModel? virtual_Category;
   @JsonKey(name: 'Category')
-  BiographyCategoryModel category;
+  BiographyCategoryModel? category;
   @JsonKey(name: 'ContentTags')
-  List<BiographyContentTagModel> contentTags;
+  List<BiographyContentTagModel>? contentTags;
   @JsonKey(name: 'Similars')
-  List<BiographyContentSimilarModel> similars;
+  List<BiographyContentSimilarModel>? similars;
   @JsonKey(name: 'OtherInfos')
-  String otherInfos;
+  String? otherInfos;
   @JsonKey(name: 'ContentAndParameterValues')
-  Object contentAndParameterValues;
+  Object? contentAndParameterValues;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkFilePodcastIdSrc')
-  String linkFilePodcastIdSrc;
+  String? linkFilePodcastIdSrc;
   @JsonKey(name: 'LinkFileMovieIdSrc')
-  String linkFileMovieIdSrc;
+  String? linkFileMovieIdSrc;
   @JsonKey(name: 'LinkFileIdsSrc')
-  List<String> linkFileIdsSrc;
+  List<String>? linkFileIdsSrc;
   @JsonKey(name: 'LocationPeriodStart')
-  int locationPeriodStart;
+  int? locationPeriodStart;
   @JsonKey(name: 'LocationPeriodEnd')
-  int locationPeriodEnd;
+  int? locationPeriodEnd;
   @JsonKey(name: 'DatePeriodStart')
-  String datePeriodStart;
+  String? datePeriodStart;
   @JsonKey(name: 'DatePeriodEnd')
-  String datePeriodEnd;
+  String? datePeriodEnd;
 }

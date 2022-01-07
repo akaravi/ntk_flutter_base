@@ -6,21 +6,21 @@ import 'NewsContentModel.dart';
 @JsonSerializable()
 class NewsCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentId')
-  int linkContentId;
+  int? linkContentId;
   @JsonKey(name: 'LinkParentId')
-  int linkParentId;
+  int? linkParentId;
   @JsonKey(name: 'Writer')
-  String writer;
+  String? writer;
   @JsonKey(name: 'Comment')
-  String comment;
+  String? comment;
   @JsonKey(name: 'RegisterDate')
-  String registerDate;
+  String? registerDate;
   @JsonKey(name: 'SumLikeClick')
-  int sumLikeClick;
+  int? sumLikeClick;
   @JsonKey(name: 'SumDisLikeClick')
-  int sumDisLikeClick;
+  int? sumDisLikeClick;
   @JsonKey(name: 'virtual_Content')
-  NewsContentModel virtual_Content;
+  NewsContentModel? virtual_Content;
   @JsonKey(name: 'Content')
-  NewsContentModel content;
+  NewsContentModel? content;
 }

@@ -4,13 +4,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ShopInvoiceSaleWorkFlow extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'IsDefault')
-  bool isDefault;
+  bool? isDefault;
   @JsonKey(name: 'IsInPreInvoiceActivation')
-  bool isInPreInvoiceActivation;
+  bool? isInPreInvoiceActivation;
   @JsonKey(name: 'IsInInvoiceClosedActivation')
-  bool isInInvoiceClosedActivation;
+  bool? isInInvoiceClosedActivation;
   @JsonKey(name: 'LinkExternalModuleUniversalMenuId')
-  int linkExternalModuleUniversalMenuId;
+  int? linkExternalModuleUniversalMenuId;
 }

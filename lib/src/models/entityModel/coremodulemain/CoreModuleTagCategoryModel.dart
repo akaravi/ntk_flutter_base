@@ -6,24 +6,24 @@ import 'CoreModuleTagModel.dart';
 @JsonSerializable()
 class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TitleResourceLanguage')
-  String titleResourceLanguage;
+  String? titleResourceLanguage;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'FontIcon')
-  String fontIcon;
+  String? fontIcon;
   @JsonKey(name: 'LinkParentIdNode')
-  String linkParentIdNode;
+  String? linkParentIdNode;
   @JsonKey(name: 'LinkParentId')
-  int linkParentId;
+  int? linkParentId;
   @JsonKey(name: 'Category')
-  CoreModuleTagCategoryModel category;
+  CoreModuleTagCategoryModel? category;
 
   @JsonKey(name: 'virtual_Category')
-  CoreModuleTagCategoryModel virtual_Category;
+  CoreModuleTagCategoryModel? virtual_Category;
   @JsonKey(name: 'Children')
-  List<CoreModuleTagCategoryModel> children;
+  List<CoreModuleTagCategoryModel>? children;
   @JsonKey(name: 'Tags')
-  List<CoreModuleTagModel> tags;
+  List<CoreModuleTagModel>? tags;
 }

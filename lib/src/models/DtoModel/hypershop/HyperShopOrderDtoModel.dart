@@ -5,21 +5,21 @@ import 'HyperShopOrderContentDtoModel.dart';
 @JsonSerializable()
 class HyperShopOrderDtoModel {
   @JsonKey(name: 'OrderId')
-  String orderId;
+  String? orderId;
   @JsonKey(name: 'AcceptSystem')
-  bool acceptSystem;
+  bool? acceptSystem;
   @JsonKey(name: 'Name')
-  String name;
+  String? name;
   @JsonKey(name: 'Family')
-  String family;
+  String? family;
   @JsonKey(name: 'Mobile')
-  String mobile;
+  String? mobile;
   @JsonKey(name: 'Address')
-  String address;
+  String? address;
   @JsonKey(name: 'Amount')
-  double amount;
+  double? amount;
   @JsonKey(name: 'Products')
-  List<HyperShopOrderContentDtoModel> products;
+  List<HyperShopOrderContentDtoModel>? products;
   @JsonKey(name: 'PaymentType')
-  int paymentType;
+  int? paymentType;
 }

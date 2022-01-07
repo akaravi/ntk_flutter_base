@@ -4,35 +4,35 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreCpMainMenuModel {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TitleML')
-  String titleML;
+  String? titleML;
   @JsonKey(name: 'TitleResourceLanguage')
-  String titleResourceLanguage;
+  String? titleResourceLanguage;
   @JsonKey(name: 'Color')
-  String color;
+  String? color;
   @JsonKey(name: 'TitleEn')
-  String titleEn;
+  String? titleEn;
   @JsonKey(name: 'Icon')
-  String icon;
+  String? icon;
   @JsonKey(name: 'AddressLink')
-  String addressLink;
+  String? addressLink;
   @JsonKey(name: 'RouteAddressLink')
-  String routeAddressLink;
+  String? routeAddressLink;
   @JsonKey(name: 'LinkParentId')
-  int linkParentId;
+  int? linkParentId;
   @JsonKey(name: 'LinkModuleId')
-  int linkModuleId;
+  int? linkModuleId;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'ShowInMenu')
-  int showInMenu;
+  int? showInMenu;
   @JsonKey(name: 'ShowInMenuOrder')
-  int showInMenuOrder;
+  int? showInMenuOrder;
   @JsonKey(name: 'ShowInAccessAdminAllowToProfessionalData')
-  bool showInAccessAdminAllowToProfessionalData;
+  bool? showInAccessAdminAllowToProfessionalData;
   @JsonKey(name: 'MenuPlaceType')
-  EnumMenuPlaceType menuPlaceType;
+  EnumMenuPlaceType? menuPlaceType;
   @JsonKey(name: 'Children')
-  List<CoreCpMainMenuModel> children;
+  List<CoreCpMainMenuModel>? children;
 }

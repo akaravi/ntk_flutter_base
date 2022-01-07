@@ -7,12 +7,12 @@ import 'BankPaymentTransactionModel.dart';
 @JsonSerializable()
 class BankPaymentTransactionLogModel extends BaseEntity<int> {
   @JsonKey(name: 'TransactionStatus')
-  EnumTransactionRecordStatus transactionStatus;
+  EnumTransactionRecordStatus? transactionStatus;
   @JsonKey(name: 'LinkTransactionId')
-  int linkTransactionId;
+  int? linkTransactionId;
 
   @JsonKey(name: 'virtual_Transaction')
-  BankPaymentTransactionModel virtual_Transaction;
+  BankPaymentTransactionModel? virtual_Transaction;
   @JsonKey(name: 'Transaction')
-  BankPaymentTransactionModel transaction;
+  BankPaymentTransactionModel? transaction;
 }

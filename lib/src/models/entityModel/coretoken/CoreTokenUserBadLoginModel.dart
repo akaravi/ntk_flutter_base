@@ -5,11 +5,11 @@ import 'UserTokenModel.dart';
 @JsonSerializable()
 class CoreTokenUserBadLoginModel extends UserTokenModel {
   @JsonKey(name: 'DeviceId')
-  String deviceId;
+  String? deviceId;
   @JsonKey(name: 'RequestDate')
-  String requestDate;
+  String? requestDate;
   @JsonKey(name: 'UsedUsername')
-  String usedUsername;
+  String? usedUsername;
   @JsonKey(name: 'UsedPwd')
-  String usedPwd;
+  String? usedPwd;
 }

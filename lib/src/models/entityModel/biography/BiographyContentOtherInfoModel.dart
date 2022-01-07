@@ -5,17 +5,17 @@ import 'BiographyContentModel.dart';
 @JsonSerializable()
 class BiographyContentOtherInfoModel {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'HtmlBody')
-  String htmlBody;
+  String? htmlBody;
   @JsonKey(name: 'Source')
-  String source;
+  String? source;
   @JsonKey(name: 'LinkContentId')
-  int linkContentId;
+  int? linkContentId;
   @JsonKey(name: 'TypeId')
-  int typeId;
+  int? typeId;
   @JsonKey(name: 'virtual_Content')
-  BiographyContentModel virtual_Content;
+  BiographyContentModel? virtual_Content;
   @JsonKey(name: 'Content')
-  BiographyContentModel content;
+  BiographyContentModel? content;
 }

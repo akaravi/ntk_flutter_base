@@ -7,23 +7,23 @@ import 'ApplicationSourceModel.dart';
 @JsonSerializable()
 class ApplicationLayoutModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'ClassName')
-  String className;
+  String? className;
   @JsonKey(name: 'LinkSourceId')
-  int linkSourceId;
+  int? linkSourceId;
   @JsonKey(name: 'virtual_Source')
-  ApplicationSourceModel virtual_Source;
+  ApplicationSourceModel? virtual_Source;
   @JsonKey(name: 'Source')
-  ApplicationSourceModel source;
+  ApplicationSourceModel? source;
   @JsonKey(name: 'JsonFormDefaultValue')
-  String jsonFormDefaultValue;
+  String? jsonFormDefaultValue;
   @JsonKey(name: 'JsonFormAdminSystemValue')
-  String jsonFormAdminSystemValue;
+  String? jsonFormAdminSystemValue;
   @JsonKey(name: 'LinkModuleFilePreviewImageId')
-  int linkModuleFilePreviewImageId;
+  int? linkModuleFilePreviewImageId;
   @JsonKey(name: 'LayoutValues')
-  List<ApplicationLayoutValueModel> layoutValues;
+  List<ApplicationLayoutValueModel>? layoutValues;
 }

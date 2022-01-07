@@ -6,27 +6,27 @@ import 'BiographyContentModel.dart';
 @JsonSerializable()
 class BiographyCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TitleResourceLanguage')
-  String titleResourceLanguage;
+  String? titleResourceLanguage;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'FontIcon')
-  String fontIcon;
+  String? fontIcon;
   @JsonKey(name: 'LinkParentIdNode')
-  String linkParentIdNode;
+  String? linkParentIdNode;
   @JsonKey(name: 'LinkParentId')
-  int linkParentId;
+  int? linkParentId;
   @JsonKey(name: 'Children')
-  List<BiographyCategoryModel> children;
+  List<BiographyCategoryModel>? children;
   @JsonKey(name: 'Category')
-  BiographyCategoryModel category;
+  BiographyCategoryModel? category;
   @JsonKey(name: 'virtual_Category')
-  BiographyCategoryModel virtual_Category;
+  BiographyCategoryModel? virtual_Category;
   @JsonKey(name: 'Contents')
-  List<BiographyContentModel> contents;
+  List<BiographyContentModel>? contents;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 }

@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EnumModel {
   @JsonKey(name: 'Key')
-  String key;
+  String? key;
   @JsonKey(name: 'Value')
-  int value;
+  int? value;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
 }

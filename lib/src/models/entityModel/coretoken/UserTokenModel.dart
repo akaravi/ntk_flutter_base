@@ -6,31 +6,31 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class UserTokenModel extends BaseEntity<String> {
   @JsonKey(name: 'LinkUserId')
-  int linkUserId;
+  int? linkUserId;
   @JsonKey(name: 'LinkMemberUserId')
-  int linkMemberUserId;
+  int? linkMemberUserId;
   @JsonKey(name: 'LinkSiteId')
-  int linkSiteId;
+  int? linkSiteId;
   @JsonKey(name: 'DeviceClientMAC')
-  String deviceClientMAC;
+  String? deviceClientMAC;
   @JsonKey(name: 'LinkDeviceId')
-  int linkDeviceId;
+  int? linkDeviceId;
   @JsonKey(name: 'Token')
-  String token;
+  String? token;
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'UserAccessAreaType')
-  EnumManageUserAccessAreaTypes userAccessAreaType;
+  EnumManageUserAccessAreaTypes? userAccessAreaType;
   @JsonKey(name: 'UserType')
-  EnumManageUserAccessUserTypes userType;
+  EnumManageUserAccessUserTypes? userType;
   @JsonKey(name: 'UserAccessAdminAllowToAllData')
-  bool userAccessAdminAllowToAllData;
+  bool? userAccessAdminAllowToAllData;
   @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
-  bool userAccessAdminAllowToProfessionalData;
+  bool? userAccessAdminAllowToProfessionalData;
   @JsonKey(name: 'RememberOnDevice')
-  bool rememberOnDevice;
+  bool? rememberOnDevice;
   @JsonKey(name: 'BrowserLanguage')
-  String browserLanguage;
+  String? browserLanguage;
   @JsonKey(name: 'UserLanguage')
-  int userLanguage;
+  int? userLanguage;
 }

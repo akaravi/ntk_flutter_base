@@ -3,33 +3,33 @@ import 'package:json_annotation/json_annotation.dart';
 
 class AppMainHeaderDtoModel {
   @JsonKey(name: 'DeviceId')
-  String deviceId;
+  String? deviceId;
   @JsonKey(name: 'DeviceBrand')
-  String deviceBrand;
+  String? deviceBrand;
   @JsonKey(name: 'NotificationId')
-  String notificationId;
+  String? notificationId;
   @JsonKey(name: 'DeviceIP')
-  String deviceIP;
+  String? deviceIP;
   @JsonKey(name: 'LocationLong')
-  String locationLong;
+  String? locationLong;
   @JsonKey(name: 'LocationLat')
-  String locationLat;
+  String? locationLat;
   @JsonKey(name: 'Country')
-  String country;
+  String? country;
   @JsonKey(name: 'DeviceStatus')
-  EnumDeviceStatus deviceStatus;
+  EnumDeviceStatus? deviceStatus;
   @JsonKey(name: 'SimCard')
-  String simCard;
+  String? simCard;
   @JsonKey(name: 'Language')
-  String language;
+  String? language;
   @JsonKey(name: 'AppSourceVer')
-  String appSourceVer;
+  String? appSourceVer;
   @JsonKey(name: 'AppBuildVer')
-  int appBuildVer;
+  int? appBuildVer;
   @JsonKey(name: 'PackageName')
-  String  packageName;
+  String?  packageName;
   @JsonKey(name: 'Layout')
-  String layout;
+  String? layout;
   @JsonKey(name: 'Token')
-  String token;
+  String? token;
 }

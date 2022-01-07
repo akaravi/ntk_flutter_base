@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class LinkManagementTargetShortLinkGetDtoModel {
   @JsonKey(name: 'CaptchaKey')
-  String captchaKey;
+  String? captchaKey;
   @JsonKey(name: 'CaptchaText')
-  String captchaText;
+  String? captchaText;
   @JsonKey(name: 'Key')
-  String key;
+  String? key;
 }

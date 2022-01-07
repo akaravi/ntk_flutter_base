@@ -4,21 +4,21 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreLocationModel extends BaseEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'LinkParentId')
-  int linkParentId;
+  int? linkParentId;
   @JsonKey(name: 'LinkParentIdNode')
-  String linkParentIdNode;
+  String? linkParentIdNode;
   @JsonKey(name: 'GeoLocationLatitude')
-  double geoLocationLatitude;
+  double? geoLocationLatitude;
   @JsonKey(name: 'GeoLocationLongitude')
-  double geoLocationLongitude;
+  double? geoLocationLongitude;
   @JsonKey(name: 'LocationType')
-  int locationType;
+  int? locationType;
   @JsonKey(name: 'virtual_Parent')
-  Object virtual_Parent;
+  Object? virtual_Parent;
   @JsonKey(name: 'Prent')
-  Object parent;
+  Object? parent;
   @JsonKey(name: 'Children')
-  Object children;
+  Object? children;
 }

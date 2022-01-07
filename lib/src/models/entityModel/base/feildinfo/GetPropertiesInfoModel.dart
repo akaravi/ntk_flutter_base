@@ -6,7 +6,7 @@ import 'FieldInputDataSourceMode.dart';
 @JsonSerializable()
 class GetPropertiesInfoModel extends FieldInfoModel {
   @JsonKey(name: 'FieldDataSource')
-  FieldInputDataSourceModel fieldDataSource;
+  FieldInputDataSourceModel? fieldDataSource;
   @JsonKey(name: 'FieldDataSourceExpression')
-  String fieldDataSourceExpression;
+  String? fieldDataSourceExpression;
 }

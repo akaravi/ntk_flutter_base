@@ -3,11 +3,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class LinkManagementTargetShortLinkSetResponceModel {
   @JsonKey(name: 'Key')
-  String key;
+  String? key;
   @JsonKey(name: 'ShareExpireDate')
-  String shareExpireDate;
+  String? shareExpireDate;
   @JsonKey(name: 'ShortLinkUrl')
-  String shortLinkUrl;
+  String? shortLinkUrl;
   @JsonKey(name: 'ShortLinkQRCodeBase64')
-  String shortLinkQRCodeBase64;
+  String? shortLinkQRCodeBase64;
 }

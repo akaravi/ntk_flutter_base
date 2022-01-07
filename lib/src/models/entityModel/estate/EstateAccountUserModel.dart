@@ -4,38 +4,38 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstateAccountUserModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'LinkCmsUserId')
-  int linkCmsUserId;
+  int? linkCmsUserId;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'JoinId')
-  String joinId;
+  String? joinId;
   @JsonKey(name: 'LinkLocationId')
-  int linkLocationId;
+  int? linkLocationId;
   @JsonKey(name: 'Geolocationlatitude')
-  double geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
-  double geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'DateManufacture')
-  String dateManufacture;
+  String? dateManufacture;
   @JsonKey(name: 'PlaceProduction')
-  String placeProduction;
+  String? placeProduction;
   @JsonKey(name: 'SerialRfId')
-  String serialRfId;
+  String? serialRfId;
   @JsonKey(name: 'SerialNumber')
-  String serialNumber;
+  String? serialNumber;
   @JsonKey(name: 'PhoneNumber')
-  String phoneNumber;
+  String? phoneNumber;
 
   @JsonKey(name: 'Address')
-  String address;
+  String? address;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkLocationIdTitle')
-  String linkLocationIdTitle;
+  String? linkLocationIdTitle;
   @JsonKey(name: 'LinkLocationIdParentTitle')
-  String linkLocationIdParentTitle;
+  String? linkLocationIdParentTitle;
 }

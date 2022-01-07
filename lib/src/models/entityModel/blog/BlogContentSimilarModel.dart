@@ -4,17 +4,17 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BlogContentSimilarModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'LinkSourceid')
-  String linkSourceId;
+  String? linkSourceId;
   @JsonKey(name: 'LinkDestinationid')
-  String linkDestinationId;
+  String? linkDestinationId;
   @JsonKey(name: 'virtual_Source')
-  String virtual_Source;
+  String? virtual_Source;
   @JsonKey(name: 'Source')
-  String source;
+  String? source;
   @JsonKey(name: 'virtual_Destination')
-  String virtual_Destination;
+  String? virtual_Destination;
   @JsonKey(name: 'Destination')
-  String destination;
+  String? destination;
 }

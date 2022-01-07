@@ -6,11 +6,11 @@ import 'BlogContentModel.dart';
 @JsonSerializable()
 class BlogCategoryModel extends BaseEntityCategory<int> {
   @JsonKey(name: 'Children')
-  List<BlogCategoryModel> children;
+  List<BlogCategoryModel>? children;
   @JsonKey(name: 'Category')
-  BlogCategoryModel category;
+  BlogCategoryModel? category;
   @JsonKey(name: ' virtual_Category')
-  BlogCategoryModel virtual_Category;
+  BlogCategoryModel? virtual_Category;
   @JsonKey(name: 'Contents')
-  List<BlogContentModel> contents;
+  List<BlogContentModel>? contents;
 }

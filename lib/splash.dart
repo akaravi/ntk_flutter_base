@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   _SplashState createState() => _SplashState();
 }
 
 class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
-  AnimationController controller;
-  Animation<double> animation;
+  late AnimationController controller;
+  late Animation<double> animation;
 
   @override
   void initState() {

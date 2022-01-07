@@ -3,13 +3,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class FieldInputDataSourceModel {
   @JsonKey(name: 'InputFixed')
-  String inputFixed;
+  String? inputFixed;
   @JsonKey(name: 'InputForm')
-  String inputForm;
+  String? inputForm;
   @JsonKey(name: 'InputRequest')
-  String inputRequest;
+  String? inputRequest;
   @JsonKey(name: 'InputBeforProcess')
-  String inputBeforProcess;
+  String? inputBeforProcess;
   @JsonKey(name: 'InputControler')
-  String inputControler;
+  String? inputControler;
 }

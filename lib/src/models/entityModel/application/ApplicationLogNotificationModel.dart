@@ -8,29 +8,29 @@ import 'ApplicationMemberInfoModel.dart';
 @JsonSerializable()
 class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkApplicationMemberId')
-  int linkApplicationMemberId;
+  int? linkApplicationMemberId;
   @JsonKey(name: 'MemberInfo')
-  ApplicationMemberInfoModel memberInfo;
+  ApplicationMemberInfoModel? memberInfo;
   @JsonKey(name: 'LinkApplicationId')
-  int linkApplicationId;
+  int? linkApplicationId;
   @JsonKey(name: 'Application')
-  ApplicationAppModel application;
+  ApplicationAppModel? application;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'Content')
-  String content;
+  String? content;
   @JsonKey(name: 'ContentType')
-  EnumNotificationType contentType;
+  EnumNotificationType? contentType;
   @JsonKey(name: 'contentJson')
-  String contentJson;
+  String? contentJson;
   @JsonKey(name: 'ContentJsonClass')
-  String contentJsonClass;
+  String? contentJsonClass;
   @JsonKey(name: 'SmallImageId')
-  int smallImageId;
+  int? smallImageId;
   @JsonKey(name: 'BigImageId')
-  int bigImageId;
+  int? bigImageId;
   @JsonKey(name: 'SmallImageIdSrc')
-  String smallImageIdSrc;
+  String? smallImageIdSrc;
   @JsonKey(name: 'BigImageIdSrc')
-  String bigImageIdSrc;
+  String? bigImageIdSrc;
 }

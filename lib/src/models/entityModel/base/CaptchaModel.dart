@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CaptchaModel {
   @JsonKey(name: 'Expire')
-  String expire;
+  String? expire;
   @JsonKey(name: 'Key')
-  String key;
+  String? key;
   @JsonKey(name: 'Image')
-  String image;
+  String? image;
 }

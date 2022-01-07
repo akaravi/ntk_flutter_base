@@ -8,26 +8,26 @@ import 'CoreSiteModel.dart';
 @JsonSerializable()
 class CoreDeviceModel extends BaseEntity<int> {
      @JsonKey(name:'securityKey')
-    String securityKey;
+    String? securityKey;
      @JsonKey(name:'ExpireDate')
-    String expireDate;
+    String? expireDate;
      @JsonKey(name:'Description')
-    String description;
+    String? description;
      @JsonKey(name:'OSType')
-    int oSType;//as EnumOperatingSystemType
+    int? oSType;//as EnumOperatingSystemType
      @JsonKey(name:'DeviceType')
-     EnumDeviceType deviceType;//as EnumDeviceType
+     EnumDeviceType? deviceType;//as EnumDeviceType
      @JsonKey(name:'PackageName')
-    String packageName;
+    String? packageName;
      @JsonKey(name:'DeviceIPsAllow')
-    String deviceIPsAllow;
+    String? deviceIPsAllow;
      @JsonKey(name:'LinkApplicationId')
-    int linkApplicationId;
+    int? linkApplicationId;
      @JsonKey(name:'LinkSiteId')
-    int linkSiteId;
+    int? linkSiteId;
      @JsonKey(name:'virtual_CmsSite')
-     CoreSiteModel  virtual_CmsSite;
+     CoreSiteModel?  virtual_CmsSite;
      @JsonKey(name:'CmsSite')
-     CoreSiteModel cmsSite;
+     CoreSiteModel? cmsSite;
 }
 

@@ -7,59 +7,59 @@ import 'ShopInvoiceSaleWorkFlow.dart';
 @JsonSerializable()
 class ShopInvoiceSale extends BaseModuleEntity<int> {
   @JsonKey(name: 'IsReleased')
-  bool isReleased;
+  bool? isReleased;
   @JsonKey(name: 'ReleaseDate')
-  String releaseDate;
+  String? releaseDate;
   @JsonKey(name: 'OnlineDateLock')
-  String onlineDateLock;
+  String? onlineDateLock;
   @JsonKey(name: 'OnlineDateUnlock')
-  String onlineDateUnlock;
+  String? onlineDateUnlock;
   @JsonKey(name: 'RegisterDate')
-  String registerDate;
+  String? registerDate;
   @JsonKey(name: 'DeliveryDate')
-  String deliveryDate;
+  String? deliveryDate;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'LinkMemberUserId')
-  int linkMemberUserId;
+  int? linkMemberUserId;
   @JsonKey(name: 'LinkCmsUserId')
-  int linkCmsUserId;
+  int? linkCmsUserId;
   @JsonKey(name: 'Discount')
-  double discount;
+  double? discount;
   @JsonKey(name: 'Tax')
-  double tax;
+  double? tax;
   @JsonKey(name: 'TotalAmount')
-  double totalAmount;
+  double? totalAmount;
   @JsonKey(name: 'LinkModelBankPaymentTransactionSuccessfulId')
-  int linkModelBankPaymentTransactionSuccessfulId;
+  int? linkModelBankPaymentTransactionSuccessfulId;
 
   @JsonKey(name: 'LinkExternalModuleDeliveryInvoiceId')
-  int linkExternalModuleDeliveryInvoiceId;
+  int? linkExternalModuleDeliveryInvoiceId;
   @JsonKey(name: 'virtual_ShopInvoiceSaleWorkFlow')
-  ShopInvoiceSaleWorkFlow virtual_ShopInvoiceSaleWorkFlow;
+  ShopInvoiceSaleWorkFlow? virtual_ShopInvoiceSaleWorkFlow;
   @JsonKey(name: 'PaymentStatus')
-  int paymentStatus;
+  int? paymentStatus;
   @JsonKey(name: 'InvoiceStatus')
-  int invoiceStatus;
+  int? invoiceStatus;
 
   @JsonKey(name: 'ReceiverName')
-  String receiverName;
+  String? receiverName;
   @JsonKey(name: 'ReceiverLastName')
-  String receiverLastName;
+  String? receiverLastName;
   @JsonKey(name: 'ReceiverMobile')
-  String receiverMobile;
+  String? receiverMobile;
   @JsonKey(name: 'ReceiverTel')
-  String receiverTel;
+  String? receiverTel;
   @JsonKey(name: 'ReceiverOstan')
-  String receiverOstan;
+  String? receiverOstan;
   @JsonKey(name: 'ReceiverCity')
-  String receiverCity;
+  String? receiverCity;
   @JsonKey(name: 'ReceiverPostalCode')
-  String receiverPostalCode;
+  String? receiverPostalCode;
   @JsonKey(name: 'ReceiverAddress')
-  String receiverAddress;
+  String? receiverAddress;
   @JsonKey(name: 'ReceiverMemo')
-  String receiverMemo;
+  String? receiverMemo;
   @JsonKey(name: 'InvoiceSaleDetails')
-  List<ShopInvoiceSaleDetail> invoiceSaleDetails;
+  List<ShopInvoiceSaleDetail>? invoiceSaleDetails;
 }

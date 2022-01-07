@@ -6,21 +6,21 @@ import 'ApplicationAppModel.dart';
 @JsonSerializable()
 class ApplicationIntroModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'Priority')
-  int priority;
+  int? priority;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkMainVideoId')
-  int linkMainVideoId;
+  int? linkMainVideoId;
   @JsonKey(name: 'LinkApplicationId')
-  int linkApplicationId;
+  int? linkApplicationId;
   @JsonKey(name: 'Application')
-  ApplicationAppModel application;
+  ApplicationAppModel? application;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkMainVideoIdSrc')
-  String linkMainVideoIdSrc;
+  String? linkMainVideoIdSrc;
 }

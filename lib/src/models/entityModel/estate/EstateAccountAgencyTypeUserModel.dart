@@ -5,13 +5,13 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstateAccountAgencyTypeUserModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'AccountUserType')
-  int accountUserType;
+  int? accountUserType;
   @JsonKey(name: 'AccountUserTypeEnum')
-  EnumEstateUserType accountUserTypeEnum;
+  EnumEstateUserType? accountUserTypeEnum;
   @JsonKey(name: 'LinkAccountUserId')
-  String linkAccountUserId;
+  String? linkAccountUserId;
   @JsonKey(name: 'LinkAccountAgencyId')
-  String linkAccountAgencyId;
+  String? linkAccountAgencyId;
   @JsonKey(name: 'LinkPropertyId')
-  String linkPropertyId;
+  String? linkPropertyId;
 }

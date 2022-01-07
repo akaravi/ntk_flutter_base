@@ -4,9 +4,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class TicketingTemplateModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'HtmlBody')
-  String htmlBody;
+  String? htmlBody;
   @JsonKey(name: 'LinkTicketingDepartemenId')
-  int linkTicketingDepartemenId;
+  int? linkTicketingDepartemenId;
 }

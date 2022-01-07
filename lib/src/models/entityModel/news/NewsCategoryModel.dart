@@ -4,11 +4,11 @@ import 'NewsContentModel.dart';
 
 class NewsCategoryModel {
   @JsonKey(name: 'Children')
-  List<NewsCategoryModel> children;
+  List<NewsCategoryModel>? children;
   @JsonKey(name: 'Category')
-  NewsCategoryModel category;
+  NewsCategoryModel? category;
   @JsonKey(name: 'virtual_Category')
-  NewsCategoryModel virtual_Category;
+  NewsCategoryModel? virtual_Category;
   @JsonKey(name: 'Contents')
-  List<NewsContentModel> contents;
+  List<NewsContentModel>? contents;
 }

@@ -8,27 +8,27 @@ import 'ThemeConfigLayoutModel.dart';
 @JsonSerializable()
 class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'TypeId')
-  String typeId;
+  String? typeId;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'LinkSourceId')
-  int linkSourceId;
+  int? linkSourceId;
   @JsonKey(name: ' virtual_Source')
-  ApplicationSourceModel virtual_Source;
+  ApplicationSourceModel? virtual_Source;
   @JsonKey(name: 'source')
-  ApplicationSourceModel source;
+  ApplicationSourceModel? source;
   @JsonKey(name: 'ThemeConfigBuilderJsonValues')
-  String themeConfigBuilderJsonValues;
+  String? themeConfigBuilderJsonValues;
   @JsonKey(name: 'ThemeConfigRuntimeJsonValues')
-  String themeConfigRuntimeJsonValues;
+  String? themeConfigRuntimeJsonValues;
   @JsonKey(name: 'ThemeConfigLayoutJsonValues')
-  String themeConfigLayoutJsonValues;
+  String? themeConfigLayoutJsonValues;
   @JsonKey(name: 'ThemeConfigJsonValues')
-  String themeConfigJsonValues;
+  String? themeConfigJsonValues;
   @JsonKey(name: 'ThemeConfigLayouts')
-  List<ThemeConfigLayoutModel> themeConfigLayouts;
+  List<ThemeConfigLayoutModel>? themeConfigLayouts;
   @JsonKey(name: 'Applications')
-  List<ApplicationAppModel> applications;
+  List<ApplicationAppModel>? applications;
 }

@@ -3,25 +3,25 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class FilterDataModel {
   @JsonKey(name: 'PropertyName')
-  String propertyName;
+  String? propertyName;
   @JsonKey(name: 'ClauseType')
-  int clauseType;
+  int? clauseType;
   @JsonKey(name: 'PropertyAnyName')
-  String propertyAnyName;
+  String? propertyAnyName;
   @JsonKey(name: 'SearchType')
-  int searchType;
+  int? searchType;
   @JsonKey(name: 'Filters')
-  List<FilterDataModel> filters;
+  List<FilterDataModel>? filters;
   @JsonKey(name: 'Value')
-  Object value;
+  Object? value;
   @JsonKey(name: 'Values')
-  List<Object> values;
+  List<Object>? values;
   @JsonKey(name: 'LatitudeValue')
-  int latitudeValue;
+  int? latitudeValue;
   @JsonKey(name: 'LongitudeValue')
-  int longitudeValue;
+  int? longitudeValue;
   @JsonKey(name: 'LatitudeLongitudeDistanceValue')
-  int latitudeLongitudeDistanceValue;
+  int? latitudeLongitudeDistanceValue;
 
 
   FilterDataModel setPropertyName(String propertyName) {
@@ -36,7 +36,7 @@ class FilterDataModel {
 
   FilterDataModel addInnerFilter(FilterDataModel d) {
     filters ??= [];
-    filters.add(d);
+    filters!.add(d);
     return this;
   }
 }

@@ -6,29 +6,29 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class CoreModuleSiteModel extends BaseEntity<int> {
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'LinkSiteId')
-  int linkSiteId;
+  int? linkSiteId;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'LinkModuleId')
-  int linkModuleId;
+  int? linkModuleId;
   @JsonKey(name: 'ReNewDate')
-  String reNewDate;
+  String? reNewDate;
   @JsonKey(name: 'HasBuyed')
-  bool hasBuyed;
+  bool? hasBuyed;
   @JsonKey(name: 'virtual_CmsSite')
-  CoreSiteModel virtual_CmsSite;
+  CoreSiteModel? virtual_CmsSite;
   @JsonKey(name: 'CmsSite')
-  CoreSiteModel cmsSite;
+  CoreSiteModel? cmsSite;
   @JsonKey(name: ' virtual_CmsModule')
-  CoreModuleModel virtual_CmsModule;
+  CoreModuleModel? virtual_CmsModule;
   @JsonKey(name: 'CmsModule')
-  CoreModuleModel cmsModule;
+  CoreModuleModel? cmsModule;
   @JsonKey(name: 'ModuleConfigSiteAccessValuesJson')
-  String moduleConfigSiteAccessValuesJson;
+  String? moduleConfigSiteAccessValuesJson;
   @JsonKey(name: 'ModuleConfigSiteValuesJson')
-  String moduleConfigSiteValuesJson;
+  String? moduleConfigSiteValuesJson;
   @JsonKey(name: 'ModuleSiteStorageValuesJson')
-  String moduleSiteStorageValuesJson;
+  String? moduleSiteStorageValuesJson;
 }

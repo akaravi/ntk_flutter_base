@@ -3,21 +3,21 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ErrorExceptionBase {
   @JsonKey(name: "IsSuccess")
-  bool isSuccess;
+  bool? isSuccess;
   @JsonKey(name: "Status")
-  int status;
+  int? status;
   @JsonKey(name: "ErrorMessage")
-  String errorMessage;
+  String? errorMessage;
   @JsonKey(name: "ErrorType")
-  int errorType;
+  int? errorType;
   @JsonKey(name: "CurrentPageNumber")
-  int currentPageNumber;
+  int? currentPageNumber;
   @JsonKey(name: "TotalRowCount")
-  int totalRowCount;
+  int? totalRowCount;
   @JsonKey(name: "RowPerPage")
-  int rowPerPage;
+  int? rowPerPage;
   @JsonKey(name: "token")
-  String token;
+  String? token;
   @JsonKey(name: "Errors")
-  Map<String, List<String>> errors;
+  Map<String, List<String>>? errors;
 }

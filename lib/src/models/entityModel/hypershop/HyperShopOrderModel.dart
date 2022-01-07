@@ -5,46 +5,46 @@ import 'HyperShopOrderContentModel.dart';
 
 @JsonSerializable()
 class HyperShopOrderModel extends BaseModuleEntity<int> {
-  int orderType;
+  int? orderType;
   @JsonKey(name: 'PaymentType')
-  int paymentType; //as
+  int? paymentType; //as
   @JsonKey(name: 'SystemTransactionId')
-  int systemTransactionId;
+  int? systemTransactionId;
   @JsonKey(name: 'SystemPaymentIsSuccess')
-  int systemPaymentIsSuccess;
+  int? systemPaymentIsSuccess;
   @JsonKey(name: 'SystemMicroServiceOrderId')
-  String systemMicroServiceOrderId;
+  String? systemMicroServiceOrderId;
   @JsonKey(name: 'SystemMicroServiceAccept')
-  bool systemMicroServiceAccept;
+  bool? systemMicroServiceAccept;
   @JsonKey(name: 'SystemMicroServiceId')
-  String systemMicroServiceId;
+  String? systemMicroServiceId;
   @JsonKey(name: 'SystemMicroServiceIsSuccess')
-  bool systemMicroServiceIsSuccess;
+  bool? systemMicroServiceIsSuccess;
   @JsonKey(name: 'SystemMicroServiceErrorMessage')
-  String systemMicroServiceErrorMessage;
+  String? systemMicroServiceErrorMessage;
   @JsonKey(name: 'Name')
-  String name;
+  String? name;
   @JsonKey(name: 'Family')
-  String family;
+  String? family;
   @JsonKey(name: 'Mobile')
-  String mobile;
+  String? mobile;
   @JsonKey(name: 'Address')
-  String address;
+  String? address;
 
   @JsonKey(name: 'Products')
-  List<HyperShopOrderContentModel> products;
+  List<HyperShopOrderContentModel>? products;
   @JsonKey(name: 'Amount')
-  double amount;
+  double? amount;
   @JsonKey(name: 'FeeTax')
-  double feeTax;
+  double? feeTax;
   @JsonKey(name: 'FeeTransport')
-  double feeTransport;
+  double? feeTransport;
   @JsonKey(name: 'AmountPure')
-  double amountPure;
+  double? amountPure;
   @JsonKey(name: 'DelivaryPrice')
-  double delivaryPrice;
+  double? delivaryPrice;
   @JsonKey(name: 'GeoLocationLatitude')
-  String geoLocationLatitude;
+  String? geoLocationLatitude;
   @JsonKey(name: 'GeoLocationLongitude')
-  String geoLocationLongitude;
+  String? geoLocationLongitude;
 }

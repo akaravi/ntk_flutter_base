@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartDtoModel {
   @JsonKey(name: 'TagIds')
-  List<int> tagIds;
+  List<int>? tagIds;
   @JsonKey(name: 'SearchDayMin')
-  int searchDayMin;
+  int? searchDayMin;
   @JsonKey(name: 'SearchDayMax')
-  int searchDayMax;
+  int? searchDayMax;
 }

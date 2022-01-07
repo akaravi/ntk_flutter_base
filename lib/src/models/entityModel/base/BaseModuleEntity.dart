@@ -5,5 +5,5 @@ import 'BaseEntity.dart';
 @JsonSerializable()
 class BaseModuleEntity<TKey> extends BaseEntity<TKey> {
   @JsonKey(name: 'LinkSiteId')
-  int linkSiteId;
+  int? linkSiteId;
 }

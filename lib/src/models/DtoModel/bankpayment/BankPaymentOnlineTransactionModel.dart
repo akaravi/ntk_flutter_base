@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class BankPaymentOnlineTransactionModel {
   @JsonKey(name: 'LinkOrderId')
-  int linkOrderId;
+  int? linkOrderId;
   @JsonKey(name: 'BankPaymentPrivateId')
-  int bankPaymentPrivateId;
+  int? bankPaymentPrivateId;
   @JsonKey(name: 'UrlToPay')
-  String urlToPay;
+  String? urlToPay;
 }

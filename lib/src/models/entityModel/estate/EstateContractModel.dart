@@ -6,25 +6,25 @@ import 'EstateContractTypeModel.dart';
 @JsonSerializable()
 class EstateContractModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'LinkEstateContractTypeId')
-  String linkEstateContractTypeId;
+  String? linkEstateContractTypeId;
   @JsonKey(name: 'ContractType')
-  EstateContractTypeModel contractType;
+  EstateContractTypeModel? contractType;
   @JsonKey(name: 'LinkPropertyId')
-  String linkPropertyId;
+  String? linkPropertyId;
   @JsonKey(name: 'SalePriceByAgreement')
-  bool salePriceByAgreement;
+  bool? salePriceByAgreement;
   @JsonKey(name: 'SalePrice')
-  double salePrice;
+  double? salePrice;
   @JsonKey(name: 'RentPriceByAgreement')
-  bool rentPriceByAgreement;
+  bool? rentPriceByAgreement;
   @JsonKey(name: 'RentPrice')
-  double rentPrice;
+  double? rentPrice;
   @JsonKey(name: 'DepositPriceByAgreement')
-  bool depositPriceByAgreement;
+  bool? depositPriceByAgreement;
   @JsonKey(name: 'DepositPrice')
-  double depositPrice;
+  double? depositPrice;
   @JsonKey(name: ' unitSalePrice')
   String unitSalePrice = "تومان";
 }

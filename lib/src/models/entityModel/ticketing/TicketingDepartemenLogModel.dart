@@ -10,23 +10,23 @@ import 'TicketingTaskModel.dart';
 @JsonSerializable()
 class TicketingDepartemenLogModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkFromOperatorId')
-  int linkFromOperatorId;
+  int? linkFromOperatorId;
   @JsonKey(name: 'FromOperator')
-  TicketingDepartemenOperatorModel fromOperator;
+  TicketingDepartemenOperatorModel? fromOperator;
   @JsonKey(name: 'LinkFromTicketingDepartemenId')
-  int linkFromTicketingDepartemenId;
+  int? linkFromTicketingDepartemenId;
   @JsonKey(name: 'FromTicketingDepartemen')
-  TicketingDepartemenModel fromTicketingDepartemen;
+  TicketingDepartemenModel? fromTicketingDepartemen;
   @JsonKey(name: 'LinkToTicketingDepartemenId')
-  int linkToTicketingDepartemenId;
+  int? linkToTicketingDepartemenId;
   @JsonKey(name: 'ToTicketingDepartemen')
-  TicketingDepartemenModel toTicketingDepartemen;
+  TicketingDepartemenModel? toTicketingDepartemen;
   @JsonKey(name: 'Tickets')
-  List<TicketingTaskModel> tickets;
+  List<TicketingTaskModel>? tickets;
   @JsonKey(name: 'TicketAnswers')
-  List<TicketingAnswerModel> ticketAnswers;
+  List<TicketingAnswerModel>? ticketAnswers;
   @JsonKey(name: 'Faqs')
-  List<TicketingFaqModel> faqs;
+  List<TicketingFaqModel>? faqs;
   @JsonKey(name: 'Operators')
-  List<TicketingDepartemenOperatorModel> operators;
+  List<TicketingDepartemenOperatorModel>? operators;
 }

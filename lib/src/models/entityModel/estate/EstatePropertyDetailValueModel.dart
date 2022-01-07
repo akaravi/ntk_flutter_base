@@ -5,13 +5,13 @@ import 'EstatePropertyDetailModel.dart';
 @JsonSerializable()
 class EstatePropertyDetailValueModel {
   @JsonKey(name: 'Id')
-  String id;
+  String? id;
   @JsonKey(name: 'LinkPropertyDetailId')
-  String linkPropertyDetailId;
+  String? linkPropertyDetailId;
   @JsonKey(name: 'PropertyDetail')
-  EstatePropertyDetailModel propertyDetail;
+  EstatePropertyDetailModel? propertyDetail;
   @JsonKey(name: 'Value')
-  String value;
+  String? value;
   @JsonKey(name: 'LinkHistoryId')
-  String linkHistoryId;
+  String? linkHistoryId;
 }

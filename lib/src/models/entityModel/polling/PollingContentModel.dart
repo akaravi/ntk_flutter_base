@@ -7,53 +7,53 @@ import 'PollingOptionModel.dart';
 @JsonSerializable()
 class PollingContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'ExpireDate')
-  String expireDate;
+  String? expireDate;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'Question')
-  String question;
+  String? question;
   @JsonKey(name: 'ViewStatisticsBeforeVote')
-  bool viewStatisticsBeforeVote;
+  bool? viewStatisticsBeforeVote;
   @JsonKey(name: 'ViewStatisticsAfterVote')
-  bool viewStatisticsAfterVote;
+  bool? viewStatisticsAfterVote;
   @JsonKey(name: ' virtual_Category')
-  PollingCategoryModel virtual_Category;
+  PollingCategoryModel? virtual_Category;
   @JsonKey(name: 'Category')
-  PollingCategoryModel category;
+  PollingCategoryModel? category;
   @JsonKey(name: 'FromDate')
-  String fromDate;
+  String? fromDate;
   @JsonKey(name: 'Geolocationlatitude')
-  double geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
-  double geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'LinkCategoryId')
-  int linkCategoryId;
+  int? linkCategoryId;
   @JsonKey(name: 'LinkFileIds')
-  String linkFileIds;
+  String? linkFileIds;
   @JsonKey(name: 'LinkFilePodcastId')
-  int linkFilePodcastId;
+  int? linkFilePodcastId;
   @JsonKey(name: 'LinkFileMovieId')
-  int linkFileMovieId;
+  int? linkFileMovieId;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'ScoreClick')
-  int scoreClick;
+  int? scoreClick;
   @JsonKey(name: 'ScoreSumPercent')
-  int scoreSumPercent;
+  int? scoreSumPercent;
   @JsonKey(name: 'ViewCount')
-  int viewCount;
+  int? viewCount;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkFilePodcastIdSrc')
-  String linkFilePodcastIdSrc;
+  String? linkFilePodcastIdSrc;
   @JsonKey(name: 'LinkFileMovieIdSrc')
-  String linkFileMovieIdSrc;
+  String? linkFileMovieIdSrc;
   @JsonKey(name: 'LinkFileIdsSrc')
-  List<String> linkFileIdsSrc;
+  List<String>? linkFileIdsSrc;
   @JsonKey(name: 'MaxVoteForThisContent')
-  int maxVoteForThisContent;
+  int? maxVoteForThisContent;
   @JsonKey(name: 'MaxVoteForEachOption')
-  int maxVoteForEachOption;
+  int? maxVoteForEachOption;
   @JsonKey(name: 'Options')
-  List<PollingOptionModel> options;
+  List<PollingOptionModel>? options;
 }

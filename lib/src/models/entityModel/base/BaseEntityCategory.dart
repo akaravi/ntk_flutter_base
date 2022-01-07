@@ -5,17 +5,17 @@ import 'BaseModuleEntity.dart';
 @JsonSerializable()
 class BaseEntityCategory<TKey> extends BaseModuleEntity<TKey> {
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
   @JsonKey(name: 'LinkMainImageId')
-  int linkMainImageId;
+  int? linkMainImageId;
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'FontIcon')
-  String fontIcon;
+  String? fontIcon;
   @JsonKey(name: 'LinkParentId')
-  TKey linkParentId;
+  TKey? linkParentId;
   @JsonKey(name: 'LinkParentIdNode')
-  String linkParentIdNode;
+  String? linkParentIdNode;
   @JsonKey(name: 'LinkMainImageIdSrc')
-  String linkMainImageIdSrc;
+  String? linkMainImageIdSrc;
 }

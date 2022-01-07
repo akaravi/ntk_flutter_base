@@ -6,19 +6,19 @@ import 'PollingContentModel.dart';
 @JsonSerializable()
 class PollingOptionModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Option')
-  String option;
+  String? option;
   @JsonKey(name: 'OptionAnswer')
-  String optionAnswer;
+  String? optionAnswer;
   @JsonKey(name: 'IsCorrectAnswer')
-  bool isCorrectAnswer;
+  bool? isCorrectAnswer;
   @JsonKey(name: 'NumberOfVotes')
-  int numberOfVotes;
+  int? numberOfVotes;
   @JsonKey(name: 'ScoreOfVotes')
-  int scoreOfVotes;
+  int? scoreOfVotes;
   @JsonKey(name: 'LinkPollingContentId')
-  int linkPollingContentId;
+  int? linkPollingContentId;
   @JsonKey(name: 'virtual_PollingContent')
-  PollingContentModel virtual_PollingContent;
+  PollingContentModel? virtual_PollingContent;
   @JsonKey(name: 'PollingContent')
-  PollingContentModel pollingContent;
+  PollingContentModel? pollingContent;
 }

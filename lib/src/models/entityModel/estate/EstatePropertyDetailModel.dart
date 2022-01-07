@@ -4,55 +4,55 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class EstatePropertyDetailModel {
   @JsonKey(name: 'Id')
-  String id;
+  String? id;
   @JsonKey(name: 'Title')
-  String title;
+  String? title;
 
   @JsonKey(name: 'Description')
-  String description;
+  String? description;
   @JsonKey(name: 'IconFont')
-  String iconFont;
+  String? iconFont;
   @JsonKey(name: 'IconColor')
-  String iconColor;
+  String? iconColor;
   @JsonKey(name: 'InputDataType')
-  int inputDataType;
-  EnumInputDataType inputDataTypeEnum;
+  int? inputDataType;
+  EnumInputDataType? inputDataTypeEnum;
 
   @JsonKey(name: 'InvisibleForEndUser')
-  bool invisibleForEndUser;
+  bool? invisibleForEndUser;
 
   @JsonKey(name: 'InvisibleForSubmiter')
-  bool invisibleForSubmiter;
+  bool? invisibleForSubmiter;
 
   @JsonKey(name: 'Unit')
-  String unit;
+  String? unit;
 
   @JsonKey(name: 'Required')
-  bool required;
+  bool? required;
 
   @JsonKey(name: 'IsHistoryable')
-  bool isHistoryable;
+  bool? isHistoryable;
 
   @JsonKey(name: 'IsSearchable')
-  bool isSearchable;
+  bool? isSearchable;
   @JsonKey(name: 'ShowInFormOrder')
-  int showInFormOrder;
+  int? showInFormOrder;
   @JsonKey(name: 'LinkPropertyTypeLanduseId')
-  String linkPropertyTypeLanduseId;
+  String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'LinkPropertyDetailGroupId')
-  String linkPropertyDetailGroupId;
+  String? linkPropertyDetailGroupId;
   @JsonKey(name: 'ConfigValueDefaultValueJson')
-  String configValueDefaultValueJson;
+  String? configValueDefaultValueJson;
   @JsonKey(name: 'ConfigValueDefaultValue')
-  List<String> configValueDefaultValue;
+  List<String>? configValueDefaultValue;
   @JsonKey(name: 'ConfigValueForceUseDefaultValue')
-  bool configValueForceUseDefaultValue;
+  bool? configValueForceUseDefaultValue;
   @JsonKey(name: 'ConfigValueMultipleChoice')
-  bool configValueMultipleChoice;
+  bool? configValueMultipleChoice;
 
   @JsonKey(name: 'ConfigValueIntValueMin')
-  int configValueIntValueMin;
+  int? configValueIntValueMin;
 
   @JsonKey(name: 'ConfigValueIntValueMax')
-  int configValueIntValueMax;
+  int? configValueIntValueMax;
 }

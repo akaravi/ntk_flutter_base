@@ -4,11 +4,11 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class ApplicationScoreDtoModel {
   @JsonKey(name: 'LinkApiId')
-  int linkApiId;
+  int? linkApiId;
   @JsonKey(name: 'AppMemberId')
-  String appMemberId;
+  String? appMemberId;
   @JsonKey(name: 'ScoreComment')
-  String scoreComment;
+  String? scoreComment;
   @JsonKey(name: 'ScorePercent')
-  int scorePercent;
+  int? scorePercent;
 }

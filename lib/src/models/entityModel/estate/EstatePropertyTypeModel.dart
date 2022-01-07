@@ -7,11 +7,11 @@ import 'EstatePropertyTypeUsageModel.dart';
 @JsonSerializable()
 class EstatePropertyTypeModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'LinkPropertyTypeLanduseId')
-  String linkPropertyTypeLanduseId;
+  String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'LinkPropertyTypeUsageId')
-  String linkPropertyTypeUsageId;
+  String? linkPropertyTypeUsageId;
   @JsonKey(name: 'PropertyTypeLanduse')
-  EstatePropertyTypeLanduseModel propertyTypeLanduse;
+  EstatePropertyTypeLanduseModel? propertyTypeLanduse;
   @JsonKey(name: 'PropertyTypeUsage')
-  EstatePropertyTypeUsageModel propertyTypeUsage;
+  EstatePropertyTypeUsageModel? propertyTypeUsage;
 }
