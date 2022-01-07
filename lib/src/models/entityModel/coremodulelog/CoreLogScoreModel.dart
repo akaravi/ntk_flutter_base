@@ -1,5 +1,8 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'CoreLogScoreModel.g.dart';
 
 @JsonSerializable()
 class CoreLogScoreModel extends BaseModuleEntity<String> {
@@ -15,4 +18,11 @@ class CoreLogScoreModel extends BaseModuleEntity<String> {
   int? entityId;
   @JsonKey(name: 'ScorePercent')
   int? scorePercent;
+
+  CoreLogScoreModel();
+
+  factory CoreLogScoreModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreLogScoreModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreLogScoreModelToJson(this);
 }

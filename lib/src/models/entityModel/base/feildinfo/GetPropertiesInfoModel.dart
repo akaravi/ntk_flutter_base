@@ -4,6 +4,7 @@ import 'FieldInfoModel.dart';
 import 'FieldInputDataSourceModel.dart';
 
 part 'GetPropertiesInfoModel.g.dart';
+
 @JsonSerializable()
 class GetPropertiesInfoModel extends FieldInfoModel {
   @JsonKey(name: 'FieldDataSource')
@@ -13,7 +14,8 @@ class GetPropertiesInfoModel extends FieldInfoModel {
 
   GetPropertiesInfoModel();
 
-  factory GetPropertiesInfoModel.fromJson(Map<String, dynamic> json) => _$GetPropertiesInfoModelFromJson(json);
+  factory GetPropertiesInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$GetPropertiesInfoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetPropertiesInfoModelToJson(this);
 }

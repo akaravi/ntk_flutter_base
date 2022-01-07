@@ -4,7 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'BiographyContentSimilarModel.g.dart';
 
-
 @JsonSerializable()
 class BiographyContentSimilarModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -23,7 +22,8 @@ class BiographyContentSimilarModel extends BaseModuleEntity<int> {
   Object? destination;
 
   BiographyContentSimilarModel();
-  factory BiographyContentSimilarModel.fromJson(Map<String, dynamic> json) => _$BiographyContentSimilarModelFromJson(json);
+  factory BiographyContentSimilarModel.fromJson(Map<String, dynamic> json) =>
+      _$BiographyContentSimilarModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BiographyContentSimilarModelToJson(this);
 }

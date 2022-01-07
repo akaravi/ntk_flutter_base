@@ -8,6 +8,7 @@ import 'CoreSiteDomainAliasModel.dart';
 import 'CoreSiteUserModel.dart';
 
 part 'CoreSiteModel.g.dart';
+
 @JsonSerializable()
 class CoreSiteModel {
   @JsonKey(name: 'CurrentSiteDomainUrl')
@@ -77,7 +78,8 @@ class CoreSiteModel {
   String? webEditorEmail;
 
   CoreSiteModel();
-  factory CoreSiteModel.fromJson(Map<String, dynamic> json) => _$CoreSiteModelFromJson(json);
+  factory CoreSiteModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreSiteModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreSiteModelToJson(this);
 }

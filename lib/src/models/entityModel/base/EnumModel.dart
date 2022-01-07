@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'EnumModel.g.dart';
+
 @JsonSerializable()
 class EnumModel {
   @JsonKey(name: 'Key')

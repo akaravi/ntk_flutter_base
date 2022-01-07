@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'ApplicationAppModel.dart';
 import 'ApplicationLayoutModel.dart';
 part 'ApplicationSourceModel.g.dart';
+
 @JsonSerializable()
 class ApplicationSourceModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -76,7 +77,8 @@ class ApplicationSourceModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'IsAbilityGradleBuild')
   bool? isAbilityGradleBuild;
   ApplicationSourceModel();
-  factory ApplicationSourceModel.fromJson(Map<String, dynamic> json) => _$ApplicationSourceModelFromJson(json);
+  factory ApplicationSourceModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationSourceModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationSourceModelToJson(this);
 }

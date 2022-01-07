@@ -2,6 +2,7 @@ import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
 import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'AppMainLayoutMainRequestModel.g.dart';
+
 @JsonSerializable()
 class AppMainLayoutMainRequestModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'UserId')
@@ -29,7 +30,8 @@ class AppMainLayoutMainRequestModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'AppThemeId')
   int? appThemeId;
   AppMainLayoutMainRequestModel();
-  factory AppMainLayoutMainRequestModel.fromJson(Map<String, dynamic> json) => _$AppMainLayoutMainRequestModelFromJson(json);
+  factory AppMainLayoutMainRequestModel.fromJson(Map<String, dynamic> json) =>
+      _$AppMainLayoutMainRequestModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppMainLayoutMainRequestModelToJson(this);
 }

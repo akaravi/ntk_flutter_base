@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'CoreSiteModel.dart';
 
 part 'CoreSiteCategoryModel.g.dart';
+
 @JsonSerializable()
 class CoreSiteCategoryModel extends BaseEntity<int> {
   @JsonKey(name: 'TitleML')
@@ -19,7 +20,8 @@ class CoreSiteCategoryModel extends BaseEntity<int> {
   List<CoreSiteModel>? sites;
 
   CoreSiteCategoryModel();
-  factory CoreSiteCategoryModel.fromJson(Map<String, dynamic> json) => _$CoreSiteCategoryModelFromJson(json);
+  factory CoreSiteCategoryModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreSiteCategoryModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreSiteCategoryModelToJson(this);
 }

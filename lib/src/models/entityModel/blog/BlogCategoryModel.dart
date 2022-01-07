@@ -6,9 +6,6 @@ import 'BlogContentModel.dart';
 
 part 'BlogCategoryModel.g.dart';
 
-
-
-
 @JsonSerializable()
 class BlogCategoryModel extends BaseEntityCategory<int> {
   @JsonKey(name: 'Children')
@@ -20,7 +17,8 @@ class BlogCategoryModel extends BaseEntityCategory<int> {
   @JsonKey(name: 'Contents')
   List<BlogContentModel>? contents;
   BlogCategoryModel();
-  factory BlogCategoryModel.fromJson(Map<String, dynamic> json) => _$BlogCategoryModelFromJson(json);
+  factory BlogCategoryModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogCategoryModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BlogCategoryModelToJson(this);
 }

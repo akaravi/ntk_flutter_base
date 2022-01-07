@@ -1,3 +1,3 @@
-class BaseService{
+class BaseService {
   String? baseURL;
 }

@@ -6,6 +6,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'ApplicationAppModel.dart';
 import 'ApplicationMemberInfoModel.dart';
 part 'ApplicationLogNotificationModel.g.dart';
+
 @JsonSerializable()
 class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkApplicationMemberId')
@@ -35,7 +36,9 @@ class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'BigImageIdSrc')
   String? bigImageIdSrc;
   ApplicationLogNotificationModel();
-  factory ApplicationLogNotificationModel.fromJson(Map<String, dynamic> json) => _$ApplicationLogNotificationModelFromJson(json);
+  factory ApplicationLogNotificationModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationLogNotificationModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ApplicationLogNotificationModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$ApplicationLogNotificationModelToJson(this);
 }

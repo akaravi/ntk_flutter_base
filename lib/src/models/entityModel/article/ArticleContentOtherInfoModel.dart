@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'ArticleContentModel.dart';
 
 part 'ArticleContentOtherInfoModel.g.dart';
+
 @JsonSerializable()
 class ArticleContentOtherInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -23,7 +24,9 @@ class ArticleContentOtherInfoModel extends BaseModuleEntity<int> {
 
   @JsonKey(name: 'Content')
   ArticleContentModel? content;
-ArticleContentOtherInfoModel(); 
-factory ArticleContentOtherInfoModel.fromJson(Map<String, dynamic> json) => _$ArticleContentOtherInfoModelFromJson(json);
+  ArticleContentOtherInfoModel();
+  factory ArticleContentOtherInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$ArticleContentOtherInfoModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ArticleContentOtherInfoModelToJson(this);}
+  Map<String, dynamic> toJson() => _$ArticleContentOtherInfoModelToJson(this);
+}

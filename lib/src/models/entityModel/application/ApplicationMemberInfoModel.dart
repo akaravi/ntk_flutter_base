@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'ApplicationAppModel.dart';
 part 'ApplicationMemberInfoModel.g.dart';
+
 @JsonSerializable()
 class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkUserId')
@@ -44,7 +45,8 @@ class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'ScoreComment')
   String? scoreComment;
   ApplicationMemberInfoModel();
-  factory ApplicationMemberInfoModel.fromJson(Map<String, dynamic> json) => _$ApplicationMemberInfoModelFromJson(json);
+  factory ApplicationMemberInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationMemberInfoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationMemberInfoModelToJson(this);
 }

@@ -8,6 +8,7 @@ import 'ArticleContentSimilarModel.dart';
 import 'ArticleContentTagModel.dart';
 
 part 'ArticleContentModel.g.dart';
+
 @JsonSerializable()
 class ArticleContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkCategoryId')

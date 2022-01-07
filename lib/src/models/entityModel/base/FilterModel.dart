@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 import 'FilterDataModel.dart';
 
 part 'FilterModel.g.dart';
+
 @JsonSerializable()
 class FilterModel {
-
   @JsonKey(name: 'Count')
   bool? count;
 
@@ -31,10 +31,8 @@ class FilterModel {
   List<FilterDataModel>? filters;
 
   FilterModel addFilter(FilterDataModel f) {
-  filters??=[];
-  filters!.add(f);
+    filters ??= [];
+    filters!.add(f);
     return this;
   }
-
-
 }

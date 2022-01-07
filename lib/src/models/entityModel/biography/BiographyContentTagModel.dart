@@ -3,7 +3,6 @@ import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'BiographyContentTagModel.g.dart';
 
-
 @JsonSerializable()
 class BiographyContentTagModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentId')
@@ -16,7 +15,8 @@ class BiographyContentTagModel extends BaseModuleEntity<int> {
   Object? moduleContent;
 
   BiographyContentTagModel();
-  factory BiographyContentTagModel.fromJson(Map<String, dynamic> json) => _$BiographyContentTagModelFromJson(json);
+  factory BiographyContentTagModel.fromJson(Map<String, dynamic> json) =>
+      _$BiographyContentTagModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BiographyContentTagModelToJson(this);
 }

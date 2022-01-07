@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'feildinfo/DataFieldInfoModel.dart';
 
 part 'AccessModel.g.dart';
+
 @JsonSerializable()
 class AccessModel {
   @JsonKey(name: 'AccessDeleteRow')

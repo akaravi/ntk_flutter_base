@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 @JsonEnum()
 enum EnumManageUserAccessUserTypes {
   @JsonValue(0)

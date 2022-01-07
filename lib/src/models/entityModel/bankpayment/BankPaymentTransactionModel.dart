@@ -6,6 +6,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'BankPaymentPrivateSiteConfigModel.dart';
 import 'BankPaymentTransactionLogModel.dart';
 part 'BankPaymentTransactionModel.g.dart';
+
 @JsonSerializable()
 class BankPaymentTransactionModel extends BaseEntity<int> {
   @JsonKey(name: 'TransactionStatus')
@@ -64,7 +65,8 @@ class BankPaymentTransactionModel extends BaseEntity<int> {
   BankPaymentTransactionLogModel? transactionLogs;
 
   BankPaymentTransactionModel();
-  factory BankPaymentTransactionModel.fromJson(Map<String, dynamic> json) => _$BankPaymentTransactionModelFromJson(json);
+  factory BankPaymentTransactionModel.fromJson(Map<String, dynamic> json) =>
+      _$BankPaymentTransactionModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BankPaymentTransactionModelToJson(this);
 }

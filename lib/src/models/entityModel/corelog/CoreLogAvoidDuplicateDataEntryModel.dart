@@ -16,8 +16,10 @@ class CoreLogAvoidDuplicateDataEntryModel extends BaseEntity<String> {
   @JsonKey(name: 'EntityId')
   int? entityId;
   CoreLogAvoidDuplicateDataEntryModel();
-  factory CoreLogAvoidDuplicateDataEntryModel.fromJson(Map<String, dynamic> json) => _$CoreLogAvoidDuplicateDataEntryModelFromJson(json);
+  factory CoreLogAvoidDuplicateDataEntryModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoreLogAvoidDuplicateDataEntryModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CoreLogAvoidDuplicateDataEntryModelToJson(this);
-
+  Map<String, dynamic> toJson() =>
+      _$CoreLogAvoidDuplicateDataEntryModelToJson(this);
 }

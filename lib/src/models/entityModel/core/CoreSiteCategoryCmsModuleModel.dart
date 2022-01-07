@@ -6,6 +6,7 @@ import 'CoreModuleModel.dart';
 import 'CoreSiteCategoryModel.dart';
 
 part 'CoreSiteCategoryCmsModuleModel.g.dart';
+
 @JsonSerializable()
 class CoreSiteCategoryCmsModuleModel extends BaseEntity<int> {
   @JsonKey(name: 'LinkCmsSiteCategoryId')

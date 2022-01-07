@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 import 'BiographyContentModel.dart';
 part 'BiographyContentOtherInfoModel.g.dart';
 
-
 @JsonSerializable()
 class BiographyContentOtherInfoModel {
   @JsonKey(name: 'Title')
@@ -21,7 +20,8 @@ class BiographyContentOtherInfoModel {
   @JsonKey(name: 'Content')
   BiographyContentModel? content;
   BiographyContentOtherInfoModel();
-  factory BiographyContentOtherInfoModel.fromJson(Map<String, dynamic> json) => _$BiographyContentOtherInfoModelFromJson(json);
+  factory BiographyContentOtherInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$BiographyContentOtherInfoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BiographyContentOtherInfoModelToJson(this);
 }

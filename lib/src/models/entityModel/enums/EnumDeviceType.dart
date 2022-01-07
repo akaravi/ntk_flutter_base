@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 @JsonEnum()
 enum EnumDeviceType {
   @JsonValue(0)

@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'ApplicationAppModel.dart';
 import 'ApplicationLayoutModel.dart';
 part 'ApplicationLayoutValueModel.g.dart';
+
 @JsonSerializable()
 class ApplicationLayoutValueModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkApplicationId')
@@ -22,7 +23,8 @@ class ApplicationLayoutValueModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'JsonFormValues')
   String? jsonFormValues;
   ApplicationLayoutValueModel();
-  factory ApplicationLayoutValueModel.fromJson(Map<String, dynamic> json) => _$ApplicationLayoutValueModelFromJson(json);
+  factory ApplicationLayoutValueModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationLayoutValueModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationLayoutValueModelToJson(this);
 }

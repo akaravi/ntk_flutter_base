@@ -3,6 +3,7 @@ import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'CoreLocationModel.g.dart';
+
 @JsonSerializable()
 class CoreLocationModel extends BaseEntity<int> {
   @JsonKey(name: 'Title')

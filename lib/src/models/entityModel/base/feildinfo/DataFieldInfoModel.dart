@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'FieldInfoModel.dart';
 
 part 'DataFieldInfoModel.g.dart';
+
 @JsonSerializable()
 class DataFieldInfoModel {
   @JsonKey(name: 'FieldName')
@@ -37,7 +38,8 @@ class DataFieldInfoModel {
   DataFieldInfoModel(
       this.accessSearchField, this.accessWatchField, this.accessEditField);
 
-  factory DataFieldInfoModel.fromJson(Map<String, dynamic> json) => _$DataFieldInfoModelFromJson(json);
+  factory DataFieldInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$DataFieldInfoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$DataFieldInfoModelToJson(this);
 }

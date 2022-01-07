@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 @JsonEnum()
 enum EnumMicroServiceType {
   @JsonValue(0)

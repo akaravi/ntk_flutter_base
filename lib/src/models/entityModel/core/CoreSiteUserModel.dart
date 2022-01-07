@@ -7,6 +7,7 @@ import 'CoreUserGroupModel.dart';
 import 'CoreUserModel.dart';
 
 part 'CoreSiteUserModel.g.dart';
+
 @JsonSerializable()
 class CoreSiteUserModel extends BaseEntity<int> {
   @JsonKey(name: 'ExpireDate')
@@ -32,7 +33,8 @@ class CoreSiteUserModel extends BaseEntity<int> {
   CoreUserGroupModel? cmsUserGroup;
 
   CoreSiteUserModel();
-  factory CoreSiteUserModel.fromJson(Map<String, dynamic> json) => _$CoreSiteUserModelFromJson(json);
+  factory CoreSiteUserModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreSiteUserModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreSiteUserModelToJson(this);
 }

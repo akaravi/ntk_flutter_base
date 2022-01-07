@@ -38,7 +38,10 @@ class BankPaymentPrivateSiteConfigModel extends BaseEntity<int> {
   String? linkModuleFileLogoIdSrc;
 
   BankPaymentPrivateSiteConfigModel();
-  factory BankPaymentPrivateSiteConfigModel.fromJson(Map<String, dynamic> json) => _$BankPaymentPrivateSiteConfigModelFromJson(json);
+  factory BankPaymentPrivateSiteConfigModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$BankPaymentPrivateSiteConfigModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BankPaymentPrivateSiteConfigModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$BankPaymentPrivateSiteConfigModelToJson(this);
 }

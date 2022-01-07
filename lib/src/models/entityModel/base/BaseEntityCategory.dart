@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'BaseModuleEntity.dart';
 part 'BaseEntityCategory.g.dart';
+
 @JsonSerializable(genericArgumentFactories: true)
 class BaseEntityCategory<TKey> extends BaseModuleEntity<TKey> {
   @JsonKey(name: 'Title')

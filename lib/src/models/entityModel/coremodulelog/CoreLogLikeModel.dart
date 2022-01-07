@@ -1,5 +1,8 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'CoreLogLikeModel.g.dart';
 
 @JsonSerializable()
 class CoreLogLikeModel extends BaseModuleEntity<String> {
@@ -17,4 +20,9 @@ class CoreLogLikeModel extends BaseModuleEntity<String> {
   bool? likked;
   @JsonKey(name: 'ExistBeforAndChangeNow')
   bool? existBeforAndChangeNow;
+  CoreLogLikeModel();
+  factory CoreLogLikeModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreLogLikeModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreLogLikeModelToJson(this);
 }

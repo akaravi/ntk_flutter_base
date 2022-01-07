@@ -9,7 +9,6 @@ import 'BlogContentTagModel.dart';
 
 part 'BlogContentModel.g.dart';
 
-
 @JsonSerializable()
 class BlogContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkCategoryId')
@@ -75,7 +74,8 @@ class BlogContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkFileIdsSrc')
   List<String>? linkFileIdsSrc;
   BlogContentModel();
-  factory BlogContentModel.fromJson(Map<String, dynamic> json) => _$BlogContentModelFromJson(json);
+  factory BlogContentModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogContentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BlogContentModelToJson(this);
 }

@@ -6,6 +6,7 @@ import 'ApplicationAppModel.dart';
 import 'ApplicationSourceModel.dart';
 import 'ThemeConfigLayoutModel.dart';
 part 'ApplicationThemeConfigModel.g.dart';
+
 @JsonSerializable()
 class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -33,7 +34,8 @@ class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Applications')
   List<ApplicationAppModel>? applications;
   ApplicationThemeConfigModel();
-  factory ApplicationThemeConfigModel.fromJson(Map<String, dynamic> json) => _$ApplicationThemeConfigModelFromJson(json);
+  factory ApplicationThemeConfigModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationThemeConfigModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationThemeConfigModelToJson(this);
 }

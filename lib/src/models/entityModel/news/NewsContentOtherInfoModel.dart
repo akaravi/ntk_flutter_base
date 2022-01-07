@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'NewsContentModel.dart';
 
 part 'NewsContentOtherInfoModel.g.dart';
+
 @JsonSerializable()
 class NewsContentOtherInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')

@@ -9,7 +9,6 @@ import 'BiographyContentSimilarModel.dart';
 import 'BiographyContentTagModel.dart';
 part 'BiographyContentModel.g.dart';
 
-
 @JsonSerializable()
 class BiographyContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkCategoryId')
@@ -83,7 +82,8 @@ class BiographyContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'DatePeriodEnd')
   String? datePeriodEnd;
   BiographyContentModel();
-  factory BiographyContentModel.fromJson(Map<String, dynamic> json) => _$BiographyContentModelFromJson(json);
+  factory BiographyContentModel.fromJson(Map<String, dynamic> json) =>
+      _$BiographyContentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BiographyContentModelToJson(this);
 }

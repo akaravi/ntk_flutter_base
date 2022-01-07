@@ -57,9 +57,9 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     );
 
     var cortTextStyle = TextStyle(
-                          fontSize: 12,
-                          color: Colors.white,
-                        );
+      fontSize: 12,
+      color: Colors.white,
+    );
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -127,8 +127,11 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                       SizedBox(
                         width: 12,
                       ),
-                      Text('-',style: cortTextStyle,)
-                      ,   SizedBox(
+                      Text(
+                        '-',
+                        style: cortTextStyle,
+                      ),
+                      SizedBox(
                         width: 12,
                       ),
                       Text(

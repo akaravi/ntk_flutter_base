@@ -18,7 +18,8 @@ class CoreLogErrorModel extends BaseEntity<String> {
   @JsonKey(name: 'Description')
   String? description;
   CoreLogErrorModel();
-  factory CoreLogErrorModel.fromJson(Map<String, dynamic> json) => _$CoreLogErrorModelFromJson(json);
+  factory CoreLogErrorModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreLogErrorModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreLogErrorModelToJson(this);
 }

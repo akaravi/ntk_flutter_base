@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'CoreModuleProcessModel.dart';
 
 part 'CoreModuleProcessCustomizeModel.g.dart';
+
 @JsonSerializable()
 class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
   @JsonKey(name: 'Title')
@@ -28,7 +29,9 @@ class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
   int? linkProcessCustomizeDependenceBeforRunId;
 
   CoreModuleProcessCustomizeModel();
-  factory CoreModuleProcessCustomizeModel.fromJson(Map<String, dynamic> json) => _$CoreModuleProcessCustomizeModelFromJson(json);
+  factory CoreModuleProcessCustomizeModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreModuleProcessCustomizeModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CoreModuleProcessCustomizeModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$CoreModuleProcessCustomizeModelToJson(this);
 }

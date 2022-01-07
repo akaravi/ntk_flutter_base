@@ -4,6 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'ApplicationAppModel.dart';
 part 'ApplicationIntroModel.g.dart';
+
 @JsonSerializable()
 class ApplicationIntroModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -25,7 +26,8 @@ class ApplicationIntroModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkMainVideoIdSrc')
   String? linkMainVideoIdSrc;
   ApplicationIntroModel();
-  factory ApplicationIntroModel.fromJson(Map<String, dynamic> json) => _$ApplicationIntroModelFromJson(json);
+  factory ApplicationIntroModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationIntroModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationIntroModelToJson(this);
 }

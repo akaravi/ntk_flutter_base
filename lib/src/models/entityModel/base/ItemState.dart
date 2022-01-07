@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'ItemState.g.dart';
+
 @JsonSerializable()
 class ItemState<TcClass> {
   // @JsonKey(name: 'Item')

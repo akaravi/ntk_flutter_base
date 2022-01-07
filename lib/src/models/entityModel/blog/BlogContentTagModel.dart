@@ -17,9 +17,9 @@ class BlogContentTagModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'ModuleContent')
   BlogContentModel? moduleContent;
 
-
   BlogContentTagModel();
-  factory BlogContentTagModel.fromJson(Map<String, dynamic> json) => _$BlogContentTagModelFromJson(json);
+  factory BlogContentTagModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogContentTagModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BlogContentTagModelToJson(this);
 }

@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'ArticleContentModel.dart';
 
 part 'ArticleContentTagModel.g.dart';
+
 @JsonSerializable()
 class ArticleContentTagModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentid')
@@ -15,7 +16,9 @@ class ArticleContentTagModel extends BaseModuleEntity<int> {
   ArticleContentModel? virtual_ModuleContent;
   @JsonKey(name: 'ModuleContent')
   ArticleContentModel? moduleContent;
-ArticleContentTagModel(); 
-factory ArticleContentTagModel.fromJson(Map<String, dynamic> json) => _$ArticleContentTagModelFromJson(json);
+  ArticleContentTagModel();
+  factory ArticleContentTagModel.fromJson(Map<String, dynamic> json) =>
+      _$ArticleContentTagModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ArticleContentTagModelToJson(this);}
+  Map<String, dynamic> toJson() => _$ArticleContentTagModelToJson(this);
+}

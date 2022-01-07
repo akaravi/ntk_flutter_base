@@ -3,6 +3,7 @@ import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'ArticleContentSimilarModel.g.dart';
+
 @JsonSerializable()
 class ArticleContentSimilarModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -19,7 +20,9 @@ class ArticleContentSimilarModel extends BaseModuleEntity<int> {
   String? virtual_Destination;
   @JsonKey(name: 'Destination')
   String? destination;
-ArticleContentSimilarModel(); 
-factory ArticleContentSimilarModel.fromJson(Map<String, dynamic> json) => _$ArticleContentSimilarModelFromJson(json);
+  ArticleContentSimilarModel();
+  factory ArticleContentSimilarModel.fromJson(Map<String, dynamic> json) =>
+      _$ArticleContentSimilarModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ArticleContentSimilarModelToJson(this);}
+  Map<String, dynamic> toJson() => _$ArticleContentSimilarModelToJson(this);
+}

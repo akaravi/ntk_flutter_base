@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'FormInfoModel.g.dart';
+
 @JsonSerializable()
 class FormInfoModel {
   @JsonKey(name: 'FormAllowSubmit')

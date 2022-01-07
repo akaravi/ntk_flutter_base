@@ -5,7 +5,6 @@ import 'package:json_annotation/json_annotation.dart';
 import 'BiographyContentModel.dart';
 part 'BiographyCommentModel.g.dart';
 
-
 @JsonSerializable()
 class BiographyCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentId')
@@ -27,7 +26,8 @@ class BiographyCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Content')
   BiographyContentModel? content;
   BiographyCommentModel();
-  factory BiographyCommentModel.fromJson(Map<String, dynamic> json) => _$BiographyCommentModelFromJson(json);
+  factory BiographyCommentModel.fromJson(Map<String, dynamic> json) =>
+      _$BiographyCommentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BiographyCommentModelToJson(this);
 }

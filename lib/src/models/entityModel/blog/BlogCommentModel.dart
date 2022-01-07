@@ -6,9 +6,6 @@ import 'BlogContentModel.dart';
 
 part 'BlogCommentModel.g.dart';
 
-
-
-
 @JsonSerializable()
 class BlogCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkContentId')
@@ -31,7 +28,8 @@ class BlogCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Content')
   BlogContentModel? content;
   BlogCommentModel();
-  factory BlogCommentModel.fromJson(Map<String, dynamic> json) => _$BlogCommentModelFromJson(json);
+  factory BlogCommentModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogCommentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BlogCommentModelToJson(this);
 }

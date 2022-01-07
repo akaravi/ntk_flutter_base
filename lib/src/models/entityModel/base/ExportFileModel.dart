@@ -1,3 +1,1 @@
-
-class ExportFileModel {
-}
+class ExportFileModel {}

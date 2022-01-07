@@ -1,5 +1,8 @@
 import 'package:base/src/models/entityModel/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+part 'CoreLogFavoriteModel.g.dart';
 
 @JsonSerializable()
 class CoreLogFavoriteModel extends BaseModuleEntity<String> {
@@ -13,4 +16,9 @@ class CoreLogFavoriteModel extends BaseModuleEntity<String> {
   int? linkMemberUserId;
   @JsonKey(name: 'EntityId')
   int? entityId;
+  CoreLogFavoriteModel();
+  factory CoreLogFavoriteModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreLogFavoriteModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreLogFavoriteModelToJson(this);
 }

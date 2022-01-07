@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'CoreSiteUserModel.dart';
 
 part 'CoreUserGroupModel.g.dart';
+
 @JsonSerializable()
 class CoreUserGroupModel extends BaseEntity<int> {
   @JsonKey(name: 'TitleML')
@@ -28,7 +29,8 @@ class CoreUserGroupModel extends BaseEntity<int> {
   @JsonKey(name: 'CmsCpMainMenuCmsUserGroup')
   List<CoreCpMainMenuCmsUserGroupModel>? cmsCpMainMenuCmsUserGroup;
   CoreUserGroupModel();
-  factory CoreUserGroupModel.fromJson(Map<String, dynamic> json) => _$CoreUserGroupModelFromJson(json);
+  factory CoreUserGroupModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreUserGroupModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreUserGroupModelToJson(this);
 }

@@ -8,6 +8,7 @@ import 'ApplicationLayoutValueModel.dart';
 import 'ApplicationSourceModel.dart';
 import 'ApplicationThemeConfigModel.dart';
 part 'ApplicationAppModel.g.dart';
+
 @JsonSerializable()
 class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'AppKey')
@@ -177,7 +178,8 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkMainImageIdSrc')
   String? linkMainImageIdSrc;
   ApplicationAppModel();
-  factory ApplicationAppModel.fromJson(Map<String, dynamic> json) => _$ApplicationAppModelFromJson(json);
+  factory ApplicationAppModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationAppModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationAppModelToJson(this);
 }

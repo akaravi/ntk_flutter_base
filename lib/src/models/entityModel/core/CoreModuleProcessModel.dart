@@ -4,6 +4,7 @@ import 'CoreModuleModel.dart';
 import 'CoreModuleProcessCustomizeModel.dart';
 
 part 'CoreModuleProcessModel.g.dart';
+
 @JsonSerializable()
 class CoreModuleProcessModel {
   @JsonKey(name: 'TitleML')
@@ -27,7 +28,8 @@ class CoreModuleProcessModel {
   @JsonKey(name: 'CmsModuleProcessCustomize')
   List<CoreModuleProcessCustomizeModel>? cmsModuleProcessCustomize;
   CoreModuleProcessModel();
-  factory CoreModuleProcessModel.fromJson(Map<String, dynamic> json) => _$CoreModuleProcessModelFromJson(json);
+  factory CoreModuleProcessModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreModuleProcessModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreModuleProcessModelToJson(this);
 }

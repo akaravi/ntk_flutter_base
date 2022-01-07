@@ -6,7 +6,6 @@ import 'BlogContentModel.dart';
 
 part 'BlogContentOtherInfoModel.g.dart';
 
-
 @JsonSerializable()
 class BlogContentOtherInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -25,7 +24,8 @@ class BlogContentOtherInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Content')
   BlogContentModel? content;
   BlogContentOtherInfoModel();
-  factory BlogContentOtherInfoModel.fromJson(Map<String, dynamic> json) => _$BlogContentOtherInfoModelFromJson(json);
+  factory BlogContentOtherInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogContentOtherInfoModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$BlogContentOtherInfoModelToJson(this);
 }

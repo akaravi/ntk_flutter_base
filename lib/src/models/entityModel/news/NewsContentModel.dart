@@ -81,7 +81,8 @@ class NewsContentModel extends BaseModuleEntity<int> {
 
   NewsContentModel();
 
-  factory NewsContentModel.fromJson(Map<String, dynamic> json) => _$NewsContentModelFromJson(json);
+  factory NewsContentModel.fromJson(Map<String, dynamic> json) =>
+      _$NewsContentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$NewsContentModelToJson(this);
 }

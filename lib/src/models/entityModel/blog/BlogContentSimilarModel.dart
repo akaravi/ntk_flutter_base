@@ -4,7 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'BlogContentSimilarModel.g.dart';
 
-
 @JsonSerializable()
 class BlogContentSimilarModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
@@ -22,6 +21,8 @@ class BlogContentSimilarModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Destination')
   String? destination;
   BlogContentSimilarModel();
-  factory BlogContentSimilarModel.fromJson(Map<String, dynamic> json) => _$BlogContentSimilarModelFromJson(json);
+  factory BlogContentSimilarModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogContentSimilarModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BlogContentSimilarModelToJson(this);}
+  Map<String, dynamic> toJson() => _$BlogContentSimilarModelToJson(this);
+}
