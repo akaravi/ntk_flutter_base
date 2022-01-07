@@ -1,5 +1,7 @@
 import 'package:base/src/models/entityModel/base/BaseEntity.dart';
+import 'package:base/src/models/entityModel/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
+part 'CoreLogErrorModel.g.dart';
 
 @JsonSerializable()
 class CoreLogErrorModel extends BaseEntity<String> {
@@ -15,4 +17,8 @@ class CoreLogErrorModel extends BaseEntity<String> {
   int? entityId;
   @JsonKey(name: 'Description')
   String? description;
+  CoreLogErrorModel();
+  factory CoreLogErrorModel.fromJson(Map<String, dynamic> json) => _$CoreLogErrorModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreLogErrorModelToJson(this);
 }
