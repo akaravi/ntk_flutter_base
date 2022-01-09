@@ -22,4 +22,8 @@ class ErrorExceptionBase {
   String? token;
   @JsonKey(name: "Errors")
   Map<String, List<String>>? errors;
+  ErrorExceptionBase();
+
+  factory ErrorExceptionBase.fromJson(Map<String, dynamic> json) =>
+      _$ErrorExceptionBaseFromJson(json);
 }

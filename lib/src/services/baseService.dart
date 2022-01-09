@@ -1,14 +1,9 @@
-import 'package:base/src/models/entityModel/base/ErrorException.dart';
-import 'package:base/src/models/entityModel/base/FilterModel.dart';
-import 'package:base/src/models/entityModel/news/NewsContentModel.dart';
-import 'package:base/src/services/ApiMethod.dart';
-import 'package:retrofit/retrofit.dart';
+import 'package:base/src/services/base_entity_apis.dart';
 
-abstract class BaseService<INPUT, OUTPUT>  {
+abstract class BaseEntityService<INPUT, OUTPUT>
+    {
   String controllerURL;
   String baseUrl;
 
-  BaseService(this.controllerURL, this.baseUrl);
-
-
+  BaseEntityService(this.controllerURL, this.baseUrl);
 }

@@ -4,7 +4,7 @@ import 'package:base/src/models/entityModel/base/FilterModel.dart';
 import 'package:base/src/models/entityModel/news/NewsContentModel.dart';
 import 'package:base/src/services/baseService.dart';
 
-class NewsModelApi extends BaseService<int,NewsContentModel>{
+class NewsModelApi extends BaseEntityService<int,NewsContentModel>{
   NewsModelApi(String controllerURL, String baseUrl) : super(controllerURL, baseUrl);
 
   // @override
