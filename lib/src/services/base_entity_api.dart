@@ -4,11 +4,11 @@ import 'package:base/src/models/entityModel/base/FilterModel.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'base_entity_apis.g.dart';
+part 'base_entity_api.g.dart';
 
 @RestApi()
 abstract class BaseEntityApi {
-  BaseEntityApi(Dio dio);
+  factory BaseEntityApi(Dio dio, {String baseUrl}) = _BaseEntityApi;
 
   @GET("{fullPath}")
   Future<ErrorException<String>> getViewModel(@Path() String fullPath);
@@ -23,20 +23,49 @@ abstract class BaseEntityApi {
 
   @GET("{fullPath}")
   Future<ErrorException<String>> getOne(String fullPath);
-  @PUT("{fullPath}")
+
+  @POST("{fullPath}")
   Future<ErrorExceptionBase> exist(String fullPath, @Body() FilterModel filter);
-  @PUT("{fullPath}")
+
+  @POST("{fullPath}")
   Future<ErrorExceptionBase> count(String fullPath, @Body() FilterModel filter);
-  @PUT("{fullPath}")
+
+  @POST("{fullPath}")
   Future<ErrorException<String>> exportFile(
       String fullPath, @Body() FilterModel filter);
 
-  @PUT("{fullPath}")
+  @POST("{fullPath}")
   Future<ErrorException<String>> add(String fullPath, @Body() Object request);
 
-  @DELETE("{fullPath}")
+  @PUT("{fullPath}")
   Future<ErrorException<String>> edit(String fullPath, @Body() Object request);
 
-  @POST("{fullPath}")
+  @DELETE("{fullPath}")
   Future<ErrorException<String>> delete(String fullPath);
+  @DELETE("{fullPath}")
+  Future<ErrorException<String>> deleteAll(String fullPath,@Body() List<Object> request);
+}
+
+abstract class BaseApi<OUT, ID> {
+  Future<ErrorException<OUT>> getViewModel(ID id);
+
+  Future<ErrorException<OUT>> getAll(FilterModel filter);
+
+  Future<ErrorException<OUT>> getAllEditor(FilterModel filter);
+
+  Future<ErrorException<OUT>> getOne(ID id);
+
+  Future<ErrorExceptionBase> exist(FilterModel filter);
+
+  Future<ErrorExceptionBase> count(FilterModel filter);
+
+  Future<ErrorException<OUT>> exportFile(FilterModel filter);
+
+  Future<ErrorException<OUT>> add(OUT request);
+
+  Future<ErrorException<OUT>> edit(OUT request);
+
+  Future<ErrorException<OUT>> delete(ID id);
+
+  Future<ErrorException<OUT>> deleteAll(List<OUT> objects);
 }

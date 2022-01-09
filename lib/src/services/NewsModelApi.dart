@@ -5,7 +5,7 @@ import 'package:base/src/models/entityModel/news/NewsContentModel.dart';
 import 'package:base/src/services/baseService.dart';
 
 class NewsModelApi extends BaseEntityService<int,NewsContentModel>{
-  NewsModelApi(String controllerURL, String baseUrl) : super(controllerURL, baseUrl);
+  NewsModelApi(String controllerURL) : super(controllerURL);
 
   // @override
   // Future<ErrorException<NewsContentModel>> createTask(String fullPath, FilterModel filter) {

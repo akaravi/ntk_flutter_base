@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'base_entity_apis.dart';
+part of 'base_entity_api.dart';
 
 // **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
-class _BaseEntityApi extends BaseEntityApi {
-  _BaseEntityApi(this._dio, Dio dio, {this.baseUrl}) : super(dio);
+class _BaseEntityApi implements BaseEntityApi {
+  _BaseEntityApi(this._dio, {this.baseUrl});
 
   final Dio _dio;
 
@@ -97,7 +97,7 @@ class _BaseEntityApi extends BaseEntityApi {
     final _data = filter;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
-            Options(method: 'PUT', headers: _headers, extra: _extra)
+            Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '{fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
@@ -113,7 +113,7 @@ class _BaseEntityApi extends BaseEntityApi {
     final _data = filter;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
-            Options(method: 'PUT', headers: _headers, extra: _extra)
+            Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '{fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
@@ -129,7 +129,7 @@ class _BaseEntityApi extends BaseEntityApi {
     final _data = filter;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
-            Options(method: 'PUT', headers: _headers, extra: _extra)
+            Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '{fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
@@ -148,7 +148,7 @@ class _BaseEntityApi extends BaseEntityApi {
     final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
-            Options(method: 'PUT', headers: _headers, extra: _extra)
+            Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '{fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
@@ -167,7 +167,7 @@ class _BaseEntityApi extends BaseEntityApi {
     final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
-            Options(method: 'DELETE', headers: _headers, extra: _extra)
+            Options(method: 'PUT', headers: _headers, extra: _extra)
                 .compose(_dio.options, '{fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
@@ -186,7 +186,26 @@ class _BaseEntityApi extends BaseEntityApi {
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
-            Options(method: 'POST', headers: _headers, extra: _extra)
+            Options(method: 'DELETE', headers: _headers, extra: _extra)
+                .compose(_dio.options, '{fullPath}',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<String>.fromJson(
+      _result.data!,
+      (json) => json as String,
+    );
+    return value;
+  }
+
+  @override
+  Future<ErrorException<String>> deleteAll(fullPath, request) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = request.map((e) => e.toJson()).toList();
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<String>>(
+            Options(method: 'DELETE', headers: _headers, extra: _extra)
                 .compose(_dio.options, '{fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
