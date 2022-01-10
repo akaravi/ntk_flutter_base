@@ -19,31 +19,37 @@ abstract class BaseEntityApi {
 
   @POST("{fullPath}")
   Future<ErrorException<String>> getAllEditor(
-      String fullPath, @Body() FilterModel filter);
+      @Path() String fullPath, @Body() FilterModel filter);
 
   @GET("{fullPath}")
-  Future<ErrorException<String>> getOne(String fullPath);
+  Future<ErrorException<String>> getOne(@Path() String fullPath);
 
   @POST("{fullPath}")
-  Future<ErrorExceptionBase> exist(String fullPath, @Body() FilterModel filter);
+  Future<ErrorExceptionBase> exist(
+      @Path() String fullPath, @Body() FilterModel filter);
 
   @POST("{fullPath}")
-  Future<ErrorExceptionBase> count(String fullPath, @Body() FilterModel filter);
+  Future<ErrorExceptionBase> count(
+      @Path() String fullPath, @Body() FilterModel filter);
 
   @POST("{fullPath}")
   Future<ErrorException<String>> exportFile(
-      String fullPath, @Body() FilterModel filter);
+      @Path() String fullPath, @Body() FilterModel filter);
 
   @POST("{fullPath}")
-  Future<ErrorException<String>> add(String fullPath, @Body() Object request);
+  Future<ErrorException<String>> add(
+      @Path() String fullPath, @Body() Object request);
 
   @PUT("{fullPath}")
-  Future<ErrorException<String>> edit(String fullPath, @Body() Object request);
+  Future<ErrorException<String>> edit(
+      @Path() String fullPath, @Body() Object request);
 
   @DELETE("{fullPath}")
-  Future<ErrorException<String>> delete(String fullPath);
+  Future<ErrorException<String>> delete(@Path() String fullPath);
+
   @DELETE("{fullPath}")
-  Future<ErrorException<String>> deleteAll(String fullPath,@Body() List<dynamic> request);
+  Future<ErrorException<String>> deleteAll(
+      @Path() String fullPath, @Body() List<dynamic> request);
 }
 
 abstract class BaseApi<OUT, ID> {

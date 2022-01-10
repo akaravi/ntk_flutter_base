@@ -10,4 +10,11 @@ class CaptchaModel {
   String? key;
   @JsonKey(name: 'Image')
   String? image;
+
+  CaptchaModel();
+
+  factory CaptchaModel.fromJson(Map<String, dynamic> json) =>
+      _$CaptchaModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CaptchaModelToJson(this);
 }

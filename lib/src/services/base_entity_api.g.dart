@@ -60,7 +60,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
@@ -79,7 +79,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
@@ -98,7 +98,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
@@ -114,7 +114,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
@@ -130,7 +130,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
@@ -149,7 +149,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
@@ -168,7 +168,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'PUT', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
@@ -187,7 +187,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
@@ -206,7 +206,7 @@ class _BaseEntityApi implements BaseEntityApi {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
-                .compose(_dio.options, '{fullPath}',
+                .compose(_dio.options, '${fullPath}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<String>.fromJson(
