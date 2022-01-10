@@ -40,7 +40,7 @@ class Login extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                               image:  DecorationImage(
-                                image: this.backgroundImage,
+                                image: backgroundImage,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -60,14 +60,14 @@ class Login extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold,
-                                color: this.primaryColor),
+                                color:  primaryColor),
                           ),
                           Text(
                             "APPNKT",
                             style: TextStyle(
                                 fontSize: 28.0,
                                 fontWeight: FontWeight.bold,
-                                color: this.primaryColor),
+                                color:  primaryColor),
                           ),
                         ],
                       ),
@@ -75,8 +75,8 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 40.0),
+              const Padding(
+                padding: EdgeInsets.only(left: 40.0),
                 child: Text(
                   "Email or mobile",
                   style: hintStyle,
@@ -120,8 +120,8 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 40.0),
+              const Padding(
+                padding: EdgeInsets.only(left: 40.0),
                 child: Text(
                   "captcha",
                   style: hintStyle,
@@ -216,7 +216,7 @@ class Login extends StatelessWidget {
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
                                   Icons.arrow_forward,
-                                  color: this.primaryColor,
+                                  color:  primaryColor,
                                 ),
                               ),
                             )
@@ -245,7 +245,7 @@ class Login extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "DON'T HAVE AN ACCOUNT?",
-                            style: TextStyle(color: this.primaryColor),
+                            style: TextStyle(color:  primaryColor),
                           ),
                         ),
                         onPressed: () => {},
