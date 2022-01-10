@@ -60,6 +60,8 @@ class MyApplication {
 }
 
 class ApplicationChangeNotifier {
+  //only accept change when variable need to write on disk
+  //prevent from change in app cycle coding
   ApplicationChangeNotifier(MyApplicationPreference s);
 
   setToken(String s) {
