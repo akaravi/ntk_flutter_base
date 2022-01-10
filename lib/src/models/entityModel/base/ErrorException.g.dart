@@ -10,8 +10,9 @@ ErrorException<TEntity> _$ErrorExceptionFromJson<TEntity>(
   Map<String, dynamic> json,
   TEntity Function(Object? json) fromJsonTEntity,
 ) =>
-    ErrorException<TEntity>()
-      ..isSuccess = json['IsSuccess'] as bool?
+    ErrorException<TEntity>(
+      json['IsSuccess'] as bool,
+    )
       ..status = json['Status'] as int?
       ..errorMessage = json['ErrorMessage'] as String?
       ..errorType = json['ErrorType'] as int?

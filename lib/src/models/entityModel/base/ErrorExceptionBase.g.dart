@@ -7,8 +7,9 @@ part of 'ErrorExceptionBase.dart';
 // **************************************************************************
 
 ErrorExceptionBase _$ErrorExceptionBaseFromJson(Map<String, dynamic> json) =>
-    ErrorExceptionBase()
-      ..isSuccess = json['IsSuccess'] as bool?
+    ErrorExceptionBase(
+      json['IsSuccess'] as bool,
+    )
       ..status = json['Status'] as int?
       ..errorMessage = json['ErrorMessage'] as String?
       ..errorType = json['ErrorType'] as int?

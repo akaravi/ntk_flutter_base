@@ -11,7 +11,7 @@ class ErrorException<TEntity> extends ErrorExceptionBase {
   @JsonKey(name: 'Item')
   TEntity? item;
 
-  ErrorException();
+  ErrorException(bool isSuccess) : super(isSuccess);
 
   factory   ErrorException.fromJson(
       Map<String, dynamic> json,

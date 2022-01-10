@@ -8,7 +8,7 @@ import 'src/backend/service/base/baseService.dart';
 Future<void> main() async {
   BaseEntityService w = BaseEntityService('NewsContent');
   AuthService ww = AuthService();
-  String? dd = await ww.splashInit();
+   ww.splashInit();
   var errorException = await w.getAll(FilterModel()..rowPerPage = 20);
   runApp(MyApp());
 }
