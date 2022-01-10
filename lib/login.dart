@@ -18,13 +18,13 @@ class Login extends StatelessWidget {
     final opacity = Container(
       color: Colors.black26.withAlpha(150),
     );
-    final hintStyle = TextStyle(color: Colors.grey, fontSize: 16.0);
+    const hintStyle =  TextStyle(color: Colors.grey, fontSize: 16.0);
     return Scaffold(
       body: SingleChildScrollView(
-        child: new Container(
+        child:  Container(
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            color: this.backgroundColor,
+            color:backgroundColor,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,19 +33,19 @@ class Login extends StatelessWidget {
               Expanded(
                 child: Stack(
                   children: [
-                    new ClipPath(
+                     ClipPath(
                       clipper: MyClipper(),
                       child: Stack(
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              image: new DecorationImage(
+                              image:  DecorationImage(
                                 image: this.backgroundImage,
                                 fit: BoxFit.cover,
                               ),
                             ),
                             alignment: Alignment.center,
-                            padding: EdgeInsets.only(top: 100.0, bottom: 100.0),
+                            padding: const EdgeInsets.only(top: 100.0, bottom: 100.0),
                           ),
                           opacity
                         ],
@@ -94,7 +94,7 @@ class Login extends StatelessWidget {
                     vertical: 10.0, horizontal: 20.0),
                 child: Row(
                   children: <Widget>[
-                    new Padding(
+                     const Padding(
                       padding: EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 15.0),
                       child: Icon(
@@ -108,7 +108,7 @@ class Login extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.5),
                       margin: const EdgeInsets.only(left: 00.0, right: 10.0),
                     ),
-                    new Expanded(
+                     const Expanded(
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -140,7 +140,7 @@ class Login extends StatelessWidget {
                 child: IntrinsicHeight(
                   child: Row(
                     children: <Widget>[
-                      new Padding(
+                       const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 15.0),
                         child: Icon(
@@ -154,7 +154,7 @@ class Login extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         margin: const EdgeInsets.only(left: 00.0, right: 10.0),
                       ),
-                      new Expanded(
+                       const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -166,7 +166,7 @@ class Login extends StatelessWidget {
                       Container(
                           width: 120,
                           margin: const EdgeInsets.only(left: 4.0),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
                                   'assets/drawable/load_capcha.png',
@@ -184,24 +184,24 @@ class Login extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(top: 20.0),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: new Row(
+                child:  Row(
                   children: <Widget>[
-                    new Expanded(
+                     Expanded(
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0)),
-                          backgroundColor: this.primaryColor,
+                          shape:  RoundedRectangleBorder(
+                              borderRadius:  BorderRadius.circular(30.0)),
+                          backgroundColor: primaryColor,
                         ),
                         child: Row(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               width: 32,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 8),
                               child: Text('LOGIN...',
-                                  style: TextStyle(
+                                  style:  TextStyle(
                                       color: Colors.white, fontSize: 20)),
                             ),
                             Expanded(child: Container()),
@@ -211,7 +211,7 @@ class Login extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
-                                        new BorderRadius.circular(30.0)),
+                                         BorderRadius.circular(30.0)),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
@@ -231,13 +231,13 @@ class Login extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(top: 20.0, bottom: 20),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: new Row(
+                child:  Row(
                   children: <Widget>[
-                    new Expanded(
+                     Expanded(
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0)),
+                          shape:  RoundedRectangleBorder(
+                              borderRadius:  BorderRadius.circular(30.0)),
                           backgroundColor: Colors.transparent,
                         ),
                         child: Container(
@@ -265,7 +265,7 @@ class Login extends StatelessWidget {
 class MyClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    Path p = new Path();
+    Path p =  Path();
     p.lineTo(size.width, 0.0);
     p.lineTo(size.width, size.height * 0.65);
     p.arcToPoint(
