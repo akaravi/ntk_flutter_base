@@ -12,12 +12,12 @@ import 'package:base/src/models/entityModel/base/FilterModel.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'auth_api.g.dart';
+part 'core_auth_api.g.dart';
 
 @RestApi()
 abstract class AuthMethodApi {
-  factory AuthMethodApi(Dio dio, {String baseUrl}) = _AuthMethodApi;
-
+  factory AuthMethodApi.create(Dio dio, {String baseUrl}) = _AuthMethodApi;
+  AuthMethodApi();
   @GET("api/v1/auth/captcha")
   Future<ErrorException<CaptchaModel>> captcha();
 

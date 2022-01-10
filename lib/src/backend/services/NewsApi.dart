@@ -2,7 +2,7 @@ import 'package:base/src/models/entityModel/base/ErrorException.dart';
 import 'package:base/src/models/entityModel/base/ErrorExceptionBase.dart';
 import 'package:base/src/models/entityModel/base/FilterModel.dart';
 import 'package:base/src/models/entityModel/news/NewsContentModel.dart';
-import 'package:base/src/services/base_entity_api.dart';
+import 'package:base/src/backend/services/base/base_entity_api.dart';
 import 'package:retrofit/retrofit.dart';
 class NewsApi implements BaseApi<NewsContentModel,int>{
 

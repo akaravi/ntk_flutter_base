@@ -1,12 +1,15 @@
 import 'package:base/src/models/entityModel/base/FilterModel.dart';
+import 'package:base/src/services/core/core_auth_api.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
-import 'src/services/baseService.dart';
+import 'src/backend/services/baseService.dart';
+import 'src/backend/services/core/core_auth_api.dart';
 
 Future<void> main() async {
   BaseEntityService w = BaseEntityService('NewsContent');
-  var errorException = await w.getAll(new FilterModel()..rowPerPage=20);
+  AuthMethodApi ww=AuthMethodApi()
+  var errorException = await w.getAll( FilterModel()..rowPerPage=20);
   runApp(MyApp());
 }
 

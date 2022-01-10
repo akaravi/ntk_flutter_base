@@ -8,7 +8,9 @@ part 'base_entity_api.g.dart';
 
 @RestApi()
 abstract class BaseEntityApi {
-  factory BaseEntityApi(Dio dio, {String baseUrl}) = _BaseEntityApi;
+  factory BaseEntityApi.create(Dio dio, {String baseUrl}) = _BaseEntityApi;
+
+  BaseEntityApi();
 
   @GET("{fullPath}")
   Future<ErrorException<String>> getViewModel(@Path() String fullPath);
