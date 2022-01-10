@@ -43,7 +43,7 @@ abstract class BaseEntityApi {
   @DELETE("{fullPath}")
   Future<ErrorException<String>> delete(String fullPath);
   @DELETE("{fullPath}")
-  Future<ErrorException<String>> deleteAll(String fullPath,@Body() List<Object> request);
+  Future<ErrorException<String>> deleteAll(String fullPath,@Body() List<dynamic> request);
 }
 
 abstract class BaseApi<OUT, ID> {

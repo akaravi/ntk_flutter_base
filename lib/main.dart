@@ -1,9 +1,12 @@
-import 'login.dart';
+import 'package:base/src/models/entityModel/base/FilterModel.dart';
 import 'package:flutter/material.dart';
 
-import 'splash.dart';
+import 'login.dart';
+import 'src/services/baseService.dart';
 
-void main() {
+Future<void> main() async {
+  BaseEntityService w = BaseEntityService('NewsContent');
+  var errorException = await w.getAll(new FilterModel()..rowPerPage=20);
   runApp(MyApp());
 }
 
@@ -11,12 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return  MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme:  ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new Login(),
+      home:  Login(),
     );
   }
 }

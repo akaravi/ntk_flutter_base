@@ -25,9 +25,9 @@ class CustomHeader {
     //add device sim operator to header
     headers['SimCard'] = values.simOperator;
     //add content type
-    headers['Content-type'] = 'application/json; charset=utf-8';
+    headers['Content-type'] = 'application/json';
     //add notification Id if support
-    headers['Content-type'] = values.notificationID;
+    headers['NotificationId'] = values.notificationID;
     return headers;
   }
 }
