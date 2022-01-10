@@ -1,8 +1,5 @@
-import 'package:base/src/backend/services/base/base_entity_api.dart';
-import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
-
-
+import 'package:retrofit/retrofit.dart';
 
 part 'core_location_api.g.dart';
 @RestApi()

@@ -1,5 +1,5 @@
 import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/backend/services/base/base_entity_api.dart';
+import 'package:base/src/backend/api/base/base_entity_api.dart';
 import 'package:base/src/models/entityModel/base/ErrorException.dart';
 import 'package:base/src/models/entityModel/base/ErrorExceptionBase.dart';
 import 'package:base/src/models/entityModel/base/FilterModel.dart';
@@ -13,7 +13,7 @@ class BaseEntityService<TEntity extends Object, TKeyID extends Object>
   late BaseEntityApi api;
 
   BaseEntityService(this.controllerURL) {
-    api = BaseEntityApi.create(DioApi.getDio());
+    api = BaseEntityApi.create(getDio());
   }
 
   @override

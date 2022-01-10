@@ -1,4 +1,5 @@
 import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entityModel/enums/EnumOperatingSystemType.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'TokenDeviceClientInfoDtoModel.g.dart';
@@ -10,7 +11,7 @@ class TokenDeviceClientInfoDtoModel {
   @JsonKey(name: 'ClientMACAddress')
   String? clientMACAddress;
   @JsonKey(name: 'OSType')
-  int? oSType;
+  EnumOperatingSystemType? oSType;
   @JsonKey(name: 'DeviceType')
   EnumDeviceType? deviceType;
   @JsonKey(name: 'PackageName')

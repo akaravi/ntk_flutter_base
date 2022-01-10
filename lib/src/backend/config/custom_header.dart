@@ -1,15 +1,16 @@
 import '../../my_application.dart';
 
 class CustomHeader {
- static Map<String, dynamic> getHeaders() {
+  static Map<String, dynamic> getHeaders() {
     var values = MyApplication.get();
     Map<String, dynamic> headers = {};
 
     //add token to header
     headers['Token'] = values.token;
-    headers['Authorization'] = values.token;
-    headers['DeviceToken'] = values.token;
-    //add packageName header
+    if (values.token.isNotEmpty) {
+      headers['Authorization'] = values.token;
+      headers['DeviceToken'] = values.token;
+    } //add packageName header
     headers['PackageName'] = values.packageName;
     //add version of code as build version to header
     headers['AppBuildVer'] = values.versionCode;

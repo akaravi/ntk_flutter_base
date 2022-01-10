@@ -9,7 +9,7 @@ import 'package:dio/dio.dart';
   //prefix String url of api
   String prefixUrl = "api/v1/";
 
-  static Dio getDio() {
+   Dio getDio() {
     var option = BaseOptions()
       ..baseUrl = MyApplication.get().baseUrl
       //add timeout

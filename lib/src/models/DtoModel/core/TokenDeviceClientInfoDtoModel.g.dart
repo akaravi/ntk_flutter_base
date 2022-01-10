@@ -11,7 +11,8 @@ TokenDeviceClientInfoDtoModel _$TokenDeviceClientInfoDtoModelFromJson(
     TokenDeviceClientInfoDtoModel()
       ..securityKey = json['SecurityKey'] as String?
       ..clientMACAddress = json['ClientMACAddress'] as String?
-      ..oSType = json['OSType'] as int?
+      ..oSType =
+          $enumDecodeNullable(_$EnumOperatingSystemTypeEnumMap, json['OSType'])
       ..deviceType =
           $enumDecodeNullable(_$EnumDeviceTypeEnumMap, json['DeviceType'])
       ..packageName = json['PackageName'] as String?
@@ -30,7 +31,7 @@ Map<String, dynamic> _$TokenDeviceClientInfoDtoModelToJson(
     <String, dynamic>{
       'SecurityKey': instance.securityKey,
       'ClientMACAddress': instance.clientMACAddress,
-      'OSType': instance.oSType,
+      'OSType': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
       'DeviceType': _$EnumDeviceTypeEnumMap[instance.deviceType],
       'PackageName': instance.packageName,
       'NotificationId': instance.notificationId,
@@ -43,6 +44,17 @@ Map<String, dynamic> _$TokenDeviceClientInfoDtoModelToJson(
       'Language': instance.language,
       'DeviceBrand': instance.deviceBrand,
     };
+
+const _$EnumOperatingSystemTypeEnumMap = {
+  EnumOperatingSystemType.none: 0,
+  EnumOperatingSystemType.windows: 1,
+  EnumOperatingSystemType.appleMacOS: 2,
+  EnumOperatingSystemType.linux: 3,
+  EnumOperatingSystemType.appleIOS: 4,
+  EnumOperatingSystemType.googleAndroid: 5,
+  EnumOperatingSystemType.oxygenOS: 6,
+  EnumOperatingSystemType.chromium: 7,
+};
 
 const _$EnumDeviceTypeEnumMap = {
   EnumDeviceType.none: 0,
