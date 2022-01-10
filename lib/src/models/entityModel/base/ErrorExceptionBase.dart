@@ -5,7 +5,7 @@ part 'ErrorExceptionBase.g.dart';
 @JsonSerializable()
 class ErrorExceptionBase {
   @JsonKey(name: "IsSuccess")
-  bool? isSuccess;
+  bool isSuccess;
   @JsonKey(name: "Status")
   int? status;
   @JsonKey(name: "ErrorMessage")
@@ -22,7 +22,8 @@ class ErrorExceptionBase {
   String? token;
   @JsonKey(name: "Errors")
   Map<String, List<String>>? errors;
-  ErrorExceptionBase();
+
+  ErrorExceptionBase(this.isSuccess);
 
   factory ErrorExceptionBase.fromJson(Map<String, dynamic> json) =>
       _$ErrorExceptionBaseFromJson(json);
