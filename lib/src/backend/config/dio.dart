@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:base/src/backend/config/custom_header.dart';
 import 'package:base/src/my_application.dart';
 import 'package:dio/dio.dart';
@@ -24,7 +26,13 @@ import 'package:retrofit/dio.dart';
     ..interceptors.add(PrettyDioLogger( requestHeader: true,
       requestBody: true,
       responseBody: true,
-      responseHeader: false,
-      compact: false,));
+      responseHeader: true,
+      compact: false,))
+     ..interceptors.add(InterceptorsWrapper(onResponse: (e, handler) {
+       e.data = jsonDecode(e.data as String);
+       handler.next(e);
+     },));
+
+
   }
 }

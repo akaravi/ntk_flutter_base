@@ -28,6 +28,7 @@ abstract class AuthMethodApi {
   Future<ErrorException<CaptchaModel>> correctTokenInfo();
 
   @POST("api/v1/auth/GetTokenDevice")
+  @Header("content-type: application/json")
   Future<ErrorException<TokenInfoModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
  @POST("api/v1/auth/GetTokenDevice")
