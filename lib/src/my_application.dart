@@ -5,7 +5,7 @@ class MyApplication {
 
   String _deviceName = "sony Z";
 
-  var _notificationID = "";
+   final  _notificationID = "";
 
   factory MyApplication.get() => _instance ??= MyApplication._();
 
@@ -15,9 +15,9 @@ class MyApplication {
   String _token = "";
 
   //base url of apis
-  String _baseUrl = 'https://apicms.ir/';
+  final String _baseUrl = 'https://apicms.ir/';
 
-  String _packageName = 'ntk.android.ticketing.APPNTK';
+  final String _packageName = 'ntk.android.ticketing.APPNTK';
 
   //locale
   String _lang = "fa";
@@ -29,10 +29,10 @@ class MyApplication {
   String _simOperator = "MTN";
 
   //as "AppBuildVer" in headers for version of app
-  int _versionCode = 1;
+  final int _versionCode = 1;
 
   //as "AppSourceVer" in headers for version sourced used
-  String _versionName = '1.2.22';
+  final String _versionName = '1.2.22';
 
   String _deviceId = "SONY_Z_DEVICE_ID";
 
