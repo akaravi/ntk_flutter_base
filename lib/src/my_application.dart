@@ -1,16 +1,25 @@
-import 'package:base/src/backend/config/my_application_prefnrece.dart';
+import 'package:base/src/backend/config/my_application_preference.dart';
+import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entityModel/enums/EnumOperatingSystemType.dart';
 
 class MyApplication {
   static MyApplication? _instance;
-
-  String _deviceName = "sony Z";
-
-   final  _notificationID = "";
 
   factory MyApplication.get() => _instance ??= MyApplication._();
 
   MyApplication._();
 
+  //enum of type of device
+  late EnumDeviceType _deviceTypeEnum;
+  late EnumOperatingSystemType _osTypeEnum;
+
+  //device name of
+  String _deviceName = "sony Z";
+
+  //notification id
+  final _notificationID = "";
+
+  //for
   //token of app
   String _token = "";
 
@@ -57,6 +66,10 @@ class MyApplication {
   String get token => _token;
 
   get notificationID => _notificationID;
+
+  EnumOperatingSystemType get osTypeEnum => _osTypeEnum;
+
+  EnumDeviceType get deviceTypeEnum => _deviceTypeEnum;
 }
 
 class ApplicationChangeNotifier {
@@ -90,5 +103,13 @@ class ApplicationChangeNotifier {
 
   void setDeviceName(String s) {
     MyApplication.get()._deviceName = s;
+  }
+
+  void setDeviceTypeEnum(EnumDeviceType type) {
+    MyApplication.get()._deviceTypeEnum = type;
+  }
+
+  void setOsType(EnumOperatingSystemType os) {
+    MyApplication.get()._osTypeEnum = os;
   }
 }

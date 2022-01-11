@@ -15,14 +15,15 @@ class AuthService extends DioApi {
 
   Stream<String?> splashInit() async* {
     //get device token at frist
+    var application = MyApplication.get();
     TokenDeviceClientInfoDtoModel request = TokenDeviceClientInfoDtoModel()
-      ..packageName = MyApplication.get().packageName
-      ..appBuildVer = MyApplication.get().versionCode
-      ..appSourceVer = MyApplication.get().versionName
-      ..oSType = EnumOperatingSystemType.chromium
-      ..deviceType = EnumDeviceType.android
-      ..country = MyApplication.get().country
-      ..language = MyApplication.get().lang;
+      ..packageName = application.packageName
+      ..appBuildVer = application.versionCode
+      ..appSourceVer = application.versionName
+      ..oSType = application.osTypeEnum
+      ..deviceType =application.deviceTypeEnum
+      ..country = application.country
+      ..language = application.lang;
     var errorException = await directAPI.getTokenDevice(request);
     if (errorException.isSuccess) {
       yield 'token get successfully';
