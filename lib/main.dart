@@ -1,5 +1,6 @@
 import 'package:base/src/backend/service/core/auth_service.dart';
 import 'package:base/src/models/entityModel/base/FilterModel.dart';
+import 'package:base/src/my_application.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: MyApplication.get().baseUrl,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

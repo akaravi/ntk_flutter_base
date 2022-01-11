@@ -74,9 +74,23 @@ class MyApplicationPreference {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     if (kIsWeb) {
       app.setDeviceTypeEnum(EnumDeviceType.webSite);
-      app.setOsType(EnumOperatingSystemType.windows);
       //set device information
       WebBrowserInfo webBrowserInfo = await deviceInfo.webBrowserInfo;
+      String platform = webBrowserInfo.platform ?? 'none';
+      if (platform.toLowerCase().contains('win')) {
+        app.setOsType(EnumOperatingSystemType.windows);
+      } else if (platform.toLowerCase().contains('linux')) {
+        app.setOsType(EnumOperatingSystemType.linux);
+      } else if (platform.toLowerCase().contains('android')) {
+        app.setOsType(EnumOperatingSystemType.googleAndroid);
+      } else if (platform.toLowerCase().contains('ios')) {
+        app.setOsType(EnumOperatingSystemType.appleIOS);
+      } else if (platform.toLowerCase().contains('mac')) {
+        app.setOsType(EnumOperatingSystemType.appleMacOS);
+      } else {
+        app.setOsType(EnumOperatingSystemType.none);
+      }
+
       app.setDeviceName(webBrowserInfo.browserName.name);
       app.setDeviceId((webBrowserInfo.vendor ?? 'default') +
           (webBrowserInfo.userAgent ?? '') +
