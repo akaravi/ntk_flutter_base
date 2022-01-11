@@ -23,6 +23,7 @@ class AuthService extends DioApi {
       ..deviceType = application.deviceTypeEnum
       ..country = application.country
       ..language = application.lang;
+    // var e= await directAPI.getDevice(request);
     var errorException = await directAPI.getTokenDevice(request);
     if (errorException.isSuccess) {
       yield SplashProgress('check token of device', .20);

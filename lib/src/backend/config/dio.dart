@@ -18,6 +18,7 @@ import 'package:dio/dio.dart';
       ..sendTimeout = _timeout
       //set headers of request
       ..headers = CustomHeader.getHeaders();
+    option.contentType= 'application/json';
     return Dio(option);
   }
 }

@@ -30,6 +30,9 @@ abstract class AuthMethodApi {
   @POST("api/v1/auth/GetTokenDevice")
   Future<ErrorException<TokenInfoModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
+ @POST("api/v1/auth/GetTokenDevice")
+  Future<String> getDevice(
+      @Body() TokenDeviceClientInfoDtoModel request);
 
   @POST("api/v1/auth/mobileConfirm")
   Future<ErrorExceptionBase> mobileConfirm(

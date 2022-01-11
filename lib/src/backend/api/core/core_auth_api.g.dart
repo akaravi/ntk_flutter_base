@@ -72,6 +72,22 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
+  Future<String> getDevice(request) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _result = await _dio.fetch<String>(_setStreamType<String>(
+        Options(method: 'POST', headers: _headers, extra: _extra)
+            .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
+                queryParameters: queryParameters, data: _data)
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data!;
+    return value;
+  }
+
+  @override
   Future<ErrorExceptionBase> mobileConfirm(model) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
