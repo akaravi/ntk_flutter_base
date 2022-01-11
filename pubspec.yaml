@@ -41,6 +41,8 @@ dependencies:
   json_annotation: ^4.4.0
   #retrofir
   retrofit: '>=3.0.0 <4.0.0'
+  #for log
+  pretty_dio_logger: ^1.1.1
   #for device info
   device_info_plus: ^3.2.0
   #for save locally:
