@@ -1,22 +1,31 @@
+import 'dart:async';
+
 import 'package:base/src/backend/service/core/auth_service.dart';
-import 'package:base/src/models/entityModel/base/FilterModel.dart';
 import 'package:base/src/my_application.dart';
 import 'package:flutter/material.dart';
 
-import 'login.dart';
+import 'splash.dart';
 import 'src/backend/config/my_application_preference.dart';
 import 'src/backend/service/base/baseService.dart';
 
-Future<void> main() async {
-  await MyApplicationPreference().read();
-  BaseEntityService w = BaseEntityService('NewsContent');
-  AuthService ww = AuthService();
-  await ww.splashInit();
-  // var errorException = await w.getAll(FilterModel()..rowPerPage = 20);
-  runApp(MyApp());
+void main() async {
+  await runZonedGuarded(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
+      await MyApplicationPreference().read();
+      // BaseEntityService w = BaseEntityService('NewsContent');
+      // AuthService ww = AuthService();
+      // await ww.splashInit();
+      // var errorException = await w.getAll(FilterModel()..rowPerPage = 20);
+      runApp(const MyApp());
+    },
+    (error, st) => print(error),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -25,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: const Splash(),
     );
   }
 }

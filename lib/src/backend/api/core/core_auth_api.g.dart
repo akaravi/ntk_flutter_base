@@ -52,239 +52,135 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> getTokenDevice(request) async {
+  Future<ErrorException<TokenInfoModel>> getTokenDevice(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
+    final value = ErrorException<TokenInfoModel>.fromJson(
       _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
+      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> mobileConfirm(model) async {
+  Future<ErrorExceptionBase> mobileConfirm(model) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(model.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/mobileConfirm',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
+    final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> emailConfirm(request) async {
+  Future<ErrorExceptionBase> emailConfirm(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/emailConfirm',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
+    final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> signUpUser(request) async {
+  Future<ErrorException<CoreUserModel>> signUpUser(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorException<CoreUserModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/GetTokenD/signup',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
+    final value = ErrorException<CoreUserModel>.fromJson(
       _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
+      (json) => CoreUserModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> signInUser(request) async {
+  Future<ErrorException<TokenInfoModel>> signInUser(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/signin',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
+    final value = ErrorException<TokenInfoModel>.fromJson(
       _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
+      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> renewToken(request) async {
+  Future<ErrorException<TokenInfoModel>> forgetPassword(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
-    return value;
-  }
-
-  @override
-  Future<ErrorException<CaptchaModel>> changePassword(request) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
-    return value;
-  }
-
-  @override
-  Future<ErrorException<CaptchaModel>> forgetPassword(request) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/forgetPassword',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
+    final value = ErrorException<TokenInfoModel>.fromJson(
       _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
+      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<CaptchaModel>> signInUserBySMS(request) async {
+  Future<ErrorException<TokenInfoModel>> signInUserBySMS(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
+        _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, 'api/v1/auth/signInBySms',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
+    final value = ErrorException<TokenInfoModel>.fromJson(
       _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
-    return value;
-  }
-
-  @override
-  Future<ErrorException<CaptchaModel>> logout(request) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
-    return value;
-  }
-
-  @override
-  Future<ErrorException<CaptchaModel>> existToken(request) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = request;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
-    return value;
-  }
-
-  @override
-  Future<ErrorException<String>> getAll(fullPath, filter) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = filter;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
-            Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
-      _result.data!,
-      (json) => json as String,
+      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

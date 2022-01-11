@@ -1,3 +1,4 @@
+import 'package:base/src/backend/service/core/auth_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,8 +17,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    controller = new AnimationController(
-      duration: Duration(milliseconds: 1000),
+    controller = AnimationController(
+      duration: const Duration(milliseconds: 1000),
       vsync: this,
     );
     animation = Tween(begin: 0.0, end: 1.0).animate(controller)
@@ -37,8 +38,23 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
+    return StreamBuilder<SplashProgress>(
+        stream: AuthService().splashInit(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return splash(snapshot.data ?? SplashProgress('', 10));
+          } else if (snapshot.hasError) {
+            return const Center(
+              child: Text('Errror'),
+            );
+          } else
+            return Container();
+        });
+  }
+
+  Widget splash(SplashProgress data) {
     final background = Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/drawable/splash_background.jpg"),
               fit: BoxFit.cover)),
@@ -51,12 +67,12 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
       width: 180,
       height: 180,
     );
-    final appTitle = Text(
+    const appTitle = Text(
       "APPNTK",
       style: TextStyle(color: Colors.white),
     );
 
-    var cortTextStyle = TextStyle(
+    var cortTextStyle = const TextStyle(
       fontSize: 12,
       color: Colors.white,
     );
@@ -83,7 +99,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                   child: SlideTransition(
                     child: appTitle,
                     position: Tween<Offset>(
-                            begin: Offset(0.0, -1.0), end: Offset.zero)
+                            begin: const Offset(0.0, -1.0), end: Offset.zero)
                         .animate(controller),
                   ),
                 ),
@@ -97,7 +113,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 42, vertical: 16),
                     child: LinearProgressIndicator(
-                      value: .2,
+                      value: data.progress,
                       color: Colors.amber,
                       backgroundColor: s[800],
                       semanticsLabel: 'Linear progress indicator',
@@ -107,8 +123,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                 FadeTransition(
                   opacity: animation,
                   child: Text(
-                    'getting device token',
-                    style: TextStyle(color: Colors.white, fontSize: 14),
+                    data.title,
+                    style: const TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
                 Expanded(
@@ -124,14 +140,14 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                         "@NTK CORP",
                         style: cortTextStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Text(
                         '-',
                         style: cortTextStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Text(
@@ -141,7 +157,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                     ],
                   ),
                 ),
-                SizedBox(
+               const SizedBox(
                   height: 23,
                 )
               ],

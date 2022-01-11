@@ -48,4 +48,11 @@ class TokenInfoModel {
   String? title;
   @JsonKey(name: 'PhotoUrl')
   String? photoUrl;
+
+  TokenInfoModel();
+
+  factory TokenInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$TokenInfoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TokenInfoModelToJson(this);
 }

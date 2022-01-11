@@ -37,7 +37,8 @@ class _BaseEntityApi implements BaseEntityApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = filter;
+    final _data = <String, dynamic>{};
+    _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -56,7 +57,8 @@ class _BaseEntityApi implements BaseEntityApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = filter;
+    final _data = <String, dynamic>{};
+    _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -94,7 +96,8 @@ class _BaseEntityApi implements BaseEntityApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = filter;
+    final _data = <String, dynamic>{};
+    _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -110,7 +113,8 @@ class _BaseEntityApi implements BaseEntityApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = filter;
+    final _data = <String, dynamic>{};
+    _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -126,7 +130,8 @@ class _BaseEntityApi implements BaseEntityApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = filter;
+    final _data = <String, dynamic>{};
+    _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<String>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
