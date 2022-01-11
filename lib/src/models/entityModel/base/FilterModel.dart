@@ -35,4 +35,10 @@ class FilterModel {
     filters!.add(f);
     return this;
   }
+  FilterModel();
+
+  factory FilterModel.fromJson(Map<String, dynamic> json) =>
+      _$FilterModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$FilterModelToJson(this);
 }
