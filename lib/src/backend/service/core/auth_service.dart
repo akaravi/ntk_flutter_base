@@ -44,7 +44,9 @@ class AuthService extends DioApi {
     await ApplicationAppService().currentApp();
     yield SplashProgress('Getting app information', 1);
 
-     await ApplicationIntroService().getAll(FilterModel()..rowPerPage=20);
+    await ApplicationIntroService().getAll(FilterModel()..rowPerPage = 20);
+    await ApplicationIntroService().getOne(28);
+    await ApplicationIntroService().getOne(28);
   }
 }
 

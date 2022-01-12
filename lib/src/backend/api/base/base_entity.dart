@@ -3,7 +3,6 @@ import 'package:base/src/models/entity/base/ErrorException.dart';
 import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
 import 'package:base/src/models/entity/base/FilterModel.dart';
 import 'package:dio/dio.dart';
-import 'package:retrofit/retrofit.dart';
 
 part 'generic_base_entitiy.dart';
 
@@ -22,10 +21,9 @@ abstract class AbstractBaseApi<OUT, ID> {
 
   Future<ErrorException<OUT>> getAllEditor(FilterModel filter);
 
-  Future<ErrorException<OUT>> getOne(@Path() String fullPath);
+  Future<ErrorException<OUT>> getOne(ID id);
 
-  Future<ErrorExceptionBase> exist(
-     FilterModel filter);
+  Future<ErrorExceptionBase> exist(FilterModel filter);
 
   Future<ErrorExceptionBase> count(FilterModel filter);
 
@@ -35,7 +33,7 @@ abstract class AbstractBaseApi<OUT, ID> {
 
   Future<ErrorException<OUT>> edit(OUT request);
 
-  Future<ErrorException<OUT>> delete(@Path() String fullPath);
+  Future<ErrorException<OUT>> delete(ID id);
 
   //todo ask
   Future<ErrorException<OUT>> deleteAll(List<OUT> request);

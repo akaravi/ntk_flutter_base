@@ -65,7 +65,8 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/getAllEditor"),
+                .compose(
+                    _dio.options, (prefixUrl + controllerUrl + "/getAllEditor"),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
@@ -76,7 +77,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorException<OUT>> getOne(fullPath) async {
+  Future<ErrorException<OUT>> getOne(ID d) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -84,7 +85,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '${fullPath}',
+                .compose(_dio.options, (prefixUrl + controllerUrl + "/$d"),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
@@ -95,7 +96,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorExceptionBase> exist( filter) async {
+  Future<ErrorExceptionBase> exist(filter) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -104,7 +105,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options,  (prefixUrl + controllerUrl + "/Exist"),
+                .compose(_dio.options, (prefixUrl + controllerUrl + "/Exist"),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
@@ -112,7 +113,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorExceptionBase> count( filter) async {
+  Future<ErrorExceptionBase> count(filter) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -121,7 +122,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options,  (prefixUrl + controllerUrl + "/Count"),
+                .compose(_dio.options, (prefixUrl + controllerUrl + "/Count"),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
@@ -138,7 +139,8 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, ( (prefixUrl + controllerUrl + "/ExportFile")),
+                .compose(
+                    _dio.options, ((prefixUrl + controllerUrl + "/ExportFile")),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
@@ -149,7 +151,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorException<OUT>> add( request) async {
+  Future<ErrorException<OUT>> add(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -168,7 +170,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorException<OUT>> edit( request) async {
+  Future<ErrorException<OUT>> edit(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -187,7 +189,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorException<OUT>> delete(fullPath) async {
+  Future<ErrorException<OUT>> delete(ID id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -195,7 +197,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
-                .compose(_dio.options, '${fullPath}',
+                .compose(_dio.options, (prefixUrl + controllerUrl + "/$id"),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
@@ -206,7 +208,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
-  Future<ErrorException<OUT>> deleteAll( request) async {
+  Future<ErrorException<OUT>> deleteAll(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -214,7 +216,8 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
-                .compose(_dio.options,  (prefixUrl + controllerUrl + "/DeleteList"),
+                .compose(
+                    _dio.options, (prefixUrl + controllerUrl + "/DeleteList"),
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(

@@ -8,15 +8,18 @@ class ApplicationIntroService extends DioApi {
   //api caller reference
   late ApplicationIntroMethodApi directAPI;
 
-  String controlerUrl='ApplicationIntro';
-
-
+  String controlerUrl = 'ApplicationIntro';
 
   ApplicationIntroService() {
     directAPI = ApplicationIntroMethodApi.create(jsonDecodeDio());
   }
 
-  Future<ErrorException<ApplicationIntroModel>> getAll(FilterModel filterModel){
+  Future<ErrorException<ApplicationIntroModel>> getAll(
+      FilterModel filterModel) {
     return directAPI.getAll(filterModel);
+  }
+
+  Future<ErrorException<ApplicationIntroModel>> getOne(int id) {
+    return directAPI.getOne(id);
   }
 }
