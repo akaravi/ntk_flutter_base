@@ -13,7 +13,7 @@ class BaseEntityService<TEntity extends Object, TKeyID extends Object>
   late BaseEntityApi api;
 
   BaseEntityService(this.controllerURL) {
-    api = BaseEntityApi.create(getDio());
+    api = BaseEntityApi.create(jsonDecodeDio());
   }
 
   @override

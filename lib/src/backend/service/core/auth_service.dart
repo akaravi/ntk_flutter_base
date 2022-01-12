@@ -1,5 +1,6 @@
 import 'package:base/src/backend/api/core/core_auth_api.dart';
 import 'package:base/src/backend/config/dio.dart';
+import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/dtoModel/core/TokenDeviceClientInfoDtoModel.dart';
 import 'package:base/src/my_application.dart';
 
@@ -8,11 +9,11 @@ class AuthService extends DioApi {
   late AuthMethodApi directAPI;
 
   AuthService() {
-    directAPI = AuthMethodApi.create(getDio());
+    directAPI = AuthMethodApi.create(jsonDecodeDio());
   }
 
   Stream<SplashProgress> splashInit() async* {
-    //get device token at frist
+    //get device token at first
     yield SplashProgress('get token of device', .10);
     var application = MyApplication.get();
     TokenDeviceClientInfoDtoModel request = TokenDeviceClientInfoDtoModel()
@@ -24,10 +25,18 @@ class AuthService extends DioApi {
       ..country = application.country
       ..language = application.lang;
     // var e= await directAPI.getDevice(request);
-    var errorException = await directAPI.getTokenDevice(request);
-    if (errorException.isSuccess) {
+    var tokenResponse = await directAPI.getTokenDevice(request);
+    if (!tokenResponse.isSuccess) {
+      throw Exception(tokenResponse);
+    } else {
+      MyApplicationPreference()
+        ..changeToken(tokenResponse.item?.deviceToken ?? '')
+        ..changeLanguage(tokenResponse.item?.language ?? '');
       yield SplashProgress('check token of device', .20);
+      //get
     }
+    var themeResponse=aw
+
   }
 }
 
