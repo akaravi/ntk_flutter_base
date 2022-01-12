@@ -1,6 +1,6 @@
-import 'package:base/src/models/entityModel/base/ErrorException.dart';
-import 'package:base/src/models/entityModel/base/ErrorExceptionBase.dart';
-import 'package:base/src/models/entityModel/base/FilterModel.dart';
+import 'package:base/src/models/entity/base/ErrorException.dart';
+import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
+import 'package:base/src/models/entity/base/FilterModel.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

@@ -1,8 +1,8 @@
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/api/base/base_entity_api.dart';
-import 'package:base/src/models/entityModel/base/ErrorException.dart';
-import 'package:base/src/models/entityModel/base/ErrorExceptionBase.dart';
-import 'package:base/src/models/entityModel/base/FilterModel.dart';
+import 'package:base/src/models/entity/base/ErrorException.dart';
+import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
+import 'package:base/src/models/entity/base/FilterModel.dart';
 
 class BaseEntityService<TEntity extends Object, TKeyID extends Object>
     extends DioApi implements BaseApi<String, int> {

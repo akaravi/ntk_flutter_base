@@ -1,17 +1,17 @@
-import 'package:base/src/models/dtoModel/core/AuthEmailConfirmDtoModel.dart';
-import 'package:base/src/models/dtoModel/core/AuthMobileConfirmDtoModel.dart';
-import 'package:base/src/models/dtoModel/core/AuthRenewTokenModel.dart';
-import 'package:base/src/models/dtoModel/core/AuthUserChangePasswordModel.dart';
-import 'package:base/src/models/dtoModel/core/AuthUserSignInBySmsDtoModel.dart';
-import 'package:base/src/models/dtoModel/core/AuthUserSignInModel.dart';
-import 'package:base/src/models/dtoModel/core/AuthUserSignOutModel.dart';
-import 'package:base/src/models/dtoModel/core/TokenDeviceClientInfoDtoModel.dart';
-import 'package:base/src/models/entityModel/base/CaptchaModel.dart';
-import 'package:base/src/models/entityModel/base/ErrorException.dart';
-import 'package:base/src/models/entityModel/base/ErrorExceptionBase.dart';
-import 'package:base/src/models/entityModel/base/FilterModel.dart';
-import 'package:base/src/models/entityModel/base/TokenInfoModel.dart';
-import 'package:base/src/models/entityModel/core/CoreUserModel.dart';
+import 'package:base/src/models/dto/core/AuthEmailConfirmDtoModel.dart';
+import 'package:base/src/models/dto/core/AuthMobileConfirmDtoModel.dart';
+import 'package:base/src/models/dto/core/AuthRenewTokenModel.dart';
+import 'package:base/src/models/dto/core/AuthUserChangePasswordModel.dart';
+import 'package:base/src/models/dto/core/AuthUserSignInBySmsDtoModel.dart';
+import 'package:base/src/models/dto/core/AuthUserSignInModel.dart';
+import 'package:base/src/models/dto/core/AuthUserSignOutModel.dart';
+import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
+import 'package:base/src/models/entity/base/CaptchaModel.dart';
+import 'package:base/src/models/entity/base/ErrorException.dart';
+import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
+import 'package:base/src/models/entity/base/FilterModel.dart';
+import 'package:base/src/models/entity/base/TokenInfoModel.dart';
+import 'package:base/src/models/entity/core/CoreUserModel.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -20,7 +20,9 @@ part 'core_auth_api.g.dart';
 @RestApi()
 abstract class AuthMethodApi {
   factory AuthMethodApi.create(Dio dio, {String baseUrl}) = _AuthMethodApi;
+
   AuthMethodApi();
+
   @GET("api/v1/auth/captcha")
   Future<ErrorException<CaptchaModel>> captcha();
 
@@ -28,12 +30,9 @@ abstract class AuthMethodApi {
   Future<ErrorException<CaptchaModel>> correctTokenInfo();
 
   @POST("api/v1/auth/GetTokenDevice")
-  @Header("content-type: application/json")
   Future<ErrorException<TokenInfoModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
- @POST("api/v1/auth/GetTokenDevice")
-  Future<String> getDevice(
-      @Body() TokenDeviceClientInfoDtoModel request);
+
 
   @POST("api/v1/auth/mobileConfirm")
   Future<ErrorExceptionBase> mobileConfirm(
@@ -67,11 +66,11 @@ abstract class AuthMethodApi {
   Future<ErrorException<TokenInfoModel>> signInUserBySMS(
       @Body() AuthUserSignInBySmsDtoModel request);
 
-  // @GET("api/v1/auth/GetTokenDevice")
-  // Future<ErrorException<CaptchaModel>> logout(
-  //     @Body() AuthUserSignOutModel request);
-  //
-  // @GET("api/v1/auth/GetTokenDevice")
-  // Future<ErrorException<CaptchaModel>> existToken(@Body() FilterModel request);
+// @GET("api/v1/auth/GetTokenDevice")
+// Future<ErrorException<CaptchaModel>> logout(
+//     @Body() AuthUserSignOutModel request);
+//
+// @GET("api/v1/auth/GetTokenDevice")
+// Future<ErrorException<CaptchaModel>> existToken(@Body() FilterModel request);
 
 }

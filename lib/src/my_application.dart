@@ -1,6 +1,6 @@
 import 'package:base/src/backend/config/my_application_preference.dart';
-import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
-import 'package:base/src/models/entityModel/enums/EnumOperatingSystemType.dart';
+import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
 
 class MyApplication {
   static MyApplication? _instance;

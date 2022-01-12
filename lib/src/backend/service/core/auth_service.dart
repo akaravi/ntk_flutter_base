@@ -1,7 +1,7 @@
 import 'package:base/src/backend/api/core/core_auth_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
-import 'package:base/src/models/dtoModel/core/TokenDeviceClientInfoDtoModel.dart';
+import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
 import 'package:base/src/my_application.dart';
 
 class AuthService extends DioApi {
@@ -35,7 +35,7 @@ class AuthService extends DioApi {
       yield SplashProgress('check token of device', .20);
       //get
     }
-    var themeResponse=aw
+    var themeResponse;
 
   }
 }

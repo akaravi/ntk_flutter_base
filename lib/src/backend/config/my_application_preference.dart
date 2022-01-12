@@ -1,5 +1,5 @@
-import 'package:base/src/models/entityModel/enums/EnumDeviceType.dart';
-import 'package:base/src/models/entityModel/enums/EnumOperatingSystemType.dart';
+import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io' show Platform;

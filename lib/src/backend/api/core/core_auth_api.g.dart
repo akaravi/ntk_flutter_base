@@ -56,8 +56,7 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
+    final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -72,28 +71,11 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<String> getDevice(request) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<String>(_setStreamType<String>(
-        Options(method: 'POST', headers: _headers, extra: _extra)
-            .compose(_dio.options, 'api/v1/auth/GetTokenDevice',
-                queryParameters: queryParameters, data: _data)
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data!;
-    return value;
-  }
-
-  @override
   Future<ErrorExceptionBase> mobileConfirm(model) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(model.toJson());
+    final _data = model;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -109,8 +91,7 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
+    final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -126,8 +107,7 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
+    final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<CoreUserModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -146,8 +126,7 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
+    final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -166,8 +145,7 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
+    final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -186,8 +164,7 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
+    final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
