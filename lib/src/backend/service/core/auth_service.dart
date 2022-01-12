@@ -1,6 +1,7 @@
 import 'package:base/src/backend/api/core/core_auth_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
+import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
 import 'package:base/src/my_application.dart';
@@ -31,13 +32,15 @@ class AuthService extends DioApi {
       throw Exception(tokenResponse);
     } else {
       MyApplicationPreference()
-        .changeToken(tokenResponse.item?.deviceToken ?? '');
-      yield SplashProgress('check token of device', .20);
+          .changeToken(tokenResponse.item?.deviceToken ?? '');
+      yield SplashProgress('check token of device', .25);
       //get
     }
-    yield SplashProgress('get theme data', .20);
+    yield SplashProgress('getting theme data', .45);
     await ApplicationThemeService().getTheme();
-
+    yield SplashProgress('Getting app information', .70);
+    await ApplicationAppService().currentApp();
+    yield SplashProgress('Getting app information', 1);
   }
 }
 
@@ -46,4 +49,8 @@ class SplashProgress {
   double progress;
 
   SplashProgress(this.title, this.progress);
+
+  factory SplashProgress.ifNull() {
+    return SplashProgress('', 10);
+  }
 }

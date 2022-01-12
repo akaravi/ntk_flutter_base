@@ -1,6 +1,6 @@
 import 'package:base/src/backend/api/application/application_app_api.dart';
 import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/backend/config/main_screen_prefrence.dart';
+import 'package:base/src/backend/config/main_screen_preference.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/dto/application/ApplicationScoreDtoModel.dart';
 import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
@@ -28,8 +28,8 @@ class ApplicationAppService extends DioApi {
         ..appId = res.item?.id ?? 0
         ..qrCode = res.item?.qrCode ?? ''
         ..title = res.item?.aboutUsTitle
-        ..aboutUs(res?.item)
-        ..updateInfo(res?.item);
+        ..aboutUs(res.item)
+        ..updateInfo(res.item);
     }
     return res;
   }

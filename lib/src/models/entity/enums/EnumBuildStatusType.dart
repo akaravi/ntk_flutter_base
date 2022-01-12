@@ -26,13 +26,18 @@ enum EnumBuildStatusType {
   buildMSMQRunNowGitPull,
   @JsonValue(12)
   buildMSMQRunNowBuildStart,
-  @JsonValue(13)
+  @JsonValue(120)
   buildMSMQRunNowBuildEnd,
-  @JsonValue(14)
+  @JsonValue(13)
   buildMSMQRunNowFileCopy,
+  @JsonValue(14)
   copyAppReleaseToExportApplication,
+  @JsonValue(15)
   buildMSMQRunNowBuildDownloadFiles,
+  @JsonValue(16)
   buildGitError,
+  @JsonValue(17)
   buildUnsuccessfullyButFileNotExist,
+  @JsonValue(20)
   buildSuccessfullyAndCopyAppReleaseToExportApplicationfully
 }

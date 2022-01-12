@@ -42,7 +42,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
         stream: AuthService().splashInit(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return splash(snapshot.data ?? SplashProgress('', 10));
+            return splash(snapshot.data ?? SplashProgress.ifNull());
           } else if (snapshot.hasError) {
             return const Center(
               child: Text('Errror'),
