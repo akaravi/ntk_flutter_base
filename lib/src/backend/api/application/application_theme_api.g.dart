@@ -6,7 +6,7 @@ part of 'application_theme_api.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-class _ApplicationThemeApi implements ApplicationThemeApi {
+class _ApplicationThemeApi implements ApplicationThemeMethodApi {
   _ApplicationThemeApi(this._dio, {this.baseUrl});
 
   final Dio _dio;

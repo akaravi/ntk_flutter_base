@@ -35,7 +35,7 @@ class AuthService extends DioApi {
       yield SplashProgress('check token of device', .20);
       //get
     }
-    var themeResponse;
+    ThemeA
 
   }
 }

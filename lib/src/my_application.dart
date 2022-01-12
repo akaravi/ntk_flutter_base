@@ -3,6 +3,7 @@ import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
 import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
 
 class MyApplication {
+  final String _defaultTheme = '1';
   static MyApplication? _instance;
 
   factory MyApplication.get() => _instance ??= MyApplication._();
@@ -45,6 +46,8 @@ class MyApplication {
 
   String _deviceId = "SONY_Z_DEVICE_ID";
 
+  String _themeID = "1";
+
   String get deviceName => _deviceName;
 
   String get deviceId => _deviceId;
@@ -70,12 +73,16 @@ class MyApplication {
   EnumOperatingSystemType get osTypeEnum => _osTypeEnum;
 
   EnumDeviceType get deviceTypeEnum => _deviceTypeEnum;
+
+  String get themeId => _themeID;
 }
 
 class ApplicationChangeNotifier {
   //only accept change when variable need to write on disk
   //prevent from change in app cycle coding
   ApplicationChangeNotifier(MyApplicationPreference s);
+
+  get defaultTheme => MyApplication.get()._defaultTheme;
 
   setToken(String s) {
     MyApplication.get()._token = s;
@@ -111,5 +118,9 @@ class ApplicationChangeNotifier {
 
   void setOsType(EnumOperatingSystemType os) {
     MyApplication.get()._osTypeEnum = os;
+  }
+
+  void setTheme(newId) {
+    MyApplication.get()._themeID = newId;
   }
 }

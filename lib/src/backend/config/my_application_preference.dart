@@ -25,6 +25,8 @@ class MyApplicationPreference {
     app.setDeviceId(p.getString(_Names().deviceId) ?? '');
     //set last deviceName saved
     app.setDeviceName(p.getString(_Names().deviceName) ?? '');
+    //set last app theme id
+    app.setTheme(p.getString(_Names().themeId) ?? app.defaultTheme);
   }
 
   Future<void> changeToken(String newToken) async {
@@ -139,6 +141,13 @@ class MyApplicationPreference {
       }
     }
   }
+
+  Future<void> changeTheme(String id) async {
+    SharedPreferences p = await SharedPreferences.getInstance();
+    var app = ApplicationChangeNotifier(this);
+    p.setString(_Names().themeId, id);
+    app.setTheme(id);
+  }
 }
 
 class _Names {
@@ -148,4 +157,5 @@ class _Names {
   final String simOperator = 'pref_simOperator';
   final String deviceId = 'pref_deviceId';
   final String deviceName = 'pref_deviceName';
+  final String themeId = 'pref_themeId';
 }
