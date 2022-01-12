@@ -9,14 +9,13 @@ import 'src/backend/config/my_application_preference.dart';
 import 'src/backend/service/base/baseService.dart';
 
 void main() async {
+  //prevent from crash on start
   await runZonedGuarded(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
+      //read static data of app
       await MyApplicationPreference().read();
-      // BaseEntityService w = BaseEntityService('NewsContent');
-      // AuthService ww = AuthService();
-      // await ww.splashInit();
-      // var errorException = await w.getAll(FilterModel()..rowPerPage = 20);
+      //main thread of creating app
       runApp(const MyApp());
     },
     (error, st) => print(error),
