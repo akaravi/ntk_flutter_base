@@ -282,16 +282,12 @@ const _$EnumBuildStatusTypeEnumMap = {
   EnumBuildStatusType.buildMSMQRunNowFiledownloaded: 10,
   EnumBuildStatusType.buildMSMQRunNowGitPull: 11,
   EnumBuildStatusType.buildMSMQRunNowBuildStart: 12,
-  EnumBuildStatusType.buildMSMQRunNowBuildEnd: 13,
-  EnumBuildStatusType.buildMSMQRunNowFileCopy: 14,
-  EnumBuildStatusType.copyAppReleaseToExportApplication:
-      'copyAppReleaseToExportApplication',
-  EnumBuildStatusType.buildMSMQRunNowBuildDownloadFiles:
-      'buildMSMQRunNowBuildDownloadFiles',
-  EnumBuildStatusType.buildGitError: 'buildGitError',
-  EnumBuildStatusType.buildUnsuccessfullyButFileNotExist:
-      'buildUnsuccessfullyButFileNotExist',
+  EnumBuildStatusType.buildMSMQRunNowBuildEnd: 120,
+  EnumBuildStatusType.buildMSMQRunNowFileCopy: 13,
+  EnumBuildStatusType.copyAppReleaseToExportApplication: 14,
+  EnumBuildStatusType.buildMSMQRunNowBuildDownloadFiles: 15,
+  EnumBuildStatusType.buildGitError: 16,
+  EnumBuildStatusType.buildUnsuccessfullyButFileNotExist: 17,
   EnumBuildStatusType
-          .buildSuccessfullyAndCopyAppReleaseToExportApplicationfully:
-      'buildSuccessfullyAndCopyAppReleaseToExportApplicationfully',
+      .buildSuccessfullyAndCopyAppReleaseToExportApplicationfully: 20,
 };
