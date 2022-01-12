@@ -56,7 +56,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -75,7 +76,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = model;
+    final _data = <String, dynamic>{};
+    _data.addAll(model.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -91,7 +93,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -107,7 +110,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<CoreUserModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -126,7 +130,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -145,7 +150,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
@@ -164,7 +170,8 @@ class _AuthMethodApi implements AuthMethodApi {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<TokenInfoModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
