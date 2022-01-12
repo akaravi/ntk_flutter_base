@@ -212,7 +212,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request.map((e) => toJson(e)).toList();
+    final _data = request.map((e) => convertToJson(e)).toList();
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
@@ -244,5 +244,5 @@ class BaseEntityApi<OUT, ID> extends DioApi
     return fromJsonConverter(json);
   }
 
-  toJson(OUT e) {}
+  convertToJson(OUT e) {}
 }
