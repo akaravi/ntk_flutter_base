@@ -6,8 +6,8 @@ part of 'sample_entity_api.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-class _GenericSampleEntityApi implements _SGenericSampleEntityApi {
-  _GenericSampleEntityApi(this._dio, {this.baseUrl});
+class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
+  __SGenericSampleEntityApi(this._dio, {this.baseUrl});
 
   final Dio _dio;
 
