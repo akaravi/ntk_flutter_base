@@ -5,7 +5,8 @@ import 'package:retrofit/retrofit.dart';
 
 @RestApi()
 class ApplicationIntroMethodApi
-    extends AbstractBaseEntityApi<ApplicationIntroModel, int> {
+    extends BaseEntityApi<ApplicationIntroModel, int> {
   ApplicationIntroMethodApi.create(Dio dio)
-      : super(dio, (t) => ApplicationIntroModel.fromJson(t));
+      : super(
+            dio, 'ApplicationIntro', (t) => ApplicationIntroModel.fromJson(t));
 }

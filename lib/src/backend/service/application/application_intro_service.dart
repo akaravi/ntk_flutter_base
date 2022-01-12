@@ -17,6 +17,6 @@ class ApplicationIntroService extends DioApi {
   }
 
   Future<ErrorException<ApplicationIntroModel>> getAll(FilterModel filterModel){
-    return directAPI.getAll(prefixUrl + controlerUrl + "/getAll", filterModel);
+    return directAPI.getAll(filterModel);
   }
 }

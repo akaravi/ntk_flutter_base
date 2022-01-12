@@ -10,9 +10,6 @@ class DioApi {
   //default timeout time for all timeout section in millisecond
   static const int _timeout = 5000;
 
-  //prefix String url of api
-  String prefixUrl = "api/v1/";
-
   Dio jsonDecodeDio() {
     var option = BaseOptions()
       ..baseUrl = MyApplication.get().baseUrl

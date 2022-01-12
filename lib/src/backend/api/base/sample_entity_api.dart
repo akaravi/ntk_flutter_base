@@ -4,13 +4,13 @@ import 'package:base/src/models/entity/base/FilterModel.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'base_entity_api.g.dart';
+part 'sample_entity_api.g.dart';
 
 @RestApi()
-abstract class GenericSampleEntityApi {
-  factory GenericSampleEntityApi.create(Dio dio, {String baseUrl}) = _BaseEntityApi;
+abstract class _SGenericSampleEntityApi {
+  factory _SGenericSampleEntityApi.create(Dio dio, {String baseUrl}) = _GenericSampleEntityApi;
 
-  GenericSampleEntityApi();
+  _SGenericSampleEntityApi();
 
   @GET("{fullPath}")
   Future<ErrorException<String>> getViewModel(@Path() String fullPath);
