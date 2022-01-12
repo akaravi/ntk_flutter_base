@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:base/src/backend/service/application/application_intro_service.dart';
 import 'package:base/src/backend/service/core/auth_service.dart';
+import 'package:base/src/models/entity/base/FilterModel.dart';
 import 'package:base/src/my_application.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +17,7 @@ void main() async {
       WidgetsFlutterBinding.ensureInitialized();
       //read static data of app
       await MyApplicationPreference().read();
+
       //main thread of creating app
       runApp(const MyApp());
     },

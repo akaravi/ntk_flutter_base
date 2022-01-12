@@ -7,10 +7,10 @@ import 'package:retrofit/retrofit.dart';
 part 'base_entity_api.g.dart';
 
 @RestApi()
-abstract class BaseEntityApi {
-  factory BaseEntityApi.create(Dio dio, {String baseUrl}) = _BaseEntityApi;
+abstract class GenericSampleEntityApi {
+  factory GenericSampleEntityApi.create(Dio dio, {String baseUrl}) = _BaseEntityApi;
 
-  BaseEntityApi();
+  GenericSampleEntityApi();
 
   @GET("{fullPath}")
   Future<ErrorException<String>> getViewModel(@Path() String fullPath);

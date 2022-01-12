@@ -1,92 +1,89 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'sample_entity_api.dart';
+part of 'base_entity.dart';
 
-// **************************************************************************
-// RetrofitGenerator
-// **************************************************************************
+class AbstractBaseEntityApi<OUT, ID> implements BaseApi<OUT, ID> {
+  AbstractBaseEntityApi(this._dio, this.fromJsonConverter, {this.baseUrl});
 
-class _BaseEntityApi implements GenericSampleEntityApi {
-  _BaseEntityApi(this._dio, {this.baseUrl});
-
+  FromJsonConverter<OUT> fromJsonConverter;
   final Dio _dio;
 
   String? baseUrl;
 
   @override
-  Future<ErrorException<String>> getViewModel(fullPath) async {
+  Future<ErrorException<OUT>> getViewModel(fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> getAll(fullPath, filter) async {
+  Future<ErrorException<OUT>> getAll(fullPath, filter) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> getAllEditor(fullPath, filter) async {
+  Future<ErrorException<OUT>> getAllEditor(fullPath, filter) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> getOne(fullPath) async {
+  Future<ErrorException<OUT>> getOne(fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
@@ -102,7 +99,7 @@ class _BaseEntityApi implements GenericSampleEntityApi {
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
@@ -119,104 +116,104 @@ class _BaseEntityApi implements GenericSampleEntityApi {
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ErrorException<String>> exportFile(fullPath, filter) async {
+  Future<ErrorException<OUT>> exportFile(fullPath, filter) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> add(fullPath, request) async {
+  Future<ErrorException<OUT>> add(fullPath, request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> edit(fullPath, request) async {
+  Future<ErrorException<OUT>> edit(fullPath, request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'PUT', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> delete(fullPath) async {
+  Future<ErrorException<OUT>> delete(fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ErrorException<String>> deleteAll(fullPath, request) async {
+  Future<ErrorException<OUT>> deleteAll(fullPath, request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request.map((e) => e.toJson()).toList();
+    final _data = request.map((e) => toJson(e)).toList();
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(
+        _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
                 .compose(_dio.options, '${fullPath}',
-                    queryParameters: queryParameters, data: _data)
+                queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
+    final value = ErrorException<OUT>.fromJson(
       _result.data!,
-      (json) => json as String,
+          (json) => fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
@@ -233,4 +230,10 @@ class _BaseEntityApi implements GenericSampleEntityApi {
     }
     return requestOptions;
   }
+
+  fromJson(Map<String, dynamic> json){
+    return fromJsonConverter(json);
+  }
+
+  toJson(OUT e) {}
 }
