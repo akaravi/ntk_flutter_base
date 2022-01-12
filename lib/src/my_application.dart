@@ -1,5 +1,6 @@
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entity/enums/EnumLanguage.dart';
 import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
 
 class MyApplication {
@@ -30,7 +31,7 @@ class MyApplication {
   final String _packageName = 'ntk.android.ticketing.APPNTK';
 
   //locale
-  String _lang = "fa";
+  EnumLanguage _lang = EnumLanguage.none;
 
   //country of user
   String _country = "IR";
@@ -60,7 +61,7 @@ class MyApplication {
 
   String get country => _country;
 
-  String get lang => _lang;
+  EnumLanguage get lang => _lang;
 
   String get packageName => _packageName;
 
@@ -88,7 +89,7 @@ class ApplicationChangeNotifier {
     MyApplication.get()._token = s;
   }
 
-  void setLanguage(String s) {
+  void setLanguage(EnumLanguage s) {
     MyApplication.get()._lang = s;
   }
 

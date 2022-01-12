@@ -1,6 +1,7 @@
 import 'package:base/src/backend/api/core/core_auth_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
+import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
 import 'package:base/src/my_application.dart';
 
@@ -23,19 +24,19 @@ class AuthService extends DioApi {
       ..oSType = application.osTypeEnum
       ..deviceType = application.deviceTypeEnum
       ..country = application.country
-      ..language = application.lang;
+      ..language = application.lang.name;
     // var e= await directAPI.getDevice(request);
     var tokenResponse = await directAPI.getTokenDevice(request);
     if (!tokenResponse.isSuccess) {
       throw Exception(tokenResponse);
     } else {
       MyApplicationPreference()
-        ..changeToken(tokenResponse.item?.deviceToken ?? '')
-        ..changeLanguage(tokenResponse.item?.language ?? '');
+        .changeToken(tokenResponse.item?.deviceToken ?? '');
       yield SplashProgress('check token of device', .20);
       //get
     }
-    ThemeA
+    yield SplashProgress('get theme data', .20);
+    await ApplicationThemeService().getTheme();
 
   }
 }

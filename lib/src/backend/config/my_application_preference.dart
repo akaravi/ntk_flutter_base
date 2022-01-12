@@ -1,9 +1,11 @@
+import 'dart:io' show Platform;
+
 import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
+import 'package:base/src/models/entity/enums/EnumLanguage.dart';
 import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../my_application.dart';
 
@@ -16,7 +18,8 @@ class MyApplicationPreference {
     //set last saved token
     app.setToken(p.getString(_Names().token) ?? '');
     //set last language saved
-    app.setLanguage(p.getString(_Names().lang) ?? '');
+    app.setLanguage(EnumLanguage.values
+        .elementAt(p.getInt(_Names().lang) ?? EnumLanguage.none.index));
     //set last country saved
     app.setCountry(p.getString(_Names().country) ?? '');
     //set last sim operation saved
@@ -36,11 +39,11 @@ class MyApplicationPreference {
     app.setToken(newToken);
   }
 
-  Future<void> changeLanguage(String newLang) async {
+  Future<void> changeLanguage(EnumLanguage? newLang) async {
     SharedPreferences p = await SharedPreferences.getInstance();
     var app = ApplicationChangeNotifier(this);
-    p.setString(_Names().lang, newLang);
-    app.setLanguage(newLang);
+    p.setInt(_Names().lang, newLang?.index??EnumLanguage.none.index);
+    app.setLanguage(newLang??EnumLanguage.none);
   }
 
   Future<void> changeCountry(String newCountry) async {
@@ -142,10 +145,10 @@ class MyApplicationPreference {
     }
   }
 
-  Future<void> changeTheme(String id) async {
+  Future<void> changeTheme(String? id) async {
     SharedPreferences p = await SharedPreferences.getInstance();
     var app = ApplicationChangeNotifier(this);
-    p.setString(_Names().themeId, id);
+    p.setString(_Names().themeId, id ?? app.defaultTheme);
     app.setTheme(id);
   }
 }

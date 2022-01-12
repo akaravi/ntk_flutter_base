@@ -32,7 +32,7 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
       ..appKey = json['AppKey'] as String?
-      ..lang = json['Lang'] as int?
+      ..lang = $enumDecodeNullable(_$EnumLanguageEnumMap, json['Lang'])
       ..expireDate = json['ExpireDate'] as String?
       ..linkFileIdIcon = json['LinkFileIdIcon'] as int?
       ..linkFileIdLogo = json['LinkFileIdLogo'] as int?
@@ -165,7 +165,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
       'AppKey': instance.appKey,
-      'Lang': instance.lang,
+      'Lang': _$EnumLanguageEnumMap[instance.lang],
       'ExpireDate': instance.expireDate,
       'LinkFileIdIcon': instance.linkFileIdIcon,
       'LinkFileIdLogo': instance.linkFileIdLogo,
@@ -256,6 +256,17 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumLanguageEnumMap = {
+  EnumLanguage.none: 0,
+  EnumLanguage.fa: 1,
+  EnumLanguage.en: 2,
+  EnumLanguage.de: 3,
+  EnumLanguage.fr: 4,
+  EnumLanguage.ch: 5,
+  EnumLanguage.jp: 6,
+  EnumLanguage.es: 7,
 };
 
 const _$EnumBuildStatusTypeEnumMap = {

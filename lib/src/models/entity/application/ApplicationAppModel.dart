@@ -1,6 +1,7 @@
 import 'package:base/src/models/entity/base/BaseModuleEntity.dart';
 import 'package:base/src/models/entity/base/feildinfo/GetPropertiesInfoModel.dart';
 import 'package:base/src/models/entity/enums/EnumBuildStatusType.dart';
+import 'package:base/src/models/entity/enums/EnumLanguage.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -14,7 +15,7 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'AppKey')
   String? appKey;
   @JsonKey(name: 'Lang')
-  int? lang;
+  EnumLanguage? lang;
   @JsonKey(name: 'ExpireDate')
   String? expireDate;
   @JsonKey(name: 'LinkFileIdIcon')

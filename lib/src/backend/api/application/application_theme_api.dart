@@ -8,7 +8,7 @@ part 'application_theme_api.g.dart';
 @RestApi()
 abstract class ApplicationThemeMethodApi {
   factory ApplicationThemeMethodApi.create(Dio dio, {String baseUrl}) =
-      _ApplicationThemeApi;
+  _ApplicationThemeMethodApi;
 
 
   @GET("api/v1/ApplicationThemeConfig/CurrentTheme")

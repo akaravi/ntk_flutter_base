@@ -11,10 +11,12 @@ class ApplicationThemeService extends DioApi {
   ApplicationThemeService() {
     directAPI = ApplicationThemeMethodApi.create(jsonDecodeDio());
   }
-  Future<ErrorException<ApplicationThemeConfigModel>> getTheme()async{
+
+  Future<ErrorException<ApplicationThemeConfigModel>> getTheme() async {
     var res = await directAPI.getAppTheme();
-    if(res.isSuccess){
+    if (res.isSuccess) {
       MyApplicationPreference().changeTheme(res.item?.typeId);
     }
+    return res;
   }
 }
