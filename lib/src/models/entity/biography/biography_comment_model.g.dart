@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BiographyCategoryModel.dart';
+part of 'biography_comment_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-BiographyCategoryModel _$BiographyCategoryModelFromJson(
+BiographyCommentModel _$BiographyCommentModelFromJson(
         Map<String, dynamic> json) =>
-    BiographyCategoryModel()
+    BiographyCommentModel()
       ..id = json['Id'] as int?
       ..createdDate = json['CreatedDate'] == null
           ? null
@@ -32,33 +32,24 @@ BiographyCategoryModel _$BiographyCategoryModelFromJson(
           ? null
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
-      ..description = json['Description'] as String?
-      ..fontIcon = json['FontIcon'] as String?
-      ..linkParentIdNode = json['LinkParentIdNode'] as String?
+      ..linkContentId = json['LinkContentId'] as int?
       ..linkParentId = json['LinkParentId'] as int?
-      ..children = (json['Children'] as List<dynamic>?)
-          ?.map(
-              (e) => BiographyCategoryModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..category = json['Category'] == null
+      ..writer = json['Writer'] as String?
+      ..comment = json['Comment'] as String?
+      ..registerDate = json['RegisterDate'] as String?
+      ..sumLikeClick = json['SumLikeClick'] as int?
+      ..sumDisLikeClick = json['SumDisLikeClick'] as int?
+      ..virtual_Content = json['virtual_Content'] == null
           ? null
-          : BiographyCategoryModel.fromJson(
-              json['Category'] as Map<String, dynamic>)
-      ..virtual_Category = json['virtual_Category'] == null
+          : BiographyContentModel.fromJson(
+              json['virtual_Content'] as Map<String, dynamic>)
+      ..content = json['Content'] == null
           ? null
-          : BiographyCategoryModel.fromJson(
-              json['virtual_Category'] as Map<String, dynamic>)
-      ..contents = (json['Contents'] as List<dynamic>?)
-          ?.map(
-              (e) => BiographyContentModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+          : BiographyContentModel.fromJson(
+              json['Content'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$BiographyCategoryModelToJson(
-        BiographyCategoryModel instance) =>
+Map<String, dynamic> _$BiographyCommentModelToJson(
+        BiographyCommentModel instance) =>
     <String, dynamic>{
       'Id': instance.id,
       'CreatedDate': instance.createdDate?.toIso8601String(),
@@ -75,18 +66,15 @@ Map<String, dynamic> _$BiographyCategoryModelToJson(
       'AntiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'TitleResourceLanguage': instance.titleResourceLanguage,
-      'Description': instance.description,
-      'FontIcon': instance.fontIcon,
-      'LinkParentIdNode': instance.linkParentIdNode,
+      'LinkContentId': instance.linkContentId,
       'LinkParentId': instance.linkParentId,
-      'Children': instance.children,
-      'Category': instance.category,
-      'virtual_Category': instance.virtual_Category,
-      'Contents': instance.contents,
-      'LinkMainImageId': instance.linkMainImageId,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'Writer': instance.writer,
+      'Comment': instance.comment,
+      'RegisterDate': instance.registerDate,
+      'SumLikeClick': instance.sumLikeClick,
+      'SumDisLikeClick': instance.sumDisLikeClick,
+      'virtual_Content': instance.virtual_Content,
+      'Content': instance.content,
     };
 
 const _$EnumRecordStatusEnumMap = {

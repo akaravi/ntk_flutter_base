@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BiographyContentOtherInfoModel.dart';
+part of 'biography_content_other_info_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

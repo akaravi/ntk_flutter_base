@@ -1,7 +1,7 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
-part 'BiographyContentTagModel.g.dart';
+part 'biography_content_tag_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentTagModel extends BaseModuleEntity<int> {

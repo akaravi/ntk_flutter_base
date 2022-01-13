@@ -3,11 +3,11 @@ import 'package:base/src/models/entity/core/CoreUserModel.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'BiographyCategoryModel.dart';
-import 'BiographyCommentModel.dart';
-import 'BiographyContentSimilarModel.dart';
-import 'BiographyContentTagModel.dart';
-part 'BiographyContentModel.g.dart';
+import 'biography_category_model.dart';
+import 'biography_comment_model.dart';
+import 'biography_content_similar_model.dart';
+import 'biography_content_tag_model.dart';
+part 'biography_content_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentModel extends BaseModuleEntity<int> {

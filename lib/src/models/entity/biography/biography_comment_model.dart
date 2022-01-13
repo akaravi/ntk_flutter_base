@@ -2,9 +2,9 @@ import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'BiographyContentModel.dart';
+import 'biography_content_model.dart';
 
-part 'BiographyCommentModel.g.dart';
+part 'biography_comment_model.g.dart';
 
 @JsonSerializable()
 class BiographyCommentModel extends BaseModuleEntity<int> {

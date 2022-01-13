@@ -2,7 +2,7 @@ import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'BiographyContentSimilarModel.g.dart';
+part 'biography_content_similar_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentSimilarModel extends BaseModuleEntity<int> {

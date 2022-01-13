@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'BiographyContentModel.dart';
-part 'BiographyContentOtherInfoModel.g.dart';
+import 'biography_content_model.dart';
+part 'biography_content_other_info_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentOtherInfoModel {
