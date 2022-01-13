@@ -23,4 +23,9 @@ class NewsContentOtherInfoModel extends BaseModuleEntity<int> {
   NewsContentModel? virtual_Content;
   @JsonKey(name: 'Content')
   NewsContentModel? content;
+  NewsContentOtherInfoModel();
+  factory NewsContentOtherInfoModel.fromJson(Map<String, dynamic> json) =>
+      _$NewsContentOtherInfoModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NewsContentOtherInfoModelToJson(this);
 }

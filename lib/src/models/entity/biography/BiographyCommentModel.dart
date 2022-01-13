@@ -3,6 +3,7 @@ import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'BiographyContentModel.dart';
+
 part 'BiographyCommentModel.g.dart';
 
 @JsonSerializable()
@@ -25,7 +26,9 @@ class BiographyCommentModel extends BaseModuleEntity<int> {
   BiographyContentModel? virtual_Content;
   @JsonKey(name: 'Content')
   BiographyContentModel? content;
+
   BiographyCommentModel();
+
   factory BiographyCommentModel.fromJson(Map<String, dynamic> json) =>
       _$BiographyCommentModelFromJson(json);
 
