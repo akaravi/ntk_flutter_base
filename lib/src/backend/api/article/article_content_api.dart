@@ -1,7 +1,7 @@
 import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/models/entity/news/NewsContentModel.dart';
+import 'package:base/src/models/entity/article/ArticleContentModel.dart';
 import 'package:dio/src/dio.dart';
 
-class NewsModelAApi extends BaseEntityApi<NewsContentModel, int> {
-  NewsModelAApi(Dio dio) : super(dio, 'news',(t) => NewsContentModel.fromJson(t));
+class ArticleContentMethodApi extends BaseEntityApi<ArticleContentModel, int> {
+  ArticleContentMethodApi(Dio dio) : super(dio, 'ArticleContent',(t) => ArticleContentModel.fromJson(t));
 }
