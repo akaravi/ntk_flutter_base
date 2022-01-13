@@ -1,9 +1,9 @@
-import 'package:base/src/models/dto/core/AuthEmailConfirmDtoModel.dart';
-import 'package:base/src/models/dto/core/AuthMobileConfirmDtoModel.dart';
-import 'package:base/src/models/dto/core/AuthUserChangePasswordModel.dart';
-import 'package:base/src/models/dto/core/AuthUserSignInBySmsDtoModel.dart';
-import 'package:base/src/models/dto/core/AuthUserSignInModel.dart';
-import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
+import 'package:base/src/models/dto/core/auth_emailconfirm_dto_model.dart';
+import 'package:base/src/models/dto/core/auth_mobileconfirm_dto_model.dart';
+import 'package:base/src/models/dto/core/auth_user_changepassword_model.dart';
+import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
+import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
+import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
 import 'package:base/src/models/entity/base/CaptchaModel.dart';
 import 'package:base/src/models/entity/base/ErrorException.dart';
 import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';

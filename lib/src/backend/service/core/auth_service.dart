@@ -4,7 +4,7 @@ import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_intro_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
-import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
+import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
 import 'package:base/src/models/entity/base/FilterModel.dart';
 import 'package:base/src/my_application.dart';
 
