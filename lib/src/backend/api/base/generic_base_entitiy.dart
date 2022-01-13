@@ -4,13 +4,13 @@ part of 'base_entity.dart';
 
 class BaseEntityApi<OUT, ID> extends DioApi
     implements AbstractBaseApi<OUT, ID> {
-  BaseEntityApi(this._dio, this.controllerUrl, this.fromJsonConverter,
+  BaseEntityApi(this.dio, this.controllerUrl, this.fromJsonConverter,
       {this.baseUrl});
 
   //prefix String url of api
   String prefixUrl = "api/v1/";
   FromJsonConverter<OUT> fromJsonConverter;
-  final Dio _dio;
+  final Dio dio;
 
   String? baseUrl;
   late String controllerUrl;
@@ -21,13 +21,13 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(
-                    _dio.options, (prefixUrl + controllerUrl + "/getViewModel"),
+                    dio.options, (prefixUrl + controllerUrl + "/getViewModel"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -42,12 +42,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/getAll"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/getAll"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -62,13 +62,13 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(
-                    _dio.options, (prefixUrl + controllerUrl + "/getAllEditor"),
+                    dio.options, (prefixUrl + controllerUrl + "/getAllEditor"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -82,12 +82,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/$d"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/$d"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -102,12 +102,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/Exist"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/Exist"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
   }
@@ -119,12 +119,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorExceptionBase>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/Count"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/Count"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
   }
@@ -136,13 +136,13 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(
-                    _dio.options, ((prefixUrl + controllerUrl + "/ExportFile")),
+                    dio.options, ((prefixUrl + controllerUrl + "/ExportFile")),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -156,12 +156,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -175,12 +175,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'PUT', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -194,12 +194,12 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
-                .compose(_dio.options, (prefixUrl + controllerUrl + "/$id"),
+                .compose(dio.options, (prefixUrl + controllerUrl + "/$id"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
@@ -213,13 +213,13 @@ class BaseEntityApi<OUT, ID> extends DioApi
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request.map((e) => convertToJson(e)).toList();
-    final _result = await _dio.fetch<Map<String, dynamic>>(
+    final _result = await dio.fetch<Map<String, dynamic>>(
         _setStreamType<ErrorException<OUT>>(
             Options(method: 'DELETE', headers: _headers, extra: _extra)
                 .compose(
-                    _dio.options, (prefixUrl + controllerUrl + "/DeleteList"),
+                    dio.options, (prefixUrl + controllerUrl + "/DeleteList"),
                     queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+                .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
     final value = ErrorException<OUT>.fromJson(
       _result.data!,
       (json) => fromJson(json as Map<String, dynamic>),
