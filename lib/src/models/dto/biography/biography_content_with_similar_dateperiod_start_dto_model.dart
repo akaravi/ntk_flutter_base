@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'BiographyContentWithSimilarDatePeriodStartDtoModel.g.dart';
+part 'biography_content_with_similar_dateperiod_start_dto_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartDtoModel {

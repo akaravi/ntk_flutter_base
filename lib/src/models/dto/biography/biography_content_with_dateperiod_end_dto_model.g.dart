@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BiographyContentWithDatePeriodEndDtoModel.dart';
+part of 'biography_content_with_dateperiod_end_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

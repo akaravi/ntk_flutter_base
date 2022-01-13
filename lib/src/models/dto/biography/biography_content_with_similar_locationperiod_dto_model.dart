@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'BiographyContentWithSimilarLocationPeriodDtoModel.g.dart';
+part 'biography_content_with_similar_locationperiod_dto_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentWithSimilarLocationPeriodDtoModel {

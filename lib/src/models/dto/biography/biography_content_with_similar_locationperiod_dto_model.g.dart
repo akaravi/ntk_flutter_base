@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BiographyContentWithSimilarLocationPeriodDtoModel.dart';
+part of 'biography_content_with_similar_locationperiod_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

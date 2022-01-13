@@ -1,22 +1,22 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BiographyContentWithSimilarDatePeriodEndDtoModel.dart';
+part of 'biography_content_with_similar_dateperiod_start_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-BiographyContentWithSimilarDatePeriodEndDtoModel
-    _$BiographyContentWithSimilarDatePeriodEndDtoModelFromJson(
+BiographyContentWithSimilarDatePeriodStartDtoModel
+    _$BiographyContentWithSimilarDatePeriodStartDtoModelFromJson(
             Map<String, dynamic> json) =>
-        BiographyContentWithSimilarDatePeriodEndDtoModel()
+        BiographyContentWithSimilarDatePeriodStartDtoModel()
           ..tagIds =
               (json['TagIds'] as List<dynamic>?)?.map((e) => e as int).toList()
-          ..searchDayMin = json['SearchDayMin'] as String?
-          ..searchDayMax = json['SearchDayMax'] as String?;
+          ..searchDayMin = json['SearchDayMin'] as int?
+          ..searchDayMax = json['SearchDayMax'] as int?;
 
-Map<String, dynamic> _$BiographyContentWithSimilarDatePeriodEndDtoModelToJson(
-        BiographyContentWithSimilarDatePeriodEndDtoModel instance) =>
+Map<String, dynamic> _$BiographyContentWithSimilarDatePeriodStartDtoModelToJson(
+        BiographyContentWithSimilarDatePeriodStartDtoModel instance) =>
     <String, dynamic>{
       'TagIds': instance.tagIds,
       'SearchDayMin': instance.searchDayMin,

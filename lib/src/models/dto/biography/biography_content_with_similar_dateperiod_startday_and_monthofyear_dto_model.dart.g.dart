@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel.dart';
+part of 'biography_content_with_similar_dateperiod_startday_and_monthofyear_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
