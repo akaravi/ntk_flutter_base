@@ -6,7 +6,7 @@ part of 'polling_vote_api.dart';
 // RetrofitGenerator
 // **************************************************************************
 
- class __PollingOtherApi   implements _PollingOtherApi{
+class __PollingOtherApi implements _PollingOtherApi {
   __PollingOtherApi(this._dio, {this.baseUrl});
 
   final Dio _dio;
