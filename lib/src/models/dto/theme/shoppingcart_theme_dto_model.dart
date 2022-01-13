@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'ShoppingCartThemeDtoModel.g.dart';
+part 'shoppingcart_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class ShoppingCartThemeDtoModel {

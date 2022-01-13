@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'HamberMenuThemeDtoModel.dart';
+part of 'hambermenu_theme_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

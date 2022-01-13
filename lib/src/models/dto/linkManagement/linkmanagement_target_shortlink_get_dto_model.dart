@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'LinkManagementTargetShortLinkGetDtoModel.g.dart';
+part 'linkmanagement_target_shortlink_get_dto_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkGetDtoModel {

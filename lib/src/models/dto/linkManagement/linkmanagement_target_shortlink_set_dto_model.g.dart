@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'LinkManagementTargetShortLinkSetDtoModel.dart';
+part of 'linkmanagement_target_shortlink_set_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

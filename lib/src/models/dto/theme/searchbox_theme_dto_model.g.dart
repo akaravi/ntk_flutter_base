@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ShoppingCartThemeDtoModel.dart';
+part of 'searchbox_theme_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ShoppingCartThemeDtoModel _$ShoppingCartThemeDtoModelFromJson(
+SearchBoxThemeDtoModel _$SearchBoxThemeDtoModelFromJson(
         Map<String, dynamic> json) =>
-    ShoppingCartThemeDtoModel()
+    SearchBoxThemeDtoModel()
       ..bgColor = json['BgColor'] as String?
       ..image = json['Image'] as String?;
 
-Map<String, dynamic> _$ShoppingCartThemeDtoModelToJson(
-        ShoppingCartThemeDtoModel instance) =>
+Map<String, dynamic> _$SearchBoxThemeDtoModelToJson(
+        SearchBoxThemeDtoModel instance) =>
     <String, dynamic>{
       'BgColor': instance.bgColor,
       'Image': instance.image,

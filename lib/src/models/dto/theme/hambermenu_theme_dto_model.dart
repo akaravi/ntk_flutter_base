@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'HamberMenuThemeDtoModel.g.dart';
+part 'hambermenu_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class HamberMenuThemeDtoModel {

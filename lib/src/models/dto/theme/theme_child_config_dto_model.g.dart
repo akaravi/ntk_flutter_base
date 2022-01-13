@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ThemeChildConfigDtoModel.dart';
+part of 'theme_child_config_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

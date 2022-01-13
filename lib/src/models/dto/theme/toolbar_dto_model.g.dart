@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ToolbarDtoModel.dart';
+part of 'toolbar_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

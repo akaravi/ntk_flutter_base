@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'DrawerChildThemeDtoModel.g.dart';
+part 'drawer_child_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class DrawerChildThemeDtoModel {

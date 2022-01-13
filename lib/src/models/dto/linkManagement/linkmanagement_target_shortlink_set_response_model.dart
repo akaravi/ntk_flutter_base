@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'LinkManagementTargetShortLinkSetResponceModel.g.dart';
+part 'linkmanagement_target_shortlink_set_response_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkSetResponceModel {

@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'ThemeChildDtoModel.dart';
-import 'ToolbarDtoModel.dart';
+import 'theme_child_dto_model.dart';
+import 'toolbar_dto_model.dart';
 
-part 'ThemeDtoModel.g.dart';
+part 'theme_dto_model.g.dart';
 
 @JsonSerializable()
 class ThemeDtoModel {

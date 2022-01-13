@@ -1,11 +1,11 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'DrawerThemeDtoModel.dart';
-import 'HamberMenuThemeDtoModel.dart';
-import 'SearchBoxThemeDtoModel.dart';
-import 'ShoppingCartThemeDtoModel.dart';
+import 'drawer_theme_dto_model.dart';
+import 'hambermenu_theme_dto_model.dart';
+import 'searchbox_theme_dto_model.dart';
+import 'shoppingcart_theme_dto_model.dart';
 
-part 'ToolbarDtoModel.g.dart';
+part 'toolbar_dto_model.g.dart';
 
 @JsonSerializable()
 class ToolbarDtoModel {
