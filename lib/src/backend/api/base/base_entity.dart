@@ -1,7 +1,7 @@
 import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/models/entity/base/ErrorException.dart';
-import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
-import 'package:base/src/models/entity/base/FilterModel.dart';
+import 'package:base/src/models/entity/base/error_exception.dart';
+import 'package:base/src/models/entity/base/error_exception_base.dart';
+import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:dio/dio.dart';
 
 part 'generic_base_entitiy.dart';
