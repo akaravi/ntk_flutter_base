@@ -1,6 +1,6 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/core/CoreModuleModel.dart';
-import 'package:base/src/models/entity/core/CoreSiteModel.dart';
+import 'package:base/src/models/entity/core/core_module_model.dart';
+import 'package:base/src/models/entity/core/core_site_model.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 

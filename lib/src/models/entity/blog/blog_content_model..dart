@@ -3,14 +3,14 @@ import 'package:base/src/models/entity/core/core_user_model.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'biography_category_model.dart';
-import 'biography_comment_model.dart';
-import 'biography_content_similar_model.dart';
-import 'biography_content_tag_model.dart';
-part 'biography_content_model.g.dart';
+import 'blog_category_model.dart';
+import 'blog_content_similar_model.dart';
+import 'blog_content_tag_model.dart';
+
+part 'blog_content_model..g.dart';
 
 @JsonSerializable()
-class BiographyContentModel extends BaseModuleEntity<int> {
+class BlogContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkCategoryId')
   int? linkCategoryId;
   @JsonKey(name: 'Title')
@@ -22,7 +22,7 @@ class BiographyContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'FromDate')
   String? fromDate;
   @JsonKey(name: 'Geolocationlatitude')
-  double? geolocationlatitude;
+  double? golocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
   double? geolocationlongitude;
   @JsonKey(name: 'Keyword')
@@ -43,6 +43,8 @@ class BiographyContentModel extends BaseModuleEntity<int> {
   int? viewCount;
   @JsonKey(name: 'Favorited')
   bool? favorited;
+  @JsonKey(name: 'LinkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'ExpireDate')
   String? expireDate;
   @JsonKey(name: 'ModuleCoreCreatedBy')
@@ -52,38 +54,28 @@ class BiographyContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Source')
   String? source;
   @JsonKey(name: 'Comments')
-  BiographyCommentModel? comments;
+  String? comments;
   @JsonKey(name: 'virtual_Category')
-  BiographyCategoryModel? virtual_Category;
+  BlogCategoryModel? virtual_Category;
   @JsonKey(name: 'Category')
-  BiographyCategoryModel? category;
+  BlogCategoryModel? category;
   @JsonKey(name: 'ContentTags')
-  List<BiographyContentTagModel>? contentTags;
+  List<BlogContentTagModel>? contentTags;
   @JsonKey(name: 'Similars')
-  List<BiographyContentSimilarModel>? similars;
+  List<BlogContentSimilarModel>? similars;
   @JsonKey(name: 'OtherInfos')
   String? otherInfos;
   @JsonKey(name: 'ContentAndParameterValues')
   Object? contentAndParameterValues;
-  @JsonKey(name: 'LinkMainImageIdSrc')
-  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
   @JsonKey(name: 'LinkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
   @JsonKey(name: 'LinkFileIdsSrc')
   List<String>? linkFileIdsSrc;
-  @JsonKey(name: 'LocationPeriodStart')
-  int? locationPeriodStart;
-  @JsonKey(name: 'LocationPeriodEnd')
-  int? locationPeriodEnd;
-  @JsonKey(name: 'DatePeriodStart')
-  String? datePeriodStart;
-  @JsonKey(name: 'DatePeriodEnd')
-  String? datePeriodEnd;
-  BiographyContentModel();
-  factory BiographyContentModel.fromJson(Map<String, dynamic> json) =>
-      _$BiographyContentModelFromJson(json);
+  BlogContentModel();
+  factory BlogContentModel.fromJson(Map<String, dynamic> json) =>
+      _$BlogContentModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BiographyContentModelToJson(this);
+  Map<String, dynamic> toJson() => _$BlogContentModelToJson(this);
 }
