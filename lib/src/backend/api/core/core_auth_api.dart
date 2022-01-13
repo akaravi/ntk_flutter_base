@@ -1,15 +1,12 @@
 import 'package:base/src/models/dto/core/AuthEmailConfirmDtoModel.dart';
 import 'package:base/src/models/dto/core/AuthMobileConfirmDtoModel.dart';
-import 'package:base/src/models/dto/core/AuthRenewTokenModel.dart';
 import 'package:base/src/models/dto/core/AuthUserChangePasswordModel.dart';
 import 'package:base/src/models/dto/core/AuthUserSignInBySmsDtoModel.dart';
 import 'package:base/src/models/dto/core/AuthUserSignInModel.dart';
-import 'package:base/src/models/dto/core/AuthUserSignOutModel.dart';
 import 'package:base/src/models/dto/core/TokenDeviceClientInfoDtoModel.dart';
 import 'package:base/src/models/entity/base/CaptchaModel.dart';
 import 'package:base/src/models/entity/base/ErrorException.dart';
 import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
-import 'package:base/src/models/entity/base/FilterModel.dart';
 import 'package:base/src/models/entity/base/TokenInfoModel.dart';
 import 'package:base/src/models/entity/core/CoreUserModel.dart';
 import 'package:dio/dio.dart';
@@ -32,7 +29,6 @@ abstract class AuthMethodApi {
   @POST("api/v1/auth/GetTokenDevice")
   Future<ErrorException<TokenInfoModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
-
 
   @POST("api/v1/auth/mobileConfirm")
   Future<ErrorExceptionBase> mobileConfirm(
