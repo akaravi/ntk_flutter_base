@@ -1,6 +1,6 @@
 import 'package:base/src/backend/api/application/application_intro_api.dart';
 import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/models/entity/application/ApplicationIntroModel.dart';
+import 'package:base/src/models/entity/application/application_intro_model.dart';
 import 'package:base/src/models/entity/base/ErrorException.dart';
 import 'package:base/src/models/entity/base/FilterModel.dart';
 

@@ -1,5 +1,5 @@
-import 'package:base/src/models/dto/theme/ThemeConfigDtoModel.dart';
-import 'package:base/src/models/dto/theme/ThemeDtoModel.dart';
+import 'package:base/src/models/dto/theme/theme_config_dto_model.dart';
+import 'package:base/src/models/dto/theme/theme_dto_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'app_theme_dto_model.g.dart';

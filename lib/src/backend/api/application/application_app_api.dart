@@ -1,5 +1,5 @@
 import 'package:base/src/models/dto/application/application_score_dto_model.dart';
-import 'package:base/src/models/entity/application/ApplicationAppModel.dart';
+import 'package:base/src/models/entity/application/application_app_model.dart';
 import 'package:base/src/models/entity/base/ErrorException.dart';
 import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
 import 'package:dio/dio.dart';

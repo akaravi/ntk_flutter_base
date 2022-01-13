@@ -1,5 +1,5 @@
 import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/models/entity/article/ArticleContentSimilarModel.dart';
+import 'package:base/src/models/entity/article/article_content_similar_model.dart';
 import 'package:dio/dio.dart';
 
 class ArticleContentSimilarMethodApi

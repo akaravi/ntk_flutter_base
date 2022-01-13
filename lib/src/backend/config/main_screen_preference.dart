@@ -1,6 +1,6 @@
-import 'package:base/src/models/entity/application/AboutUsModel.dart';
-import 'package:base/src/models/entity/application/AppUpdateClass.dart';
-import 'package:base/src/models/entity/application/ApplicationAppModel.dart';
+import 'package:base/src/models/entity/application/about_us_model.dart';
+import 'package:base/src/models/entity/application/app_update_class.dart';
+import 'package:base/src/models/entity/application/application_app_model.dart';
 
 class MainScreenPreference {
   String? qrCode;
