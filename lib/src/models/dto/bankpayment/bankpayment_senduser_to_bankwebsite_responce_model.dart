@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'BankPaymentSendUserToBankWebsiteResponceModel.g.dart';
+part 'bankpayment_senduser_to_bankwebsite_responce_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentSendUserToBankWebsiteResponceModel {

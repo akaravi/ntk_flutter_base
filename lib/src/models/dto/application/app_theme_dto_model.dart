@@ -2,7 +2,7 @@ import 'package:base/src/models/dto/theme/ThemeConfigDtoModel.dart';
 import 'package:base/src/models/dto/theme/ThemeDtoModel.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'AppThemeDtoModel.g.dart';
+part 'app_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class AppThemeDtoModel {

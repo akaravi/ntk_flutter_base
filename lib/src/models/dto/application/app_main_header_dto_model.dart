@@ -1,7 +1,7 @@
 import 'package:base/src/models/entity/enums/EnumDeviceStatus.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'AppMainHeaderDtoModel.g.dart';
+part 'app_main_header_dto_model.g.dart';
 
 @JsonSerializable()
 class AppMainHeaderDtoModel {

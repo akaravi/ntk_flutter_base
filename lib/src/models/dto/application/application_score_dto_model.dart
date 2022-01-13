@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'ApplicationScoreDtoModel.g.dart';
+part 'application_score_dto_model.g.dart';
 
 @JsonSerializable()
 class ApplicationScoreDtoModel {

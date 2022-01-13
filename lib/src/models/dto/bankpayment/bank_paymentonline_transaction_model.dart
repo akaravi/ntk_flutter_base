@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'BankPaymentOnlineTransactionModel.g.dart';
+part 'bank_paymentonline_transaction_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentOnlineTransactionModel {

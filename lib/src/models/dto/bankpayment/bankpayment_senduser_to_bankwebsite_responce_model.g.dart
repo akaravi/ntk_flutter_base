@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BankPaymentSendUserToBankWebsiteResponceModel.dart';
+part of 'bankpayment_senduser_to_bankwebsite_responce_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

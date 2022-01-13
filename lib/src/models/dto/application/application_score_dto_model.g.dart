@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ApplicationScoreDtoModel.dart';
+part of 'application_score_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

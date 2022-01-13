@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BankPaymentOnlineTransactionModel.dart';
+part of 'bank_paymentonline_transaction_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

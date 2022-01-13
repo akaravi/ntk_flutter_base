@@ -2,7 +2,7 @@ import 'package:base/src/backend/api/application/application_app_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/main_screen_preference.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
-import 'package:base/src/models/dto/application/ApplicationScoreDtoModel.dart';
+import 'package:base/src/models/dto/application/application_score_dto_model.dart';
 import 'package:base/src/models/entity/base/ErrorExceptionBase.dart';
 
 class ApplicationAppService extends DioApi {

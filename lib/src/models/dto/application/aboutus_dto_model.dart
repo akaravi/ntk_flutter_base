@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'AboutUsDtoModel.g.dart';
+part 'aboutus_dto_model.g.dart';
 
 @JsonSerializable()
 class AboutUsDtoModel {

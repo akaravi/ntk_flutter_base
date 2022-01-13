@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'BankPaymentTransactionMakerDtoModel.dart';
+part of 'bankpayment_transactionmaker_dto_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
