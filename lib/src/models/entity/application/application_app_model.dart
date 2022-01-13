@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/base/BaseModuleEntity.dart';
-import 'package:base/src/models/entity/base/feildinfo/GetPropertiesInfoModel.dart';
+import 'package:base/src/models/entity/base/base_module_entity.dart';
+import 'package:base/src/models/entity/base/feildinfo/get_properties_info_model.dart';
 import 'package:base/src/models/entity/enums/EnumBuildStatusType.dart';
 import 'package:base/src/models/entity/enums/EnumLanguage.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';

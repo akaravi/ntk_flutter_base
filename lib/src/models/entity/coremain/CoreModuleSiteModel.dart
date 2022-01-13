@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/base/BaseEntity.dart';
+import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:base/src/models/entity/core/CoreModuleModel.dart';
 import 'package:base/src/models/entity/core/CoreSiteModel.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';

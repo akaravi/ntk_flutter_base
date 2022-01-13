@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/base/BaseEntity.dart';
+import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:base/src/models/entity/enums/EnumManageUserAccessAreaTypes.dart';
 import 'package:base/src/models/entity/enums/EnumManageUserAccessControllerTypes.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';

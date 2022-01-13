@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/base/BaseModuleEntity.dart';
+import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/core/CoreUserModel.dart';
 import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
 import 'package:json_annotation/json_annotation.dart';

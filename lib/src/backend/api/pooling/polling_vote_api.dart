@@ -1,5 +1,5 @@
 import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/models/entity/base/ErrorException.dart';
+import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/polling/PollingVoteModel.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/src/dio.dart';
