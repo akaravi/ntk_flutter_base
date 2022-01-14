@@ -1,4 +1,4 @@
-import 'package:base/src/backend/service/splash/splash_service.dart';
+import 'package:base/src/controller/splash_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -38,14 +38,14 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return StreamBuilder<SplashProgress>(
-        stream: SplashService().initApp(),
+        stream: SplashController().initApp(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             //get progress send
             var splashProgress = snapshot.data ?? SplashProgress.ifNull();
             //if progress is complete go to next Page
             if (splashProgress.progress == 1) {
-              Future.microtask(() => SplashService().nextPage(context));
+              Future.microtask(() => SplashController().nextPage(context));
             } else {
               return splash(splashProgress);
             }
