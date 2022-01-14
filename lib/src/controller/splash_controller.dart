@@ -1,20 +1,15 @@
-import 'package:base/login.dart';
-import 'package:base/src/backend/api/core/core_auth_api.dart';
+import 'package:base/src/screen/login.dart';
+import 'package:base/src/screen/main_panel.dart';
 import 'package:base/src/backend/cache/intro_cache.dart';
-import 'package:base/src/backend/config/dio.dart';
+import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/intro.dart';
+import 'package:base/src/screen/intro.dart';
 import 'package:flutter/material.dart';
 
-class SplashController extends DioApi {
+class SplashController {
   //api caller reference
-  late AuthMethodApi directAPI;
-
-  SplashController() {
-    directAPI = AuthMethodApi.create(jsonDecodeDio());
-  }
 
   Stream<SplashProgress> initApp() async* {
     //get device token at first
@@ -36,8 +31,15 @@ class SplashController extends DioApi {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Intro()));
     } else {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Login()));
+      var hasLogin = await LoginCache().isLogin();
+      var isLoginAsGuest = await LoginCache().isGuest();
+      if (hasLogin || isLoginAsGuest) {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => MainPanel()));
+      }else{
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Login()));
+      }
     }
   }
 }

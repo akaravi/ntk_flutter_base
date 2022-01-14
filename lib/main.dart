@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:base/src/my_application.dart';
 import 'package:flutter/material.dart';
 
-import 'splash.dart';
+import 'src/screen/splash.dart';
 import 'src/backend/config/my_application_preference.dart';
 
 void main() async {

@@ -18,13 +18,13 @@ class Login extends StatelessWidget {
     final opacity = Container(
       color: Colors.black26.withAlpha(150),
     );
-    const hintStyle =  TextStyle(color: Colors.grey, fontSize: 16.0);
+    const hintStyle = TextStyle(color: Colors.grey, fontSize: 16.0);
     return Scaffold(
       body: SingleChildScrollView(
-        child:  Container(
+        child: Container(
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            color:backgroundColor,
+            color: backgroundColor,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,19 +33,20 @@ class Login extends StatelessWidget {
               Expanded(
                 child: Stack(
                   children: [
-                     ClipPath(
+                    ClipPath(
                       clipper: MyClipper(),
                       child: Stack(
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              image:  DecorationImage(
+                              image: DecorationImage(
                                 image: backgroundImage,
                                 fit: BoxFit.cover,
                               ),
                             ),
                             alignment: Alignment.center,
-                            padding: const EdgeInsets.only(top: 100.0, bottom: 100.0),
+                            padding: const EdgeInsets.only(
+                                top: 100.0, bottom: 100.0),
                           ),
                           opacity
                         ],
@@ -60,14 +61,14 @@ class Login extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold,
-                                color:  primaryColor),
+                                color: primaryColor),
                           ),
                           Text(
                             "APPNKT",
                             style: TextStyle(
                                 fontSize: 28.0,
                                 fontWeight: FontWeight.bold,
-                                color:  primaryColor),
+                                color: primaryColor),
                           ),
                         ],
                       ),
@@ -94,7 +95,7 @@ class Login extends StatelessWidget {
                     vertical: 10.0, horizontal: 20.0),
                 child: Row(
                   children: <Widget>[
-                     const Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 15.0),
                       child: Icon(
@@ -108,7 +109,7 @@ class Login extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.5),
                       margin: const EdgeInsets.only(left: 00.0, right: 10.0),
                     ),
-                     const Expanded(
+                    const Expanded(
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -140,7 +141,7 @@ class Login extends StatelessWidget {
                 child: IntrinsicHeight(
                   child: Row(
                     children: <Widget>[
-                       const Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 15.0),
                         child: Icon(
@@ -154,7 +155,7 @@ class Login extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         margin: const EdgeInsets.only(left: 00.0, right: 10.0),
                       ),
-                       const Expanded(
+                      const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -184,13 +185,13 @@ class Login extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(top: 20.0),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child:  Row(
+                child: Row(
                   children: <Widget>[
-                     Expanded(
+                    Expanded(
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          shape:  RoundedRectangleBorder(
-                              borderRadius:  BorderRadius.circular(30.0)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
                           backgroundColor: primaryColor,
                         ),
                         child: Row(
@@ -201,7 +202,7 @@ class Login extends StatelessWidget {
                             const Padding(
                               padding: EdgeInsets.symmetric(vertical: 8),
                               child: Text('LOGIN...',
-                                  style:  TextStyle(
+                                  style: TextStyle(
                                       color: Colors.white, fontSize: 20)),
                             ),
                             Expanded(child: Container()),
@@ -210,13 +211,58 @@ class Login extends StatelessWidget {
                               child: Container(
                                 decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius:
-                                         BorderRadius.circular(30.0)),
+                                    borderRadius: BorderRadius.circular(30.0)),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
                                   Icons.arrow_forward,
-                                  color:  primaryColor,
+                                  color: primaryColor,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        onPressed: () => {},
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 20.0),
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          backgroundColor: Colors.black12,
+                        ),
+                        child: Row(
+                          children: [
+                            const SizedBox(
+                              width: 32,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              child: Text('JOINS AS GUEST',
+                                  style: TextStyle(
+                                      color: primaryColor, fontSize: 20)),
+                            ),
+                            Expanded(child: Container()),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.black12,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 24, vertical: 8),
+                                child:  Icon(
+                                  Icons.arrow_forward_outlined,
+                                  color:primaryColor,
                                 ),
                               ),
                             )
@@ -231,13 +277,13 @@ class Login extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(top: 20.0, bottom: 20),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child:  Row(
+                child: Row(
                   children: <Widget>[
-                     Expanded(
+                    Expanded(
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          shape:  RoundedRectangleBorder(
-                              borderRadius:  BorderRadius.circular(30.0)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
                           backgroundColor: Colors.transparent,
                         ),
                         child: Container(
@@ -245,7 +291,7 @@ class Login extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "DON'T HAVE AN ACCOUNT?",
-                            style: TextStyle(color:  primaryColor),
+                            style: TextStyle(color: primaryColor),
                           ),
                         ),
                         onPressed: () => {},
@@ -254,6 +300,7 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
+          
             ],
           ),
         ),
@@ -265,7 +312,7 @@ class Login extends StatelessWidget {
 class MyClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    Path p =  Path();
+    Path p = Path();
     p.lineTo(size.width, 0.0);
     p.lineTo(size.width, size.height * 0.65);
     p.arcToPoint(
