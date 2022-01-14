@@ -1,4 +1,5 @@
 import 'package:base/src/backend/service/core/auth_service.dart';
+import 'package:base/src/intro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -41,7 +42,14 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
         stream: AuthService().splashInit(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return splash(snapshot.data ?? SplashProgress.ifNull());
+            //get progress send
+            var splashProgress = snapshot.data ?? SplashProgress.ifNull();
+            //if progress is complete go to next Page
+            if (splashProgress.progress == 1) {
+              Navigator.pushReplacement( context,
+                  MaterialPageRoute(builder: (context) => const Intro()));
+            }
+            return splash(splashProgress);
           } else if (snapshot.hasError) {
             return const Center(
               child: Text('Errror'),
@@ -156,7 +164,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                     ],
                   ),
                 ),
-               const SizedBox(
+                const SizedBox(
                   height: 23,
                 )
               ],

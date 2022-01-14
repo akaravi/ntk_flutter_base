@@ -47,7 +47,7 @@ class FilterModel {
 
   set rowPerPageInfinitive(bool value) {
     if (value=true) {
-      rowPerPage=9223372036854;
+      rowPerPage=922337203;
     }
   }
 }
