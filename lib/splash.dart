@@ -1,5 +1,4 @@
-import 'package:base/src/backend/service/core/auth_service.dart';
-import 'package:base/src/backend/service/intro/intro_service.dart';
+import 'package:base/src/backend/service/splash/splash_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,7 +45,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
             var splashProgress = snapshot.data ?? SplashProgress.ifNull();
             //if progress is complete go to next Page
             if (splashProgress.progress == 1) {
-              Future.microtask(() => IntroService().nextPage(context));
+              Future.microtask(() => SplashService().nextPage(context));
             } else {
               return splash(splashProgress);
             }
