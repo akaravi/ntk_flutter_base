@@ -34,8 +34,10 @@ class IntroService extends DioApi {
           .pop();
     } //intro page not seen yet so go to login
     else {
+      //set as seen from now
       IntroCache().hasBeenSeen();
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => Login()));
     }
   }
+}

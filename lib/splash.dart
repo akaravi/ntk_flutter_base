@@ -1,5 +1,5 @@
 import 'package:base/src/backend/service/core/auth_service.dart';
-import 'package:base/src/intro.dart';
+import 'package:base/src/backend/service/intro/intro_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -39,23 +39,23 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return StreamBuilder<SplashProgress>(
-        stream: AuthService().splashInit(),
+        stream: SplashService().initApp(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             //get progress send
             var splashProgress = snapshot.data ?? SplashProgress.ifNull();
             //if progress is complete go to next Page
             if (splashProgress.progress == 1) {
-              Future.microtask(() => Navigator.pushReplacement( context,
-                  MaterialPageRoute(builder: (context) => const Intro())));
+              Future.microtask(() => IntroService().nextPage(context));
+            } else {
+              return splash(splashProgress);
             }
-            return splash(splashProgress);
           } else if (snapshot.hasError) {
             return const Center(
               child: Text('Errror'),
             );
-          } else
-            return Container();
+          }
+          return Container();
         });
   }
 
