@@ -1,3 +1,4 @@
+import 'package:base/src/models/entity/enums/enum_sort_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'filter_data_model.dart';
@@ -22,7 +23,7 @@ class FilterModel {
   int? rowPerPage;
 
   @JsonKey(name: 'SortType')
-  int? sortType;
+  EnumSortType? sortType;
 
   @JsonKey(name: 'SortColumn')
   String? sortColumn;
@@ -41,4 +42,12 @@ class FilterModel {
       _$FilterModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$FilterModelToJson(this);
+
+  bool? _rowPerPageInfinitive;
+
+  set rowPerPageInfinitive(bool value) {
+    if (value=true) {
+      rowPerPage=9223372036854;
+    }
+  }
 }
