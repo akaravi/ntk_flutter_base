@@ -1,6 +1,6 @@
 import 'package:base/src/backend/api/application/application_app_api.dart';
 import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/backend/config/main_screen_preference.dart';
+import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/dto/application/application_score_dto_model.dart';
 import 'package:base/src/models/entity/base/error_exception_base.dart';
@@ -24,7 +24,7 @@ class ApplicationAppService extends DioApi {
       //Set language of app
       MyApplicationPreference().changeLanguage(res.item?.lang);
       //set qrcode, appId, title, update information, aboutUs page
-      MainScreenPreference()
+      MainScreenCache()
         ..appId = res.item?.id ?? 0
         ..qrCode = res.item?.qrCode ?? ''
         ..title = res.item?.aboutUsTitle

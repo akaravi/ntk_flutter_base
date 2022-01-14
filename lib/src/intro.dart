@@ -1,7 +1,6 @@
 import 'package:base/src/backend/service/intro/intro_service.dart';
 import 'package:base/src/models/entity/application/application_intro_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 
@@ -49,29 +48,47 @@ class Intro extends StatelessWidget {
   }
 }
 
-class IntroScreen extends StatefulWidget {
+class IntroScreen extends StatelessWidget {
   List<Slide> slides;
 
   IntroScreen(this.slides, {Key? key}) : super(key: key);
 
   @override
-  IntroScreenState createState() => IntroScreenState(slides);
-}
+  Widget build(BuildContext context) {
+    return IntroSlider(
+      // List slides
+      slides: slides,
 
-// ------------------ Custom config ------------------
-class IntroScreenState extends State<IntroScreen> {
-  List<Slide> slides = [];
+      // Skip button
+      renderSkipBtn: renderSkipBtn(),
+      skipButtonStyle: myButtonStyle(),
 
-  IntroScreenState(this.slides);
+      // Next button
+      renderNextBtn: renderNextBtn(),
+      nextButtonStyle: myButtonStyle(),
 
-  @override
-  void initState() {
-    super.initState();
+      // Done button
+      renderDoneBtn: renderDoneBtn(),
+      onDonePress: () => onDonePress(context),
+      doneButtonStyle: myButtonStyle(),
+      scrollPhysics: const BouncingScrollPhysics(),
+      // Dot indicator
+      colorDot: const Color(0x33FFA8B0),
+      colorActiveDot: const Color(0xffFFA8B0),
+      sizeDot: 13.0,
+
+      // Show or hide status bar
+      hideStatusBar: true,
+      backgroundColorAllSlides: Colors.grey,
+
+    );
   }
 
-  void onDonePress() {
-    Future.delayed(const Duration(seconds: 5),() {
-      IntroService().navigate(context);
+  void onDonePress(BuildContext context) {
+    //navigate to next page if frist open go to intro page
+    //otherwise this page open from features click
+    Future.microtask(() {
+      IntroService().nextPage(context);
     });
   }
 
@@ -103,39 +120,6 @@ class IntroScreenState extends State<IntroScreen> {
       backgroundColor:
           MaterialStateProperty.all<Color>(const Color(0x33F3B4BA)),
       overlayColor: MaterialStateProperty.all<Color>(const Color(0x33FFA8B0)),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return IntroSlider(
-      // List slides
-      slides: slides,
-
-      // Skip button
-      renderSkipBtn: renderSkipBtn(),
-      skipButtonStyle: myButtonStyle(),
-
-      // Next button
-      renderNextBtn: renderNextBtn(),
-      nextButtonStyle: myButtonStyle(),
-
-      // Done button
-      renderDoneBtn: renderDoneBtn(),
-      onDonePress: onDonePress,
-      doneButtonStyle: myButtonStyle(),
-      scrollPhysics: const BouncingScrollPhysics(),
-      // Dot indicator
-      colorDot: const Color(0x33FFA8B0),
-      colorActiveDot: const Color(0xffFFA8B0),
-      sizeDot: 13.0,
-
-      // Show or hide status bar
-      hideStatusBar: true,
-      backgroundColorAllSlides: Colors.grey,
-
-      // // Scrollbar
-      // verticalScrollbarBehavior: scrollbarBehavior.SHOW_ALWAYS,
     );
   }
 }

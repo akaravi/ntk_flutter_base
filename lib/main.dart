@@ -1,8 +1,5 @@
 import 'dart:async';
 
-import 'package:base/src/backend/service/application/application_intro_service.dart';
-import 'package:base/src/backend/service/core/auth_service.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:base/src/my_application.dart';
 import 'package:flutter/material.dart';
 

@@ -46,8 +46,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
             var splashProgress = snapshot.data ?? SplashProgress.ifNull();
             //if progress is complete go to next Page
             if (splashProgress.progress == 1) {
-              Navigator.pushReplacement( context,
-                  MaterialPageRoute(builder: (context) => const Intro()));
+              Future.microtask(() => Navigator.pushReplacement( context,
+                  MaterialPageRoute(builder: (context) => const Intro())));
             }
             return splash(splashProgress);
           } else if (snapshot.hasError) {
