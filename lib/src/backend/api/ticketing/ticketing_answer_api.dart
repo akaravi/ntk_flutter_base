@@ -1,5 +1,5 @@
 import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/models/entity/ticketing/TicketingAnswerModel.dart';
+import 'package:base/src/models/entity/ticketing/ticketing_answer_model.dart';
 import 'package:dio/src/dio.dart';
 
 class TicketingAnswerMethodApi

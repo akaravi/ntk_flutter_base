@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 
 import 'splash.dart';
 import 'src/backend/config/my_application_preference.dart';
-import 'src/backend/service/base/baseService.dart';
 
 void main() async {
   //prevent from crash on start

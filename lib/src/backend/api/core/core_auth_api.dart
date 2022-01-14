@@ -8,7 +8,7 @@ import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/base/error_exception_base.dart';
 import 'package:base/src/models/entity/base/token_info_model.dart';
-import 'package:base/src/models/entity/core/CoreUserModel.dart';
+import 'package:base/src/models/entity/core/core_user_model.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

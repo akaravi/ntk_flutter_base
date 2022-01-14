@@ -1,7 +1,7 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/coremain/CoreCpMainMenuCmsUserGroupModel.dart';
-import 'package:base/src/models/entity/enums/EnumManageUserAccessControllerTypes.dart';
-import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
+import 'package:base/src/models/entity/coremain/core_cp_main_menu_cms_user_group_model.dart';
+import 'package:base/src/models/entity/enums/enum_manage_user_access_controller_types.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'core_site_user_model.dart';

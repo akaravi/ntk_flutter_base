@@ -1,6 +1,6 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
-import 'package:base/src/models/entity/enums/EnumTransactionRecordStatus.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:base/src/models/entity/enums/enum_transaction_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'bankpayment_transaction_model.dart';

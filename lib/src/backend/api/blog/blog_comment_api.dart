@@ -1,5 +1,5 @@
 import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/models/entity/blog/BlogCommentModel.dart';
+import 'package:base/src/models/entity/blog/blog_comment_model.dart';
 import 'package:dio/dio.dart';
 
 class BlogCommentMethodApi

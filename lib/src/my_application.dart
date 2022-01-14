@@ -1,7 +1,7 @@
 import 'package:base/src/backend/config/my_application_preference.dart';
-import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
-import 'package:base/src/models/entity/enums/EnumLanguage.dart';
-import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
+import 'package:base/src/models/entity/enums/enum_devicetype.dart';
+import 'package:base/src/models/entity/enums/enum_language.dart';
+import 'package:base/src/models/entity/enums/enum_operating_system_type.dart';
 
 class MyApplication {
   final String _defaultTheme = '1';

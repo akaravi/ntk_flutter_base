@@ -1,6 +1,6 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
-import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
+import 'package:base/src/models/entity/enums/enum_devicetype.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'core_site_model.dart';

@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/enums/EnumMenuPlaceType.dart';
+import 'package:base/src/models/entity/enums/enum_menu_place_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'core_cpmain_menu_model.g.dart';

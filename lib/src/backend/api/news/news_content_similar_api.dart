@@ -1,5 +1,5 @@
 import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/models/entity/news/NewsContentSimilarModel.dart';
+import 'package:base/src/models/entity/news/news_content_similar_model.dart';
 import 'package:dio/dio.dart';
 
 class NewsContentSimilarMethodApi

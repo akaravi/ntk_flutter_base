@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/enums/EnumManageUserAccessAreaTypes.dart';
-import 'package:base/src/models/entity/enums/EnumManageUserAccessControllerTypes.dart';
+import 'package:base/src/models/entity/enums/enum_manage_user_access_area_types.dart';
+import 'package:base/src/models/entity/enums/enum_manage_user_access_controller_types.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'token_info_model.g.dart';

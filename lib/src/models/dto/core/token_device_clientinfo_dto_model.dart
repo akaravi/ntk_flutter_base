@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/enums/EnumDeviceType.dart';
-import 'package:base/src/models/entity/enums/EnumOperatingSystemType.dart';
+import 'package:base/src/models/entity/enums/enum_devicetype.dart';
+import 'package:base/src/models/entity/enums/enum_operating_system_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'token_device_clientinfo_dto_model.g.dart';

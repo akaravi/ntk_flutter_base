@@ -1,8 +1,8 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/base/feildinfo/get_properties_info_model.dart';
-import 'package:base/src/models/entity/enums/EnumBuildStatusType.dart';
-import 'package:base/src/models/entity/enums/EnumLanguage.dart';
-import 'package:base/src/models/entity/enums/EnumRecordStatus.dart';
+import 'package:base/src/models/entity/enums/enum_build_status_type.dart';
+import 'package:base/src/models/entity/enums/enum_language.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'application_layout_value_model.dart';
