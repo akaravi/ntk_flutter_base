@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:base/src/my_application.dart';
+import 'package:base/src/screen/login.dart';
 import 'package:flutter/material.dart';
 
 import 'src/screen/splash.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Splash(),
+      // home: const Splash(),
+      home:  Login(),
     );
   }
 }

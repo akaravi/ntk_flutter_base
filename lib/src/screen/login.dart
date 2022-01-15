@@ -1,3 +1,4 @@
+import 'package:base/src/controller/loginController.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -260,15 +261,16 @@ class Login extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(30.0)),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 24, vertical: 8),
-                                child:  Icon(
+                                child: Icon(
                                   Icons.arrow_forward_outlined,
-                                  color:primaryColor,
+                                  color: primaryColor,
                                 ),
                               ),
                             )
                           ],
                         ),
-                        onPressed: () => {},
+                        onPressed: () =>
+                            LoginController().loginAsGuest(context),
                       ),
                     ),
                   ],
@@ -300,7 +302,6 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-          
             ],
           ),
         ),
