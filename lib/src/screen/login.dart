@@ -216,7 +216,7 @@ class Login extends StatelessWidget {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
-                                  Icons.arrow_forward,
+                                  Icons.check,
                                   color: primaryColor,
                                 ),
                               ),

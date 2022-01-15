@@ -1,4 +1,5 @@
 import 'package:base/src/backend/api/core/core_auth_api.dart';
+import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
@@ -31,6 +32,9 @@ class AuthService extends DioApi {
     } else {
       MyApplicationPreference()
           .changeToken(tokenResponse.item?.deviceToken ?? '');
+      MainScreenCache()
+        ..setMemberId(tokenResponse.item?.memberId ?? 0)
+        ..setSiteId(tokenResponse.item?.siteId ?? 0);
     }
     return tokenResponse;
   }

@@ -6,7 +6,8 @@ class MainScreenCache {
   String? qrCode;
   int? appId;
   String? title;
-
+  int? _siteId;
+  int? _memberId;
   AboutUsModel? _aboutUs;
 
   UpdateClass? _updateInfo;
@@ -20,4 +21,16 @@ class MainScreenCache {
   updateInfo(ApplicationAppModel? item) {
     _updateInfo = UpdateClass.convert(item ?? ApplicationAppModel());
   }
+
+  setMemberId(int memberId) {
+   _memberId = memberId;
+  }
+
+  setSiteId(int siteId) {
+    _siteId = siteId;
+  }
+
+  int? get memberId => _memberId;
+
+  int? get siteId => _siteId;
 }
