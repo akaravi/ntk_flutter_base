@@ -1,4 +1,5 @@
 import 'package:base/src/backend/service/intro/intro_service.dart';
+import 'package:base/src/controller/intro_controller.dart';
 import 'package:base/src/models/entity/application/application_intro_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
@@ -11,7 +12,7 @@ class Intro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<List<ApplicationIntroModel>>(
-          future: IntroService().getIntro(),
+          future: IntroController().getIntro(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return IntroScreen(createSlides(snapshot.data));
@@ -88,7 +89,7 @@ class IntroScreen extends StatelessWidget {
     //navigate to next page if frist open go to intro page
     //otherwise this page open from features click
     Future.microtask(() {
-      IntroService().nextPage(context);
+      IntroController().nextPage(context);
     });
   }
 

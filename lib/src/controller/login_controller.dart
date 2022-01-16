@@ -1,20 +1,29 @@
 import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
+import 'package:base/src/controller/panel_controller.dart';
+import 'package:base/src/controller/register_controller.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
-import 'package:base/src/screen/main_panel.dart';
+import 'package:base/src/screen/login.dart';
 import 'package:flutter/material.dart';
 
 class LoginController {
+  static loginInPage(BuildContext context) {
+    Future.microtask(() => Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => Login())));
+  }
+
   /// when user wants to go ahead as guest
   /// and click on login as guest
   Future<void> loginAsGuest(BuildContext context) async {
     LoginCache().asGuest(true);
-    {
-      Future.microtask(() => Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => MainPanel())));
-    }
+    //prepare navigate to main page
+    PanelController.mainPanelPage(context);
+  }
+
+  void registerPage(BuildContext context) {
+    RegisterController.registerPage(context);
   }
 
   /// user wants to login with certain mobile number and pass

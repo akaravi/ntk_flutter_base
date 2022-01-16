@@ -1,13 +1,13 @@
-import 'package:base/src/controller/login_controller.dart';
+import 'package:base/src/controller/register_controller.dart';
 import 'package:base/src/view/clipper/login_cliper.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Register extends StatelessWidget {
   final Color primaryColor;
   final Color backgroundColor;
   final AssetImage backgroundImage;
 
-  Login({
+  Register({
     Key? key,
     this.primaryColor = Colors.green,
     this.backgroundColor = Colors.white,
@@ -21,6 +21,7 @@ class Login extends StatelessWidget {
       color: Colors.black26.withAlpha(150),
     );
     const hintStyle = TextStyle(color: Colors.grey, fontSize: 16.0);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -60,7 +61,7 @@ class Login extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           Text(
-                            "Login To",
+                            "Register On",
                             style: TextStyle(
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold,
@@ -79,6 +80,7 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
+              // hint text on email
               getHintWidget("Email or mobile", hintStyle),
               //email text field
               getTextInput(Icons.person_outline, 'Enter your email or mobile'),
@@ -139,6 +141,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
+              //register btn
               Container(
                 margin: const EdgeInsets.only(top: 20.0),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -158,7 +161,7 @@ class Login extends StatelessWidget {
                             ),
                             const Padding(
                               padding: EdgeInsets.symmetric(vertical: 8),
-                              child: Text('LOGIN...',
+                              child: Text('REGISTER...',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20)),
                             ),
@@ -185,53 +188,7 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 20.0),
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: TextButton(
-                        style: TextButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0)),
-                          backgroundColor: Colors.black12,
-                        ),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 32,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8),
-                              child: Text('JOINS AS GUEST',
-                                  style: TextStyle(
-                                      color: primaryColor, fontSize: 20)),
-                            ),
-                            Expanded(child: Container()),
-                            Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.black12,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 24, vertical: 8),
-                                child: Icon(
-                                  Icons.arrow_forward_outlined,
-                                  color: primaryColor,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                        onPressed: () =>
-                            LoginController().loginAsGuest(context),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              //have account button
               Container(
                 margin: const EdgeInsets.only(top: 20.0, bottom: 20),
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
@@ -248,12 +205,12 @@ class Login extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 20.0),
                           alignment: Alignment.center,
                           child: Text(
-                            "DON'T HAVE AN ACCOUNT?",
+                            "REALLY HAVE ACCOUNT?",
                             style: TextStyle(color: primaryColor),
                           ),
                         ),
-                        onPressed: () => LoginController().registerPage(context),
-
+                        onPressed: () =>
+                            RegisterController().loginPage(context),
                       ),
                     ),
                   ],
@@ -265,6 +222,7 @@ class Login extends StatelessWidget {
       ),
     );
   }
+
   getHintWidget(String title, TextStyle hintStyle) {
     return Padding(
       padding: const EdgeInsets.only(left: 40.0),
@@ -289,7 +247,7 @@ class Login extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding:
-            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
             child: Icon(
               icon,
               color: Colors.grey,

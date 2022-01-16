@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Splash(),
-      // home:  Login(),
+      // home: const Splash(),
+      home:  Login(),
     );
   }
 }

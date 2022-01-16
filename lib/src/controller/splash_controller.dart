@@ -1,11 +1,11 @@
-import 'package:base/src/screen/login.dart';
-import 'package:base/src/screen/main_panel.dart';
 import 'package:base/src/backend/cache/intro_cache.dart';
 import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/screen/intro.dart';
+import 'package:base/src/controller/intro_controller.dart';
+import 'package:base/src/controller/login_controller.dart';
+import 'package:base/src/controller/panel_controller.dart';
 import 'package:flutter/material.dart';
 
 class SplashController {
@@ -28,17 +28,14 @@ class SplashController {
     var introSeen = await IntroCache().isSeenBefore();
     //not see intro yet
     if (!introSeen) {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Intro()));
+      IntroController.asWelcomePage(context);
     } else {
       var hasLogin = await LoginCache().isLogin();
       var isLoginAsGuest = await LoginCache().isGuest();
       if (hasLogin || isLoginAsGuest) {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => MainPanel()));
-      }else{
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Login()));
+        PanelController.mainPanelPage(context);
+      } else {
+        LoginController.loginInPage(context);
       }
     }
   }
