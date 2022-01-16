@@ -1,4 +1,5 @@
 import 'package:base/src/controller/loginController.dart';
+import 'package:base/src/view/clipper/login_cliper.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -35,7 +36,7 @@ class Login extends StatelessWidget {
                 child: Stack(
                   children: [
                     ClipPath(
-                      clipper: MyClipper(),
+                      clipper: LoginClipper(),
                       child: Stack(
                         children: [
                           Container(
@@ -307,27 +308,5 @@ class Login extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class MyClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path p = Path();
-    p.lineTo(size.width, 0.0);
-    p.lineTo(size.width, size.height * 0.65);
-    p.arcToPoint(
-      Offset(0.0, size.height * 0.65),
-      radius: const Radius.elliptical(50.0, 10.0),
-      rotation: 0.0,
-    );
-    p.lineTo(0.0, 0.0);
-    p.close();
-    return p;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    return true;
   }
 }
