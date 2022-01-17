@@ -2,7 +2,7 @@ import 'package:base/src/controller/login_controller.dart';
 import 'package:base/src/view/clipper/login_cliper.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   final Color primaryColor;
   final Color backgroundColor;
   final AssetImage backgroundImage;
@@ -16,6 +16,29 @@ class Login extends StatelessWidget {
   });
 
   @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  // Create a text controller and use it to retrieve the current value
+  // of the TextField.
+  final TextEditingController userNameTextController = TextEditingController();
+  final TextEditingController passwordTextController = TextEditingController();
+  final TextEditingController captchaTextController = TextEditingController();
+
+  //controller object for login form
+  final loginController = LoginController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    userNameTextController.dispose();
+    passwordTextController.dispose();
+    captchaTextController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final opacity = Container(
       color: Colors.black26.withAlpha(150),
@@ -26,13 +49,12 @@ class Login extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            color: backgroundColor,
+            color: widget.backgroundColor,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-
               //header image
               Expanded(
                 child: Stack(
@@ -44,7 +66,7 @@ class Login extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                image: backgroundImage,
+                                image: widget.backgroundImage,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -65,14 +87,14 @@ class Login extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold,
-                                color: primaryColor),
+                                color: widget.primaryColor),
                           ),
                           Text(
                             "APPNKT",
                             style: TextStyle(
                                 fontSize: 28.0,
                                 fontWeight: FontWeight.bold,
-                                color: primaryColor),
+                                color: widget.primaryColor),
                           ),
                         ],
                       ),
@@ -81,13 +103,22 @@ class Login extends StatelessWidget {
                 ),
               ),
               //email hint
-              getHintWidget("Email or mobile", hintStyle,),
+              getHintWidget(
+                "Email or mobile",
+                hintStyle,
+              ),
               //email text field
-              getTextInput(Icons.person_outline, 'Enter your email or mobile'),
+              getTextInput(
+                Icons.person_outline,
+                'Enter your email or mobile',
+                userNameTextController,
+              ),
               //password hint
               getHintWidget("password", hintStyle),
               //email text field
-              getTextInput(Icons.password, 'Enter your password',passwordType:true),
+              getTextInput(
+                  Icons.password, 'Enter your password', passwordTextController,
+                  passwordType: true),
 
               //captcha hint
               getHintWidget("captcha", hintStyle),
@@ -119,29 +150,54 @@ class Login extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         margin: const EdgeInsets.only(left: 00.0, right: 10.0),
                       ),
-                      const Expanded(
+                      Expanded(
                         child: TextField(
+                          controller: captchaTextController,
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Enter seen text',
-                            hintStyle: TextStyle(color: Colors.grey),
+                            hintStyle: const TextStyle(color: Colors.grey),
                           ),
                         ),
                       ),
-                      Container(
-                          width: 120,
-                          margin: const EdgeInsets.only(left: 4.0),
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                  'assets/drawable/load_capcha.png',
-                                ),
-                                fit: BoxFit.fill),
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(25.0),
-                                bottomRight: Radius.circular(25.0)),
-                          )),
+                      FutureBuilder<String>(
+                          future: loginController.loadCaptcha(),
+                          builder: (context, snapshot) {
+                            ImageProvider image;
+                            if (snapshot.hasError) {
+                              image = const AssetImage(
+                                  'assets/drawable/error_captcha.png');
+                            } else if (snapshot.connectionState ==
+                                    ConnectionState.none ||
+                                snapshot.connectionState ==
+                                    ConnectionState.waiting) {
+                              image = const AssetImage(
+                                  'assets/drawable/load_captcha.png');
+                            } else if (snapshot.hasData) {
+                              image = NetworkImage(
+                                snapshot.data ?? '',
+                              ); image = const AssetImage(
+                                  'assets/drawable/error_captcha.png');
+                            } else {
+                              image = const AssetImage(
+                                  'assets/drawable/load_captcha.png');
+                            }
+                            return InkWell(
+                              //provide get captcha again when click
+                              onTap: () => setState(() {}),
+                              child: Container(
+                                  width: 120,
+                                  margin: const EdgeInsets.only(left: 4.0),
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: image, fit: BoxFit.fill),
+                                    color: Colors.white,
+                                    borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(25.0),
+                                        bottomRight: Radius.circular(25.0)),
+                                  )),
+                            );
+                          }),
                     ],
                   ),
                 ),
@@ -156,7 +212,7 @@ class Login extends StatelessWidget {
                         style: TextButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0)),
-                          backgroundColor: primaryColor,
+                          backgroundColor: widget.primaryColor,
                         ),
                         child: Row(
                           children: [
@@ -180,7 +236,7 @@ class Login extends StatelessWidget {
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
                                   Icons.check,
-                                  color: primaryColor,
+                                  color: widget.primaryColor,
                                 ),
                               ),
                             )
@@ -213,7 +269,8 @@ class Login extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(vertical: 8),
                               child: Text('JOINS AS GUEST',
                                   style: TextStyle(
-                                      color: primaryColor, fontSize: 20)),
+                                      color: widget.primaryColor,
+                                      fontSize: 20)),
                             ),
                             Expanded(child: Container()),
                             Padding(
@@ -226,14 +283,13 @@ class Login extends StatelessWidget {
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
                                   Icons.arrow_forward_outlined,
-                                  color: primaryColor,
+                                  color: widget.primaryColor,
                                 ),
                               ),
                             )
                           ],
                         ),
-                        onPressed: () =>
-                            LoginController().loginAsGuest(context),
+                        onPressed: () => loginController.loginAsGuest(context),
                       ),
                     ),
                   ],
@@ -256,11 +312,10 @@ class Login extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "DON'T HAVE AN ACCOUNT?",
-                            style: TextStyle(color: primaryColor),
+                            style: TextStyle(color: widget.primaryColor),
                           ),
                         ),
-                        onPressed: () => LoginController().registerPage(context),
-
+                        onPressed: () => loginController.registerPage(context),
                       ),
                     ),
                   ],
@@ -272,7 +327,11 @@ class Login extends StatelessWidget {
       ),
     );
   }
-  getHintWidget(String title, TextStyle hintStyle,) {
+
+  getHintWidget(
+    String title,
+    TextStyle hintStyle,
+  ) {
     return Padding(
       padding: const EdgeInsets.only(left: 40.0),
       child: Text(
@@ -282,7 +341,8 @@ class Login extends StatelessWidget {
     );
   }
 
-  getTextInput(IconData icon, String hint, {bool passwordType=false}) {
+  getTextInput(IconData icon, String hint, textFieldController,
+      {bool passwordType = false}) {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
@@ -296,7 +356,7 @@ class Login extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding:
-            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
             child: Icon(
               icon,
               color: Colors.grey,
@@ -310,6 +370,7 @@ class Login extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
+              controller: textFieldController,
               obscureText: passwordType,
               decoration: InputDecoration(
                 border: InputBorder.none,

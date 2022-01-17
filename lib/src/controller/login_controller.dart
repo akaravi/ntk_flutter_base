@@ -1,14 +1,19 @@
 import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
+import 'package:base/src/controller/field_errors_controller.dart';
 import 'package:base/src/controller/panel_controller.dart';
 import 'package:base/src/controller/register_controller.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
+import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/login.dart';
 import 'package:flutter/material.dart';
 
-class LoginController {
+class LoginController with TextErrorController{
+  ///last captcha get form url
+  late CaptchaModel model;
+
   static loginInPage(BuildContext context) {
     Future.microtask(() => Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => Login())));
@@ -101,4 +106,23 @@ class LoginController {
       throw Exception(response.errorMessage);
     }
   }
+
+  Future<String> loadCaptcha() async {
+    model = await AuthService().getCaptcha();
+    return model.image ?? '';
+  }
+
+  captchaErrorText(TextEditingController captchaTextController) {
+    return textEmptyError(captchaTextController);
+  }
+
+  passwordErrorText(TextEditingController passwordTextController) {
+    return  textEmptyError(passwordTextController);
+  }
+
+  usernameErrorText(TextEditingController userNameTextController) {
+    return  usernameEmptyError(userNameTextController);
+  }
+
+
 }

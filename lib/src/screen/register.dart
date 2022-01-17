@@ -129,7 +129,7 @@ class Register extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
-                                  'assets/drawable/load_capcha.png',
+                                  'assets/drawable/load_captcha.png',
                                 ),
                                 fit: BoxFit.fill),
                             color: Colors.blue,
