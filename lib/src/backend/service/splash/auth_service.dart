@@ -3,6 +3,7 @@ import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
+import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/base/token_info_model.dart';
 
@@ -37,5 +38,14 @@ class AuthService extends DioApi {
         ..setSiteId(tokenResponse.item?.siteId ?? 0);
     }
     return tokenResponse;
+  }
+
+  Future<CaptchaModel> getCaptcha() async {
+    var errorException = await directAPI.captcha();
+    if (errorException.isSuccess) {
+      return errorException?.item ?? CaptchaModel();
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
   }
 }

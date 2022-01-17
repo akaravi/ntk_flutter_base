@@ -32,6 +32,7 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
+
               //header image
               Expanded(
                 child: Stack(
@@ -79,9 +80,15 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-              getHintWidget("Email or mobile", hintStyle),
+              //email hint
+              getHintWidget("Email or mobile", hintStyle,),
               //email text field
               getTextInput(Icons.person_outline, 'Enter your email or mobile'),
+              //password hint
+              getHintWidget("password", hintStyle),
+              //email text field
+              getTextInput(Icons.password, 'Enter your password',passwordType:true),
+
               //captcha hint
               getHintWidget("captcha", hintStyle),
               //captcha text field
@@ -126,11 +133,11 @@ class Login extends StatelessWidget {
                           margin: const EdgeInsets.only(left: 4.0),
                           decoration: const BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage(
+                                image: NetworkImage(
                                   'assets/drawable/load_capcha.png',
                                 ),
                                 fit: BoxFit.fill),
-                            color: Colors.blue,
+                            color: Colors.white,
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(25.0),
                                 bottomRight: Radius.circular(25.0)),
@@ -265,7 +272,7 @@ class Login extends StatelessWidget {
       ),
     );
   }
-  getHintWidget(String title, TextStyle hintStyle) {
+  getHintWidget(String title, TextStyle hintStyle,) {
     return Padding(
       padding: const EdgeInsets.only(left: 40.0),
       child: Text(
@@ -275,7 +282,7 @@ class Login extends StatelessWidget {
     );
   }
 
-  getTextInput(IconData icon, String hint) {
+  getTextInput(IconData icon, String hint, {bool passwordType=false}) {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
@@ -303,6 +310,7 @@ class Login extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
+              obscureText: passwordType,
               decoration: InputDecoration(
                 border: InputBorder.none,
                 hintText: hint,
