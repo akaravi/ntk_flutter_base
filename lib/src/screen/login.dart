@@ -29,6 +29,12 @@ class _LoginState extends State<Login> {
   //controller object for login form
   final loginController = LoginController();
 
+  bool userNotValid = false;
+
+  bool passNotValid = false;
+
+  bool captchaNotValid = false;
+
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
@@ -43,7 +49,6 @@ class _LoginState extends State<Login> {
     final opacity = Container(
       color: Colors.black26.withAlpha(150),
     );
-    const hintStyle = TextStyle(color: Colors.grey, fontSize: 16.0);
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -105,7 +110,9 @@ class _LoginState extends State<Login> {
               //email hint
               getHintWidget(
                 "Email or mobile",
-                hintStyle,
+                userNotValid
+                    ? loginController.usernameEmptyError(userNameTextController)
+                    : null,
               ),
               //email text field
               getTextInput(
@@ -114,14 +121,23 @@ class _LoginState extends State<Login> {
                 userNameTextController,
               ),
               //password hint
-              getHintWidget("password", hintStyle),
+              getHintWidget(
+                "password",
+                passNotValid
+                    ? loginController.passwordErrorText(passwordTextController)
+                    : null,
+              ),
               //email text field
               getTextInput(
                   Icons.password, 'Enter your password', passwordTextController,
                   passwordType: true),
 
               //captcha hint
-              getHintWidget("captcha", hintStyle),
+              getHintWidget(
+                  "captcha",
+                  captchaNotValid
+                      ? loginController.captchaErrorText(captchaTextController)
+                      : null),
               //captcha text field
               Container(
                 decoration: BoxDecoration(
@@ -155,7 +171,8 @@ class _LoginState extends State<Login> {
                           controller: captchaTextController,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            errorText: loginController.captchaErrorText(captchaTextController),
+                            errorText: loginController
+                                .captchaErrorText(captchaTextController),
                             hintText: 'Enter seen text',
                             hintStyle: const TextStyle(color: Colors.grey),
                           ),
@@ -177,7 +194,8 @@ class _LoginState extends State<Login> {
                             } else if (snapshot.hasData) {
                               image = NetworkImage(
                                 snapshot.data ?? '',
-                              ); image = const AssetImage(
+                              );
+                              image = const AssetImage(
                                   'assets/drawable/error_captcha.png');
                             } else {
                               image = const AssetImage(
@@ -243,7 +261,10 @@ class _LoginState extends State<Login> {
                             )
                           ],
                         ),
-                        onPressed: () => loginController.loginWithPass(email, pass, captchaText, captchaKey),
+                        onPressed: () => loginController.loginWithPass(
+                            userNameTextController.text,
+                            passwordTextController.text,
+                            captchaTextController.text),
                       ),
                     ),
                   ],
@@ -331,18 +352,25 @@ class _LoginState extends State<Login> {
 
   getHintWidget(
     String title,
-    TextStyle hintStyle,
+    String? error,
   ) {
+    TextStyle hintStyle = const TextStyle(color: Colors.grey, fontSize: 16.0);
     return Padding(
       padding: const EdgeInsets.only(left: 40.0),
-      child: Text(
-        title,
-        style: hintStyle,
-      ),
+      child: Text.rich(TextSpan(text: title, style: hintStyle, children: [
+        TextSpan(
+          text: error,
+          style: const TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+              color: Colors.redAccent),
+        )
+      ])),
     );
   }
 
-  getTextInput(IconData icon, String hint, textFieldController,
+  getTextInput(
+      IconData icon, String hint, TextEditingController textFieldController,
       {bool passwordType = false}) {
     return Container(
       decoration: BoxDecoration(

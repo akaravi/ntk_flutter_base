@@ -10,7 +10,7 @@ import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/login.dart';
 import 'package:flutter/material.dart';
 
-class LoginController with TextErrorController{
+class LoginController with TextErrorController {
   ///last captcha get form url
   late CaptchaModel model;
 
@@ -117,18 +117,18 @@ class LoginController with TextErrorController{
   }
 
   passwordErrorText(TextEditingController passwordTextController) {
-    return  textEmptyError(passwordTextController);
+    return textEmptyError(passwordTextController);
   }
 
   usernameErrorText(TextEditingController userNameTextController) {
-    return  usernameEmptyError(userNameTextController);
+    return usernameEmptyError(userNameTextController);
   }
 
   loginWithPass(username, pass, captchaText) {
-    if(isMobileValid(username)){
-      loginMobileWithPass(mobile, pass, captchaText, captchaKey)
+    if (isMobileValid(username)) {
+      loginMobileWithPass(username, pass, captchaText, model.key ?? '');
+    } else if (isEmailValid(username)) {
+      loginEmailWithPass(username, pass, captchaText, model.key ?? '');
     }
   }
-
-
 }
