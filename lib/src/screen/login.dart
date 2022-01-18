@@ -169,12 +169,10 @@ class _LoginState extends State<Login> {
                       Expanded(
                         child: TextField(
                           controller: captchaTextController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             border: InputBorder.none,
-                            errorText: loginController
-                                .captchaErrorText(captchaTextController),
                             hintText: 'Enter seen text',
-                            hintStyle: const TextStyle(color: Colors.grey),
+                            hintStyle: TextStyle(color: Colors.grey),
                           ),
                         ),
                       ),
