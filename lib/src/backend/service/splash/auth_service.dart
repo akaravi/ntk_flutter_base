@@ -43,7 +43,7 @@ class AuthService extends DioApi {
   Future<CaptchaModel> getCaptcha() async {
     var errorException = await directAPI.captcha();
     if (errorException.isSuccess) {
-      return errorException?.item ?? CaptchaModel();
+      return errorException.item ?? CaptchaModel();
     } else {
       throw Exception(errorException.errorMessage);
     }

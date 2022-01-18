@@ -8,6 +8,7 @@ import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/login.dart';
+import 'package:base/src/screen/main_panel.dart';
 import 'package:flutter/material.dart';
 
 class LoginController with TextErrorController {
@@ -16,7 +17,7 @@ class LoginController with TextErrorController {
 
   static loginInPage(BuildContext context) {
     Future.microtask(() => Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => Login())));
+        .pushReplacement(MaterialPageRoute(builder: (context) => Login())));
   }
 
   /// when user wants to go ahead as guest
@@ -124,11 +125,16 @@ class LoginController with TextErrorController {
     return usernameEmptyError(userNameTextController);
   }
 
-  loginWithPass(username, pass, captchaText) {
+  Future<bool> loginWithPass(username, pass, captchaText) async {
     if (isMobileValid(username)) {
-      loginMobileWithPass(username, pass, captchaText, model.key ?? '');
+      return await loginMobileWithPass(username, pass, captchaText, model.key ?? '');
     } else if (isEmailValid(username)) {
-      loginEmailWithPass(username, pass, captchaText, model.key ?? '');
+      return await  loginEmailWithPass(username, pass, captchaText, model.key ?? '');
     }
+    return false;
+  }
+
+  void mainPage(BuildContext context) {
+    PanelController.mainPanelPage(context);
   }
 }

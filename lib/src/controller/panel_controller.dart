@@ -4,6 +4,6 @@ import 'package:flutter/material.dart';
 class PanelController {
   static void mainPanelPage(BuildContext context) {
     Future.microtask(() => Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => MainPanel())));
+        .pushReplacement(MaterialPageRoute(builder: (context) => MainPanel())));
   }
 }

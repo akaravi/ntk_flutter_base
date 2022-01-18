@@ -2,6 +2,8 @@ import 'package:base/src/controller/login_controller.dart';
 import 'package:base/src/view/clipper/login_cliper.dart';
 import 'package:flutter/material.dart';
 
+import 'dialogs.dart';
+
 class Login extends StatefulWidget {
   final Color primaryColor;
   final Color backgroundColor;
@@ -226,44 +228,41 @@ class _LoginState extends State<Login> {
                   children: <Widget>[
                     Expanded(
                       child: TextButton(
-                        style: TextButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0)),
-                          backgroundColor: widget.primaryColor,
-                        ),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 32,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(vertical: 8),
-                              child: Text('LOGIN...',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 20)),
-                            ),
-                            Expanded(child: Container()),
-                            Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 24, vertical: 8),
-                                child: Icon(
-                                  Icons.check,
-                                  color: widget.primaryColor,
-                                ),
+                          style: TextButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30.0)),
+                            backgroundColor: widget.primaryColor,
+                          ),
+                          child: Row(
+                            children: [
+                              const SizedBox(
+                                width: 32,
                               ),
-                            )
-                          ],
-                        ),
-                        onPressed: () => loginController.loginWithPass(
-                            userNameTextController.text,
-                            passwordTextController.text,
-                            captchaTextController.text),
-                      ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 8),
+                                child: Text('LOGIN...',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20)),
+                              ),
+                              Expanded(child: Container()),
+                              Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.circular(30.0)),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 24, vertical: 8),
+                                  child: Icon(
+                                    Icons.check,
+                                    color: widget.primaryColor,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          onPressed: () => loginClicked()),
                     ),
                   ],
                 ),
@@ -410,4 +409,52 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+
+  loginClicked() async {
+    if (loginController.usernameEmptyError(userNameTextController) != null) {
+      userNotValid = true;
+    } else {
+      userNotValid = false;
+    }
+    if (loginController.passwordErrorText(passwordTextController) != null) {
+      passNotValid = true;
+    } else {
+      passNotValid = false;
+    }
+    if (loginController.captchaErrorText(captchaTextController) != null) {
+      captchaNotValid = true;
+    } else {
+      captchaNotValid = false;
+    }
+
+    setState(() {});
+    //if error Occurred
+    if (userNotValid || passNotValid || captchaNotValid) {
+      return;
+    }
+    var myDialogs = MyDialogs();
+    myDialogs.showProgress(context);
+
+    try {
+      var bool = await loginController.loginWithPass(
+          userNameTextController.text,
+          passwordTextController.text,
+          captchaTextController.text);
+      //dismiss loading dialog
+      myDialogs.dismiss(context);
+      //go to main page
+      if (bool) {
+        loginController.mainPage(context);
+      }
+    } catch (exp) {
+      //dismiss loading
+      myDialogs.dismiss(context);
+      myDialogs.showError(
+        context,
+        exp.toString(),
+      );
+    }
+  }
 }
+
+//aasd@asd.com

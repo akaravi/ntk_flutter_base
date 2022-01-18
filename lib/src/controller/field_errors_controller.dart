@@ -9,9 +9,9 @@ abstract class TextErrorController {
     if (text.length < 4) {
       return 'should be at least 6 char';
     }
-    if (!_isPasswordCompliant(text)) {
-      return 'not strong pass ,should contain number upper and lower char';
-    }
+    // if (!_isPasswordCompliant(text)) {
+    //   return 'not strong pass ,should contain number upper and lower char';
+    // }
   }
 
   String? textEmptyError(TextEditingController controller) {
@@ -47,13 +47,13 @@ abstract class TextErrorController {
     String p =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regex = RegExp(p);
-    return (!regex.hasMatch(value));
+    return (regex.hasMatch(value));
   }
 
   /// is value have phone patten
   bool isMobileValid(String value) {
     String p = r'^(?:[+0][1-9])?[0-9]{10,12}$';
     RegExp regex = RegExp(p);
-    return (!regex.hasMatch(value));
+    return (regex.hasMatch(value));
   }
 }
