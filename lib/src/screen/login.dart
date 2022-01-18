@@ -22,12 +22,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  // Create a text controller and use it to retrieve the current value
-  // of the TextField.
-  final TextEditingController userNameTextController = TextEditingController();
-  final TextEditingController passwordTextController = TextEditingController();
-  final TextEditingController captchaTextController = TextEditingController();
-
   //controller object for login form
   final loginController = LoginController();
 
@@ -40,9 +34,7 @@ class _LoginState extends State<Login> {
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    userNameTextController.dispose();
-    passwordTextController.dispose();
-    captchaTextController.dispose();
+    loginController.dispose();
     super.dispose();
   }
 
@@ -112,34 +104,27 @@ class _LoginState extends State<Login> {
               //email hint
               getHintWidget(
                 "Email or mobile",
-                userNotValid
-                    ? loginController.usernameEmptyError(userNameTextController)
-                    : null,
+                userNotValid ? loginController.usernameErrorText() : null,
               ),
               //email text field
               getTextInput(
                 Icons.person_outline,
                 'Enter your email or mobile',
-                userNameTextController,
+                loginController.userNameTextController,
               ),
               //password hint
               getHintWidget(
                 "password",
-                passNotValid
-                    ? loginController.passwordErrorText(passwordTextController)
-                    : null,
+                passNotValid ? loginController.passwordErrorText() : null,
               ),
               //email text field
-              getTextInput(
-                  Icons.password, 'Enter your password', passwordTextController,
+              getTextInput(Icons.password, 'Enter your password',
+                  loginController.passwordTextController,
                   passwordType: true),
 
               //captcha hint
-              getHintWidget(
-                  "captcha",
-                  captchaNotValid
-                      ? loginController.captchaErrorText(captchaTextController)
-                      : null),
+              getHintWidget("captcha",
+                  captchaNotValid ? loginController.captchaErrorText() : null),
               //captcha text field
               Container(
                 decoration: BoxDecoration(
@@ -170,7 +155,7 @@ class _LoginState extends State<Login> {
                       ),
                       Expanded(
                         child: TextField(
-                          controller: captchaTextController,
+                          controller:  loginController.captchaTextController,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Enter seen text',
@@ -411,17 +396,17 @@ class _LoginState extends State<Login> {
   }
 
   loginClicked() async {
-    if (loginController.usernameEmptyError(userNameTextController) != null) {
+    if (loginController.usernameErrorText() != null) {
       userNotValid = true;
     } else {
       userNotValid = false;
     }
-    if (loginController.passwordErrorText(passwordTextController) != null) {
+    if (loginController.passwordErrorText() != null) {
       passNotValid = true;
     } else {
       passNotValid = false;
     }
-    if (loginController.captchaErrorText(captchaTextController) != null) {
+    if (loginController.captchaErrorText() != null) {
       captchaNotValid = true;
     } else {
       captchaNotValid = false;
@@ -436,10 +421,7 @@ class _LoginState extends State<Login> {
     myDialogs.showProgress(context);
 
     try {
-      var bool = await loginController.loginWithPass(
-          userNameTextController.text,
-          passwordTextController.text,
-          captchaTextController.text);
+      var bool = await loginController.loginWithPass();
       //dismiss loading dialog
       myDialogs.dismiss(context);
       //go to main page

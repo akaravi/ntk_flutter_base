@@ -2,7 +2,9 @@ import 'package:base/src/controller/register_controller.dart';
 import 'package:base/src/view/clipper/login_cliper.dart';
 import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
+import 'dialogs.dart';
+
+class Register extends StatefulWidget {
   final Color primaryColor;
   final Color backgroundColor;
   final AssetImage backgroundImage;
@@ -16,18 +18,37 @@ class Register extends StatelessWidget {
   });
 
   @override
+  State<Register> createState() => _RegisterState();
+}
+
+class _RegisterState extends State<Register> {
+  //controller object for login form
+  final registerController = RegisterController();
+
+  bool userNotValid = false;
+
+  bool passNotValid = false;
+
+  bool captchaNotValid = false;
+
+  @override
+  void dispose() {
+    registerController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final opacity = Container(
       color: Colors.black26.withAlpha(150),
     );
-    const hintStyle = TextStyle(color: Colors.grey, fontSize: 16.0);
 
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            color: backgroundColor,
+            color: widget.backgroundColor,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +65,7 @@ class Register extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                image: backgroundImage,
+                                image: widget.backgroundImage,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -65,14 +86,14 @@ class Register extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold,
-                                color: primaryColor),
+                                color: widget.primaryColor),
                           ),
                           Text(
                             "APPNKT",
                             style: TextStyle(
                                 fontSize: 28.0,
                                 fontWeight: FontWeight.bold,
-                                color: primaryColor),
+                                color: widget.primaryColor),
                           ),
                         ],
                       ),
@@ -81,11 +102,38 @@ class Register extends StatelessWidget {
                 ),
               ),
               // hint text on email
-              getHintWidget("Email or mobile", hintStyle),
+              getHintWidget(
+                "Email or mobile",
+                userNotValid ? registerController.usernameErrorText() : null,
+              ),
               //email text field
-              getTextInput(Icons.person_outline, 'Enter your email or mobile'),
+              getTextInput(
+                Icons.person_outline,
+                'Enter your email or mobile',
+                registerController.userNameTextController,
+              ),
               //captcha hint
-              getHintWidget("captcha", hintStyle),
+              getHintWidget(
+                "password",
+                passNotValid ? registerController.passwordErrorText() : null,
+              ),
+              //email text field
+              getTextInput(Icons.password, 'Enter your password',
+                  registerController.passwordTextController,
+                  passwordType: true),
+              getHintWidget(
+                "Repeat Password",
+                passNotValid ? registerController.passwordErrorText() : null,
+              ),
+              //email text field
+              getTextInput(Icons.password, 'Repeat your password',
+                  registerController.rePasswordTextController,
+                  passwordType: true),
+              getHintWidget(
+                  "captcha",
+                  captchaNotValid
+                      ? registerController.captchaErrorText()
+                      : null),
               //captcha text field
               Container(
                 decoration: BoxDecoration(
@@ -114,29 +162,55 @@ class Register extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         margin: const EdgeInsets.only(left: 00.0, right: 10.0),
                       ),
-                      const Expanded(
+                      Expanded(
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: registerController.captchaTextController,
+                          decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Enter seen text',
                             hintStyle: TextStyle(color: Colors.grey),
                           ),
                         ),
                       ),
-                      Container(
-                          width: 120,
-                          margin: const EdgeInsets.only(left: 4.0),
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  'assets/drawable/load_captcha.png',
-                                ),
-                                fit: BoxFit.fill),
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(25.0),
-                                bottomRight: Radius.circular(25.0)),
-                          )),
+                      FutureBuilder<String>(
+                          future: registerController.loadCaptcha(),
+                          builder: (context, snapshot) {
+                            ImageProvider image;
+                            if (snapshot.hasError) {
+                              image = const AssetImage(
+                                  'assets/drawable/error_captcha.png');
+                            } else if (snapshot.connectionState ==
+                                    ConnectionState.none ||
+                                snapshot.connectionState ==
+                                    ConnectionState.waiting) {
+                              image = const AssetImage(
+                                  'assets/drawable/load_captcha.png');
+                            } else if (snapshot.hasData) {
+                              image = NetworkImage(
+                                snapshot.data ?? '',
+                              );
+                              image = const AssetImage(
+                                  'assets/drawable/error_captcha.png');
+                            } else {
+                              image = const AssetImage(
+                                  'assets/drawable/load_captcha.png');
+                            }
+                            return InkWell(
+                              //provide get captcha again when click
+                              onTap: () => setState(() {}),
+                              child: Container(
+                                  width: 120,
+                                  margin: const EdgeInsets.only(left: 4.0),
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: image, fit: BoxFit.fill),
+                                    color: Colors.white,
+                                    borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(25.0),
+                                        bottomRight: Radius.circular(25.0)),
+                                  )),
+                            );
+                          }),
                     ],
                   ),
                 ),
@@ -152,7 +226,7 @@ class Register extends StatelessWidget {
                         style: TextButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0)),
-                          backgroundColor: primaryColor,
+                          backgroundColor: widget.primaryColor,
                         ),
                         child: Row(
                           children: [
@@ -176,13 +250,61 @@ class Register extends StatelessWidget {
                                     horizontal: 24, vertical: 8),
                                 child: Icon(
                                   Icons.check,
-                                  color: primaryColor,
+                                  color: widget.primaryColor,
                                 ),
                               ),
                             )
                           ],
                         ),
-                        onPressed: () => {},
+                        onPressed: () => loginClicked,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 20.0),
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          backgroundColor: Colors.black12,
+                        ),
+                        child: Row(
+                          children: [
+                            const SizedBox(
+                              width: 32,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              child: Text('WITH MOBILE NUMBER',
+                                  style: TextStyle(
+                                      color: widget.primaryColor,
+                                      fontSize: 20)),
+                            ),
+                            Expanded(child: Container()),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.black12,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 24, vertical: 8),
+                                child: Icon(
+                                  Icons.arrow_forward_outlined,
+                                  color: widget.primaryColor,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        onPressed: () =>
+                            registerController.oneStepLogin(context),
                       ),
                     ),
                   ],
@@ -206,7 +328,7 @@ class Register extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             "REALLY HAVE ACCOUNT?",
-                            style: TextStyle(color: primaryColor),
+                            style: TextStyle(color: widget.primaryColor),
                           ),
                         ),
                         onPressed: () =>
@@ -223,17 +345,28 @@ class Register extends StatelessWidget {
     );
   }
 
-  getHintWidget(String title, TextStyle hintStyle) {
+  getHintWidget(
+    String title,
+    String? error,
+  ) {
+    TextStyle hintStyle = const TextStyle(color: Colors.grey, fontSize: 16.0);
     return Padding(
       padding: const EdgeInsets.only(left: 40.0),
-      child: Text(
-        title,
-        style: hintStyle,
-      ),
+      child: Text.rich(TextSpan(text: title, style: hintStyle, children: [
+        TextSpan(
+          text: error,
+          style: const TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+              color: Colors.redAccent),
+        )
+      ])),
     );
   }
 
-  getTextInput(IconData icon, String hint) {
+  getTextInput(
+      IconData icon, String hint, TextEditingController textFieldController,
+      {bool passwordType = false}) {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
@@ -261,6 +394,8 @@ class Register extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
+              controller: textFieldController,
+              obscureText: passwordType,
               decoration: InputDecoration(
                 border: InputBorder.none,
                 hintText: hint,
@@ -271,5 +406,54 @@ class Register extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  loginClicked() async {
+    if (registerController.usernameErrorText() != null) {
+      userNotValid = true;
+    } else {
+      userNotValid = false;
+    }
+    if (registerController.passwordErrorText() != null) {
+      passNotValid = true;
+    } else if (registerController.rePasswordErrorText() != null) {
+      passNotValid = true;
+    } else if (registerController.passEqualityError() != null) {
+      passNotValid = true;
+    } else {
+      passNotValid = false;
+    }
+    if (registerController.captchaErrorText() != null) {
+      captchaNotValid = true;
+    } else {
+      captchaNotValid = false;
+    }
+
+    setState(() {});
+
+//if error Occurred
+    if (userNotValid || passNotValid || captchaNotValid) {
+      return;
+    }
+    var myDialogs = MyDialogs();
+
+    myDialogs.showProgress(context);
+
+    try {
+      var bool = await registerController.registerwithEmail();
+//dismiss loading dialog
+      myDialogs.dismiss(context);
+//go to login page to login
+      if (bool) {
+        registerController.loginPage(context);
+      }
+    } catch (exp) {
+//dismiss loading
+      myDialogs.dismiss(context);
+      myDialogs.showError(
+        context,
+        exp.toString(),
+      );
+    }
   }
 }

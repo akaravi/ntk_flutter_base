@@ -4,17 +4,22 @@ import 'package:base/src/backend/service/splash/auth_service.dart';
 import 'package:base/src/controller/field_errors_controller.dart';
 import 'package:base/src/controller/panel_controller.dart';
 import 'package:base/src/controller/register_controller.dart';
-import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/login.dart';
-import 'package:base/src/screen/main_panel.dart';
 import 'package:flutter/material.dart';
 
 class LoginController with TextErrorController {
   ///last captcha get form url
   late CaptchaModel model;
 
+  ///Create a text controller and use it to retrieve the current value
+  /// of the TextField.
+  final TextEditingController userNameTextController = TextEditingController();
+  final TextEditingController passwordTextController = TextEditingController();
+  final TextEditingController captchaTextController = TextEditingController();
+
+  ///start login with this method
   static loginInPage(BuildContext context) {
     Future.microtask(() => Navigator.of(context)
         .pushReplacement(MaterialPageRoute(builder: (context) => Login())));
@@ -28,113 +33,85 @@ class LoginController with TextErrorController {
     PanelController.mainPanelPage(context);
   }
 
+  /// method for starting register page
   void registerPage(BuildContext context) {
     RegisterController.registerPage(context);
   }
 
   /// user wants to login with certain mobile number and pass
   /// captcha also forward to check
-  Future<bool> loginMobileWithPass(
+  Future<bool> _loginMobileWithPass(
       String mobile, String pass, String captchaText, String captchaKey) async {
     AuthUserSignInModel req = AuthUserSignInModel()
       ..mobile = mobile
       ..password = pass
       ..captchaText = captchaText
-      ..captchaKey = captchaKey
-      ..siteId = MainScreenCache().siteId;
-    var res = await AuthService().directAPI.signInUser(req);
+      ..captchaKey = captchaKey;
+    var res = await AuthService().login(req);
     if (res.isSuccess) {
-      LoginCache().setUserID(res.item?.userId);
       return true;
     } else {
-      throw Exception(res.errorMessage);
+      return false;
     }
   }
 
   ///user wants to login with email and pass that he select
   /// captcha also forward to check
-  Future<bool> loginEmailWithPass(
+  Future<bool> _loginEmailWithPass(
       String email, String pass, String captchaText, String captchaKey) async {
     AuthUserSignInModel req = AuthUserSignInModel()
       ..email = email
       ..password = pass
       ..captchaText = captchaText
-      ..captchaKey = captchaKey
-      ..siteId = MainScreenCache().siteId;
-    var res = await AuthService().directAPI.signInUser(req);
+      ..captchaKey = captchaKey;
+    var res = await AuthService().login(req);
     if (res.isSuccess) {
-      LoginCache().setUserID(res.item?.userId);
       return true;
     } else {
-      throw Exception(res.errorMessage);
+      return false;
     }
   }
 
-  ///when user want to login with one step verifying mobile number
-  ///also provided that enter verify-sms code correctly
-  /// if detect mobile number api return entered mobile number to continue
-  Future<String> loginMobileWithSms(
-      String mobile, String captchaText, String captchaKey) async {
-    AuthUserSignInBySmsDtoModel model = AuthUserSignInBySmsDtoModel()
-      ..mobile = mobile
-      ..captchaText = captchaText
-      ..captchaKey = captchaKey
-      ..siteId = MainScreenCache().siteId;
-    var response = await AuthService().directAPI.signInUserBySMS(model);
-    if (response.isSuccess) {
-      return mobile;
-    } else {
-      throw Exception(response.errorMessage);
-    }
-  }
-
-  ///when user want to login with one step verifying mobile number
-  ///he can go ahead if enter sms code correctly
-  /// if he enter smsCode correctly  api return true as successful message
-  Future<bool> loginMobileWithVerify(
-      String mobile, String sms, String captchaText, String captchaKey) async {
-    AuthUserSignInBySmsDtoModel model = AuthUserSignInBySmsDtoModel()
-      ..mobile = mobile
-      ..code = sms
-      ..captchaText = captchaText
-      ..captchaKey = captchaKey
-      ..siteId = MainScreenCache().siteId;
-    var response = await AuthService().directAPI.signInUserBySMS(model);
-    if (response.isSuccess) {
-      LoginCache().setUserID(response.item?.userId);
-      return true;
-    } else {
-      throw Exception(response.errorMessage);
-    }
-  }
-
+  ///load captcha on as model for use on api call
   Future<String> loadCaptcha() async {
     model = await AuthService().getCaptcha();
     return model.image ?? '';
   }
 
-  captchaErrorText(TextEditingController captchaTextController) {
+  captchaErrorText() {
     return textEmptyError(captchaTextController);
   }
 
-  passwordErrorText(TextEditingController passwordTextController) {
+  passwordErrorText() {
     return textEmptyError(passwordTextController);
   }
 
-  usernameErrorText(TextEditingController userNameTextController) {
-    return usernameEmptyError(userNameTextController);
+  usernameErrorText() {
+    return loginUsernameError(userNameTextController);
   }
 
-  Future<bool> loginWithPass(username, pass, captchaText) async {
+  Future<bool> loginWithPass() async {
+    String username = userNameTextController.text;
+    String pass = passwordTextController.text;
+    String captchaText = captchaTextController.text;
     if (isMobileValid(username)) {
-      return await loginMobileWithPass(username, pass, captchaText, model.key ?? '');
+      return await _loginMobileWithPass(
+          username, pass, captchaText, model.key ?? '');
     } else if (isEmailValid(username)) {
-      return await  loginEmailWithPass(username, pass, captchaText, model.key ?? '');
+      return await _loginEmailWithPass(
+          username, pass, captchaText, model.key ?? '');
     }
     return false;
   }
 
   void mainPage(BuildContext context) {
     PanelController.mainPanelPage(context);
+  }
+
+  ///dispose all instance of controller
+  void dispose() {
+    userNameTextController.dispose();
+    passwordTextController.dispose();
+    captchaTextController.dispose();
   }
 }
