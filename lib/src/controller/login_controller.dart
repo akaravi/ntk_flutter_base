@@ -124,5 +124,11 @@ class LoginController with TextErrorController{
     return  usernameEmptyError(userNameTextController);
   }
 
+  loginWithPass(username, pass, captchaText) {
+    if(isMobileValid(username)){
+      loginMobileWithPass(mobile, pass, captchaText, captchaKey)
+    }
+  }
+
 
 }

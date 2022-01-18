@@ -155,6 +155,7 @@ class _LoginState extends State<Login> {
                           controller: captchaTextController,
                           decoration: InputDecoration(
                             border: InputBorder.none,
+                            errorText: loginController.captchaErrorText(captchaTextController),
                             hintText: 'Enter seen text',
                             hintStyle: const TextStyle(color: Colors.grey),
                           ),
@@ -242,7 +243,7 @@ class _LoginState extends State<Login> {
                             )
                           ],
                         ),
-                        onPressed: () => {},
+                        onPressed: () => loginController.loginWithPass(email, pass, captchaText, captchaKey),
                       ),
                     ),
                   ],

@@ -26,7 +26,7 @@ abstract class TextErrorController {
     if (text.isEmpty) {
       return 'Can\'t be empty ';
     }
-    if (!_isEmailValid(text) && !_isMobileValid(text)) {
+    if (!isEmailValid(text) && !isMobileValid(text)) {
       return 'enter your email or mobile number correctly';
     }
   }
@@ -43,7 +43,7 @@ abstract class TextErrorController {
   }
 
   /// is value have email patten
-  bool _isEmailValid(String value) {
+  bool isEmailValid(String value) {
     String p =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regex = RegExp(p);
@@ -51,7 +51,7 @@ abstract class TextErrorController {
   }
 
   /// is value have phone patten
-  bool _isMobileValid(String value) {
+  bool isMobileValid(String value) {
     String p = r'^(?:[+0][1-9])?[0-9]{10,12}$';
     RegExp regex = RegExp(p);
     return (!regex.hasMatch(value));
