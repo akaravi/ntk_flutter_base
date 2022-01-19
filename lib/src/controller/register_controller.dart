@@ -42,12 +42,21 @@ class RegisterController with TextErrorController {
   }
 
   String?  passwordErrorText() {
-    return textEmptyError(passwordTextController);
+    var retError = textEmptyError(passwordTextController);
+    if(retError!=null) {
+      return retError;
+    }
+    return passEqualityError();
+
+  }
+  confirmPasswordErrorText() {
+    var retError = textEmptyError(rePasswordTextController);
+    if(retError!=null) {
+      return retError;
+    }
+    return passEqualityError();
   }
 
-  String?  rePasswordErrorText() {
-    return textEmptyError(rePasswordTextController);
-  }
 
   String? passEqualityError() {
      if(rePasswordTextController.text != passwordTextController.text)
@@ -78,6 +87,8 @@ class RegisterController with TextErrorController {
   }
 
   registerwithEmail() {
-    // AuthService().
+     AuthService().register()
   }
+
+
 }

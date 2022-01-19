@@ -5,6 +5,7 @@ import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
+import 'package:base/src/models/dto/core/auth_user_signup_model.dart';
 import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/models/entity/base/error_exception.dart';
@@ -63,7 +64,21 @@ class AuthService extends DioApi {
     }
   }
 
-  Future<ErrorException<TokenInfoModel>>loginWithSMS(AuthUserSignInBySmsDtoModel model, {bool saveId = false}) async {
+  Future<ErrorException<TokenInfoModel>> register(
+      AuthUserSignUpModel auth) async {
+    auth.siteId = MainScreenCache().siteId;
+    var res = await directAPI.signUpUser(auth);
+    if (res.isSuccess) {
+      LoginCache().setUserID(res.item?.userId);
+      return res;
+    } else {
+      throw Exception(res.errorMessage);
+    }
+  }
+
+  Future<ErrorException<TokenInfoModel>> loginWithSMS(
+      AuthUserSignInBySmsDtoModel model,
+      {bool saveId = false}) async {
     model.siteId = MainScreenCache().siteId;
     var response = await directAPI.signInUserBySMS(model);
     if (saveId) {

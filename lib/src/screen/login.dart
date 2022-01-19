@@ -341,7 +341,7 @@ class _LoginState extends State<Login> {
       padding: const EdgeInsets.only(left: 40.0),
       child: Text.rich(TextSpan(text: title, style: hintStyle, children: [
         TextSpan(
-          text: error,
+          text: "  "+(error??''),
           style: const TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.bold,

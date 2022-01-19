@@ -3,6 +3,7 @@ import 'package:base/src/models/dto/core/auth_mobileconfirm_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_changepassword_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
+import 'package:base/src/models/dto/core/auth_user_signup_model.dart';
 import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/models/entity/base/error_exception.dart';
@@ -40,7 +41,7 @@ abstract class AuthMethodApi {
 
   @POST("api/v1/auth/GetTokenD/signup")
   Future<ErrorException<CoreUserModel>> signUpUser(
-      @Body() AuthUserSignInModel request);
+      @Body() AuthUserSignUpModel request);
 
   @POST("api/v1/auth/signin")
   Future<ErrorException<TokenInfoModel>> signInUser(

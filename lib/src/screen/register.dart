@@ -109,7 +109,7 @@ class _RegisterState extends State<Register> {
               //email text field
               getTextInput(
                 Icons.person_outline,
-                'Enter your email or mobile',
+                'Enter your email',
                 registerController.userNameTextController,
               ),
               //captcha hint
@@ -122,8 +122,10 @@ class _RegisterState extends State<Register> {
                   registerController.passwordTextController,
                   passwordType: true),
               getHintWidget(
-                "Repeat Password",
-                passNotValid ? registerController.passwordErrorText() : null,
+                "Confirm Password",
+                passNotValid
+                    ? registerController.confirmPasswordErrorText()
+                    : null,
               ),
               //email text field
               getTextInput(Icons.password, 'Repeat your password',
@@ -256,7 +258,7 @@ class _RegisterState extends State<Register> {
                             )
                           ],
                         ),
-                        onPressed: () => loginClicked,
+                        onPressed: () => registerClicked(),
                       ),
                     ),
                   ],
@@ -354,7 +356,7 @@ class _RegisterState extends State<Register> {
       padding: const EdgeInsets.only(left: 40.0),
       child: Text.rich(TextSpan(text: title, style: hintStyle, children: [
         TextSpan(
-          text: error,
+          text: "  "+(error??''),
           style: const TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.bold,
@@ -408,17 +410,14 @@ class _RegisterState extends State<Register> {
     );
   }
 
-  loginClicked() async {
+  registerClicked() async {
     if (registerController.usernameErrorText() != null) {
       userNotValid = true;
     } else {
       userNotValid = false;
     }
-    if (registerController.passwordErrorText() != null) {
-      passNotValid = true;
-    } else if (registerController.rePasswordErrorText() != null) {
-      passNotValid = true;
-    } else if (registerController.passEqualityError() != null) {
+    if (registerController.passwordErrorText() != null ||
+        registerController.confirmPasswordErrorText() != null) {
       passNotValid = true;
     } else {
       passNotValid = false;
