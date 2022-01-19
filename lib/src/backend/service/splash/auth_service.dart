@@ -10,6 +10,7 @@ import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart'
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/base/token_info_model.dart';
+import 'package:base/src/models/entity/core/core_user_model.dart';
 
 import '../../../my_application.dart';
 
@@ -64,12 +65,11 @@ class AuthService extends DioApi {
     }
   }
 
-  Future<ErrorException<TokenInfoModel>> register(
+  Future<ErrorException<CoreUserModel>> register(
       AuthUserSignUpModel auth) async {
     auth.siteId = MainScreenCache().siteId;
     var res = await directAPI.signUpUser(auth);
     if (res.isSuccess) {
-      LoginCache().setUserID(res.item?.userId);
       return res;
     } else {
       throw Exception(res.errorMessage);

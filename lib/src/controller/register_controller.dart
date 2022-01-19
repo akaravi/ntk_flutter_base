@@ -2,6 +2,7 @@ import 'package:base/src/backend/service/splash/auth_service.dart';
 import 'package:base/src/controller/login_controller.dart';
 import 'package:base/src/controller/panel_controller.dart';
 import 'package:base/src/controller/register_mobile_controller.dart';
+import 'package:base/src/models/dto/core/auth_user_signup_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/register.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +18,14 @@ class RegisterController with TextErrorController {
   final TextEditingController userNameTextController = TextEditingController();
   final TextEditingController passwordTextController = TextEditingController();
   final TextEditingController rePasswordTextController =
-      TextEditingController();
+  TextEditingController();
   final TextEditingController captchaTextController = TextEditingController();
 
   ///static method for starting register page
   static void registerPage(BuildContext context) {
-    Future.microtask(() => Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => Register())));
+    Future.microtask(() =>
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Register())));
   }
 
   ///start login with this method
@@ -37,32 +39,30 @@ class RegisterController with TextErrorController {
     return model.image ?? '';
   }
 
-  String?  captchaErrorText() {
+  String? captchaErrorText() {
     return textEmptyError(captchaTextController);
   }
 
-  String?  passwordErrorText() {
+  String? passwordErrorText() {
     var retError = textEmptyError(passwordTextController);
-    if(retError!=null) {
+    if (retError != null) {
       return retError;
     }
     return passEqualityError();
-
   }
+
   confirmPasswordErrorText() {
     var retError = textEmptyError(rePasswordTextController);
-    if(retError!=null) {
+    if (retError != null) {
       return retError;
     }
     return passEqualityError();
   }
 
-
   String? passEqualityError() {
-     if(rePasswordTextController.text != passwordTextController.text)
-       {
-         return '2 pass should be same';
-       }
+    if (rePasswordTextController.text != passwordTextController.text) {
+      return '2 pass should be same';
+    }
   }
 
   usernameErrorText() {
@@ -86,9 +86,17 @@ class RegisterController with TextErrorController {
     RegisterWithMobileController.registerMobile(context);
   }
 
-  registerwithEmail() {
-     AuthService().register()
+  Future<bool> registerWithEmail() async {
+    AuthUserSignUpModel req = AuthUserSignUpModel()
+      ..email = userNameTextController.text
+      ..password = passwordTextController.text
+      ..captchaText = captchaTextController.text
+      ..captchaKey = model.key;
+    var res = await AuthService().register(req);
+    if (res.isSuccess) {
+      return true;
+    } else {
+      return false;
+    }
   }
-
-
 }

@@ -439,7 +439,7 @@ class _RegisterState extends State<Register> {
     myDialogs.showProgress(context);
 
     try {
-      var bool = await registerController.registerwithEmail();
+      var bool = await registerController.registerWithEmail();
 //dismiss loading dialog
       myDialogs.dismiss(context);
 //go to login page to login
