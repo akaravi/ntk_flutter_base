@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'clipper/login_cliper.dart';
 
-abstract class BaseAuthScreeen<T> extends State {
+abstract class BaseAuthScreeen<T extends StatefulWidget> extends State<T> {
   final Color primaryColor;
   late final Color backgroundColor;
   final AssetImage backgroundImage;
@@ -74,7 +74,7 @@ abstract class BaseAuthScreeen<T> extends State {
     );
   }
 
-  Widget headerWidget(var backgroundImage){
+  Widget headerWidget(var backgroundImage,String title){
     final opacity = Container(
       color: Colors.black26.withAlpha(150),
     );
@@ -105,7 +105,7 @@ abstract class BaseAuthScreeen<T> extends State {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Text(
-                  "Login To",
+                 title,
                   style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ abstract class BaseAuthScreeen<T> extends State {
       ),
     );
   }
-  Widget captcha( TextEditingController captchaTextController){
+  Widget captchaWidget( TextEditingController captchaTextController){
    return Container(
       decoration: BoxDecoration(
         border: Border.all(
@@ -164,7 +164,7 @@ abstract class BaseAuthScreeen<T> extends State {
               ),
             ),
             FutureBuilder<String>(
-                future: loadCaptcha(),
+                future: loadCaptcha().call(),
                 builder: (context, snapshot) {
                   ImageProvider image;
                   if (snapshot.hasError) {
@@ -208,5 +208,5 @@ abstract class BaseAuthScreeen<T> extends State {
     );
   }
 
-   loadCaptcha();
+   Function loadCaptcha();
 }

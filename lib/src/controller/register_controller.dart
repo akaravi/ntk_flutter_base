@@ -66,7 +66,7 @@ class RegisterController with TextErrorController {
   }
 
   usernameErrorText() {
-    return registerUsernameError(userNameTextController);
+    return registerEmailError(userNameTextController);
   }
 
   void mainPage(BuildContext context) {

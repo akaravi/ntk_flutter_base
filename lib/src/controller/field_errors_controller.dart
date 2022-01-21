@@ -22,7 +22,6 @@ abstract class TextErrorController {
   }
 
   String? loginUsernameError(TextEditingController controller) {
-
     var text = controller.text;
     if (text.isEmpty) {
       return 'Can\'t be empty ';
@@ -31,13 +30,22 @@ abstract class TextErrorController {
       return 'enter your email or mobile number correctly';
     }
   }
-  String? registerUsernameError(TextEditingController controller) {
 
+  String? registerEmailError(TextEditingController controller) {
     var text = controller.text;
     if (text.isEmpty) {
       return 'Can\'t be empty ';
     }
-    if (!isEmailValid(text) ) {
+    if (!isEmailValid(text)) {
+      return 'enter your email address correctly';
+    }
+  }
+ String? registerMobileError(TextEditingController controller) {
+    var text = controller.text;
+    if (text.isEmpty) {
+      return 'Can\'t be empty ';
+    }
+    if (!isMobileValid(text)) {
       return 'enter your email address correctly';
     }
   }
