@@ -5,6 +5,7 @@ import 'package:base/src/screen/login.dart';
 import 'package:base/src/screen/register.dart';
 import 'package:flutter/material.dart';
 
+import 'src/screen/register_with_mobile.dart';
 import 'src/screen/splash.dart';
 import 'src/backend/config/my_application_preference.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const Splash(),
-      home:  Register(),
+      home:  RegisterWithMobile(),
     );
   }
 }

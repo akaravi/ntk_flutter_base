@@ -81,8 +81,10 @@ class AuthService extends DioApi {
       {bool saveId = false}) async {
     model.siteId = MainScreenCache().siteId;
     var response = await directAPI.signInUserBySMS(model);
-    if (saveId) {
-      LoginCache().setUserID(response.item?.userId);
+    if (response.isSuccess) {
+      if (saveId) {
+        LoginCache().setUserID(response.item?.userId);
+      }
       return response;
     } else {
       throw Exception(response.errorMessage);

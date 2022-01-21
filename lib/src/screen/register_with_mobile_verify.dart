@@ -1,29 +1,32 @@
-import 'package:base/src/controller/register_mobile_controller.dart';
+import 'package:base/src/controller/register_verify_mobile.dart';
 import 'package:base/src/view/base_auth_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'dialogs.dart';
 
-class RegisterWithMobile extends StatefulWidget {
-  RegisterWithMobile({
-    Key? key,
-  });
+class RegisterWithVerifyMobile extends StatefulWidget {
+  String mobile;
+
+  RegisterWithVerifyMobile(this.mobile);
 
   @override
-  State<RegisterWithMobile> createState() => _RegisterWithMobileState();
+  State<RegisterWithVerifyMobile> createState() =>
+      _RegisterWithVerifyMobileState();
 }
 
-class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
-  //controller object for login form
-  final registerMobileController = RegisterWithMobileController();
+class _RegisterWithVerifyMobileState
+    extends BaseAuthScreeen<RegisterWithVerifyMobile> {
+  _RegisterWithVerifyMobileState()
+      : super(Colors.green, Colors.white,
+            const AssetImage("assets/drawable/splash_background.jpg")) {
+    verifyController = RegisterVerifyMobileController(widget.mobile);
+  }
 
-  bool mobileNotValid = false;
+  late RegisterVerifyMobileController verifyController;
+  bool smsNotValid = false;
+
   bool captchaNotValid = false;
 
-  _RegisterWithMobileState()
-      : super(Colors.green, Colors.white,
-            const AssetImage("assets/drawable/splash_background.jpg"));
 
   @override
   Widget build(BuildContext context) {
@@ -40,26 +43,26 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
             children: <Widget>[
               //header image
               headerWidget(backgroundImage, "Register On"),
-              //mobile hint
+              //email hint
               getHintWidget(
-                "mobile",
-                mobileNotValid ? registerMobileController.usernameErrorText() : null,
+                "sms code on \"" + widget.mobile + "\"",
+                smsNotValid ? verifyController.smsErrorText() : null,
               ),
               //mobile text field
               getTextInput(
                 Icons.phone_android_outlined,
-                'Enter your mobile',
-                registerMobileController.userNameTextController,
+                'Enter sms code sent to you',
+                verifyController.smsTextController,
               ),
 
               //captcha hint
               getHintWidget(
                   "captcha",
                   captchaNotValid
-                      ? registerMobileController.captchaErrorText()
+                      ? verifyController.captchaErrorText()
                       : null),
               //captcha text field
-              captchaWidget(registerMobileController.captchaTextController),
+              captchaWidget(verifyController.captchaTextController),
 
               Container(
                 margin: const EdgeInsets.only(top: 20.0),
@@ -80,7 +83,7 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
                               ),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 8),
-                                child: Text('REGISTER ...',
+                                child: Text('VERIFY...',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 20)),
                               ),
@@ -102,7 +105,7 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
                               )
                             ],
                           ),
-                          onPressed: () => registerClicked()),
+                          onPressed: () => verifyClicked()),
                     ),
                   ],
                 ),
@@ -123,12 +126,12 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
                           padding: const EdgeInsets.only(left: 20.0),
                           alignment: Alignment.center,
                           child: Text(
-                            "SIGN UP WITH EMAIL",
+                            "MOBILE NUMBER IS INCORRECT?",
                             style: TextStyle(color: primaryColor),
                           ),
                         ),
                         onPressed: () =>
-                            registerMobileController.registerPage(context),
+                            verifyController.registerMobile(context),
                       ),
                     ),
                   ],
@@ -142,17 +145,17 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
   }
 
   @override
-  loadCaptcha() {
-    return registerMobileController.loadCaptcha;
+  Function loadCaptcha() {
+    return verifyController.loadCaptcha;
   }
 
-  registerClicked() async {
-    if (registerMobileController.usernameErrorText() != null) {
-      mobileNotValid = true;
+  verifyClicked() async {
+    if (verifyController.smsErrorText() != null) {
+      smsNotValid = true;
     } else {
-      mobileNotValid = false;
+      smsNotValid = false;
     }
-    if (registerMobileController.captchaErrorText() != null) {
+    if (verifyController.captchaErrorText() != null) {
       captchaNotValid = true;
     } else {
       captchaNotValid = false;
@@ -160,19 +163,19 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
 
     setState(() {});
     //if error Occurred
-    if (mobileNotValid ||captchaNotValid) {
+    if (smsNotValid ||captchaNotValid) {
       return;
     }
     var myDialogs = MyDialogs();
     myDialogs.showProgress(context);
 
     try {
-      var mobile = await registerMobileController.signupMobileWithSms();
+      var bool = await verifyController.loginMobileWithVerify();
       //dismiss loading dialog
       myDialogs.dismiss(context);
       //go to main page
-      if (mobile.isNotEmpty) {
-        registerMobileController.verifyMobile(context,mobile);
+      if (bool) {
+        verifyController.mainPage(context);
       }
     } catch (exp) {
       //dismiss loading
