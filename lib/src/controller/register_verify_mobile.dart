@@ -73,4 +73,9 @@ class RegisterVerifyMobileController with TextErrorController {
   void mainPage(BuildContext context) {
     PanelController.mainPanelPage(context);
   }
+  ///dispose all instance of controller on exit
+  void dispose() {
+    smsTextController.dispose();
+    captchaTextController.dispose();
+  }
 }

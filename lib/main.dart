@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:base/src/controller/register_verify_mobile.dart';
 import 'package:base/src/my_application.dart';
 import 'package:base/src/screen/login.dart';
 import 'package:base/src/screen/register.dart';
+import 'package:base/src/screen/register_with_mobile_verify.dart';
 import 'package:flutter/material.dart';
 
 import 'src/screen/register_with_mobile.dart';
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const Splash(),
-      home:  RegisterWithMobile(),
+      home:  RegisterWithVerifyMobile('09132131542'),
     );
   }
 }

@@ -24,7 +24,12 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
   _RegisterWithMobileState()
       : super(Colors.green, Colors.white,
             const AssetImage("assets/drawable/splash_background.jpg"));
-
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    registerMobileController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -27,7 +27,12 @@ class _RegisterWithVerifyMobileState
 
   bool captchaNotValid = false;
 
-
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    verifyController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
