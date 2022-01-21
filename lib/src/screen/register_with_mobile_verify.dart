@@ -11,15 +11,15 @@ class RegisterWithVerifyMobile extends StatefulWidget {
 
   @override
   State<RegisterWithVerifyMobile> createState() =>
-      _RegisterWithVerifyMobileState();
+      _RegisterWithVerifyMobileState(mobile);
 }
 
 class _RegisterWithVerifyMobileState
     extends BaseAuthScreeen<RegisterWithVerifyMobile> {
-  _RegisterWithVerifyMobileState()
+  _RegisterWithVerifyMobileState(String mobile)
       : super(Colors.green, Colors.white,
             const AssetImage("assets/drawable/splash_background.jpg")) {
-    verifyController = RegisterVerifyMobileController(widget.mobile);
+    verifyController = RegisterVerifyMobileController(mobile);
   }
 
   late RegisterVerifyMobileController verifyController;
