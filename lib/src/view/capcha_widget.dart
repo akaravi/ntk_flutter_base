@@ -1,8 +1,13 @@
+import 'package:base/src/backend/service/splash/auth_service.dart';
+import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CaptchaWidget extends StatefulWidget {
-  Function 
+  Function(CaptchaModel) func;
+
+  CaptchaWidget(this.func, {Key? key}) : super(key: key);
+
   @override
   State<CaptchaWidget> createState() => _CaptchaWidgetState();
 }
@@ -10,9 +15,8 @@ class CaptchaWidget extends StatefulWidget {
 class _CaptchaWidgetState extends State<CaptchaWidget> {
   @override
   Widget build(BuildContext context) {
-
     return FutureBuilder<String>(
-        future: func().call(),
+        future: _CaptchaController().loadCaptcha(widget.func),
         builder: (context, snapshot) {
           ImageProvider image;
           if (snapshot.hasError) {
@@ -35,7 +39,7 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
                 width: 120,
                 margin: const EdgeInsets.only(left: 4.0),
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: image,  fit: BoxFit.fill),
+                  image: DecorationImage(image: image, fit: BoxFit.fill),
                   color: Colors.white,
                   borderRadius: const BorderRadius.only(
                       topRight: Radius.circular(25.0),
@@ -43,5 +47,14 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
                 )),
           );
         });
+  }
+}
+
+class _CaptchaController {
+  ///load captcha on as model for use on api call
+  Future<String> loadCaptcha(Function(CaptchaModel) func) async {
+    CaptchaModel model = await AuthService().getCaptcha();
+    func.call(model);
+    return model.image ?? '';
   }
 }

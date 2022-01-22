@@ -218,6 +218,6 @@ class _RegisterWithVerifyMobileState
 
   sendAgain() async{
     //show dialog captcha
-    MyDialogs().showCaptcha(context);
+    MyDialogs().showCaptcha(context,verifyController.loadCaptcha);
   }
 }

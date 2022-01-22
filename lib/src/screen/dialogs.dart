@@ -116,7 +116,7 @@ class MyDialogs {
     }
   }
 
-  void showCaptcha(BuildContext context, Function? onClicker,) {
+  void showCaptcha(BuildContext context, Function(String s)? onClicker,) {
     showDialog(
         barrierDismissible: false,
         context: context,
