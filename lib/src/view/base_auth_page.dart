@@ -131,49 +131,6 @@ abstract class BaseAuthScreeen<T extends StatefulWidget> extends State<T> {
       {Function(CaptchaModel chModel)? func}) {
     func ??= loadCaptcha;
     return Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.grey.withOpacity(0.5),
-            width: 1.0,
-          ),
-          borderRadius: BorderRadius.circular(20.0),
-        ),
-        margin: const EdgeInsets.symmetric(
-            vertical: 10.0, horizontal: 20.0),
-        child: IntrinsicHeight(
-          child: Row(
-              children: <Widget>[
-          const Padding(
-          padding: EdgeInsets.symmetric(
-              vertical: 10.0, horizontal: 15.0),
-          child: Icon(
-            Icons.verified_user_outlined,
-            color: Colors.grey,
-          ),
-        ),
-        Container(
-          height: 30.0,
-          width: 1.0,
-          color: Colors.grey.withOpacity(0.5),
-          margin: const EdgeInsets.only(left: 00.0, right: 10.0),
-        ),
-        Expanded(
-          child: TextField(
-            controller:  captchaTextController,
-            decoration: const InputDecoration(
-              border: InputBorder.none,
-              hintText: 'Enter seen text',
-              hintStyle: TextStyle(color: Colors.grey),
-            ),
-          ),
-        ),
-     CaptchaWidget(func)  ],
-          ),
-        ),
-    );
-    
-  Widget captchaWidget( TextEditingController captchaTextController){
-   return Container(
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey.withOpacity(0.5),
@@ -202,7 +159,7 @@ abstract class BaseAuthScreeen<T extends StatefulWidget> extends State<T> {
             ),
             Expanded(
               child: TextField(
-                controller:  captchaTextController,
+                controller: captchaTextController,
                 decoration: const InputDecoration(
                   border: InputBorder.none,
                   hintText: 'Enter seen text',
@@ -210,46 +167,7 @@ abstract class BaseAuthScreeen<T extends StatefulWidget> extends State<T> {
                 ),
               ),
             ),
-            FutureBuilder<String>(
-                future: loadCaptcha().call(),
-                builder: (context, snapshot) {
-                  ImageProvider image;
-                  if (snapshot.hasError) {
-                    image = const AssetImage(
-                        'assets/drawable/error_captcha.png');
-                  } else if (snapshot.connectionState ==
-                      ConnectionState.none ||
-                      snapshot.connectionState ==
-                          ConnectionState.waiting) {
-                    image = const AssetImage(
-                        'assets/drawable/load_captcha.png');
-                  } else if (snapshot.hasData) {
-                    image = NetworkImage(
-                      snapshot.data ?? '',
-                    );
-                    image = const AssetImage(
-                        'assets/drawable/error_captcha.png');
-                  } else {
-                    image = const AssetImage(
-                        'assets/drawable/load_captcha.png');
-                  }
-                  return InkWell(
-                    //provide get captcha again when click
-                    onTap: () => setState(() {}),
-                    child: Container(
-                        width: 120,
-                        margin: const EdgeInsets.only(left: 4.0),
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: image, fit: BoxFit.fill),
-                          color: Colors.white,
-                          borderRadius: const BorderRadius.only(
-                              topRight: Radius.circular(25.0),
-                              bottomRight: Radius.circular(25.0)),
-                        )),
-                  );
-                }),
-          ],
+            CaptchaWidget(func)],
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:base/src/controller/register_controller.dart';
+import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/view/base_auth_page.dart';
 import 'package:flutter/material.dart';
 
@@ -261,7 +262,7 @@ class _RegisterState extends BaseAuthScreeen<Register> {
   }
 
   @override
-  loadCaptcha() {
+  loadCaptcha(CaptchaModel chModel) {
   return registerController.loadCaptcha;
   }
 }

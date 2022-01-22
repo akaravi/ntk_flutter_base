@@ -1,4 +1,5 @@
 import 'package:base/src/controller/register_verify_mobile.dart';
+import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/view/CountDownTimer.dart';
 import 'package:base/src/view/base_auth_page.dart';
 import 'package:flutter/material.dart';
@@ -116,9 +117,9 @@ class _RegisterWithVerifyMobileState
               ),
               Container(
                 padding: const EdgeInsets.only(top: 14.0, right: 4.0),
-                child: verifyController.hasTimerStopped
+                child: !verifyController.hasTimerStopped
                     ? CountDownTimer(
-                        secondsRemaining: 30,
+                        secondsRemaining: 5,
                         whenTimeExpires: () {
                           setState(() {
                             verifyController.hasTimerStopped = true;
@@ -130,14 +131,17 @@ class _RegisterWithVerifyMobileState
                           height: 1.2,
                         ),
                       )
-                    : TextButton(
-                        onPressed: sendAgain(),
-                        child: Row(
-                          children: [
-                            Text('send again Code '),
-                            Icon(Icons.refresh)
-                          ],
-                        )),
+                    : Center(
+                      child: TextButton(
+                          onPressed: sendAgain,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('send again Code '),
+                              Icon(Icons.refresh)
+                            ],
+                          )),
+                    ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 20.0, bottom: 20),
@@ -174,7 +178,7 @@ class _RegisterWithVerifyMobileState
   }
 
   @override
-  Function loadCaptcha() {
+  Function loadCaptcha(CaptchaModel chModel) {
     return verifyController.loadCaptcha;
   }
 
@@ -216,8 +220,8 @@ class _RegisterWithVerifyMobileState
     }
   }
 
-  sendAgain() async{
+  sendAgain() async {
     //show dialog captcha
-    MyDialogs().showCaptcha(context,verifyController.loadCaptcha);
+    MyDialogs().showCaptcha(context, (c) => {c});
   }
 }
