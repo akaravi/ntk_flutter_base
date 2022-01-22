@@ -1,4 +1,5 @@
 import 'package:base/src/controller/register_verify_mobile.dart';
+import 'package:base/src/view/CountDownTimer.dart';
 import 'package:base/src/view/base_auth_page.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +34,7 @@ class _RegisterWithVerifyMobileState
     verifyController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,11 +63,8 @@ class _RegisterWithVerifyMobileState
               ),
 
               //captcha hint
-              getHintWidget(
-                  "captcha",
-                  captchaNotValid
-                      ? verifyController.captchaErrorText()
-                      : null),
+              getHintWidget("captcha",
+                  captchaNotValid ? verifyController.captchaErrorText() : null),
               //captcha text field
               captchaWidget(verifyController.captchaTextController),
 
@@ -114,6 +113,31 @@ class _RegisterWithVerifyMobileState
                     ),
                   ],
                 ),
+              ),
+              Container(
+                padding: const EdgeInsets.only(top: 14.0, right: 4.0),
+                child: verifyController.hasTimerStopped
+                    ? CountDownTimer(
+                        secondsRemaining: 30,
+                        whenTimeExpires: () {
+                          setState(() {
+                            verifyController.hasTimerStopped = true;
+                          });
+                        },
+                        countDownTimerStyle: const TextStyle(
+                          color: Color(0XFFf5a623),
+                          fontSize: 17.0,
+                          height: 1.2,
+                        ),
+                      )
+                    : TextButton(
+                        onPressed: sendAgain(),
+                        child: Row(
+                          children: [
+                            Text('send again Code '),
+                            Icon(Icons.refresh)
+                          ],
+                        )),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 20.0, bottom: 20),
@@ -168,7 +192,7 @@ class _RegisterWithVerifyMobileState
 
     setState(() {});
     //if error Occurred
-    if (smsNotValid ||captchaNotValid) {
+    if (smsNotValid || captchaNotValid) {
       return;
     }
     var myDialogs = MyDialogs();
@@ -190,5 +214,10 @@ class _RegisterWithVerifyMobileState
         exp.toString(),
       );
     }
+  }
+
+  sendAgain() async{
+    //show dialog captcha
+    MyDialogs().showCaptcha(context);
   }
 }

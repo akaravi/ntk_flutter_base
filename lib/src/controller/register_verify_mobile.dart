@@ -22,6 +22,8 @@ class RegisterVerifyMobileController with TextErrorController {
   final TextEditingController passwordTextController = TextEditingController();
   final TextEditingController captchaTextController = TextEditingController();
 
+  bool hasTimerStopped = false;
+
   ///constructor
   RegisterVerifyMobileController(this.mobileNumber);
 
@@ -73,6 +75,7 @@ class RegisterVerifyMobileController with TextErrorController {
   void mainPage(BuildContext context) {
     PanelController.mainPanelPage(context);
   }
+
   ///dispose all instance of controller on exit
   void dispose() {
     smsTextController.dispose();
