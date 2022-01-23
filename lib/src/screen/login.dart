@@ -56,7 +56,7 @@ class _LoginState extends BaseAuthScreeen<Login> {
                 userNotValid ? loginController.usernameErrorText() : null,
               ),
               //email text field
-              getTextInput(
+              getTextInputWidget(
                 Icons.person_outline,
                 'Enter your email or mobile',
                 loginController.userNameTextController,
@@ -67,7 +67,7 @@ class _LoginState extends BaseAuthScreeen<Login> {
                 passNotValid ? loginController.passwordErrorText() : null,
               ),
               //email text field
-              getTextInput(Icons.password, 'Enter your password',
+              getTextInputWidget(Icons.password, 'Enter your password',
                   loginController.passwordTextController,
                   passwordType: true),
 
@@ -75,7 +75,7 @@ class _LoginState extends BaseAuthScreeen<Login> {
               getHintWidget("captcha",
                   captchaNotValid ? loginController.captchaErrorText() : null),
               //captcha text field
-              captchaWidget(loginController.captchaTextController),
+              getCaptchaWidget(loginController.captchaTextController),
              //loginBtn
               Container(
                 margin: const EdgeInsets.only(top: 20.0),

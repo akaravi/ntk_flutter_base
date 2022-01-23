@@ -1,3 +1,6 @@
+import 'package:base/src/models/entity/base/captcha_model.dart';
+import 'package:base/src/view/base_auth_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDialogs {
@@ -121,11 +124,16 @@ class MyDialogs {
     BuildContext context,
     Function(String s)? onClicker,
   ) {
+    String? errorText;
+    CaptchaModel? captcha;
     showDialog(
         barrierDismissible: false,
         context: context,
         builder: (context) {
-          const Color redAccent = Colors.teal;
+          showed = true;
+          const Color accentColor = Colors.teal;
+
+          TextEditingController editingController = TextEditingController();
           return StatefulBuilder(builder: (context, setState) {
             return Dialog(
                 backgroundColor: Colors.transparent,
@@ -139,17 +147,18 @@ class MyDialogs {
                               spreadRadius: 4)
                         ]),
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
+                      mainAxisSize: MainAxisSize.max,
                       children: [
                         Container(
                           decoration: const BoxDecoration(
-                            color: redAccent,
+                            color: accentColor,
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(32),
                                 topLeft: Radius.circular(32)),
                           ),
                           padding: const EdgeInsets.all(32),
                           child: Column(
+                            mainAxisSize: MainAxisSize.max,
                             children: const [
                               Icon(
                                 Icons.info,
@@ -168,22 +177,55 @@ class MyDialogs {
                           ),
                         ),
                         Container(
+                            width: 360,
+                            child: BaseAuthScreeen.captchaInputLayout(
+                                editingController,
+                                (chModel) => captcha = chModel)),
+                        Container(
                             margin:
                                 const EdgeInsets.only(top: 20.0, bottom: 20),
                             child: TextButton(
                               style: TextButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0)),
-                                backgroundColor: redAccent,
+                                backgroundColor: accentColor,
                               ),
-                              child: Text(
-                                'authorize',
-                                style: const TextStyle(
-                                    color: Colors.white, fontSize: 18),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: const [
+                                    Text(
+                                      'authorize   ',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 18),
+                                    ),
+                                    Icon(
+                                      Icons.security,
+                                      color: Colors.white,
+                                    )
+                                  ],
+                                ),
                               ),
                               onPressed: () {
                                 {
+                                  if (captcha == null) {
+                                    setState(() {
+                                      var errorText =
+                                          'captcha image not loaded yet';
+                                    });
+                                    return;
+                                  }
+                                  if (editingController.text.isEmpty) {
+                                    setState(() {
+                                      var errorText = 'please enter seen text';
+                                    });
+                                    return;
+                                  }
+                                  editingController.dispose();
                                   dismiss(context);
+
+                                  showProgress(context);
                                   // if (onClicker != null) {}
                                 }
                               },

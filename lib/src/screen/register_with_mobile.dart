@@ -52,7 +52,7 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
                 mobileNotValid ? registerMobileController.usernameErrorText() : null,
               ),
               //mobile text field
-              getTextInput(
+              getTextInputWidget(
                 Icons.phone_android_outlined,
                 'Enter your mobile',
                 registerMobileController.userNameTextController,
@@ -65,7 +65,7 @@ class _RegisterWithMobileState extends BaseAuthScreeen<RegisterWithMobile> {
                       ? registerMobileController.captchaErrorText()
                       : null),
               //captcha text field
-              captchaWidget(registerMobileController.captchaTextController),
+              getCaptchaWidget(registerMobileController.captchaTextController),
 
               Container(
                 margin: const EdgeInsets.only(top: 20.0),

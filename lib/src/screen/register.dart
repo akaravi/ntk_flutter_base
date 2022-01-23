@@ -54,7 +54,7 @@ class _RegisterState extends BaseAuthScreeen<Register> {
                 userNotValid ? registerController.usernameErrorText() : null,
               ),
               //email text field
-              getTextInput(
+              getTextInputWidget(
                 Icons.person_outline,
                 'Enter your email',
                 registerController.userNameTextController,
@@ -65,7 +65,7 @@ class _RegisterState extends BaseAuthScreeen<Register> {
                 passNotValid ? registerController.passwordErrorText() : null,
               ),
               //email text field
-              getTextInput(Icons.password, 'Enter your password',
+              getTextInputWidget(Icons.password, 'Enter your password',
                   registerController.passwordTextController,
                   passwordType: true),
               getHintWidget(
@@ -75,7 +75,7 @@ class _RegisterState extends BaseAuthScreeen<Register> {
                     : null,
               ),
               //email text field
-              getTextInput(Icons.password, 'Repeat your password',
+              getTextInputWidget(Icons.password, 'Repeat your password',
                   registerController.rePasswordTextController,
                   passwordType: true),
               getHintWidget(
@@ -84,7 +84,7 @@ class _RegisterState extends BaseAuthScreeen<Register> {
                       ? registerController.captchaErrorText()
                       : null),
               //captcha text field
-              captchaWidget(registerController.captchaTextController),
+              getCaptchaWidget(registerController.captchaTextController),
               //register btn
               Container(
                 margin: const EdgeInsets.only(top: 20.0),

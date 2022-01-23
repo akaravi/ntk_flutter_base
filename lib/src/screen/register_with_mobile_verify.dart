@@ -57,7 +57,7 @@ class _RegisterWithVerifyMobileState
                 smsNotValid ? verifyController.smsErrorText() : null,
               ),
               //mobile text field
-              getTextInput(
+              getTextInputWidget(
                 Icons.phone_android_outlined,
                 'Enter sms code sent to you',
                 verifyController.smsTextController,
@@ -67,7 +67,7 @@ class _RegisterWithVerifyMobileState
               getHintWidget("captcha",
                   captchaNotValid ? verifyController.captchaErrorText() : null),
               //captcha text field
-              captchaWidget(verifyController.captchaTextController),
+              getCaptchaWidget(verifyController.captchaTextController),
 
               Container(
                 margin: const EdgeInsets.only(top: 20.0),
@@ -119,7 +119,7 @@ class _RegisterWithVerifyMobileState
                 padding: const EdgeInsets.only(top: 14.0, right: 4.0),
                 child: !verifyController.hasTimerStopped
                     ? CountDownTimer(
-                        secondsRemaining: 5,
+                        secondsRemaining: 1,
                         whenTimeExpires: () {
                           setState(() {
                             verifyController.hasTimerStopped = true;
