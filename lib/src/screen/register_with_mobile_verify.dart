@@ -20,7 +20,7 @@ class _RegisterWithVerifyMobileState
     extends BaseAuthScreeen<RegisterWithVerifyMobile> {
   _RegisterWithVerifyMobileState(String mobile)
       : super(Colors.green, Colors.white,
-      const AssetImage("assets/drawable/splash_background.jpg")) {
+            const AssetImage("assets/drawable/splash_background.jpg")) {
     verifyController = RegisterVerifyMobileController(mobile);
   }
 
@@ -41,10 +41,7 @@ class _RegisterWithVerifyMobileState
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery
-              .of(context)
-              .size
-              .height,
+          height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             color: backgroundColor,
           ),
@@ -102,7 +99,7 @@ class _RegisterWithVerifyMobileState
                                   decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius:
-                                      BorderRadius.circular(30.0)),
+                                          BorderRadius.circular(30.0)),
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 24, vertical: 8),
                                   child: Icon(
@@ -122,30 +119,31 @@ class _RegisterWithVerifyMobileState
                 padding: const EdgeInsets.only(top: 14.0, right: 4.0),
                 child: !verifyController.hasTimerStopped
                     ? CountDownTimer(
-                  secondsRemaining: 1,
-                  whenTimeExpires: () {
-                    setState(() {
-                      verifyController.hasTimerStopped = true;
-                    });
-                  },
-                  countDownTimerStyle: const TextStyle(
-                    color: Color(0XFFf5a623),
-                    fontSize: 17.0,
-                    height: 1.2,
-                  ),
-                )
+                        secondsRemaining: 120,
+                        whenTimeExpires: () {
+                          setState(() {
+                            verifyController.hasTimerStopped = true;
+                          });
+                        },
+                        countDownTimerStyle: const TextStyle(
+                          color: Color(0XFFf5a623),
+                          fontSize: 17.0,
+                          height: 1.2,
+                        ),
+                      )
                     : Center(
-                  child: TextButton(
-                      onPressed: sendAgain,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Text('send again Code '),
-                          Icon(Icons.refresh)
-                        ],
-                      )),
-                ),
+                        child: TextButton(
+                            onPressed: () =>
+                                {MyDialogs().showCaptcha(context, sendCode)},
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text('send again Code '),
+                                Icon(Icons.refresh)
+                              ],
+                            )),
+                      ),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 20.0, bottom: 20),
@@ -224,11 +222,21 @@ class _RegisterWithVerifyMobileState
     }
   }
 
-  sendAgain() async {
-    //show dialog captcha
-    MyDialogs().showCaptcha(context, (captcha, text) async => {
-    MyDialogs().showProgress(context);
-        await verifyController.resendCode(captcha, text);
-  });
+  sendCode(CaptchaModel captcha, String text) async {
+    var myDialogs = MyDialogs();
+    myDialogs.showProgress(context);
+    try {
+      var bool = await verifyController.resendCode(captcha, text);
+      if (bool) {
+        setState(() {
+          verifyController.hasTimerStopped=false;
+        });
+        myDialogs.dismiss(context);
+        //show toast
+      }
+    } catch (exp) {
+      myDialogs.dismiss(context);
+      myDialogs.showError(context, exp.toString());
+    }
   }
 }
