@@ -11,36 +11,37 @@ class MyDialogs {
     showDialog(
         barrierDismissible: false,
         context: context,
-        builder: (context) => Dialog(
-            backgroundColor: Colors.transparent,
-            child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(32),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black45.withAlpha(12), spreadRadius: 4)
-                    ]),
-                padding: const EdgeInsets.all(32),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    CircularProgressIndicator(),
-                    SizedBox(height: 32),
-                    Text(
-                      "Loading...",
-                      style: TextStyle(fontSize: 20),
-                    )
-                  ],
-                ))));
+        builder: (context) =>
+            Dialog(
+                backgroundColor: Colors.transparent,
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(32),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black45.withAlpha(12),
+                              spreadRadius: 4)
+                        ]),
+                    padding: const EdgeInsets.all(32),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        CircularProgressIndicator(),
+                        SizedBox(height: 32),
+                        Text(
+                          "Loading...",
+                          style: TextStyle(fontSize: 20),
+                        )
+                      ],
+                    ))));
   }
 
-  void showError(
-    BuildContext context,
-    String error, {
-    String btnTitle = 'Ok',
-    Function? onClicker,
-  }) {
+  void showError(BuildContext context,
+      String error, {
+        String btnTitle = 'Ok',
+        Function? onClicker,
+      }) {
     showed = true;
     showDialog(
         barrierDismissible: false,
@@ -120,10 +121,8 @@ class MyDialogs {
     }
   }
 
-  void showCaptcha(
-    BuildContext context,
-    Function(String s)? onClicker,
-  ) {
+  void showCaptcha(BuildContext context,
+      Function(String s)? onClicker,) {
     String? errorText;
     CaptchaModel? captcha;
     showDialog(
@@ -180,10 +179,14 @@ class MyDialogs {
                             width: 360,
                             child: BaseAuthScreeen.captchaInputLayout(
                                 editingController,
-                                (chModel) => captcha = chModel)),
+                                    (chModel) => captcha = chModel)),
+                        errorText != null ? Text(errorText,
+                            style: const TextStyle(
+                                color: Colors.redAccent, fontSize: 13):
+                            Container(),
                         Container(
                             margin:
-                                const EdgeInsets.only(top: 20.0, bottom: 20),
+                            const EdgeInsets.only(top: 20.0, bottom: 20),
                             child: TextButton(
                               style: TextButton.styleFrom(
                                 shape: RoundedRectangleBorder(
