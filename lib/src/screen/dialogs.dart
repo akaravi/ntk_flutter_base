@@ -182,7 +182,7 @@ class MyDialogs {
                                 editingController,
                                 (chModel) => captcha = chModel)),
                         errorText != null
-                            ? Text(errorText,
+                            ? Text(errorText!,
                                 style: const TextStyle(
                                     color: Colors.redAccent, fontSize: 13))
                             : Container(),
@@ -216,14 +216,14 @@ class MyDialogs {
                                 {
                                   if (captcha == null) {
                                     setState(() {
-                                      var errorText =
+                                       errorText =
                                           'captcha image not loaded yet';
                                     });
                                     return;
                                   }
                                   if (editingController.text.isEmpty) {
                                     setState(() {
-                                      var errorText = 'please enter seen text';
+                                       errorText = 'please enter seen text';
                                     });
                                     return;
                                   }
