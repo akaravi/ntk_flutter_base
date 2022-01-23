@@ -122,7 +122,7 @@ class MyDialogs {
 
   void showCaptcha(
     BuildContext context,
-    Function(String s)? onClicker,
+    Function(CaptchaModel s, String text)? onClicker,
   ) {
     String? errorText;
     CaptchaModel? captcha;
@@ -214,23 +214,26 @@ class MyDialogs {
                               ),
                               onPressed: () {
                                 {
+                                  String text = editingController.text;
                                   if (captcha == null) {
                                     setState(() {
-                                       errorText =
+                                      errorText =
                                           'captcha image not loaded yet';
                                     });
                                     return;
                                   }
-                                  if (editingController.text.isEmpty) {
+                                  if (text.isEmpty) {
                                     setState(() {
-                                       errorText = 'please enter seen text';
+                                      errorText = 'please enter seen text';
                                     });
                                     return;
                                   }
+
                                   editingController.dispose();
+                                  onClicker?.call(
+                                      captcha ?? CaptchaModel(), text);
                                   dismiss(context);
 
-                                  showProgress(context);
                                   // if (onClicker != null) {}
                                 }
                               },

@@ -81,4 +81,10 @@ class RegisterVerifyMobileController with TextErrorController {
     smsTextController.dispose();
     captchaTextController.dispose();
   }
+
+  Future<bool> resendCode(CaptchaModel captcha, String text) async {
+    var s = await RegisterWithMobileController().sendCode(mobileNumber,text,captcha.key??'');
+    //if not empty
+    return s.isNotEmpty;
+  }
 }

@@ -39,6 +39,13 @@ class RegisterWithMobileController with TextErrorController {
     String mobile = userNameTextController.text;
     String captchaText = captchaTextController.text;
     String captchaKey = model.key ?? '';
+    return await sendCode(mobile, captchaText, captchaKey);
+  }
+  ///when user want to login with one step verifying mobile number
+  ///also provided that enter verify-sms code correctly
+  /// if detect mobile number api return entered mobile number to continue
+  Future<String> sendCode(
+      String mobile, String captchaText, String captchaKey) async {
     AuthUserSignInBySmsDtoModel req = AuthUserSignInBySmsDtoModel()
       ..mobile = mobile
       ..captchaText = captchaText
@@ -50,7 +57,6 @@ class RegisterWithMobileController with TextErrorController {
     }
     return '';
   }
-
 
   ///load captcha on as model for use on api call
   Future<String> loadCaptcha() async {
@@ -71,6 +77,6 @@ class RegisterWithMobileController with TextErrorController {
   }
 
   void verifyMobile(BuildContext context, String mobile) {
-    RegisterVerifyMobileController.verifyPage(context,mobile);
+    RegisterVerifyMobileController.verifyPage(context, mobile);
   }
 }
