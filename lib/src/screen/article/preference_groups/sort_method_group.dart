@@ -32,57 +32,34 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
+import 'package:base/src/screen/article/entities/sort_method.dart';
+import 'package:base/src/screen/article/preference_groups/sort_group.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
+/// Sort group for articles' sort options.
+class SortMethodGroup extends StatelessWidget {
+  const SortMethodGroup({
+    required this.selectedItem,
+    required this.onOptionTap,
+    Key? key,
+  }) : super(key: key);
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
+  final ValueChanged<SortOption> onOptionTap;
+  final SortMethod selectedItem;
   @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
-
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
-
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
+  Widget build(BuildContext context) => SortGroup(
+        title: 'Sort by',
+        options: SortMethod.values
+            .map(
+              (sortMethod) => SortOption(
+                id: sortMethod,
+                name: sortMethod == SortMethod.releaseDate
+                    ? 'Newest'
+                    : 'Most Popular',
+              ),
             )
-          ],
-        ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
-        ),
+            .toList(),
+        selectedOptionId: selectedItem,
+        onOptionTap: onOptionTap,
       );
-
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
-    );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
-  }
 }

@@ -32,57 +32,22 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:base/src/screen/article/entities/article_category.dart';
+import 'package:base/src/screen/article/entities/article_platform.dart';
+/// Puts and gets data from an in-memory storage (non-persistent).
+class InMemoryStore {
+  List<ArticlePlatform>? _platformList;
+  List<ArticleCategory>? _categoryList;
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
+  Future<void> insertPlatformList(List<ArticlePlatform> platformList) =>
+      Future.microtask(() => _platformList = platformList);
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
-  @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
+  Future<void> insertCategoryList(List<ArticleCategory> categoryList) =>
+      Future.microtask(() => _categoryList = categoryList);
 
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
+  Future<List<ArticlePlatform>> getPlatformList() =>
+      Future.microtask(() => _platformList!);
 
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
-            )
-          ],
-        ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
-        ),
-      );
-
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
-    );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
-  }
+  Future<List<ArticleCategory>> getCategoryList() =>
+      Future.microtask(() => _categoryList!);
 }

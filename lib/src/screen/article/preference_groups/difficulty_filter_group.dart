@@ -32,57 +32,44 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
+import 'package:base/src/screen/article/entities/article_difficulty.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
+import 'filter_group.dart';
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
+/// Filter group for articles' difficulty options.
+class DifficultyFilterGroup extends StatelessWidget {
+  const DifficultyFilterGroup({
+    required this.selectedItems,
+    required   this.onOptionTap,
+    required  this.onClearAll,
+    Key? key,
+  }) : super(key: key);
+
+  final ValueChanged<FilterOption> onOptionTap;
+  final VoidCallback onClearAll;
+  List<ArticleDifficulty> get _difficultyList => ArticleDifficulty.values;
+  final List<ArticleDifficulty> selectedItems;
+
   @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
-
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
-
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
+  Widget build(BuildContext context) => FilterGroup(
+        title: 'Choose difficulties',
+        onClearAll: onClearAll,
+        onOptionTap: onOptionTap,
+        options: _difficultyList
+            .map(
+              (difficulty) => FilterOption(
+                id: difficulty,
+                name: difficulty == ArticleDifficulty.beginner
+                    ? 'Beginner'
+                    : difficulty == ArticleDifficulty.intermediate
+                        ? 'Intermediate'
+                        : 'Advanced',
+                isSelected: selectedItems.contains(
+                  difficulty,
+                ),
+              ),
             )
-          ],
-        ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
-        ),
+            .toList(),
       );
-
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
-    );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
-  }
 }

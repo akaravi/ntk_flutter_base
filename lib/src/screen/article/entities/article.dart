@@ -32,57 +32,46 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:base/src/screen/article/data/stores/remote/json_structures/query_item.dart';
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
+class Article {
+  const Article({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.releaseDate,
+    required this.duration,
+    required this.uri,
+    required this.artworkUrl,
+  })  : assert(id != null),
+        assert(name != null),
+        assert(description != null),
+        assert(releaseDate != null),
+        assert(uri != null),
+        assert(duration != null);
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
-  @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
-
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
-
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
-            )
-          ],
-        ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
-        ),
-      );
-
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
+  factory Article.fromQueryItem(QueryItem queryItem) {
+    final releaseDateString = queryItem.attributes['released_at'];
+    final releaseDate = DateTime.parse(
+      releaseDateString,
     );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
+
+    return Article(
+      id: queryItem.id,
+      name: queryItem.attributes['name'],
+      description: queryItem.attributes['description'],
+      releaseDate: releaseDate,
+      duration: queryItem.attributes['duration'],
+      artworkUrl: queryItem.attributes['card_artwork_url'],
+      uri: queryItem.attributes['uri'],
+    );
   }
+
+  final int id;
+  final String name;
+  final String description;
+  final DateTime releaseDate;
+  final int duration;
+  final String artworkUrl;
+  final String uri;
 }

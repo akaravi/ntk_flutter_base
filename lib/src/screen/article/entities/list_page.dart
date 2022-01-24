@@ -32,57 +32,22 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter/foundation.dart';
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
+/// Represents each page returned by a paginated endpoint.
+class ListPage<ItemType> {
+  ListPage({
+     this.grandTotalCount,
+     this.itemList,
+  })  : assert(grandTotalCount != null),
+        assert(itemList != null);
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
-  @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
+  final int? grandTotalCount;
+  final List<ItemType>? itemList;
 
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
-
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
-            )
-          ],
-        ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
-        ),
-      );
-
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
-    );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
+  bool isLastPage(int previouslyFetchedItemsCount) {
+    final newItemsCount = itemList?.length??0;
+    final totalFetchedItemsCount = previouslyFetchedItemsCount + newItemsCount;
+    return totalFetchedItemsCount == grandTotalCount;
   }
 }

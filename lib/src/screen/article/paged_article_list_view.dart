@@ -35,13 +35,17 @@
 import 'package:base/src/screen/generics/empty_list_indicator.dart';
 import 'package:base/src/screen/generics/error_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'article_list_item.dart';
+import 'data/repository.dart';
+import 'entities/article.dart';
+import 'list_preferences.dart';
 
 class PagedArticleListView extends StatefulWidget {
   const PagedArticleListView({
-     this.repository,
-    this.listPreferences,
-    Key key,
+     required this.repository,
+    required this.listPreferences,
+    Key? key,
   })  : assert(repository != null),
         super(key: key);
 
@@ -72,10 +76,10 @@ class _PagedArticleListViewState extends State<PagedArticleListView> {
       final newPage = await widget.repository.getArticleListPage(
         number: pageKey,
         size: 8,
-        filteredPlatformIds: _listPreferences?.filteredPlatformIds,
-        filteredDifficulties: _listPreferences?.filteredDifficulties,
-        filteredCategoryIds: _listPreferences?.filteredCategoryIds,
-        sortMethod: _listPreferences?.sortMethod,
+        filteredPlatformIds: _listPreferences.filteredPlatformIds,
+        filteredDifficulties: _listPreferences.filteredDifficulties,
+        filteredCategoryIds: _listPreferences.filteredCategoryIds,
+        sortMethod: _listPreferences.sortMethod,
       );
 
       final previouslyFetchedItemsCount =
@@ -85,10 +89,10 @@ class _PagedArticleListViewState extends State<PagedArticleListView> {
       final newItems = newPage.itemList;
 
       if (isLastPage) {
-        _pagingController.appendLastPage(newItems);
+        _pagingController.appendLastPage(newItems!);
       } else {
         final nextPageKey = pageKey + 1;
-        _pagingController.appendPage(newItems, nextPageKey);
+        _pagingController.appendPage(newItems!, nextPageKey);
       }
     } catch (error) {
       _pagingController.error = error;

@@ -32,57 +32,76 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:base/src/screen/article/data/stores/remote/json_structures/query_item.dart';
+import 'package:flutter/foundation.dart';
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
-  @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
+typedef JsonParser<T> = T Function(Map<String, dynamic> json);
+typedef QueryItemParser<T> = T Function(
+  QueryItem queryItem,
+);
 
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
+/// Root-level structure returned by raywenderlich.com API endpoints.
+class QueryResult<DataType, MetaType> {
+  const QueryResult({
+     this.items,
+      this.meta,
+  }) : assert(items != null);
 
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
-            )
-          ],
+  factory QueryResult.fromJson(
+    Map<String, dynamic> json,
+    QueryItemParser<DataType> dataParser, {
+    required JsonParser<MetaType> metaDataParser,
+  }) =>
+      QueryResult<DataType, MetaType>(
+        items: _parseDataFromJson(
+          json,
+          dataParser,
         ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
+        meta: _parseMetaDataFromJson(
+          json,
+          metaDataParser,
         ),
       );
 
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
-    );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
+  final List<DataType>? items;
+  final MetaType? meta;
+
+  static List<DataType> _parseDataFromJson<DataType>(
+    Map<String, dynamic> json,
+    QueryItemParser<DataType>? queryItemParser,
+  ) =>
+      _parseQueryItemListFromJson(
+        json,
+      )
+          .map(
+            queryItemParser!,
+          )
+          .toList();
+
+  static List<QueryItem> _parseQueryItemListFromJson(
+    Map<String, dynamic>? json,
+  ) {
+    final List<dynamic> dataJsonArray = json!['data'];
+    return dataJsonArray
+        .cast()
+        .map(
+          (json) => QueryItem.fromJson(
+            json,
+          ),
+        )
+        .toList();
+  }
+
+  static MetaType? _parseMetaDataFromJson<MetaType>(
+    Map<String, dynamic> json,
+    JsonParser<MetaType> parser,
+  ) {
+    final hasMetaParser = parser != null;
+    return hasMetaParser
+        ? parser(
+            json['meta'],
+          )
+        : null;
   }
 }

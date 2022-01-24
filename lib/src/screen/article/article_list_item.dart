@@ -34,15 +34,16 @@
 
 import 'dart:io';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'entities/article.dart';
 
 /// A list tile for an article.
 class ArticleListItem extends StatelessWidget {
   const ArticleListItem({
-    @required this.article,
-    Key key,
+    required this.article,
+    Key? key,
   })  : assert(article != null),
         super(key: key);
   final Article article;
@@ -85,10 +86,8 @@ class ArticleListItem extends StatelessWidget {
                   if (article.artworkUrl != null)
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8),
-                      child: CachedNetworkImage(
-                        width: 50,
-                        height: 50,
-                        imageUrl: article.artworkUrl,
+                      child: Image.network(
+                        article.artworkUrl,
                       ),
                     ),
                 ],
@@ -123,4 +122,6 @@ class ArticleListItem extends StatelessWidget {
       );
     }
   }
+
+  DateFormat(String s) {}
 }

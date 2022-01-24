@@ -32,57 +32,22 @@
  * THE SOFTWARE.
  */
 
-import 'package:base/src/screen/article/paged_article_list_view.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:base/src/screen/article/data/stores/remote/json_structures/query_item.dart';
+import 'package:flutter/foundation.dart';
 
-import 'data/repository.dart';
-import 'list_preferences.dart';
-import 'list_preferences_screen.dart';
+/// An article's platform, such as 'iOS', 'Android' or 'Flutter'.
+class ArticlePlatform {
+  ArticlePlatform({
+    required this.id,
+    required this.name,
+  })  : assert(id != null),
+        assert(name != null);
 
-/// Integrates a list of articles with [ListPreferencesScreen].
-class ArticleListScreen extends StatefulWidget {
-  @override
-  _ArticleListScreenState createState() => _ArticleListScreenState();
-}
-
-class _ArticleListScreenState extends State<ArticleListScreen> {
-  late ListPreferences _listPreferences;
-
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Articles',
-          ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.tune),
-              onPressed: () {
-                _pushListPreferencesScreen(context);
-              },
-            )
-          ],
-        ),
-        body: PagedArticleListView(
-          repository: Provider.of<Repository>(context),
-          listPreferences: _listPreferences,
-        ),
+  factory ArticlePlatform.fromQueryItem(QueryItem queryItem) => ArticlePlatform(
+        id: queryItem.id,
+        name: queryItem.attributes['name'],
       );
 
-  Future<void> _pushListPreferencesScreen(BuildContext context) async {
-    final route = MaterialPageRoute<ListPreferences>(
-      builder: (_) => ListPreferencesScreen(
-        repository: Provider.of<Repository>(context),
-        preferences: _listPreferences,
-      ),
-      fullscreenDialog: true,
-    );
-    final newPreferences = await Navigator.of(context).push(route);
-    if (newPreferences != null) {
-      setState(() {
-        _listPreferences = newPreferences;
-      });
-    }
-  }
+  final int id;
+  final String name;
 }
