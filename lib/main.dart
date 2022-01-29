@@ -1,15 +1,11 @@
 import 'dart:async';
 
-import 'package:base/src/controller/register_verify_mobile.dart';
 import 'package:base/src/my_application.dart';
-import 'package:base/src/screen/login.dart';
-import 'package:base/src/screen/register.dart';
-import 'package:base/src/screen/register_with_mobile_verify.dart';
+import 'package:base/src/screen/article/data/data_dependencies_provider.dart';
 import 'package:flutter/material.dart';
 
-import 'src/screen/register_with_mobile.dart';
-import 'src/screen/splash.dart';
 import 'src/backend/config/my_application_preference.dart';
+import 'src/screen/news/news_list.dart';
 
 void main() async {
   //prevent from crash on start
@@ -38,7 +34,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const Splash(),
-      home:  RegisterWithVerifyMobile('09132131542'),
+      home: DataDependenciesProvider(child: NewsListScreen()),
     );
   }
 }

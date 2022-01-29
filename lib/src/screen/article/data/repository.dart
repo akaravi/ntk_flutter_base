@@ -38,7 +38,7 @@ import 'package:base/src/screen/article/entities/article.dart';
 import 'package:base/src/screen/article/entities/article_category.dart';
 import 'package:base/src/screen/article/entities/article_difficulty.dart';
 import 'package:base/src/screen/article/entities/article_platform.dart';
-import 'package:base/src/screen/article/entities/list_page.dart';
+import 'package:base/src/backend/service/list_page.dart';
 import 'package:base/src/screen/article/entities/sort_method.dart';
 
 /// Gets data from both [RemoteStore] and [InMemoryStore].

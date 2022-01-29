@@ -53,6 +53,8 @@ dependencies:
   infinite_scroll_pagination: ^3.1.0
   #for lunch urls
   url_launcher: ^6.0.18
+  #for format date
+  intl: ^0.17.0
   provider: ^6.0.2
 #run as commands in cmd flutter pub run build_runner build
 dev_dependencies:
