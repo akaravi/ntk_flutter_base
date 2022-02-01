@@ -6,10 +6,10 @@ class CustomHeader {
     Map<String, dynamic> headers = {};
 
     //add token to header
-    headers['Token'] = values.token;
-    if (values.token.isNotEmpty) {
-      headers['Authorization'] = values.token;
-      headers['DeviceToken'] = values.token;
+    headers['DeviceToken'] = values.token;
+    if (values.authorization.isNotEmpty) {
+      headers['Authorization'] = values.authorization;
+      headers['DeviceToken'] = values.authorization;
     } //add packageName header
     headers['PackageName'] = values.packageName;
     //add version of code as build version to header

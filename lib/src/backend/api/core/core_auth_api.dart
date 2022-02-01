@@ -5,6 +5,7 @@ import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
 import 'package:base/src/models/dto/core/auth_user_signup_model.dart';
 import 'package:base/src/models/dto/core/token_device_clientinfo_dto_model.dart';
+import 'package:base/src/models/dto/core/token_device_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/base/error_exception_base.dart';
@@ -25,10 +26,10 @@ abstract class AuthMethodApi {
   Future<ErrorException<CaptchaModel>> captcha();
 
   @GET("api/v1/auth/CurrentToken")
-  Future<ErrorException<CaptchaModel>> correctTokenInfo();
+  Future<ErrorException<TokenInfoModel>> correctTokenInfo();
 
   @POST("api/v1/auth/GetTokenDevice")
-  Future<ErrorException<TokenInfoModel>> getTokenDevice(
+  Future<ErrorException<TokenDeviceModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
 
   @POST("api/v1/auth/mobileConfirm")

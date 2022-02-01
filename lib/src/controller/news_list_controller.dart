@@ -8,7 +8,7 @@ class NewsListController {
 
   Future<void> fetchPage(PagingController paging, int pageKey) async {
     FilterModel filter = FilterModel()
-      ..rowPerPage = 20
+      ..rowPerPage = 5
       ..currentPageNumber = pageKey;
     try {
       var list = await NewsModelService().getAll(filter);

@@ -17,6 +17,8 @@ class MyApplicationPreference {
     var app = ApplicationChangeNotifier(this);
     //set last saved token
     app.setToken(p.getString(_Names().token) ?? '');
+    //set last auth token
+    app.setAuthorization(p.getString(_Names().authorization) ?? '');
     //set last language saved
     app.setLanguage(EnumLanguage.values
         .elementAt(p.getInt(_Names().lang) ?? EnumLanguage.none.index));
@@ -42,8 +44,8 @@ class MyApplicationPreference {
   Future<void> changeLanguage(EnumLanguage? newLang) async {
     SharedPreferences p = await SharedPreferences.getInstance();
     var app = ApplicationChangeNotifier(this);
-    p.setInt(_Names().lang, newLang?.index??EnumLanguage.none.index);
-    app.setLanguage(newLang??EnumLanguage.none);
+    p.setInt(_Names().lang, newLang?.index ?? EnumLanguage.none.index);
+    app.setLanguage(newLang ?? EnumLanguage.none);
   }
 
   Future<void> changeCountry(String newCountry) async {
@@ -151,6 +153,13 @@ class MyApplicationPreference {
     p.setString(_Names().themeId, id ?? app.defaultTheme);
     app.setTheme(id);
   }
+
+  void changeAuthorization(String authToken) async {
+    SharedPreferences p = await SharedPreferences.getInstance();
+    var app = ApplicationChangeNotifier(this);
+    p.setString(_Names().authorization, authToken );
+    app.setAuthorization(authToken);
+  }
 }
 
 class _Names {
@@ -161,4 +170,6 @@ class _Names {
   final String deviceId = 'pref_deviceId';
   final String deviceName = 'pref_deviceName';
   final String themeId = 'pref_themeId';
+
+  final String authorization = 'pref_authorization';
 }

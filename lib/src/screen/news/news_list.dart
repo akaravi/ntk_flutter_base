@@ -14,6 +14,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(),
         title: const Text(
           'News',
         ),

@@ -21,9 +21,11 @@ class MyApplication {
   //notification id
   final _notificationID = "";
 
-  //for
   //token of app
   String _token = "";
+
+  //for authorization token of user
+  String _authorization = '';
 
   //base url of apis
   final String _baseUrl = 'https://apicms.ir/';
@@ -76,6 +78,8 @@ class MyApplication {
   EnumDeviceType get deviceTypeEnum => _deviceTypeEnum;
 
   String get themeId => _themeID;
+
+  String get authorization => _authorization;
 }
 
 class ApplicationChangeNotifier {
@@ -123,5 +127,9 @@ class ApplicationChangeNotifier {
 
   void setTheme(newId) {
     MyApplication.get()._themeID = newId;
+  }
+
+  void setAuthorization(String authToken) {
+    MyApplication.get()._authorization = authToken;
   }
 }

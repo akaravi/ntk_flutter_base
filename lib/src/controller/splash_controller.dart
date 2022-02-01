@@ -14,9 +14,9 @@ class SplashController {
   Stream<SplashProgress> initApp() async* {
     //get device token at first
     yield SplashProgress('get token of device', .10);
-    await AuthService().getToken();
-    yield SplashProgress('check token of device', .25);
-    Future.delayed(const Duration(milliseconds: 500));
+    await AuthService().getDeviceToken();
+    yield SplashProgress('check user token', .25);
+    await AuthService().checkToken();
     yield SplashProgress('getting theme data', .45);
     await ApplicationThemeService().getTheme();
     yield SplashProgress('Getting app information', .70);
