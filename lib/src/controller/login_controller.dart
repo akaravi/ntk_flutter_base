@@ -1,9 +1,8 @@
 import 'package:base/src/backend/cache/login_cache.dart';
-import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
 import 'package:base/src/controller/field_errors_controller.dart';
 import 'package:base/src/controller/panel_controller.dart';
-import 'package:base/src/controller/register_controller.dart';
+import 'package:base/src/controller/base/register_controller.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/login.dart';

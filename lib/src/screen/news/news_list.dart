@@ -1,4 +1,5 @@
-import 'package:base/src/controller/news_list_controller.dart';
+
+import 'package:base/src/controller/news/news_list_controller.dart';
 import 'package:base/src/screen/news/news_pager_news_list.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,11 @@ class _NewsListScreenState extends State<NewsListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => controller.close(context),
+        ),
+        iconTheme: const IconThemeData(color: Colors.white,size: 24),
         title: const Text(
           'News',
         ),
@@ -33,3 +38,5 @@ class _NewsListScreenState extends State<NewsListScreen> {
     );
   }
 }
+
+

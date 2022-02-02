@@ -1,9 +1,12 @@
 import 'package:base/src/backend/service/news/news_model_service.dart';
 import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:base/src/models/entity/news/news_content_model.dart';
+import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
-class NewsListController {
+import '../base/base_list_controller.dart';
+
+class NewsListController extends BaseListController<NewsContentModel> {
   void showFilters(BuildContext context) {}
 
   Future<void> fetchPage(PagingController paging, int pageKey) async {
@@ -23,4 +26,8 @@ class NewsListController {
   }
 
   void dispose() {}
+
+  close(BuildContext context) {
+    Navigator.of(context).pop();
+  }
 }

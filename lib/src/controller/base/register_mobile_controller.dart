@@ -1,12 +1,12 @@
 import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/controller/register_controller.dart';
-import 'package:base/src/controller/register_verify_mobile.dart';
+import 'package:base/src/controller/base/register_controller.dart';
+import 'package:base/src/controller/base/register_verify_mobile.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/register_with_mobile.dart';
 import 'package:flutter/material.dart';
 
-import 'field_errors_controller.dart';
+import '../field_errors_controller.dart';
 
 class RegisterWithMobileController with TextErrorController {
   ///last captcha get form url

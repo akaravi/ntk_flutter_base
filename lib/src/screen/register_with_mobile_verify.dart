@@ -1,4 +1,4 @@
-import 'package:base/src/controller/register_verify_mobile.dart';
+import 'package:base/src/controller/base/register_verify_mobile.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/view/CountDownTimer.dart';
 import 'package:base/src/view/base_auth_page.dart';

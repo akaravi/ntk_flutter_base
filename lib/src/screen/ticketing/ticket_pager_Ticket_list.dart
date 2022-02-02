@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
-import '../../controller/ticket_list_controller.dart';
+import '../../controller/ticket/ticket_list_controller.dart';
 import 'ticket_model_adapter.dart';
 
 class TicketPagedListView extends StatefulWidget {

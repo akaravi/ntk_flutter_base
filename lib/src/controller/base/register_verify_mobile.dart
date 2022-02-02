@@ -1,13 +1,13 @@
 import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/controller/register_mobile_controller.dart';
+import 'package:base/src/controller/base/register_mobile_controller.dart';
 import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/screen/register_with_mobile_verify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import 'field_errors_controller.dart';
-import 'panel_controller.dart';
+import '../field_errors_controller.dart';
+import '../panel_controller.dart';
 
 class RegisterVerifyMobileController with TextErrorController {
   ///entered mobile number that get from register page

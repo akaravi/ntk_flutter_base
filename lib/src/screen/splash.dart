@@ -1,4 +1,4 @@
-import 'package:base/src/controller/splash_controller.dart';
+import 'package:base/src/controller/base/splash_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

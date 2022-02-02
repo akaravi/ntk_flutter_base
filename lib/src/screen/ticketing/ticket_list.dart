@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../controller/ticket_list_controller.dart';
+import '../../controller/ticket/ticket_list_controller.dart';
 import 'ticket_pager_Ticket_list.dart';
 
 class TicketListScreen extends StatefulWidget {
@@ -31,8 +31,8 @@ class _TicketListScreenState extends State<TicketListScreen> {
       body: TicketPagedListView(
         controller,
       ),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () => controller.newTicket(context)),
     );
   }
 }
-
-

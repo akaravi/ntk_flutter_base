@@ -1,4 +1,4 @@
-import 'package:base/src/controller/news_list_controller.dart';
+import 'package:base/src/controller/news/news_list_controller.dart';
 import 'package:base/src/models/entity/news/news_content_model.dart';
 import 'package:base/src/screen/generics/empty_list_indicator.dart';
 import 'package:base/src/screen/generics/error_indicator.dart';
