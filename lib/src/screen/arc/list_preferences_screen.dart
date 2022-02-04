@@ -187,44 +187,44 @@ class _ListPreferencesScreenState extends State<ListPreferencesScreen> {
                   )
                 : ListView(
                     children: [
-                      SortMethodGroup(
-                        selectedItem: _selectedSortMethod,
-                        onOptionTap: (option) => setState(
-                          () => _selectedSortMethod = option.id,
-                        ),
-                      ),
+                      // SortMethodGroup(
+                      //   selectedItem: _selectedSortMethod,
+                      //   onOptionTap: (option) => setState(
+                      //     () => _selectedSortMethod = option.id,
+                      //   ),
+                      // ),
                       const Divider(),
-                      PlatformFilterGroup(
-                        platforms: _platforms!,
-                        selectedItemsIds: _selectedPlatformIds,
-                        onClearAll: () => setState(_selectedPlatformIds.clear),
-                        onOptionTap: (option) => setState(
-                          () => _selectedPlatformIds.toggleItem(
-                            option.id,
-                          ),
-                        ),
-                      ),
+                      // PlatformFilterGroup(
+                      //   platforms: _platforms!,
+                      //   selectedItemsIds: _selectedPlatformIds,
+                      //   onClearAll: () => setState(_selectedPlatformIds.clear),
+                      //   onOptionTap: (option) => setState(
+                      //     () => _selectedPlatformIds.toggleItem(
+                      //       option.id,
+                      //     ),
+                      //   ),
+                      // ),
                       const Divider(),
-                      DifficultyFilterGroup(
-                        onClearAll: () => setState(_selectedDifficulties.clear),
-                        onOptionTap: (option) => setState(
-                          () => _selectedDifficulties.toggleItem(
-                            option.id,
-                          ),
-                        ),
-                        selectedItems: _selectedDifficulties,
-                      ),
+                      // DifficultyFilterGroup(
+                      //   onClearAll: () => setState(_selectedDifficulties.clear),
+                      //   onOptionTap: (option) => setState(
+                      //     () => _selectedDifficulties.toggleItem(
+                      //       option.id,
+                      //     ),
+                      //   ),
+                        // selectedItems: _selectedDifficulties,
+                      // ),
                       const Divider(),
-                      CategoryFilterGroup(
-                        categories: _categories!,
-                        selectedItemsIds: _selectedCategoryIds,
-                        onClearAll: () => setState(_selectedCategoryIds.clear),
-                        onOptionTap: (option) => setState(
-                          () => _selectedCategoryIds.toggleItem(
-                            option.id,
-                          ),
-                        ),
-                      ),
+                      // CategoryFilterGroup(
+                      //   categories: _categories!,
+                      //   selectedItemsIds: _selectedCategoryIds,
+                      //   onClearAll: () => setState(_selectedCategoryIds.clear),
+                      //   onOptionTap: (option) => setState(
+                      //     () => _selectedCategoryIds.toggleItem(
+                      //       option.id,
+                      //     ),
+                      //   ),
+                      // ),
                       const Divider(),
                     ],
                   ),

@@ -1,11 +1,10 @@
 import 'dart:async';
 
 import 'package:base/src/my_application.dart';
-import 'package:base/src/screen/ticketing/ticket_list.dart';
 import 'package:flutter/material.dart';
 
 import 'src/backend/config/my_application_preference.dart';
-import 'src/screen/news/news_list.dart';
+import 'src/screen/generics/base_list.dart';
 import 'src/screen/splash.dart';
 
 void main() async {
@@ -34,8 +33,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const Splash(),
-      home: ( NewsListScreen()),
+      home: const Splash(),
+      // home: ( ArticleList()),
     );
   }
 }

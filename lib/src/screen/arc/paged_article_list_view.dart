@@ -72,31 +72,31 @@ class _PagedArticleListViewState extends State<PagedArticleListView> {
   }
 
   Future<void> _fetchPage(int pageKey) async {
-    try {
-      final newPage = await widget.repository.getArticleListPage(
-        number: pageKey,
-        size: 8,
-        filteredPlatformIds: _listPreferences.filteredPlatformIds,
-        filteredDifficulties: _listPreferences.filteredDifficulties,
-        filteredCategoryIds: _listPreferences.filteredCategoryIds,
-        sortMethod: _listPreferences.sortMethod,
-      );
+    // try {
+      // final newPage = await widget.repository.getArticleListPage(
+      //   number: pageKey,
+      //   size: 8,
+        // filteredPlatformIds: _listPreferences.filteredPlatformIds,
+        // filteredDifficulties: _listPreferences.filteredDifficulties,
+        // filteredCategoryIds: _listPreferences.filteredCategoryIds,
+        // sortMethod: _listPreferences.sortMethod,
+      // );
 
       final previouslyFetchedItemsCount =
           _pagingController.itemList?.length ?? 0;
 
-      final isLastPage = newPage.isLastPage(previouslyFetchedItemsCount);
-      final newItems = newPage.itemList;
+      // final isLastPage = newPage.isLastPage(previouslyFetchedItemsCount);
+      // final newItems = newPage.itemList;
 
-      if (isLastPage) {
-        _pagingController.appendLastPage(newItems!);
-      } else {
-        final nextPageKey = pageKey + 1;
-        _pagingController.appendPage(newItems!, nextPageKey);
-      }
-    } catch (error) {
-      _pagingController.error = error;
-    }
+    //   if (isLastPage) {
+    //     _pagingController.appendLastPage(newItems!);
+    //   } else {
+    //     final nextPageKey = pageKey + 1;
+    //     _pagingController.appendPage(newItems!, nextPageKey);
+    //   }
+    // } catch (error) {
+    //   _pagingController.error = error;
+    // }
   }
 
   @override
