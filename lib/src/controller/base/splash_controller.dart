@@ -3,7 +3,6 @@ import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/controller/panel_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../panel_controller.dart';
