@@ -1,4 +1,4 @@
-import 'package:base/src/controller/login_controller.dart';
+import 'package:base/src/controller/base/login_controller.dart';
 import 'package:base/src/models/entity/base/captcha_model.dart';
 import 'package:base/src/view/base_auth_page.dart';
 import 'package:flutter/material.dart';

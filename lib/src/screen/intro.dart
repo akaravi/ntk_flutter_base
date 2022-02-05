@@ -1,5 +1,4 @@
-import 'package:base/src/backend/service/intro/intro_service.dart';
-import 'package:base/src/controller/intro_controller.dart';
+import 'package:base/src/controller/base/intro_controller.dart';
 import 'package:base/src/models/entity/application/application_intro_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';

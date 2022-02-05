@@ -1,38 +1,17 @@
+import 'package:base/src/controller/ticket/ticket_list_controller.dart';
+import 'package:base/src/models/entity/ticketing/ticketing_task_model.dart';
+import 'package:base/src/screen/generics/base_list.dart';
 import 'package:flutter/material.dart';
 
-import '../../controller/ticket/ticket_list_controller.dart';
-import 'ticket_pager_Ticket_list.dart';
-
-class TicketListScreen extends StatefulWidget {
-  @override
-  State<TicketListScreen> createState() => _TicketListScreenState();
-}
-
-class _TicketListScreenState extends State<TicketListScreen> {
-  TicketListController controller = TicketListController();
+class TicketListScreen extends BaseModelListScreen<TicketingTaskModel> {
+  TicketListScreen()
+      : super(title: 'Tickets', controller: TicketListController());
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(),
-        title: const Text(
-          'Ticket',
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.tune),
-            onPressed: () {
-              controller.showFilters(context);
-            },
-          )
-        ],
-      ),
-      body: TicketPagedListView(
-        controller,
-      ),
-      floatingActionButton:
-          FloatingActionButton(onPressed: () => controller.newTicket(context)),
-    );
+  floatingActionButton(BuildContext context) {
+    return FloatingActionButton(
+        child: const Icon(Icons.add_outlined,size: 24,),
+        onPressed: () =>
+            (controller as TicketListController).newTicket(context));
   }
 }

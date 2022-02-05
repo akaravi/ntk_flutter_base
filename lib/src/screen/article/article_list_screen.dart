@@ -6,7 +6,7 @@ import '../../backend/service/article/article_model_service.dart';
 import '../../controller/base/base_list_controller.dart';
 import '../generics/base_list.dart';
 
-class ArticleList extends BaseModelListScreen {
+class ArticleList extends BaseModelListScreen<ArticleContentModel> {
   ArticleList() : super(controller: ArticleController(), title: 'News');
 }
 
