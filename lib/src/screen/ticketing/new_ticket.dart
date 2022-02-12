@@ -11,6 +11,9 @@ class NewTicket extends StatefulWidget {
 }
 
 class _NewTicketState extends BaseTicketPage<NewTicket> {
+  // Focus nodes are necessary
+  final priorityFieldFocusNode = FocusNode();
+  final departmentFieldFocusNode = FocusNode();
   NewTicketController controller = NewTicketController();
 
   @override
@@ -66,10 +69,34 @@ class _NewTicketState extends BaseTicketPage<NewTicket> {
           ),
           getTextInputWidget(
               icon: Icons.person,
-              hint: 'subject of your request',
+              hint: 'enter subject of your request',
               textFieldController: controller.subjectEditor),
-
+          getHintWidget(
+            title: 'Department',
+            error: controller.displayDepartmentError(),
+          ),
+          getDropDownWidget(
+              icon: Icons.group,
+              hint: 'select desired department',
+              focusNode: departmentFieldFocusNode,
+              textFieldController: controller.departmentEditor,
+              items: controller.departments),
           //name
+          getHintWidget(
+            title: 'Priority',
+            error: controller.displayPriorityError(),
+          ),
+          getDropDownWidget(
+              icon: Icons.upgrade_sharp,
+              hint: 'select priority of request',
+              focusNode: priorityFieldFocusNode,
+              textFieldController: controller.priorityEditor,
+              items: controller.priorities),
+          //name
+          getHintWidget(
+            title: 'Attachment',
+            error: controller.displayPriorityError(),
+          ),
         ],
       ),
     );
