@@ -4,6 +4,7 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'article_category_model.dart';
+import 'article_comment_model.dart';
 import 'article_content_similar_model.dart';
 import 'article_content_tag_model.dart';
 
@@ -25,6 +26,10 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   double? geolocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
   double? geolocationlongitude;
+  @JsonKey(name: 'LinkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'LinkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
   @JsonKey(name: 'Keyword')
   String? keyword;
   @JsonKey(name: 'LinkFileIds')
@@ -43,21 +48,18 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   int? viewCount;
   @JsonKey(name: 'Favorited')
   bool? favorited;
-  @JsonKey(name: 'LinkMainImageIdSrc')
-  String? linkMainImageIdSrc;
   @JsonKey(name: 'ExpireDate')
   String? expireDate;
 
-  // @JsonKey(name: 'ModuleCoreCreatedBy')
-  // CoreUserModel? moduleCoreCreatedBy;
-
+  @JsonKey(name: 'ModuleCoreCreatedBy')
+  String? moduleCoreCreatedBy;
   @JsonKey(name: 'ModuleCoreUpdatedBy')
-  CoreUserModel? moduleCoreUpdatedBy;
+  String? moduleCoreUpdatedBy;
 
   @JsonKey(name: 'Source')
   String? source;
   @JsonKey(name: 'Comments')
-  String? comments;
+  ArticleCommentModel? comments;
   @JsonKey(name: ' virtual_Category')
   ArticleCategoryModel? virtual_Category;
 
@@ -72,7 +74,8 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   String? otherInfos;
   @JsonKey(name: 'ContentAndParameterValues')
   Object? contentAndParameterValues;
-
+  @JsonKey(name: 'LinkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'LinkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
   @JsonKey(name: 'LinkFileMovieIdSrc')
