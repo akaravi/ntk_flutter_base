@@ -21,11 +21,13 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Body')
   String? body;
   @JsonKey(name: 'FromDate')
-  String? fromDate;
+  DateTime? fromDate;
   @JsonKey(name: 'Geolocationlatitude')
-  double? geolocationlatitude;
+  int? geolocationlatitude;
   @JsonKey(name: 'Geolocationlongitude')
-  double? geolocationlongitude;
+  int? geolocationlongitude;
+  @JsonKey(name: 'LinkLocationId')
+  int? linkLocationId;
   @JsonKey(name: 'LinkLocationIdTitle')
   String? linkLocationIdTitle;
   @JsonKey(name: 'LinkLocationIdParentTitle')
@@ -49,7 +51,7 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Favorited')
   bool? favorited;
   @JsonKey(name: 'ExpireDate')
-  String? expireDate;
+  DateTime? expireDate;
 
   @JsonKey(name: 'ModuleCoreCreatedBy')
   String? moduleCoreCreatedBy;
@@ -70,6 +72,8 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   List<ArticleContentTagModel>? contentTags;
   @JsonKey(name: 'Similars')
   List<ArticleContentSimilarModel>? similars;
+  @JsonKey(name: 'ContentCategores')
+  List<ArticleContentCategoryModel>? contentCategores;
   @JsonKey(name: 'OtherInfos')
   String? otherInfos;
   @JsonKey(name: 'ContentAndParameterValues')
@@ -82,6 +86,10 @@ class ArticleContentModel extends BaseModuleEntity<int> {
   String? linkFileMovieIdSrc;
   @JsonKey(name: 'LinkFileIdsSrc')
   List<String>? linkFileIdsSrc;
+  @JsonKey(name: 'UrlViewContent')
+  String? urlViewContent;
+  @JsonKey(name: 'UrlViewContentQRCodeBase64')
+  String? urlViewContentQRCodeBase64;
 
   ArticleContentModel();
 

@@ -17,7 +17,7 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Lang')
   EnumLanguage? lang;
   @JsonKey(name: 'ExpireDate')
-  String? expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'LinkFileIdIcon')
   int? linkFileIdIcon;
   @JsonKey(name: 'LinkFileIdLogo')
@@ -55,17 +55,17 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LastBuildStatus')
   EnumBuildStatusType? lastBuildStatus;
   @JsonKey(name: 'LastNotificationOrderDate')
-  String? lastNotificationOrderDate;
+  DateTime? lastNotificationOrderDate;
   @JsonKey(name: 'LastBuildOrderDate')
-  String? lastBuildOrderDate;
+  DateTime? lastBuildOrderDate;
   @JsonKey(name: 'LastBuildRunDate')
-  String? lastBuildRunDate;
+  DateTime? lastBuildRunDate;
   @JsonKey(name: 'LastBuildEndDate')
-  String? lastBuildEndDate;
+  DateTime? lastBuildEndDate;
   @JsonKey(name: 'LastBuildErrorMessage')
   String? lastBuildErrorMessage;
   @JsonKey(name: 'LastSuccessfullyBuildDate')
-  String? lastSuccessfullyBuildDate;
+  DateTime? lastSuccessfullyBuildDate;
   @JsonKey(name: 'LayoutValues')
   List<ApplicationLayoutValueModel>? layoutValues;
   @JsonKey(name: 'BuildCount')

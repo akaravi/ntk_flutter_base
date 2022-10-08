@@ -4,20 +4,22 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'article_content_model.dart';
 
-part 'article_content_other_info_model.g.dart';
+part 'article_share_main_admin_setting_model.g.dart';
 
 @JsonSerializable()
 class ArticleContentOtherInfoModel extends BaseModuleEntity<int> {
+  @JsonKey(name: 'AdminMainPriceFixed')
+  int? adminMainPriceFixed;
+  @JsonKey(name: 'AdminMainPricePercent')
+  int? adminMainPricePercent;
+  @JsonKey(name: 'Description')
+  String? description;
+  @JsonKey(name: 'PaymentMethod')
+  EnumPaymentMethod? paymentMethod;
+  @JsonKey(name: 'ReciverPriceCost')
+  int? reciverPriceCost;
   @JsonKey(name: 'Title')
   String? title;
-  @JsonKey(name: 'HtmlBody')
-  String? htmlBody;
-  @JsonKey(name: 'Source')
-  String? source;
-  @JsonKey(name: 'LinkContentId')
-  int? linkContentId;
-  @JsonKey(name: 'TypeId')
-  int? typeId;
 
   @JsonKey(name: ' virtual_Content')
   ArticleContentModel? virtual_Content;

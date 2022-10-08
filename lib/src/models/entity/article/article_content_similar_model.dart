@@ -1,25 +1,22 @@
-import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'article_content_similar_model.g.dart';
 
 @JsonSerializable()
-class ArticleContentSimilarModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
-  String? title;
+class ArticleContentSimilarModel{
   @JsonKey(name: 'LinkSourceid')
-  String? linkSourceid;
-  @JsonKey(name: 'LinkDestinationid')
-  String? linkDestinationid;
+  int? linkSourceid;
+  @JsonKey(name: 'LinkDestinationId')
+  int? linkDestinationId;
   @JsonKey(name: ' virtual_Source')
-  String? virtual_Source;
+  Object? virtual_Source;
   @JsonKey(name: 'Source')
-  String? source;
+  Object? source;
   @JsonKey(name: ' virtual_Destination')
-  String? virtual_Destination;
+  Object? virtual_Destination;
   @JsonKey(name: 'Destination')
-  String? destination;
+  Object? destination;
   ArticleContentSimilarModel();
   factory ArticleContentSimilarModel.fromJson(Map<String, dynamic> json) =>
       _$ArticleContentSimilarModelFromJson(json);

@@ -17,7 +17,7 @@ class ArticleCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Comment')
   String? comment;
   @JsonKey(name: 'RegisterDate')
-  String? registerDate;
+  DateTime? registerDate;
   @JsonKey(name: 'SumLikeClick')
   int? sumLikeClick;
   @JsonKey(name: 'SumDisLikeClick')
