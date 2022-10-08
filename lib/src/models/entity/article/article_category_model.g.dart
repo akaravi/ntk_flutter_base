@@ -33,12 +33,12 @@ ArticleCategoryModel _$ArticleCategoryModelFromJson(
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
       ..title = json['Title'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
+      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
+      ..contentCount = json['ContentCount'] as int?
       ..description = json['Description'] as String?
       ..fontIcon = json['FontIcon'] as String?
-      ..linkParentId = json['LinkParentId'] as int?
       ..linkParentIdNode = json['LinkParentIdNode'] as String?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
+      ..linkParentId = json['LinkParentId'] as int?
       ..children = (json['Children'] as List<dynamic>?)
           ?.map((e) => ArticleCategoryModel.fromJson(e as Map<String, dynamic>))
           .toList()
@@ -52,7 +52,13 @@ ArticleCategoryModel _$ArticleCategoryModelFromJson(
               json[' virtual_Category'] as Map<String, dynamic>)
       ..contents = (json['Contents'] as List<dynamic>?)
           ?.map((e) => ArticleContentModel.fromJson(e as Map<String, dynamic>))
-          .toList();
+          .toList()
+      ..contentCategores = (json['ContentCategores'] as List<dynamic>?)
+          ?.map((e) =>
+              ArticleContentCategoryModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..linkMainImageId = json['LinkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ArticleCategoryModelToJson(
         ArticleCategoryModel instance) =>
@@ -73,16 +79,19 @@ Map<String, dynamic> _$ArticleCategoryModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
       'Title': instance.title,
-      'LinkMainImageId': instance.linkMainImageId,
+      'TitleResourceLanguage': instance.titleResourceLanguage,
+      'ContentCount': instance.contentCount,
       'Description': instance.description,
       'FontIcon': instance.fontIcon,
-      'LinkParentId': instance.linkParentId,
       'LinkParentIdNode': instance.linkParentIdNode,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'LinkParentId': instance.linkParentId,
       'Children': instance.children,
       'Category': instance.category,
       ' virtual_Category': instance.virtual_Category,
       'Contents': instance.contents,
+      'ContentCategores': instance.contentCategores,
+      'LinkMainImageId': instance.linkMainImageId,
+      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

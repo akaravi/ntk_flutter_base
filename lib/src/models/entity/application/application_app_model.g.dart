@@ -39,9 +39,9 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..linkFileIdSplashScreen = json['LinkFileIdSplashScreen'] as int?
       ..linkMainImageId = json['LinkMainImageId'] as int?
       ..title = json['Title'] as String?
+      ..description = json['Description'] as String?
       ..appVersion = json['AppVersion'] as int?
-      ..isPublished = json['IsPublished'] as String?
-      ..isPublic = json['IsPublic'] as bool?
+      ..isPublished = json['IsPublished'] as bool?
       ..linkSourceId = json['LinkSourceId'] as int?
       ..virtual_Source = json['Virtual_Source'] == null
           ? null
@@ -55,7 +55,7 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..isGlobalUser = json['IsGlobalUser'] as bool?
       ..checkUpdate = json['CheckUpdate'] as bool?
       ..forceUpdate = json['ForceUpdate'] as bool?
-      ..qrCode = json['QrCode'] as String?
+      ..allowDirectShareApp = json['AllowDirectShareApp'] as bool?
       ..lastBuildAppKey = json['LastBuildAppKey'] as String?
       ..lastBuildStatus = $enumDecodeNullable(
           _$EnumBuildStatusTypeEnumMap, json['LastBuildStatus'])
@@ -113,12 +113,8 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..downloadLinkSrcCustomize = json['DownloadLinkSrcCustomize'] as String?
       ..downloadLinkSrc = json['DownloadLinkSrc'] as String?
       ..downloadLinkUpdateSrc = json['DownloadLinkUpdateSrc'] as String?
-      ..downloadLinkSrcByDomain = json['DownloadLinkSrcByDomain'] as String?
-      ..downloadLinkUpdateSrcByDomain =
-          json['DownloadLinkUpdateSrcByDomain'] as String?
-      ..downloadLinkSrcByDomainQRCodeBase64 =
-          json['DownloadLinkSrcByDomainQRCodeBase64'] as String?
-      ..filePathOnServer = json['FilePathOnServer'] as String?
+      ..downloadLinkSrcQRCodeBase64 = json['DownloadLinkSrcQRCodeBase64'] as String?
+      ..linkFileIdSplashScreenSrc = json['LinkFileIdSplashScreenSrc'] as String?
       ..aboutUsTitle = json['AboutUsTitle'] as String?
       ..aboutUsDescription = json['AboutUsDescription'] as String?
       ..aboutUsTel = json['AboutUsTel'] as String?
@@ -142,6 +138,7 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..aboutUsLinkTelegram = json['AboutUsLinkTelegram'] as String?
       ..aboutUsLinkPinterest = json['AboutUsLinkPinterest'] as String?
       ..aboutUsLinkRss = json['AboutUsLinkRss'] as String?
+      ..aboutUsPrivacyPolicyHtmlBody = json['AboutUsPrivacyPolicyHtmlBody'] as String?
       ..linkFileIdIconSrc = json['LinkFileIdIconSrc'] as String?
       ..linkFileIdLogoSrc = json['LinkFileIdLogoSrc'] as String?
       ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
@@ -172,9 +169,9 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'LinkFileIdSplashScreen': instance.linkFileIdSplashScreen,
       'LinkMainImageId': instance.linkMainImageId,
       'Title': instance.title,
+      'Description': instance.description,
       'AppVersion': instance.appVersion,
       'IsPublished': instance.isPublished,
-      'IsPublic': instance.isPublic,
       'LinkSourceId': instance.linkSourceId,
       'Virtual_Source': instance.virtual_Source,
       'Source': instance.source,
@@ -182,7 +179,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'IsGlobalUser': instance.isGlobalUser,
       'CheckUpdate': instance.checkUpdate,
       'ForceUpdate': instance.forceUpdate,
-      'QrCode': instance.qrCode,
+      'AllowDirectShareApp': instance.allowDirectShareApp,
       'LastBuildAppKey': instance.lastBuildAppKey,
       'LastBuildStatus': _$EnumBuildStatusTypeEnumMap[instance.lastBuildStatus],
       'LastNotificationOrderDate': instance.lastNotificationOrderDate,
@@ -218,11 +215,8 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'DownloadLinkSrcCustomize': instance.downloadLinkSrcCustomize,
       'DownloadLinkSrc': instance.downloadLinkSrc,
       'DownloadLinkUpdateSrc': instance.downloadLinkUpdateSrc,
-      'DownloadLinkSrcByDomain': instance.downloadLinkSrcByDomain,
-      'DownloadLinkUpdateSrcByDomain': instance.downloadLinkUpdateSrcByDomain,
-      'DownloadLinkSrcByDomainQRCodeBase64':
-          instance.downloadLinkSrcByDomainQRCodeBase64,
-      'FilePathOnServer': instance.filePathOnServer,
+      'DownloadLinkSrcQRCodeBase64': instance.downloadLinkSrcQRCodeBase64,
+      'LinkFileIdSplashScreenSrc': instance.linkFileIdSplashScreenSrc,
       'AboutUsTitle': instance.aboutUsTitle,
       'AboutUsDescription': instance.aboutUsDescription,
       'AboutUsTel': instance.aboutUsTel,
@@ -244,6 +238,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'AboutUsLinkTelegram': instance.aboutUsLinkTelegram,
       'AboutUsLinkPinterest': instance.aboutUsLinkPinterest,
       'AboutUsLinkRss': instance.aboutUsLinkRss,
+      'AboutUsPrivacyPolicyHtmlBody': instance.aboutUsPrivacyPolicyHtmlBody,
       'LinkFileIdIconSrc': instance.linkFileIdIconSrc,
       'LinkFileIdLogoSrc': instance.linkFileIdLogoSrc,
       'LinkMainImageIdSrc': instance.linkMainImageIdSrc,

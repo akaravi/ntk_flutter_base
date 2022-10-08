@@ -32,7 +32,7 @@ ApplicationLogNotificationModel _$ApplicationLogNotificationModelFromJson(
           ? null
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkApplicationMemberId = json['LinkApplicationMemberId'] as int?
+      ..linkApplicationMemberId = json['LinkApplicationMemberId'] as String?
       ..memberInfo = json['MemberInfo'] == null
           ? null
           : ApplicationMemberInfoModel.fromJson(
@@ -51,7 +51,8 @@ ApplicationLogNotificationModel _$ApplicationLogNotificationModelFromJson(
       ..smallImageId = json['SmallImageId'] as int?
       ..bigImageId = json['BigImageId'] as int?
       ..smallImageIdSrc = json['SmallImageIdSrc'] as String?
-      ..bigImageIdSrc = json['BigImageIdSrc'] as String?;
+      ..bigImageIdSrc = json['BigImageIdSrc'] as String?
+      ..errorMessage = json['ErrorMessage'] as String?;
 
 Map<String, dynamic> _$ApplicationLogNotificationModelToJson(
         ApplicationLogNotificationModel instance) =>
@@ -84,6 +85,7 @@ Map<String, dynamic> _$ApplicationLogNotificationModelToJson(
       'BigImageId': instance.bigImageId,
       'SmallImageIdSrc': instance.smallImageIdSrc,
       'BigImageIdSrc': instance.bigImageIdSrc,
+      'ErrorMessage': instance.errorMessage,
     };
 
 const _$EnumRecordStatusEnumMap = {

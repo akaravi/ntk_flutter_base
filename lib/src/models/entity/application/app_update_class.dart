@@ -23,7 +23,7 @@ class UpdateClass {
   factory UpdateClass.convert(ApplicationAppModel item) {
     return UpdateClass()
       ..isForced = item.forceUpdate
-      ..version = item.appVersion
-      ..url = item.downloadLinkUpdateSrcByDomain;
+      ..version = item.appVersion;
+      // ..url = item.downloadLinkUpdateSrcByDomain;
   }
 }

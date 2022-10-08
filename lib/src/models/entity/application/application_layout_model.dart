@@ -28,6 +28,8 @@ class ApplicationLayoutModel extends BaseModuleEntity<int> {
   int? linkModuleFilePreviewImageId;
   @JsonKey(name: 'LayoutValues')
   List<ApplicationLayoutValueModel>? layoutValues;
+  @JsonKey(name: 'LinkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   ApplicationLayoutModel();
   factory ApplicationLayoutModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationLayoutModelFromJson(json);

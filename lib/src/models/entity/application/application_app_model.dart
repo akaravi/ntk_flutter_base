@@ -28,12 +28,12 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   int? linkMainImageId;
   @JsonKey(name: 'Title')
   String? title;
+  @JsonKey(name: 'Description')
+  String? description;
   @JsonKey(name: 'AppVersion')
   int? appVersion;
   @JsonKey(name: 'IsPublished')
-  String? isPublished;
-  @JsonKey(name: 'IsPublic')
-  bool? isPublic;
+  bool? isPublished;
   @JsonKey(name: 'LinkSourceId')
   int? linkSourceId;
   @JsonKey(name: 'Virtual_Source')
@@ -48,8 +48,8 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   bool? checkUpdate;
   @JsonKey(name: 'ForceUpdate')
   bool? forceUpdate;
-  @JsonKey(name: 'QrCode')
-  String? qrCode;
+  @JsonKey(name: 'AllowDirectShareApp')
+  bool? allowDirectShareApp;
   @JsonKey(name: 'LastBuildAppKey')
   String? lastBuildAppKey;
   @JsonKey(name: 'LastBuildStatus')
@@ -120,15 +120,15 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? downloadLinkSrc;
   @JsonKey(name: 'DownloadLinkUpdateSrc')
   String? downloadLinkUpdateSrc;
-  @JsonKey(name: 'DownloadLinkSrcByDomain')
-  String? downloadLinkSrcByDomain;
-  @JsonKey(name: 'DownloadLinkUpdateSrcByDomain')
-  String? downloadLinkUpdateSrcByDomain;
-  @JsonKey(name: 'DownloadLinkSrcByDomainQRCodeBase64')
-  String? downloadLinkSrcByDomainQRCodeBase64;
+  @JsonKey(name: 'DownloadLinkSrcQRCodeBase64')
+  String? downloadLinkSrcQRCodeBase64;
+  @JsonKey(name: 'LinkFileIdSplashScreenSrc')
+  String? linkFileIdSplashScreenSrc;
+  // @JsonKey(name: 'DownloadLinkSrcByDomainQRCodeBase64')
+  // String? downloadLinkSrcByDomainQRCodeBase64;
 
-  @JsonKey(name: 'FilePathOnServer')
-  String? filePathOnServer;
+  // @JsonKey(name: 'FilePathOnServer')
+  // String? filePathOnServer;
 
   @JsonKey(name: 'AboutUsTitle')
   String? aboutUsTitle;
@@ -138,8 +138,6 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? aboutUsTel;
   @JsonKey(name: 'AboutUsMobile')
   String? aboutUsMobile;
-  @JsonKey(name: 'AboutUsLinkImageIdSrc')
-  String? aboutUsLinkImageIdSrc;
   @JsonKey(name: 'AboutUsFax')
   String? aboutUsFax;
   @JsonKey(name: 'AboutUsEmail')
@@ -148,6 +146,8 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? aboutUsAddress;
   @JsonKey(name: 'AboutUsLinkImageId')
   String? aboutUsLinkImageId;
+  @JsonKey(name: 'AboutUsLinkImageIdSrc')
+  String? aboutUsLinkImageIdSrc;
   @JsonKey(name: 'AboutUsGeolocationlatetitude')
   String? aboutUsGeolocationlatetitude;
   @JsonKey(name: 'AboutUsGeolocationlongitude')
@@ -172,6 +172,8 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? aboutUsLinkPinterest;
   @JsonKey(name: 'AboutUsLinkRss')
   String? aboutUsLinkRss;
+  @JsonKey(name: 'AboutUsPrivacyPolicyHtmlBody')
+  String? aboutUsPrivacyPolicyHtmlBody;
   @JsonKey(name: 'LinkFileIdIconSrc')
   String? linkFileIdIconSrc;
   @JsonKey(name: 'LinkFileIdLogoSrc')

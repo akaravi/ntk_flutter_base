@@ -33,6 +33,8 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
       ..title = json['Title'] as String?
+      ..titleML = json['TitleML'] as String?
+      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
       ..linkMainImageId = json['LinkMainImageId'] as int?
       ..defaultAppId = json['DefaultAppId'] as int?
       ..className = json['ClassName'] as String?
@@ -54,7 +56,12 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
       ..applications = (json['Applications'] as List<dynamic>?)
           ?.map((e) => ApplicationAppModel.fromJson(e as Map<String, dynamic>))
           .toList()
+      ..sourceSiteCategores = (json['SourceSiteCategores'] as List<dynamic>?)
+          ?.map((e) => ApplicationSourceSiteCategoryModel.fromJson(e as Map<String, dynamic>))
+          .toList()
       ..fireBaseServerKey = json['FireBaseServerKey'] as String?
+      ..extension = json['Extension'] as String?
+      ..extensionUpdateFile = json['ExtensionUpdateFile'] as String?
       ..defaultConfigBuilderAdminJsonValues =
           json['DefaultConfigBuilderAdminJsonValues'] as String?
       ..defaultConfigRuntimeAdminJsonValues =
@@ -75,9 +82,11 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
       ..buildKey5Value = json['BuildKey5Value'] as String?
       ..isPublish = json['IsPublish'] as bool?
       ..sourceNameGit = json['SourceNameGit'] as String?
-      ..osType = json['OsType;'] as int?
+      ..oSType = $enumDecodeNullable(
+          _$EnumOperatingSystemTypeEnumMap, json['OSType'])
       ..updateSourceByGit = json['UpdateSourceByGit'] as bool?
-      ..isAbilityGradleBuild = json['IsAbilityGradleBuild'] as bool?;
+      ..isAbilityGradleBuild = json['IsAbilityGradleBuild'] as bool?
+      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationSourceModelToJson(
         ApplicationSourceModel instance) =>
@@ -98,6 +107,8 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
       'Title': instance.title,
+      'TitleML': instance.titleML,
+      'TitleResourceLanguage': instance.titleResourceLanguage,
       'LinkMainImageId': instance.linkMainImageId,
       'DefaultAppId': instance.defaultAppId,
       'ClassName': instance.className,
@@ -114,7 +125,10 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
           instance.lastUnsuccessfullyBuildErrorMessage,
       'Layouts': instance.layouts,
       'Applications': instance.applications,
+      'SourceSiteCategores': instance.sourceSiteCategores,
       'FireBaseServerKey': instance.fireBaseServerKey,
+      'Extension': instance.extension,
+      'ExtensionUpdateFile': instance.extensionUpdateFile,
       'DefaultConfigBuilderAdminJsonValues':
           instance.defaultConfigBuilderAdminJsonValues,
       'DefaultConfigRuntimeAdminJsonValues':
@@ -135,9 +149,10 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
       'BuildKey5Value': instance.buildKey5Value,
       'IsPublish': instance.isPublish,
       'SourceNameGit': instance.sourceNameGit,
-      'OsType;': instance.osType,
+      'OSType': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
       'UpdateSourceByGit': instance.updateSourceByGit,
       'IsAbilityGradleBuild': instance.isAbilityGradleBuild,
+      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -147,4 +162,15 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumOperatingSystemTypeEnumMap = {
+  EnumOperatingSystemType.none: 0,
+  EnumOperatingSystemType.windows: 1,
+  EnumOperatingSystemType.appleMacOS: 2,
+  EnumOperatingSystemType.linux: 3,
+  EnumOperatingSystemType.appleIOS: 4,
+  EnumOperatingSystemType.googleAndroid: 5,
+  EnumOperatingSystemType.oxygenOS: 6,
+  EnumOperatingSystemType.chromium: 7,
 };

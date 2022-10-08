@@ -10,7 +10,7 @@ part 'application_log_notification_model.g.dart';
 @JsonSerializable()
 class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'LinkApplicationMemberId')
-  int? linkApplicationMemberId;
+  String? linkApplicationMemberId;
   @JsonKey(name: 'MemberInfo')
   ApplicationMemberInfoModel? memberInfo;
   @JsonKey(name: 'LinkApplicationId')
@@ -35,6 +35,8 @@ class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
   String? smallImageIdSrc;
   @JsonKey(name: 'BigImageIdSrc')
   String? bigImageIdSrc;
+  @JsonKey(name: 'ErrorMessage')
+  String? errorMessage;
   ApplicationLogNotificationModel();
   factory ApplicationLogNotificationModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationLogNotificationModelFromJson(json);

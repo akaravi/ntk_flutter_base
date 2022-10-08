@@ -50,10 +50,13 @@ ApplicationMemberInfoModel _$ApplicationMemberInfoModelFromJson(
       ..appBuildVer = json['AppBuildVer'] as int?
       ..appSourceVer = json['AppSourceVer'] as String?
       ..deviceIP = json['DeviceIP'] as String?
-      ..locationLat = json['LocationLat'] as String?
-      ..locationLong = json['LocationLong'] as String?
       ..scorePercent = json['ScorePercent'] as int?
-      ..scoreComment = json['ScoreComment'] as String?;
+      ..scoreComment = json['ScoreComment'] as String?
+      ..linkLocationId = json['LinkLocationId'] as int?
+      ..geolocationlatitude = json['Geolocationlatitude'] as int?
+      ..geolocationlongitude = json['Geolocationlongitude'] as int?
+      ..linkLocationIdTitle = json['LinkLocationIdTitle'] as String?
+      ..linkLocationIdParentTitle = json['LinkLocationIdParentTitle'] as String?;
 
 Map<String, dynamic> _$ApplicationMemberInfoModelToJson(
         ApplicationMemberInfoModel instance) =>
@@ -87,10 +90,13 @@ Map<String, dynamic> _$ApplicationMemberInfoModelToJson(
       'AppBuildVer': instance.appBuildVer,
       'AppSourceVer': instance.appSourceVer,
       'DeviceIP': instance.deviceIP,
-      'LocationLat': instance.locationLat,
-      'LocationLong': instance.locationLong,
       'ScorePercent': instance.scorePercent,
       'ScoreComment': instance.scoreComment,
+      'LinkLocationId': instance.linkLocationId,
+      'Geolocationlatitude': instance.geolocationlatitude,
+      'Geolocationlongitude': instance.geolocationlongitude,
+      'LinkLocationIdTitle': instance.linkLocationIdTitle,
+      'LinkLocationIdParentTitle': instance.linkLocationIdParentTitle,
     };
 
 const _$EnumRecordStatusEnumMap = {

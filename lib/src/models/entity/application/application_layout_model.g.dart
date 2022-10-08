@@ -51,7 +51,8 @@ ApplicationLayoutModel _$ApplicationLayoutModelFromJson(
       ..layoutValues = (json['LayoutValues'] as List<dynamic>?)
           ?.map((e) =>
               ApplicationLayoutValueModel.fromJson(e as Map<String, dynamic>))
-          .toList();
+          .toList()
+          ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationLayoutModelToJson(
         ApplicationLayoutModel instance) =>
@@ -81,6 +82,7 @@ Map<String, dynamic> _$ApplicationLayoutModelToJson(
       'JsonFormAdminSystemValue': instance.jsonFormAdminSystemValue,
       'LinkModuleFilePreviewImageId': instance.linkModuleFilePreviewImageId,
       'LayoutValues': instance.layoutValues,
+      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

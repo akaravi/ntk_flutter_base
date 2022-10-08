@@ -36,14 +36,24 @@ class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
   String? appSourceVer;
   @JsonKey(name: 'DeviceIP')
   String? deviceIP;
-  @JsonKey(name: 'LocationLat')
-  String? locationLat;
-  @JsonKey(name: 'LocationLong')
-  String? locationLong;
+  // @JsonKey(name: 'LocationLat')
+  // String? locationLat;
+  // @JsonKey(name: 'LocationLong')
+  // String? locationLong;
   @JsonKey(name: 'ScorePercent')
   int? scorePercent;
   @JsonKey(name: 'ScoreComment')
   String? scoreComment;
+  @JsonKey(name: 'LinkLocationId')
+  int? linkLocationId;
+  @JsonKey(name: 'Geolocationlatitude')
+  int? geolocationlatitude;
+  @JsonKey(name: 'Geolocationlongitude')
+  int? geolocationlongitude;
+  @JsonKey(name: 'LinkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'LinkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
   ApplicationMemberInfoModel();
   factory ApplicationMemberInfoModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationMemberInfoModelFromJson(json);

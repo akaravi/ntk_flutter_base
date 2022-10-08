@@ -11,6 +11,10 @@ part 'application_theme_config_model.g.dart';
 class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
   String? title;
+  @JsonKey(name: 'TitleML')
+  String? titleML;
+  @JsonKey(name: 'TitleResourceLanguage')
+  String? titleResourceLanguage;
   @JsonKey(name: 'TypeId')
   String? typeId;
   @JsonKey(name: 'LinkMainImageId')
@@ -33,6 +37,8 @@ class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
   List<ThemeConfigLayoutModel>? themeConfigLayouts;
   @JsonKey(name: 'Applications')
   List<ApplicationAppModel>? applications;
+  @JsonKey(name: 'LinkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   ApplicationThemeConfigModel();
   factory ApplicationThemeConfigModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationThemeConfigModelFromJson(json);

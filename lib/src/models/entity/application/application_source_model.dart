@@ -1,15 +1,21 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
+import 'package:base/src/models/entity/enums/enum_operating_system_type.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'application_app_model.dart';
 import 'application_layout_model.dart';
+import 'application_source_site_category_model.dart';
 part 'application_source_model.g.dart';
 
 @JsonSerializable()
 class ApplicationSourceModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'Title')
   String? title;
+  @JsonKey(name: 'TitleML')
+  String? titleML;
+  @JsonKey(name: 'TitleResourceLanguage')
+  String? titleResourceLanguage;
   @JsonKey(name: 'LinkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'DefaultAppId')
@@ -36,8 +42,14 @@ class ApplicationSourceModel extends BaseModuleEntity<int> {
   List<ApplicationLayoutModel>? layouts;
   @JsonKey(name: 'Applications')
   List<ApplicationAppModel>? applications;
+  @JsonKey(name: 'SourceSiteCategores')
+  List<ApplicationSourceSiteCategoryModel>? sourceSiteCategores;
   @JsonKey(name: 'FireBaseServerKey')
   String? fireBaseServerKey;
+  @JsonKey(name: 'Extension')
+  String? extension;
+  @JsonKey(name: 'ExtensionUpdateFile')
+  String? extensionUpdateFile;
   @JsonKey(name: 'DefaultConfigBuilderAdminJsonValues')
   String? defaultConfigBuilderAdminJsonValues;
   @JsonKey(name: 'DefaultConfigRuntimeAdminJsonValues')
@@ -70,12 +82,14 @@ class ApplicationSourceModel extends BaseModuleEntity<int> {
   bool? isPublish;
   @JsonKey(name: 'SourceNameGit')
   String? sourceNameGit;
-  @JsonKey(name: 'OsType;')
-  int? osType;
+  @JsonKey(name: 'OSType;')
+  EnumOperatingSystemType? oSType;
   @JsonKey(name: 'UpdateSourceByGit')
   bool? updateSourceByGit;
   @JsonKey(name: 'IsAbilityGradleBuild')
   bool? isAbilityGradleBuild;
+  @JsonKey(name: 'LinkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   ApplicationSourceModel();
   factory ApplicationSourceModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationSourceModelFromJson(json);

@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'application_theme_config_model.dart';
+part of 'application_source_site_category_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ApplicationThemeConfigModel _$ApplicationThemeConfigModelFromJson(
+ApplicationSourceSiteCategoryModel _$ApplicationSourceSiteCategoryModelFromJson(
         Map<String, dynamic> json) =>
-    ApplicationThemeConfigModel()
+    ApplicationSourceSiteCategoryModel()
       ..id = json['Id'] as int?
       ..createdDate = json['CreatedDate'] == null
           ? null
@@ -32,12 +32,8 @@ ApplicationThemeConfigModel _$ApplicationThemeConfigModelFromJson(
           ? null
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..titleML = json['TitleML'] as String?
-      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
-      ..typeId = json['TypeId'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
       ..linkSourceId = json['LinkSourceId'] as int?
+      ..linkSiteCagegoryId = json['LinkSiteCagegoryId'] as int?
       ..virtual_Source = json[' virtual_Source'] == null
           ? null
           : ApplicationSourceModel.fromJson(
@@ -45,25 +41,10 @@ ApplicationThemeConfigModel _$ApplicationThemeConfigModelFromJson(
       ..source = json['source'] == null
           ? null
           : ApplicationSourceModel.fromJson(
-              json['source'] as Map<String, dynamic>)
-      ..themeConfigBuilderJsonValues =
-          json['ThemeConfigBuilderJsonValues'] as String?
-      ..themeConfigRuntimeJsonValues =
-          json['ThemeConfigRuntimeJsonValues'] as String?
-      ..themeConfigLayoutJsonValues =
-          json['ThemeConfigLayoutJsonValues'] as String?
-      ..themeConfigJsonValues = json['ThemeConfigJsonValues'] as String?
-      ..themeConfigLayouts = (json['ThemeConfigLayouts'] as List<dynamic>?)
-          ?.map(
-              (e) => ThemeConfigLayoutModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..applications = (json['Applications'] as List<dynamic>?)
-          ?.map((e) => ApplicationAppModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-          ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+              json['source'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$ApplicationThemeConfigModelToJson(
-        ApplicationThemeConfigModel instance) =>
+Map<String, dynamic> _$ApplicationSourceSiteCategoryModelToJson(
+        ApplicationSourceSiteCategoryModel instance) =>
     <String, dynamic>{
       'Id': instance.id,
       'CreatedDate': instance.createdDate?.toIso8601String(),
@@ -80,19 +61,10 @@ Map<String, dynamic> _$ApplicationThemeConfigModelToJson(
       'AntiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'TypeId': instance.typeId,
-      'LinkMainImageId': instance.linkMainImageId,
       'LinkSourceId': instance.linkSourceId,
+      'LinkSiteCagegoryId': instance.linkSiteCagegoryId,
       ' virtual_Source': instance.virtual_Source,
       'source': instance.source,
-      'ThemeConfigBuilderJsonValues': instance.themeConfigBuilderJsonValues,
-      'ThemeConfigRuntimeJsonValues': instance.themeConfigRuntimeJsonValues,
-      'ThemeConfigLayoutJsonValues': instance.themeConfigLayoutJsonValues,
-      'ThemeConfigJsonValues': instance.themeConfigJsonValues,
-      'ThemeConfigLayouts': instance.themeConfigLayouts,
-      'Applications': instance.applications,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {
