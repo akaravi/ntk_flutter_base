@@ -26,7 +26,7 @@ class ApplicationAppService extends DioApi {
       //set qrcode, appId, title, update information, aboutUs page
       MainScreenCache()
         ..appId = res.item?.id ?? 0
-        ..qrCode = res.item?.qrCode ?? ''
+        //..qrCode = res.item?.qrCode ?? ''
         ..title = res.item?.aboutUsTitle
         ..aboutUs(res.item)
         ..updateInfo(res.item);

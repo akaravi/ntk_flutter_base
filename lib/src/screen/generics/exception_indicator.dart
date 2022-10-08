@@ -48,20 +48,20 @@ class ExceptionIndicator extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   width: double.infinity,
-                  child: RaisedButton.icon(
-                    onPressed: onTryAgain,
-                    icon: const Icon(
-                      Icons.refresh,
-                      color: Colors.white,
-                    ),
-                    label: const Text(
-                      'Try Again',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
+                  // child: RaisedButton.icon(
+                  //   onPressed: onTryAgain,
+                  //   icon: const Icon(
+                  //     Icons.refresh,
+                  //     color: Colors.white,
+                  //   ),
+                  //   label: const Text(
+                  //     'Try Again',
+                  //     style: TextStyle(
+                  //       fontSize: 16,
+                  //       color: Colors.white,
+                  //     ),
+                  //   ),
+                  // ),
                 ),
             ],
           ),

@@ -31,7 +31,7 @@ class ArticleCategoryModel extends BaseEntityCategory<int> {
   @JsonKey(name: 'Contents')
   List<ArticleContentModel>? contents;
   @JsonKey(name: 'ContentCategores')
-  List<ArticleContentCategoryModel>? contentCategores;
+  List<ArticleContentCategoryModel> contentCategores;
   @JsonKey(name: 'LinkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'LinkMainImageIdSrc')

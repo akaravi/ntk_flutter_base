@@ -85,11 +85,11 @@ class _TicketModelAdapterState extends State<TicketModelAdapter> {
     if (Platform.isIOS || await canLaunch(url)) {
       await launch(url);
     } else {
-      Scaffold.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Could\'nt launch the article\'s URL.'),
-        ),
-      );
+      // Scaffold.of(context).showSnackBar(
+      //   const SnackBar(
+      //     content: Text('Could\'nt launch the article\'s URL.'),
+      //   ),
+      // );
     }
   }
 }
