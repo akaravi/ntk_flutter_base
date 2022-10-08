@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'article_comment_model.dart';
+part of 'article_content_category_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ArticleCommentModel _$ArticleCommentModelFromJson(Map<String, dynamic> json) =>
-    ArticleCommentModel()
+ArticleContentCategoryModel _$ArticleContentCategoryModelFromJson(
+        Map<String, dynamic> json) =>
+    ArticleContentCategoryModel()
       ..id = json['Id'] as int?
       ..createdDate = json['CreatedDate'] == null
           ? null
@@ -31,26 +32,19 @@ ArticleCommentModel _$ArticleCommentModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkContentId = json['LinkContentId'] as int?
-      ..linkParentId = json['LinkParentId'] as int?
-      ..writer = json['Writer'] as String?
-      ..comment = json['Comment'] as String?
-      ..registerDate = json['RegisterDate'] == null
-          ? null
-          : DateTime.parse(json['RegisterDate'] as String)
-      ..sumLikeClick = json['SumLikeClick'] as int?
-      ..sumDisLikeClick = json['SumDisLikeClick'] as int?
-      ..virtual_Content = json[' virtual_Content'] == null
-          ? null
-          : ArticleContentModel.fromJson(
-              json[' virtual_Content'] as Map<String, dynamic>)
       ..content = json['Content'] == null
           ? null
           : ArticleContentModel.fromJson(
-              json['Content'] as Map<String, dynamic>);
+              json['Content'] as Map<String, dynamic>)
+      ..category = json['Category'] == null
+          ? null
+          : ArticleCategoryModel.fromJson(
+              json['Category'] as Map<String, dynamic>)
+      ..linkCategoryId = json['LinkCategoryId'] as int?
+      ..linkContentId = json['LinkContentId'] as int?;
 
-Map<String, dynamic> _$ArticleCommentModelToJson(
-        ArticleCommentModel instance) =>
+Map<String, dynamic> _$ArticleContentCategoryModelToJson(
+        ArticleContentCategoryModel instance) =>
     <String, dynamic>{
       'Id': instance.id,
       'CreatedDate': instance.createdDate?.toIso8601String(),
@@ -67,15 +61,10 @@ Map<String, dynamic> _$ArticleCommentModelToJson(
       'AntiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
-      'LinkContentId': instance.linkContentId,
-      'LinkParentId': instance.linkParentId,
-      'Writer': instance.writer,
-      'Comment': instance.comment,
-      'RegisterDate': instance.registerDate?.toIso8601String(),
-      'SumLikeClick': instance.sumLikeClick,
-      'SumDisLikeClick': instance.sumDisLikeClick,
-      ' virtual_Content': instance.virtual_Content,
       'Content': instance.content,
+      'Category': instance.category,
+      'LinkCategoryId': instance.linkCategoryId,
+      'LinkContentId': instance.linkContentId,
     };
 
 const _$EnumRecordStatusEnumMap = {

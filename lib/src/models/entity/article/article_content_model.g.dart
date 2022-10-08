@@ -35,10 +35,14 @@ ArticleContentModel _$ArticleContentModelFromJson(Map<String, dynamic> json) =>
       ..title = json['Title'] as String?
       ..description = json['Description'] as String?
       ..body = json['Body'] as String?
-      ..fromDate = json['FromDate'] as String?
-      ..geolocationlatitude = (json['Geolocationlatitude'] as num?)?.toDouble()
-      ..geolocationlongitude =
-          (json['Geolocationlongitude'] as num?)?.toDouble()
+      ..fromDate = json['FromDate'] == null
+          ? null
+          : DateTime.parse(json['FromDate'] as String)
+      ..geolocationlatitude = json['Geolocationlatitude'] as int?
+      ..geolocationlongitude = json['Geolocationlongitude'] as int?
+      ..linkLocationId = json['LinkLocationId'] as int?
+      ..linkLocationIdTitle = json['LinkLocationIdTitle'] as String?
+      ..linkLocationIdParentTitle = json['LinkLocationIdParentTitle'] as String?
       ..keyword = json['Keyword'] as String?
       ..linkFileIds = json['LinkFileIds'] as String?
       ..linkFilePodcastId = json['LinkFilePodcastId'] as int?
@@ -48,14 +52,16 @@ ArticleContentModel _$ArticleContentModelFromJson(Map<String, dynamic> json) =>
       ..scoreSumPercent = json['ScoreSumPercent'] as int?
       ..viewCount = json['ViewCount'] as int?
       ..favorited = json['Favorited'] as bool?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
-      ..expireDate = json['ExpireDate'] as String?
-      ..moduleCoreUpdatedBy = json['ModuleCoreUpdatedBy'] == null
+      ..expireDate = json['ExpireDate'] == null
           ? null
-          : CoreUserModel.fromJson(
-              json['ModuleCoreUpdatedBy'] as Map<String, dynamic>)
+          : DateTime.parse(json['ExpireDate'] as String)
+      ..moduleCoreCreatedBy = json['ModuleCoreCreatedBy'] as String?
+      ..moduleCoreUpdatedBy = json['ModuleCoreUpdatedBy'] as String?
       ..source = json['Source'] as String?
-      ..comments = json['Comments'] as String?
+      ..comments = json['Comments'] == null
+          ? null
+          : ArticleCommentModel.fromJson(
+              json['Comments'] as Map<String, dynamic>)
       ..virtual_Category = json[' virtual_Category'] == null
           ? null
           : ArticleCategoryModel.fromJson(
@@ -72,13 +78,21 @@ ArticleContentModel _$ArticleContentModelFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               ArticleContentSimilarModel.fromJson(e as Map<String, dynamic>))
           .toList()
+      ..contentCategores = (json['ContentCategores'] as List<dynamic>?)
+          ?.map((e) =>
+              ArticleContentCategoryModel.fromJson(e as Map<String, dynamic>))
+          .toList()
       ..otherInfos = json['OtherInfos'] as String?
       ..contentAndParameterValues = json['ContentAndParameterValues']
+      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
       ..linkFilePodcastIdSrc = json['LinkFilePodcastIdSrc'] as String?
       ..linkFileMovieIdSrc = json['LinkFileMovieIdSrc'] as String?
       ..linkFileIdsSrc = (json['LinkFileIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
-          .toList();
+          .toList()
+      ..urlViewContent = json['UrlViewContent'] as String?
+      ..urlViewContentQRCodeBase64 =
+          json['UrlViewContentQRCodeBase64'] as String?;
 
 Map<String, dynamic> _$ArticleContentModelToJson(
         ArticleContentModel instance) =>
@@ -102,9 +116,12 @@ Map<String, dynamic> _$ArticleContentModelToJson(
       'Title': instance.title,
       'Description': instance.description,
       'Body': instance.body,
-      'FromDate': instance.fromDate,
+      'FromDate': instance.fromDate?.toIso8601String(),
       'Geolocationlatitude': instance.geolocationlatitude,
       'Geolocationlongitude': instance.geolocationlongitude,
+      'LinkLocationId': instance.linkLocationId,
+      'LinkLocationIdTitle': instance.linkLocationIdTitle,
+      'LinkLocationIdParentTitle': instance.linkLocationIdParentTitle,
       'Keyword': instance.keyword,
       'LinkFileIds': instance.linkFileIds,
       'LinkFilePodcastId': instance.linkFilePodcastId,
@@ -114,8 +131,8 @@ Map<String, dynamic> _$ArticleContentModelToJson(
       'ScoreSumPercent': instance.scoreSumPercent,
       'ViewCount': instance.viewCount,
       'Favorited': instance.favorited,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
-      'ExpireDate': instance.expireDate,
+      'ExpireDate': instance.expireDate?.toIso8601String(),
+      'ModuleCoreCreatedBy': instance.moduleCoreCreatedBy,
       'ModuleCoreUpdatedBy': instance.moduleCoreUpdatedBy,
       'Source': instance.source,
       'Comments': instance.comments,
@@ -123,11 +140,15 @@ Map<String, dynamic> _$ArticleContentModelToJson(
       'Category': instance.category,
       'ContentTags': instance.contentTags,
       'Similars': instance.similars,
+      'ContentCategores': instance.contentCategores,
       'OtherInfos': instance.otherInfos,
       'ContentAndParameterValues': instance.contentAndParameterValues,
+      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
       'LinkFilePodcastIdSrc': instance.linkFilePodcastIdSrc,
       'LinkFileMovieIdSrc': instance.linkFileMovieIdSrc,
       'LinkFileIdsSrc': instance.linkFileIdsSrc,
+      'UrlViewContent': instance.urlViewContent,
+      'UrlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
     };
 
 const _$EnumRecordStatusEnumMap = {

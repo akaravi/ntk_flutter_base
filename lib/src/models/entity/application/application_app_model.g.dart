@@ -33,7 +33,9 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..linkSiteId = json['LinkSiteId'] as int?
       ..appKey = json['AppKey'] as String?
       ..lang = $enumDecodeNullable(_$EnumLanguageEnumMap, json['Lang'])
-      ..expireDate = json['ExpireDate'] as String?
+      ..expireDate = json['ExpireDate'] == null
+          ? null
+          : DateTime.parse(json['ExpireDate'] as String)
       ..linkFileIdIcon = json['LinkFileIdIcon'] as int?
       ..linkFileIdLogo = json['LinkFileIdLogo'] as int?
       ..linkFileIdSplashScreen = json['LinkFileIdSplashScreen'] as int?
@@ -59,12 +61,22 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..lastBuildAppKey = json['LastBuildAppKey'] as String?
       ..lastBuildStatus = $enumDecodeNullable(
           _$EnumBuildStatusTypeEnumMap, json['LastBuildStatus'])
-      ..lastNotificationOrderDate = json['LastNotificationOrderDate'] as String?
-      ..lastBuildOrderDate = json['LastBuildOrderDate'] as String?
-      ..lastBuildRunDate = json['LastBuildRunDate'] as String?
-      ..lastBuildEndDate = json['LastBuildEndDate'] as String?
+      ..lastNotificationOrderDate = json['LastNotificationOrderDate'] == null
+          ? null
+          : DateTime.parse(json['LastNotificationOrderDate'] as String)
+      ..lastBuildOrderDate = json['LastBuildOrderDate'] == null
+          ? null
+          : DateTime.parse(json['LastBuildOrderDate'] as String)
+      ..lastBuildRunDate = json['LastBuildRunDate'] == null
+          ? null
+          : DateTime.parse(json['LastBuildRunDate'] as String)
+      ..lastBuildEndDate = json['LastBuildEndDate'] == null
+          ? null
+          : DateTime.parse(json['LastBuildEndDate'] as String)
       ..lastBuildErrorMessage = json['LastBuildErrorMessage'] as String?
-      ..lastSuccessfullyBuildDate = json['LastSuccessfullyBuildDate'] as String?
+      ..lastSuccessfullyBuildDate = json['LastSuccessfullyBuildDate'] == null
+          ? null
+          : DateTime.parse(json['LastSuccessfullyBuildDate'] as String)
       ..layoutValues = (json['LayoutValues'] as List<dynamic>?)
           ?.map((e) =>
               ApplicationLayoutValueModel.fromJson(e as Map<String, dynamic>))
@@ -165,7 +177,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'LinkSiteId': instance.linkSiteId,
       'AppKey': instance.appKey,
       'Lang': _$EnumLanguageEnumMap[instance.lang],
-      'ExpireDate': instance.expireDate,
+      'ExpireDate': instance.expireDate?.toIso8601String(),
       'LinkFileIdIcon': instance.linkFileIdIcon,
       'LinkFileIdLogo': instance.linkFileIdLogo,
       'LinkFileIdSplashScreen': instance.linkFileIdSplashScreen,
@@ -184,12 +196,14 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'AllowDirectShareApp': instance.allowDirectShareApp,
       'LastBuildAppKey': instance.lastBuildAppKey,
       'LastBuildStatus': _$EnumBuildStatusTypeEnumMap[instance.lastBuildStatus],
-      'LastNotificationOrderDate': instance.lastNotificationOrderDate,
-      'LastBuildOrderDate': instance.lastBuildOrderDate,
-      'LastBuildRunDate': instance.lastBuildRunDate,
-      'LastBuildEndDate': instance.lastBuildEndDate,
+      'LastNotificationOrderDate':
+          instance.lastNotificationOrderDate?.toIso8601String(),
+      'LastBuildOrderDate': instance.lastBuildOrderDate?.toIso8601String(),
+      'LastBuildRunDate': instance.lastBuildRunDate?.toIso8601String(),
+      'LastBuildEndDate': instance.lastBuildEndDate?.toIso8601String(),
       'LastBuildErrorMessage': instance.lastBuildErrorMessage,
-      'LastSuccessfullyBuildDate': instance.lastSuccessfullyBuildDate,
+      'LastSuccessfullyBuildDate':
+          instance.lastSuccessfullyBuildDate?.toIso8601String(),
       'LayoutValues': instance.layoutValues,
       'BuildCount': instance.buildCount,
       'LinkThemeConfigId': instance.linkThemeConfigId,

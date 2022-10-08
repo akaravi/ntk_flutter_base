@@ -35,7 +35,7 @@ ArticleContentOtherInfoModel _$ArticleContentOtherInfoModelFromJson(
       ..title = json['Title'] as String?
       ..htmlBody = json['HtmlBody'] as String?
       ..source = json['Source'] as String?
-      ..linkContentId = json['LinkContentid'] as int?
+      ..linkContentId = json['LinkContentId'] as int?
       ..typeId = json['TypeId'] as int?
       ..virtual_Content = json[' virtual_Content'] == null
           ? null
@@ -67,7 +67,7 @@ Map<String, dynamic> _$ArticleContentOtherInfoModelToJson(
       'Title': instance.title,
       'HtmlBody': instance.htmlBody,
       'Source': instance.source,
-      'LinkContentid': instance.linkContentId,
+      'LinkContentId': instance.linkContentId,
       'TypeId': instance.typeId,
       ' virtual_Content': instance.virtual_Content,
       'Content': instance.content,

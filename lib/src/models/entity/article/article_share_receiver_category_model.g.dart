@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'article_comment_model.dart';
+part of 'article_share_receiver_category_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ArticleCommentModel _$ArticleCommentModelFromJson(Map<String, dynamic> json) =>
-    ArticleCommentModel()
+ArticleShareReceiverCategoryModel _$ArticleShareReceiverCategoryModelFromJson(
+        Map<String, dynamic> json) =>
+    ArticleShareReceiverCategoryModel()
       ..id = json['Id'] as int?
       ..createdDate = json['CreatedDate'] == null
           ? null
@@ -31,26 +32,25 @@ ArticleCommentModel _$ArticleCommentModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['AntiInjectionExpireDate'] as String)
       ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkContentId = json['LinkContentId'] as int?
-      ..linkParentId = json['LinkParentId'] as int?
-      ..writer = json['Writer'] as String?
-      ..comment = json['Comment'] as String?
-      ..registerDate = json['RegisterDate'] == null
+      ..fromDate = json['FromDate'] == null
           ? null
-          : DateTime.parse(json['RegisterDate'] as String)
-      ..sumLikeClick = json['SumLikeClick'] as int?
-      ..sumDisLikeClick = json['SumDisLikeClick'] as int?
-      ..virtual_Content = json[' virtual_Content'] == null
+          : DateTime.parse(json['FromDate'] as String)
+      ..linkShareReciverCategoryId = json['LinkShareReciverCategoryId'] as int?
+      ..linkShareServerCategoryId = json['LinkShareServerCategoryId'] as int?
+      ..expireDate = json['ExpireDate'] == null
           ? null
-          : ArticleContentModel.fromJson(
-              json[' virtual_Content'] as Map<String, dynamic>)
-      ..content = json['Content'] == null
+          : DateTime.parse(json['ExpireDate'] as String)
+      ..shareServerCategory = json['ShareServerCategory'] == null
           ? null
-          : ArticleContentModel.fromJson(
-              json['Content'] as Map<String, dynamic>);
+          : ArticleShareServerCategoryModel.fromJson(
+              json['ShareServerCategory'] as Map<String, dynamic>)
+      ..shareReciverCategory = json['ShareReciverCategory'] == null
+          ? null
+          : ArticleCategoryModel.fromJson(
+              json['ShareReciverCategory'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$ArticleCommentModelToJson(
-        ArticleCommentModel instance) =>
+Map<String, dynamic> _$ArticleShareReceiverCategoryModelToJson(
+        ArticleShareReceiverCategoryModel instance) =>
     <String, dynamic>{
       'Id': instance.id,
       'CreatedDate': instance.createdDate?.toIso8601String(),
@@ -67,15 +67,12 @@ Map<String, dynamic> _$ArticleCommentModelToJson(
       'AntiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
-      'LinkContentId': instance.linkContentId,
-      'LinkParentId': instance.linkParentId,
-      'Writer': instance.writer,
-      'Comment': instance.comment,
-      'RegisterDate': instance.registerDate?.toIso8601String(),
-      'SumLikeClick': instance.sumLikeClick,
-      'SumDisLikeClick': instance.sumDisLikeClick,
-      ' virtual_Content': instance.virtual_Content,
-      'Content': instance.content,
+      'FromDate': instance.fromDate?.toIso8601String(),
+      'LinkShareReciverCategoryId': instance.linkShareReciverCategoryId,
+      'LinkShareServerCategoryId': instance.linkShareServerCategoryId,
+      'ExpireDate': instance.expireDate?.toIso8601String(),
+      'ShareServerCategory': instance.shareServerCategory,
+      'ShareReciverCategory': instance.shareReciverCategory,
     };
 
 const _$EnumRecordStatusEnumMap = {

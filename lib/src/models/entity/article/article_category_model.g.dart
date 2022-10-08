@@ -53,7 +53,10 @@ ArticleCategoryModel _$ArticleCategoryModelFromJson(
       ..contents = (json['Contents'] as List<dynamic>?)
           ?.map((e) => ArticleContentModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..contentCategores = json['ContentCategores'] as List<dynamic>?
+      ..contentCategores = (json['ContentCategores'] as List<dynamic>?)
+          ?.map((e) =>
+              ArticleContentCategoryModel.fromJson(e as Map<String, dynamic>))
+          .toList()
       ..linkMainImageId = json['LinkMainImageId'] as int?
       ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
 

@@ -5,6 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'article_category_model.dart';
 import 'article_comment_model.dart';
+import 'article_content_category_model.dart';
 import 'article_content_similar_model.dart';
 import 'article_content_tag_model.dart';
 
