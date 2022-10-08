@@ -52,7 +52,7 @@ ApplicationLayoutModel _$ApplicationLayoutModelFromJson(
           ?.map((e) =>
               ApplicationLayoutValueModel.fromJson(e as Map<String, dynamic>))
           .toList()
-          ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationLayoutModelToJson(
         ApplicationLayoutModel instance) =>

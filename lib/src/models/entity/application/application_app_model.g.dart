@@ -113,17 +113,18 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..downloadLinkSrcCustomize = json['DownloadLinkSrcCustomize'] as String?
       ..downloadLinkSrc = json['DownloadLinkSrc'] as String?
       ..downloadLinkUpdateSrc = json['DownloadLinkUpdateSrc'] as String?
-      ..downloadLinkSrcQRCodeBase64 = json['DownloadLinkSrcQRCodeBase64'] as String?
+      ..downloadLinkSrcQRCodeBase64 =
+          json['DownloadLinkSrcQRCodeBase64'] as String?
       ..linkFileIdSplashScreenSrc = json['LinkFileIdSplashScreenSrc'] as String?
       ..aboutUsTitle = json['AboutUsTitle'] as String?
       ..aboutUsDescription = json['AboutUsDescription'] as String?
       ..aboutUsTel = json['AboutUsTel'] as String?
       ..aboutUsMobile = json['AboutUsMobile'] as String?
-      ..aboutUsLinkImageIdSrc = json['AboutUsLinkImageIdSrc'] as String?
       ..aboutUsFax = json['AboutUsFax'] as String?
       ..aboutUsEmail = json['AboutUsEmail'] as String?
       ..aboutUsAddress = json['AboutUsAddress'] as String?
       ..aboutUsLinkImageId = json['AboutUsLinkImageId'] as String?
+      ..aboutUsLinkImageIdSrc = json['AboutUsLinkImageIdSrc'] as String?
       ..aboutUsGeolocationlatetitude =
           json['AboutUsGeolocationlatetitude'] as String?
       ..aboutUsGeolocationlongitude =
@@ -138,7 +139,8 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..aboutUsLinkTelegram = json['AboutUsLinkTelegram'] as String?
       ..aboutUsLinkPinterest = json['AboutUsLinkPinterest'] as String?
       ..aboutUsLinkRss = json['AboutUsLinkRss'] as String?
-      ..aboutUsPrivacyPolicyHtmlBody = json['AboutUsPrivacyPolicyHtmlBody'] as String?
+      ..aboutUsPrivacyPolicyHtmlBody =
+          json['AboutUsPrivacyPolicyHtmlBody'] as String?
       ..linkFileIdIconSrc = json['LinkFileIdIconSrc'] as String?
       ..linkFileIdLogoSrc = json['LinkFileIdLogoSrc'] as String?
       ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
@@ -221,11 +223,11 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'AboutUsDescription': instance.aboutUsDescription,
       'AboutUsTel': instance.aboutUsTel,
       'AboutUsMobile': instance.aboutUsMobile,
-      'AboutUsLinkImageIdSrc': instance.aboutUsLinkImageIdSrc,
       'AboutUsFax': instance.aboutUsFax,
       'AboutUsEmail': instance.aboutUsEmail,
       'AboutUsAddress': instance.aboutUsAddress,
       'AboutUsLinkImageId': instance.aboutUsLinkImageId,
+      'AboutUsLinkImageIdSrc': instance.aboutUsLinkImageIdSrc,
       'AboutUsGeolocationlatetitude': instance.aboutUsGeolocationlatetitude,
       'AboutUsGeolocationlongitude': instance.aboutUsGeolocationlongitude,
       'AboutUsLinkFacebook': instance.aboutUsLinkFacebook,

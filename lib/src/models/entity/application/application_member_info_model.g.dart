@@ -56,7 +56,8 @@ ApplicationMemberInfoModel _$ApplicationMemberInfoModelFromJson(
       ..geolocationlatitude = json['Geolocationlatitude'] as int?
       ..geolocationlongitude = json['Geolocationlongitude'] as int?
       ..linkLocationIdTitle = json['LinkLocationIdTitle'] as String?
-      ..linkLocationIdParentTitle = json['LinkLocationIdParentTitle'] as String?;
+      ..linkLocationIdParentTitle =
+          json['LinkLocationIdParentTitle'] as String?;
 
 Map<String, dynamic> _$ApplicationMemberInfoModelToJson(
         ApplicationMemberInfoModel instance) =>

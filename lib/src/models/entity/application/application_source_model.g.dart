@@ -57,7 +57,8 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
           ?.map((e) => ApplicationAppModel.fromJson(e as Map<String, dynamic>))
           .toList()
       ..sourceSiteCategores = (json['SourceSiteCategores'] as List<dynamic>?)
-          ?.map((e) => ApplicationSourceSiteCategoryModel.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => ApplicationSourceSiteCategoryModel.fromJson(
+              e as Map<String, dynamic>))
           .toList()
       ..fireBaseServerKey = json['FireBaseServerKey'] as String?
       ..extension = json['Extension'] as String?
@@ -82,8 +83,8 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
       ..buildKey5Value = json['BuildKey5Value'] as String?
       ..isPublish = json['IsPublish'] as bool?
       ..sourceNameGit = json['SourceNameGit'] as String?
-      ..oSType = $enumDecodeNullable(
-          _$EnumOperatingSystemTypeEnumMap, json['OSType'])
+      ..oSType =
+          $enumDecodeNullable(_$EnumOperatingSystemTypeEnumMap, json['OSType;'])
       ..updateSourceByGit = json['UpdateSourceByGit'] as bool?
       ..isAbilityGradleBuild = json['IsAbilityGradleBuild'] as bool?
       ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
@@ -149,7 +150,7 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
       'BuildKey5Value': instance.buildKey5Value,
       'IsPublish': instance.isPublish,
       'SourceNameGit': instance.sourceNameGit,
-      'OSType': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
+      'OSType;': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
       'UpdateSourceByGit': instance.updateSourceByGit,
       'IsAbilityGradleBuild': instance.isAbilityGradleBuild,
       'LinkMainImageIdSrc': instance.linkMainImageIdSrc,

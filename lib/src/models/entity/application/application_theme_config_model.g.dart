@@ -60,7 +60,7 @@ ApplicationThemeConfigModel _$ApplicationThemeConfigModelFromJson(
       ..applications = (json['Applications'] as List<dynamic>?)
           ?.map((e) => ApplicationAppModel.fromJson(e as Map<String, dynamic>))
           .toList()
-          ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationThemeConfigModelToJson(
         ApplicationThemeConfigModel instance) =>
@@ -81,6 +81,8 @@ Map<String, dynamic> _$ApplicationThemeConfigModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'LinkSiteId': instance.linkSiteId,
       'Title': instance.title,
+      'TitleML': instance.titleML,
+      'TitleResourceLanguage': instance.titleResourceLanguage,
       'TypeId': instance.typeId,
       'LinkMainImageId': instance.linkMainImageId,
       'LinkSourceId': instance.linkSourceId,
