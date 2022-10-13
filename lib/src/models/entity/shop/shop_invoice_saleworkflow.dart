@@ -6,15 +6,15 @@ part 'shop_invoice_saleworkflow.g.dart';
 
 @JsonSerializable()
 class ShopInvoiceSaleWorkFlow extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'IsDefault')
+  @JsonKey(name: 'isDefault')
   bool? isDefault;
-  @JsonKey(name: 'IsInPreInvoiceActivation')
+  @JsonKey(name: 'isInPreInvoiceActivation')
   bool? isInPreInvoiceActivation;
-  @JsonKey(name: 'IsInInvoiceClosedActivation')
+  @JsonKey(name: 'isInInvoiceClosedActivation')
   bool? isInInvoiceClosedActivation;
-  @JsonKey(name: 'LinkExternalModuleUniversalMenuId')
+  @JsonKey(name: 'linkExternalModuleUniversalMenuId')
   int? linkExternalModuleUniversalMenuId;
   ShopInvoiceSaleWorkFlow();
   factory ShopInvoiceSaleWorkFlow.fromJson(Map<String, dynamic> json) => _$ShopInvoiceSaleWorkFlowFromJson(json);

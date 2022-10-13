@@ -4,13 +4,13 @@ part 'drawer_child_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class DrawerChildThemeDtoModel {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   int? id;
-  @JsonKey(name: 'Type')
+  @JsonKey(name: 'type')
   int? type;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Icon')
+  @JsonKey(name: 'icon')
   String? icon;
 
   DrawerChildThemeDtoModel();

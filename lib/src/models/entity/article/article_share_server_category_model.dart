@@ -10,19 +10,19 @@ part 'article_share_server_category_model.g.dart';
 
 @JsonSerializable()
 class ArticleShareServerCategoryModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkShareMainAdminSettingId')
+  @JsonKey(name: 'linkShareMainAdminSettingId')
   int? linkShareMainAdminSettingId;
-  @JsonKey(name: 'Ttitle')
+  @JsonKey(name: 'ttitle')
   String? title;
-  @JsonKey(name: 'LinkServerCategoryId')
+  @JsonKey(name: 'linkServerCategoryId')
   int? linkServerCategoryId;
-  @JsonKey(name: 'ServerCategory')
+  @JsonKey(name: 'serverCategory')
   ArticleCategoryModel? serverCategory;
-  @JsonKey(name: 'ShareMainAdminSetting')
+  @JsonKey(name: 'shareMainAdminSetting')
   ArticleShareMainAdminSettingModel? shareMainAdminSetting;
-  @JsonKey(name: 'ShareReciverCategories')
+  @JsonKey(name: 'shareReciverCategories')
   List<ArticleShareReceiverCategoryModel>? shareReciverCategories;
 
   ArticleShareServerCategoryModel();

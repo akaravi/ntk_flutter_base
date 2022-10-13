@@ -9,18 +9,18 @@ part of 'auth_emailconfirm_dto_model.dart';
 AuthEmailConfirmDtoModel _$AuthEmailConfirmDtoModelFromJson(
         Map<String, dynamic> json) =>
     AuthEmailConfirmDtoModel()
-      ..captchaKey = json['CaptchaKey'] as String?
-      ..captchaText = json['CaptchaText'] as String?
-      ..linkUserId = json['LinkUserId'] as int?
-      ..mobile = json['Mobile'] as String?
-      ..code = json['Code'] as String?;
+      ..captchaKey = json['captchaKey'] as String?
+      ..captchaText = json['captchaText'] as String?
+      ..linkUserId = json['linkUserId'] as int?
+      ..mobile = json['mobile'] as String?
+      ..code = json['code'] as String?;
 
 Map<String, dynamic> _$AuthEmailConfirmDtoModelToJson(
         AuthEmailConfirmDtoModel instance) =>
     <String, dynamic>{
-      'CaptchaKey': instance.captchaKey,
-      'CaptchaText': instance.captchaText,
-      'LinkUserId': instance.linkUserId,
-      'Mobile': instance.mobile,
-      'Code': instance.code,
+      'captchaKey': instance.captchaKey,
+      'captchaText': instance.captchaText,
+      'linkUserId': instance.linkUserId,
+      'mobile': instance.mobile,
+      'code': instance.code,
     };

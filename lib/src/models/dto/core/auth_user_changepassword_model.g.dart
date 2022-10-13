@@ -9,12 +9,12 @@ part of 'auth_user_changepassword_model.dart';
 AuthUserChangePasswordModel _$AuthUserChangePasswordModelFromJson(
         Map<String, dynamic> json) =>
     AuthUserChangePasswordModel()
-      ..oldPassword = json['OldPassword'] as String?
-      ..newPassword = json['NewPassword'] as String?;
+      ..oldPassword = json['oldPassword'] as String?
+      ..newPassword = json['newPassword'] as String?;
 
 Map<String, dynamic> _$AuthUserChangePasswordModelToJson(
         AuthUserChangePasswordModel instance) =>
     <String, dynamic>{
-      'OldPassword': instance.oldPassword,
-      'NewPassword': instance.newPassword,
+      'oldPassword': instance.oldPassword,
+      'newPassword': instance.newPassword,
     };

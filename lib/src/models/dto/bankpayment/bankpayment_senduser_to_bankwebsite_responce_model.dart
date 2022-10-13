@@ -4,9 +4,9 @@ part 'bankpayment_senduser_to_bankwebsite_responce_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentSendUserToBankWebsiteResponceModel {
-  @JsonKey(name: 'OutHtml')
+  @JsonKey(name: 'outHtml')
   String? outHtml;
-  @JsonKey(name: 'LastUrlAddressInUse')
+  @JsonKey(name: 'lastUrlAddressInUse')
   String? lastUrlAddressInUse;
 
   BankPaymentSendUserToBankWebsiteResponceModel();

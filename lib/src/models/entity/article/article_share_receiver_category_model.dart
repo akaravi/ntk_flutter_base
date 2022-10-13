@@ -9,17 +9,17 @@ part 'article_share_receiver_category_model.g.dart';
 
 @JsonSerializable()
 class ArticleShareReceiverCategoryModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'FromDate')
+  @JsonKey(name: 'fromDate')
   DateTime? fromDate;
-  @JsonKey(name: 'LinkShareReciverCategoryId')
+  @JsonKey(name: 'linkShareReciverCategoryId')
   int? linkShareReciverCategoryId;
-  @JsonKey(name: 'LinkShareServerCategoryId')
+  @JsonKey(name: 'linkShareServerCategoryId')
   int? linkShareServerCategoryId;
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   DateTime? expireDate;
-  @JsonKey(name: 'ShareServerCategory')
+  @JsonKey(name: 'shareServerCategory')
   ArticleShareServerCategoryModel? shareServerCategory;
-  @JsonKey(name: 'ShareReciverCategory')
+  @JsonKey(name: 'shareReciverCategory')
   ArticleCategoryModel? shareReciverCategory;
 
   ArticleShareReceiverCategoryModel();

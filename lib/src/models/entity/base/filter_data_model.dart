@@ -1,28 +1,30 @@
+import 'package:base/src/models/entity/enums/enum_clause_type.dart';
+import 'package:base/src/models/entity/enums/enum_filter_datamodel_search_types.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'filter_data_model.g.dart';
 
 @JsonSerializable()
 class FilterDataModel {
-  @JsonKey(name: 'PropertyName')
+  @JsonKey(name: 'propertyName')
   String? propertyName;
-  @JsonKey(name: 'ClauseType')
-  int? clauseType;
-  @JsonKey(name: 'PropertyAnyName')
+  @JsonKey(name: 'clauseType')
+  EnumClauseType? clauseType;
+  @JsonKey(name: 'propertyAnyName')
   String? propertyAnyName;
-  @JsonKey(name: 'SearchType')
-  int? searchType;
-  @JsonKey(name: 'Filters')
+  @JsonKey(name: 'searchType')
+  EnumFilterDataModelSearchTypes? searchType;
+  @JsonKey(name: 'filters')
   List<FilterDataModel>? filters;
-  @JsonKey(name: 'Value')
+  @JsonKey(name: 'value')
   Object? value;
-  @JsonKey(name: 'Values')
+  @JsonKey(name: 'values')
   List<Object>? values;
-  @JsonKey(name: 'LatitudeValue')
+  @JsonKey(name: 'latitudeValue')
   int? latitudeValue;
-  @JsonKey(name: 'LongitudeValue')
+  @JsonKey(name: 'longitudeValue')
   int? longitudeValue;
-  @JsonKey(name: 'LatitudeLongitudeDistanceValue')
+  @JsonKey(name: 'latitudeLongitudeDistanceValue')
   int? latitudeLongitudeDistanceValue;
 
   FilterDataModel setPropertyName(String propertyName) {

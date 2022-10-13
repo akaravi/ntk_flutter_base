@@ -9,84 +9,85 @@ part of 'estate_account_user_model.dart';
 EstateAccountUserModel _$EstateAccountUserModelFromJson(
         Map<String, dynamic> json) =>
     EstateAccountUserModel()
-      ..id = json['Id'] as String?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as String?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkCmsUserId = json['LinkCmsUserId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..joinId = json['JoinId'] as String?
-      ..linkLocationId = json['LinkLocationId'] as int?
-      ..geolocationlatitude = (json['Geolocationlatitude'] as num?)?.toDouble()
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkCmsUserId = json['linkCmsUserId'] as int?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..joinId = json['joinId'] as String?
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
-          (json['Geolocationlongitude'] as num?)?.toDouble()
-      ..dateManufacture = json['DateManufacture'] as String?
-      ..placeProduction = json['PlaceProduction'] as String?
-      ..serialRfId = json['SerialRfId'] as String?
-      ..serialNumber = json['SerialNumber'] as String?
-      ..phoneNumber = json['PhoneNumber'] as String?
-      ..address = json['Address'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
-      ..linkLocationIdTitle = json['LinkLocationIdTitle'] as String?
+          (json['geolocationlongitude'] as num?)?.toDouble()
+      ..dateManufacture = json['dateManufacture'] as String?
+      ..placeProduction = json['placeProduction'] as String?
+      ..serialRfId = json['serialRfId'] as String?
+      ..serialNumber = json['serialNumber'] as String?
+      ..phoneNumber = json['phoneNumber'] as String?
+      ..address = json['address'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle =
-          json['LinkLocationIdParentTitle'] as String?;
+          json['linkLocationIdParentTitle'] as String?;
 
 Map<String, dynamic> _$EstateAccountUserModelToJson(
         EstateAccountUserModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkCmsUserId': instance.linkCmsUserId,
-      'Title': instance.title,
-      'Description': instance.description,
-      'JoinId': instance.joinId,
-      'LinkLocationId': instance.linkLocationId,
-      'Geolocationlatitude': instance.geolocationlatitude,
-      'Geolocationlongitude': instance.geolocationlongitude,
-      'DateManufacture': instance.dateManufacture,
-      'PlaceProduction': instance.placeProduction,
-      'SerialRfId': instance.serialRfId,
-      'SerialNumber': instance.serialNumber,
-      'PhoneNumber': instance.phoneNumber,
-      'Address': instance.address,
-      'LinkMainImageId': instance.linkMainImageId,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
-      'LinkLocationIdTitle': instance.linkLocationIdTitle,
-      'LinkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'linkSiteId': instance.linkSiteId,
+      'linkCmsUserId': instance.linkCmsUserId,
+      'title': instance.title,
+      'description': instance.description,
+      'joinId': instance.joinId,
+      'linkLocationId': instance.linkLocationId,
+      'geolocationlatitude': instance.geolocationlatitude,
+      'geolocationlongitude': instance.geolocationlongitude,
+      'dateManufacture': instance.dateManufacture,
+      'placeProduction': instance.placeProduction,
+      'serialRfId': instance.serialRfId,
+      'serialNumber': instance.serialNumber,
+      'phoneNumber': instance.phoneNumber,
+      'address': instance.address,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
     };
 
 const _$EnumRecordStatusEnumMap = {

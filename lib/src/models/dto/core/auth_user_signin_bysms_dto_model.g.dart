@@ -9,22 +9,22 @@ part of 'auth_user_signin_bysms_dto_model.dart';
 AuthUserSignInBySmsDtoModel _$AuthUserSignInBySmsDtoModelFromJson(
         Map<String, dynamic> json) =>
     AuthUserSignInBySmsDtoModel()
-      ..captchaKey = json['CaptchaKey'] as String?
-      ..captchaText = json['CaptchaText'] as String?
-      ..mobile = json['Mobile'] as String?
-      ..code = json['Code'] as String?
-      ..isRemember = json['IsRemember'] as bool?
-      ..siteId = json['SiteId'] as int?
-      ..lang = json['Lang'] as String?;
+      ..captchaKey = json['captchaKey'] as String?
+      ..captchaText = json['captchaText'] as String?
+      ..mobile = json['mobile'] as String?
+      ..code = json['code'] as String?
+      ..isRemember = json['isRemember'] as bool?
+      ..siteId = json['siteId'] as int?
+      ..lang = json['lang'] as String?;
 
 Map<String, dynamic> _$AuthUserSignInBySmsDtoModelToJson(
         AuthUserSignInBySmsDtoModel instance) =>
     <String, dynamic>{
-      'CaptchaKey': instance.captchaKey,
-      'CaptchaText': instance.captchaText,
-      'Mobile': instance.mobile,
-      'Code': instance.code,
-      'IsRemember': instance.isRemember,
-      'SiteId': instance.siteId,
-      'Lang': instance.lang,
+      'captchaKey': instance.captchaKey,
+      'captchaText': instance.captchaText,
+      'mobile': instance.mobile,
+      'code': instance.code,
+      'isRemember': instance.isRemember,
+      'siteId': instance.siteId,
+      'lang': instance.lang,
     };

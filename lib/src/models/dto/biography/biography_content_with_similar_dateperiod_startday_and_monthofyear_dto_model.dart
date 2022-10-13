@@ -4,11 +4,11 @@ part 'biography_content_with_similar_dateperiod_startday_and_monthofyear_dto_mod
 
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel {
-  @JsonKey(name: 'TagIds')
+  @JsonKey(name: 'tagIds')
   List<int>? tagIds;
-  @JsonKey(name: 'MonthOfYear')
+  @JsonKey(name: 'monthOfYear')
   int? monthOfYear;
-  @JsonKey(name: 'DayOfMonth')
+  @JsonKey(name: 'dayOfMonth')
   int? dayOfMonth;
 
   BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel();

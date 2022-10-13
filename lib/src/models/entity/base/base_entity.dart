@@ -5,30 +5,30 @@ part 'base_entity.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class BaseEntity<TKey> {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   TKey? id;
-  @JsonKey(name: 'CreatedDate')
+  @JsonKey(name: 'createdDate')
   DateTime? createdDate;
-  @JsonKey(name: 'CreatedBy')
+  @JsonKey(name: 'createdBy')
   int? createdBy;
-  @JsonKey(name: 'UpdatedDate')
+  @JsonKey(name: 'updatedDate')
   DateTime? updatedDate;
-  @JsonKey(name: 'UpdatedBy')
+  @JsonKey(name: 'updatedBy')
   int? updatedBy;
-  @JsonKey(name: 'RecordStatus')
+  @JsonKey(name: 'recordStatus')
   EnumRecordStatus? recordStatus;
-  @JsonKey(name: 'RecordStatusText')
-  String? recordStatusText;
-  @JsonKey(name: 'AntiInjectionGuid')
+  @JsonKey(name: 'antiInjectionRun')
+  bool? antiInjectionRun;
+  @JsonKey(name: 'antiInjectionGuid')
   String? antiInjectionGuid;
-  @JsonKey(name: 'AntiInjectionDate')
+  @JsonKey(name: 'antiInjectionDate')
   DateTime? antiInjectionDate;
-  @JsonKey(name: 'CreateAntiInjectionValue')
-  bool? createAntiInjectionValue;
-  @JsonKey(name: 'AntiInjectionExpiredMinute')
+  @JsonKey(name: 'antiInjectionTokenActionState')
+  bool? antiInjectionTokenActionState;
+  @JsonKey(name: 'antiInjectionExpiredMinute')
   int? antiInjectionExpiredMinute;
-  @JsonKey(name: 'AntiInjectionToken')
+  @JsonKey(name: 'antiInjectionToken')
   String? antiInjectionToken;
-  @JsonKey(name: 'AntiInjectionExpireDate')
+  @JsonKey(name: 'antiInjectionExpireDate')
   DateTime? antiInjectionExpireDate;
 }

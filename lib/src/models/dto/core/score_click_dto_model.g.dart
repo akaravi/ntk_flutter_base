@@ -8,11 +8,11 @@ part of 'score_click_dto_model.dart';
 
 ScoreClickDtoModel _$ScoreClickDtoModelFromJson(Map<String, dynamic> json) =>
     ScoreClickDtoModel()
-      ..id = json['Id'] as int?
-      ..scorePercent = json['ScorePercent'] as int?;
+      ..id = json['id'] as int?
+      ..scorePercent = json['scorePercent'] as int?;
 
 Map<String, dynamic> _$ScoreClickDtoModelToJson(ScoreClickDtoModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'ScorePercent': instance.scorePercent,
+      'id': instance.id,
+      'scorePercent': instance.scorePercent,
     };

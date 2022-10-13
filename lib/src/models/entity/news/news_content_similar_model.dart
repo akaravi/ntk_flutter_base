@@ -4,19 +4,19 @@ part 'news_content_similar_model.g.dart';
 
 @JsonSerializable()
 class NewsContentSimilarModel {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'LinkSourceid')
+  @JsonKey(name: 'linkSourceid')
   String? linkSourceId;
-  @JsonKey(name: 'LinkDestinationid')
+  @JsonKey(name: 'linkDestinationid')
   String? linkDestinationiId;
   @JsonKey(name: 'virtual_Source')
   String? virtual_Source;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
   @JsonKey(name: 'virtual_Destination')
   String? virtual_Destination;
-  @JsonKey(name: 'Destination')
+  @JsonKey(name: 'destination')
   String? destination;
 
   NewsContentSimilarModel();

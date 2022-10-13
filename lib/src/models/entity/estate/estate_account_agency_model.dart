@@ -7,33 +7,33 @@ part 'estate_account_agency_model.g.dart';
 
 @JsonSerializable()
 class EstateAccountAgencyModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'MainAdminRecordStatus')
+  @JsonKey(name: 'mainAdminRecordStatus')
   EnumRecordStatus? mainAdminRecordStatus;
-  @JsonKey(name: 'LinkCmsUserId')
+  @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkLocationId')
+  @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
 
-  @JsonKey(name: 'Address')
+  @JsonKey(name: 'address')
   String? address;
-  @JsonKey(name: 'PhoneNumber')
+  @JsonKey(name: 'phoneNumber')
   String? phoneNumber;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
 
-  @JsonKey(name: 'LinkExtraImageIds')
+  @JsonKey(name: 'linkExtraImageIds')
   String? linkExtraImageIds;
-  @JsonKey(name: 'LinkExtraImageIdsSrc')
+  @JsonKey(name: 'linkExtraImageIdsSrc')
   List<String>? linkExtraImageIdsSrc;EstateAccountAgencyModel();
   factory EstateAccountAgencyModel.fromJson(Map<String, dynamic> json) => _$EstateAccountAgencyModelFromJson(json);
 

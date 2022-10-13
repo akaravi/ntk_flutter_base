@@ -10,25 +10,25 @@ part 'core_device_model.g.dart';
 class CoreDeviceModel extends BaseEntity<int> {
   @JsonKey(name: 'securityKey')
   String? securityKey;
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   String? expireDate;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'OSType')
+  @JsonKey(name: 'oSType')
   int? oSType; //as EnumOperatingSystemType
-  @JsonKey(name: 'DeviceType')
+  @JsonKey(name: 'deviceType')
   EnumDeviceType? deviceType; //as EnumDeviceType
-  @JsonKey(name: 'PackageName')
+  @JsonKey(name: 'packageName')
   String? packageName;
-  @JsonKey(name: 'DeviceIPsAllow')
+  @JsonKey(name: 'deviceIPsAllow')
   String? deviceIPsAllow;
-  @JsonKey(name: 'LinkApplicationId')
+  @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
-  @JsonKey(name: 'LinkSiteId')
+  @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
   @JsonKey(name: 'virtual_CmsSite')
   CoreSiteModel? virtual_CmsSite;
-  @JsonKey(name: 'CmsSite')
+  @JsonKey(name: 'cmsSite')
   CoreSiteModel? cmsSite;
   CoreDeviceModel();
   factory CoreDeviceModel.fromJson(Map<String, dynamic> json) =>

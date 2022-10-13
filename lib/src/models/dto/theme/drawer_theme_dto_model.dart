@@ -6,16 +6,16 @@ part 'drawer_theme_dto_model.g,dart';
 
 @JsonSerializable()
 class DrawerThemeDtoModel {
-  @JsonKey(name: 'Type')
+  @JsonKey(name: 'type')
   int? type;
 
-  @JsonKey(name: 'HeaderImage')
+  @JsonKey(name: 'headerImage')
   String? headerImage;
 
-  @JsonKey(name: 'CircleImage')
+  @JsonKey(name: 'circleImage')
   String? circleImage;
 
-  @JsonKey(name: 'DrawerChilds')
+  @JsonKey(name: 'drawerChilds')
   List<DrawerChildThemeDtoModel>? drawerChilds;
 
   DrawerThemeDtoModel();

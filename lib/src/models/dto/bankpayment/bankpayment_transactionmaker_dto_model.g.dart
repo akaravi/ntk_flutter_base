@@ -9,16 +9,16 @@ part of 'bankpayment_transactionmaker_dto_model.dart';
 BankPaymentTransactionMakerDtoModel
     _$BankPaymentTransactionMakerDtoModelFromJson(Map<String, dynamic> json) =>
         BankPaymentTransactionMakerDtoModel()
-          ..paymentPrivateId = json['PaymentPrivateId'] as int?
-          ..price = json['Price'] as int?
-          ..cartId = json['CartId'] as int?
-          ..lastUrlAddressInUse = json['LastUrlAddressInUse'] as String?;
+          ..paymentPrivateId = json['paymentPrivateId'] as int?
+          ..price = json['price'] as int?
+          ..cartId = json['cartId'] as int?
+          ..lastUrlAddressInUse = json['lastUrlAddressInUse'] as String?;
 
 Map<String, dynamic> _$BankPaymentTransactionMakerDtoModelToJson(
         BankPaymentTransactionMakerDtoModel instance) =>
     <String, dynamic>{
-      'PaymentPrivateId': instance.paymentPrivateId,
-      'Price': instance.price,
-      'CartId': instance.cartId,
-      'LastUrlAddressInUse': instance.lastUrlAddressInUse,
+      'paymentPrivateId': instance.paymentPrivateId,
+      'price': instance.price,
+      'cartId': instance.cartId,
+      'lastUrlAddressInUse': instance.lastUrlAddressInUse,
     };

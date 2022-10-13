@@ -8,47 +8,47 @@ part of 'core_cpmain_menu_model.dart';
 
 CoreCpMainMenuModel _$CoreCpMainMenuModelFromJson(Map<String, dynamic> json) =>
     CoreCpMainMenuModel()
-      ..title = json['Title'] as String?
-      ..titleML = json['TitleML'] as String?
-      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
-      ..color = json['Color'] as String?
-      ..titleEn = json['TitleEn'] as String?
-      ..icon = json['Icon'] as String?
-      ..addressLink = json['AddressLink'] as String?
-      ..routeAddressLink = json['RouteAddressLink'] as String?
-      ..linkParentId = json['LinkParentId'] as int?
-      ..linkModuleId = json['LinkModuleId'] as int?
-      ..description = json['Description'] as String?
-      ..showInMenu = json['ShowInMenu'] as int?
-      ..showInMenuOrder = json['ShowInMenuOrder'] as int?
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..color = json['color'] as String?
+      ..titleEn = json['titleEn'] as String?
+      ..icon = json['icon'] as String?
+      ..addressLink = json['addressLink'] as String?
+      ..routeAddressLink = json['routeAddressLink'] as String?
+      ..linkParentId = json['linkParentId'] as int?
+      ..linkModuleId = json['linkModuleId'] as int?
+      ..description = json['description'] as String?
+      ..showInMenu = json['showInMenu'] as int?
+      ..showInMenuOrder = json['showInMenuOrder'] as int?
       ..showInAccessAdminAllowToProfessionalData =
-          json['ShowInAccessAdminAllowToProfessionalData'] as bool?
+          json['showInAccessAdminAllowToProfessionalData'] as bool?
       ..menuPlaceType =
-          $enumDecodeNullable(_$EnumMenuPlaceTypeEnumMap, json['MenuPlaceType'])
-      ..children = (json['Children'] as List<dynamic>?)
+          $enumDecodeNullable(_$EnumMenuPlaceTypeEnumMap, json['menuPlaceType'])
+      ..children = (json['children'] as List<dynamic>?)
           ?.map((e) => CoreCpMainMenuModel.fromJson(e as Map<String, dynamic>))
           .toList();
 
 Map<String, dynamic> _$CoreCpMainMenuModelToJson(
         CoreCpMainMenuModel instance) =>
     <String, dynamic>{
-      'Title': instance.title,
-      'TitleML': instance.titleML,
-      'TitleResourceLanguage': instance.titleResourceLanguage,
-      'Color': instance.color,
-      'TitleEn': instance.titleEn,
-      'Icon': instance.icon,
-      'AddressLink': instance.addressLink,
-      'RouteAddressLink': instance.routeAddressLink,
-      'LinkParentId': instance.linkParentId,
-      'LinkModuleId': instance.linkModuleId,
-      'Description': instance.description,
-      'ShowInMenu': instance.showInMenu,
-      'ShowInMenuOrder': instance.showInMenuOrder,
-      'ShowInAccessAdminAllowToProfessionalData':
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'color': instance.color,
+      'titleEn': instance.titleEn,
+      'icon': instance.icon,
+      'addressLink': instance.addressLink,
+      'routeAddressLink': instance.routeAddressLink,
+      'linkParentId': instance.linkParentId,
+      'linkModuleId': instance.linkModuleId,
+      'description': instance.description,
+      'showInMenu': instance.showInMenu,
+      'showInMenuOrder': instance.showInMenuOrder,
+      'showInAccessAdminAllowToProfessionalData':
           instance.showInAccessAdminAllowToProfessionalData,
-      'MenuPlaceType': _$EnumMenuPlaceTypeEnumMap[instance.menuPlaceType],
-      'Children': instance.children,
+      'menuPlaceType': _$EnumMenuPlaceTypeEnumMap[instance.menuPlaceType],
+      'children': instance.children,
     };
 
 const _$EnumMenuPlaceTypeEnumMap = {

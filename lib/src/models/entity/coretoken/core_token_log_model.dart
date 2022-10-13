@@ -9,35 +9,35 @@ part 'core_token_log_model.g.dart';
 
 @JsonSerializable()
 class CoreTokenLogModel extends BaseEntity<String> {
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkUserId')
+  @JsonKey(name: 'linkUserId')
   int? linkUserId;
-  @JsonKey(name: 'LinkMemberUserId')
+  @JsonKey(name: 'linkMemberUserId')
   int? linkMemberUserId;
-  @JsonKey(name: 'LinkSiteId')
+  @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
-  @JsonKey(name: 'DeviceClientMAC')
+  @JsonKey(name: 'deviceClientMAC')
   String? deviceClientMAC;
-  @JsonKey(name: 'LinkDeviceId')
+  @JsonKey(name: 'linkDeviceId')
   int? linkDeviceId;
-  @JsonKey(name: 'Token')
+  @JsonKey(name: 'token')
   String? token;
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   String? expireDate;
-  @JsonKey(name: 'UserAccessAreaType')
+  @JsonKey(name: 'userAccessAreaType')
   EnumManageUserAccessAreaTypes? userAccessAreaType;
-  @JsonKey(name: 'UserType')
+  @JsonKey(name: 'userType')
   EnumManageUserAccessUserTypes? userType;
-  @JsonKey(name: 'UserAccessAdminAllowToAllData')
+  @JsonKey(name: 'userAccessAdminAllowToAllData')
   bool? userAccessAdminAllowToAllData;
-  @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
+  @JsonKey(name: 'userAccessAdminAllowToProfessionalData')
   bool? userAccessAdminAllowToProfessionalData;
-  @JsonKey(name: 'RememberOnDevice')
+  @JsonKey(name: 'rememberOnDevice')
   bool? rememberOnDevice;
-  @JsonKey(name: 'BrowserLanguage')
+  @JsonKey(name: 'browserLanguage')
   String? browserLanguage;
-  @JsonKey(name: 'UserLanguage')
+  @JsonKey(name: 'userLanguage')
   int? userLanguage;CoreTokenLogModel();
   factory CoreTokenLogModel.fromJson(Map<String, dynamic> json) => _$CoreTokenLogModelFromJson(json);
 

@@ -10,23 +10,23 @@ part 'core_user_group_model.g.dart';
 
 @JsonSerializable()
 class CoreUserGroupModel extends BaseEntity<int> {
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'UserType')
+  @JsonKey(name: 'userType')
   EnumManageUserAccessUserTypes? userType;
-  @JsonKey(name: 'UserTypeTitle')
+  @JsonKey(name: 'userTypeTitle')
   String? userTypeTitle;
-  @JsonKey(name: 'UserTypeDescription')
+  @JsonKey(name: 'userTypeDescription')
   String? userTypeDescription;
-  @JsonKey(name: 'CmsSiteUsers')
+  @JsonKey(name: 'cmsSiteUsers')
   List<CoreSiteUserModel>? cmsSiteUsers;
-  @JsonKey(name: 'CmsCpMainMenuCmsUserGroup')
+  @JsonKey(name: 'cmsCpMainMenuCmsUserGroup')
   List<CoreCpMainMenuCmsUserGroupModel>? cmsCpMainMenuCmsUserGroup;
   CoreUserGroupModel();
   factory CoreUserGroupModel.fromJson(Map<String, dynamic> json) =>

@@ -8,15 +8,15 @@ part of 'theme_dto_model.dart';
 
 ThemeDtoModel _$ThemeDtoModelFromJson(Map<String, dynamic> json) =>
     ThemeDtoModel()
-      ..toolbar = json['Toolbar'] == null
+      ..toolbar = json['toolbar'] == null
           ? null
-          : ToolbarDtoModel.fromJson(json['Toolbar'] as Map<String, dynamic>)
-      ..childs = (json['ThemeConfigLayout'] as List<dynamic>?)
+          : ToolbarDtoModel.fromJson(json['toolbar'] as Map<String, dynamic>)
+      ..childs = (json['themeConfigLayout'] as List<dynamic>?)
           ?.map((e) => ThemeChildDtoModel.fromJson(e as Map<String, dynamic>))
           .toList();
 
 Map<String, dynamic> _$ThemeDtoModelToJson(ThemeDtoModel instance) =>
     <String, dynamic>{
-      'Toolbar': instance.toolbar,
-      'ThemeConfigLayout': instance.childs,
+      'toolbar': instance.toolbar,
+      'themeConfigLayout': instance.childs,
     };

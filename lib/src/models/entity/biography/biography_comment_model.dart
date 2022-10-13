@@ -8,23 +8,23 @@ part 'biography_comment_model.g.dart';
 
 @JsonSerializable()
 class BiographyCommentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   int? linkParentId;
-  @JsonKey(name: 'Writer')
+  @JsonKey(name: 'writer')
   String? writer;
-  @JsonKey(name: 'Comment')
+  @JsonKey(name: 'comment')
   String? comment;
-  @JsonKey(name: 'RegisterDate')
-  String? registerDate;
-  @JsonKey(name: 'SumLikeClick')
+  @JsonKey(name: 'registerDate')
+  DateTime? registerDate;
+  @JsonKey(name: 'sumLikeClick')
   int? sumLikeClick;
-  @JsonKey(name: 'SumDisLikeClick')
+  @JsonKey(name: 'sumDisLikeClick')
   int? sumDisLikeClick;
   @JsonKey(name: 'virtual_Content')
   BiographyContentModel? virtual_Content;
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   BiographyContentModel? content;
 
   BiographyCommentModel();

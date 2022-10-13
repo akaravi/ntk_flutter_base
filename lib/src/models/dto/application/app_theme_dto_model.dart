@@ -6,16 +6,16 @@ part 'app_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class AppThemeDtoModel {
-  @JsonKey(name: 'AppThemeId')
+  @JsonKey(name: 'appThemeId')
   int? appThemeId;
 
-  @JsonKey(name: 'AppThemeTypeId')
+  @JsonKey(name: 'appThemeTypeId')
   String? appThemeTypeId;
 
-  @JsonKey(name: 'ThemeConfigLayout')
+  @JsonKey(name: 'themeConfigLayout')
   List<ThemeConfigDtoModel>? themeConfigLayout;
 
-  @JsonKey(name: 'ThemeConfigJson')
+  @JsonKey(name: 'themeConfigJson')
   ThemeDtoModel? themeConfigJson;
 
   AppThemeDtoModel();

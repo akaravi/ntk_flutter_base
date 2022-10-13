@@ -7,9 +7,9 @@ part 'estate_property_share_site_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyShareSiteModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'LinkCmsSiteId')
+  @JsonKey(name: 'linkCmsSiteId')
   int? linkCmsSiteId;
-  @JsonKey(name: 'LinkEstatePropertyId')
+  @JsonKey(name: 'linkEstatePropertyId')
   String? linkEstatePropertyId;EstatePropertyShareSiteModel();
   factory EstatePropertyShareSiteModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyShareSiteModelFromJson(json);
 

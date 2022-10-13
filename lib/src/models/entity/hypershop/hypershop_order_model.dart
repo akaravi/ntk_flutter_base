@@ -10,46 +10,46 @@ part 'hypershop_order_model.g.dart';
 @JsonSerializable()
 class HyperShopOrderModel extends BaseModuleEntity<int> {
   int? orderType;
-  @JsonKey(name: 'PaymentType')
+  @JsonKey(name: 'paymentType')
   int? paymentType; //as
-  @JsonKey(name: 'SystemTransactionId')
+  @JsonKey(name: 'systemTransactionId')
   int? systemTransactionId;
-  @JsonKey(name: 'SystemPaymentIsSuccess')
+  @JsonKey(name: 'systemPaymentIsSuccess')
   int? systemPaymentIsSuccess;
-  @JsonKey(name: 'SystemMicroServiceOrderId')
+  @JsonKey(name: 'systemMicroServiceOrderId')
   String? systemMicroServiceOrderId;
-  @JsonKey(name: 'SystemMicroServiceAccept')
+  @JsonKey(name: 'systemMicroServiceAccept')
   bool? systemMicroServiceAccept;
-  @JsonKey(name: 'SystemMicroServiceId')
+  @JsonKey(name: 'systemMicroServiceId')
   String? systemMicroServiceId;
-  @JsonKey(name: 'SystemMicroServiceIsSuccess')
+  @JsonKey(name: 'systemMicroServiceIsSuccess')
   bool? systemMicroServiceIsSuccess;
-  @JsonKey(name: 'SystemMicroServiceErrorMessage')
+  @JsonKey(name: 'systemMicroServiceErrorMessage')
   String? systemMicroServiceErrorMessage;
-  @JsonKey(name: 'Name')
+  @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'Family')
+  @JsonKey(name: 'family')
   String? family;
-  @JsonKey(name: 'Mobile')
+  @JsonKey(name: 'mobile')
   String? mobile;
-  @JsonKey(name: 'Address')
+  @JsonKey(name: 'address')
   String? address;
 
-  @JsonKey(name: 'Products')
+  @JsonKey(name: 'products')
   List<HyperShopOrderContentModel>? products;
-  @JsonKey(name: 'Amount')
+  @JsonKey(name: 'amount')
   double? amount;
-  @JsonKey(name: 'FeeTax')
+  @JsonKey(name: 'feeTax')
   double? feeTax;
-  @JsonKey(name: 'FeeTransport')
+  @JsonKey(name: 'feeTransport')
   double? feeTransport;
-  @JsonKey(name: 'AmountPure')
+  @JsonKey(name: 'amountPure')
   double? amountPure;
-  @JsonKey(name: 'DelivaryPrice')
+  @JsonKey(name: 'delivaryPrice')
   double? delivaryPrice;
-  @JsonKey(name: 'GeoLocationLatitude')
+  @JsonKey(name: 'geoLocationLatitude')
   String? geoLocationLatitude;
-  @JsonKey(name: 'GeoLocationLongitude')
+  @JsonKey(name: 'geoLocationLongitude')
   String? geoLocationLongitude;HyperShopOrderModel();
   factory HyperShopOrderModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderModelFromJson(json);
 

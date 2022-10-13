@@ -4,14 +4,14 @@ part 'item_state.g.dart';
 
 @JsonSerializable()
 class ItemState<TcClass> {
-  // @JsonKey(name: 'Item')
-  // TcClass? item;
-  @JsonKey(name: 'ActionStart')
+  @JsonKey(name: 'item')
+  TcClass? item;
+  @JsonKey(name: 'actionStart')
   bool actionStart = false;
-  @JsonKey(name: 'ActionEnd')
+  @JsonKey(name: 'actionEnd')
   bool actionEnd = false;
-  @JsonKey(name: 'Status')
+  @JsonKey(name: 'status')
   String? status;
-  @JsonKey(name: 'Message')
+  @JsonKey(name: 'message')
   String? message;
 }

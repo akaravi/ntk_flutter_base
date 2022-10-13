@@ -8,95 +8,96 @@ part of 'hypershop_order_model.dart';
 
 HyperShopOrderModel _$HyperShopOrderModelFromJson(Map<String, dynamic> json) =>
     HyperShopOrderModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
       ..orderType = json['orderType'] as int?
-      ..paymentType = json['PaymentType'] as int?
-      ..systemTransactionId = json['SystemTransactionId'] as int?
-      ..systemPaymentIsSuccess = json['SystemPaymentIsSuccess'] as int?
-      ..systemMicroServiceOrderId = json['SystemMicroServiceOrderId'] as String?
-      ..systemMicroServiceAccept = json['SystemMicroServiceAccept'] as bool?
-      ..systemMicroServiceId = json['SystemMicroServiceId'] as String?
+      ..paymentType = json['paymentType'] as int?
+      ..systemTransactionId = json['systemTransactionId'] as int?
+      ..systemPaymentIsSuccess = json['systemPaymentIsSuccess'] as int?
+      ..systemMicroServiceOrderId = json['systemMicroServiceOrderId'] as String?
+      ..systemMicroServiceAccept = json['systemMicroServiceAccept'] as bool?
+      ..systemMicroServiceId = json['systemMicroServiceId'] as String?
       ..systemMicroServiceIsSuccess =
-          json['SystemMicroServiceIsSuccess'] as bool?
+          json['systemMicroServiceIsSuccess'] as bool?
       ..systemMicroServiceErrorMessage =
-          json['SystemMicroServiceErrorMessage'] as String?
-      ..name = json['Name'] as String?
-      ..family = json['Family'] as String?
-      ..mobile = json['Mobile'] as String?
-      ..address = json['Address'] as String?
-      ..products = (json['Products'] as List<dynamic>?)
+          json['systemMicroServiceErrorMessage'] as String?
+      ..name = json['name'] as String?
+      ..family = json['family'] as String?
+      ..mobile = json['mobile'] as String?
+      ..address = json['address'] as String?
+      ..products = (json['products'] as List<dynamic>?)
           ?.map((e) =>
               HyperShopOrderContentModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..amount = (json['Amount'] as num?)?.toDouble()
-      ..feeTax = (json['FeeTax'] as num?)?.toDouble()
-      ..feeTransport = (json['FeeTransport'] as num?)?.toDouble()
-      ..amountPure = (json['AmountPure'] as num?)?.toDouble()
-      ..delivaryPrice = (json['DelivaryPrice'] as num?)?.toDouble()
-      ..geoLocationLatitude = json['GeoLocationLatitude'] as String?
-      ..geoLocationLongitude = json['GeoLocationLongitude'] as String?;
+      ..amount = (json['amount'] as num?)?.toDouble()
+      ..feeTax = (json['feeTax'] as num?)?.toDouble()
+      ..feeTransport = (json['feeTransport'] as num?)?.toDouble()
+      ..amountPure = (json['amountPure'] as num?)?.toDouble()
+      ..delivaryPrice = (json['delivaryPrice'] as num?)?.toDouble()
+      ..geoLocationLatitude = json['geoLocationLatitude'] as String?
+      ..geoLocationLongitude = json['geoLocationLongitude'] as String?;
 
 Map<String, dynamic> _$HyperShopOrderModelToJson(
         HyperShopOrderModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
+      'linkSiteId': instance.linkSiteId,
       'orderType': instance.orderType,
-      'PaymentType': instance.paymentType,
-      'SystemTransactionId': instance.systemTransactionId,
-      'SystemPaymentIsSuccess': instance.systemPaymentIsSuccess,
-      'SystemMicroServiceOrderId': instance.systemMicroServiceOrderId,
-      'SystemMicroServiceAccept': instance.systemMicroServiceAccept,
-      'SystemMicroServiceId': instance.systemMicroServiceId,
-      'SystemMicroServiceIsSuccess': instance.systemMicroServiceIsSuccess,
-      'SystemMicroServiceErrorMessage': instance.systemMicroServiceErrorMessage,
-      'Name': instance.name,
-      'Family': instance.family,
-      'Mobile': instance.mobile,
-      'Address': instance.address,
-      'Products': instance.products,
-      'Amount': instance.amount,
-      'FeeTax': instance.feeTax,
-      'FeeTransport': instance.feeTransport,
-      'AmountPure': instance.amountPure,
-      'DelivaryPrice': instance.delivaryPrice,
-      'GeoLocationLatitude': instance.geoLocationLatitude,
-      'GeoLocationLongitude': instance.geoLocationLongitude,
+      'paymentType': instance.paymentType,
+      'systemTransactionId': instance.systemTransactionId,
+      'systemPaymentIsSuccess': instance.systemPaymentIsSuccess,
+      'systemMicroServiceOrderId': instance.systemMicroServiceOrderId,
+      'systemMicroServiceAccept': instance.systemMicroServiceAccept,
+      'systemMicroServiceId': instance.systemMicroServiceId,
+      'systemMicroServiceIsSuccess': instance.systemMicroServiceIsSuccess,
+      'systemMicroServiceErrorMessage': instance.systemMicroServiceErrorMessage,
+      'name': instance.name,
+      'family': instance.family,
+      'mobile': instance.mobile,
+      'address': instance.address,
+      'products': instance.products,
+      'amount': instance.amount,
+      'feeTax': instance.feeTax,
+      'feeTransport': instance.feeTransport,
+      'amountPure': instance.amountPure,
+      'delivaryPrice': instance.delivaryPrice,
+      'geoLocationLatitude': instance.geoLocationLatitude,
+      'geoLocationLongitude': instance.geoLocationLongitude,
     };
 
 const _$EnumRecordStatusEnumMap = {

@@ -9,151 +9,152 @@ part of 'application_source_model.dart';
 ApplicationSourceModel _$ApplicationSourceModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationSourceModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..titleML = json['TitleML'] as String?
-      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..defaultAppId = json['DefaultAppId'] as int?
-      ..className = json['ClassName'] as String?
-      ..packageName = json['PackageName'] as String?
-      ..forceUpdate = json['ForceUpdate'] as bool?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..defaultAppId = json['defaultAppId'] as int?
+      ..className = json['className'] as String?
+      ..packageName = json['packageName'] as String?
+      ..forceUpdate = json['forceUpdate'] as bool?
       ..linkLastSuccessfullyBuildFileId =
-          json['LinkLastSuccessfullyBuildFileId'] as int?
-      ..lastSuccessfullyBuildDate = json['LastSuccessfullyBuildDate'] as String?
-      ..lastBuildCommandDate = json['LastBuildCommandDate'] as String?
-      ..lastBuildCommandBy = json['LastBuildCommandBy'] as String?
+          json['linkLastSuccessfullyBuildFileId'] as int?
+      ..lastSuccessfullyBuildDate = json['lastSuccessfullyBuildDate'] as String?
+      ..lastBuildCommandDate = json['lastBuildCommandDate'] as String?
+      ..lastBuildCommandBy = json['lastBuildCommandBy'] as String?
       ..lastUnsuccessfullyBuildErrorDate =
-          json['LastUnsuccessfullyBuildErrorDate'] as String?
+          json['lastUnsuccessfullyBuildErrorDate'] as String?
       ..lastUnsuccessfullyBuildErrorMessage =
-          json['LastUnsuccessfullyBuildErrorMessage'] as String?
-      ..layouts = (json['Layouts'] as List<dynamic>?)
+          json['lastUnsuccessfullyBuildErrorMessage'] as String?
+      ..layouts = (json['layouts'] as List<dynamic>?)
           ?.map(
               (e) => ApplicationLayoutModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..applications = (json['Applications'] as List<dynamic>?)
+      ..applications = (json['applications'] as List<dynamic>?)
           ?.map((e) => ApplicationAppModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..sourceSiteCategores = (json['SourceSiteCategores'] as List<dynamic>?)
+      ..sourceSiteCategores = (json['sourceSiteCategores'] as List<dynamic>?)
           ?.map((e) => ApplicationSourceSiteCategoryModel.fromJson(
               e as Map<String, dynamic>))
           .toList()
-      ..fireBaseServerKey = json['FireBaseServerKey'] as String?
-      ..extension = json['Extension'] as String?
-      ..extensionUpdateFile = json['ExtensionUpdateFile'] as String?
+      ..fireBaseServerKey = json['fireBaseServerKey'] as String?
+      ..extension = json['extension'] as String?
+      ..extensionUpdateFile = json['extensionUpdateFile'] as String?
       ..defaultConfigBuilderAdminJsonValues =
-          json['DefaultConfigBuilderAdminJsonValues'] as String?
+          json['defaultConfigBuilderAdminJsonValues'] as String?
       ..defaultConfigRuntimeAdminJsonValues =
-          json['DefaultConfigRuntimeAdminJsonValues'] as String?
+          json['defaultConfigRuntimeAdminJsonValues'] as String?
       ..defaultConfigBuilderSiteJsonValues =
-          json['DefaultConfigBuilderSiteJsonValues'] as String?
+          json['defaultConfigBuilderSiteJsonValues'] as String?
       ..defaultConfigRuntimeSiteJsonValues =
-          json['DefaultConfigRuntimeSiteJsonValues'] as String?
-      ..buildKey1String = json['BuildKey1String'] as String?
-      ..buildKey1Value = json['BuildKey1Value'] as String?
-      ..buildKey2String = json['BuildKey2String'] as String?
-      ..buildKey2Value = json['BuildKey2Value'] as String?
-      ..buildKey3String = json['BuildKey3String'] as String?
-      ..buildKey3Value = json['BuildKey3Value'] as String?
-      ..buildKey4String = json['BuildKey4String'] as String?
-      ..buildKey4Value = json['BuildKey4Value'] as String?
-      ..buildKey5String = json['BuildKey5String'] as String?
-      ..buildKey5Value = json['BuildKey5Value'] as String?
-      ..isPublish = json['IsPublish'] as bool?
-      ..sourceNameGit = json['SourceNameGit'] as String?
+          json['defaultConfigRuntimeSiteJsonValues'] as String?
+      ..buildKey1String = json['buildKey1String'] as String?
+      ..buildKey1Value = json['buildKey1Value'] as String?
+      ..buildKey2String = json['buildKey2String'] as String?
+      ..buildKey2Value = json['buildKey2Value'] as String?
+      ..buildKey3String = json['buildKey3String'] as String?
+      ..buildKey3Value = json['buildKey3Value'] as String?
+      ..buildKey4String = json['buildKey4String'] as String?
+      ..buildKey4Value = json['buildKey4Value'] as String?
+      ..buildKey5String = json['buildKey5String'] as String?
+      ..buildKey5Value = json['buildKey5Value'] as String?
+      ..isPublish = json['isPublish'] as bool?
+      ..sourceNameGit = json['sourceNameGit'] as String?
       ..oSType =
-          $enumDecodeNullable(_$EnumOperatingSystemTypeEnumMap, json['OSType;'])
-      ..updateSourceByGit = json['UpdateSourceByGit'] as bool?
-      ..isAbilityGradleBuild = json['IsAbilityGradleBuild'] as bool?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+          $enumDecodeNullable(_$EnumOperatingSystemTypeEnumMap, json['oSType;'])
+      ..updateSourceByGit = json['updateSourceByGit'] as bool?
+      ..isAbilityGradleBuild = json['isAbilityGradleBuild'] as bool?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationSourceModelToJson(
         ApplicationSourceModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'TitleML': instance.titleML,
-      'TitleResourceLanguage': instance.titleResourceLanguage,
-      'LinkMainImageId': instance.linkMainImageId,
-      'DefaultAppId': instance.defaultAppId,
-      'ClassName': instance.className,
-      'PackageName': instance.packageName,
-      'ForceUpdate': instance.forceUpdate,
-      'LinkLastSuccessfullyBuildFileId':
+      'linkSiteId': instance.linkSiteId,
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'linkMainImageId': instance.linkMainImageId,
+      'defaultAppId': instance.defaultAppId,
+      'className': instance.className,
+      'packageName': instance.packageName,
+      'forceUpdate': instance.forceUpdate,
+      'linkLastSuccessfullyBuildFileId':
           instance.linkLastSuccessfullyBuildFileId,
-      'LastSuccessfullyBuildDate': instance.lastSuccessfullyBuildDate,
-      'LastBuildCommandDate': instance.lastBuildCommandDate,
-      'LastBuildCommandBy': instance.lastBuildCommandBy,
-      'LastUnsuccessfullyBuildErrorDate':
+      'lastSuccessfullyBuildDate': instance.lastSuccessfullyBuildDate,
+      'lastBuildCommandDate': instance.lastBuildCommandDate,
+      'lastBuildCommandBy': instance.lastBuildCommandBy,
+      'lastUnsuccessfullyBuildErrorDate':
           instance.lastUnsuccessfullyBuildErrorDate,
-      'LastUnsuccessfullyBuildErrorMessage':
+      'lastUnsuccessfullyBuildErrorMessage':
           instance.lastUnsuccessfullyBuildErrorMessage,
-      'Layouts': instance.layouts,
-      'Applications': instance.applications,
-      'SourceSiteCategores': instance.sourceSiteCategores,
-      'FireBaseServerKey': instance.fireBaseServerKey,
-      'Extension': instance.extension,
-      'ExtensionUpdateFile': instance.extensionUpdateFile,
-      'DefaultConfigBuilderAdminJsonValues':
+      'layouts': instance.layouts,
+      'applications': instance.applications,
+      'sourceSiteCategores': instance.sourceSiteCategores,
+      'fireBaseServerKey': instance.fireBaseServerKey,
+      'extension': instance.extension,
+      'extensionUpdateFile': instance.extensionUpdateFile,
+      'defaultConfigBuilderAdminJsonValues':
           instance.defaultConfigBuilderAdminJsonValues,
-      'DefaultConfigRuntimeAdminJsonValues':
+      'defaultConfigRuntimeAdminJsonValues':
           instance.defaultConfigRuntimeAdminJsonValues,
-      'DefaultConfigBuilderSiteJsonValues':
+      'defaultConfigBuilderSiteJsonValues':
           instance.defaultConfigBuilderSiteJsonValues,
-      'DefaultConfigRuntimeSiteJsonValues':
+      'defaultConfigRuntimeSiteJsonValues':
           instance.defaultConfigRuntimeSiteJsonValues,
-      'BuildKey1String': instance.buildKey1String,
-      'BuildKey1Value': instance.buildKey1Value,
-      'BuildKey2String': instance.buildKey2String,
-      'BuildKey2Value': instance.buildKey2Value,
-      'BuildKey3String': instance.buildKey3String,
-      'BuildKey3Value': instance.buildKey3Value,
-      'BuildKey4String': instance.buildKey4String,
-      'BuildKey4Value': instance.buildKey4Value,
-      'BuildKey5String': instance.buildKey5String,
-      'BuildKey5Value': instance.buildKey5Value,
-      'IsPublish': instance.isPublish,
-      'SourceNameGit': instance.sourceNameGit,
-      'OSType;': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
-      'UpdateSourceByGit': instance.updateSourceByGit,
-      'IsAbilityGradleBuild': instance.isAbilityGradleBuild,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'buildKey1String': instance.buildKey1String,
+      'buildKey1Value': instance.buildKey1Value,
+      'buildKey2String': instance.buildKey2String,
+      'buildKey2Value': instance.buildKey2Value,
+      'buildKey3String': instance.buildKey3String,
+      'buildKey3Value': instance.buildKey3Value,
+      'buildKey4String': instance.buildKey4String,
+      'buildKey4Value': instance.buildKey4Value,
+      'buildKey5String': instance.buildKey5String,
+      'buildKey5Value': instance.buildKey5Value,
+      'isPublish': instance.isPublish,
+      'sourceNameGit': instance.sourceNameGit,
+      'oSType;': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
+      'updateSourceByGit': instance.updateSourceByGit,
+      'isAbilityGradleBuild': instance.isAbilityGradleBuild,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

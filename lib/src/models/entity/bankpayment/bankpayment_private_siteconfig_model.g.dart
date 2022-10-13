@@ -9,82 +9,83 @@ part of 'bankpayment_private_siteconfig_model.dart';
 BankPaymentPrivateSiteConfigModel _$BankPaymentPrivateSiteConfigModelFromJson(
         Map<String, dynamic> json) =>
     BankPaymentPrivateSiteConfigModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..title = json['Title'] as String?
-      ..currencyUnitRatioByShop = json['CurrencyUnitRatioByShop'] as int?
-      ..maxTransactionAmount = json['MaxTransactionAmount'] as int?
-      ..minTransactionAmount = json['MinTransactionAmount'] as int?
-      ..fixFeeTransactionAmount = json['FixFeeTransactionAmount'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..title = json['title'] as String?
+      ..currencyUnitRatioByShop = json['currencyUnitRatioByShop'] as int?
+      ..maxTransactionAmount = json['maxTransactionAmount'] as int?
+      ..minTransactionAmount = json['minTransactionAmount'] as int?
+      ..fixFeeTransactionAmount = json['fixFeeTransactionAmount'] as int?
       ..percentFeeTransactionAmount =
-          json['PercentFeeTransactionAmount'] as int?
-      ..linkPublicConfigId = json['LinkPublicConfigId'] as int?
+          json['percentFeeTransactionAmount'] as int?
+      ..linkPublicConfigId = json['linkPublicConfigId'] as int?
       ..virtual_PublicConfig = json[' virtual_PublicConfig'] == null
           ? null
           : BankPaymentPublicConfigModel.fromJson(
               json[' virtual_PublicConfig'] as Map<String, dynamic>)
-      ..config = json['PublicConfig'] == null
+      ..publicConfig = json['publicConfig'] == null
           ? null
           : BankPaymentPublicConfigModel.fromJson(
-              json['PublicConfig'] as Map<String, dynamic>)
-      ..privateConfigJsonValues = json['PrivateConfigJsonValues'] as String?
-      ..memo = json['Memo'] as String?
-      ..transactions = (json['Transactions'] as List<dynamic>?)
+              json['publicConfig'] as Map<String, dynamic>)
+      ..privateConfigJsonValues = json['privateConfigJsonValues'] as String?
+      ..memo = json['memo'] as String?
+      ..transactions = (json['transactions'] as List<dynamic>?)
           ?.map((e) =>
               BankPaymentTransactionModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..linkModuleFileLogoIdSrc = json['LinkModuleFileLogoIdSrc'] as String?;
+      ..linkModuleFileLogoIdSrc = json['linkModuleFileLogoIdSrc'] as String?;
 
 Map<String, dynamic> _$BankPaymentPrivateSiteConfigModelToJson(
         BankPaymentPrivateSiteConfigModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'Title': instance.title,
-      'CurrencyUnitRatioByShop': instance.currencyUnitRatioByShop,
-      'MaxTransactionAmount': instance.maxTransactionAmount,
-      'MinTransactionAmount': instance.minTransactionAmount,
-      'FixFeeTransactionAmount': instance.fixFeeTransactionAmount,
-      'PercentFeeTransactionAmount': instance.percentFeeTransactionAmount,
-      'LinkPublicConfigId': instance.linkPublicConfigId,
+      'title': instance.title,
+      'currencyUnitRatioByShop': instance.currencyUnitRatioByShop,
+      'maxTransactionAmount': instance.maxTransactionAmount,
+      'minTransactionAmount': instance.minTransactionAmount,
+      'fixFeeTransactionAmount': instance.fixFeeTransactionAmount,
+      'percentFeeTransactionAmount': instance.percentFeeTransactionAmount,
+      'linkPublicConfigId': instance.linkPublicConfigId,
       ' virtual_PublicConfig': instance.virtual_PublicConfig,
-      'PublicConfig': instance.config,
-      'PrivateConfigJsonValues': instance.privateConfigJsonValues,
-      'Memo': instance.memo,
-      'Transactions': instance.transactions,
-      'LinkModuleFileLogoIdSrc': instance.linkModuleFileLogoIdSrc,
+      'publicConfig': instance.publicConfig,
+      'privateConfigJsonValues': instance.privateConfigJsonValues,
+      'memo': instance.memo,
+      'transactions': instance.transactions,
+      'linkModuleFileLogoIdSrc': instance.linkModuleFileLogoIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

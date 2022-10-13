@@ -10,47 +10,47 @@ part 'ticketing_task_model.g.dart';
 
 @JsonSerializable()
 class TicketingTaskModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   String? expireDate;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'HtmlBody')
+  @JsonKey(name: 'htmlBody')
   String? htmlBody;
-  @JsonKey(name: 'FullName')
+  @JsonKey(name: 'fullName')
   String? fullName;
-  @JsonKey(name: 'PhoneNo')
+  @JsonKey(name: 'phoneNo')
   String? phoneNo;
-  @JsonKey(name: 'Email')
+  @JsonKey(name: 'email')
   String? email;
-  @JsonKey(name: 'Priority')
+  @JsonKey(name: 'priority')
   int? priority; //as EnumTicketingDepartemenPriority
-  @JsonKey(name: 'LinkCmsUserId')
+  @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'LinkMemberUserId')
+  @JsonKey(name: 'linkMemberUserId')
   int? linkMemberUserId;
-  @JsonKey(name: 'LinkTicketingDepartemenId')
+  @JsonKey(name: 'linkTicketingDepartemenId')
   int? linkTicketingDepartemenId;
-  @JsonKey(name: 'TicketStatus')
+  @JsonKey(name: 'ticketStatus')
   int? ticketStatus; // same as EnumTicketStatus
-  @JsonKey(name: 'UserIpAddress')
+  @JsonKey(name: 'userIpAddress')
   String? userIpAddress;
-  @JsonKey(name: 'DeviceInformation')
+  @JsonKey(name: 'deviceInformation')
   String? deviceInformation;
   @JsonKey(name: ' virtual_Departemen')
   TicketingDepartemenModel? virtual_Departemen;
-  @JsonKey(name: 'Departemen')
+  @JsonKey(name: 'departemen')
   TicketingDepartemenModel? departemen;
-  @JsonKey(name: 'LinkOperatorId')
+  @JsonKey(name: 'linkOperatorId')
   int? linkOperatorId;
-  @JsonKey(name: 'Answers')
+  @JsonKey(name: 'answers')
   List<TicketingAnswerModel>? answers;
-  @JsonKey(name: 'TicketingDepartemenDefaultAnswerBody')
+  @JsonKey(name: 'ticketingDepartemenDefaultAnswerBody')
   String? ticketingDepartemenDefaultAnswerBody;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
-  @JsonKey(name: 'UploadFileGUID')
+  @JsonKey(name: 'uploadFileGUID')
   List<String>? uploadFileGUID;TicketingTaskModel();
   factory TicketingTaskModel.fromJson(Map<String, dynamic> json) => _$TicketingTaskModelFromJson(json);
 

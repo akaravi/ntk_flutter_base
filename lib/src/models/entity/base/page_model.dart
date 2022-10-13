@@ -4,10 +4,10 @@ part 'page_model.g.dart';
 
 @JsonSerializable()
 class PageModel {
-  @JsonKey(name: 'PageNumber')
+  @JsonKey(name: 'pageNumber')
   int pageNumber = 0;
-  @JsonKey(name: 'TotalElements')
+  @JsonKey(name: 'totalElements')
   int? totalElements;
-  @JsonKey(name: 'Size')
+  @JsonKey(name: 'size')
   int size = 20;
 }

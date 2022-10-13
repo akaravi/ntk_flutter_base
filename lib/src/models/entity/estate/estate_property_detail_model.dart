@@ -5,57 +5,57 @@ part 'estate_property_detail_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyDetailModel {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   String? id;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
 
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'IconFont')
+  @JsonKey(name: 'iconFont')
   String? iconFont;
-  @JsonKey(name: 'IconColor')
+  @JsonKey(name: 'iconColor')
   String? iconColor;
-  @JsonKey(name: 'InputDataType')
+  @JsonKey(name: 'inputDataType')
   int? inputDataType;
   EnumInputDataType? inputDataTypeEnum;
 
-  @JsonKey(name: 'InvisibleForEndUser')
+  @JsonKey(name: 'invisibleForEndUser')
   bool? invisibleForEndUser;
 
-  @JsonKey(name: 'InvisibleForSubmiter')
+  @JsonKey(name: 'invisibleForSubmiter')
   bool? invisibleForSubmiter;
 
-  @JsonKey(name: 'Unit')
+  @JsonKey(name: 'unit')
   String? unit;
 
-  @JsonKey(name: 'Required')
+  @JsonKey(name: 'required')
   bool? required;
 
-  @JsonKey(name: 'IsHistoryable')
+  @JsonKey(name: 'isHistoryable')
   bool? isHistoryable;
 
-  @JsonKey(name: 'IsSearchable')
+  @JsonKey(name: 'isSearchable')
   bool? isSearchable;
-  @JsonKey(name: 'ShowInFormOrder')
+  @JsonKey(name: 'showInFormOrder')
   int? showInFormOrder;
-  @JsonKey(name: 'LinkPropertyTypeLanduseId')
+  @JsonKey(name: 'linkPropertyTypeLanduseId')
   String? linkPropertyTypeLanduseId;
-  @JsonKey(name: 'LinkPropertyDetailGroupId')
+  @JsonKey(name: 'linkPropertyDetailGroupId')
   String? linkPropertyDetailGroupId;
-  @JsonKey(name: 'ConfigValueDefaultValueJson')
+  @JsonKey(name: 'configValueDefaultValueJson')
   String? configValueDefaultValueJson;
-  @JsonKey(name: 'ConfigValueDefaultValue')
+  @JsonKey(name: 'configValueDefaultValue')
   List<String>? configValueDefaultValue;
-  @JsonKey(name: 'ConfigValueForceUseDefaultValue')
+  @JsonKey(name: 'configValueForceUseDefaultValue')
   bool? configValueForceUseDefaultValue;
-  @JsonKey(name: 'ConfigValueMultipleChoice')
+  @JsonKey(name: 'configValueMultipleChoice')
   bool? configValueMultipleChoice;
 
-  @JsonKey(name: 'ConfigValueIntValueMin')
+  @JsonKey(name: 'configValueIntValueMin')
   int? configValueIntValueMin;
 
-  @JsonKey(name: 'ConfigValueIntValueMax')
+  @JsonKey(name: 'configValueIntValueMax')
   int? configValueIntValueMax;
   EstatePropertyDetailModel();
   factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailModelFromJson(json);

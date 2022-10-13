@@ -8,31 +8,31 @@ part 'core_module_site_model.g.dart';
 
 @JsonSerializable()
 class CoreModuleSiteModel extends BaseEntity<int> {
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   String? expireDate;
-  @JsonKey(name: 'LinkSiteId')
+  @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'LinkModuleId')
+  @JsonKey(name: 'linkModuleId')
   int? linkModuleId;
-  @JsonKey(name: 'ReNewDate')
+  @JsonKey(name: 'reNewDate')
   String? reNewDate;
-  @JsonKey(name: 'HasBuyed')
+  @JsonKey(name: 'hasBuyed')
   bool? hasBuyed;
   @JsonKey(name: 'virtual_CmsSite')
   CoreSiteModel? virtual_CmsSite;
-  @JsonKey(name: 'CmsSite')
+  @JsonKey(name: 'cmsSite')
   CoreSiteModel? cmsSite;
   @JsonKey(name: ' virtual_CmsModule')
   CoreModuleModel? virtual_CmsModule;
-  @JsonKey(name: 'CmsModule')
+  @JsonKey(name: 'cmsModule')
   CoreModuleModel? cmsModule;
-  @JsonKey(name: 'ModuleConfigSiteAccessValuesJson')
+  @JsonKey(name: 'moduleConfigSiteAccessValuesJson')
   String? moduleConfigSiteAccessValuesJson;
-  @JsonKey(name: 'ModuleConfigSiteValuesJson')
+  @JsonKey(name: 'moduleConfigSiteValuesJson')
   String? moduleConfigSiteValuesJson;
-  @JsonKey(name: 'ModuleSiteStorageValuesJson')
+  @JsonKey(name: 'moduleSiteStorageValuesJson')
   String? moduleSiteStorageValuesJson;
   CoreModuleSiteModel();
   factory CoreModuleSiteModel.fromJson(Map<String, dynamic> json) =>

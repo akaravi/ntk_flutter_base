@@ -7,28 +7,31 @@ part 'filter_model.g.dart';
 
 @JsonSerializable()
 class FilterModel {
-  @JsonKey(name: 'Count')
-  bool? count;
+  @JsonKey(name: 'countLoad')
+  bool countLoad = false;
 
-  @JsonKey(name: 'TotalRowData')
+  @JsonKey(name: 'accessLoad')
+  bool accessLoad = false;
+
+  @JsonKey(name: 'totalRowData')
   int? totalRowData;
 
-  @JsonKey(name: 'SkipRowData')
-  int? skipRowData;
+  @JsonKey(name: 'skipRowData')
+  int skipRowData = 0;
 
-  @JsonKey(name: 'CurrentPageNumber')
-  int? currentPageNumber;
+  @JsonKey(name: 'currentPageNumber')
+  int currentPageNumber = 1;
 
-  @JsonKey(name: 'RowPerPage')
-  int? rowPerPage;
+  @JsonKey(name: 'rowPerPage')
+  int rowPerPage = 20;
 
-  @JsonKey(name: 'SortType')
+  @JsonKey(name: 'sortType')
   EnumSortType? sortType;
 
-  @JsonKey(name: 'SortColumn')
+  @JsonKey(name: 'sortColumn')
   String? sortColumn;
 
-  @JsonKey(name: 'Filters')
+  @JsonKey(name: 'filters')
   List<FilterDataModel>? filters;
 
   FilterModel addFilter(FilterDataModel f) {

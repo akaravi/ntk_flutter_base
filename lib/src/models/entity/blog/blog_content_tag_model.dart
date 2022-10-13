@@ -8,14 +8,14 @@ part 'blog_content_tag_model.g.dart';
 
 @JsonSerializable()
 class BlogContentTagModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkContentid')
-  String? linkContentId;
-  @JsonKey(name: 'LinkTagid')
+  @JsonKey(name: 'linkContentId')
+  int? linkContentId;
+  @JsonKey(name: 'linkTagId')
   int? linkTagId;
   @JsonKey(name: 'virtual_ModuleContent')
-  BlogContentModel? virtual_ModuleContent;
-  @JsonKey(name: 'ModuleContent')
-  BlogContentModel? moduleContent;
+  Object? virtual_ModuleContent;
+  @JsonKey(name: 'moduleContent')
+  Object? moduleContent;
 
   BlogContentTagModel();
   factory BlogContentTagModel.fromJson(Map<String, dynamic> json) =>

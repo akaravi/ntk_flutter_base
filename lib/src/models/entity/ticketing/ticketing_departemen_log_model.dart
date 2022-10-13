@@ -13,25 +13,25 @@ part 'ticketing_departemen_log_model,g.dart';
 
 @JsonSerializable()
 class TicketingDepartemenLogModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkFromOperatorId')
+  @JsonKey(name: 'linkFromOperatorId')
   int? linkFromOperatorId;
-  @JsonKey(name: 'FromOperator')
+  @JsonKey(name: 'fromOperator')
   TicketingDepartemenOperatorModel? fromOperator;
-  @JsonKey(name: 'LinkFromTicketingDepartemenId')
+  @JsonKey(name: 'linkFromTicketingDepartemenId')
   int? linkFromTicketingDepartemenId;
-  @JsonKey(name: 'FromTicketingDepartemen')
+  @JsonKey(name: 'fromTicketingDepartemen')
   TicketingDepartemenModel? fromTicketingDepartemen;
-  @JsonKey(name: 'LinkToTicketingDepartemenId')
+  @JsonKey(name: 'linkToTicketingDepartemenId')
   int? linkToTicketingDepartemenId;
-  @JsonKey(name: 'ToTicketingDepartemen')
+  @JsonKey(name: 'toTicketingDepartemen')
   TicketingDepartemenModel? toTicketingDepartemen;
-  @JsonKey(name: 'Tickets')
+  @JsonKey(name: 'tickets')
   List<TicketingTaskModel>? tickets;
-  @JsonKey(name: 'TicketAnswers')
+  @JsonKey(name: 'ticketAnswers')
   List<TicketingAnswerModel>? ticketAnswers;
-  @JsonKey(name: 'Faqs')
+  @JsonKey(name: 'faqs')
   List<TicketingFaqModel>? faqs;
-  @JsonKey(name: 'Operators')
+  @JsonKey(name: 'operators')
   List<TicketingDepartemenOperatorModel>? operators;TicketingDepartemenLogModel();
   factory TicketingDepartemenLogModel.fromJson(Map<String, dynamic> json) => _$TicketingDepartemenLogModelFromJson(json);
 

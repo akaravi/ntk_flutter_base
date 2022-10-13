@@ -11,72 +11,72 @@ part 'news_content_model.g.dart';
 
 @JsonSerializable()
 class NewsContentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'Body')
+  @JsonKey(name: 'body')
   String? body;
-  @JsonKey(name: 'FromDate')
+  @JsonKey(name: 'fromDate')
   String? fromDate;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
-  @JsonKey(name: 'Keyword')
+  @JsonKey(name: 'keyword')
   String? keyword;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFilePodcastId')
+  @JsonKey(name: 'linkFilePodcastId')
   int? linkFilePodcastId;
-  @JsonKey(name: 'LinkFileMovieId')
+  @JsonKey(name: 'linkFileMovieId')
   int? linkFileMovieId;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'ScoreClick')
+  @JsonKey(name: 'scoreClick')
   int? scoreClick;
-  @JsonKey(name: 'ScoreSumPercent')
+  @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-  @JsonKey(name: 'ViewCount')
+  @JsonKey(name: 'viewCount')
   int? viewCount;
-  @JsonKey(name: 'Favorited')
+  @JsonKey(name: 'favorited')
   bool? favorited;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   String? expireDate;
-  @JsonKey(name: 'ModuleCoreCreatedBy')
+  @JsonKey(name: 'moduleCoreCreatedBy')
   CoreUserModel? moduleCoreCreatedBy;
 
-  @JsonKey(name: 'ModuleCoreUpdatedBy')
+  @JsonKey(name: 'moduleCoreUpdatedBy')
   CoreUserModel? moduleCoreUpdatedBy;
 
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'Comments')
+  @JsonKey(name: 'comments')
   String? comments;
   @JsonKey(name: ' virtual_Category')
   NewsCategoryModel? virtual_Category;
 
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   NewsCategoryModel? category;
 
-  @JsonKey(name: 'ContentTags')
+  @JsonKey(name: 'contentTags')
   List<NewsContentTagModel>? contentTags;
-  @JsonKey(name: 'Similars')
+  @JsonKey(name: 'similars')
   List<NewsContentSimilarModel>? similars;
-  @JsonKey(name: 'OtherInfos')
+  @JsonKey(name: 'otherInfos')
   String? otherInfos;
-  @JsonKey(name: 'ContentAndParameterValues')
+  @JsonKey(name: 'contentAndParameterValues')
   Object? contentAndParameterValues;
 
-  @JsonKey(name: 'LinkFilePodcastIdSrc')
+  @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
-  @JsonKey(name: 'LinkFileMovieIdSrc')
+  @JsonKey(name: 'linkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
 
   NewsContentModel();

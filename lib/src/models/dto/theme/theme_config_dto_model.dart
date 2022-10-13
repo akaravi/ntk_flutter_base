@@ -4,10 +4,10 @@ part 'theme_config_dto_model.g.dart';
 
 @JsonSerializable()
 class ThemeConfigDtoModel {
-  @JsonKey(name: 'AppForceUpdate')
+  @JsonKey(name: 'appForceUpdate')
   String? appForceUpdate;
 
-  @JsonKey(name: 'LayoutTheme')
+  @JsonKey(name: 'layoutTheme')
   String? layoutTheme;
 
   ThemeConfigDtoModel();

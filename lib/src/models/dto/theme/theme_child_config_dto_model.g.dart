@@ -9,24 +9,24 @@ part of 'theme_child_config_dto_model.dart';
 ThemeChildConfigDtoModel _$ThemeChildConfigDtoModelFromJson(
         Map<String, dynamic> json) =>
     ThemeChildConfigDtoModel()
-      ..sortId = json['SortId'] as int?
-      ..title = json['Title'] as String?
-      ..bgColor = json['BgColor'] as String?
-      ..frontColor = json['FrontColor'] as String?
-      ..fontSize = json['FontSize'] as String?
-      ..href = json['Href'] as String?
-      ..actionName = json['ActionName'] as String?
-      ..actionRequest = json['ActionRequest'] as String?;
+      ..sortId = json['sortId'] as int?
+      ..title = json['title'] as String?
+      ..bgColor = json['bgColor'] as String?
+      ..frontColor = json['frontColor'] as String?
+      ..fontSize = json['fontSize'] as String?
+      ..href = json['href'] as String?
+      ..actionName = json['actionName'] as String?
+      ..actionRequest = json['actionRequest'] as String?;
 
 Map<String, dynamic> _$ThemeChildConfigDtoModelToJson(
         ThemeChildConfigDtoModel instance) =>
     <String, dynamic>{
-      'SortId': instance.sortId,
-      'Title': instance.title,
-      'BgColor': instance.bgColor,
-      'FrontColor': instance.frontColor,
-      'FontSize': instance.fontSize,
-      'Href': instance.href,
-      'ActionName': instance.actionName,
-      'ActionRequest': instance.actionRequest,
+      'sortId': instance.sortId,
+      'title': instance.title,
+      'bgColor': instance.bgColor,
+      'frontColor': instance.frontColor,
+      'fontSize': instance.fontSize,
+      'href': instance.href,
+      'actionName': instance.actionName,
+      'actionRequest': instance.actionRequest,
     };

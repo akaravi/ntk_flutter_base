@@ -10,15 +10,15 @@ part 'shop_product_item_combile.g.dart';
 
 @JsonSerializable()
 class ShopProductItemCombine extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkProductCombineId')
+  @JsonKey(name: 'linkProductCombineId')
   int? linkProductCombineId;
-  @JsonKey(name: 'LinkProductItemId')
+  @JsonKey(name: 'linkProductItemId')
   int? linkProductItemId;
-  @JsonKey(name: 'ProductItemCount')
+  @JsonKey(name: 'productItemCount')
   double? productItemCount;
-  @JsonKey(name: 'ProductCombine')
+  @JsonKey(name: 'productCombine')
   ShopProductCombine? productCombine;
-  @JsonKey(name: 'ProductItem')
+  @JsonKey(name: 'productItem')
   ShopProductItem? productItem;ShopProductItemCombine();
   factory ShopProductItemCombine.fromJson(Map<String, dynamic> json) => _$ShopProductItemCombineFromJson(json);
 

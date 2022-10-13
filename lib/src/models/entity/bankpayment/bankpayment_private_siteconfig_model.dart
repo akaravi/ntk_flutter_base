@@ -8,33 +8,33 @@ part 'bankpayment_private_siteconfig_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentPrivateSiteConfigModel extends BaseEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'CurrencyUnitRatioByShop')
+  @JsonKey(name: 'currencyUnitRatioByShop')
   int? currencyUnitRatioByShop;
-  @JsonKey(name: 'MaxTransactionAmount')
+  @JsonKey(name: 'maxTransactionAmount')
   int? maxTransactionAmount;
-  @JsonKey(name: 'MinTransactionAmount')
+  @JsonKey(name: 'minTransactionAmount')
   int? minTransactionAmount;
-  @JsonKey(name: 'FixFeeTransactionAmount')
+  @JsonKey(name: 'fixFeeTransactionAmount')
   int? fixFeeTransactionAmount;
-  @JsonKey(name: 'PercentFeeTransactionAmount')
+  @JsonKey(name: 'percentFeeTransactionAmount')
   int? percentFeeTransactionAmount;
-  @JsonKey(name: 'LinkPublicConfigId')
+  @JsonKey(name: 'linkPublicConfigId')
   int? linkPublicConfigId;
 
   @JsonKey(name: ' virtual_PublicConfig')
   BankPaymentPublicConfigModel? virtual_PublicConfig;
-  @JsonKey(name: 'PublicConfig')
-  BankPaymentPublicConfigModel? config;
+  @JsonKey(name: 'publicConfig')
+  BankPaymentPublicConfigModel? publicConfig;
 
-  @JsonKey(name: 'PrivateConfigJsonValues')
+  @JsonKey(name: 'privateConfigJsonValues')
   String? privateConfigJsonValues;
-  @JsonKey(name: 'Memo')
+  @JsonKey(name: 'memo')
   String? memo;
-  @JsonKey(name: 'Transactions')
+  @JsonKey(name: 'transactions')
   List<BankPaymentTransactionModel>? transactions;
-  @JsonKey(name: 'LinkModuleFileLogoIdSrc')
+  @JsonKey(name: 'linkModuleFileLogoIdSrc')
   String? linkModuleFileLogoIdSrc;
 
   BankPaymentPrivateSiteConfigModel();

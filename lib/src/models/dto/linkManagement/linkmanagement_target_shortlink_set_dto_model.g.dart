@@ -10,18 +10,18 @@ LinkManagementTargetShortLinkSetDtoModel
     _$LinkManagementTargetShortLinkSetDtoModelFromJson(
             Map<String, dynamic> json) =>
         LinkManagementTargetShortLinkSetDtoModel()
-          ..captchaKey = json['CaptchaKey'] as String?
-          ..captchaText = json['CaptchaText'] as String?
-          ..urlAddress = json['UrlAddress'] as String?
-          ..description = json['Description'] as String?
-          ..uploadFileKey = json['UploadFileKey'] as String?;
+          ..captchaKey = json['captchaKey'] as String?
+          ..captchaText = json['captchaText'] as String?
+          ..urlAddress = json['urlAddress'] as String?
+          ..description = json['description'] as String?
+          ..uploadFileKey = json['uploadFileKey'] as String?;
 
 Map<String, dynamic> _$LinkManagementTargetShortLinkSetDtoModelToJson(
         LinkManagementTargetShortLinkSetDtoModel instance) =>
     <String, dynamic>{
-      'CaptchaKey': instance.captchaKey,
-      'CaptchaText': instance.captchaText,
-      'UrlAddress': instance.urlAddress,
-      'Description': instance.description,
-      'UploadFileKey': instance.uploadFileKey,
+      'captchaKey': instance.captchaKey,
+      'captchaText': instance.captchaText,
+      'urlAddress': instance.urlAddress,
+      'description': instance.description,
+      'uploadFileKey': instance.uploadFileKey,
     };

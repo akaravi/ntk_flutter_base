@@ -9,23 +9,23 @@ part 'article_share_main_admin_setting_model.g.dart';
 
 @JsonSerializable()
 class ArticleShareMainAdminSettingModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'AdminMainPriceFixed')
+  @JsonKey(name: 'adminMainPriceFixed')
   int? adminMainPriceFixed;
-  @JsonKey(name: 'AdminMainPricePercent')
+  @JsonKey(name: 'adminMainPricePercent')
   int? adminMainPricePercent;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'PaymentMethod')
+  @JsonKey(name: 'paymentMethod')
   EnumPaymentMethod? paymentMethod;
-  @JsonKey(name: 'ReciverPriceCost')
+  @JsonKey(name: 'reciverPriceCost')
   int? reciverPriceCost;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
 
   @JsonKey(name: ' virtual_Content')
   ArticleContentModel? virtual_Content;
 
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   ArticleContentModel? content;
   ArticleShareMainAdminSettingModel();
   factory ArticleShareMainAdminSettingModel.fromJson(Map<String, dynamic> json) =>

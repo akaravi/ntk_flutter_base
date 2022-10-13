@@ -9,14 +9,14 @@ part 'article_content_category_model.g.dart';
 
 @JsonSerializable()
 class ArticleContentCategoryModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   ArticleContentModel? content;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   ArticleCategoryModel? category;
 
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
 
   ArticleContentCategoryModel();

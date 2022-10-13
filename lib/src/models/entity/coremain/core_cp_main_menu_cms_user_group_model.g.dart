@@ -9,22 +9,22 @@ part of 'core_cp_main_menu_cms_user_group_model.dart';
 CoreCpMainMenuCmsUserGroupModel _$CoreCpMainMenuCmsUserGroupModelFromJson(
         Map<String, dynamic> json) =>
     CoreCpMainMenuCmsUserGroupModel()
-      ..cmsCpMainMenuId = json['CmsCpMainMenu_Id'] as int?
-      ..cmsUserGroupId = json['CmsUserGroup_Id'] as int?
-      ..cmsCpMainMenu = json['CmsCpMainMenu'] == null
+      ..cmsCpMainMenuId = json['cmsCpMainMenu_Id'] as int?
+      ..cmsUserGroupId = json['cmsUserGroup_Id'] as int?
+      ..cmsCpMainMenu = json['cmsCpMainMenu'] == null
           ? null
           : CoreCpMainMenuModel.fromJson(
-              json['CmsCpMainMenu'] as Map<String, dynamic>)
-      ..cmsUserGroup = json['CmsUserGroup'] == null
+              json['cmsCpMainMenu'] as Map<String, dynamic>)
+      ..cmsUserGroup = json['cmsUserGroup'] == null
           ? null
           : CoreUserGroupModel.fromJson(
-              json['CmsUserGroup'] as Map<String, dynamic>);
+              json['cmsUserGroup'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$CoreCpMainMenuCmsUserGroupModelToJson(
         CoreCpMainMenuCmsUserGroupModel instance) =>
     <String, dynamic>{
-      'CmsCpMainMenu_Id': instance.cmsCpMainMenuId,
-      'CmsUserGroup_Id': instance.cmsUserGroupId,
-      'CmsCpMainMenu': instance.cmsCpMainMenu,
-      'CmsUserGroup': instance.cmsUserGroup,
+      'cmsCpMainMenu_Id': instance.cmsCpMainMenuId,
+      'cmsUserGroup_Id': instance.cmsUserGroupId,
+      'cmsCpMainMenu': instance.cmsCpMainMenu,
+      'cmsUserGroup': instance.cmsUserGroup,
     };

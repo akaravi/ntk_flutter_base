@@ -4,15 +4,15 @@ part 'field_input_data_source_model.g.dart';
 
 @JsonSerializable()
 class FieldInputDataSourceModel {
-  @JsonKey(name: 'InputFixed')
+  @JsonKey(name: 'inputFixed')
   String? inputFixed;
-  @JsonKey(name: 'InputForm')
+  @JsonKey(name: 'inputForm')
   String? inputForm;
-  @JsonKey(name: 'InputRequest')
+  @JsonKey(name: 'inputRequest')
   String? inputRequest;
-  @JsonKey(name: 'InputBeforProcess')
+  @JsonKey(name: 'inputBeforProcess')
   String? inputBeforProcess;
-  @JsonKey(name: 'InputControler')
+  @JsonKey(name: 'inputControler')
   String? inputControler;
 
   FieldInputDataSourceModel();

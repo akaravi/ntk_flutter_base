@@ -7,9 +7,9 @@ part 'get_properties_info_model.g.dart';
 
 @JsonSerializable()
 class GetPropertiesInfoModel extends FieldInfoModel {
-  @JsonKey(name: 'FieldDataSource')
+  @JsonKey(name: 'fieldDataSource')
   FieldInputDataSourceModel? fieldDataSource;
-  @JsonKey(name: 'FieldDataSourceExpression')
+  @JsonKey(name: 'fieldDataSourceExpression')
   String? fieldDataSourceExpression;
 
   GetPropertiesInfoModel();

@@ -10,13 +10,13 @@ part 'core_token_user_bad_login_model.g.dart';
 
 @JsonSerializable()
 class CoreTokenUserBadLoginModel extends UserTokenModel {
-  @JsonKey(name: 'DeviceId')
+  @JsonKey(name: 'deviceId')
   String? deviceId;
-  @JsonKey(name: 'RequestDate')
+  @JsonKey(name: 'requestDate')
   String? requestDate;
-  @JsonKey(name: 'UsedUsername')
+  @JsonKey(name: 'usedUsername')
   String? usedUsername;
-  @JsonKey(name: 'UsedPwd')
+  @JsonKey(name: 'usedPwd')
   String? usedPwd;CoreTokenUserBadLoginModel();
   factory CoreTokenUserBadLoginModel.fromJson(Map<String, dynamic> json) => _$CoreTokenUserBadLoginModelFromJson(json);
 

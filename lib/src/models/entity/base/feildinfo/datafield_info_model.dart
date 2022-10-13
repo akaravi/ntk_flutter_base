@@ -6,31 +6,31 @@ part 'datafield_info_model.g.dart';
 
 @JsonSerializable()
 class DataFieldInfoModel {
-  @JsonKey(name: 'FieldName')
+  @JsonKey(name: 'fieldName')
   String? fieldName;
-  @JsonKey(name: 'FieldType')
+  @JsonKey(name: 'fieldType')
   String? fieldType;
-  @JsonKey(name: 'FieldTypeClass')
+  @JsonKey(name: 'fieldTypeClass')
   String? fieldTypeClass;
-  @JsonKey(name: 'FieldTitle')
+  @JsonKey(name: 'fieldTitle')
   String? fieldTitle;
-  @JsonKey(name: 'FieldDescription')
+  @JsonKey(name: 'fieldDescription')
   String? fieldDescription;
-  @JsonKey(name: 'FieldScriptDescription')
+  @JsonKey(name: 'fieldScriptDescription')
   String? fieldScriptDescription;
-  @JsonKey(name: 'FieldDefaultValue')
+  @JsonKey(name: 'fieldDefaultValue')
   String? fieldDefaultValue;
-  @JsonKey(name: 'FieldValue')
+  @JsonKey(name: 'fieldValue')
   String? fieldValue;
-  @JsonKey(name: 'FieldTypeFullName')
+  @JsonKey(name: 'fieldTypeFullName')
   String? fieldTypeFullName;
-  @JsonKey(name: 'AccessSearchField')
+  @JsonKey(name: 'accessSearchField')
   bool accessSearchField = false;
-  @JsonKey(name: 'AccessWatchField')
+  @JsonKey(name: 'accessWatchField')
   bool accessWatchField = false;
-  @JsonKey(name: 'AccessEditField')
+  @JsonKey(name: 'accessEditField')
   bool accessEditField = false;
-  @JsonKey(name: 'AccessAddField')
+  @JsonKey(name: 'accessAddField')
   bool accessAddField = false;
   @JsonKey(name: 'fieldsInfo')
   List<FieldInfoModel>? fieldsInfo;

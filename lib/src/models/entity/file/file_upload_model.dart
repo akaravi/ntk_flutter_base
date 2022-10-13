@@ -5,23 +5,23 @@ part 'file_upload_model.g.dart';
 
 @JsonSerializable()
 class FileUploadModel {
-  @JsonKey(name: 'FileName')
+  @JsonKey(name: 'fileName')
   String? fileName;
-  @JsonKey(name: 'FileKey')
+  @JsonKey(name: 'fileKey')
   String? fileKey;
-  @JsonKey(name: 'ChunkNumber')
+  @JsonKey(name: 'chunkNumber')
   int? chunkNumber;
-  @JsonKey(name: 'ChunkSize')
+  @JsonKey(name: 'chunkSize')
   int? chunkSize;
-  @JsonKey(name: 'CurrentChunkSize')
+  @JsonKey(name: 'currentChunkSize')
   int? currentChunkSize;
-  @JsonKey(name: 'TotalSize')
+  @JsonKey(name: 'totalSize')
   int? totalSize;
-  @JsonKey(name: 'Identifier')
+  @JsonKey(name: 'identifier')
   String? identifier;
-  @JsonKey(name: 'RelativePath')
+  @JsonKey(name: 'relativePath')
   String? relativePath;
-  @JsonKey(name: 'TotalChunks')
+  @JsonKey(name: 'totalChunks')
   int? totalChunks;FileUploadModel();
   factory FileUploadModel.fromJson(Map<String, dynamic> json) => _$FileUploadModelFromJson(json);
 

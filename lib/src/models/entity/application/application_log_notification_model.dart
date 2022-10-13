@@ -9,33 +9,33 @@ part 'application_log_notification_model.g.dart';
 
 @JsonSerializable()
 class ApplicationLogNotificationModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkApplicationMemberId')
+  @JsonKey(name: 'linkApplicationMemberId')
   String? linkApplicationMemberId;
-  @JsonKey(name: 'MemberInfo')
+  @JsonKey(name: 'memberInfo')
   ApplicationMemberInfoModel? memberInfo;
-  @JsonKey(name: 'LinkApplicationId')
+  @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
-  @JsonKey(name: 'Application')
+  @JsonKey(name: 'application')
   ApplicationAppModel? application;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   String? content;
-  @JsonKey(name: 'ContentType')
+  @JsonKey(name: 'contentType')
   EnumNotificationType? contentType;
   @JsonKey(name: 'contentJson')
   String? contentJson;
-  @JsonKey(name: 'ContentJsonClass')
+  @JsonKey(name: 'contentJsonClass')
   String? contentJsonClass;
-  @JsonKey(name: 'SmallImageId')
+  @JsonKey(name: 'smallImageId')
   int? smallImageId;
-  @JsonKey(name: 'BigImageId')
+  @JsonKey(name: 'bigImageId')
   int? bigImageId;
-  @JsonKey(name: 'SmallImageIdSrc')
+  @JsonKey(name: 'smallImageIdSrc')
   String? smallImageIdSrc;
-  @JsonKey(name: 'BigImageIdSrc')
+  @JsonKey(name: 'bigImageIdSrc')
   String? bigImageIdSrc;
-  @JsonKey(name: 'ErrorMessage')
+  @JsonKey(name: 'errorMessage')
   String? errorMessage;
   ApplicationLogNotificationModel();
   factory ApplicationLogNotificationModel.fromJson(Map<String, dynamic> json) =>

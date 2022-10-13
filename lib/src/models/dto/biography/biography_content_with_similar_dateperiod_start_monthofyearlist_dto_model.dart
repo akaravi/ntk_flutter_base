@@ -4,9 +4,9 @@ part 'biography_content_with_similar_dateperiod_start_monthofyearlist_dto_model.
 
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartMonthOfYearListDtoModel {
-  @JsonKey(name: 'TagIds')
+  @JsonKey(name: 'tagIds')
   List<int>? tagIds;
-  @JsonKey(name: 'MonthOfYear')
+  @JsonKey(name: 'monthOfYear')
   int? monthOfYear;
 
   BiographyContentWithSimilarDatePeriodStartMonthOfYearListDtoModel();

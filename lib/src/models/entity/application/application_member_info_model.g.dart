@@ -9,95 +9,96 @@ part of 'application_member_info_model.dart';
 ApplicationMemberInfoModel _$ApplicationMemberInfoModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationMemberInfoModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkUserId = json['LinkUserId'] as int?
-      ..linkMemberId = json['LinkMemberId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkUserId = json['linkUserId'] as int?
+      ..linkMemberId = json['linkMemberId'] as int?
       ..deviceStatus =
-          $enumDecodeNullable(_$EnumDeviceStatusEnumMap, json['DeviceStatus'])
-      ..deviceId = json['DeviceId'] as String?
-      ..deviceBrand = json['DeviceBrand'] as String?
-      ..simCard = json['SimCard'] as String?
-      ..country = json['Country'] as String?
-      ..language = json['Language'] as String?
-      ..notificationId = json['NotificationId'] as String?
-      ..linkApplicationId = json['LinkApplicationId'] as int?
-      ..application = json['Application'] == null
+          $enumDecodeNullable(_$EnumDeviceStatusEnumMap, json['deviceStatus'])
+      ..deviceId = json['deviceId'] as String?
+      ..deviceBrand = json['deviceBrand'] as String?
+      ..simCard = json['simCard'] as String?
+      ..country = json['country'] as String?
+      ..language = json['language'] as String?
+      ..notificationId = json['notificationId'] as String?
+      ..linkApplicationId = json['linkApplicationId'] as int?
+      ..application = json['application'] == null
           ? null
           : ApplicationAppModel.fromJson(
-              json['Application'] as Map<String, dynamic>)
-      ..appBuildVer = json['AppBuildVer'] as int?
-      ..appSourceVer = json['AppSourceVer'] as String?
-      ..deviceIP = json['DeviceIP'] as String?
-      ..scorePercent = json['ScorePercent'] as int?
-      ..scoreComment = json['ScoreComment'] as String?
-      ..linkLocationId = json['LinkLocationId'] as int?
-      ..geolocationlatitude = json['Geolocationlatitude'] as int?
-      ..geolocationlongitude = json['Geolocationlongitude'] as int?
-      ..linkLocationIdTitle = json['LinkLocationIdTitle'] as String?
+              json['application'] as Map<String, dynamic>)
+      ..appBuildVer = json['appBuildVer'] as int?
+      ..appSourceVer = json['appSourceVer'] as String?
+      ..deviceIP = json['deviceIP'] as String?
+      ..scorePercent = json['scorePercent'] as int?
+      ..scoreComment = json['scoreComment'] as String?
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..geolocationlatitude = json['geolocationlatitude'] as int?
+      ..geolocationlongitude = json['geolocationlongitude'] as int?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle =
-          json['LinkLocationIdParentTitle'] as String?;
+          json['linkLocationIdParentTitle'] as String?;
 
 Map<String, dynamic> _$ApplicationMemberInfoModelToJson(
         ApplicationMemberInfoModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkUserId': instance.linkUserId,
-      'LinkMemberId': instance.linkMemberId,
-      'DeviceStatus': _$EnumDeviceStatusEnumMap[instance.deviceStatus],
-      'DeviceId': instance.deviceId,
-      'DeviceBrand': instance.deviceBrand,
-      'SimCard': instance.simCard,
-      'Country': instance.country,
-      'Language': instance.language,
-      'NotificationId': instance.notificationId,
-      'LinkApplicationId': instance.linkApplicationId,
-      'Application': instance.application,
-      'AppBuildVer': instance.appBuildVer,
-      'AppSourceVer': instance.appSourceVer,
-      'DeviceIP': instance.deviceIP,
-      'ScorePercent': instance.scorePercent,
-      'ScoreComment': instance.scoreComment,
-      'LinkLocationId': instance.linkLocationId,
-      'Geolocationlatitude': instance.geolocationlatitude,
-      'Geolocationlongitude': instance.geolocationlongitude,
-      'LinkLocationIdTitle': instance.linkLocationIdTitle,
-      'LinkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'linkSiteId': instance.linkSiteId,
+      'linkUserId': instance.linkUserId,
+      'linkMemberId': instance.linkMemberId,
+      'deviceStatus': _$EnumDeviceStatusEnumMap[instance.deviceStatus],
+      'deviceId': instance.deviceId,
+      'deviceBrand': instance.deviceBrand,
+      'simCard': instance.simCard,
+      'country': instance.country,
+      'language': instance.language,
+      'notificationId': instance.notificationId,
+      'linkApplicationId': instance.linkApplicationId,
+      'application': instance.application,
+      'appBuildVer': instance.appBuildVer,
+      'appSourceVer': instance.appSourceVer,
+      'deviceIP': instance.deviceIP,
+      'scorePercent': instance.scorePercent,
+      'scoreComment': instance.scoreComment,
+      'linkLocationId': instance.linkLocationId,
+      'geolocationlatitude': instance.geolocationlatitude,
+      'geolocationlongitude': instance.geolocationlongitude,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
     };
 
 const _$EnumRecordStatusEnumMap = {

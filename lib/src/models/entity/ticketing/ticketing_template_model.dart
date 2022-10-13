@@ -6,11 +6,11 @@ part 'ticketing_template_model.g.dart';
 
 @JsonSerializable()
 class TicketingTemplateModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'HtmlBody')
+  @JsonKey(name: 'htmlBody')
   String? htmlBody;
-  @JsonKey(name: 'LinkTicketingDepartemenId')
+  @JsonKey(name: 'linkTicketingDepartemenId')
   int? linkTicketingDepartemenId;
   TicketingTemplateModel();
   factory TicketingTemplateModel.fromJson(Map<String, dynamic> json) => _$TicketingTemplateModelFromJson(json);

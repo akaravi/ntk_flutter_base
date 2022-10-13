@@ -9,20 +9,20 @@ part 'core_site_category_cms_module_model.g.dart';
 
 @JsonSerializable()
 class CoreSiteCategoryCmsModuleModel extends BaseEntity<int> {
-  @JsonKey(name: 'LinkCmsSiteCategoryId')
+  @JsonKey(name: 'linkCmsSiteCategoryId')
   int? linkCmsSiteCategoryId;
 
   @JsonKey(name: 'virtual_CmsSiteCategory')
   CoreSiteCategoryModel? virtual_CmsSiteCategory;
-  @JsonKey(name: 'CmsSiteCategory')
+  @JsonKey(name: 'cmsSiteCategory')
   CoreSiteCategoryModel? cmsSiteCategory;
-  @JsonKey(name: 'LinkCmsModuleId')
+  @JsonKey(name: 'linkCmsModuleId')
   int? linkCmsModuleId;
 
   @JsonKey(name: 'virtual_CmsModule')
   CoreModuleModel? virtual_CmsModule;
-  @JsonKey(name: 'CmsModule')
+  @JsonKey(name: 'cmsModule')
   CoreModuleModel? cmsModule;
-  @JsonKey(name: 'ConfigValuesJson')
+  @JsonKey(name: 'configValuesJson')
   String? configValuesJson;
 }

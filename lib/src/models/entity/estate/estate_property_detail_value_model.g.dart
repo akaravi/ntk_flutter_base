@@ -9,21 +9,21 @@ part of 'estate_property_detail_value_model.dart';
 EstatePropertyDetailValueModel _$EstatePropertyDetailValueModelFromJson(
         Map<String, dynamic> json) =>
     EstatePropertyDetailValueModel()
-      ..id = json['Id'] as String?
-      ..linkPropertyDetailId = json['LinkPropertyDetailId'] as String?
-      ..propertyDetail = json['PropertyDetail'] == null
+      ..id = json['id'] as String?
+      ..linkPropertyDetailId = json['linkPropertyDetailId'] as String?
+      ..propertyDetail = json['propertyDetail'] == null
           ? null
           : EstatePropertyDetailModel.fromJson(
-              json['PropertyDetail'] as Map<String, dynamic>)
-      ..value = json['Value'] as String?
-      ..linkHistoryId = json['LinkHistoryId'] as String?;
+              json['propertyDetail'] as Map<String, dynamic>)
+      ..value = json['value'] as String?
+      ..linkHistoryId = json['linkHistoryId'] as String?;
 
 Map<String, dynamic> _$EstatePropertyDetailValueModelToJson(
         EstatePropertyDetailValueModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'LinkPropertyDetailId': instance.linkPropertyDetailId,
-      'PropertyDetail': instance.propertyDetail,
-      'Value': instance.value,
-      'LinkHistoryId': instance.linkHistoryId,
+      'id': instance.id,
+      'linkPropertyDetailId': instance.linkPropertyDetailId,
+      'propertyDetail': instance.propertyDetail,
+      'value': instance.value,
+      'linkHistoryId': instance.linkHistoryId,
     };

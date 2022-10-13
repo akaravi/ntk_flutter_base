@@ -9,72 +9,73 @@ part of 'appMmain_layout_main_request_model.dart';
 AppMainLayoutMainRequestModel _$AppMainLayoutMainRequestModelFromJson(
         Map<String, dynamic> json) =>
     AppMainLayoutMainRequestModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..userId = json['UserId'] as int?
-      ..memberUserId = json['MemberUserId'] as int?
-      ..siteId = json['SiteId'] as int?
-      ..appTitle = json['AppTitle'] as String?
-      ..appUrl = json['AppUrl'] as String?
-      ..appId = json['AppId'] as int?
-      ..appVersion = json['AppVersion'] as int?
-      ..lastUpdateSource = json['LastUpdateSource'] as String?
-      ..lastUpdateTheme = json['LastUpdateTheme'] as String?
-      ..lastUpdateApp = json['LastUpdateApp'] as String?
-      ..appForceUpdate = json['AppForceUpdate'] as bool?
-      ..appThemeId = json['AppThemeId'] as int?;
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..userId = json['userId'] as int?
+      ..memberUserId = json['memberUserId'] as int?
+      ..siteId = json['siteId'] as int?
+      ..appTitle = json['appTitle'] as String?
+      ..appUrl = json['appUrl'] as String?
+      ..appId = json['appId'] as int?
+      ..appVersion = json['appVersion'] as int?
+      ..lastUpdateSource = json['lastUpdateSource'] as String?
+      ..lastUpdateTheme = json['lastUpdateTheme'] as String?
+      ..lastUpdateApp = json['lastUpdateApp'] as String?
+      ..appForceUpdate = json['appForceUpdate'] as bool?
+      ..appThemeId = json['appThemeId'] as int?;
 
 Map<String, dynamic> _$AppMainLayoutMainRequestModelToJson(
         AppMainLayoutMainRequestModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'UserId': instance.userId,
-      'MemberUserId': instance.memberUserId,
-      'SiteId': instance.siteId,
-      'AppTitle': instance.appTitle,
-      'AppUrl': instance.appUrl,
-      'AppId': instance.appId,
-      'AppVersion': instance.appVersion,
-      'LastUpdateSource': instance.lastUpdateSource,
-      'LastUpdateTheme': instance.lastUpdateTheme,
-      'LastUpdateApp': instance.lastUpdateApp,
-      'AppForceUpdate': instance.appForceUpdate,
-      'AppThemeId': instance.appThemeId,
+      'linkSiteId': instance.linkSiteId,
+      'userId': instance.userId,
+      'memberUserId': instance.memberUserId,
+      'siteId': instance.siteId,
+      'appTitle': instance.appTitle,
+      'appUrl': instance.appUrl,
+      'appId': instance.appId,
+      'appVersion': instance.appVersion,
+      'lastUpdateSource': instance.lastUpdateSource,
+      'lastUpdateTheme': instance.lastUpdateTheme,
+      'lastUpdateApp': instance.lastUpdateApp,
+      'appForceUpdate': instance.appForceUpdate,
+      'appThemeId': instance.appThemeId,
     };
 
 const _$EnumRecordStatusEnumMap = {

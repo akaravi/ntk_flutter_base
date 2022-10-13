@@ -10,15 +10,15 @@ part 'ticketing_departemen_operator_model.g.dart';
 
 @JsonSerializable()
 class TicketingDepartemenOperatorModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkDepartemenId')
+  @JsonKey(name: 'linkDepartemenId')
   int? linkDepartemenId;
-  @JsonKey(name: 'LinkUserId')
+  @JsonKey(name: 'linkUserId')
   int? linkUserId;
   @JsonKey(name: ' virtual_Departemen')
   TicketingDepartemenModel? virtual_Departemen;
-  @JsonKey(name: 'Departemen')
+  @JsonKey(name: 'departemen')
   TicketingDepartemenModel? departemen;
-  @JsonKey(name: 'Answers')
+  @JsonKey(name: 'answers')
   List<TicketingAnswerModel>? answers;TicketingDepartemenOperatorModel();
   factory TicketingDepartemenOperatorModel.fromJson(Map<String, dynamic> json) => _$TicketingDepartemenOperatorModelFromJson(json);
 

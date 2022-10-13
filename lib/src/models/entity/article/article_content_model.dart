@@ -13,83 +13,83 @@ part 'article_content_model.g.dart';
 
 @JsonSerializable()
 class ArticleContentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'Body')
+  @JsonKey(name: 'body')
   String? body;
-  @JsonKey(name: 'FromDate')
+  @JsonKey(name: 'fromDate')
   DateTime? fromDate;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   int? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   int? geolocationlongitude;
-  @JsonKey(name: 'LinkLocationId')
+  @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
-  @JsonKey(name: 'LinkLocationIdTitle')
+  @JsonKey(name: 'linkLocationIdTitle')
   String? linkLocationIdTitle;
-  @JsonKey(name: 'LinkLocationIdParentTitle')
+  @JsonKey(name: 'linkLocationIdParentTitle')
   String? linkLocationIdParentTitle;
-  @JsonKey(name: 'Keyword')
+  @JsonKey(name: 'keyword')
   String? keyword;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFilePodcastId')
+  @JsonKey(name: 'linkFilePodcastId')
   int? linkFilePodcastId;
-  @JsonKey(name: 'LinkFileMovieId')
+  @JsonKey(name: 'linkFileMovieId')
   int? linkFileMovieId;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'ScoreClick')
+  @JsonKey(name: 'scoreClick')
   int? scoreClick;
-  @JsonKey(name: 'ScoreSumPercent')
+  @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-  @JsonKey(name: 'ViewCount')
+  @JsonKey(name: 'viewCount')
   int? viewCount;
-  @JsonKey(name: 'Favorited')
+  @JsonKey(name: 'favorited')
   bool? favorited;
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   DateTime? expireDate;
 
-  @JsonKey(name: 'ModuleCoreCreatedBy')
+  @JsonKey(name: 'moduleCoreCreatedBy')
   String? moduleCoreCreatedBy;
-  @JsonKey(name: 'ModuleCoreUpdatedBy')
+  @JsonKey(name: 'moduleCoreUpdatedBy')
   String? moduleCoreUpdatedBy;
 
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'Comments')
+  @JsonKey(name: 'comments')
   ArticleCommentModel? comments;
   @JsonKey(name: ' virtual_Category')
   ArticleCategoryModel? virtual_Category;
 
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   ArticleCategoryModel? category;
 
-  @JsonKey(name: 'ContentTags')
+  @JsonKey(name: 'contentTags')
   List<ArticleContentTagModel>? contentTags;
-  @JsonKey(name: 'Similars')
+  @JsonKey(name: 'similars')
   List<ArticleContentSimilarModel>? similars;
-  @JsonKey(name: 'ContentCategores')
+  @JsonKey(name: 'contentCategores')
   List<ArticleContentCategoryModel>? contentCategores;
-  @JsonKey(name: 'OtherInfos')
+  @JsonKey(name: 'otherInfos')
   String? otherInfos;
-  @JsonKey(name: 'ContentAndParameterValues')
+  @JsonKey(name: 'contentAndParameterValues')
   Object? contentAndParameterValues;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'LinkFilePodcastIdSrc')
+  @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
-  @JsonKey(name: 'LinkFileMovieIdSrc')
+  @JsonKey(name: 'linkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
-  @JsonKey(name: 'UrlViewContent')
+  @JsonKey(name: 'urlViewContent')
   String? urlViewContent;
-  @JsonKey(name: 'UrlViewContentQRCodeBase64')
+  @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
 
   ArticleContentModel();

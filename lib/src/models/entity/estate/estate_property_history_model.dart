@@ -7,11 +7,11 @@ part 'estate_property_history_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyHistoryModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'LinkPropertyId')
+  @JsonKey(name: 'linkPropertyId')
   String? linkPropertyId;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;EstatePropertyHistoryModel();
   factory EstatePropertyHistoryModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyHistoryModelFromJson(json);
 

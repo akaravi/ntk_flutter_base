@@ -4,6 +4,8 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'blog_category_model.dart';
+import 'blog_comment_model.dart';
+import 'blog_content_category_model.dart';
 import 'blog_content_similar_model.dart';
 import 'blog_content_tag_model.dart';
 
@@ -11,68 +13,80 @@ part 'blog_content_model..g.dart';
 
 @JsonSerializable()
 class BlogContentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'Body')
+  @JsonKey(name: 'body')
   String? body;
-  @JsonKey(name: 'FromDate')
-  String? fromDate;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'fromDate')
+  DateTime? fromDate;
+  @JsonKey(name: 'geolocationlatitude')
   double? golocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
-  @JsonKey(name: 'Keyword')
+  @JsonKey(name: 'linkLocationId')
+  int? linkLocationId;
+  @JsonKey(name: 'linkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'linkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
+  @JsonKey(name: 'keyword')
   String? keyword;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFilePodcastId')
+  @JsonKey(name: 'linkFilePodcastId')
   int? linkFilePodcastId;
-  @JsonKey(name: 'LinkFileMovieId')
+  @JsonKey(name: 'linkFileMovieId')
   int? linkFileMovieId;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'ScoreClick')
+  @JsonKey(name: 'scoreClick')
   int? scoreClick;
-  @JsonKey(name: 'ScoreSumPercent')
+  @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-  @JsonKey(name: 'ViewCount')
+  @JsonKey(name: 'viewCount')
   int? viewCount;
-  @JsonKey(name: 'Favorited')
+  @JsonKey(name: 'favorited')
   bool? favorited;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'ExpireDate')
-  String? expireDate;
-  @JsonKey(name: 'ModuleCoreCreatedBy')
+  @JsonKey(name: 'expireDate')
+  DateTime? expireDate;
+  @JsonKey(name: 'moduleCoreCreatedBy')
   CoreUserModel? moduleCoreCreatedBy;
-  @JsonKey(name: 'ModuleCoreUpdatedBy')
+  @JsonKey(name: 'moduleCoreUpdatedBy')
   CoreUserModel? moduleCoreUpdatedBy;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'Comments')
-  String? comments;
+  @JsonKey(name: 'comments')
+  BlogCommentModel? comments;
   @JsonKey(name: 'virtual_Category')
   BlogCategoryModel? virtual_Category;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   BlogCategoryModel? category;
-  @JsonKey(name: 'ContentTags')
+  @JsonKey(name: 'contentTags')
   List<BlogContentTagModel>? contentTags;
-  @JsonKey(name: 'Similars')
+  @JsonKey(name: 'similars')
   List<BlogContentSimilarModel>? similars;
-  @JsonKey(name: 'OtherInfos')
+  @JsonKey(name: 'contentCategores')
+  List<BlogContentCategoryModel>? contentCategores;
+  @JsonKey(name: 'otherInfos')
   String? otherInfos;
-  @JsonKey(name: 'ContentAndParameterValues')
+  @JsonKey(name: 'contentAndParameterValues')
   Object? contentAndParameterValues;
-  @JsonKey(name: 'LinkFilePodcastIdSrc')
+  @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
-  @JsonKey(name: 'LinkFileMovieIdSrc')
+  @JsonKey(name: 'linkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
+  @JsonKey(name: 'urlViewContent')
+  String? urlViewContent;
+  @JsonKey(name: 'urlViewContentQRCodeBase64')
+  String? urlViewContentQRCodeBase64;
   BlogContentModel();
   factory BlogContentModel.fromJson(Map<String, dynamic> json) =>
       _$BlogContentModelFromJson(json);

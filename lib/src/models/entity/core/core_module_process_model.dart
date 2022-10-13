@@ -7,25 +7,25 @@ part 'core_module_process_model.g.dart';
 
 @JsonSerializable()
 class CoreModuleProcessModel {
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'TitleEn')
+  @JsonKey(name: 'titleEn')
   String? titleEn;
-  @JsonKey(name: 'ProcessName')
+  @JsonKey(name: 'processName')
   String? processName;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkModuleId')
+  @JsonKey(name: 'linkModuleId')
   int? linkModuleId;
   @JsonKey(name: 'virtual_CmsModule')
   CoreModuleModel? virtual_CmsModule;
-  @JsonKey(name: 'CmsModule')
+  @JsonKey(name: 'cmsModule')
   CoreModuleModel? cmsModule;
-  @JsonKey(name: 'CmsModuleProcessCustomize')
+  @JsonKey(name: 'cmsModuleProcessCustomize')
   List<CoreModuleProcessCustomizeModel>? cmsModuleProcessCustomize;
   CoreModuleProcessModel();
   factory CoreModuleProcessModel.fromJson(Map<String, dynamic> json) =>

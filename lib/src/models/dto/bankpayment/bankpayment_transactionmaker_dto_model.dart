@@ -4,13 +4,13 @@ part 'bankpayment_transactionmaker_dto_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentTransactionMakerDtoModel {
-  @JsonKey(name: 'PaymentPrivateId')
+  @JsonKey(name: 'paymentPrivateId')
   int? paymentPrivateId;
-  @JsonKey(name: 'Price')
+  @JsonKey(name: 'price')
   int? price;
-  @JsonKey(name: 'CartId')
+  @JsonKey(name: 'cartId')
   int? cartId;
-  @JsonKey(name: 'LastUrlAddressInUse')
+  @JsonKey(name: 'lastUrlAddressInUse')
   String? lastUrlAddressInUse;
 
   BankPaymentTransactionMakerDtoModel();

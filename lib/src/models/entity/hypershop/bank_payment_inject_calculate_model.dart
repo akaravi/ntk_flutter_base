@@ -4,13 +4,13 @@ part 'bank_payment_inject_calculate_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentInjectCalculateModel {
-  @JsonKey(name: 'Amount')
+  @JsonKey(name: 'amount')
   double? amount;
-  @JsonKey(name: 'FeeTax')
+  @JsonKey(name: 'feeTax')
   double? feeTax;
-  @JsonKey(name: 'FeeTransport')
+  @JsonKey(name: 'feeTransport')
   double? feeTransport;
-  @JsonKey(name: 'AmountPure')
+  @JsonKey(name: 'amountPure')
   double? amountPure;
 
   BankPaymentInjectCalculateModel();

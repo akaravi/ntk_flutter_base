@@ -8,20 +8,20 @@ part 'news_content_otherinfo_model.g.dart';
 
 @JsonSerializable()
 class NewsContentOtherInfoModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'HtmlBody')
+  @JsonKey(name: 'htmlBody')
   String? htmlBody;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
-  @JsonKey(name: 'TypeId')
+  @JsonKey(name: 'typeId')
   int? typeId;
 
   @JsonKey(name: 'virtual_Content')
   NewsContentModel? virtual_Content;
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   NewsContentModel? content;
   NewsContentOtherInfoModel();
   factory NewsContentOtherInfoModel.fromJson(Map<String, dynamic> json) =>

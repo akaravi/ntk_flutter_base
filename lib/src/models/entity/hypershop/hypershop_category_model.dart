@@ -5,13 +5,13 @@ part 'hypershop_category_model.g.dart';
 
 @JsonSerializable()
 class HyperShopCategoryModel {
-  @JsonKey(name: 'Code')
+  @JsonKey(name: 'code')
   String? code;
-  @JsonKey(name: 'Name')
+  @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
-  @JsonKey(name: 'Memo')
+  @JsonKey(name: 'memo')
   String? memo;HyperShopCategoryModel();
   factory HyperShopCategoryModel.fromJson(Map<String, dynamic> json) => _$HyperShopCategoryModelFromJson(json);
 

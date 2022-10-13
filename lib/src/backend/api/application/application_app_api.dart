@@ -1,7 +1,7 @@
 import 'package:base/src/models/dto/application/application_score_dto_model.dart';
 import 'package:base/src/models/entity/application/application_app_model.dart';
-import 'package:base/src/models/entity/base/error_exception.dart';
-import 'package:base/src/models/entity/base/error_exception_base.dart';
+import 'package:base/src/models/entity/base/error_exception_result.dart';
+import 'package:base/src/models/entity/base/error_exception_result_base.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

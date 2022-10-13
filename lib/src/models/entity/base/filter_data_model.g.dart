@@ -8,31 +8,53 @@ part of 'filter_data_model.dart';
 
 FilterDataModel _$FilterDataModelFromJson(Map<String, dynamic> json) =>
     FilterDataModel()
-      ..propertyName = json['PropertyName'] as String?
-      ..clauseType = json['ClauseType'] as int?
-      ..propertyAnyName = json['PropertyAnyName'] as String?
-      ..searchType = json['SearchType'] as int?
-      ..filters = (json['Filters'] as List<dynamic>?)
+      ..propertyName = json['propertyName'] as String?
+      ..clauseType =
+          $enumDecodeNullable(_$EnumClauseTypeEnumMap, json['clauseType'])
+      ..propertyAnyName = json['propertyAnyName'] as String?
+      ..searchType = $enumDecodeNullable(
+          _$EnumFilterDataModelSearchTypesEnumMap, json['searchType'])
+      ..filters = (json['filters'] as List<dynamic>?)
           ?.map((e) => FilterDataModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..value = json['Value']
+      ..value = json['value']
       ..values =
-          (json['Values'] as List<dynamic>?)?.map((e) => e as Object).toList()
-      ..latitudeValue = json['LatitudeValue'] as int?
-      ..longitudeValue = json['LongitudeValue'] as int?
+          (json['values'] as List<dynamic>?)?.map((e) => e as Object).toList()
+      ..latitudeValue = json['latitudeValue'] as int?
+      ..longitudeValue = json['longitudeValue'] as int?
       ..latitudeLongitudeDistanceValue =
-          json['LatitudeLongitudeDistanceValue'] as int?;
+          json['latitudeLongitudeDistanceValue'] as int?;
 
 Map<String, dynamic> _$FilterDataModelToJson(FilterDataModel instance) =>
     <String, dynamic>{
-      'PropertyName': instance.propertyName,
-      'ClauseType': instance.clauseType,
-      'PropertyAnyName': instance.propertyAnyName,
-      'SearchType': instance.searchType,
-      'Filters': instance.filters,
-      'Value': instance.value,
-      'Values': instance.values,
-      'LatitudeValue': instance.latitudeValue,
-      'LongitudeValue': instance.longitudeValue,
-      'LatitudeLongitudeDistanceValue': instance.latitudeLongitudeDistanceValue,
+      'propertyName': instance.propertyName,
+      'clauseType': _$EnumClauseTypeEnumMap[instance.clauseType],
+      'propertyAnyName': instance.propertyAnyName,
+      'searchType':
+          _$EnumFilterDataModelSearchTypesEnumMap[instance.searchType],
+      'filters': instance.filters,
+      'value': instance.value,
+      'values': instance.values,
+      'latitudeValue': instance.latitudeValue,
+      'longitudeValue': instance.longitudeValue,
+      'latitudeLongitudeDistanceValue': instance.latitudeLongitudeDistanceValue,
     };
+
+const _$EnumClauseTypeEnumMap = {
+  EnumClauseType.or: 1,
+  EnumClauseType.and: 2,
+};
+
+const _$EnumFilterDataModelSearchTypesEnumMap = {
+  EnumFilterDataModelSearchTypes.equal: 0,
+  EnumFilterDataModelSearchTypes.notEqual: 1,
+  EnumFilterDataModelSearchTypes.lessThan: 2,
+  EnumFilterDataModelSearchTypes.greaterThan: 3,
+  EnumFilterDataModelSearchTypes.between: 4,
+  EnumFilterDataModelSearchTypes.contains: 5,
+  EnumFilterDataModelSearchTypes.notContains: 6,
+  EnumFilterDataModelSearchTypes.beginsWith: 7,
+  EnumFilterDataModelSearchTypes.endsWith: 8,
+  EnumFilterDataModelSearchTypes.lessThanOrEqualTo: 9,
+  EnumFilterDataModelSearchTypes.greaterThanOrEqualTo: 10,
+};

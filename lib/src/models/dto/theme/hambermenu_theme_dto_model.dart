@@ -4,10 +4,10 @@ part 'hambermenu_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class HamberMenuThemeDtoModel {
-  @JsonKey(name: 'BgColor')
+  @JsonKey(name: 'bgColor')
   String? color;
 
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
 
   HamberMenuThemeDtoModel();

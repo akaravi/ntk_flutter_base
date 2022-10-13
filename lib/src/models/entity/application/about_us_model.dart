@@ -6,27 +6,27 @@ part 'about_us_model.g.dart';
 
 @JsonSerializable()
 class AboutUsModel {
-  @JsonKey(name: 'AboutUsTitle')
+  @JsonKey(name: 'aboutUsTitle')
   String? aboutUsTitle;
-  @JsonKey(name: 'AboutUsDescription')
+  @JsonKey(name: 'aboutUsDescription')
   String? aboutUsDescription;
-  @JsonKey(name: 'AboutUsTel')
+  @JsonKey(name: 'aboutUsTel')
   String? aboutUsTel;
-  @JsonKey(name: 'AboutUsFax')
+  @JsonKey(name: 'aboutUsFax')
   String? aboutUsFax;
-  @JsonKey(name: 'AboutUsEmail')
+  @JsonKey(name: 'aboutUsEmail')
   String? aboutUsEmail;
-  @JsonKey(name: 'AboutUsAddress')
+  @JsonKey(name: 'aboutUsAddress')
   String? aboutUsAddress;
-  @JsonKey(name: 'AboutUsLinkImageId')
+  @JsonKey(name: 'aboutUsLinkImageId')
   String? aboutUsLinkImageId;
-  @JsonKey(name: 'AboutUsGeolocationlatetitude')
+  @JsonKey(name: 'aboutUsGeolocationlatetitude')
   String? aboutUsGeolocationlatetitude;
-  @JsonKey(name: 'AboutUsGeolocationlongitude')
+  @JsonKey(name: 'aboutUsGeolocationlongitude')
   String? aboutUsGeolocationlongitude;
-  @JsonKey(name: 'AboutUsScoreClick')
+  @JsonKey(name: 'aboutUsScoreClick')
   int? aboutUsScoreClick;
-  @JsonKey(name: 'AboutUsScoreSum')
+  @JsonKey(name: 'aboutUsScoreSum')
   int? aboutUsScoreSum;
 
   AboutUsModel();

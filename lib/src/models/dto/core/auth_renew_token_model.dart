@@ -4,15 +4,15 @@ part 'auth_renew_token_model.g.dart';
 
 @JsonSerializable()
 class AuthRenewTokenModel {
-  @JsonKey(name: 'SiteId')
+  @JsonKey(name: 'siteId')
   int? siteId;
-  @JsonKey(name: 'UserId')
+  @JsonKey(name: 'userId')
   int? userId;
-  @JsonKey(name: 'UserAccessAdminAllowToAllData')
+  @JsonKey(name: 'userAccessAdminAllowToAllData')
   bool? userAccessAdminAllowToAllData;
-  @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
+  @JsonKey(name: 'userAccessAdminAllowToProfessionalData')
   bool? userAccessAdminAllowToProfessionalData;
-  @JsonKey(name: 'Lang')
+  @JsonKey(name: 'lang')
   String? lang;
 
   AuthRenewTokenModel();

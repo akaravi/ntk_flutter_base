@@ -6,18 +6,18 @@ part 'base_entity_category.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class BaseEntityCategory<TKey> extends BaseModuleEntity<TKey> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'FontIcon')
+  @JsonKey(name: 'fontIcon')
   String? fontIcon;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   TKey? linkParentId;
-  @JsonKey(name: 'LinkParentIdNode')
+  @JsonKey(name: 'linkParentIdNode')
   String? linkParentIdNode;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
 }

@@ -9,30 +9,30 @@ part of 'hypershop_order_content_model.dart';
 HyperShopOrderContentModel _$HyperShopOrderContentModelFromJson(
         Map<String, dynamic> json) =>
     HyperShopOrderContentModel()
-      ..linkOrderId = json['LinkOrderId'] as int?
-      ..order = json['Order'] == null
+      ..linkOrderId = json['linkOrderId'] as int?
+      ..order = json['order'] == null
           ? null
-          : HyperShopOrderModel.fromJson(json['Order'] as Map<String, dynamic>)
-      ..code = json['Code'] as String?
-      ..name = json['Name'] as String?
-      ..memo = json['Memo'] as String?
-      ..price = (json['Price'] as num?)?.toDouble()
-      ..count = json['Count'] as int?
-      ..totalCount = json['TotalCount'] as int?
-      ..image = json['Image'] as String?
-      ..unit = json['Unit'] as String?;
+          : HyperShopOrderModel.fromJson(json['order'] as Map<String, dynamic>)
+      ..code = json['code'] as String?
+      ..name = json['name'] as String?
+      ..memo = json['memo'] as String?
+      ..price = (json['price'] as num?)?.toDouble()
+      ..count = json['count'] as int?
+      ..totalCount = json['totalCount'] as int?
+      ..image = json['image'] as String?
+      ..unit = json['unit'] as String?;
 
 Map<String, dynamic> _$HyperShopOrderContentModelToJson(
         HyperShopOrderContentModel instance) =>
     <String, dynamic>{
-      'LinkOrderId': instance.linkOrderId,
-      'Order': instance.order,
-      'Code': instance.code,
-      'Name': instance.name,
-      'Memo': instance.memo,
-      'Price': instance.price,
-      'Count': instance.count,
-      'TotalCount': instance.totalCount,
-      'Image': instance.image,
-      'Unit': instance.unit,
+      'linkOrderId': instance.linkOrderId,
+      'order': instance.order,
+      'code': instance.code,
+      'name': instance.name,
+      'memo': instance.memo,
+      'price': instance.price,
+      'count': instance.count,
+      'totalCount': instance.totalCount,
+      'image': instance.image,
+      'unit': instance.unit,
     };

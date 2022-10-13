@@ -8,11 +8,11 @@ part 'core_module_tag_model.g.dart';
 
 @JsonSerializable()
 class CoreModuleTagModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   String? linkCategoryId;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   CoreModuleTagCategoryModel? category;CoreModuleTagModel();
   factory CoreModuleTagModel.fromJson(Map<String, dynamic> json) => _$CoreModuleTagModelFromJson(json);
 

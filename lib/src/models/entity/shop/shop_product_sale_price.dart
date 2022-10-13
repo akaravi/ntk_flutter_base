@@ -9,16 +9,16 @@ part 'shop_product_sale_price.g.dart';
 
 @JsonSerializable()
 class ShopProductSalePrice extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkProductId')
+  @JsonKey(name: 'linkProductId')
   int? linkProductId;
 
   @JsonKey(name: 'virtual_Product')
   ShopContent? virtual_Product;
 
-  @JsonKey(name: 'SalePrice')
+  @JsonKey(name: 'salePrice')
   double? salePrice;
 
-  @JsonKey(name: 'LinkPersonGroupId')
+  @JsonKey(name: 'linkPersonGroupId')
   int? linkPersonGroupId;ShopProductSalePrice();
   factory ShopProductSalePrice.fromJson(Map<String, dynamic> json) => _$ShopProductSalePriceFromJson(json);
 

@@ -7,50 +7,50 @@ part 'estate_contract_type_model.g.dart';
 
 @JsonSerializable()
 class EstateContractTypeModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'HasSalePrice')
+  @JsonKey(name: 'hasSalePrice')
   bool? hasSalePrice;
-  @JsonKey(name: 'HasRentPrice')
+  @JsonKey(name: 'hasRentPrice')
   bool? hasRentPrice;
-  @JsonKey(name: 'HasDepositPrice')
+  @JsonKey(name: 'hasDepositPrice')
   bool? hasDepositPrice;
-  @JsonKey(name: 'UnitSalePrice')
+  @JsonKey(name: 'unitSalePrice')
   String? unitSalePrice;
 
-  @JsonKey(name: 'UnitRentPrice')
+  @JsonKey(name: 'unitRentPrice')
   String? unitRentPrice;
-  @JsonKey(name: 'UnitDepositPrice')
+  @JsonKey(name: 'unitDepositPrice')
   String? unitDepositPrice;
 
-  @JsonKey(name: 'SalePriceAllowAgreement')
+  @JsonKey(name: 'salePriceAllowAgreement')
   bool? salePriceAllowAgreement;
-  @JsonKey(name: 'SalePriceMin')
+  @JsonKey(name: 'salePriceMin')
   int? salePriceMin;
-  @JsonKey(name: 'SalePriceMax')
+  @JsonKey(name: 'salePriceMax')
   int? salePriceMax;
 
-  @JsonKey(name: 'RentPriceAllowAgreement')
+  @JsonKey(name: 'rentPriceAllowAgreement')
   bool? rentPriceAllowAgreement;
-  @JsonKey(name: 'RentPriceMin')
+  @JsonKey(name: 'rentPriceMin')
   int? rentPriceMin;
-  @JsonKey(name: 'RentPriceMax')
+  @JsonKey(name: 'rentPriceMax')
   int? rentPriceMax;
 
-  @JsonKey(name: 'DepositPriceAllowAgreement')
+  @JsonKey(name: 'depositPriceAllowAgreement')
   bool? depositPriceAllowAgreement;
-  @JsonKey(name: 'DepositPriceMin')
+  @JsonKey(name: 'depositPriceMin')
   int? depositPriceMin;
-  @JsonKey(name: 'DepositPriceMax')
+  @JsonKey(name: 'depositPriceMax')
   int? depositPriceMax;
 
-  @JsonKey(name: 'TitleSalePrice')
+  @JsonKey(name: 'titleSalePrice')
   String? titleSalePrice;
-  @JsonKey(name: 'TitleDepositPrice')
+  @JsonKey(name: 'titleDepositPrice')
   String? titleDepositPrice;
-  @JsonKey(name: 'TitleRentPrice')
+  @JsonKey(name: 'titleRentPrice')
   String? titleRentPrice;EstateContractTypeModel();
   factory EstateContractTypeModel.fromJson(Map<String, dynamic> json) => _$EstateContractTypeModelFromJson(json);
 

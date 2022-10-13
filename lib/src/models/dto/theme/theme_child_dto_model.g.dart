@@ -8,25 +8,25 @@ part of 'theme_child_dto_model.dart';
 
 ThemeChildDtoModel _$ThemeChildDtoModelFromJson(Map<String, dynamic> json) =>
     ThemeChildDtoModel()
-      ..sortId = json['SortId'] as int?
-      ..layoutTheme = json['LayoutTheme'] as int?
-      ..layoutName = json['LayoutName'] as String?
-      ..layoutChildConfigs = (json['LayoutChildConfig'] as List<dynamic>?)
+      ..sortId = json['sortId'] as int?
+      ..layoutTheme = json['layoutTheme'] as int?
+      ..layoutName = json['layoutName'] as String?
+      ..layoutChildConfigs = (json['layoutChildConfig'] as List<dynamic>?)
           ?.map((e) =>
               ThemeChildConfigDtoModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..layoutConfig = (json['LayoutConfig'] as List<dynamic>?)
+      ..layoutConfig = (json['layoutConfig'] as List<dynamic>?)
           ?.map((e) =>
               ThemeChildConfigDtoModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..layoutRequest = json['LayoutRequest'] as String?;
+      ..layoutRequest = json['layoutRequest'] as String?;
 
 Map<String, dynamic> _$ThemeChildDtoModelToJson(ThemeChildDtoModel instance) =>
     <String, dynamic>{
-      'SortId': instance.sortId,
-      'LayoutTheme': instance.layoutTheme,
-      'LayoutName': instance.layoutName,
-      'LayoutChildConfig': instance.layoutChildConfigs,
-      'LayoutConfig': instance.layoutConfig,
-      'LayoutRequest': instance.layoutRequest,
+      'sortId': instance.sortId,
+      'layoutTheme': instance.layoutTheme,
+      'layoutName': instance.layoutName,
+      'layoutChildConfig': instance.layoutChildConfigs,
+      'layoutConfig': instance.layoutConfig,
+      'layoutRequest': instance.layoutRequest,
     };

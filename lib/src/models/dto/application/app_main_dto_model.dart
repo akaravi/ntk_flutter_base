@@ -4,7 +4,7 @@ part 'app_main_dto_model.g.dart';
 
 @JsonSerializable()
 class AppMainDtoModel {
-  @JsonKey(name: 'RequestObject')
+  @JsonKey(name: 'requestObject')
   Object? requestObject;
 
   AppMainDtoModel();

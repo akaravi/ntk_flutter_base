@@ -9,25 +9,25 @@ part 'estate_contract_model.g.dart';
 
 @JsonSerializable()
 class EstateContractModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkEstateContractTypeId')
+  @JsonKey(name: 'linkEstateContractTypeId')
   String? linkEstateContractTypeId;
-  @JsonKey(name: 'ContractType')
+  @JsonKey(name: 'contractType')
   EstateContractTypeModel? contractType;
-  @JsonKey(name: 'LinkPropertyId')
+  @JsonKey(name: 'linkPropertyId')
   String? linkPropertyId;
-  @JsonKey(name: 'SalePriceByAgreement')
+  @JsonKey(name: 'salePriceByAgreement')
   bool? salePriceByAgreement;
-  @JsonKey(name: 'SalePrice')
+  @JsonKey(name: 'salePrice')
   double? salePrice;
-  @JsonKey(name: 'RentPriceByAgreement')
+  @JsonKey(name: 'rentPriceByAgreement')
   bool? rentPriceByAgreement;
-  @JsonKey(name: 'RentPrice')
+  @JsonKey(name: 'rentPrice')
   double? rentPrice;
-  @JsonKey(name: 'DepositPriceByAgreement')
+  @JsonKey(name: 'depositPriceByAgreement')
   bool? depositPriceByAgreement;
-  @JsonKey(name: 'DepositPrice')
+  @JsonKey(name: 'depositPrice')
   double? depositPrice;
   @JsonKey(name: ' unitSalePrice')
   String unitSalePrice = "تومان";EstateContractModel();

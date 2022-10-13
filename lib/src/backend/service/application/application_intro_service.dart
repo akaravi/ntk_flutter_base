@@ -1,7 +1,7 @@
 import 'package:base/src/backend/api/application/application_intro_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/models/entity/application/application_intro_model.dart';
-import 'package:base/src/models/entity/base/error_exception.dart';
+import 'package:base/src/models/entity/base/error_exception_result.dart';
 import 'package:base/src/models/entity/base/filter_model.dart';
 
 class ApplicationIntroService extends DioApi {

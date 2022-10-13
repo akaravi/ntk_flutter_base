@@ -9,28 +9,28 @@ part of 'hypershop_content_model.dart';
 HyperShopContentModel _$HyperShopContentModelFromJson(
         Map<String, dynamic> json) =>
     HyperShopContentModel()
-      ..code = json['Code'] as String?
-      ..name = json['Name'] as String?
-      ..category = json['Category'] as String?
-      ..categoryCode = json['CategoryCode'] as int?
-      ..status = json['Status'] as bool?
-      ..image = json['Image'] as String?
-      ..memo = json['Memo'] as String?
-      ..price = (json['Price'] as num?)?.toDouble()
-      ..count = json['Count'] as int?
-      ..unit = json['Unit'] as String?;
+      ..code = json['code'] as String?
+      ..name = json['name'] as String?
+      ..category = json['category'] as String?
+      ..categoryCode = json['categoryCode'] as int?
+      ..status = json['status'] as bool?
+      ..image = json['image'] as String?
+      ..memo = json['memo'] as String?
+      ..price = (json['price'] as num?)?.toDouble()
+      ..count = json['count'] as int?
+      ..unit = json['unit'] as String?;
 
 Map<String, dynamic> _$HyperShopContentModelToJson(
         HyperShopContentModel instance) =>
     <String, dynamic>{
-      'Code': instance.code,
-      'Name': instance.name,
-      'Category': instance.category,
-      'CategoryCode': instance.categoryCode,
-      'Status': instance.status,
-      'Image': instance.image,
-      'Memo': instance.memo,
-      'Price': instance.price,
-      'Count': instance.count,
-      'Unit': instance.unit,
+      'code': instance.code,
+      'name': instance.name,
+      'category': instance.category,
+      'categoryCode': instance.categoryCode,
+      'status': instance.status,
+      'image': instance.image,
+      'memo': instance.memo,
+      'price': instance.price,
+      'count': instance.count,
+      'unit': instance.unit,
     };

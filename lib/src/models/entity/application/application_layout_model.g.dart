@@ -9,80 +9,81 @@ part of 'application_layout_model.dart';
 ApplicationLayoutModel _$ApplicationLayoutModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationLayoutModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..className = json['ClassName'] as String?
-      ..linkSourceId = json['LinkSourceId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..title = json['title'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..className = json['className'] as String?
+      ..linkSourceId = json['linkSourceId'] as int?
       ..virtual_Source = json['virtual_Source'] == null
           ? null
           : ApplicationSourceModel.fromJson(
               json['virtual_Source'] as Map<String, dynamic>)
-      ..source = json['Source'] == null
+      ..source = json['source'] == null
           ? null
           : ApplicationSourceModel.fromJson(
-              json['Source'] as Map<String, dynamic>)
-      ..jsonFormDefaultValue = json['JsonFormDefaultValue'] as String?
-      ..jsonFormAdminSystemValue = json['JsonFormAdminSystemValue'] as String?
+              json['source'] as Map<String, dynamic>)
+      ..jsonFormDefaultValue = json['jsonFormDefaultValue'] as String?
+      ..jsonFormAdminSystemValue = json['jsonFormAdminSystemValue'] as String?
       ..linkModuleFilePreviewImageId =
-          json['LinkModuleFilePreviewImageId'] as int?
-      ..layoutValues = (json['LayoutValues'] as List<dynamic>?)
+          json['linkModuleFilePreviewImageId'] as int?
+      ..layoutValues = (json['layoutValues'] as List<dynamic>?)
           ?.map((e) =>
               ApplicationLayoutValueModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationLayoutModelToJson(
         ApplicationLayoutModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'LinkMainImageId': instance.linkMainImageId,
-      'ClassName': instance.className,
-      'LinkSourceId': instance.linkSourceId,
+      'linkSiteId': instance.linkSiteId,
+      'title': instance.title,
+      'linkMainImageId': instance.linkMainImageId,
+      'className': instance.className,
+      'linkSourceId': instance.linkSourceId,
       'virtual_Source': instance.virtual_Source,
-      'Source': instance.source,
-      'JsonFormDefaultValue': instance.jsonFormDefaultValue,
-      'JsonFormAdminSystemValue': instance.jsonFormAdminSystemValue,
-      'LinkModuleFilePreviewImageId': instance.linkModuleFilePreviewImageId,
-      'LayoutValues': instance.layoutValues,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'source': instance.source,
+      'jsonFormDefaultValue': instance.jsonFormDefaultValue,
+      'jsonFormAdminSystemValue': instance.jsonFormAdminSystemValue,
+      'linkModuleFilePreviewImageId': instance.linkModuleFilePreviewImageId,
+      'layoutValues': instance.layoutValues,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

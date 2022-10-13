@@ -8,20 +8,20 @@ part of 'app_theme_dto_model.dart';
 
 AppThemeDtoModel _$AppThemeDtoModelFromJson(Map<String, dynamic> json) =>
     AppThemeDtoModel()
-      ..appThemeId = json['AppThemeId'] as int?
-      ..appThemeTypeId = json['AppThemeTypeId'] as String?
-      ..themeConfigLayout = (json['ThemeConfigLayout'] as List<dynamic>?)
+      ..appThemeId = json['appThemeId'] as int?
+      ..appThemeTypeId = json['appThemeTypeId'] as String?
+      ..themeConfigLayout = (json['themeConfigLayout'] as List<dynamic>?)
           ?.map((e) => ThemeConfigDtoModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..themeConfigJson = json['ThemeConfigJson'] == null
+      ..themeConfigJson = json['themeConfigJson'] == null
           ? null
           : ThemeDtoModel.fromJson(
-              json['ThemeConfigJson'] as Map<String, dynamic>);
+              json['themeConfigJson'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$AppThemeDtoModelToJson(AppThemeDtoModel instance) =>
     <String, dynamic>{
-      'AppThemeId': instance.appThemeId,
-      'AppThemeTypeId': instance.appThemeTypeId,
-      'ThemeConfigLayout': instance.themeConfigLayout,
-      'ThemeConfigJson': instance.themeConfigJson,
+      'appThemeId': instance.appThemeId,
+      'appThemeTypeId': instance.appThemeTypeId,
+      'themeConfigLayout': instance.themeConfigLayout,
+      'themeConfigJson': instance.themeConfigJson,
     };

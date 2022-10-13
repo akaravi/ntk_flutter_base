@@ -6,9 +6,9 @@ part 'estate_property_share_agent_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyShareAgentModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'LinkEstateAgentId')
+  @JsonKey(name: 'linkEstateAgentId')
   String? linkEstateAgentId;
-  @JsonKey(name: 'LinkEstatePropertyId')
+  @JsonKey(name: 'linkEstatePropertyId')
   String? linkEstatePropertyId;
   EstatePropertyShareAgentModel();
   factory EstatePropertyShareAgentModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyShareAgentModelFromJson(json);

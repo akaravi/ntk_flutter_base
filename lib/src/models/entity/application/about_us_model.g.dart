@@ -7,30 +7,30 @@ part of 'about_us_model.dart';
 // **************************************************************************
 
 AboutUsModel _$AboutUsModelFromJson(Map<String, dynamic> json) => AboutUsModel()
-  ..aboutUsTitle = json['AboutUsTitle'] as String?
-  ..aboutUsDescription = json['AboutUsDescription'] as String?
-  ..aboutUsTel = json['AboutUsTel'] as String?
-  ..aboutUsFax = json['AboutUsFax'] as String?
-  ..aboutUsEmail = json['AboutUsEmail'] as String?
-  ..aboutUsAddress = json['AboutUsAddress'] as String?
-  ..aboutUsLinkImageId = json['AboutUsLinkImageId'] as String?
+  ..aboutUsTitle = json['aboutUsTitle'] as String?
+  ..aboutUsDescription = json['aboutUsDescription'] as String?
+  ..aboutUsTel = json['aboutUsTel'] as String?
+  ..aboutUsFax = json['aboutUsFax'] as String?
+  ..aboutUsEmail = json['aboutUsEmail'] as String?
+  ..aboutUsAddress = json['aboutUsAddress'] as String?
+  ..aboutUsLinkImageId = json['aboutUsLinkImageId'] as String?
   ..aboutUsGeolocationlatetitude =
-      json['AboutUsGeolocationlatetitude'] as String?
-  ..aboutUsGeolocationlongitude = json['AboutUsGeolocationlongitude'] as String?
-  ..aboutUsScoreClick = json['AboutUsScoreClick'] as int?
-  ..aboutUsScoreSum = json['AboutUsScoreSum'] as int?;
+      json['aboutUsGeolocationlatetitude'] as String?
+  ..aboutUsGeolocationlongitude = json['aboutUsGeolocationlongitude'] as String?
+  ..aboutUsScoreClick = json['aboutUsScoreClick'] as int?
+  ..aboutUsScoreSum = json['aboutUsScoreSum'] as int?;
 
 Map<String, dynamic> _$AboutUsModelToJson(AboutUsModel instance) =>
     <String, dynamic>{
-      'AboutUsTitle': instance.aboutUsTitle,
-      'AboutUsDescription': instance.aboutUsDescription,
-      'AboutUsTel': instance.aboutUsTel,
-      'AboutUsFax': instance.aboutUsFax,
-      'AboutUsEmail': instance.aboutUsEmail,
-      'AboutUsAddress': instance.aboutUsAddress,
-      'AboutUsLinkImageId': instance.aboutUsLinkImageId,
-      'AboutUsGeolocationlatetitude': instance.aboutUsGeolocationlatetitude,
-      'AboutUsGeolocationlongitude': instance.aboutUsGeolocationlongitude,
-      'AboutUsScoreClick': instance.aboutUsScoreClick,
-      'AboutUsScoreSum': instance.aboutUsScoreSum,
+      'aboutUsTitle': instance.aboutUsTitle,
+      'aboutUsDescription': instance.aboutUsDescription,
+      'aboutUsTel': instance.aboutUsTel,
+      'aboutUsFax': instance.aboutUsFax,
+      'aboutUsEmail': instance.aboutUsEmail,
+      'aboutUsAddress': instance.aboutUsAddress,
+      'aboutUsLinkImageId': instance.aboutUsLinkImageId,
+      'aboutUsGeolocationlatetitude': instance.aboutUsGeolocationlatetitude,
+      'aboutUsGeolocationlongitude': instance.aboutUsGeolocationlongitude,
+      'aboutUsScoreClick': instance.aboutUsScoreClick,
+      'aboutUsScoreSum': instance.aboutUsScoreSum,
     };

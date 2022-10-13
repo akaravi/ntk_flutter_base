@@ -7,40 +7,40 @@ part 'estate_account_user_model.g.dart';
 
 @JsonSerializable()
 class EstateAccountUserModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'LinkCmsUserId')
+  @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'JoinId')
+  @JsonKey(name: 'joinId')
   String? joinId;
-  @JsonKey(name: 'LinkLocationId')
+  @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
-  @JsonKey(name: 'DateManufacture')
+  @JsonKey(name: 'dateManufacture')
   String? dateManufacture;
-  @JsonKey(name: 'PlaceProduction')
+  @JsonKey(name: 'placeProduction')
   String? placeProduction;
-  @JsonKey(name: 'SerialRfId')
+  @JsonKey(name: 'serialRfId')
   String? serialRfId;
-  @JsonKey(name: 'SerialNumber')
+  @JsonKey(name: 'serialNumber')
   String? serialNumber;
-  @JsonKey(name: 'PhoneNumber')
+  @JsonKey(name: 'phoneNumber')
   String? phoneNumber;
 
-  @JsonKey(name: 'Address')
+  @JsonKey(name: 'address')
   String? address;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'LinkLocationIdTitle')
+  @JsonKey(name: 'linkLocationIdTitle')
   String? linkLocationIdTitle;
-  @JsonKey(name: 'LinkLocationIdParentTitle')
+  @JsonKey(name: 'linkLocationIdParentTitle')
   String? linkLocationIdParentTitle;EstateAccountUserModel();
   factory EstateAccountUserModel.fromJson(Map<String, dynamic> json) => _$EstateAccountUserModelFromJson(json);
 

@@ -7,10 +7,10 @@ part 'theme_dto_model.g.dart';
 
 @JsonSerializable()
 class ThemeDtoModel {
-  @JsonKey(name: 'Toolbar')
+  @JsonKey(name: 'toolbar')
   ToolbarDtoModel? toolbar;
 
-  @JsonKey(name: 'ThemeConfigLayout')
+  @JsonKey(name: 'themeConfigLayout')
   List<ThemeChildDtoModel>? childs;
 
   ThemeDtoModel();

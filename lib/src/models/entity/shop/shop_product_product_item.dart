@@ -10,16 +10,16 @@ part 'shop_product_product_item.g.dart';
 
 @JsonSerializable()
 class ShopProductProductItem extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkProductItemId')
+  @JsonKey(name: 'linkProductItemId')
   int? linkProductItemId;
 
-  @JsonKey(name: 'LinkProductId')
+  @JsonKey(name: 'linkProductId')
   int? linkProductId;
 
-  @JsonKey(name: 'ProductItem')
+  @JsonKey(name: 'productItem')
   ShopProductItem? productItem;
 
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   ShopContent? content;ShopProductProductItem();
   factory ShopProductProductItem.fromJson(Map<String, dynamic> json) => _$ShopProductProductItemFromJson(json);
 

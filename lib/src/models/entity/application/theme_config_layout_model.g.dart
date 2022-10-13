@@ -9,12 +9,12 @@ part of 'theme_config_layout_model.dart';
 ThemeConfigLayoutModel _$ThemeConfigLayoutModelFromJson(
         Map<String, dynamic> json) =>
     ThemeConfigLayoutModel()
-      ..layoutName = json['LayoutName'] as String?
-      ..layoutTheme = json['LayoutTheme'] as String?;
+      ..layoutName = json['layoutName'] as String?
+      ..layoutTheme = json['layoutTheme'] as String?;
 
 Map<String, dynamic> _$ThemeConfigLayoutModelToJson(
         ThemeConfigLayoutModel instance) =>
     <String, dynamic>{
-      'LayoutName': instance.layoutName,
-      'LayoutTheme': instance.layoutTheme,
+      'layoutName': instance.layoutName,
+      'layoutTheme': instance.layoutTheme,
     };

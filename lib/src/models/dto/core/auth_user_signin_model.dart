@@ -4,21 +4,21 @@ part 'auth_user_signin_model.g.dart';
 
 @JsonSerializable()
 class AuthUserSignInModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'Email')
+  @JsonKey(name: 'email')
   String? email;
-  @JsonKey(name: 'Mobile')
+  @JsonKey(name: 'mobile')
   String? mobile;
-  @JsonKey(name: 'Password')
+  @JsonKey(name: 'password')
   String? password;
-  @JsonKey(name: 'IsRemember')
+  @JsonKey(name: 'isRemember')
   bool? isRemember;
-  @JsonKey(name: 'SiteId')
+  @JsonKey(name: 'siteId')
   int? siteId;
-  @JsonKey(name: 'Lang')
+  @JsonKey(name: 'lang')
   String? lang;
 
   AuthUserSignInModel();

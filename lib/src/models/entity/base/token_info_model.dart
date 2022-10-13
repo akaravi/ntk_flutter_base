@@ -6,47 +6,47 @@ part 'token_info_model.g.dart';
 
 @JsonSerializable()
 class TokenInfoModel {
-  @JsonKey(name: 'Token')
+  @JsonKey(name: 'token')
   String? token;
-  @JsonKey(name: 'DeviceToken')
+  @JsonKey(name: 'deviceToken')
   String? deviceToken;
-  @JsonKey(name: 'RefreshToken')
+  @JsonKey(name: 'refreshToken')
   String? refreshToken;
-  @JsonKey(name: 'MemberId')
+  @JsonKey(name: 'memberId')
   int? memberId;
-  @JsonKey(name: 'UserId')
+  @JsonKey(name: 'userId')
   int? userId;
-  @JsonKey(name: 'SiteId')
+  @JsonKey(name: 'siteId')
   int? siteId;
-  @JsonKey(name: 'UserGroupId')
+  @JsonKey(name: 'userGroupId')
   int? userGroupId;
-  @JsonKey(name: 'UserTypeTitle')
+  @JsonKey(name: 'userTypeTitle')
   String? userTypeTitle;
-  @JsonKey(name: 'UserAccessAdminAllowToProfessionalData')
+  @JsonKey(name: 'userAccessAdminAllowToProfessionalData')
   bool? userAccessAdminAllowToProfessionalData;
-  @JsonKey(name: 'UserAccessAdminAllowToAllData')
+  @JsonKey(name: 'userAccessAdminAllowToAllData')
   bool? userAccessAdminAllowToAllData;
-  @JsonKey(name: 'UserType')
+  @JsonKey(name: 'userType')
   EnumManageUserAccessUserTypes? userType;
-  @JsonKey(name: 'UserAccessAreaType')
+  @JsonKey(name: 'userAccessAreaType')
   EnumManageUserAccessAreaTypes? userAccessAreaType;
-  @JsonKey(name: 'Username')
+  @JsonKey(name: 'username')
   String? username;
-  @JsonKey(name: 'Name')
+  @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'LastName')
+  @JsonKey(name: 'lastName')
   String? lastName;
-  @JsonKey(name: 'FullName')
+  @JsonKey(name: 'fullName')
   String? fullName;
-  @JsonKey(name: 'Language')
+  @JsonKey(name: 'language')
   String? language;
-  @JsonKey(name: 'Domain')
+  @JsonKey(name: 'domain')
   String? domain;
-  @JsonKey(name: 'SubDomain')
+  @JsonKey(name: 'subDomain')
   String? subDomain;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'PhotoUrl')
+  @JsonKey(name: 'photoUrl')
   String? photoUrl;
 
   TokenInfoModel();

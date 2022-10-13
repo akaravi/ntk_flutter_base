@@ -10,23 +10,23 @@ HyperShopOrderContentDtoModel _$HyperShopOrderContentDtoModelFromJson(
         Map<String, dynamic> json) =>
     HyperShopOrderContentDtoModel()
       ..CURRENCY_UNIT = json['CURRENCY_UNIT'] as String
-      ..code = json['Code'] as String?
-      ..name = json['Name'] as String?
-      ..memo = json['Memo'] as String?
-      ..price = (json['Price'] as num?)?.toDouble()
-      ..count = json['Count'] as int?
-      ..totalCount = json['TotalCount'] as int?
-      ..image = json['Image'] as String?;
+      ..code = json['code'] as String?
+      ..name = json['name'] as String?
+      ..memo = json['memo'] as String?
+      ..price = (json['price'] as num?)?.toDouble()
+      ..count = json['count'] as int?
+      ..totalCount = json['totalCount'] as int?
+      ..image = json['image'] as String?;
 
 Map<String, dynamic> _$HyperShopOrderContentDtoModelToJson(
         HyperShopOrderContentDtoModel instance) =>
     <String, dynamic>{
       'CURRENCY_UNIT': instance.CURRENCY_UNIT,
-      'Code': instance.code,
-      'Name': instance.name,
-      'Memo': instance.memo,
-      'Price': instance.price,
-      'Count': instance.count,
-      'TotalCount': instance.totalCount,
-      'Image': instance.image,
+      'code': instance.code,
+      'name': instance.name,
+      'memo': instance.memo,
+      'price': instance.price,
+      'count': instance.count,
+      'totalCount': instance.totalCount,
+      'image': instance.image,
     };

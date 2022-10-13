@@ -7,13 +7,13 @@ part of 'captcha_model.dart';
 // **************************************************************************
 
 CaptchaModel _$CaptchaModelFromJson(Map<String, dynamic> json) => CaptchaModel()
-  ..expire = json['Expire'] as String?
-  ..key = json['Key'] as String?
-  ..image = json['Image'] as String?;
+  ..expire = json['expire'] as String?
+  ..key = json['key'] as String?
+  ..image = json['image'] as String?;
 
 Map<String, dynamic> _$CaptchaModelToJson(CaptchaModel instance) =>
     <String, dynamic>{
-      'Expire': instance.expire,
-      'Key': instance.key,
-      'Image': instance.image,
+      'expire': instance.expire,
+      'key': instance.key,
+      'image': instance.image,
     };

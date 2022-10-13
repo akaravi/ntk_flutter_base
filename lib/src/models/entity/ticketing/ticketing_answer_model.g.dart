@@ -9,97 +9,98 @@ part of 'ticketing_answer_model.dart';
 TicketingAnswerModel _$TicketingAnswerModelFromJson(
         Map<String, dynamic> json) =>
     TicketingAnswerModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkTaskId = json['LinkTaskId'] as int?
-      ..linkMemberUserId = json['LinkMemberUserId'] as int?
-      ..htmlBody = json['HtmlBody'] as String?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkTaskId = json['linkTaskId'] as int?
+      ..linkMemberUserId = json['linkMemberUserId'] as int?
+      ..htmlBody = json['htmlBody'] as String?
       ..virtual_Ticket = json['virtual_Ticket'] == null
           ? null
           : TicketingTaskModel.fromJson(
               json['virtual_Ticket'] as Map<String, dynamic>)
-      ..ticket = json['Ticket'] == null
+      ..ticket = json['ticket'] == null
           ? null
-          : TicketingTaskModel.fromJson(json['Ticket'] as Map<String, dynamic>)
-      ..linkTicketingDepartemenId = json['LinkTicketingDepartemenId'] as int?
+          : TicketingTaskModel.fromJson(json['ticket'] as Map<String, dynamic>)
+      ..linkTicketingDepartemenId = json['linkTicketingDepartemenId'] as int?
       ..virtual_Departemen = json['virtual_Departemen'] == null
           ? null
           : TicketingDepartemenModel.fromJson(
               json['virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['Departemen'] == null
+      ..departemen = json['departemen'] == null
           ? null
           : TicketingDepartemenModel.fromJson(
-              json['Departemen'] as Map<String, dynamic>)
-      ..linkTypeOperatorId = json['LinkTypeOperatorId'] as int?
+              json['departemen'] as Map<String, dynamic>)
+      ..linkTypeOperatorId = json['linkTypeOperatorId'] as int?
       ..virtual_DepartemenOperator = json['virtual_DepartemenOperator'] == null
           ? null
           : TicketingDepartemenOperatorModel.fromJson(
               json['virtual_DepartemenOperator'] as Map<String, dynamic>)
-      ..departemenOperator = json['DepartemenOperator'] == null
+      ..departemenOperator = json['departemenOperator'] == null
           ? null
           : TicketingDepartemenOperatorModel.fromJson(
-              json['DepartemenOperator'] as Map<String, dynamic>)
-      ..linkFileIds = json['LinkFileIds'] as String?
-      ..linkFileIdsSrc = (json['LinkFileIdsSrc'] as List<dynamic>?)
+              json['departemenOperator'] as Map<String, dynamic>)
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
-      ..uploadFileGUID = (json['UploadFileGUID'] as List<dynamic>?)
+      ..uploadFileGUID = (json['uploadFileGUID'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList();
 
 Map<String, dynamic> _$TicketingAnswerModelToJson(
         TicketingAnswerModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkTaskId': instance.linkTaskId,
-      'LinkMemberUserId': instance.linkMemberUserId,
-      'HtmlBody': instance.htmlBody,
+      'linkSiteId': instance.linkSiteId,
+      'linkTaskId': instance.linkTaskId,
+      'linkMemberUserId': instance.linkMemberUserId,
+      'htmlBody': instance.htmlBody,
       'virtual_Ticket': instance.virtual_Ticket,
-      'Ticket': instance.ticket,
-      'LinkTicketingDepartemenId': instance.linkTicketingDepartemenId,
+      'ticket': instance.ticket,
+      'linkTicketingDepartemenId': instance.linkTicketingDepartemenId,
       'virtual_Departemen': instance.virtual_Departemen,
-      'Departemen': instance.departemen,
-      'LinkTypeOperatorId': instance.linkTypeOperatorId,
+      'departemen': instance.departemen,
+      'linkTypeOperatorId': instance.linkTypeOperatorId,
       'virtual_DepartemenOperator': instance.virtual_DepartemenOperator,
-      'DepartemenOperator': instance.departemenOperator,
-      'LinkFileIds': instance.linkFileIds,
-      'LinkFileIdsSrc': instance.linkFileIdsSrc,
-      'UploadFileGUID': instance.uploadFileGUID,
+      'departemenOperator': instance.departemenOperator,
+      'linkFileIds': instance.linkFileIds,
+      'linkFileIdsSrc': instance.linkFileIdsSrc,
+      'uploadFileGUID': instance.uploadFileGUID,
     };
 
 const _$EnumRecordStatusEnumMap = {

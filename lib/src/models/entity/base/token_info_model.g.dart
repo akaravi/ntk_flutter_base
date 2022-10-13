@@ -8,57 +8,57 @@ part of 'token_info_model.dart';
 
 TokenInfoModel _$TokenInfoModelFromJson(Map<String, dynamic> json) =>
     TokenInfoModel()
-      ..token = json['Token'] as String?
-      ..deviceToken = json['DeviceToken'] as String?
-      ..refreshToken = json['RefreshToken'] as String?
-      ..memberId = json['MemberId'] as int?
-      ..userId = json['UserId'] as int?
-      ..siteId = json['SiteId'] as int?
-      ..userGroupId = json['UserGroupId'] as int?
-      ..userTypeTitle = json['UserTypeTitle'] as String?
+      ..token = json['token'] as String?
+      ..deviceToken = json['deviceToken'] as String?
+      ..refreshToken = json['refreshToken'] as String?
+      ..memberId = json['memberId'] as int?
+      ..userId = json['userId'] as int?
+      ..siteId = json['siteId'] as int?
+      ..userGroupId = json['userGroupId'] as int?
+      ..userTypeTitle = json['userTypeTitle'] as String?
       ..userAccessAdminAllowToProfessionalData =
-          json['UserAccessAdminAllowToProfessionalData'] as bool?
+          json['userAccessAdminAllowToProfessionalData'] as bool?
       ..userAccessAdminAllowToAllData =
-          json['UserAccessAdminAllowToAllData'] as bool?
+          json['userAccessAdminAllowToAllData'] as bool?
       ..userType = $enumDecodeNullable(
-          _$EnumManageUserAccessUserTypesEnumMap, json['UserType'])
+          _$EnumManageUserAccessUserTypesEnumMap, json['userType'])
       ..userAccessAreaType = $enumDecodeNullable(
-          _$EnumManageUserAccessAreaTypesEnumMap, json['UserAccessAreaType'])
-      ..username = json['Username'] as String?
-      ..name = json['Name'] as String?
-      ..lastName = json['LastName'] as String?
-      ..fullName = json['FullName'] as String?
-      ..language = json['Language'] as String?
-      ..domain = json['Domain'] as String?
-      ..subDomain = json['SubDomain'] as String?
-      ..title = json['Title'] as String?
-      ..photoUrl = json['PhotoUrl'] as String?;
+          _$EnumManageUserAccessAreaTypesEnumMap, json['userAccessAreaType'])
+      ..username = json['username'] as String?
+      ..name = json['name'] as String?
+      ..lastName = json['lastName'] as String?
+      ..fullName = json['fullName'] as String?
+      ..language = json['language'] as String?
+      ..domain = json['domain'] as String?
+      ..subDomain = json['subDomain'] as String?
+      ..title = json['title'] as String?
+      ..photoUrl = json['photoUrl'] as String?;
 
 Map<String, dynamic> _$TokenInfoModelToJson(TokenInfoModel instance) =>
     <String, dynamic>{
-      'Token': instance.token,
-      'DeviceToken': instance.deviceToken,
-      'RefreshToken': instance.refreshToken,
-      'MemberId': instance.memberId,
-      'UserId': instance.userId,
-      'SiteId': instance.siteId,
-      'UserGroupId': instance.userGroupId,
-      'UserTypeTitle': instance.userTypeTitle,
-      'UserAccessAdminAllowToProfessionalData':
+      'token': instance.token,
+      'deviceToken': instance.deviceToken,
+      'refreshToken': instance.refreshToken,
+      'memberId': instance.memberId,
+      'userId': instance.userId,
+      'siteId': instance.siteId,
+      'userGroupId': instance.userGroupId,
+      'userTypeTitle': instance.userTypeTitle,
+      'userAccessAdminAllowToProfessionalData':
           instance.userAccessAdminAllowToProfessionalData,
-      'UserAccessAdminAllowToAllData': instance.userAccessAdminAllowToAllData,
-      'UserType': _$EnumManageUserAccessUserTypesEnumMap[instance.userType],
-      'UserAccessAreaType':
+      'userAccessAdminAllowToAllData': instance.userAccessAdminAllowToAllData,
+      'userType': _$EnumManageUserAccessUserTypesEnumMap[instance.userType],
+      'userAccessAreaType':
           _$EnumManageUserAccessAreaTypesEnumMap[instance.userAccessAreaType],
-      'Username': instance.username,
-      'Name': instance.name,
-      'LastName': instance.lastName,
-      'FullName': instance.fullName,
-      'Language': instance.language,
-      'Domain': instance.domain,
-      'SubDomain': instance.subDomain,
-      'Title': instance.title,
-      'PhotoUrl': instance.photoUrl,
+      'username': instance.username,
+      'name': instance.name,
+      'lastName': instance.lastName,
+      'fullName': instance.fullName,
+      'language': instance.language,
+      'domain': instance.domain,
+      'subDomain': instance.subDomain,
+      'title': instance.title,
+      'photoUrl': instance.photoUrl,
     };
 
 const _$EnumManageUserAccessUserTypesEnumMap = {

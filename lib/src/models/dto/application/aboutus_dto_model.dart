@@ -4,67 +4,67 @@ part 'aboutus_dto_model.g.dart';
 
 @JsonSerializable()
 class AboutUsDtoModel {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   int? id;
-  @JsonKey(name: 'TitleWebUrl')
+  @JsonKey(name: 'titleWebUrl')
   String? titleWebUrl;
-  @JsonKey(name: 'WebUrl')
+  @JsonKey(name: 'webUrl')
   String? webUrl;
-  @JsonKey(name: 'TitleLogoUrl')
+  @JsonKey(name: 'titleLogoUrl')
   String? titleLogoUrl;
-  @JsonKey(name: 'LogoUrl')
+  @JsonKey(name: 'logoUrl')
   String? logoUrl;
-  @JsonKey(name: 'TitleContent')
+  @JsonKey(name: 'titleContent')
   String? titleContent;
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   String? content;
-  @JsonKey(name: 'TitleEmail')
+  @JsonKey(name: 'titleEmail')
   String? titleEmail;
-  @JsonKey(name: 'Email')
+  @JsonKey(name: 'email')
   String? email;
-  @JsonKey(name: 'TitleInstagram')
+  @JsonKey(name: 'titleInstagram')
   String? titleInstagram;
-  @JsonKey(name: 'Instagram')
+  @JsonKey(name: 'instagram')
   String? instagram;
-  @JsonKey(name: 'TitleTelegram')
+  @JsonKey(name: 'titleTelegram')
   String? titleTelegram;
-  @JsonKey(name: 'Telegram')
+  @JsonKey(name: 'telegram')
   String? telegram;
-  @JsonKey(name: 'TitleTel1')
+  @JsonKey(name: 'titleTel1')
   String? titleTel1;
-  @JsonKey(name: 'Tel1')
+  @JsonKey(name: 'tel1')
   String? tel1;
-  @JsonKey(name: 'TitleTel2')
+  @JsonKey(name: 'titleTel2')
   String? titleTel2;
-  @JsonKey(name: 'Tel2')
+  @JsonKey(name: 'tel2')
   String? tel2;
-  @JsonKey(name: 'TitleOfficeNo')
+  @JsonKey(name: 'titleOfficeNo')
   String? titleOfficeNo;
-  @JsonKey(name: 'OfficeNo')
+  @JsonKey(name: 'officeNo')
   String? officeNo;
-  @JsonKey(name: 'TitleMobileNo')
+  @JsonKey(name: 'titleMobileNo')
   String? titleMobileNo;
-  @JsonKey(name: 'MobileNo')
+  @JsonKey(name: 'mobileNo')
   String? mobileNo;
-  @JsonKey(name: 'TitleAddress')
+  @JsonKey(name: 'titleAddress')
   String? titleAddress;
-  @JsonKey(name: 'Address')
+  @JsonKey(name: 'address')
   String? address;
-  @JsonKey(name: 'TitleFaceBook')
+  @JsonKey(name: 'titleFaceBook')
   String? titleFaceBook;
-  @JsonKey(name: 'FaceBook')
+  @JsonKey(name: 'faceBook')
   String? faceBook;
-  @JsonKey(name: 'TitleTwitter')
+  @JsonKey(name: 'titleTwitter')
   String? titleTwitter;
-  @JsonKey(name: 'Twitter')
+  @JsonKey(name: 'twitter')
   String? twitter;
-  @JsonKey(name: 'TitlePlayStore')
+  @JsonKey(name: 'titlePlayStore')
   String? titlePlayStore;
-  @JsonKey(name: 'PlayStore')
+  @JsonKey(name: 'playStore')
   String? playStore;
-  @JsonKey(name: 'TitleYoutube')
+  @JsonKey(name: 'titleYoutube')
   String? titleYoutube;
-  @JsonKey(name: 'Youtube')
+  @JsonKey(name: 'youtube')
   String? youtube;
 
   AboutUsDtoModel();

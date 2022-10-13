@@ -9,35 +9,35 @@ part 'application_theme_config_model.g.dart';
 
 @JsonSerializable()
 class ApplicationThemeConfigModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'TypeId')
+  @JsonKey(name: 'typeId')
   String? typeId;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkSourceId')
+  @JsonKey(name: 'linkSourceId')
   int? linkSourceId;
   @JsonKey(name: ' virtual_Source')
   ApplicationSourceModel? virtual_Source;
   @JsonKey(name: 'source')
   ApplicationSourceModel? source;
-  @JsonKey(name: 'ThemeConfigBuilderJsonValues')
+  @JsonKey(name: 'themeConfigBuilderJsonValues')
   String? themeConfigBuilderJsonValues;
-  @JsonKey(name: 'ThemeConfigRuntimeJsonValues')
+  @JsonKey(name: 'themeConfigRuntimeJsonValues')
   String? themeConfigRuntimeJsonValues;
-  @JsonKey(name: 'ThemeConfigLayoutJsonValues')
+  @JsonKey(name: 'themeConfigLayoutJsonValues')
   String? themeConfigLayoutJsonValues;
-  @JsonKey(name: 'ThemeConfigJsonValues')
+  @JsonKey(name: 'themeConfigJsonValues')
   String? themeConfigJsonValues;
-  @JsonKey(name: 'ThemeConfigLayouts')
+  @JsonKey(name: 'themeConfigLayouts')
   List<ThemeConfigLayoutModel>? themeConfigLayouts;
-  @JsonKey(name: 'Applications')
+  @JsonKey(name: 'applications')
   List<ApplicationAppModel>? applications;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
   ApplicationThemeConfigModel();
   factory ApplicationThemeConfigModel.fromJson(Map<String, dynamic> json) =>

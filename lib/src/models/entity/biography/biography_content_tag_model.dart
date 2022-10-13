@@ -5,13 +5,13 @@ part 'biography_content_tag_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentTagModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
-  @JsonKey(name: 'LinkTagId')
+  @JsonKey(name: 'linkTagId')
   int? linkTagId;
   @JsonKey(name: 'virtual_ModuleContent')
   Object? virtual_ModuleContent;
-  @JsonKey(name: 'ModuleContent')
+  @JsonKey(name: 'moduleContent')
   Object? moduleContent;
 
   BiographyContentTagModel();

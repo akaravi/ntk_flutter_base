@@ -4,9 +4,9 @@ part 'score_click_dto_model.g.dart';
 
 @JsonSerializable()
 class ScoreClickDtoModel {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   int? id;
-  @JsonKey(name: 'ScorePercent')
+  @JsonKey(name: 'scorePercent')
   int? scorePercent;
 
   ScoreClickDtoModel();

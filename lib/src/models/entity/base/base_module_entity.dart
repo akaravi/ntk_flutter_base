@@ -6,6 +6,6 @@ part 'base_module_entity.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class BaseModuleEntity<TKey> extends BaseEntity<TKey> {
-  @JsonKey(name: 'LinkSiteId')
+  @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
 }

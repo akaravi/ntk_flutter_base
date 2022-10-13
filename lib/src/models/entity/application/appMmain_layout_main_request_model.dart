@@ -5,29 +5,29 @@ part 'appMmain_layout_main_request_model.g.dart';
 
 @JsonSerializable()
 class AppMainLayoutMainRequestModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'UserId')
+  @JsonKey(name: 'userId')
   int? userId;
-  @JsonKey(name: 'MemberUserId')
+  @JsonKey(name: 'memberUserId')
   int? memberUserId;
-  @JsonKey(name: 'SiteId')
+  @JsonKey(name: 'siteId')
   int? siteId;
-  @JsonKey(name: 'AppTitle')
+  @JsonKey(name: 'appTitle')
   String? appTitle;
-  @JsonKey(name: 'AppUrl')
+  @JsonKey(name: 'appUrl')
   String? appUrl;
-  @JsonKey(name: 'AppId')
+  @JsonKey(name: 'appId')
   int? appId;
-  @JsonKey(name: 'AppVersion')
+  @JsonKey(name: 'appVersion')
   int? appVersion;
-  @JsonKey(name: 'LastUpdateSource')
+  @JsonKey(name: 'lastUpdateSource')
   String? lastUpdateSource;
-  @JsonKey(name: 'LastUpdateTheme')
+  @JsonKey(name: 'lastUpdateTheme')
   String? lastUpdateTheme;
-  @JsonKey(name: 'LastUpdateApp')
+  @JsonKey(name: 'lastUpdateApp')
   String? lastUpdateApp;
-  @JsonKey(name: 'AppForceUpdate')
+  @JsonKey(name: 'appForceUpdate')
   bool? appForceUpdate;
-  @JsonKey(name: 'AppThemeId')
+  @JsonKey(name: 'appThemeId')
   int? appThemeId;
   AppMainLayoutMainRequestModel();
   factory AppMainLayoutMainRequestModel.fromJson(Map<String, dynamic> json) =>

@@ -4,10 +4,10 @@ part 'searchbox_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class SearchBoxThemeDtoModel {
-  @JsonKey(name: 'BgColor')
+  @JsonKey(name: 'bgColor')
   String? bgColor;
 
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
 
   SearchBoxThemeDtoModel();

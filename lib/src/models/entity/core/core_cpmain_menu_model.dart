@@ -5,37 +5,37 @@ part 'core_cpmain_menu_model.g.dart';
 
 @JsonSerializable()
 class CoreCpMainMenuModel {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'Color')
+  @JsonKey(name: 'color')
   String? color;
-  @JsonKey(name: 'TitleEn')
+  @JsonKey(name: 'titleEn')
   String? titleEn;
-  @JsonKey(name: 'Icon')
+  @JsonKey(name: 'icon')
   String? icon;
-  @JsonKey(name: 'AddressLink')
+  @JsonKey(name: 'addressLink')
   String? addressLink;
-  @JsonKey(name: 'RouteAddressLink')
+  @JsonKey(name: 'routeAddressLink')
   String? routeAddressLink;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   int? linkParentId;
-  @JsonKey(name: 'LinkModuleId')
+  @JsonKey(name: 'linkModuleId')
   int? linkModuleId;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'ShowInMenu')
+  @JsonKey(name: 'showInMenu')
   int? showInMenu;
-  @JsonKey(name: 'ShowInMenuOrder')
+  @JsonKey(name: 'showInMenuOrder')
   int? showInMenuOrder;
-  @JsonKey(name: 'ShowInAccessAdminAllowToProfessionalData')
+  @JsonKey(name: 'showInAccessAdminAllowToProfessionalData')
   bool? showInAccessAdminAllowToProfessionalData;
-  @JsonKey(name: 'MenuPlaceType')
+  @JsonKey(name: 'menuPlaceType')
   EnumMenuPlaceType? menuPlaceType;
-  @JsonKey(name: 'Children')
+  @JsonKey(name: 'children')
   List<CoreCpMainMenuModel>? children;
   CoreCpMainMenuModel();
   factory CoreCpMainMenuModel.fromJson(Map<String, dynamic> json) =>

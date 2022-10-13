@@ -11,27 +11,27 @@ part 'shop_product_process.g.dart';
 
 @JsonSerializable()
 class ShopProductProcess extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'AddToInvoicePrint')
+  @JsonKey(name: 'addToInvoicePrint')
   bool? addToInvoicePrint;
-  @JsonKey(name: 'CheckInventory')
+  @JsonKey(name: 'checkInventory')
   bool? checkInventory;
-  @JsonKey(name: 'CurrentInventory')
+  @JsonKey(name: 'currentInventory')
   double? currentInventory;
-  @JsonKey(name: 'LinkExternalPaymentProcessCustomizeId')
+  @JsonKey(name: 'linkExternalPaymentProcessCustomizeId')
   int? linkExternalPaymentProcessCustomizeId;
-  @JsonKey(name: 'ExternalPaymentProcessInputFormSiteAdminClassJsonFormValues')
+  @JsonKey(name: 'externalPaymentProcessInputFormSiteAdminClassJsonFormValues')
   String? externalPaymentProcessInputFormSiteAdminClassJsonFormValues;
-  @JsonKey(name: 'Price')
+  @JsonKey(name: 'price')
   double? price;
-  @JsonKey(name: 'ProductSalePrices')
+  @JsonKey(name: 'productSalePrices')
   List<ShopProductSalePrice>? productSalePrices;
-  @JsonKey(name: 'InvoiceSaleDetails')
+  @JsonKey(name: 'invoiceSaleDetails')
   List<ShopInvoiceSaleDetail>? invoiceSaleDetails;
-  @JsonKey(name: 'ProductProductProcesses')
+  @JsonKey(name: 'productProductProcesses')
   List<ShopProductProductProcess>? productProductProcesses;ShopProductProcess();
   factory ShopProductProcess.fromJson(Map<String, dynamic> json) => _$ShopProductProcessFromJson(json);
 

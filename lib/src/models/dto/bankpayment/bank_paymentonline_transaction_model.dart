@@ -4,11 +4,11 @@ part 'bank_paymentonline_transaction_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentOnlineTransactionModel {
-  @JsonKey(name: 'LinkOrderId')
+  @JsonKey(name: 'linkOrderId')
   int? linkOrderId;
-  @JsonKey(name: 'BankPaymentPrivateId')
+  @JsonKey(name: 'bankPaymentPrivateId')
   int? bankPaymentPrivateId;
-  @JsonKey(name: 'UrlToPay')
+  @JsonKey(name: 'urlToPay')
   String? urlToPay;
 
   BankPaymentOnlineTransactionModel();

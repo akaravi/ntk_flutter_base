@@ -4,11 +4,11 @@ part 'hypershop_order_payment_dto_model.g.dart';
 
 @JsonSerializable()
 class HyperShopOrderPaymentDtoModel {
-  @JsonKey(name: 'LinkOrderId')
+  @JsonKey(name: 'linkOrderId')
   int? linkOrderId;
-  @JsonKey(name: 'BankPaymentPrivateId')
+  @JsonKey(name: 'bankPaymentPrivateId')
   int? bankPaymentPrivateId;
-  @JsonKey(name: 'LastUrlAddressInUse')
+  @JsonKey(name: 'lastUrlAddressInUse')
   String? lastUrlAddressInUse;
 
   HyperShopOrderPaymentDtoModel();

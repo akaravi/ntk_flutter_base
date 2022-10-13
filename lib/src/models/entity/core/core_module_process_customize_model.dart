@@ -8,24 +8,24 @@ part 'core_module_process_customize_model.g.dart';
 
 @JsonSerializable()
 class CoreModuleProcessCustomizeModel extends BaseEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleEn')
+  @JsonKey(name: 'titleEn')
   String? titleEn;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkModuleProcessId')
+  @JsonKey(name: 'linkModuleProcessId')
   int? linkModuleProcessId;
 
   @JsonKey(name: 'virtual_CmsModuleProcess')
   CoreModuleProcessModel? virtual_CmsModuleProcess;
-  @JsonKey(name: 'CmsModuleProcess')
+  @JsonKey(name: 'cmsModuleProcess')
   CoreModuleProcessModel? cmsModuleProcess;
-  @JsonKey(name: 'ProcessInputCustomizeValue')
+  @JsonKey(name: 'processInputCustomizeValue')
   String? processInputCustomizeValue;
-  @JsonKey(name: 'ProcessInputValueForm')
+  @JsonKey(name: 'processInputValueForm')
   String? processInputValueForm;
-  @JsonKey(name: 'LinkProcessCustomizeDependenceBeforRunId')
+  @JsonKey(name: 'linkProcessCustomizeDependenceBeforRunId')
   int? linkProcessCustomizeDependenceBeforRunId;
 
   CoreModuleProcessCustomizeModel();

@@ -10,13 +10,13 @@ part 'estate_property_type_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyTypeModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'LinkPropertyTypeLanduseId')
+  @JsonKey(name: 'linkPropertyTypeLanduseId')
   String? linkPropertyTypeLanduseId;
-  @JsonKey(name: 'LinkPropertyTypeUsageId')
+  @JsonKey(name: 'linkPropertyTypeUsageId')
   String? linkPropertyTypeUsageId;
-  @JsonKey(name: 'PropertyTypeLanduse')
+  @JsonKey(name: 'propertyTypeLanduse')
   EstatePropertyTypeLanduseModel? propertyTypeLanduse;
-  @JsonKey(name: 'PropertyTypeUsage')
+  @JsonKey(name: 'propertyTypeUsage')
   EstatePropertyTypeUsageModel? propertyTypeUsage;EstatePropertyTypeModel();
   factory EstatePropertyTypeModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyTypeModelFromJson(json);
 

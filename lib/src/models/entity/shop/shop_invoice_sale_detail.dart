@@ -14,59 +14,59 @@ part 'shop_invoice_sale_detail.g.dart';
 
 @JsonSerializable()
 class ShopInvoiceSaleDetail extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkInvoiceSaleId')
+  @JsonKey(name: 'linkInvoiceSaleId')
   int? linkInvoiceSaleId;
 
   @JsonKey(name: 'virtual_InvoiceSale')
   ShopInvoiceSale? virtual_InvoiceSale;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   int? linkParentId;
 
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
   @JsonKey(name: 'virtual_Content')
   ShopContent? virtual_Content;
 
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   ShopContent? content;
-  @JsonKey(name: 'LinkProductItemId')
+  @JsonKey(name: 'linkProductItemId')
   int? linkProductItemId;
   @JsonKey(name: 'virtual_ProductItem')
   ShopProductItem? virtual_ProductItem;
-  @JsonKey(name: 'LinkProductCombineId')
+  @JsonKey(name: 'linkProductCombineId')
   int? linkProductCombineId;
   @JsonKey(name: 'virtual_ProductCombine')
   ShopProductCombine? virtual_ProductCombine;
 
-  @JsonKey(name: 'ProductProcessInputFormEndUserClassJsonFormValues')
+  @JsonKey(name: 'productProcessInputFormEndUserClassJsonFormValues')
   String? productProcessInputFormEndUserClassJsonFormValues;
 
-  @JsonKey(name: 'LinkProductProcessId')
+  @JsonKey(name: 'linkProductProcessId')
   int? linkProductProcessId;
   @JsonKey(name: 'virtual_ProductProcess')
   ShopProductProcess? virtual_ProductProcess;
 
-  @JsonKey(name: 'LinkProductServiceId')
+  @JsonKey(name: 'linkProductServiceId')
   int? linkProductServiceId;
   @JsonKey(name: 'virtual_ProductService')
   ShopProductService? virtual_ProductService;
 
-  @JsonKey(name: 'Quantity')
+  @JsonKey(name: 'quantity')
   double? quantity;
-  @JsonKey(name: 'Fee')
+  @JsonKey(name: 'fee')
   double? fee;
-  @JsonKey(name: 'Tax')
+  @JsonKey(name: 'tax')
   double? tax;
-  @JsonKey(name: 'SumRow')
+  @JsonKey(name: 'sumRow')
   double? sumRow;
 
-  @JsonKey(name: 'LinkExternalModuleContentId')
+  @JsonKey(name: 'linkExternalModuleContentId')
   int? linkExternalModuleContentId;
 
-  @JsonKey(name: 'CreatorIsExternalModule')
+  @JsonKey(name: 'creatorIsExternalModule')
   bool? creatorIsExternalModule;
 
-  @JsonKey(name: 'Children')
+  @JsonKey(name: 'children')
   List<ShopInvoiceSaleDetail>? children;ShopInvoiceSaleDetail();
   factory ShopInvoiceSaleDetail.fromJson(Map<String, dynamic> json) => _$ShopInvoiceSaleDetailFromJson(json);
 

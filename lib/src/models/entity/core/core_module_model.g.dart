@@ -8,48 +8,48 @@ part of 'core_module_model.dart';
 
 CoreModuleModel _$CoreModuleModelFromJson(Map<String, dynamic> json) =>
     CoreModuleModel()
-      ..title = json['Title'] as String?
-      ..titleML = json['TitleML'] as String?
-      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
-      ..className = json['ClassName'] as String?
-      ..description = json['Description'] as String?
-      ..administratorIsActivate = json['AdministratorIsActivate'] as bool?
-      ..moduleConfigAdminMainJson = json['ModuleConfigAdminMainJson'] as String?
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..className = json['className'] as String?
+      ..description = json['description'] as String?
+      ..administratorIsActivate = json['administratorIsActivate'] as bool?
+      ..moduleConfigAdminMainJson = json['moduleConfigAdminMainJson'] as String?
       ..moduleConfigAdminMainJsonForm =
-          json['ModuleConfigAdminMainJsonForm'] as String?
+          json['moduleConfigAdminMainJsonForm'] as String?
       ..moduleConfigSiteAccessDefaultJson =
-          json['ModuleConfigSiteAccessDefaultJson'] as String?
+          json['moduleConfigSiteAccessDefaultJson'] as String?
       ..moduleConfigSiteAccessJsonFrom =
-          json['ModuleConfigSiteAccessJsonFrom'] as String?
+          json['moduleConfigSiteAccessJsonFrom'] as String?
       ..moduleConfigSiteDefaultJson =
-          json['ModuleConfigSiteDefaultJson'] as String?
-      ..moduleConfigSiteJsonForm = json['ModuleConfigSiteJsonForm'] as String?
+          json['moduleConfigSiteDefaultJson'] as String?
+      ..moduleConfigSiteJsonForm = json['moduleConfigSiteJsonForm'] as String?
       ..moduleSiteStorageValuesJsonForm =
-          json['ModuleSiteStorageValuesJsonForm'] as String?
-      ..moduleSites = json['ModuleSites'] as String?
-      ..cmsCpMainMenu = json['CmsCpMainMenu'] as String?
-      ..cmsModuleProcess = json['CmsModuleProcess'] as String?
-      ..cmsSiteCategoryCmsModule = json['CmsSiteCategoryCmsModule'] as String?;
+          json['moduleSiteStorageValuesJsonForm'] as String?
+      ..moduleSites = json['moduleSites'] as String?
+      ..cmsCpMainMenu = json['cmsCpMainMenu'] as String?
+      ..cmsModuleProcess = json['cmsModuleProcess'] as String?
+      ..cmsSiteCategoryCmsModule = json['cmsSiteCategoryCmsModule'] as String?;
 
 Map<String, dynamic> _$CoreModuleModelToJson(CoreModuleModel instance) =>
     <String, dynamic>{
-      'Title': instance.title,
-      'TitleML': instance.titleML,
-      'TitleResourceLanguage': instance.titleResourceLanguage,
-      'ClassName': instance.className,
-      'Description': instance.description,
-      'AdministratorIsActivate': instance.administratorIsActivate,
-      'ModuleConfigAdminMainJson': instance.moduleConfigAdminMainJson,
-      'ModuleConfigAdminMainJsonForm': instance.moduleConfigAdminMainJsonForm,
-      'ModuleConfigSiteAccessDefaultJson':
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'className': instance.className,
+      'description': instance.description,
+      'administratorIsActivate': instance.administratorIsActivate,
+      'moduleConfigAdminMainJson': instance.moduleConfigAdminMainJson,
+      'moduleConfigAdminMainJsonForm': instance.moduleConfigAdminMainJsonForm,
+      'moduleConfigSiteAccessDefaultJson':
           instance.moduleConfigSiteAccessDefaultJson,
-      'ModuleConfigSiteAccessJsonFrom': instance.moduleConfigSiteAccessJsonFrom,
-      'ModuleConfigSiteDefaultJson': instance.moduleConfigSiteDefaultJson,
-      'ModuleConfigSiteJsonForm': instance.moduleConfigSiteJsonForm,
-      'ModuleSiteStorageValuesJsonForm':
+      'moduleConfigSiteAccessJsonFrom': instance.moduleConfigSiteAccessJsonFrom,
+      'moduleConfigSiteDefaultJson': instance.moduleConfigSiteDefaultJson,
+      'moduleConfigSiteJsonForm': instance.moduleConfigSiteJsonForm,
+      'moduleSiteStorageValuesJsonForm':
           instance.moduleSiteStorageValuesJsonForm,
-      'ModuleSites': instance.moduleSites,
-      'CmsCpMainMenu': instance.cmsCpMainMenu,
-      'CmsModuleProcess': instance.cmsModuleProcess,
-      'CmsSiteCategoryCmsModule': instance.cmsSiteCategoryCmsModule,
+      'moduleSites': instance.moduleSites,
+      'cmsCpMainMenu': instance.cmsCpMainMenu,
+      'cmsModuleProcess': instance.cmsModuleProcess,
+      'cmsSiteCategoryCmsModule': instance.cmsSiteCategoryCmsModule,
     };

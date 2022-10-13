@@ -9,16 +9,16 @@ part of 'bank_payment_inject_calculate_model.dart';
 BankPaymentInjectCalculateModel _$BankPaymentInjectCalculateModelFromJson(
         Map<String, dynamic> json) =>
     BankPaymentInjectCalculateModel()
-      ..amount = (json['Amount'] as num?)?.toDouble()
-      ..feeTax = (json['FeeTax'] as num?)?.toDouble()
-      ..feeTransport = (json['FeeTransport'] as num?)?.toDouble()
-      ..amountPure = (json['AmountPure'] as num?)?.toDouble();
+      ..amount = (json['amount'] as num?)?.toDouble()
+      ..feeTax = (json['feeTax'] as num?)?.toDouble()
+      ..feeTransport = (json['feeTransport'] as num?)?.toDouble()
+      ..amountPure = (json['amountPure'] as num?)?.toDouble();
 
 Map<String, dynamic> _$BankPaymentInjectCalculateModelToJson(
         BankPaymentInjectCalculateModel instance) =>
     <String, dynamic>{
-      'Amount': instance.amount,
-      'FeeTax': instance.feeTax,
-      'FeeTransport': instance.feeTransport,
-      'AmountPure': instance.amountPure,
+      'amount': instance.amount,
+      'feeTax': instance.feeTax,
+      'feeTransport': instance.feeTransport,
+      'amountPure': instance.amountPure,
     };

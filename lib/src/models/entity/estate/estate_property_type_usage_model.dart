@@ -9,20 +9,20 @@ part 'estate_property_type_usage_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyTypeUsageModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
 
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'IconFont')
+  @JsonKey(name: 'iconFont')
   String? iconFont;
-  @JsonKey(name: 'IconColor')
+  @JsonKey(name: 'iconColor')
   String? iconColor;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'PropertyTypes')
+  @JsonKey(name: 'propertyTypes')
   List<EstatePropertyTypeModel>? propertyTypes;EstatePropertyTypeUsageModel();
   factory EstatePropertyTypeUsageModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyTypeUsageModelFromJson(json);
 

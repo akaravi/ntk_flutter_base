@@ -5,19 +5,19 @@ part 'biography_content_other_info_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentOtherInfoModel {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'HtmlBody')
+  @JsonKey(name: 'htmlBody')
   String? htmlBody;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
-  @JsonKey(name: 'TypeId')
+  @JsonKey(name: 'typeId')
   int? typeId;
   @JsonKey(name: 'virtual_Content')
   BiographyContentModel? virtual_Content;
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   BiographyContentModel? content;
   BiographyContentOtherInfoModel();
   factory BiographyContentOtherInfoModel.fromJson(Map<String, dynamic> json) =>

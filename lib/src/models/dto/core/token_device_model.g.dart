@@ -8,21 +8,21 @@ part of 'token_device_model.dart';
 
 TokenDeviceModel _$TokenDeviceModelFromJson(Map<String, dynamic> json) =>
     TokenDeviceModel()
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkDeviceId = json['LinkDeviceId'] as int?
-      ..linkApplicationId = json['LinkApplicationId'] as int?
-      ..rememberOnDevice = json['RememberOnDevice'] as bool?
-      ..currentSiteDomainUrl = json['CurrentSiteDomainUrl'] as String?
-      ..deviceToken = json['DeviceToken'] as String?
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkDeviceId = json['linkDeviceId'] as int?
+      ..linkApplicationId = json['linkApplicationId'] as int?
+      ..rememberOnDevice = json['rememberOnDevice'] as bool?
+      ..currentSiteDomainUrl = json['currentSiteDomainUrl'] as String?
+      ..deviceToken = json['deviceToken'] as String?
       ..tokenExpireDate = json['tokenExpireDate'] as String?;
 
 Map<String, dynamic> _$TokenDeviceModelToJson(TokenDeviceModel instance) =>
     <String, dynamic>{
-      'LinkSiteId': instance.linkSiteId,
-      'LinkDeviceId': instance.linkDeviceId,
-      'LinkApplicationId': instance.linkApplicationId,
-      'RememberOnDevice': instance.rememberOnDevice,
-      'CurrentSiteDomainUrl': instance.currentSiteDomainUrl,
-      'DeviceToken': instance.deviceToken,
+      'linkSiteId': instance.linkSiteId,
+      'linkDeviceId': instance.linkDeviceId,
+      'linkApplicationId': instance.linkApplicationId,
+      'rememberOnDevice': instance.rememberOnDevice,
+      'currentSiteDomainUrl': instance.currentSiteDomainUrl,
+      'deviceToken': instance.deviceToken,
       'tokenExpireDate': instance.tokenExpireDate,
     };

@@ -8,100 +8,101 @@ part of 'application_app_model.dart';
 
 ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
     ApplicationAppModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..appKey = json['AppKey'] as String?
-      ..lang = $enumDecodeNullable(_$EnumLanguageEnumMap, json['Lang'])
-      ..expireDate = json['ExpireDate'] == null
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..appKey = json['appKey'] as String?
+      ..lang = $enumDecodeNullable(_$EnumLanguageEnumMap, json['lang'])
+      ..expireDate = json['expireDate'] == null
           ? null
-          : DateTime.parse(json['ExpireDate'] as String)
-      ..linkFileIdIcon = json['LinkFileIdIcon'] as int?
-      ..linkFileIdLogo = json['LinkFileIdLogo'] as int?
-      ..linkFileIdSplashScreen = json['LinkFileIdSplashScreen'] as int?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..appVersion = json['AppVersion'] as int?
-      ..isPublished = json['IsPublished'] as bool?
-      ..linkSourceId = json['LinkSourceId'] as int?
-      ..virtual_Source = json['Virtual_Source'] == null
-          ? null
-          : ApplicationSourceModel.fromJson(
-              json['Virtual_Source'] as Map<String, dynamic>)
-      ..source = json['Source'] == null
+          : DateTime.parse(json['expireDate'] as String)
+      ..linkFileIdIcon = json['linkFileIdIcon'] as int?
+      ..linkFileIdLogo = json['linkFileIdLogo'] as int?
+      ..linkFileIdSplashScreen = json['linkFileIdSplashScreen'] as int?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..appVersion = json['appVersion'] as int?
+      ..isPublished = json['isPublished'] as bool?
+      ..linkSourceId = json['linkSourceId'] as int?
+      ..virtual_Source = json['virtual_Source'] == null
           ? null
           : ApplicationSourceModel.fromJson(
-              json['Source'] as Map<String, dynamic>)
-      ..downloadCount = json['DownloadCount'] as int?
-      ..isGlobalUser = json['IsGlobalUser'] as bool?
-      ..checkUpdate = json['CheckUpdate'] as bool?
-      ..forceUpdate = json['ForceUpdate'] as bool?
-      ..allowDirectShareApp = json['AllowDirectShareApp'] as bool?
-      ..lastBuildAppKey = json['LastBuildAppKey'] as String?
+              json['virtual_Source'] as Map<String, dynamic>)
+      ..source = json['source'] == null
+          ? null
+          : ApplicationSourceModel.fromJson(
+              json['source'] as Map<String, dynamic>)
+      ..downloadCount = json['downloadCount'] as int?
+      ..isGlobalUser = json['isGlobalUser'] as bool?
+      ..checkUpdate = json['checkUpdate'] as bool?
+      ..forceUpdate = json['forceUpdate'] as bool?
+      ..allowDirectShareApp = json['allowDirectShareApp'] as bool?
+      ..lastBuildAppKey = json['lastBuildAppKey'] as String?
       ..lastBuildStatus = $enumDecodeNullable(
-          _$EnumBuildStatusTypeEnumMap, json['LastBuildStatus'])
-      ..lastNotificationOrderDate = json['LastNotificationOrderDate'] == null
+          _$EnumBuildStatusTypeEnumMap, json['lastBuildStatus'])
+      ..lastNotificationOrderDate = json['lastNotificationOrderDate'] == null
           ? null
-          : DateTime.parse(json['LastNotificationOrderDate'] as String)
-      ..lastBuildOrderDate = json['LastBuildOrderDate'] == null
+          : DateTime.parse(json['lastNotificationOrderDate'] as String)
+      ..lastBuildOrderDate = json['lastBuildOrderDate'] == null
           ? null
-          : DateTime.parse(json['LastBuildOrderDate'] as String)
-      ..lastBuildRunDate = json['LastBuildRunDate'] == null
+          : DateTime.parse(json['lastBuildOrderDate'] as String)
+      ..lastBuildRunDate = json['lastBuildRunDate'] == null
           ? null
-          : DateTime.parse(json['LastBuildRunDate'] as String)
-      ..lastBuildEndDate = json['LastBuildEndDate'] == null
+          : DateTime.parse(json['lastBuildRunDate'] as String)
+      ..lastBuildEndDate = json['lastBuildEndDate'] == null
           ? null
-          : DateTime.parse(json['LastBuildEndDate'] as String)
-      ..lastBuildErrorMessage = json['LastBuildErrorMessage'] as String?
-      ..lastSuccessfullyBuildDate = json['LastSuccessfullyBuildDate'] == null
+          : DateTime.parse(json['lastBuildEndDate'] as String)
+      ..lastBuildErrorMessage = json['lastBuildErrorMessage'] as String?
+      ..lastSuccessfullyBuildDate = json['lastSuccessfullyBuildDate'] == null
           ? null
-          : DateTime.parse(json['LastSuccessfullyBuildDate'] as String)
-      ..layoutValues = (json['LayoutValues'] as List<dynamic>?)
+          : DateTime.parse(json['lastSuccessfullyBuildDate'] as String)
+      ..layoutValues = (json['layoutValues'] as List<dynamic>?)
           ?.map((e) =>
               ApplicationLayoutValueModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..buildCount = json['BuildCount'] as int?
-      ..linkThemeConfigId = json['LinkThemeConfigId'] as int?
+      ..buildCount = json['buildCount'] as int?
+      ..linkThemeConfigId = json['linkThemeConfigId'] as int?
       ..virtual_ThemeConfig = json['virtual_ThemeConfig'] == null
           ? null
           : ApplicationThemeConfigModel.fromJson(
               json['virtual_ThemeConfig'] as Map<String, dynamic>)
-      ..themeConfig = json['ThemeConfig'] == null
+      ..themeConfig = json['themeConfig'] == null
           ? null
           : ApplicationThemeConfigModel.fromJson(
-              json['ThemeConfig'] as Map<String, dynamic>)
+              json['themeConfig'] as Map<String, dynamic>)
       ..configBuilderAdminJsonValues =
-          json['ConfigBuilderAdminJsonValues'] as String?
+          json['configBuilderAdminJsonValues'] as String?
       ..configRuntimeAdminJsonValues =
-          json['ConfigRuntimeAdminJsonValues'] as String?
+          json['configRuntimeAdminJsonValues'] as String?
       ..configBuilderSiteJsonValues =
-          json['ConfigBuilderSiteJsonValues'] as String?
+          json['configBuilderSiteJsonValues'] as String?
       ..configRuntimeSiteJsonValues =
-          json['ConfigRuntimeSiteJsonValues'] as String?
-      ..scoreClick = json['ScoreClick'] as int?
-      ..scoreSumPercent = json['ScoreSumPercent'] as int?
-      ..adminConfigFormFormatter = (json['AdminConfigFormFormatter']
+          json['configRuntimeSiteJsonValues'] as String?
+      ..scoreClick = json['scoreClick'] as int?
+      ..scoreSumPercent = json['scoreSumPercent'] as int?
+      ..adminConfigFormFormatter = (json['adminConfigFormFormatter']
               as List<dynamic>?)
           ?.map(
               (e) => GetPropertiesInfoModel.fromJson(e as Map<String, dynamic>))
@@ -111,153 +112,153 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => GetPropertiesInfoModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..themeConfigJsonValues = json['ThemeConfigJsonValues'] as String?
-      ..buildKey1String = json['BuildKey1String'] as String?
-      ..buildKey1Value = json['BuildKey1Value'] as String?
-      ..buildKey2String = json['BuildKey2String'] as String?
-      ..buildKey2Value = json['BuildKey2Value'] as String?
-      ..buildKey3String = json['BuildKey3String'] as String?
-      ..buildKey3Value = json['BuildKey3Value'] as String?
-      ..buildKey4String = json['BuildKey4String'] as String?
-      ..buildKey4Value = json['BuildKey4Value'] as String?
-      ..buildKey5String = json['BuildKey5String'] as String?
-      ..buildKey5Value = json['BuildKey5Value'] as String?
-      ..downloadLinkSrcCustomize = json['DownloadLinkSrcCustomize'] as String?
-      ..downloadLinkSrc = json['DownloadLinkSrc'] as String?
-      ..downloadLinkUpdateSrc = json['DownloadLinkUpdateSrc'] as String?
+      ..themeConfigJsonValues = json['themeConfigJsonValues'] as String?
+      ..buildKey1String = json['buildKey1String'] as String?
+      ..buildKey1Value = json['buildKey1Value'] as String?
+      ..buildKey2String = json['buildKey2String'] as String?
+      ..buildKey2Value = json['buildKey2Value'] as String?
+      ..buildKey3String = json['buildKey3String'] as String?
+      ..buildKey3Value = json['buildKey3Value'] as String?
+      ..buildKey4String = json['buildKey4String'] as String?
+      ..buildKey4Value = json['buildKey4Value'] as String?
+      ..buildKey5String = json['buildKey5String'] as String?
+      ..buildKey5Value = json['buildKey5Value'] as String?
+      ..downloadLinkSrcCustomize = json['downloadLinkSrcCustomize'] as String?
+      ..downloadLinkSrc = json['downloadLinkSrc'] as String?
+      ..downloadLinkUpdateSrc = json['downloadLinkUpdateSrc'] as String?
       ..downloadLinkSrcQRCodeBase64 =
-          json['DownloadLinkSrcQRCodeBase64'] as String?
-      ..linkFileIdSplashScreenSrc = json['LinkFileIdSplashScreenSrc'] as String?
-      ..aboutUsTitle = json['AboutUsTitle'] as String?
-      ..aboutUsDescription = json['AboutUsDescription'] as String?
-      ..aboutUsTel = json['AboutUsTel'] as String?
-      ..aboutUsMobile = json['AboutUsMobile'] as String?
-      ..aboutUsFax = json['AboutUsFax'] as String?
-      ..aboutUsEmail = json['AboutUsEmail'] as String?
-      ..aboutUsAddress = json['AboutUsAddress'] as String?
-      ..aboutUsLinkImageId = json['AboutUsLinkImageId'] as String?
-      ..aboutUsLinkImageIdSrc = json['AboutUsLinkImageIdSrc'] as String?
+          json['downloadLinkSrcQRCodeBase64'] as String?
+      ..linkFileIdSplashScreenSrc = json['linkFileIdSplashScreenSrc'] as String?
+      ..aboutUsTitle = json['aboutUsTitle'] as String?
+      ..aboutUsDescription = json['aboutUsDescription'] as String?
+      ..aboutUsTel = json['aboutUsTel'] as String?
+      ..aboutUsMobile = json['aboutUsMobile'] as String?
+      ..aboutUsFax = json['aboutUsFax'] as String?
+      ..aboutUsEmail = json['aboutUsEmail'] as String?
+      ..aboutUsAddress = json['aboutUsAddress'] as String?
+      ..aboutUsLinkImageId = json['aboutUsLinkImageId'] as String?
+      ..aboutUsLinkImageIdSrc = json['aboutUsLinkImageIdSrc'] as String?
       ..aboutUsGeolocationlatetitude =
-          json['AboutUsGeolocationlatetitude'] as String?
+          json['aboutUsGeolocationlatetitude'] as String?
       ..aboutUsGeolocationlongitude =
-          json['AboutUsGeolocationlongitude'] as String?
-      ..aboutUsLinkFacebook = json['AboutUsLinkFacebook'] as String?
-      ..aboutUsLinkTwitter = json['AboutUsLinkTwitter'] as String?
-      ..aboutUsLinkGooglePlus = json['AboutUsLinkGooglePlus'] as String?
-      ..aboutUsLinkInstagram = json['AboutUsLinkInstagram'] as String?
-      ..aboutUsLinklinkedin = json['AboutUsLinklinkedin'] as String?
-      ..aboutUsLinkYahoo = json['AboutUsLinkYahoo'] as String?
-      ..aboutUsLinkYoutube = json['AboutUsLinkYoutube'] as String?
-      ..aboutUsLinkTelegram = json['AboutUsLinkTelegram'] as String?
-      ..aboutUsLinkPinterest = json['AboutUsLinkPinterest'] as String?
-      ..aboutUsLinkRss = json['AboutUsLinkRss'] as String?
+          json['aboutUsGeolocationlongitude'] as String?
+      ..aboutUsLinkFacebook = json['aboutUsLinkFacebook'] as String?
+      ..aboutUsLinkTwitter = json['aboutUsLinkTwitter'] as String?
+      ..aboutUsLinkGooglePlus = json['aboutUsLinkGooglePlus'] as String?
+      ..aboutUsLinkInstagram = json['aboutUsLinkInstagram'] as String?
+      ..aboutUsLinklinkedin = json['aboutUsLinklinkedin'] as String?
+      ..aboutUsLinkYahoo = json['aboutUsLinkYahoo'] as String?
+      ..aboutUsLinkYoutube = json['aboutUsLinkYoutube'] as String?
+      ..aboutUsLinkTelegram = json['aboutUsLinkTelegram'] as String?
+      ..aboutUsLinkPinterest = json['aboutUsLinkPinterest'] as String?
+      ..aboutUsLinkRss = json['aboutUsLinkRss'] as String?
       ..aboutUsPrivacyPolicyHtmlBody =
-          json['AboutUsPrivacyPolicyHtmlBody'] as String?
-      ..linkFileIdIconSrc = json['LinkFileIdIconSrc'] as String?
-      ..linkFileIdLogoSrc = json['LinkFileIdLogoSrc'] as String?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+          json['aboutUsPrivacyPolicyHtmlBody'] as String?
+      ..linkFileIdIconSrc = json['linkFileIdIconSrc'] as String?
+      ..linkFileIdLogoSrc = json['linkFileIdLogoSrc'] as String?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationAppModelToJson(
         ApplicationAppModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'AppKey': instance.appKey,
-      'Lang': _$EnumLanguageEnumMap[instance.lang],
-      'ExpireDate': instance.expireDate?.toIso8601String(),
-      'LinkFileIdIcon': instance.linkFileIdIcon,
-      'LinkFileIdLogo': instance.linkFileIdLogo,
-      'LinkFileIdSplashScreen': instance.linkFileIdSplashScreen,
-      'LinkMainImageId': instance.linkMainImageId,
-      'Title': instance.title,
-      'Description': instance.description,
-      'AppVersion': instance.appVersion,
-      'IsPublished': instance.isPublished,
-      'LinkSourceId': instance.linkSourceId,
-      'Virtual_Source': instance.virtual_Source,
-      'Source': instance.source,
-      'DownloadCount': instance.downloadCount,
-      'IsGlobalUser': instance.isGlobalUser,
-      'CheckUpdate': instance.checkUpdate,
-      'ForceUpdate': instance.forceUpdate,
-      'AllowDirectShareApp': instance.allowDirectShareApp,
-      'LastBuildAppKey': instance.lastBuildAppKey,
-      'LastBuildStatus': _$EnumBuildStatusTypeEnumMap[instance.lastBuildStatus],
-      'LastNotificationOrderDate':
+      'linkSiteId': instance.linkSiteId,
+      'appKey': instance.appKey,
+      'lang': _$EnumLanguageEnumMap[instance.lang],
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'linkFileIdIcon': instance.linkFileIdIcon,
+      'linkFileIdLogo': instance.linkFileIdLogo,
+      'linkFileIdSplashScreen': instance.linkFileIdSplashScreen,
+      'linkMainImageId': instance.linkMainImageId,
+      'title': instance.title,
+      'description': instance.description,
+      'appVersion': instance.appVersion,
+      'isPublished': instance.isPublished,
+      'linkSourceId': instance.linkSourceId,
+      'virtual_Source': instance.virtual_Source,
+      'source': instance.source,
+      'downloadCount': instance.downloadCount,
+      'isGlobalUser': instance.isGlobalUser,
+      'checkUpdate': instance.checkUpdate,
+      'forceUpdate': instance.forceUpdate,
+      'allowDirectShareApp': instance.allowDirectShareApp,
+      'lastBuildAppKey': instance.lastBuildAppKey,
+      'lastBuildStatus': _$EnumBuildStatusTypeEnumMap[instance.lastBuildStatus],
+      'lastNotificationOrderDate':
           instance.lastNotificationOrderDate?.toIso8601String(),
-      'LastBuildOrderDate': instance.lastBuildOrderDate?.toIso8601String(),
-      'LastBuildRunDate': instance.lastBuildRunDate?.toIso8601String(),
-      'LastBuildEndDate': instance.lastBuildEndDate?.toIso8601String(),
-      'LastBuildErrorMessage': instance.lastBuildErrorMessage,
-      'LastSuccessfullyBuildDate':
+      'lastBuildOrderDate': instance.lastBuildOrderDate?.toIso8601String(),
+      'lastBuildRunDate': instance.lastBuildRunDate?.toIso8601String(),
+      'lastBuildEndDate': instance.lastBuildEndDate?.toIso8601String(),
+      'lastBuildErrorMessage': instance.lastBuildErrorMessage,
+      'lastSuccessfullyBuildDate':
           instance.lastSuccessfullyBuildDate?.toIso8601String(),
-      'LayoutValues': instance.layoutValues,
-      'BuildCount': instance.buildCount,
-      'LinkThemeConfigId': instance.linkThemeConfigId,
+      'layoutValues': instance.layoutValues,
+      'buildCount': instance.buildCount,
+      'linkThemeConfigId': instance.linkThemeConfigId,
       'virtual_ThemeConfig': instance.virtual_ThemeConfig,
-      'ThemeConfig': instance.themeConfig,
-      'ConfigBuilderAdminJsonValues': instance.configBuilderAdminJsonValues,
-      'ConfigRuntimeAdminJsonValues': instance.configRuntimeAdminJsonValues,
-      'ConfigBuilderSiteJsonValues': instance.configBuilderSiteJsonValues,
-      'ConfigRuntimeSiteJsonValues': instance.configRuntimeSiteJsonValues,
-      'ScoreClick': instance.scoreClick,
-      'ScoreSumPercent': instance.scoreSumPercent,
-      'AdminConfigFormFormatter': instance.adminConfigFormFormatter,
+      'themeConfig': instance.themeConfig,
+      'configBuilderAdminJsonValues': instance.configBuilderAdminJsonValues,
+      'configRuntimeAdminJsonValues': instance.configRuntimeAdminJsonValues,
+      'configBuilderSiteJsonValues': instance.configBuilderSiteJsonValues,
+      'configRuntimeSiteJsonValues': instance.configRuntimeSiteJsonValues,
+      'scoreClick': instance.scoreClick,
+      'scoreSumPercent': instance.scoreSumPercent,
+      'adminConfigFormFormatter': instance.adminConfigFormFormatter,
       'userConfigFormFormatter': instance.userConfigFormFormatter,
-      'ThemeConfigJsonValues': instance.themeConfigJsonValues,
-      'BuildKey1String': instance.buildKey1String,
-      'BuildKey1Value': instance.buildKey1Value,
-      'BuildKey2String': instance.buildKey2String,
-      'BuildKey2Value': instance.buildKey2Value,
-      'BuildKey3String': instance.buildKey3String,
-      'BuildKey3Value': instance.buildKey3Value,
-      'BuildKey4String': instance.buildKey4String,
-      'BuildKey4Value': instance.buildKey4Value,
-      'BuildKey5String': instance.buildKey5String,
-      'BuildKey5Value': instance.buildKey5Value,
-      'DownloadLinkSrcCustomize': instance.downloadLinkSrcCustomize,
-      'DownloadLinkSrc': instance.downloadLinkSrc,
-      'DownloadLinkUpdateSrc': instance.downloadLinkUpdateSrc,
-      'DownloadLinkSrcQRCodeBase64': instance.downloadLinkSrcQRCodeBase64,
-      'LinkFileIdSplashScreenSrc': instance.linkFileIdSplashScreenSrc,
-      'AboutUsTitle': instance.aboutUsTitle,
-      'AboutUsDescription': instance.aboutUsDescription,
-      'AboutUsTel': instance.aboutUsTel,
-      'AboutUsMobile': instance.aboutUsMobile,
-      'AboutUsFax': instance.aboutUsFax,
-      'AboutUsEmail': instance.aboutUsEmail,
-      'AboutUsAddress': instance.aboutUsAddress,
-      'AboutUsLinkImageId': instance.aboutUsLinkImageId,
-      'AboutUsLinkImageIdSrc': instance.aboutUsLinkImageIdSrc,
-      'AboutUsGeolocationlatetitude': instance.aboutUsGeolocationlatetitude,
-      'AboutUsGeolocationlongitude': instance.aboutUsGeolocationlongitude,
-      'AboutUsLinkFacebook': instance.aboutUsLinkFacebook,
-      'AboutUsLinkTwitter': instance.aboutUsLinkTwitter,
-      'AboutUsLinkGooglePlus': instance.aboutUsLinkGooglePlus,
-      'AboutUsLinkInstagram': instance.aboutUsLinkInstagram,
-      'AboutUsLinklinkedin': instance.aboutUsLinklinkedin,
-      'AboutUsLinkYahoo': instance.aboutUsLinkYahoo,
-      'AboutUsLinkYoutube': instance.aboutUsLinkYoutube,
-      'AboutUsLinkTelegram': instance.aboutUsLinkTelegram,
-      'AboutUsLinkPinterest': instance.aboutUsLinkPinterest,
-      'AboutUsLinkRss': instance.aboutUsLinkRss,
-      'AboutUsPrivacyPolicyHtmlBody': instance.aboutUsPrivacyPolicyHtmlBody,
-      'LinkFileIdIconSrc': instance.linkFileIdIconSrc,
-      'LinkFileIdLogoSrc': instance.linkFileIdLogoSrc,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'themeConfigJsonValues': instance.themeConfigJsonValues,
+      'buildKey1String': instance.buildKey1String,
+      'buildKey1Value': instance.buildKey1Value,
+      'buildKey2String': instance.buildKey2String,
+      'buildKey2Value': instance.buildKey2Value,
+      'buildKey3String': instance.buildKey3String,
+      'buildKey3Value': instance.buildKey3Value,
+      'buildKey4String': instance.buildKey4String,
+      'buildKey4Value': instance.buildKey4Value,
+      'buildKey5String': instance.buildKey5String,
+      'buildKey5Value': instance.buildKey5Value,
+      'downloadLinkSrcCustomize': instance.downloadLinkSrcCustomize,
+      'downloadLinkSrc': instance.downloadLinkSrc,
+      'downloadLinkUpdateSrc': instance.downloadLinkUpdateSrc,
+      'downloadLinkSrcQRCodeBase64': instance.downloadLinkSrcQRCodeBase64,
+      'linkFileIdSplashScreenSrc': instance.linkFileIdSplashScreenSrc,
+      'aboutUsTitle': instance.aboutUsTitle,
+      'aboutUsDescription': instance.aboutUsDescription,
+      'aboutUsTel': instance.aboutUsTel,
+      'aboutUsMobile': instance.aboutUsMobile,
+      'aboutUsFax': instance.aboutUsFax,
+      'aboutUsEmail': instance.aboutUsEmail,
+      'aboutUsAddress': instance.aboutUsAddress,
+      'aboutUsLinkImageId': instance.aboutUsLinkImageId,
+      'aboutUsLinkImageIdSrc': instance.aboutUsLinkImageIdSrc,
+      'aboutUsGeolocationlatetitude': instance.aboutUsGeolocationlatetitude,
+      'aboutUsGeolocationlongitude': instance.aboutUsGeolocationlongitude,
+      'aboutUsLinkFacebook': instance.aboutUsLinkFacebook,
+      'aboutUsLinkTwitter': instance.aboutUsLinkTwitter,
+      'aboutUsLinkGooglePlus': instance.aboutUsLinkGooglePlus,
+      'aboutUsLinkInstagram': instance.aboutUsLinkInstagram,
+      'aboutUsLinklinkedin': instance.aboutUsLinklinkedin,
+      'aboutUsLinkYahoo': instance.aboutUsLinkYahoo,
+      'aboutUsLinkYoutube': instance.aboutUsLinkYoutube,
+      'aboutUsLinkTelegram': instance.aboutUsLinkTelegram,
+      'aboutUsLinkPinterest': instance.aboutUsLinkPinterest,
+      'aboutUsLinkRss': instance.aboutUsLinkRss,
+      'aboutUsPrivacyPolicyHtmlBody': instance.aboutUsPrivacyPolicyHtmlBody,
+      'linkFileIdIconSrc': instance.linkFileIdIconSrc,
+      'linkFileIdLogoSrc': instance.linkFileIdLogoSrc,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

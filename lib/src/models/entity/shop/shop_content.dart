@@ -14,47 +14,47 @@ part 'shop_content.g.dart';
 
 @JsonSerializable()
 class ShopContent extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
 
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
 
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
 
-  @JsonKey(name: 'ProductUnit')
+  @JsonKey(name: 'productUnit')
   String? productUnit;
 
-  @JsonKey(name: 'Price')
+  @JsonKey(name: 'price')
   double? price;
 
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
 
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
 
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
 
-  @JsonKey(name: 'MostSaleSerial')
+  @JsonKey(name: 'mostSaleSerial')
   bool? mostSaleSerial;
 
-  @JsonKey(name: 'InvoiceSaleDetails')
+  @JsonKey(name: 'invoiceSaleDetails')
   List<ShopInvoiceSaleDetail>? invoiceSaleDetails;
-  @JsonKey(name: 'ProductProductItems')
+  @JsonKey(name: 'productProductItems')
   List<ShopProductProductItem>? productProductItems;
-  @JsonKey(name: 'ProductProductCombines')
+  @JsonKey(name: 'productProductCombines')
   List<ShopProductProductCombine>? productProductCombines;
-  @JsonKey(name: 'ProductProductServices')
+  @JsonKey(name: 'productProductServices')
   List<ShopProductProductService>? productProductServices;
-  @JsonKey(name: 'ProductProductProcesses')
+  @JsonKey(name: 'productProductProcesses')
   List<ShopProductProductProcess>? productProductProcesses;
-  @JsonKey(name: 'ProductSalePrices')
+  @JsonKey(name: 'productSalePrices')
   List<ShopProductSalePrice>? productSalePrices;
 
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;ShopContent();
   factory ShopContent.fromJson(Map<String, dynamic> json) => _$ShopContentFromJson(json);
 

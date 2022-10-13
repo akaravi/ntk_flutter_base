@@ -10,27 +10,27 @@ part 'core_token_micro_service_model.g.dart';
 
 @JsonSerializable()
 class CoreTokenMicroServiceModel extends BaseEntity<String> {
-  @JsonKey(name: 'LinkUserId')
+  @JsonKey(name: 'linkUserId')
   int? linkUserId;
-  @JsonKey(name: 'LinkSiteId')
+  @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
-  @JsonKey(name: 'DeviceId')
+  @JsonKey(name: 'deviceId')
   String? deviceId;
-  @JsonKey(name: 'DeviceType')
+  @JsonKey(name: 'deviceType')
   EnumMicroServiceType? deviceType;
-  @JsonKey(name: 'UserType')
+  @JsonKey(name: 'userType')
   EnumManageUserAccessUserTypes? userType;
-  @JsonKey(name: 'DeviceConnectionType')
+  @JsonKey(name: 'deviceConnectionType')
   EnumMicroServiceConnectionType? deviceConnectionType;
-  @JsonKey(name: 'DeviceConnectionState')
+  @JsonKey(name: 'deviceConnectionState')
   EnumMicroServiceConnectionStatus? deviceConnectionState;
-  @JsonKey(name: 'RequestDate')
+  @JsonKey(name: 'requestDate')
   String? requestDate;
-  @JsonKey(name: 'UsedUsername')
+  @JsonKey(name: 'usedUsername')
   String? usedUsername;
-  @JsonKey(name: 'IP')
+  @JsonKey(name: 'iP')
   String? iP;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
   CoreTokenMicroServiceModel();
   factory CoreTokenMicroServiceModel.fromJson(Map<String, dynamic> json) => _$CoreTokenMicroServiceModelFromJson(json);

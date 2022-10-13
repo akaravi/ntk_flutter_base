@@ -8,28 +8,28 @@ part of 'auth_user_signup_model.dart';
 
 AuthUserSignUpModel _$AuthUserSignUpModelFromJson(Map<String, dynamic> json) =>
     AuthUserSignUpModel()
-      ..captchaKey = json['CaptchaKey'] as String?
-      ..captchaText = json['CaptchaText'] as String?
-      ..email = json['Email'] as String?
-      ..mobile = json['Mobile'] as String?
-      ..password = json['Password'] as String?
-      ..rePassword = json['RePassword'] as String?
-      ..name = json['Name'] as String?
-      ..family = json['Family'] as String?
-      ..siteId = json['SiteId'] as int?
-      ..roulaccespt = json['Roulaccespt'] as bool?;
+      ..captchaKey = json['captchaKey'] as String?
+      ..captchaText = json['captchaText'] as String?
+      ..email = json['email'] as String?
+      ..mobile = json['mobile'] as String?
+      ..password = json['password'] as String?
+      ..rePassword = json['rePassword'] as String?
+      ..name = json['name'] as String?
+      ..family = json['family'] as String?
+      ..siteId = json['siteId'] as int?
+      ..roulaccespt = json['roulaccespt'] as bool?;
 
 Map<String, dynamic> _$AuthUserSignUpModelToJson(
         AuthUserSignUpModel instance) =>
     <String, dynamic>{
-      'CaptchaKey': instance.captchaKey,
-      'CaptchaText': instance.captchaText,
-      'Email': instance.email,
-      'Mobile': instance.mobile,
-      'Password': instance.password,
-      'RePassword': instance.rePassword,
-      'Name': instance.name,
-      'Family': instance.family,
-      'SiteId': instance.siteId,
-      'Roulaccespt': instance.roulaccespt,
+      'captchaKey': instance.captchaKey,
+      'captchaText': instance.captchaText,
+      'email': instance.email,
+      'mobile': instance.mobile,
+      'password': instance.password,
+      'rePassword': instance.rePassword,
+      'name': instance.name,
+      'family': instance.family,
+      'siteId': instance.siteId,
+      'roulaccespt': instance.roulaccespt,
     };

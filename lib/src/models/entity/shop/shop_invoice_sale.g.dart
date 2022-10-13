@@ -8,114 +8,115 @@ part of 'shop_invoice_sale.dart';
 
 ShopInvoiceSale _$ShopInvoiceSaleFromJson(Map<String, dynamic> json) =>
     ShopInvoiceSale()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..isReleased = json['IsReleased'] as bool?
-      ..releaseDate = json['ReleaseDate'] as String?
-      ..onlineDateLock = json['OnlineDateLock'] as String?
-      ..onlineDateUnlock = json['OnlineDateUnlock'] as String?
-      ..registerDate = json['RegisterDate'] as String?
-      ..deliveryDate = json['DeliveryDate'] as String?
-      ..description = json['Description'] as String?
-      ..linkMemberUserId = json['LinkMemberUserId'] as int?
-      ..linkCmsUserId = json['LinkCmsUserId'] as int?
-      ..discount = (json['Discount'] as num?)?.toDouble()
-      ..tax = (json['Tax'] as num?)?.toDouble()
-      ..totalAmount = (json['TotalAmount'] as num?)?.toDouble()
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..isReleased = json['isReleased'] as bool?
+      ..releaseDate = json['releaseDate'] as String?
+      ..onlineDateLock = json['onlineDateLock'] as String?
+      ..onlineDateUnlock = json['onlineDateUnlock'] as String?
+      ..registerDate = json['registerDate'] as String?
+      ..deliveryDate = json['deliveryDate'] as String?
+      ..description = json['description'] as String?
+      ..linkMemberUserId = json['linkMemberUserId'] as int?
+      ..linkCmsUserId = json['linkCmsUserId'] as int?
+      ..discount = (json['discount'] as num?)?.toDouble()
+      ..tax = (json['tax'] as num?)?.toDouble()
+      ..totalAmount = (json['totalAmount'] as num?)?.toDouble()
       ..linkModelBankPaymentTransactionSuccessfulId =
-          json['LinkModelBankPaymentTransactionSuccessfulId'] as int?
+          json['linkModelBankPaymentTransactionSuccessfulId'] as int?
       ..linkExternalModuleDeliveryInvoiceId =
-          json['LinkExternalModuleDeliveryInvoiceId'] as int?
+          json['linkExternalModuleDeliveryInvoiceId'] as int?
       ..virtual_ShopInvoiceSaleWorkFlow =
           json['virtual_ShopInvoiceSaleWorkFlow'] == null
               ? null
               : ShopInvoiceSaleWorkFlow.fromJson(
                   json['virtual_ShopInvoiceSaleWorkFlow']
                       as Map<String, dynamic>)
-      ..paymentStatus = json['PaymentStatus'] as int?
-      ..invoiceStatus = json['InvoiceStatus'] as int?
-      ..receiverName = json['ReceiverName'] as String?
-      ..receiverLastName = json['ReceiverLastName'] as String?
-      ..receiverMobile = json['ReceiverMobile'] as String?
-      ..receiverTel = json['ReceiverTel'] as String?
-      ..receiverOstan = json['ReceiverOstan'] as String?
-      ..receiverCity = json['ReceiverCity'] as String?
-      ..receiverPostalCode = json['ReceiverPostalCode'] as String?
-      ..receiverAddress = json['ReceiverAddress'] as String?
-      ..receiverMemo = json['ReceiverMemo'] as String?
-      ..invoiceSaleDetails = (json['InvoiceSaleDetails'] as List<dynamic>?)
+      ..paymentStatus = json['paymentStatus'] as int?
+      ..invoiceStatus = json['invoiceStatus'] as int?
+      ..receiverName = json['receiverName'] as String?
+      ..receiverLastName = json['receiverLastName'] as String?
+      ..receiverMobile = json['receiverMobile'] as String?
+      ..receiverTel = json['receiverTel'] as String?
+      ..receiverOstan = json['receiverOstan'] as String?
+      ..receiverCity = json['receiverCity'] as String?
+      ..receiverPostalCode = json['receiverPostalCode'] as String?
+      ..receiverAddress = json['receiverAddress'] as String?
+      ..receiverMemo = json['receiverMemo'] as String?
+      ..invoiceSaleDetails = (json['invoiceSaleDetails'] as List<dynamic>?)
           ?.map(
               (e) => ShopInvoiceSaleDetail.fromJson(e as Map<String, dynamic>))
           .toList();
 
 Map<String, dynamic> _$ShopInvoiceSaleToJson(ShopInvoiceSale instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'IsReleased': instance.isReleased,
-      'ReleaseDate': instance.releaseDate,
-      'OnlineDateLock': instance.onlineDateLock,
-      'OnlineDateUnlock': instance.onlineDateUnlock,
-      'RegisterDate': instance.registerDate,
-      'DeliveryDate': instance.deliveryDate,
-      'Description': instance.description,
-      'LinkMemberUserId': instance.linkMemberUserId,
-      'LinkCmsUserId': instance.linkCmsUserId,
-      'Discount': instance.discount,
-      'Tax': instance.tax,
-      'TotalAmount': instance.totalAmount,
-      'LinkModelBankPaymentTransactionSuccessfulId':
+      'linkSiteId': instance.linkSiteId,
+      'isReleased': instance.isReleased,
+      'releaseDate': instance.releaseDate,
+      'onlineDateLock': instance.onlineDateLock,
+      'onlineDateUnlock': instance.onlineDateUnlock,
+      'registerDate': instance.registerDate,
+      'deliveryDate': instance.deliveryDate,
+      'description': instance.description,
+      'linkMemberUserId': instance.linkMemberUserId,
+      'linkCmsUserId': instance.linkCmsUserId,
+      'discount': instance.discount,
+      'tax': instance.tax,
+      'totalAmount': instance.totalAmount,
+      'linkModelBankPaymentTransactionSuccessfulId':
           instance.linkModelBankPaymentTransactionSuccessfulId,
-      'LinkExternalModuleDeliveryInvoiceId':
+      'linkExternalModuleDeliveryInvoiceId':
           instance.linkExternalModuleDeliveryInvoiceId,
       'virtual_ShopInvoiceSaleWorkFlow':
           instance.virtual_ShopInvoiceSaleWorkFlow,
-      'PaymentStatus': instance.paymentStatus,
-      'InvoiceStatus': instance.invoiceStatus,
-      'ReceiverName': instance.receiverName,
-      'ReceiverLastName': instance.receiverLastName,
-      'ReceiverMobile': instance.receiverMobile,
-      'ReceiverTel': instance.receiverTel,
-      'ReceiverOstan': instance.receiverOstan,
-      'ReceiverCity': instance.receiverCity,
-      'ReceiverPostalCode': instance.receiverPostalCode,
-      'ReceiverAddress': instance.receiverAddress,
-      'ReceiverMemo': instance.receiverMemo,
-      'InvoiceSaleDetails': instance.invoiceSaleDetails,
+      'paymentStatus': instance.paymentStatus,
+      'invoiceStatus': instance.invoiceStatus,
+      'receiverName': instance.receiverName,
+      'receiverLastName': instance.receiverLastName,
+      'receiverMobile': instance.receiverMobile,
+      'receiverTel': instance.receiverTel,
+      'receiverOstan': instance.receiverOstan,
+      'receiverCity': instance.receiverCity,
+      'receiverPostalCode': instance.receiverPostalCode,
+      'receiverAddress': instance.receiverAddress,
+      'receiverMemo': instance.receiverMemo,
+      'invoiceSaleDetails': instance.invoiceSaleDetails,
     };
 
 const _$EnumRecordStatusEnumMap = {

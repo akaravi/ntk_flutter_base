@@ -4,11 +4,11 @@ part 'captcha_model.g.dart';
 
 @JsonSerializable()
 class CaptchaModel {
-  @JsonKey(name: 'Expire')
+  @JsonKey(name: 'expire')
   String? expire;
-  @JsonKey(name: 'Key')
+  @JsonKey(name: 'key')
   String? key;
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
 
   CaptchaModel();

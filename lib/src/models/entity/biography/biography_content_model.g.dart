@@ -9,142 +9,155 @@ part of 'biography_content_model.dart';
 BiographyContentModel _$BiographyContentModelFromJson(
         Map<String, dynamic> json) =>
     BiographyContentModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkCategoryId = json['LinkCategoryId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..body = json['Body'] as String?
-      ..fromDate = json['FromDate'] as String?
-      ..geolocationlatitude = (json['Geolocationlatitude'] as num?)?.toDouble()
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkCategoryId = json['linkCategoryId'] as int?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..body = json['body'] as String?
+      ..fromDate = json['fromDate'] == null
+          ? null
+          : DateTime.parse(json['fromDate'] as String)
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
-          (json['Geolocationlongitude'] as num?)?.toDouble()
-      ..keyword = json['Keyword'] as String?
-      ..linkFileIds = json['LinkFileIds'] as String?
-      ..linkFilePodcastId = json['LinkFilePodcastId'] as int?
-      ..linkFileMovieId = json['LinkFileMovieId'] as int?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..scoreClick = json['ScoreClick'] as int?
-      ..scoreSumPercent = json['ScoreSumPercent'] as int?
-      ..viewCount = json['ViewCount'] as int?
-      ..favorited = json['Favorited'] as bool?
-      ..expireDate = json['ExpireDate'] as String?
-      ..moduleCoreCreatedBy = json['ModuleCoreCreatedBy'] == null
+          (json['geolocationlongitude'] as num?)?.toDouble()
+      ..keyword = json['keyword'] as String?
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..linkFilePodcastId = json['linkFilePodcastId'] as int?
+      ..linkFileMovieId = json['linkFileMovieId'] as int?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..scoreClick = json['scoreClick'] as int?
+      ..scoreSumPercent = json['scoreSumPercent'] as int?
+      ..viewCount = json['viewCount'] as int?
+      ..favorited = json['favorited'] as bool?
+      ..expireDate = json['expireDate'] == null
           ? null
-          : CoreUserModel.fromJson(
-              json['ModuleCoreCreatedBy'] as Map<String, dynamic>)
-      ..moduleCoreUpdatedBy = json['ModuleCoreUpdatedBy'] == null
-          ? null
-          : CoreUserModel.fromJson(
-              json['ModuleCoreUpdatedBy'] as Map<String, dynamic>)
-      ..source = json['Source'] as String?
-      ..comments = json['Comments'] == null
+          : DateTime.parse(json['expireDate'] as String)
+      ..moduleCoreCreatedBy = json['moduleCoreCreatedBy'] as String?
+      ..moduleCoreUpdatedBy = json['moduleCoreUpdatedBy'] as String?
+      ..source = json['source'] as String?
+      ..comments = json['comments'] == null
           ? null
           : BiographyCommentModel.fromJson(
-              json['Comments'] as Map<String, dynamic>)
+              json['comments'] as Map<String, dynamic>)
       ..virtual_Category = json['virtual_Category'] == null
           ? null
           : BiographyCategoryModel.fromJson(
               json['virtual_Category'] as Map<String, dynamic>)
-      ..category = json['Category'] == null
+      ..category = json['category'] == null
           ? null
           : BiographyCategoryModel.fromJson(
-              json['Category'] as Map<String, dynamic>)
-      ..contentTags = (json['ContentTags'] as List<dynamic>?)
+              json['category'] as Map<String, dynamic>)
+      ..contentTags = (json['contentTags'] as List<dynamic>?)
           ?.map((e) =>
               BiographyContentTagModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..similars = (json['Similars'] as List<dynamic>?)
+      ..similars = (json['similars'] as List<dynamic>?)
           ?.map((e) =>
               BiographyContentSimilarModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..otherInfos = json['OtherInfos'] as String?
-      ..contentAndParameterValues = json['ContentAndParameterValues']
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
-      ..linkFilePodcastIdSrc = json['LinkFilePodcastIdSrc'] as String?
-      ..linkFileMovieIdSrc = json['LinkFileMovieIdSrc'] as String?
-      ..linkFileIdsSrc = (json['LinkFileIdsSrc'] as List<dynamic>?)
+      ..contentCategores = (json['contentCategores'] as List<dynamic>?)
+          ?.map((e) =>
+              BiographyContentCategoryModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..otherInfos = json['otherInfos'] as String?
+      ..contentAndParameterValues = json['contentAndParameterValues']
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..linkFilePodcastIdSrc = json['linkFilePodcastIdSrc'] as String?
+      ..linkFileMovieIdSrc = json['linkFileMovieIdSrc'] as String?
+      ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
-      ..locationPeriodStart = json['LocationPeriodStart'] as int?
-      ..locationPeriodEnd = json['LocationPeriodEnd'] as int?
-      ..datePeriodStart = json['DatePeriodStart'] as String?
-      ..datePeriodEnd = json['DatePeriodEnd'] as String?;
+      ..locationPeriodStart = json['locationPeriodStart'] as int?
+      ..locationPeriodEnd = json['locationPeriodEnd'] as int?
+      ..datePeriodStart = json['datePeriodStart'] == null
+          ? null
+          : DateTime.parse(json['datePeriodStart'] as String)
+      ..datePeriodEnd = json['datePeriodEnd'] == null
+          ? null
+          : DateTime.parse(json['datePeriodEnd'] as String)
+      ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentQRCodeBase64 =
+          json['urlViewContentQRCodeBase64'] as String?;
 
 Map<String, dynamic> _$BiographyContentModelToJson(
         BiographyContentModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkCategoryId': instance.linkCategoryId,
-      'Title': instance.title,
-      'Description': instance.description,
-      'Body': instance.body,
-      'FromDate': instance.fromDate,
-      'Geolocationlatitude': instance.geolocationlatitude,
-      'Geolocationlongitude': instance.geolocationlongitude,
-      'Keyword': instance.keyword,
-      'LinkFileIds': instance.linkFileIds,
-      'LinkFilePodcastId': instance.linkFilePodcastId,
-      'LinkFileMovieId': instance.linkFileMovieId,
-      'LinkMainImageId': instance.linkMainImageId,
-      'ScoreClick': instance.scoreClick,
-      'ScoreSumPercent': instance.scoreSumPercent,
-      'ViewCount': instance.viewCount,
-      'Favorited': instance.favorited,
-      'ExpireDate': instance.expireDate,
-      'ModuleCoreCreatedBy': instance.moduleCoreCreatedBy,
-      'ModuleCoreUpdatedBy': instance.moduleCoreUpdatedBy,
-      'Source': instance.source,
-      'Comments': instance.comments,
+      'linkSiteId': instance.linkSiteId,
+      'linkCategoryId': instance.linkCategoryId,
+      'title': instance.title,
+      'description': instance.description,
+      'body': instance.body,
+      'fromDate': instance.fromDate?.toIso8601String(),
+      'geolocationlatitude': instance.geolocationlatitude,
+      'geolocationlongitude': instance.geolocationlongitude,
+      'keyword': instance.keyword,
+      'linkFileIds': instance.linkFileIds,
+      'linkFilePodcastId': instance.linkFilePodcastId,
+      'linkFileMovieId': instance.linkFileMovieId,
+      'linkMainImageId': instance.linkMainImageId,
+      'scoreClick': instance.scoreClick,
+      'scoreSumPercent': instance.scoreSumPercent,
+      'viewCount': instance.viewCount,
+      'favorited': instance.favorited,
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'moduleCoreCreatedBy': instance.moduleCoreCreatedBy,
+      'moduleCoreUpdatedBy': instance.moduleCoreUpdatedBy,
+      'source': instance.source,
+      'comments': instance.comments,
       'virtual_Category': instance.virtual_Category,
-      'Category': instance.category,
-      'ContentTags': instance.contentTags,
-      'Similars': instance.similars,
-      'OtherInfos': instance.otherInfos,
-      'ContentAndParameterValues': instance.contentAndParameterValues,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
-      'LinkFilePodcastIdSrc': instance.linkFilePodcastIdSrc,
-      'LinkFileMovieIdSrc': instance.linkFileMovieIdSrc,
-      'LinkFileIdsSrc': instance.linkFileIdsSrc,
-      'LocationPeriodStart': instance.locationPeriodStart,
-      'LocationPeriodEnd': instance.locationPeriodEnd,
-      'DatePeriodStart': instance.datePeriodStart,
-      'DatePeriodEnd': instance.datePeriodEnd,
+      'category': instance.category,
+      'contentTags': instance.contentTags,
+      'similars': instance.similars,
+      'contentCategores': instance.contentCategores,
+      'otherInfos': instance.otherInfos,
+      'contentAndParameterValues': instance.contentAndParameterValues,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkFilePodcastIdSrc': instance.linkFilePodcastIdSrc,
+      'linkFileMovieIdSrc': instance.linkFileMovieIdSrc,
+      'linkFileIdsSrc': instance.linkFileIdsSrc,
+      'locationPeriodStart': instance.locationPeriodStart,
+      'locationPeriodEnd': instance.locationPeriodEnd,
+      'datePeriodStart': instance.datePeriodStart?.toIso8601String(),
+      'datePeriodEnd': instance.datePeriodEnd?.toIso8601String(),
+      'urlViewContent': instance.urlViewContent,
+      'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
     };
 
 const _$EnumRecordStatusEnumMap = {

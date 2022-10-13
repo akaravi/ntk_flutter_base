@@ -6,20 +6,18 @@ part 'blog_content_similar_model.g.dart';
 
 @JsonSerializable()
 class BlogContentSimilarModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
-  String? title;
-  @JsonKey(name: 'LinkSourceid')
-  String? linkSourceId;
-  @JsonKey(name: 'LinkDestinationid')
-  String? linkDestinationId;
+  @JsonKey(name: 'linkSourceid')
+  int? linkSourceId;
+  @JsonKey(name: 'linkDestinationId')
+  int? linkDestinationId;
   @JsonKey(name: 'virtual_Source')
-  String? virtual_Source;
-  @JsonKey(name: 'Source')
-  String? source;
+  Object? virtual_Source;
+  @JsonKey(name: 'source')
+  Object? source;
   @JsonKey(name: 'virtual_Destination')
-  String? virtual_Destination;
-  @JsonKey(name: 'Destination')
-  String? destination;
+  Object? virtual_Destination;
+  @JsonKey(name: 'destination')
+  Object? destination;
   BlogContentSimilarModel();
   factory BlogContentSimilarModel.fromJson(Map<String, dynamic> json) =>
       _$BlogContentSimilarModelFromJson(json);

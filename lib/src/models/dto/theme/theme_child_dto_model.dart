@@ -6,17 +6,17 @@ part 'theme_child_dto_model.g.dart';
 
 @JsonSerializable()
 class ThemeChildDtoModel {
-  @JsonKey(name: 'SortId')
+  @JsonKey(name: 'sortId')
   int? sortId;
-  @JsonKey(name: 'LayoutTheme')
+  @JsonKey(name: 'layoutTheme')
   int? layoutTheme;
-  @JsonKey(name: 'LayoutName')
+  @JsonKey(name: 'layoutName')
   String? layoutName;
-  @JsonKey(name: 'LayoutChildConfig')
+  @JsonKey(name: 'layoutChildConfig')
   List<ThemeChildConfigDtoModel>? layoutChildConfigs;
-  @JsonKey(name: 'LayoutConfig')
+  @JsonKey(name: 'layoutConfig')
   List<ThemeChildConfigDtoModel>? layoutConfig;
-  @JsonKey(name: 'LayoutRequest')
+  @JsonKey(name: 'layoutRequest')
   String? layoutRequest;
 
   ThemeChildDtoModel();

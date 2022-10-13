@@ -4,13 +4,13 @@ part 'application_score_dto_model.g.dart';
 
 @JsonSerializable()
 class ApplicationScoreDtoModel {
-  @JsonKey(name: 'LinkApiId')
+  @JsonKey(name: 'linkApiId')
   int? linkApiId;
-  @JsonKey(name: 'AppMemberId')
+  @JsonKey(name: 'appMemberId')
   String? appMemberId;
-  @JsonKey(name: 'ScoreComment')
+  @JsonKey(name: 'scoreComment')
   String? scoreComment;
-  @JsonKey(name: 'ScorePercent')
+  @JsonKey(name: 'scorePercent')
   int? scorePercent;
 
   ApplicationScoreDtoModel();

@@ -6,13 +6,13 @@ part 'core_cp_main_menu_cms_user_group_model.g.dart';
 
 @JsonSerializable()
 class CoreCpMainMenuCmsUserGroupModel {
-  @JsonKey(name: 'CmsCpMainMenu_Id')
+  @JsonKey(name: 'cmsCpMainMenu_Id')
   int? cmsCpMainMenuId;
-  @JsonKey(name: 'CmsUserGroup_Id')
+  @JsonKey(name: 'cmsUserGroup_Id')
   int? cmsUserGroupId;
-  @JsonKey(name: 'CmsCpMainMenu')
+  @JsonKey(name: 'cmsCpMainMenu')
   CoreCpMainMenuModel? cmsCpMainMenu;
-  @JsonKey(name: 'CmsUserGroup')
+  @JsonKey(name: 'cmsUserGroup')
   CoreUserGroupModel? cmsUserGroup;
   CoreCpMainMenuCmsUserGroupModel();
   factory CoreCpMainMenuCmsUserGroupModel.fromJson(Map<String, dynamic> json) =>

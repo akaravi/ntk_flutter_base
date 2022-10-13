@@ -4,25 +4,25 @@ part 'auth_user_signup_model.g.dart';
 
 @JsonSerializable()
 class AuthUserSignUpModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'Email')
+  @JsonKey(name: 'email')
   String? email;
-  @JsonKey(name: 'Mobile')
+  @JsonKey(name: 'mobile')
   String? mobile;
-  @JsonKey(name: 'Password')
+  @JsonKey(name: 'password')
   String? password;
-  @JsonKey(name: 'RePassword')
+  @JsonKey(name: 'rePassword')
   String? rePassword;
-  @JsonKey(name: 'Name')
+  @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'Family')
+  @JsonKey(name: 'family')
   String? family;
-  @JsonKey(name: 'SiteId')
+  @JsonKey(name: 'siteId')
   int? siteId;
-  @JsonKey(name: 'Roulaccespt')
+  @JsonKey(name: 'roulaccespt')
   bool? roulaccespt;
 
   AuthUserSignUpModel();

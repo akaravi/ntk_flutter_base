@@ -10,23 +10,23 @@ part 'estate_property_detail_group_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'IconFont')
+  @JsonKey(name: 'iconFont')
   String? iconFont;
-  @JsonKey(name: 'IconColor')
+  @JsonKey(name: 'iconColor')
   String? iconColor;
-  @JsonKey(name: 'ShowInFormOrder')
+  @JsonKey(name: 'showInFormOrder')
   int? showInFormOrder;
-  @JsonKey(name: 'IsHistoryable')
+  @JsonKey(name: 'isHistoryable')
   bool? isHistoryable;
-  @JsonKey(name: 'IsSearchable')
+  @JsonKey(name: 'isSearchable')
   bool? isSearchable;
-  @JsonKey(name: 'LinkPropertyTypeLanduseId')
+  @JsonKey(name: 'linkPropertyTypeLanduseId')
   String? linkPropertyTypeLanduseId;
-  @JsonKey(name: 'PropertyDetails')
+  @JsonKey(name: 'propertyDetails')
   List<EstatePropertyDetailModel>? propertyDetails;
   List<EstatePropertyDetailValueModel>? propertyValues;EstatePropertyDetailGroupModel();
   factory EstatePropertyDetailGroupModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailGroupModelFromJson(json);

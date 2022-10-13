@@ -4,11 +4,11 @@ part 'biography_content_with_similar_dateperiod_start_dto_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentWithSimilarDatePeriodStartDtoModel {
-  @JsonKey(name: 'TagIds')
+  @JsonKey(name: 'tagIds')
   List<int>? tagIds;
-  @JsonKey(name: 'SearchDayMin')
+  @JsonKey(name: 'searchDayMin')
   int? searchDayMin;
-  @JsonKey(name: 'SearchDayMax')
+  @JsonKey(name: 'searchDayMax')
   int? searchDayMax;
 
   BiographyContentWithSimilarDatePeriodStartDtoModel();

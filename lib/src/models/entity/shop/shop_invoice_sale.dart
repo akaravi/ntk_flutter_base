@@ -9,61 +9,61 @@ part 'shop_invoice_sale.g.dart';
 
 @JsonSerializable()
 class ShopInvoiceSale extends BaseModuleEntity<int> {
-  @JsonKey(name: 'IsReleased')
+  @JsonKey(name: 'isReleased')
   bool? isReleased;
-  @JsonKey(name: 'ReleaseDate')
+  @JsonKey(name: 'releaseDate')
   String? releaseDate;
-  @JsonKey(name: 'OnlineDateLock')
+  @JsonKey(name: 'onlineDateLock')
   String? onlineDateLock;
-  @JsonKey(name: 'OnlineDateUnlock')
+  @JsonKey(name: 'onlineDateUnlock')
   String? onlineDateUnlock;
-  @JsonKey(name: 'RegisterDate')
+  @JsonKey(name: 'registerDate')
   String? registerDate;
-  @JsonKey(name: 'DeliveryDate')
+  @JsonKey(name: 'deliveryDate')
   String? deliveryDate;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkMemberUserId')
+  @JsonKey(name: 'linkMemberUserId')
   int? linkMemberUserId;
-  @JsonKey(name: 'LinkCmsUserId')
+  @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'Discount')
+  @JsonKey(name: 'discount')
   double? discount;
-  @JsonKey(name: 'Tax')
+  @JsonKey(name: 'tax')
   double? tax;
-  @JsonKey(name: 'TotalAmount')
+  @JsonKey(name: 'totalAmount')
   double? totalAmount;
-  @JsonKey(name: 'LinkModelBankPaymentTransactionSuccessfulId')
+  @JsonKey(name: 'linkModelBankPaymentTransactionSuccessfulId')
   int? linkModelBankPaymentTransactionSuccessfulId;
 
-  @JsonKey(name: 'LinkExternalModuleDeliveryInvoiceId')
+  @JsonKey(name: 'linkExternalModuleDeliveryInvoiceId')
   int? linkExternalModuleDeliveryInvoiceId;
   @JsonKey(name: 'virtual_ShopInvoiceSaleWorkFlow')
   ShopInvoiceSaleWorkFlow? virtual_ShopInvoiceSaleWorkFlow;
-  @JsonKey(name: 'PaymentStatus')
+  @JsonKey(name: 'paymentStatus')
   int? paymentStatus;
-  @JsonKey(name: 'InvoiceStatus')
+  @JsonKey(name: 'invoiceStatus')
   int? invoiceStatus;
 
-  @JsonKey(name: 'ReceiverName')
+  @JsonKey(name: 'receiverName')
   String? receiverName;
-  @JsonKey(name: 'ReceiverLastName')
+  @JsonKey(name: 'receiverLastName')
   String? receiverLastName;
-  @JsonKey(name: 'ReceiverMobile')
+  @JsonKey(name: 'receiverMobile')
   String? receiverMobile;
-  @JsonKey(name: 'ReceiverTel')
+  @JsonKey(name: 'receiverTel')
   String? receiverTel;
-  @JsonKey(name: 'ReceiverOstan')
+  @JsonKey(name: 'receiverOstan')
   String? receiverOstan;
-  @JsonKey(name: 'ReceiverCity')
+  @JsonKey(name: 'receiverCity')
   String? receiverCity;
-  @JsonKey(name: 'ReceiverPostalCode')
+  @JsonKey(name: 'receiverPostalCode')
   String? receiverPostalCode;
-  @JsonKey(name: 'ReceiverAddress')
+  @JsonKey(name: 'receiverAddress')
   String? receiverAddress;
-  @JsonKey(name: 'ReceiverMemo')
+  @JsonKey(name: 'receiverMemo')
   String? receiverMemo;
-  @JsonKey(name: 'InvoiceSaleDetails')
+  @JsonKey(name: 'invoiceSaleDetails')
   List<ShopInvoiceSaleDetail>? invoiceSaleDetails;
   ShopInvoiceSale();
   factory ShopInvoiceSale.fromJson(Map<String, dynamic> json) => _$ShopInvoiceSaleFromJson(json);

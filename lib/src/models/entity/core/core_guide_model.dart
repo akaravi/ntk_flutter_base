@@ -5,23 +5,23 @@ part 'core_guide_model.g.dart';
 
 @JsonSerializable()
 class CoreGuideModel extends BaseEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'BodyFa')
+  @JsonKey(name: 'bodyFa')
   String? bodyFa;
-  @JsonKey(name: 'BodyEn')
+  @JsonKey(name: 'bodyEn')
   String? bodyEn;
-  @JsonKey(name: 'BodyAr')
+  @JsonKey(name: 'bodyAr')
   String? bodyAr;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   int? linkParentId;
   @JsonKey(name: 'virtual_Parent')
   CoreGuideModel? virtual_Parent;
-  @JsonKey(name: 'Parent')
+  @JsonKey(name: 'parent')
   CoreGuideModel? parent;
-  @JsonKey(name: 'Children')
+  @JsonKey(name: 'children')
   List<CoreGuideModel>? children;
   CoreGuideModel();
   factory CoreGuideModel.fromJson(Map<String, dynamic> json) =>

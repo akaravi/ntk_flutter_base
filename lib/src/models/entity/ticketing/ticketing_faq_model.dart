@@ -9,17 +9,17 @@ part 'ticketing_faq_model.g.dart';
 
 @JsonSerializable()
 class TicketingFaqModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Question')
+  @JsonKey(name: 'question')
   String? question;
-  @JsonKey(name: 'Answer')
+  @JsonKey(name: 'answer')
   String? answer;
-  @JsonKey(name: 'LinkTicketingDepartemenId')
+  @JsonKey(name: 'linkTicketingDepartemenId')
   int? linkTicketingDepartemenId;
   @JsonKey(name: ' virtual_TicketingDepartemen')
   TicketingDepartemenModel? virtual_TicketingDepartemen;
-  @JsonKey(name: 'TicketingDepartemen')
+  @JsonKey(name: 'ticketingDepartemen')
   TicketingDepartemenModel? ticketingDepartemen;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;TicketingFaqModel();
   factory TicketingFaqModel.fromJson(Map<String, dynamic> json) => _$TicketingFaqModelFromJson(json);
 

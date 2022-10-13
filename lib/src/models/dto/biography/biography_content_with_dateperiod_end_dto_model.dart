@@ -4,11 +4,11 @@ part 'biography_content_with_dateperiod_end_dto_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentWithDatePeriodEndDtoModel {
-  @JsonKey(name: 'TagIds')
+  @JsonKey(name: 'tagIds')
   List<int>? tagIds;
-  @JsonKey(name: 'SearchDateMin')
+  @JsonKey(name: 'searchDateMin')
   String? searchDateMin;
-  @JsonKey(name: 'SearchDateMax')
+  @JsonKey(name: 'searchDateMax')
   String? searchDateMax;
 
   BiographyContentWithDatePeriodEndDtoModel();

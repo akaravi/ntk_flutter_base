@@ -7,23 +7,23 @@ part 'application_intro_model.g.dart';
 
 @JsonSerializable()
 class ApplicationIntroModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'Priority')
+  @JsonKey(name: 'priority')
   int? priority;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkMainVideoId')
+  @JsonKey(name: 'linkMainVideoId')
   int? linkMainVideoId;
-  @JsonKey(name: 'LinkApplicationId')
+  @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
-  @JsonKey(name: 'Application')
+  @JsonKey(name: 'application')
   ApplicationAppModel? application;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'LinkMainVideoIdSrc')
+  @JsonKey(name: 'linkMainVideoIdSrc')
   String? linkMainVideoIdSrc;
   ApplicationIntroModel();
   factory ApplicationIntroModel.fromJson(Map<String, dynamic> json) =>

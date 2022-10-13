@@ -4,21 +4,21 @@ part 'theme_child_config_dto_model.g.dart';
 
 @JsonSerializable()
 class ThemeChildConfigDtoModel {
-  @JsonKey(name: 'SortId')
+  @JsonKey(name: 'sortId')
   int? sortId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'BgColor')
+  @JsonKey(name: 'bgColor')
   String? bgColor;
-  @JsonKey(name: 'FrontColor')
+  @JsonKey(name: 'frontColor')
   String? frontColor;
-  @JsonKey(name: 'FontSize')
+  @JsonKey(name: 'fontSize')
   String? fontSize;
-  @JsonKey(name: 'Href')
+  @JsonKey(name: 'href')
   String? href;
-  @JsonKey(name: 'ActionName')
+  @JsonKey(name: 'actionName')
   String? actionName;
-  @JsonKey(name: 'ActionRequest')
+  @JsonKey(name: 'actionRequest')
   String? actionRequest;
 
   ThemeChildConfigDtoModel();

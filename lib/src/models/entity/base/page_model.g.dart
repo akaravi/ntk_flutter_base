@@ -7,12 +7,12 @@ part of 'page_model.dart';
 // **************************************************************************
 
 PageModel _$PageModelFromJson(Map<String, dynamic> json) => PageModel()
-  ..pageNumber = json['PageNumber'] as int
-  ..totalElements = json['TotalElements'] as int?
-  ..size = json['Size'] as int;
+  ..pageNumber = json['pageNumber'] as int
+  ..totalElements = json['totalElements'] as int?
+  ..size = json['size'] as int;
 
 Map<String, dynamic> _$PageModelToJson(PageModel instance) => <String, dynamic>{
-      'PageNumber': instance.pageNumber,
-      'TotalElements': instance.totalElements,
-      'Size': instance.size,
+      'pageNumber': instance.pageNumber,
+      'totalElements': instance.totalElements,
+      'size': instance.size,
     };

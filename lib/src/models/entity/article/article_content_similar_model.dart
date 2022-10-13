@@ -5,17 +5,17 @@ part 'article_content_similar_model.g.dart';
 
 @JsonSerializable()
 class ArticleContentSimilarModel{
-  @JsonKey(name: 'LinkSourceid')
+  @JsonKey(name: 'linkSourceid')
   int? linkSourceid;
-  @JsonKey(name: 'LinkDestinationId')
+  @JsonKey(name: 'linkDestinationId')
   int? linkDestinationId;
   @JsonKey(name: ' virtual_Source')
   Object? virtual_Source;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   Object? source;
   @JsonKey(name: ' virtual_Destination')
   Object? virtual_Destination;
-  @JsonKey(name: 'Destination')
+  @JsonKey(name: 'destination')
   Object? destination;
   ArticleContentSimilarModel();
   factory ArticleContentSimilarModel.fromJson(Map<String, dynamic> json) =>

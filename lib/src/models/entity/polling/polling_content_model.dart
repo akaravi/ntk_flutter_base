@@ -11,55 +11,55 @@ part 'polling_content_model.g.dart';
 
 @JsonSerializable()
 class PollingContentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   String? expireDate;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Question')
+  @JsonKey(name: 'question')
   String? question;
-  @JsonKey(name: 'ViewStatisticsBeforeVote')
+  @JsonKey(name: 'viewStatisticsBeforeVote')
   bool? viewStatisticsBeforeVote;
-  @JsonKey(name: 'ViewStatisticsAfterVote')
+  @JsonKey(name: 'viewStatisticsAfterVote')
   bool? viewStatisticsAfterVote;
   @JsonKey(name: ' virtual_Category')
   PollingCategoryModel? virtual_Category;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   PollingCategoryModel? category;
-  @JsonKey(name: 'FromDate')
+  @JsonKey(name: 'fromDate')
   String? fromDate;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFilePodcastId')
+  @JsonKey(name: 'linkFilePodcastId')
   int? linkFilePodcastId;
-  @JsonKey(name: 'LinkFileMovieId')
+  @JsonKey(name: 'linkFileMovieId')
   int? linkFileMovieId;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'ScoreClick')
+  @JsonKey(name: 'scoreClick')
   int? scoreClick;
-  @JsonKey(name: 'ScoreSumPercent')
+  @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-  @JsonKey(name: 'ViewCount')
+  @JsonKey(name: 'viewCount')
   int? viewCount;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'LinkFilePodcastIdSrc')
+  @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
-  @JsonKey(name: 'LinkFileMovieIdSrc')
+  @JsonKey(name: 'linkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
-  @JsonKey(name: 'MaxVoteForThisContent')
+  @JsonKey(name: 'maxVoteForThisContent')
   int? maxVoteForThisContent;
-  @JsonKey(name: 'MaxVoteForEachOption')
+  @JsonKey(name: 'maxVoteForEachOption')
   int? maxVoteForEachOption;
-  @JsonKey(name: 'Options')
+  @JsonKey(name: 'options')
   List<PollingOptionModel>? options;PollingContentModel();
   factory PollingContentModel.fromJson(Map<String, dynamic> json) => _$PollingContentModelFromJson(json);
   Map<String, dynamic> toJson() => _$PollingContentModelToJson(this);

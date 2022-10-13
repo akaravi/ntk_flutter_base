@@ -9,19 +9,19 @@ part 'toolbar_dto_model.g.dart';
 
 @JsonSerializable()
 class ToolbarDtoModel {
-  @JsonKey(name: 'Type')
+  @JsonKey(name: 'type')
   int? type;
-  @JsonKey(name: 'BackgroundColor')
+  @JsonKey(name: 'backgroundColor')
   String? backgroundColor;
-  @JsonKey(name: 'ColorBelowLine')
+  @JsonKey(name: 'colorBelowLine')
   String? colorBelowLine;
-  @JsonKey(name: 'HamberMenu')
+  @JsonKey(name: 'hamberMenu')
   HamberMenuThemeDtoModel? hamberMenuThemeDtoModel;
-  @JsonKey(name: 'SearchBox')
+  @JsonKey(name: 'searchBox')
   SearchBoxThemeDtoModel? searchBox;
-  @JsonKey(name: 'ShoppingCart')
+  @JsonKey(name: 'shoppingCart')
   ShoppingCartThemeDtoModel? shoppingCart;
-  @JsonKey(name: 'Drawer')
+  @JsonKey(name: 'drawer')
   DrawerThemeDtoModel? drawerThemeDtoModel;
 
   ToolbarDtoModel();

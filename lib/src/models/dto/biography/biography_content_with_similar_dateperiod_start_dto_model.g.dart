@@ -11,14 +11,14 @@ BiographyContentWithSimilarDatePeriodStartDtoModel
             Map<String, dynamic> json) =>
         BiographyContentWithSimilarDatePeriodStartDtoModel()
           ..tagIds =
-              (json['TagIds'] as List<dynamic>?)?.map((e) => e as int).toList()
-          ..searchDayMin = json['SearchDayMin'] as int?
-          ..searchDayMax = json['SearchDayMax'] as int?;
+              (json['tagIds'] as List<dynamic>?)?.map((e) => e as int).toList()
+          ..searchDayMin = json['searchDayMin'] as int?
+          ..searchDayMax = json['searchDayMax'] as int?;
 
 Map<String, dynamic> _$BiographyContentWithSimilarDatePeriodStartDtoModelToJson(
         BiographyContentWithSimilarDatePeriodStartDtoModel instance) =>
     <String, dynamic>{
-      'TagIds': instance.tagIds,
-      'SearchDayMin': instance.searchDayMin,
-      'SearchDayMax': instance.searchDayMax,
+      'tagIds': instance.tagIds,
+      'searchDayMin': instance.searchDayMin,
+      'searchDayMax': instance.searchDayMax,
     };

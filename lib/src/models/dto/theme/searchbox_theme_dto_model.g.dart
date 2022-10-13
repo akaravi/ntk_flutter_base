@@ -9,12 +9,12 @@ part of 'searchbox_theme_dto_model.dart';
 SearchBoxThemeDtoModel _$SearchBoxThemeDtoModelFromJson(
         Map<String, dynamic> json) =>
     SearchBoxThemeDtoModel()
-      ..bgColor = json['BgColor'] as String?
-      ..image = json['Image'] as String?;
+      ..bgColor = json['bgColor'] as String?
+      ..image = json['image'] as String?;
 
 Map<String, dynamic> _$SearchBoxThemeDtoModelToJson(
         SearchBoxThemeDtoModel instance) =>
     <String, dynamic>{
-      'BgColor': instance.bgColor,
-      'Image': instance.image,
+      'bgColor': instance.bgColor,
+      'image': instance.image,
     };

@@ -4,19 +4,19 @@ part 'coresite_add_firstsite_dto_model.g.dart';
 
 @JsonSerializable()
 class CoreSiteAddFirstSiteDtoModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'Domain')
+  @JsonKey(name: 'domain')
   String? domain;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'SubDomain')
+  @JsonKey(name: 'subDomain')
   String? subDomain;
-  @JsonKey(name: 'LinkSiteCategoryId')
+  @JsonKey(name: 'linkSiteCategoryId')
   String? linkSiteCategoryId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
 
   CoreSiteAddFirstSiteDtoModel();

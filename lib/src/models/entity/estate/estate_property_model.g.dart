@@ -8,146 +8,147 @@ part of 'estate_property_model.dart';
 
 EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
     EstatePropertyModel()
-      ..id = json['Id'] as String?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as String?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..caseCode = json['CaseCode'] as String?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..title = json['title'] as String?
+      ..caseCode = json['caseCode'] as String?
       ..mainAdminRecordStatus = $enumDecodeNullable(
-          _$EnumRecordStatusEnumMap, json['MainAdminRecordStatus'])
-      ..createdYaer = json['CreatedYaer'] as int?
-      ..partition = json['Partition'] as int?
-      ..area = json['Area'] as int?
-      ..linkEstateUserId = json['LinkEstateUserId'] as String?
-      ..linkLocationId = json['LinkLocationId'] as int?
-      ..description = json['Description'] as String?
-      ..linkCmsUserId = json['LinkCmsUserId'] as int?
-      ..linkPropertyTypeLanduseId = json['LinkPropertyTypeLanduseId'] as String?
-      ..linkPropertyTypeUsageId = json['LinkPropertyTypeUsageId'] as String?
-      ..propertyTypeLanduse = json['PropertyTypeLanduse'] == null
+          _$EnumRecordStatusEnumMap, json['mainAdminRecordStatus'])
+      ..createdYaer = json['createdYaer'] as int?
+      ..partition = json['partition'] as int?
+      ..area = json['area'] as int?
+      ..linkEstateUserId = json['linkEstateUserId'] as String?
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..description = json['description'] as String?
+      ..linkCmsUserId = json['linkCmsUserId'] as int?
+      ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
+      ..linkPropertyTypeUsageId = json['linkPropertyTypeUsageId'] as String?
+      ..propertyTypeLanduse = json['propertyTypeLanduse'] == null
           ? null
           : EstatePropertyTypeLanduseModel.fromJson(
-              json['PropertyTypeLanduse'] as Map<String, dynamic>)
-      ..propertyTypeUsage = json['PropertyTypeUsage'] == null
+              json['propertyTypeLanduse'] as Map<String, dynamic>)
+      ..propertyTypeUsage = json['propertyTypeUsage'] == null
           ? null
           : EstatePropertyTypeUsageModel.fromJson(
-              json['PropertyTypeUsage'] as Map<String, dynamic>)
-      ..favorited = json['Favorited'] as bool?
-      ..geolocationlatitude = (json['Geolocationlatitude'] as num?)?.toDouble()
+              json['propertyTypeUsage'] as Map<String, dynamic>)
+      ..favorited = json['favorited'] as bool?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
-          (json['Geolocationlongitude'] as num?)?.toDouble()
-      ..address = json['Address'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..linkExtraImageIds = json['LinkExtraImageIds'] as String?
-      ..linkFileIds = json['LinkFileIds'] as String?
-      ..scoreClick = json['ScoreClick'] as int?
-      ..scoreSumPercent = json['ScoreSumPercent'] as int?
-      ..viewCount = json['ViewCount'] as int?
-      ..aboutAgentTel = json['AboutAgentTel'] as String?
-      ..aboutAgentMobile = json['AboutAgentMobile'] as String?
-      ..aboutCustomerTel = json['AboutCustomerTel'] as String?
-      ..aboutCustomerMobile = json['AboutCustomerMobile'] as String?
-      ..contracts = (json['Contracts'] as List<dynamic>?)
+          (json['geolocationlongitude'] as num?)?.toDouble()
+      ..address = json['address'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkExtraImageIds = json['linkExtraImageIds'] as String?
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..scoreClick = json['scoreClick'] as int?
+      ..scoreSumPercent = json['scoreSumPercent'] as int?
+      ..viewCount = json['viewCount'] as int?
+      ..aboutAgentTel = json['aboutAgentTel'] as String?
+      ..aboutAgentMobile = json['aboutAgentMobile'] as String?
+      ..aboutCustomerTel = json['aboutCustomerTel'] as String?
+      ..aboutCustomerMobile = json['aboutCustomerMobile'] as String?
+      ..contracts = (json['contracts'] as List<dynamic>?)
           ?.map((e) => EstateContractModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..propertyDetailValues = (json['PropertyDetailValues'] as List<dynamic>?)
+      ..propertyDetailValues = (json['propertyDetailValues'] as List<dynamic>?)
           ?.map((e) => EstatePropertyDetailValueModel.fromJson(
               e as Map<String, dynamic>))
           .toList()
-      ..propertyDetailGroups = (json['PropertyDetailGroups'] as List<dynamic>?)
+      ..propertyDetailGroups = (json['propertyDetailGroups'] as List<dynamic>?)
           ?.map((e) => EstatePropertyDetailGroupModel.fromJson(
               e as Map<String, dynamic>))
           .toList()
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
-      ..linkExtraImageIdsSrc = (json['LinkExtraImageIdsSrc'] as List<dynamic>?)
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..linkExtraImageIdsSrc = (json['linkExtraImageIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
-      ..linkFileIdsSrc = (json['LinkFileIdsSrc'] as List<dynamic>?)
+      ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
-      ..uploadFileGUID = (json['UploadFileGUID'] as List<dynamic>?)
+      ..uploadFileGUID = (json['uploadFileGUID'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
-      ..linkLocationIdTitle = json['LinkLocationIdTitle'] as String?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle =
-          json['LinkLocationIdParentTitle'] as String?;
+          json['linkLocationIdParentTitle'] as String?;
 
 Map<String, dynamic> _$EstatePropertyModelToJson(
         EstatePropertyModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'CaseCode': instance.caseCode,
-      'MainAdminRecordStatus':
+      'linkSiteId': instance.linkSiteId,
+      'title': instance.title,
+      'caseCode': instance.caseCode,
+      'mainAdminRecordStatus':
           _$EnumRecordStatusEnumMap[instance.mainAdminRecordStatus],
-      'CreatedYaer': instance.createdYaer,
-      'Partition': instance.partition,
-      'Area': instance.area,
-      'LinkEstateUserId': instance.linkEstateUserId,
-      'LinkLocationId': instance.linkLocationId,
-      'Description': instance.description,
-      'LinkCmsUserId': instance.linkCmsUserId,
-      'LinkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
-      'LinkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
-      'PropertyTypeLanduse': instance.propertyTypeLanduse,
-      'PropertyTypeUsage': instance.propertyTypeUsage,
-      'Favorited': instance.favorited,
-      'Geolocationlatitude': instance.geolocationlatitude,
-      'Geolocationlongitude': instance.geolocationlongitude,
-      'Address': instance.address,
-      'LinkMainImageId': instance.linkMainImageId,
-      'LinkExtraImageIds': instance.linkExtraImageIds,
-      'LinkFileIds': instance.linkFileIds,
-      'ScoreClick': instance.scoreClick,
-      'ScoreSumPercent': instance.scoreSumPercent,
-      'ViewCount': instance.viewCount,
-      'AboutAgentTel': instance.aboutAgentTel,
-      'AboutAgentMobile': instance.aboutAgentMobile,
-      'AboutCustomerTel': instance.aboutCustomerTel,
-      'AboutCustomerMobile': instance.aboutCustomerMobile,
-      'Contracts': instance.contracts,
-      'PropertyDetailValues': instance.propertyDetailValues,
-      'PropertyDetailGroups': instance.propertyDetailGroups,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
-      'LinkExtraImageIdsSrc': instance.linkExtraImageIdsSrc,
-      'LinkFileIdsSrc': instance.linkFileIdsSrc,
-      'UploadFileGUID': instance.uploadFileGUID,
-      'LinkLocationIdTitle': instance.linkLocationIdTitle,
-      'LinkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'createdYaer': instance.createdYaer,
+      'partition': instance.partition,
+      'area': instance.area,
+      'linkEstateUserId': instance.linkEstateUserId,
+      'linkLocationId': instance.linkLocationId,
+      'description': instance.description,
+      'linkCmsUserId': instance.linkCmsUserId,
+      'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
+      'linkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
+      'propertyTypeLanduse': instance.propertyTypeLanduse,
+      'propertyTypeUsage': instance.propertyTypeUsage,
+      'favorited': instance.favorited,
+      'geolocationlatitude': instance.geolocationlatitude,
+      'geolocationlongitude': instance.geolocationlongitude,
+      'address': instance.address,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkExtraImageIds': instance.linkExtraImageIds,
+      'linkFileIds': instance.linkFileIds,
+      'scoreClick': instance.scoreClick,
+      'scoreSumPercent': instance.scoreSumPercent,
+      'viewCount': instance.viewCount,
+      'aboutAgentTel': instance.aboutAgentTel,
+      'aboutAgentMobile': instance.aboutAgentMobile,
+      'aboutCustomerTel': instance.aboutCustomerTel,
+      'aboutCustomerMobile': instance.aboutCustomerMobile,
+      'contracts': instance.contracts,
+      'propertyDetailValues': instance.propertyDetailValues,
+      'propertyDetailGroups': instance.propertyDetailGroups,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkExtraImageIdsSrc': instance.linkExtraImageIdsSrc,
+      'linkFileIdsSrc': instance.linkFileIdsSrc,
+      'uploadFileGUID': instance.uploadFileGUID,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
     };
 
 const _$EnumRecordStatusEnumMap = {

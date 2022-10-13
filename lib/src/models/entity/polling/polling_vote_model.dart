@@ -8,15 +8,15 @@ part 'polling_vote_model.g.dart';
 
 @JsonSerializable()
 class PollingVoteModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'LinkPollingContentId')
+  @JsonKey(name: 'linkPollingContentId')
   int? linkPollingContentId;
-  @JsonKey(name: 'LinkPollingOptionId')
+  @JsonKey(name: 'linkPollingOptionId')
   int? linkPollingOptionId;
-  @JsonKey(name: 'OptionScore')
+  @JsonKey(name: 'optionScore')
   int? optionScore;
-  @JsonKey(name: 'DeviceUserSerial')
+  @JsonKey(name: 'deviceUserSerial')
   String? deviceUserSerial;
-  @JsonKey(name: 'OtherInfo')
+  @JsonKey(name: 'otherInfo')
   String? otherInfo;PollingVoteModel();
   factory PollingVoteModel.fromJson(Map<String, dynamic> json) => _$PollingVoteModelFromJson(json);
   Map<String, dynamic> toJson() => _$PollingVoteModelToJson(this);

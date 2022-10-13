@@ -10,33 +10,33 @@ part 'ticketing_answer_model.g.dart';
 
 @JsonSerializable()
 class TicketingAnswerModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkTaskId')
+  @JsonKey(name: 'linkTaskId')
   int? linkTaskId;
-  @JsonKey(name: 'LinkMemberUserId')
+  @JsonKey(name: 'linkMemberUserId')
   int? linkMemberUserId;
-  @JsonKey(name: 'HtmlBody')
+  @JsonKey(name: 'htmlBody')
   String? htmlBody;
   @JsonKey(name: 'virtual_Ticket')
   TicketingTaskModel? virtual_Ticket;
-  @JsonKey(name: 'Ticket')
+  @JsonKey(name: 'ticket')
   TicketingTaskModel? ticket;
-  @JsonKey(name: 'LinkTicketingDepartemenId')
+  @JsonKey(name: 'linkTicketingDepartemenId')
   int? linkTicketingDepartemenId;
   @JsonKey(name: 'virtual_Departemen')
   TicketingDepartemenModel? virtual_Departemen;
-  @JsonKey(name: 'Departemen')
+  @JsonKey(name: 'departemen')
   TicketingDepartemenModel? departemen;
-  @JsonKey(name: 'LinkTypeOperatorId')
+  @JsonKey(name: 'linkTypeOperatorId')
   int? linkTypeOperatorId;
   @JsonKey(name: 'virtual_DepartemenOperator')
   TicketingDepartemenOperatorModel? virtual_DepartemenOperator;
-  @JsonKey(name: 'DepartemenOperator')
+  @JsonKey(name: 'departemenOperator')
   TicketingDepartemenOperatorModel? departemenOperator;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
-  @JsonKey(name: 'UploadFileGUID')
+  @JsonKey(name: 'uploadFileGUID')
   List<String>? uploadFileGUID;
   TicketingAnswerModel();
   factory TicketingAnswerModel.fromJson(Map<String, dynamic> json) => _$TicketingAnswerModelFromJson(json);

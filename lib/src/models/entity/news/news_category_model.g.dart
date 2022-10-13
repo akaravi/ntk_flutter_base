@@ -8,24 +8,24 @@ part of 'news_category_model.dart';
 
 NewsCategoryModel _$NewsCategoryModelFromJson(Map<String, dynamic> json) =>
     NewsCategoryModel()
-      ..children = (json['Children'] as List<dynamic>?)
+      ..children = (json['children'] as List<dynamic>?)
           ?.map((e) => NewsCategoryModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..category = json['Category'] == null
+      ..category = json['category'] == null
           ? null
-          : NewsCategoryModel.fromJson(json['Category'] as Map<String, dynamic>)
+          : NewsCategoryModel.fromJson(json['category'] as Map<String, dynamic>)
       ..virtual_Category = json['virtual_Category'] == null
           ? null
           : NewsCategoryModel.fromJson(
               json['virtual_Category'] as Map<String, dynamic>)
-      ..contents = (json['Contents'] as List<dynamic>?)
+      ..contents = (json['contents'] as List<dynamic>?)
           ?.map((e) => NewsContentModel.fromJson(e as Map<String, dynamic>))
           .toList();
 
 Map<String, dynamic> _$NewsCategoryModelToJson(NewsCategoryModel instance) =>
     <String, dynamic>{
-      'Children': instance.children,
-      'Category': instance.category,
+      'children': instance.children,
+      'category': instance.category,
       'virtual_Category': instance.virtual_Category,
-      'Contents': instance.contents,
+      'contents': instance.contents,
     };

@@ -7,36 +7,46 @@ part of 'access_model.dart';
 // **************************************************************************
 
 AccessModel _$AccessModelFromJson(Map<String, dynamic> json) => AccessModel()
-  ..accessDeleteRow = json['AccessDeleteRow'] as bool
-  ..accessWatchRow = json['AccessWatchRow'] as bool
-  ..accessEditRow = json['AccessEditRow'] as bool
-  ..accessAddRow = json['AccessAddRow'] as bool
-  ..accessRowInPanelDemo = json['AccessRowInPanelDemo'] as bool
+  ..moduleName = json['moduleName'] as String?
+  ..moduleEntityName = json['moduleEntityName'] as String?
+  ..accessDeleteRow = json['accessDeleteRow'] as bool
+  ..accessWatchRow = json['accessWatchRow'] as bool
+  ..accessCountRow = json['accessCountRow'] as bool
+  ..accessEditRow = json['accessEditRow'] as bool
+  ..accessAddRow = json['accessAddRow'] as bool
+  ..accessRowInPanelDemo = json['accessRowInPanelDemo'] as bool
   ..accessRowWatchInSharingCategory =
-      json['AccessRowWatchInSharingCategory'] as bool
-  ..accessWatchRowOtherSiteId = json['AccessWatchRowOtherSiteId'] as bool
-  ..accessWatchRowOtherCreatedBy = json['AccessWatchRowOtherCreatedBy'] as bool
-  ..accessEditRowOtherSiteId = json['AccessEditRowOtherSiteId'] as bool
-  ..accessEditRowOtherCreatedBy = json['AccessEditRowOtherCreatedBy'] as bool
+      json['accessRowWatchInSharingCategory'] as bool
+  ..accessWatchRowOtherSiteId = json['accessWatchRowOtherSiteId'] as bool
+  ..accessWatchRowOtherCreatedBy = json['accessWatchRowOtherCreatedBy'] as bool
+  ..accessCountRowOtherSiteId = json['accessCountRowOtherSiteId'] as bool
+  ..accessCountRowOtherCreatedBy = json['accessCountRowOtherCreatedBy'] as bool
+  ..accessEditRowOtherSiteId = json['accessEditRowOtherSiteId'] as bool
+  ..accessEditRowOtherCreatedBy = json['accessEditRowOtherCreatedBy'] as bool
   ..accessDeleteRowOtherCreatedBy =
-      json['AccessDeleteRowOtherCreatedBy'] as bool
-  ..fieldsInfo = (json['FieldsInfo'] as List<dynamic>?)
+      json['accessDeleteRowOtherCreatedBy'] as bool
+  ..fieldsInfo = (json['fieldsInfo'] as List<dynamic>?)
       ?.map((e) => DataFieldInfoModel.fromJson(e as Map<String, dynamic>))
       .toList();
 
 Map<String, dynamic> _$AccessModelToJson(AccessModel instance) =>
     <String, dynamic>{
-      'AccessDeleteRow': instance.accessDeleteRow,
-      'AccessWatchRow': instance.accessWatchRow,
-      'AccessEditRow': instance.accessEditRow,
-      'AccessAddRow': instance.accessAddRow,
-      'AccessRowInPanelDemo': instance.accessRowInPanelDemo,
-      'AccessRowWatchInSharingCategory':
+      'moduleName': instance.moduleName,
+      'moduleEntityName': instance.moduleEntityName,
+      'accessDeleteRow': instance.accessDeleteRow,
+      'accessWatchRow': instance.accessWatchRow,
+      'accessCountRow': instance.accessCountRow,
+      'accessEditRow': instance.accessEditRow,
+      'accessAddRow': instance.accessAddRow,
+      'accessRowInPanelDemo': instance.accessRowInPanelDemo,
+      'accessRowWatchInSharingCategory':
           instance.accessRowWatchInSharingCategory,
-      'AccessWatchRowOtherSiteId': instance.accessWatchRowOtherSiteId,
-      'AccessWatchRowOtherCreatedBy': instance.accessWatchRowOtherCreatedBy,
-      'AccessEditRowOtherSiteId': instance.accessEditRowOtherSiteId,
-      'AccessEditRowOtherCreatedBy': instance.accessEditRowOtherCreatedBy,
-      'AccessDeleteRowOtherCreatedBy': instance.accessDeleteRowOtherCreatedBy,
-      'FieldsInfo': instance.fieldsInfo,
+      'accessWatchRowOtherSiteId': instance.accessWatchRowOtherSiteId,
+      'accessWatchRowOtherCreatedBy': instance.accessWatchRowOtherCreatedBy,
+      'accessCountRowOtherSiteId': instance.accessCountRowOtherSiteId,
+      'accessCountRowOtherCreatedBy': instance.accessCountRowOtherCreatedBy,
+      'accessEditRowOtherSiteId': instance.accessEditRowOtherSiteId,
+      'accessEditRowOtherCreatedBy': instance.accessEditRowOtherCreatedBy,
+      'accessDeleteRowOtherCreatedBy': instance.accessDeleteRowOtherCreatedBy,
+      'fieldsInfo': instance.fieldsInfo,
     };

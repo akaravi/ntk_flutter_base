@@ -6,13 +6,13 @@ part 'news_content_tag_model.g.dart';
 
 @JsonSerializable()
 class NewsContentTagModel {
-  @JsonKey(name: 'LinkContentid')
+  @JsonKey(name: 'linkContentid')
   String? linkContentId;
-  @JsonKey(name: 'LinkTagid')
+  @JsonKey(name: 'linkTagid')
   int? linkTagId;
   @JsonKey(name: 'virtual_ModuleContent')
   NewsContentModel? virtual_ModuleContent;
-  @JsonKey(name: 'ModuleContent')
+  @JsonKey(name: 'moduleContent')
   NewsContentModel? moduleContent;
 
   NewsContentTagModel();

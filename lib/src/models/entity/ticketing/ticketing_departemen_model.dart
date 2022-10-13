@@ -14,21 +14,21 @@ part 'ticketing_departemen_model.g.dart';
 
 @JsonSerializable()
 class TicketingDepartemenModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'DefaultAnswerBody')
+  @JsonKey(name: 'defaultAnswerBody')
   String? defaultAnswerBody;
-  @JsonKey(name: 'Priority')
+  @JsonKey(name: 'priority')
   EnumTicketingDepartemenPriority? priority;
-  @JsonKey(name: 'AccessToChangeType')
+  @JsonKey(name: 'accessToChangeType')
   EnumTicketAccessStatus? accessToChangeType;
-  @JsonKey(name: 'Tickets')
+  @JsonKey(name: 'tickets')
   List<TicketingTaskModel>? tickets;
-  @JsonKey(name: 'TicketAnswers')
+  @JsonKey(name: 'ticketAnswers')
   List<TicketingAnswerModel>? ticketAnswers;
-  @JsonKey(name: 'Faqs')
+  @JsonKey(name: 'faqs')
   List<TicketingFaqModel>? faqs;
-  @JsonKey(name: 'Operators')
+  @JsonKey(name: 'operators')
   List<TicketingDepartemenOperatorModel>? operators;TicketingDepartemenModel();
   factory TicketingDepartemenModel.fromJson(Map<String, dynamic> json) => _$TicketingDepartemenModelFromJson(json);
 

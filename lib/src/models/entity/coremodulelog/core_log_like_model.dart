@@ -6,19 +6,19 @@ part 'core_log_like_model.g.dart';
 
 @JsonSerializable()
 class CoreLogLikeModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'ModuleName')
+  @JsonKey(name: 'moduleName')
   String? moduleName;
-  @JsonKey(name: 'ModuleEntityName')
+  @JsonKey(name: 'moduleEntityName')
   String? moduleEntityName;
-  @JsonKey(name: 'LinkUserId')
+  @JsonKey(name: 'linkUserId')
   int? linkUserId;
-  @JsonKey(name: 'LinkMemberUserId')
+  @JsonKey(name: 'linkMemberUserId')
   int? linkMemberUserId;
-  @JsonKey(name: 'EntityId')
+  @JsonKey(name: 'entityId')
   int? entityId;
-  @JsonKey(name: 'Likked')
+  @JsonKey(name: 'likked')
   bool? likked;
-  @JsonKey(name: 'ExistBeforAndChangeNow')
+  @JsonKey(name: 'existBeforAndChangeNow')
   bool? existBeforAndChangeNow;
   CoreLogLikeModel();
   factory CoreLogLikeModel.fromJson(Map<String, dynamic> json) =>

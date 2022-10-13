@@ -8,96 +8,96 @@ part of 'core_site_model.dart';
 
 CoreSiteModel _$CoreSiteModelFromJson(Map<String, dynamic> json) =>
     CoreSiteModel()
-      ..currentSiteDomainUrl = json['CurrentSiteDomainUrl'] as String?
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?
-      ..expireDate = json['ExpireDate'] as String?
-      ..linkCreatedBySiteId = json['LinkCreatedBySiteId'] as int?
+      ..currentSiteDomainUrl = json['currentSiteDomainUrl'] as String?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..expireDate = json['expireDate'] as String?
+      ..linkCreatedBySiteId = json['linkCreatedBySiteId'] as int?
       ..virtual_ParentCreator = json['virtual_ParentCreator'] == null
           ? null
           : CoreSiteModel.fromJson(
               json['virtual_ParentCreator'] as Map<String, dynamic>)
-      ..parentCreator = json['ParentCreator'] == null
+      ..parentCreator = json['parentCreator'] == null
           ? null
           : CoreSiteModel.fromJson(
-              json['ParentCreator'] as Map<String, dynamic>)
-      ..title = json['Title'] as String?
+              json['parentCreator'] as Map<String, dynamic>)
+      ..title = json['title'] as String?
       ..ownerSiteSetStatus = $enumDecodeNullable(
-          _$EnumSiteStatusEnumMap, json['OwnerSiteSetStatus'])
-      ..userLanguage = json['UserLanguage'] as int?
-      ..subDomain = json['SubDomain'] as String?
-      ..domain = json['Domain'] as String?
-      ..redirect = json['Redirect'] as String?
-      ..keyword = json['Keyword'] as String?
-      ..description = json['Description'] as String?
-      ..linkFavIconId = json['LinkFavIconId'] as int?
-      ..linkSiteCategoryId = json['LinkSiteCategoryId'] as int?
+          _$EnumSiteStatusEnumMap, json['ownerSiteSetStatus'])
+      ..userLanguage = json['userLanguage'] as int?
+      ..subDomain = json['subDomain'] as String?
+      ..domain = json['domain'] as String?
+      ..redirect = json['redirect'] as String?
+      ..keyword = json['keyword'] as String?
+      ..description = json['description'] as String?
+      ..linkFavIconId = json['linkFavIconId'] as int?
+      ..linkSiteCategoryId = json['linkSiteCategoryId'] as int?
       ..virtual_CmsSiteCategory = json['virtual_CmsSiteCategory'] == null
           ? null
           : CoreSiteCategoryModel.fromJson(
               json['virtual_CmsSiteCategory'] as Map<String, dynamic>)
-      ..cmsSiteCategory = json['CmsSiteCategory'] == null
+      ..cmsSiteCategory = json['cmsSiteCategory'] == null
           ? null
           : CoreSiteCategoryModel.fromJson(
-              json['CmsSiteCategory'] as Map<String, dynamic>)
-      ..hasAccountingForm = json['HasAccountingForm'] as bool?
-      ..viewInCmsSiteLIst = json['ViewInCmsSiteLIst'] as bool?
-      ..accountingFormNo = json['AccountingFormNo'] as int?
-      ..accountingFormCreatedDate = json['AccountingFormCreatedDate'] as String?
-      ..accountingFormUpdatedDate = json['AccountingFormUpdatedDate'] as String?
-      ..SiteUsers = (json['SiteUsers'] as List<dynamic>?)
+              json['cmsSiteCategory'] as Map<String, dynamic>)
+      ..hasAccountingForm = json['hasAccountingForm'] as bool?
+      ..viewInCmsSiteLIst = json['viewInCmsSiteLIst'] as bool?
+      ..accountingFormNo = json['accountingFormNo'] as int?
+      ..accountingFormCreatedDate = json['accountingFormCreatedDate'] as String?
+      ..accountingFormUpdatedDate = json['accountingFormUpdatedDate'] as String?
+      ..SiteUsers = (json['siteUsers'] as List<dynamic>?)
           ?.map((e) => CoreSiteUserModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..moduleSites = (json['ModuleSites'] as List<dynamic>?)
+      ..moduleSites = (json['moduleSites'] as List<dynamic>?)
           ?.map((e) => CoreModuleSiteModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..domainAliases = (json['DomainAliases'] as List<dynamic>?)
+      ..domainAliases = (json['domainAliases'] as List<dynamic>?)
           ?.map((e) =>
               CoreSiteDomainAliasModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..childernCreateds = (json['ChildernCreateds'] as List<dynamic>?)
+      ..childernCreateds = (json['childernCreateds'] as List<dynamic>?)
           ?.map((e) => CoreSiteModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..devices = (json['Devices'] as List<dynamic>?)
+      ..devices = (json['devices'] as List<dynamic>?)
           ?.map((e) => CoreDeviceModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..copyright = json['Copyright'] as String?
-      ..webMasterEmail = json['WebMasterEmail'] as String?
-      ..webEditorEmail = json['WebEditorEmail'] as String?;
+      ..copyright = json['copyright'] as String?
+      ..webMasterEmail = json['webMasterEmail'] as String?
+      ..webEditorEmail = json['webEditorEmail'] as String?;
 
 Map<String, dynamic> _$CoreSiteModelToJson(CoreSiteModel instance) =>
     <String, dynamic>{
-      'CurrentSiteDomainUrl': instance.currentSiteDomainUrl,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
-      'ExpireDate': instance.expireDate,
-      'LinkCreatedBySiteId': instance.linkCreatedBySiteId,
+      'currentSiteDomainUrl': instance.currentSiteDomainUrl,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'expireDate': instance.expireDate,
+      'linkCreatedBySiteId': instance.linkCreatedBySiteId,
       'virtual_ParentCreator': instance.virtual_ParentCreator,
-      'ParentCreator': instance.parentCreator,
-      'Title': instance.title,
-      'OwnerSiteSetStatus':
+      'parentCreator': instance.parentCreator,
+      'title': instance.title,
+      'ownerSiteSetStatus':
           _$EnumSiteStatusEnumMap[instance.ownerSiteSetStatus],
-      'UserLanguage': instance.userLanguage,
-      'SubDomain': instance.subDomain,
-      'Domain': instance.domain,
-      'Redirect': instance.redirect,
-      'Keyword': instance.keyword,
-      'Description': instance.description,
-      'LinkFavIconId': instance.linkFavIconId,
-      'LinkSiteCategoryId': instance.linkSiteCategoryId,
+      'userLanguage': instance.userLanguage,
+      'subDomain': instance.subDomain,
+      'domain': instance.domain,
+      'redirect': instance.redirect,
+      'keyword': instance.keyword,
+      'description': instance.description,
+      'linkFavIconId': instance.linkFavIconId,
+      'linkSiteCategoryId': instance.linkSiteCategoryId,
       'virtual_CmsSiteCategory': instance.virtual_CmsSiteCategory,
-      'CmsSiteCategory': instance.cmsSiteCategory,
-      'HasAccountingForm': instance.hasAccountingForm,
-      'ViewInCmsSiteLIst': instance.viewInCmsSiteLIst,
-      'AccountingFormNo': instance.accountingFormNo,
-      'AccountingFormCreatedDate': instance.accountingFormCreatedDate,
-      'AccountingFormUpdatedDate': instance.accountingFormUpdatedDate,
-      'SiteUsers': instance.SiteUsers,
-      'ModuleSites': instance.moduleSites,
-      'DomainAliases': instance.domainAliases,
-      'ChildernCreateds': instance.childernCreateds,
-      'Devices': instance.devices,
-      'Copyright': instance.copyright,
-      'WebMasterEmail': instance.webMasterEmail,
-      'WebEditorEmail': instance.webEditorEmail,
+      'cmsSiteCategory': instance.cmsSiteCategory,
+      'hasAccountingForm': instance.hasAccountingForm,
+      'viewInCmsSiteLIst': instance.viewInCmsSiteLIst,
+      'accountingFormNo': instance.accountingFormNo,
+      'accountingFormCreatedDate': instance.accountingFormCreatedDate,
+      'accountingFormUpdatedDate': instance.accountingFormUpdatedDate,
+      'siteUsers': instance.SiteUsers,
+      'moduleSites': instance.moduleSites,
+      'domainAliases': instance.domainAliases,
+      'childernCreateds': instance.childernCreateds,
+      'devices': instance.devices,
+      'copyright': instance.copyright,
+      'webMasterEmail': instance.webMasterEmail,
+      'webEditorEmail': instance.webEditorEmail,
     };
 
 const _$EnumSiteStatusEnumMap = {

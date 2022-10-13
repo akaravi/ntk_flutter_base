@@ -9,35 +9,36 @@ part of 'core_site_domain_alias_model.dart';
 CoreSiteDomainAliasModel _$CoreSiteDomainAliasModelFromJson(
         Map<String, dynamic> json) =>
     CoreSiteDomainAliasModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..cmsSite = json['CmsSite'] == null
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..cmsSite = json['cmsSite'] == null
           ? null
-          : CoreSiteModel.fromJson(json['CmsSite'] as Map<String, dynamic>)
-      ..dubDomain = json['SubDomain'] as String?
-      ..domain = json['Domain'] as String?
-      ..redirect = json['Redirect'] as String?
-      ..linkCmsSiteId = json['LinkCmsSiteId'] as int?
+          : CoreSiteModel.fromJson(json['cmsSite'] as Map<String, dynamic>)
+      ..dubDomain = json['subDomain'] as String?
+      ..domain = json['domain'] as String?
+      ..redirect = json['redirect'] as String?
+      ..linkCmsSiteId = json['linkCmsSiteId'] as int?
       ..virtual_CmsSite = json['virtual_CmsSite'] == null
           ? null
           : CoreSiteModel.fromJson(
@@ -46,25 +47,25 @@ CoreSiteDomainAliasModel _$CoreSiteDomainAliasModelFromJson(
 Map<String, dynamic> _$CoreSiteDomainAliasModelToJson(
         CoreSiteDomainAliasModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'CmsSite': instance.cmsSite,
-      'SubDomain': instance.dubDomain,
-      'Domain': instance.domain,
-      'Redirect': instance.redirect,
-      'LinkCmsSiteId': instance.linkCmsSiteId,
+      'cmsSite': instance.cmsSite,
+      'subDomain': instance.dubDomain,
+      'domain': instance.domain,
+      'redirect': instance.redirect,
+      'linkCmsSiteId': instance.linkCmsSiteId,
       'virtual_CmsSite': instance.virtual_CmsSite,
     };
 

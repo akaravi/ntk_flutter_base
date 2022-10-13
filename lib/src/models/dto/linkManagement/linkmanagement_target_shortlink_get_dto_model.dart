@@ -4,11 +4,11 @@ part 'linkmanagement_target_shortlink_get_dto_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkGetDtoModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'Key')
+  @JsonKey(name: 'key')
   String? key;
 
   LinkManagementTargetShortLinkGetDtoModel();

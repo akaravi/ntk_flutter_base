@@ -4,9 +4,9 @@ part 'biography_content_with_similar_locationperiod_dto_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentWithSimilarLocationPeriodDtoModel {
-  @JsonKey(name: 'TagIds')
+  @JsonKey(name: 'tagIds')
   List<int>? tagIds;
-  @JsonKey(name: 'LocationId')
+  @JsonKey(name: 'locationId')
   int? locationId;
 
   BiographyContentWithSimilarLocationPeriodDtoModel();

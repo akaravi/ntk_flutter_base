@@ -7,9 +7,9 @@ part 'application_source_site_category_model.g.dart';
 
 @JsonSerializable()
 class ApplicationSourceSiteCategoryModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkSourceId')
+  @JsonKey(name: 'linkSourceId')
   int? linkSourceId;
-  @JsonKey(name: 'LinkSiteCagegoryId')
+  @JsonKey(name: 'linkSiteCagegoryId')
   int? linkSiteCagegoryId;
   @JsonKey(name: ' virtual_Source')
   ApplicationSourceModel? virtual_Source;

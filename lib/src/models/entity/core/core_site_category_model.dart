@@ -8,15 +8,15 @@ part 'core_site_category_model.g.dart';
 
 @JsonSerializable()
 class CoreSiteCategoryModel extends BaseEntity<int> {
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'Sites')
+  @JsonKey(name: 'sites')
   List<CoreSiteModel>? sites;
 
   CoreSiteCategoryModel();

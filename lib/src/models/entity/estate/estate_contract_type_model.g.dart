@@ -9,88 +9,89 @@ part of 'estate_contract_type_model.dart';
 EstateContractTypeModel _$EstateContractTypeModelFromJson(
         Map<String, dynamic> json) =>
     EstateContractTypeModel()
-      ..id = json['Id'] as String?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as String?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..hasSalePrice = json['HasSalePrice'] as bool?
-      ..hasRentPrice = json['HasRentPrice'] as bool?
-      ..hasDepositPrice = json['HasDepositPrice'] as bool?
-      ..unitSalePrice = json['UnitSalePrice'] as String?
-      ..unitRentPrice = json['UnitRentPrice'] as String?
-      ..unitDepositPrice = json['UnitDepositPrice'] as String?
-      ..salePriceAllowAgreement = json['SalePriceAllowAgreement'] as bool?
-      ..salePriceMin = json['SalePriceMin'] as int?
-      ..salePriceMax = json['SalePriceMax'] as int?
-      ..rentPriceAllowAgreement = json['RentPriceAllowAgreement'] as bool?
-      ..rentPriceMin = json['RentPriceMin'] as int?
-      ..rentPriceMax = json['RentPriceMax'] as int?
-      ..depositPriceAllowAgreement = json['DepositPriceAllowAgreement'] as bool?
-      ..depositPriceMin = json['DepositPriceMin'] as int?
-      ..depositPriceMax = json['DepositPriceMax'] as int?
-      ..titleSalePrice = json['TitleSalePrice'] as String?
-      ..titleDepositPrice = json['TitleDepositPrice'] as String?
-      ..titleRentPrice = json['TitleRentPrice'] as String?;
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..hasSalePrice = json['hasSalePrice'] as bool?
+      ..hasRentPrice = json['hasRentPrice'] as bool?
+      ..hasDepositPrice = json['hasDepositPrice'] as bool?
+      ..unitSalePrice = json['unitSalePrice'] as String?
+      ..unitRentPrice = json['unitRentPrice'] as String?
+      ..unitDepositPrice = json['unitDepositPrice'] as String?
+      ..salePriceAllowAgreement = json['salePriceAllowAgreement'] as bool?
+      ..salePriceMin = json['salePriceMin'] as int?
+      ..salePriceMax = json['salePriceMax'] as int?
+      ..rentPriceAllowAgreement = json['rentPriceAllowAgreement'] as bool?
+      ..rentPriceMin = json['rentPriceMin'] as int?
+      ..rentPriceMax = json['rentPriceMax'] as int?
+      ..depositPriceAllowAgreement = json['depositPriceAllowAgreement'] as bool?
+      ..depositPriceMin = json['depositPriceMin'] as int?
+      ..depositPriceMax = json['depositPriceMax'] as int?
+      ..titleSalePrice = json['titleSalePrice'] as String?
+      ..titleDepositPrice = json['titleDepositPrice'] as String?
+      ..titleRentPrice = json['titleRentPrice'] as String?;
 
 Map<String, dynamic> _$EstateContractTypeModelToJson(
         EstateContractTypeModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'Description': instance.description,
-      'HasSalePrice': instance.hasSalePrice,
-      'HasRentPrice': instance.hasRentPrice,
-      'HasDepositPrice': instance.hasDepositPrice,
-      'UnitSalePrice': instance.unitSalePrice,
-      'UnitRentPrice': instance.unitRentPrice,
-      'UnitDepositPrice': instance.unitDepositPrice,
-      'SalePriceAllowAgreement': instance.salePriceAllowAgreement,
-      'SalePriceMin': instance.salePriceMin,
-      'SalePriceMax': instance.salePriceMax,
-      'RentPriceAllowAgreement': instance.rentPriceAllowAgreement,
-      'RentPriceMin': instance.rentPriceMin,
-      'RentPriceMax': instance.rentPriceMax,
-      'DepositPriceAllowAgreement': instance.depositPriceAllowAgreement,
-      'DepositPriceMin': instance.depositPriceMin,
-      'DepositPriceMax': instance.depositPriceMax,
-      'TitleSalePrice': instance.titleSalePrice,
-      'TitleDepositPrice': instance.titleDepositPrice,
-      'TitleRentPrice': instance.titleRentPrice,
+      'linkSiteId': instance.linkSiteId,
+      'title': instance.title,
+      'description': instance.description,
+      'hasSalePrice': instance.hasSalePrice,
+      'hasRentPrice': instance.hasRentPrice,
+      'hasDepositPrice': instance.hasDepositPrice,
+      'unitSalePrice': instance.unitSalePrice,
+      'unitRentPrice': instance.unitRentPrice,
+      'unitDepositPrice': instance.unitDepositPrice,
+      'salePriceAllowAgreement': instance.salePriceAllowAgreement,
+      'salePriceMin': instance.salePriceMin,
+      'salePriceMax': instance.salePriceMax,
+      'rentPriceAllowAgreement': instance.rentPriceAllowAgreement,
+      'rentPriceMin': instance.rentPriceMin,
+      'rentPriceMax': instance.rentPriceMax,
+      'depositPriceAllowAgreement': instance.depositPriceAllowAgreement,
+      'depositPriceMin': instance.depositPriceMin,
+      'depositPriceMax': instance.depositPriceMax,
+      'titleSalePrice': instance.titleSalePrice,
+      'titleDepositPrice': instance.titleDepositPrice,
+      'titleRentPrice': instance.titleRentPrice,
     };
 
 const _$EnumRecordStatusEnumMap = {

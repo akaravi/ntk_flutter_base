@@ -6,33 +6,33 @@ part 'token_device_clientinfo_dto_model.g.dart';
 
 @JsonSerializable()
 class TokenDeviceClientInfoDtoModel {
-  @JsonKey(name: 'SecurityKey')
+  @JsonKey(name: 'securityKey')
   String? securityKey;
-  @JsonKey(name: 'ClientMACAddress')
+  @JsonKey(name: 'clientMACAddress')
   String? clientMACAddress;
-  @JsonKey(name: 'OSType')
+  @JsonKey(name: 'oSType')
   EnumOperatingSystemType? oSType;
-  @JsonKey(name: 'DeviceType')
+  @JsonKey(name: 'deviceType')
   EnumDeviceType? deviceType;
-  @JsonKey(name: 'PackageName')
+  @JsonKey(name: 'packageName')
   String? packageName;
-  @JsonKey(name: 'NotificationId')
+  @JsonKey(name: 'notificationId')
   String? notificationId;
-  @JsonKey(name: 'AppBuildVer')
+  @JsonKey(name: 'appBuildVer')
   int? appBuildVer;
-  @JsonKey(name: 'AppSourceVer')
+  @JsonKey(name: 'appSourceVer')
   String? appSourceVer;
-  @JsonKey(name: 'Country')
+  @JsonKey(name: 'country')
   String? country;
-  @JsonKey(name: 'LocationLat')
+  @JsonKey(name: 'locationLat')
   String? locationLat;
-  @JsonKey(name: 'LocationLong')
+  @JsonKey(name: 'locationLong')
   String? locationLong;
-  @JsonKey(name: 'SimCard')
+  @JsonKey(name: 'simCard')
   String? simCard;
-  @JsonKey(name: 'Language')
+  @JsonKey(name: 'language')
   String? language;
-  @JsonKey(name: 'DeviceBrand')
+  @JsonKey(name: 'deviceBrand')
   String? deviceBrand;
 
   TokenDeviceClientInfoDtoModel();

@@ -13,55 +13,55 @@ part 'estate_property_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'CaseCode')
+  @JsonKey(name: 'caseCode')
   String? caseCode;
-  @JsonKey(name: 'MainAdminRecordStatus')
+  @JsonKey(name: 'mainAdminRecordStatus')
   EnumRecordStatus? mainAdminRecordStatus;
-  @JsonKey(name: 'CreatedYaer')
+  @JsonKey(name: 'createdYaer')
   int? createdYaer;
-  @JsonKey(name: 'Partition')
+  @JsonKey(name: 'partition')
   int? partition;
-  @JsonKey(name: 'Area')
+  @JsonKey(name: 'area')
   int? area;
-  @JsonKey(name: 'LinkEstateUserId')
+  @JsonKey(name: 'linkEstateUserId')
   String? linkEstateUserId;
 
-  @JsonKey(name: 'LinkLocationId')
+  @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'LinkCmsUserId')
+  @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'LinkPropertyTypeLanduseId')
+  @JsonKey(name: 'linkPropertyTypeLanduseId')
   String? linkPropertyTypeLanduseId;
-  @JsonKey(name: 'LinkPropertyTypeUsageId')
+  @JsonKey(name: 'linkPropertyTypeUsageId')
   String? linkPropertyTypeUsageId;
-  @JsonKey(name: 'PropertyTypeLanduse')
+  @JsonKey(name: 'propertyTypeLanduse')
   EstatePropertyTypeLanduseModel? propertyTypeLanduse;
-  @JsonKey(name: 'PropertyTypeUsage')
+  @JsonKey(name: 'propertyTypeUsage')
   EstatePropertyTypeUsageModel? propertyTypeUsage;
-  @JsonKey(name: 'Favorited')
+  @JsonKey(name: 'favorited')
   bool? favorited;
 
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
 
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
 
-  @JsonKey(name: 'Address')
+  @JsonKey(name: 'address')
   String? address;
 
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkExtraImageIds')
+  @JsonKey(name: 'linkExtraImageIds')
   String? linkExtraImageIds;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
 
-  @JsonKey(name: 'ScoreClick')
+  @JsonKey(name: 'scoreClick')
   int? scoreClick;
 
   /// <summary>
@@ -69,49 +69,49 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   /// امتیاز از 10 می باشد
   /// </summary>
 
-  @JsonKey(name: 'ScoreSumPercent')
+  @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-  @JsonKey(name: 'ViewCount')
+  @JsonKey(name: 'viewCount')
   int? viewCount;
 
   // * AboutAgent */
-  @JsonKey(name: 'AboutAgentTel')
+  @JsonKey(name: 'aboutAgentTel')
   String? aboutAgentTel;
-  @JsonKey(name: 'AboutAgentMobile')
+  @JsonKey(name: 'aboutAgentMobile')
   String? aboutAgentMobile;
 
   // * AboutAgent */
   // * AboutCustomer */
-  @JsonKey(name: 'AboutCustomerTel')
+  @JsonKey(name: 'aboutCustomerTel')
   String? aboutCustomerTel;
-  @JsonKey(name: 'AboutCustomerMobile')
+  @JsonKey(name: 'aboutCustomerMobile')
   String? aboutCustomerMobile;
 
   // * AboutCustomer */
-  @JsonKey(name: 'Contracts')
+  @JsonKey(name: 'contracts')
   List<EstateContractModel>? contracts;
 
-  @JsonKey(name: 'PropertyDetailValues')
+  @JsonKey(name: 'propertyDetailValues')
   List<EstatePropertyDetailValueModel>? propertyDetailValues;
-  @JsonKey(name: 'PropertyDetailGroups')
+  @JsonKey(name: 'propertyDetailGroups')
   List<EstatePropertyDetailGroupModel>? propertyDetailGroups;
 
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'LinkExtraImageIdsSrc')
+  @JsonKey(name: 'linkExtraImageIdsSrc')
   List<String>? linkExtraImageIdsSrc;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
 
   /**
    * برای انتصا مسقیم فایل آپلود شده
    */
-  @JsonKey(name: 'UploadFileGUID')
+  @JsonKey(name: 'uploadFileGUID')
   List<String>? uploadFileGUID;
 
-  @JsonKey(name: 'LinkLocationIdTitle')
+  @JsonKey(name: 'linkLocationIdTitle')
   String? linkLocationIdTitle;
-  @JsonKey(name: 'LinkLocationIdParentTitle')
+  @JsonKey(name: 'linkLocationIdParentTitle')
   String? linkLocationIdParentTitle;EstatePropertyModel();
   factory EstatePropertyModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyModelFromJson(json);
 

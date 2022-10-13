@@ -6,13 +6,13 @@ part 'news_category_model.g.dart';
 
 @JsonSerializable()
 class NewsCategoryModel {
-  @JsonKey(name: 'Children')
+  @JsonKey(name: 'children')
   List<NewsCategoryModel>? children;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   NewsCategoryModel? category;
   @JsonKey(name: 'virtual_Category')
   NewsCategoryModel? virtual_Category;
-  @JsonKey(name: 'Contents')
+  @JsonKey(name: 'contents')
   List<NewsContentModel>? contents;
 
   NewsCategoryModel();

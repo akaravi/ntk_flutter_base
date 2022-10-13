@@ -4,39 +4,39 @@ part 'core_module_model.g.dart';
 
 @JsonSerializable()
 class CoreModuleModel {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'ClassName')
+  @JsonKey(name: 'className')
   String? className;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'AdministratorIsActivate')
+  @JsonKey(name: 'administratorIsActivate')
   bool? administratorIsActivate;
-  @JsonKey(name: 'ModuleConfigAdminMainJson')
+  @JsonKey(name: 'moduleConfigAdminMainJson')
   String? moduleConfigAdminMainJson;
-  @JsonKey(name: 'ModuleConfigAdminMainJsonForm')
+  @JsonKey(name: 'moduleConfigAdminMainJsonForm')
   String? moduleConfigAdminMainJsonForm;
-  @JsonKey(name: 'ModuleConfigSiteAccessDefaultJson')
+  @JsonKey(name: 'moduleConfigSiteAccessDefaultJson')
   String? moduleConfigSiteAccessDefaultJson;
-  @JsonKey(name: 'ModuleConfigSiteAccessJsonFrom')
+  @JsonKey(name: 'moduleConfigSiteAccessJsonFrom')
   String? moduleConfigSiteAccessJsonFrom;
-  @JsonKey(name: 'ModuleConfigSiteDefaultJson')
+  @JsonKey(name: 'moduleConfigSiteDefaultJson')
   String? moduleConfigSiteDefaultJson;
-  @JsonKey(name: 'ModuleConfigSiteJsonForm')
+  @JsonKey(name: 'moduleConfigSiteJsonForm')
   String? moduleConfigSiteJsonForm;
-  @JsonKey(name: 'ModuleSiteStorageValuesJsonForm')
+  @JsonKey(name: 'moduleSiteStorageValuesJsonForm')
   String? moduleSiteStorageValuesJsonForm;
-  @JsonKey(name: 'ModuleSites')
+  @JsonKey(name: 'moduleSites')
   String? moduleSites;
-  @JsonKey(name: 'CmsCpMainMenu')
+  @JsonKey(name: 'cmsCpMainMenu')
   String? cmsCpMainMenu;
-  @JsonKey(name: 'CmsModuleProcess')
+  @JsonKey(name: 'cmsModuleProcess')
   String? cmsModuleProcess;
-  @JsonKey(name: 'CmsSiteCategoryCmsModule')
+  @JsonKey(name: 'cmsSiteCategoryCmsModule')
   String? cmsSiteCategoryCmsModule;
 
   CoreModuleModel();

@@ -9,73 +9,74 @@ part of 'shop_invoice_sale_detail.dart';
 ShopInvoiceSaleDetail _$ShopInvoiceSaleDetailFromJson(
         Map<String, dynamic> json) =>
     ShopInvoiceSaleDetail()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkInvoiceSaleId = json['LinkInvoiceSaleId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkInvoiceSaleId = json['linkInvoiceSaleId'] as int?
       ..virtual_InvoiceSale = json['virtual_InvoiceSale'] == null
           ? null
           : ShopInvoiceSale.fromJson(
               json['virtual_InvoiceSale'] as Map<String, dynamic>)
-      ..linkParentId = json['LinkParentId'] as int?
-      ..linkContentId = json['LinkContentId'] as int?
+      ..linkParentId = json['linkParentId'] as int?
+      ..linkContentId = json['linkContentId'] as int?
       ..virtual_Content = json['virtual_Content'] == null
           ? null
           : ShopContent.fromJson(
               json['virtual_Content'] as Map<String, dynamic>)
-      ..content = json['Content'] == null
+      ..content = json['content'] == null
           ? null
-          : ShopContent.fromJson(json['Content'] as Map<String, dynamic>)
-      ..linkProductItemId = json['LinkProductItemId'] as int?
+          : ShopContent.fromJson(json['content'] as Map<String, dynamic>)
+      ..linkProductItemId = json['linkProductItemId'] as int?
       ..virtual_ProductItem = json['virtual_ProductItem'] == null
           ? null
           : ShopProductItem.fromJson(
               json['virtual_ProductItem'] as Map<String, dynamic>)
-      ..linkProductCombineId = json['LinkProductCombineId'] as int?
+      ..linkProductCombineId = json['linkProductCombineId'] as int?
       ..virtual_ProductCombine = json['virtual_ProductCombine'] == null
           ? null
           : ShopProductCombine.fromJson(
               json['virtual_ProductCombine'] as Map<String, dynamic>)
       ..productProcessInputFormEndUserClassJsonFormValues =
-          json['ProductProcessInputFormEndUserClassJsonFormValues'] as String?
-      ..linkProductProcessId = json['LinkProductProcessId'] as int?
+          json['productProcessInputFormEndUserClassJsonFormValues'] as String?
+      ..linkProductProcessId = json['linkProductProcessId'] as int?
       ..virtual_ProductProcess = json['virtual_ProductProcess'] == null
           ? null
           : ShopProductProcess.fromJson(
               json['virtual_ProductProcess'] as Map<String, dynamic>)
-      ..linkProductServiceId = json['LinkProductServiceId'] as int?
+      ..linkProductServiceId = json['linkProductServiceId'] as int?
       ..virtual_ProductService = json['virtual_ProductService'] == null
           ? null
           : ShopProductService.fromJson(
               json['virtual_ProductService'] as Map<String, dynamic>)
-      ..quantity = (json['Quantity'] as num?)?.toDouble()
-      ..fee = (json['Fee'] as num?)?.toDouble()
-      ..tax = (json['Tax'] as num?)?.toDouble()
-      ..sumRow = (json['SumRow'] as num?)?.toDouble()
+      ..quantity = (json['quantity'] as num?)?.toDouble()
+      ..fee = (json['fee'] as num?)?.toDouble()
+      ..tax = (json['tax'] as num?)?.toDouble()
+      ..sumRow = (json['sumRow'] as num?)?.toDouble()
       ..linkExternalModuleContentId =
-          json['LinkExternalModuleContentId'] as int?
-      ..creatorIsExternalModule = json['CreatorIsExternalModule'] as bool?
-      ..children = (json['Children'] as List<dynamic>?)
+          json['linkExternalModuleContentId'] as int?
+      ..creatorIsExternalModule = json['creatorIsExternalModule'] as bool?
+      ..children = (json['children'] as List<dynamic>?)
           ?.map(
               (e) => ShopInvoiceSaleDetail.fromJson(e as Map<String, dynamic>))
           .toList();
@@ -83,44 +84,44 @@ ShopInvoiceSaleDetail _$ShopInvoiceSaleDetailFromJson(
 Map<String, dynamic> _$ShopInvoiceSaleDetailToJson(
         ShopInvoiceSaleDetail instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkInvoiceSaleId': instance.linkInvoiceSaleId,
+      'linkSiteId': instance.linkSiteId,
+      'linkInvoiceSaleId': instance.linkInvoiceSaleId,
       'virtual_InvoiceSale': instance.virtual_InvoiceSale,
-      'LinkParentId': instance.linkParentId,
-      'LinkContentId': instance.linkContentId,
+      'linkParentId': instance.linkParentId,
+      'linkContentId': instance.linkContentId,
       'virtual_Content': instance.virtual_Content,
-      'Content': instance.content,
-      'LinkProductItemId': instance.linkProductItemId,
+      'content': instance.content,
+      'linkProductItemId': instance.linkProductItemId,
       'virtual_ProductItem': instance.virtual_ProductItem,
-      'LinkProductCombineId': instance.linkProductCombineId,
+      'linkProductCombineId': instance.linkProductCombineId,
       'virtual_ProductCombine': instance.virtual_ProductCombine,
-      'ProductProcessInputFormEndUserClassJsonFormValues':
+      'productProcessInputFormEndUserClassJsonFormValues':
           instance.productProcessInputFormEndUserClassJsonFormValues,
-      'LinkProductProcessId': instance.linkProductProcessId,
+      'linkProductProcessId': instance.linkProductProcessId,
       'virtual_ProductProcess': instance.virtual_ProductProcess,
-      'LinkProductServiceId': instance.linkProductServiceId,
+      'linkProductServiceId': instance.linkProductServiceId,
       'virtual_ProductService': instance.virtual_ProductService,
-      'Quantity': instance.quantity,
-      'Fee': instance.fee,
-      'Tax': instance.tax,
-      'SumRow': instance.sumRow,
-      'LinkExternalModuleContentId': instance.linkExternalModuleContentId,
-      'CreatorIsExternalModule': instance.creatorIsExternalModule,
-      'Children': instance.children,
+      'quantity': instance.quantity,
+      'fee': instance.fee,
+      'tax': instance.tax,
+      'sumRow': instance.sumRow,
+      'linkExternalModuleContentId': instance.linkExternalModuleContentId,
+      'creatorIsExternalModule': instance.creatorIsExternalModule,
+      'children': instance.children,
     };
 
 const _$EnumRecordStatusEnumMap = {

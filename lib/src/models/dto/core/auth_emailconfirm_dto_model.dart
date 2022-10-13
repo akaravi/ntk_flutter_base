@@ -4,15 +4,15 @@ part 'auth_emailconfirm_dto_model.g.dart';
 
 @JsonSerializable()
 class AuthEmailConfirmDtoModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'LinkUserId')
+  @JsonKey(name: 'linkUserId')
   int? linkUserId;
-  @JsonKey(name: 'Mobile')
+  @JsonKey(name: 'mobile')
   String? mobile;
-  @JsonKey(name: 'Code')
+  @JsonKey(name: 'code')
   String? code;
 
   AuthEmailConfirmDtoModel();

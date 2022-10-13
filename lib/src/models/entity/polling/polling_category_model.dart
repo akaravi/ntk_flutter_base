@@ -8,31 +8,31 @@ part 'polling_category_model.g.dart';
 
 @JsonSerializable()
 class PollingCategoryModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'ContentCount')
+  @JsonKey(name: 'contentCount')
   int? contentCount;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'FontIcon')
+  @JsonKey(name: 'fontIcon')
   String? fontIcon;
-  @JsonKey(name: 'LinkParentIdNode')
+  @JsonKey(name: 'linkParentIdNode')
   String? linkParentIdNode;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   int? linkParentId;
-  @JsonKey(name: 'Children')
+  @JsonKey(name: 'children')
   List<PollingCategoryModel>? children;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   PollingCategoryModel? category;
   @JsonKey(name: 'virtual_Category')
   PollingCategoryModel? virtual_Category;
-  @JsonKey(name: 'Contents')
+  @JsonKey(name: 'contents')
   List<PollingContentModel>? contents;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
   PollingCategoryModel();
   factory PollingCategoryModel.fromJson(Map<String, dynamic> json) => _$PollingCategoryModelFromJson(json);

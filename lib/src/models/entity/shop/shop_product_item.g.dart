@@ -8,78 +8,79 @@ part of 'shop_product_item.dart';
 
 ShopProductItem _$ShopProductItemFromJson(Map<String, dynamic> json) =>
     ShopProductItem()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..addToInvoicePrint = json['AddToInvoicePrint'] as bool?
-      ..checkInventory = json['CheckInventory'] as bool?
-      ..currentInventory = (json['CurrentInventory'] as num?)?.toDouble()
-      ..price = (json['Price'] as num?)?.toDouble()
-      ..invoiceSaleDetails = (json['InvoiceSaleDetails'] as List<dynamic>?)
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..addToInvoicePrint = json['addToInvoicePrint'] as bool?
+      ..checkInventory = json['checkInventory'] as bool?
+      ..currentInventory = (json['currentInventory'] as num?)?.toDouble()
+      ..price = (json['price'] as num?)?.toDouble()
+      ..invoiceSaleDetails = (json['invoiceSaleDetails'] as List<dynamic>?)
           ?.map(
               (e) => ShopInvoiceSaleDetail.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..productSalePrices = (json['ProductSalePrices'] as List<dynamic>?)
+      ..productSalePrices = (json['productSalePrices'] as List<dynamic>?)
           ?.map((e) => ShopProductSalePrice.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..productProductItems = (json['ProductProductItems'] as List<dynamic>?)
+      ..productProductItems = (json['productProductItems'] as List<dynamic>?)
           ?.map(
               (e) => ShopProductProductItem.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..productItemCombines = (json['ProductItemCombines'] as List<dynamic>?)
+      ..productItemCombines = (json['productItemCombines'] as List<dynamic>?)
           ?.map(
               (e) => ShopProductItemCombine.fromJson(e as Map<String, dynamic>))
           .toList();
 
 Map<String, dynamic> _$ShopProductItemToJson(ShopProductItem instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'Description': instance.description,
-      'AddToInvoicePrint': instance.addToInvoicePrint,
-      'CheckInventory': instance.checkInventory,
-      'CurrentInventory': instance.currentInventory,
-      'Price': instance.price,
-      'InvoiceSaleDetails': instance.invoiceSaleDetails,
-      'ProductSalePrices': instance.productSalePrices,
-      'ProductProductItems': instance.productProductItems,
-      'ProductItemCombines': instance.productItemCombines,
+      'linkSiteId': instance.linkSiteId,
+      'title': instance.title,
+      'description': instance.description,
+      'addToInvoicePrint': instance.addToInvoicePrint,
+      'checkInventory': instance.checkInventory,
+      'currentInventory': instance.currentInventory,
+      'price': instance.price,
+      'invoiceSaleDetails': instance.invoiceSaleDetails,
+      'productSalePrices': instance.productSalePrices,
+      'productProductItems': instance.productProductItems,
+      'productItemCombines': instance.productItemCombines,
     };
 
 const _$EnumRecordStatusEnumMap = {

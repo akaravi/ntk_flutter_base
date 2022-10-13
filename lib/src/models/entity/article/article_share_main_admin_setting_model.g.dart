@@ -9,71 +9,72 @@ part of 'article_share_main_admin_setting_model.dart';
 ArticleShareMainAdminSettingModel _$ArticleShareMainAdminSettingModelFromJson(
         Map<String, dynamic> json) =>
     ArticleShareMainAdminSettingModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..adminMainPriceFixed = json['AdminMainPriceFixed'] as int?
-      ..adminMainPricePercent = json['AdminMainPricePercent'] as int?
-      ..description = json['Description'] as String?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..adminMainPriceFixed = json['adminMainPriceFixed'] as int?
+      ..adminMainPricePercent = json['adminMainPricePercent'] as int?
+      ..description = json['description'] as String?
       ..paymentMethod =
-          $enumDecodeNullable(_$EnumPaymentMethodEnumMap, json['PaymentMethod'])
-      ..reciverPriceCost = json['ReciverPriceCost'] as int?
-      ..title = json['Title'] as String?
+          $enumDecodeNullable(_$EnumPaymentMethodEnumMap, json['paymentMethod'])
+      ..reciverPriceCost = json['reciverPriceCost'] as int?
+      ..title = json['title'] as String?
       ..virtual_Content = json[' virtual_Content'] == null
           ? null
           : ArticleContentModel.fromJson(
               json[' virtual_Content'] as Map<String, dynamic>)
-      ..content = json['Content'] == null
+      ..content = json['content'] == null
           ? null
           : ArticleContentModel.fromJson(
-              json['Content'] as Map<String, dynamic>);
+              json['content'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$ArticleShareMainAdminSettingModelToJson(
         ArticleShareMainAdminSettingModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'AdminMainPriceFixed': instance.adminMainPriceFixed,
-      'AdminMainPricePercent': instance.adminMainPricePercent,
-      'Description': instance.description,
-      'PaymentMethod': _$EnumPaymentMethodEnumMap[instance.paymentMethod],
-      'ReciverPriceCost': instance.reciverPriceCost,
-      'Title': instance.title,
+      'linkSiteId': instance.linkSiteId,
+      'adminMainPriceFixed': instance.adminMainPriceFixed,
+      'adminMainPricePercent': instance.adminMainPricePercent,
+      'description': instance.description,
+      'paymentMethod': _$EnumPaymentMethodEnumMap[instance.paymentMethod],
+      'reciverPriceCost': instance.reciverPriceCost,
+      'title': instance.title,
       ' virtual_Content': instance.virtual_Content,
-      'Content': instance.content,
+      'content': instance.content,
     };
 
 const _$EnumRecordStatusEnumMap = {

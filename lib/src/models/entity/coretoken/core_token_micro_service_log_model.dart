@@ -11,7 +11,7 @@ part 'core_token_micro_service_log_model.g.dart';
 
 @JsonSerializable()
 class CoreTokenMicroServiceLogModel extends CoreTokenMicroServiceModel {
-  @JsonKey(name: 'Action')
+  @JsonKey(name: 'action')
   String? action;
   CoreTokenMicroServiceLogModel();
   factory CoreTokenMicroServiceLogModel.fromJson(Map<String, dynamic> json) => _$CoreTokenMicroServiceLogModelFromJson(json);

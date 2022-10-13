@@ -9,119 +9,137 @@ part of 'bankpayment_transaction_model.dart';
 BankPaymentTransactionModel _$BankPaymentTransactionModelFromJson(
         Map<String, dynamic> json) =>
     BankPaymentTransactionModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..transactionStatus = json['TransactionStatus'] as int?
-      ..bankStatus = json['BankStatus'] as int?
-      ..currencyUnit = json['CurrencyUnit'] as String?
-      ..currencyUnitRatioByShop = json['CurrencyUnitRatioByShop'] as int?
-      ..successStatusMessage = json['SuccessStatusMessage'] as String?
-      ..lastStatusMessage = json['LastStatusMessage'] as String?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteIdBuyer = json['linkSiteIdBuyer'] as int?
+      ..linkSiteIdSaller = json['linkSiteIdSaller'] as int?
+      ..moduleName = json['moduleName'] as String?
+      ..moduleEntityName = json['moduleEntityName'] as String?
+      ..moduleEntityId = json['moduleEntityId'] as String?
+      ..transactionStatus = json['transactionStatus'] as int?
+      ..bankStatus = json['bankStatus'] as int?
+      ..currencyUnit = json['currencyUnit'] as String?
+      ..currencyUnitRatioByShop = json['currencyUnitRatioByShop'] as int?
+      ..successStatusMessage = json['successStatusMessage'] as String?
+      ..lastStatusMessage = json['lastStatusMessage'] as String?
       ..lastTransactionCheckMessage =
-          json['LastTransactionCheckMessage'] as String?
-      ..backedFromBank = json['BackedFromBank'] as bool?
-      ..linkPrivateSiteConfigId = json['LinkPrivateSiteConfigId'] as int?
-      ..linkUserId = json['LinkUserId'] as int?
-      ..amount = json['Amount'] as int?
-      ..amountPure = json['AmountPure'] as int?
-      ..stampJsonValues = json['StampJsonValues'] as String?
-      ..stampJsonFormatter = (json['StampJsonFormatter'] as List<dynamic>?)
+          json['lastTransactionCheckMessage'] as String?
+      ..backedFromBank = json['backedFromBank'] as bool?
+      ..linkPrivateSiteConfigId = json['linkPrivateSiteConfigId'] as int?
+      ..linkUserId = json['linkUserId'] as int?
+      ..amount = json['amount'] as int?
+      ..amountPure = json['amountPure'] as int?
+      ..stampJsonValues = json['stampJsonValues'] as String?
+      ..stampJsonFormatter = (json['stampJsonFormatter'] as List<dynamic>?)
           ?.map(
               (e) => GetPropertiesInfoModel.fromJson(e as Map<String, dynamic>))
           .toList()
       ..requestBackUserFromBankJsonValues =
-          json['RequestBackUserFromBankJsonValues'] as String?
+          json['requestBackUserFromBankJsonValues'] as String?
       ..requestBackUserFromBankJsonFormatter =
-          (json['RequestBackUserFromBankJsonFormatter'] as List<dynamic>?)
+          (json['requestBackUserFromBankJsonFormatter'] as List<dynamic>?)
               ?.map((e) =>
                   GetPropertiesInfoModel.fromJson(e as Map<String, dynamic>))
               .toList()
-      ..onlineDateLock = json['OnlineDateLock'] as String?
-      ..onlineDateUnlock = json['OnlineDateUnlock'] as String?
-      ..lastUrlAddressInUse = json['LastUrlAddressInUse'] as String?
+      ..onlineDateLock = json['onlineDateLock'] == null
+          ? null
+          : DateTime.parse(json['onlineDateLock'] as String)
+      ..onlineDateUnlock = json['onlineDateUnlock'] == null
+          ? null
+          : DateTime.parse(json['onlineDateUnlock'] as String)
+      ..lastUrlAddressInUse = json['lastUrlAddressInUse'] as String?
       ..virtual_PrivateSiteConfig = json['virtual_PrivateSiteConfig'] == null
           ? null
           : BankPaymentPrivateSiteConfigModel.fromJson(
               json['virtual_PrivateSiteConfig'] as Map<String, dynamic>)
-      ..privateSiteConfig = json['PrivateSiteConfig'] == null
+      ..privateSiteConfig = json['privateSiteConfig'] == null
           ? null
           : BankPaymentPrivateSiteConfigModel.fromJson(
-              json['PrivateSiteConfig'] as Map<String, dynamic>)
-      ..linkModelShopCartId = json['LinkModelShopCartId'] as int?
+              json['privateSiteConfig'] as Map<String, dynamic>)
+      ..linkModelShopCartId = json['linkModelShopCartId'] as int?
       ..modelShopInvoiceSaleRelease =
-          json['ModelShopInvoiceSaleRelease'] as bool?
+          json['modelShopInvoiceSaleRelease'] as bool?
       ..modelShopInvoiceSaleReleaseDate =
-          json['ModelShopInvoiceSaleReleaseDate'] as String?
-      ..transactionLogs = json['TransactionLogs'] == null
+          json['modelShopInvoiceSaleReleaseDate'] == null
+              ? null
+              : DateTime.parse(
+                  json['modelShopInvoiceSaleReleaseDate'] as String)
+      ..transactionLogs = json['transactionLogs'] == null
           ? null
           : BankPaymentTransactionLogModel.fromJson(
-              json['TransactionLogs'] as Map<String, dynamic>);
+              json['transactionLogs'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$BankPaymentTransactionModelToJson(
         BankPaymentTransactionModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'TransactionStatus': instance.transactionStatus,
-      'BankStatus': instance.bankStatus,
-      'CurrencyUnit': instance.currencyUnit,
-      'CurrencyUnitRatioByShop': instance.currencyUnitRatioByShop,
-      'SuccessStatusMessage': instance.successStatusMessage,
-      'LastStatusMessage': instance.lastStatusMessage,
-      'LastTransactionCheckMessage': instance.lastTransactionCheckMessage,
-      'BackedFromBank': instance.backedFromBank,
-      'LinkPrivateSiteConfigId': instance.linkPrivateSiteConfigId,
-      'LinkUserId': instance.linkUserId,
-      'Amount': instance.amount,
-      'AmountPure': instance.amountPure,
-      'StampJsonValues': instance.stampJsonValues,
-      'StampJsonFormatter': instance.stampJsonFormatter,
-      'RequestBackUserFromBankJsonValues':
+      'linkSiteIdBuyer': instance.linkSiteIdBuyer,
+      'linkSiteIdSaller': instance.linkSiteIdSaller,
+      'moduleName': instance.moduleName,
+      'moduleEntityName': instance.moduleEntityName,
+      'moduleEntityId': instance.moduleEntityId,
+      'transactionStatus': instance.transactionStatus,
+      'bankStatus': instance.bankStatus,
+      'currencyUnit': instance.currencyUnit,
+      'currencyUnitRatioByShop': instance.currencyUnitRatioByShop,
+      'successStatusMessage': instance.successStatusMessage,
+      'lastStatusMessage': instance.lastStatusMessage,
+      'lastTransactionCheckMessage': instance.lastTransactionCheckMessage,
+      'backedFromBank': instance.backedFromBank,
+      'linkPrivateSiteConfigId': instance.linkPrivateSiteConfigId,
+      'linkUserId': instance.linkUserId,
+      'amount': instance.amount,
+      'amountPure': instance.amountPure,
+      'stampJsonValues': instance.stampJsonValues,
+      'stampJsonFormatter': instance.stampJsonFormatter,
+      'requestBackUserFromBankJsonValues':
           instance.requestBackUserFromBankJsonValues,
-      'RequestBackUserFromBankJsonFormatter':
+      'requestBackUserFromBankJsonFormatter':
           instance.requestBackUserFromBankJsonFormatter,
-      'OnlineDateLock': instance.onlineDateLock,
-      'OnlineDateUnlock': instance.onlineDateUnlock,
-      'LastUrlAddressInUse': instance.lastUrlAddressInUse,
+      'onlineDateLock': instance.onlineDateLock?.toIso8601String(),
+      'onlineDateUnlock': instance.onlineDateUnlock?.toIso8601String(),
+      'lastUrlAddressInUse': instance.lastUrlAddressInUse,
       'virtual_PrivateSiteConfig': instance.virtual_PrivateSiteConfig,
-      'PrivateSiteConfig': instance.privateSiteConfig,
-      'LinkModelShopCartId': instance.linkModelShopCartId,
-      'ModelShopInvoiceSaleRelease': instance.modelShopInvoiceSaleRelease,
-      'ModelShopInvoiceSaleReleaseDate':
-          instance.modelShopInvoiceSaleReleaseDate,
-      'TransactionLogs': instance.transactionLogs,
+      'privateSiteConfig': instance.privateSiteConfig,
+      'linkModelShopCartId': instance.linkModelShopCartId,
+      'modelShopInvoiceSaleRelease': instance.modelShopInvoiceSaleRelease,
+      'modelShopInvoiceSaleReleaseDate':
+          instance.modelShopInvoiceSaleReleaseDate?.toIso8601String(),
+      'transactionLogs': instance.transactionLogs,
     };
 
 const _$EnumRecordStatusEnumMap = {

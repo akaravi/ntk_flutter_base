@@ -11,25 +11,25 @@ part 'shop_product_service.g.dart';
 
 @JsonSerializable()
 class ShopProductService extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'AddToInvoicePrint')
+  @JsonKey(name: 'addToInvoicePrint')
   bool? addToInvoicePrint;
-  @JsonKey(name: 'CheckInventory')
+  @JsonKey(name: 'checkInventory')
   bool? checkInventory;
-  @JsonKey(name: 'CurrentInventory')
+  @JsonKey(name: 'currentInventory')
   double? currentInventory;
-  @JsonKey(name: 'LinkExternalServiceId')
+  @JsonKey(name: 'linkExternalServiceId')
   int? linkExternalServiceId;
-  @JsonKey(name: 'Price')
+  @JsonKey(name: 'price')
   double? price;
-  @JsonKey(name: 'ProductSalePrices')
+  @JsonKey(name: 'productSalePrices')
   List<ShopProductSalePrice>? productSalePrices;
-  @JsonKey(name: 'InvoiceSaleDetails')
+  @JsonKey(name: 'invoiceSaleDetails')
   List<ShopInvoiceSaleDetail>? invoiceSaleDetails;
-  @JsonKey(name: 'ProductProductServices')
+  @JsonKey(name: 'productProductServices')
   List<ShopProductProductService>? productProductServices;ShopProductService();
   factory ShopProductService.fromJson(Map<String, dynamic> json) => _$ShopProductServiceFromJson(json);
 

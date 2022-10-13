@@ -10,85 +10,85 @@ part 'application_source_model.g.dart';
 
 @JsonSerializable()
 class ApplicationSourceModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'TitleML')
+  @JsonKey(name: 'titleML')
   String? titleML;
-  @JsonKey(name: 'TitleResourceLanguage')
+  @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'DefaultAppId')
+  @JsonKey(name: 'defaultAppId')
   int? defaultAppId;
-  @JsonKey(name: 'ClassName')
+  @JsonKey(name: 'className')
   String? className;
-  @JsonKey(name: 'PackageName')
+  @JsonKey(name: 'packageName')
   String? packageName;
-  @JsonKey(name: 'ForceUpdate')
+  @JsonKey(name: 'forceUpdate')
   bool? forceUpdate;
-  @JsonKey(name: 'LinkLastSuccessfullyBuildFileId')
+  @JsonKey(name: 'linkLastSuccessfullyBuildFileId')
   int? linkLastSuccessfullyBuildFileId;
-  @JsonKey(name: 'LastSuccessfullyBuildDate')
+  @JsonKey(name: 'lastSuccessfullyBuildDate')
   String? lastSuccessfullyBuildDate;
-  @JsonKey(name: 'LastBuildCommandDate')
+  @JsonKey(name: 'lastBuildCommandDate')
   String? lastBuildCommandDate;
-  @JsonKey(name: 'LastBuildCommandBy')
+  @JsonKey(name: 'lastBuildCommandBy')
   String? lastBuildCommandBy;
-  @JsonKey(name: 'LastUnsuccessfullyBuildErrorDate')
+  @JsonKey(name: 'lastUnsuccessfullyBuildErrorDate')
   String? lastUnsuccessfullyBuildErrorDate;
-  @JsonKey(name: 'LastUnsuccessfullyBuildErrorMessage')
+  @JsonKey(name: 'lastUnsuccessfullyBuildErrorMessage')
   String? lastUnsuccessfullyBuildErrorMessage;
-  @JsonKey(name: 'Layouts')
+  @JsonKey(name: 'layouts')
   List<ApplicationLayoutModel>? layouts;
-  @JsonKey(name: 'Applications')
+  @JsonKey(name: 'applications')
   List<ApplicationAppModel>? applications;
-  @JsonKey(name: 'SourceSiteCategores')
+  @JsonKey(name: 'sourceSiteCategores')
   List<ApplicationSourceSiteCategoryModel>? sourceSiteCategores;
-  @JsonKey(name: 'FireBaseServerKey')
+  @JsonKey(name: 'fireBaseServerKey')
   String? fireBaseServerKey;
-  @JsonKey(name: 'Extension')
+  @JsonKey(name: 'extension')
   String? extension;
-  @JsonKey(name: 'ExtensionUpdateFile')
+  @JsonKey(name: 'extensionUpdateFile')
   String? extensionUpdateFile;
-  @JsonKey(name: 'DefaultConfigBuilderAdminJsonValues')
+  @JsonKey(name: 'defaultConfigBuilderAdminJsonValues')
   String? defaultConfigBuilderAdminJsonValues;
-  @JsonKey(name: 'DefaultConfigRuntimeAdminJsonValues')
+  @JsonKey(name: 'defaultConfigRuntimeAdminJsonValues')
   String? defaultConfigRuntimeAdminJsonValues;
-  @JsonKey(name: 'DefaultConfigBuilderSiteJsonValues')
+  @JsonKey(name: 'defaultConfigBuilderSiteJsonValues')
   String? defaultConfigBuilderSiteJsonValues;
-  @JsonKey(name: 'DefaultConfigRuntimeSiteJsonValues')
+  @JsonKey(name: 'defaultConfigRuntimeSiteJsonValues')
   String? defaultConfigRuntimeSiteJsonValues;
-  @JsonKey(name: 'BuildKey1String')
+  @JsonKey(name: 'buildKey1String')
   String? buildKey1String;
-  @JsonKey(name: 'BuildKey1Value')
+  @JsonKey(name: 'buildKey1Value')
   String? buildKey1Value;
-  @JsonKey(name: 'BuildKey2String')
+  @JsonKey(name: 'buildKey2String')
   String? buildKey2String;
-  @JsonKey(name: 'BuildKey2Value')
+  @JsonKey(name: 'buildKey2Value')
   String? buildKey2Value;
-  @JsonKey(name: 'BuildKey3String')
+  @JsonKey(name: 'buildKey3String')
   String? buildKey3String;
-  @JsonKey(name: 'BuildKey3Value')
+  @JsonKey(name: 'buildKey3Value')
   String? buildKey3Value;
-  @JsonKey(name: 'BuildKey4String')
+  @JsonKey(name: 'buildKey4String')
   String? buildKey4String;
-  @JsonKey(name: 'BuildKey4Value')
+  @JsonKey(name: 'buildKey4Value')
   String? buildKey4Value;
-  @JsonKey(name: 'BuildKey5String')
+  @JsonKey(name: 'buildKey5String')
   String? buildKey5String;
-  @JsonKey(name: 'BuildKey5Value')
+  @JsonKey(name: 'buildKey5Value')
   String? buildKey5Value;
-  @JsonKey(name: 'IsPublish')
+  @JsonKey(name: 'isPublish')
   bool? isPublish;
-  @JsonKey(name: 'SourceNameGit')
+  @JsonKey(name: 'sourceNameGit')
   String? sourceNameGit;
-  @JsonKey(name: 'OSType;')
+  @JsonKey(name: 'oSType;')
   EnumOperatingSystemType? oSType;
-  @JsonKey(name: 'UpdateSourceByGit')
+  @JsonKey(name: 'updateSourceByGit')
   bool? updateSourceByGit;
-  @JsonKey(name: 'IsAbilityGradleBuild')
+  @JsonKey(name: 'isAbilityGradleBuild')
   bool? isAbilityGradleBuild;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
   ApplicationSourceModel();
   factory ApplicationSourceModel.fromJson(Map<String, dynamic> json) =>

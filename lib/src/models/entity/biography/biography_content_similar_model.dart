@@ -6,19 +6,17 @@ part 'biography_content_similar_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentSimilarModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Title')
-  String? title;
-  @JsonKey(name: 'LinkSourceId')
+  @JsonKey(name: 'linkSourceId')
   int? linkSourceId;
-  @JsonKey(name: 'LinkDestinationId')
+  @JsonKey(name: 'linkDestinationId')
   int? linkDestinationId;
   @JsonKey(name: 'virtual_Source')
   Object? virtual_Source;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   Object? source;
   @JsonKey(name: 'virtual_Destination')
   Object? virtual_Destination;
-  @JsonKey(name: 'Destination')
+  @JsonKey(name: 'destination')
   Object? destination;
 
   BiographyContentSimilarModel();

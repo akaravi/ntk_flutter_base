@@ -8,15 +8,15 @@ part 'core_site_domain_alias_model.g.dart';
 
 @JsonSerializable()
 class CoreSiteDomainAliasModel extends BaseEntity<int> {
-  @JsonKey(name: 'CmsSite')
+  @JsonKey(name: 'cmsSite')
   CoreSiteModel? cmsSite;
-  @JsonKey(name: 'SubDomain')
+  @JsonKey(name: 'subDomain')
   String? dubDomain;
-  @JsonKey(name: 'Domain')
+  @JsonKey(name: 'domain')
   String? domain;
-  @JsonKey(name: 'Redirect')
+  @JsonKey(name: 'redirect')
   String? redirect;
-  @JsonKey(name: 'LinkCmsSiteId')
+  @JsonKey(name: 'linkCmsSiteId')
   int? linkCmsSiteId;
   @JsonKey(name: 'virtual_CmsSite')
   CoreSiteModel? virtual_CmsSite;

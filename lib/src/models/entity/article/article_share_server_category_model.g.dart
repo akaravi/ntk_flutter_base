@@ -9,44 +9,45 @@ part of 'article_share_server_category_model.dart';
 ArticleShareServerCategoryModel _$ArticleShareServerCategoryModelFromJson(
         Map<String, dynamic> json) =>
     ArticleShareServerCategoryModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..description = json['Description'] as String?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..description = json['description'] as String?
       ..linkShareMainAdminSettingId =
-          json['LinkShareMainAdminSettingId'] as int?
-      ..title = json['Ttitle'] as String?
-      ..linkServerCategoryId = json['LinkServerCategoryId'] as int?
-      ..serverCategory = json['ServerCategory'] == null
+          json['linkShareMainAdminSettingId'] as int?
+      ..title = json['ttitle'] as String?
+      ..linkServerCategoryId = json['linkServerCategoryId'] as int?
+      ..serverCategory = json['serverCategory'] == null
           ? null
           : ArticleCategoryModel.fromJson(
-              json['ServerCategory'] as Map<String, dynamic>)
-      ..shareMainAdminSetting = json['ShareMainAdminSetting'] == null
+              json['serverCategory'] as Map<String, dynamic>)
+      ..shareMainAdminSetting = json['shareMainAdminSetting'] == null
           ? null
           : ArticleShareMainAdminSettingModel.fromJson(
-              json['ShareMainAdminSetting'] as Map<String, dynamic>)
+              json['shareMainAdminSetting'] as Map<String, dynamic>)
       ..shareReciverCategories =
-          (json['ShareReciverCategories'] as List<dynamic>?)
+          (json['shareReciverCategories'] as List<dynamic>?)
               ?.map((e) => ArticleShareReceiverCategoryModel.fromJson(
                   e as Map<String, dynamic>))
               .toList();
@@ -54,28 +55,28 @@ ArticleShareServerCategoryModel _$ArticleShareServerCategoryModelFromJson(
 Map<String, dynamic> _$ArticleShareServerCategoryModelToJson(
         ArticleShareServerCategoryModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Description': instance.description,
-      'LinkShareMainAdminSettingId': instance.linkShareMainAdminSettingId,
-      'Ttitle': instance.title,
-      'LinkServerCategoryId': instance.linkServerCategoryId,
-      'ServerCategory': instance.serverCategory,
-      'ShareMainAdminSetting': instance.shareMainAdminSetting,
-      'ShareReciverCategories': instance.shareReciverCategories,
+      'linkSiteId': instance.linkSiteId,
+      'description': instance.description,
+      'linkShareMainAdminSettingId': instance.linkShareMainAdminSettingId,
+      'ttitle': instance.title,
+      'linkServerCategoryId': instance.linkServerCategoryId,
+      'serverCategory': instance.serverCategory,
+      'shareMainAdminSetting': instance.shareMainAdminSetting,
+      'shareReciverCategories': instance.shareReciverCategories,
     };
 
 const _$EnumRecordStatusEnumMap = {

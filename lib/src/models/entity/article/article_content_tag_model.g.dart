@@ -9,16 +9,16 @@ part of 'article_content_tag_model.dart';
 ArticleContentTagModel _$ArticleContentTagModelFromJson(
         Map<String, dynamic> json) =>
     ArticleContentTagModel()
-      ..linkContentId = json['LinkContentid'] as int?
-      ..linkTaId = json['LinkTagid'] as int?
+      ..linkContentId = json['linkContentid'] as int?
+      ..linkTaId = json['linkTagid'] as int?
       ..virtual_ModuleContent = json['virtual_ModuleContent']
-      ..moduleContent = json['ModuleContent'];
+      ..moduleContent = json['moduleContent'];
 
 Map<String, dynamic> _$ArticleContentTagModelToJson(
         ArticleContentTagModel instance) =>
     <String, dynamic>{
-      'LinkContentid': instance.linkContentId,
-      'LinkTagid': instance.linkTaId,
+      'linkContentid': instance.linkContentId,
+      'linkTagid': instance.linkTaId,
       'virtual_ModuleContent': instance.virtual_ModuleContent,
-      'ModuleContent': instance.moduleContent,
+      'moduleContent': instance.moduleContent,
     };

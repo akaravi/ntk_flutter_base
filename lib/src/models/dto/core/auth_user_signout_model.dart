@@ -4,9 +4,9 @@ part 'auth_user_signout_model.g.dart';
 
 @JsonSerializable()
 class AuthUserSignOutModel {
-  @JsonKey(name: 'Tokens')
+  @JsonKey(name: 'tokens')
   List<String>? tokens;
-  @JsonKey(name: 'AllToken')
+  @JsonKey(name: 'allToken')
   bool? allToken;
 
   AuthUserSignOutModel();

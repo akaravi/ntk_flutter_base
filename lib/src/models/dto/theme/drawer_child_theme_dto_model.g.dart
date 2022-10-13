@@ -9,16 +9,16 @@ part of 'drawer_child_theme_dto_model.dart';
 DrawerChildThemeDtoModel _$DrawerChildThemeDtoModelFromJson(
         Map<String, dynamic> json) =>
     DrawerChildThemeDtoModel()
-      ..id = json['Id'] as int?
-      ..type = json['Type'] as int?
-      ..title = json['Title'] as String?
-      ..icon = json['Icon'] as String?;
+      ..id = json['id'] as int?
+      ..type = json['type'] as int?
+      ..title = json['title'] as String?
+      ..icon = json['icon'] as String?;
 
 Map<String, dynamic> _$DrawerChildThemeDtoModelToJson(
         DrawerChildThemeDtoModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'Type': instance.type,
-      'Title': instance.title,
-      'Icon': instance.icon,
+      'id': instance.id,
+      'type': instance.type,
+      'title': instance.title,
+      'icon': instance.icon,
     };

@@ -9,62 +9,62 @@ part of 'estate_property_detail_model.dart';
 EstatePropertyDetailModel _$EstatePropertyDetailModelFromJson(
         Map<String, dynamic> json) =>
     EstatePropertyDetailModel()
-      ..id = json['Id'] as String?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..iconFont = json['IconFont'] as String?
-      ..iconColor = json['IconColor'] as String?
-      ..inputDataType = json['InputDataType'] as int?
+      ..id = json['id'] as String?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..iconFont = json['iconFont'] as String?
+      ..iconColor = json['iconColor'] as String?
+      ..inputDataType = json['inputDataType'] as int?
       ..inputDataTypeEnum = $enumDecodeNullable(
           _$EnumInputDataTypeEnumMap, json['inputDataTypeEnum'])
-      ..invisibleForEndUser = json['InvisibleForEndUser'] as bool?
-      ..invisibleForSubmiter = json['InvisibleForSubmiter'] as bool?
-      ..unit = json['Unit'] as String?
-      ..required = json['Required'] as bool?
-      ..isHistoryable = json['IsHistoryable'] as bool?
-      ..isSearchable = json['IsSearchable'] as bool?
-      ..showInFormOrder = json['ShowInFormOrder'] as int?
-      ..linkPropertyTypeLanduseId = json['LinkPropertyTypeLanduseId'] as String?
-      ..linkPropertyDetailGroupId = json['LinkPropertyDetailGroupId'] as String?
+      ..invisibleForEndUser = json['invisibleForEndUser'] as bool?
+      ..invisibleForSubmiter = json['invisibleForSubmiter'] as bool?
+      ..unit = json['unit'] as String?
+      ..required = json['required'] as bool?
+      ..isHistoryable = json['isHistoryable'] as bool?
+      ..isSearchable = json['isSearchable'] as bool?
+      ..showInFormOrder = json['showInFormOrder'] as int?
+      ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
+      ..linkPropertyDetailGroupId = json['linkPropertyDetailGroupId'] as String?
       ..configValueDefaultValueJson =
-          json['ConfigValueDefaultValueJson'] as String?
+          json['configValueDefaultValueJson'] as String?
       ..configValueDefaultValue =
-          (json['ConfigValueDefaultValue'] as List<dynamic>?)
+          (json['configValueDefaultValue'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
       ..configValueForceUseDefaultValue =
-          json['ConfigValueForceUseDefaultValue'] as bool?
-      ..configValueMultipleChoice = json['ConfigValueMultipleChoice'] as bool?
-      ..configValueIntValueMin = json['ConfigValueIntValueMin'] as int?
-      ..configValueIntValueMax = json['ConfigValueIntValueMax'] as int?;
+          json['configValueForceUseDefaultValue'] as bool?
+      ..configValueMultipleChoice = json['configValueMultipleChoice'] as bool?
+      ..configValueIntValueMin = json['configValueIntValueMin'] as int?
+      ..configValueIntValueMax = json['configValueIntValueMax'] as int?;
 
 Map<String, dynamic> _$EstatePropertyDetailModelToJson(
         EstatePropertyDetailModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'Title': instance.title,
-      'Description': instance.description,
-      'IconFont': instance.iconFont,
-      'IconColor': instance.iconColor,
-      'InputDataType': instance.inputDataType,
+      'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'iconFont': instance.iconFont,
+      'iconColor': instance.iconColor,
+      'inputDataType': instance.inputDataType,
       'inputDataTypeEnum':
           _$EnumInputDataTypeEnumMap[instance.inputDataTypeEnum],
-      'InvisibleForEndUser': instance.invisibleForEndUser,
-      'InvisibleForSubmiter': instance.invisibleForSubmiter,
-      'Unit': instance.unit,
-      'Required': instance.required,
-      'IsHistoryable': instance.isHistoryable,
-      'IsSearchable': instance.isSearchable,
-      'ShowInFormOrder': instance.showInFormOrder,
-      'LinkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
-      'LinkPropertyDetailGroupId': instance.linkPropertyDetailGroupId,
-      'ConfigValueDefaultValueJson': instance.configValueDefaultValueJson,
-      'ConfigValueDefaultValue': instance.configValueDefaultValue,
-      'ConfigValueForceUseDefaultValue':
+      'invisibleForEndUser': instance.invisibleForEndUser,
+      'invisibleForSubmiter': instance.invisibleForSubmiter,
+      'unit': instance.unit,
+      'required': instance.required,
+      'isHistoryable': instance.isHistoryable,
+      'isSearchable': instance.isSearchable,
+      'showInFormOrder': instance.showInFormOrder,
+      'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
+      'linkPropertyDetailGroupId': instance.linkPropertyDetailGroupId,
+      'configValueDefaultValueJson': instance.configValueDefaultValueJson,
+      'configValueDefaultValue': instance.configValueDefaultValue,
+      'configValueForceUseDefaultValue':
           instance.configValueForceUseDefaultValue,
-      'ConfigValueMultipleChoice': instance.configValueMultipleChoice,
-      'ConfigValueIntValueMin': instance.configValueIntValueMin,
-      'ConfigValueIntValueMax': instance.configValueIntValueMax,
+      'configValueMultipleChoice': instance.configValueMultipleChoice,
+      'configValueIntValueMin': instance.configValueIntValueMin,
+      'configValueIntValueMax': instance.configValueIntValueMax,
     };
 
 const _$EnumInputDataTypeEnumMap = {

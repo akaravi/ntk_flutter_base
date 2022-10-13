@@ -8,24 +8,24 @@ part of 'auth_user_signin_model.dart';
 
 AuthUserSignInModel _$AuthUserSignInModelFromJson(Map<String, dynamic> json) =>
     AuthUserSignInModel()
-      ..captchaKey = json['CaptchaKey'] as String?
-      ..captchaText = json['CaptchaText'] as String?
-      ..email = json['Email'] as String?
-      ..mobile = json['Mobile'] as String?
-      ..password = json['Password'] as String?
-      ..isRemember = json['IsRemember'] as bool?
-      ..siteId = json['SiteId'] as int?
-      ..lang = json['Lang'] as String?;
+      ..captchaKey = json['captchaKey'] as String?
+      ..captchaText = json['captchaText'] as String?
+      ..email = json['email'] as String?
+      ..mobile = json['mobile'] as String?
+      ..password = json['password'] as String?
+      ..isRemember = json['isRemember'] as bool?
+      ..siteId = json['siteId'] as int?
+      ..lang = json['lang'] as String?;
 
 Map<String, dynamic> _$AuthUserSignInModelToJson(
         AuthUserSignInModel instance) =>
     <String, dynamic>{
-      'CaptchaKey': instance.captchaKey,
-      'CaptchaText': instance.captchaText,
-      'Email': instance.email,
-      'Mobile': instance.mobile,
-      'Password': instance.password,
-      'IsRemember': instance.isRemember,
-      'SiteId': instance.siteId,
-      'Lang': instance.lang,
+      'captchaKey': instance.captchaKey,
+      'captchaText': instance.captchaText,
+      'email': instance.email,
+      'mobile': instance.mobile,
+      'password': instance.password,
+      'isRemember': instance.isRemember,
+      'siteId': instance.siteId,
+      'lang': instance.lang,
     };

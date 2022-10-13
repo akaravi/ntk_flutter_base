@@ -10,21 +10,21 @@ part 'polling_option_model.g.dart';
 
 @JsonSerializable()
 class PollingOptionModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'Option')
+  @JsonKey(name: 'option')
   String? option;
-  @JsonKey(name: 'OptionAnswer')
+  @JsonKey(name: 'optionAnswer')
   String? optionAnswer;
-  @JsonKey(name: 'IsCorrectAnswer')
+  @JsonKey(name: 'isCorrectAnswer')
   bool? isCorrectAnswer;
-  @JsonKey(name: 'NumberOfVotes')
+  @JsonKey(name: 'numberOfVotes')
   int? numberOfVotes;
-  @JsonKey(name: 'ScoreOfVotes')
+  @JsonKey(name: 'scoreOfVotes')
   int? scoreOfVotes;
-  @JsonKey(name: 'LinkPollingContentId')
+  @JsonKey(name: 'linkPollingContentId')
   int? linkPollingContentId;
   @JsonKey(name: 'virtual_PollingContent')
   PollingContentModel? virtual_PollingContent;
-  @JsonKey(name: 'PollingContent')
+  @JsonKey(name: 'pollingContent')
   PollingContentModel? pollingContent;PollingOptionModel();
   factory PollingOptionModel.fromJson(Map<String, dynamic> json) => _$PollingOptionModelFromJson(json);
   Map<String, dynamic> toJson() => _$PollingOptionModelToJson(this);

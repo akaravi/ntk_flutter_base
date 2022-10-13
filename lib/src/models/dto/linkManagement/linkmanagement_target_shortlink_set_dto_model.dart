@@ -4,15 +4,15 @@ part 'linkmanagement_target_shortlink_set_dto_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkSetDtoModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'UrlAddress')
+  @JsonKey(name: 'urlAddress')
   String? urlAddress;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'UploadFileKey')
+  @JsonKey(name: 'uploadFileKey')
   String? uploadFileKey;
 
   LinkManagementTargetShortLinkSetDtoModel();

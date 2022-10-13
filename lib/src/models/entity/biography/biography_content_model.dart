@@ -5,82 +5,89 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'biography_category_model.dart';
 import 'biography_comment_model.dart';
+import 'biography_content_category_model.dart';
 import 'biography_content_similar_model.dart';
 import 'biography_content_tag_model.dart';
 part 'biography_content_model.g.dart';
 
 @JsonSerializable()
 class BiographyContentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkCategoryId')
+  @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'Body')
+  @JsonKey(name: 'body')
   String? body;
-  @JsonKey(name: 'FromDate')
-  String? fromDate;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'fromDate')
+  DateTime? fromDate;
+  @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
-  @JsonKey(name: 'Keyword')
+  @JsonKey(name: 'keyword')
   String? keyword;
-  @JsonKey(name: 'LinkFileIds')
+  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
-  @JsonKey(name: 'LinkFilePodcastId')
+  @JsonKey(name: 'linkFilePodcastId')
   int? linkFilePodcastId;
-  @JsonKey(name: 'LinkFileMovieId')
+  @JsonKey(name: 'linkFileMovieId')
   int? linkFileMovieId;
-  @JsonKey(name: 'LinkMainImageId')
+  @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
-  @JsonKey(name: 'ScoreClick')
+  @JsonKey(name: 'scoreClick')
   int? scoreClick;
-  @JsonKey(name: 'ScoreSumPercent')
+  @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-  @JsonKey(name: 'ViewCount')
+  @JsonKey(name: 'viewCount')
   int? viewCount;
-  @JsonKey(name: 'Favorited')
+  @JsonKey(name: 'favorited')
   bool? favorited;
-  @JsonKey(name: 'ExpireDate')
-  String? expireDate;
-  @JsonKey(name: 'ModuleCoreCreatedBy')
-  CoreUserModel? moduleCoreCreatedBy;
-  @JsonKey(name: 'ModuleCoreUpdatedBy')
-  CoreUserModel? moduleCoreUpdatedBy;
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'expireDate')
+  DateTime? expireDate;
+  @JsonKey(name: 'moduleCoreCreatedBy')
+  String? moduleCoreCreatedBy;
+  @JsonKey(name: 'moduleCoreUpdatedBy')
+  String? moduleCoreUpdatedBy;
+  @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'Comments')
+  @JsonKey(name: 'comments')
   BiographyCommentModel? comments;
   @JsonKey(name: 'virtual_Category')
   BiographyCategoryModel? virtual_Category;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   BiographyCategoryModel? category;
-  @JsonKey(name: 'ContentTags')
+  @JsonKey(name: 'contentTags')
   List<BiographyContentTagModel>? contentTags;
-  @JsonKey(name: 'Similars')
+  @JsonKey(name: 'similars')
   List<BiographyContentSimilarModel>? similars;
-  @JsonKey(name: 'OtherInfos')
+  @JsonKey(name: 'contentCategores')
+  List<BiographyContentCategoryModel>? contentCategores;
+  @JsonKey(name: 'otherInfos')
   String? otherInfos;
-  @JsonKey(name: 'ContentAndParameterValues')
+  @JsonKey(name: 'contentAndParameterValues')
   Object? contentAndParameterValues;
-  @JsonKey(name: 'LinkMainImageIdSrc')
+  @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'LinkFilePodcastIdSrc')
+  @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
-  @JsonKey(name: 'LinkFileMovieIdSrc')
+  @JsonKey(name: 'linkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
-  @JsonKey(name: 'LinkFileIdsSrc')
+  @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
-  @JsonKey(name: 'LocationPeriodStart')
+  @JsonKey(name: 'locationPeriodStart')
   int? locationPeriodStart;
-  @JsonKey(name: 'LocationPeriodEnd')
+  @JsonKey(name: 'locationPeriodEnd')
   int? locationPeriodEnd;
-  @JsonKey(name: 'DatePeriodStart')
-  String? datePeriodStart;
-  @JsonKey(name: 'DatePeriodEnd')
-  String? datePeriodEnd;
+  @JsonKey(name: 'datePeriodStart')
+  DateTime? datePeriodStart;
+  @JsonKey(name: 'datePeriodEnd')
+  DateTime? datePeriodEnd;
+  @JsonKey(name: 'urlViewContent')
+  String? urlViewContent;
+  @JsonKey(name: 'urlViewContentQRCodeBase64')
+  String? urlViewContentQRCodeBase64;
   BiographyContentModel();
   factory BiographyContentModel.fromJson(Map<String, dynamic> json) =>
       _$BiographyContentModelFromJson(json);

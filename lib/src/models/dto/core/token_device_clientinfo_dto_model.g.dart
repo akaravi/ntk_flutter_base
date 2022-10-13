@@ -9,40 +9,40 @@ part of 'token_device_clientinfo_dto_model.dart';
 TokenDeviceClientInfoDtoModel _$TokenDeviceClientInfoDtoModelFromJson(
         Map<String, dynamic> json) =>
     TokenDeviceClientInfoDtoModel()
-      ..securityKey = json['SecurityKey'] as String?
-      ..clientMACAddress = json['ClientMACAddress'] as String?
+      ..securityKey = json['securityKey'] as String?
+      ..clientMACAddress = json['clientMACAddress'] as String?
       ..oSType =
-          $enumDecodeNullable(_$EnumOperatingSystemTypeEnumMap, json['OSType'])
+          $enumDecodeNullable(_$EnumOperatingSystemTypeEnumMap, json['oSType'])
       ..deviceType =
-          $enumDecodeNullable(_$EnumDeviceTypeEnumMap, json['DeviceType'])
-      ..packageName = json['PackageName'] as String?
-      ..notificationId = json['NotificationId'] as String?
-      ..appBuildVer = json['AppBuildVer'] as int?
-      ..appSourceVer = json['AppSourceVer'] as String?
-      ..country = json['Country'] as String?
-      ..locationLat = json['LocationLat'] as String?
-      ..locationLong = json['LocationLong'] as String?
-      ..simCard = json['SimCard'] as String?
-      ..language = json['Language'] as String?
-      ..deviceBrand = json['DeviceBrand'] as String?;
+          $enumDecodeNullable(_$EnumDeviceTypeEnumMap, json['deviceType'])
+      ..packageName = json['packageName'] as String?
+      ..notificationId = json['notificationId'] as String?
+      ..appBuildVer = json['appBuildVer'] as int?
+      ..appSourceVer = json['appSourceVer'] as String?
+      ..country = json['country'] as String?
+      ..locationLat = json['locationLat'] as String?
+      ..locationLong = json['locationLong'] as String?
+      ..simCard = json['simCard'] as String?
+      ..language = json['language'] as String?
+      ..deviceBrand = json['deviceBrand'] as String?;
 
 Map<String, dynamic> _$TokenDeviceClientInfoDtoModelToJson(
         TokenDeviceClientInfoDtoModel instance) =>
     <String, dynamic>{
-      'SecurityKey': instance.securityKey,
-      'ClientMACAddress': instance.clientMACAddress,
-      'OSType': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
-      'DeviceType': _$EnumDeviceTypeEnumMap[instance.deviceType],
-      'PackageName': instance.packageName,
-      'NotificationId': instance.notificationId,
-      'AppBuildVer': instance.appBuildVer,
-      'AppSourceVer': instance.appSourceVer,
-      'Country': instance.country,
-      'LocationLat': instance.locationLat,
-      'LocationLong': instance.locationLong,
-      'SimCard': instance.simCard,
-      'Language': instance.language,
-      'DeviceBrand': instance.deviceBrand,
+      'securityKey': instance.securityKey,
+      'clientMACAddress': instance.clientMACAddress,
+      'oSType': _$EnumOperatingSystemTypeEnumMap[instance.oSType],
+      'deviceType': _$EnumDeviceTypeEnumMap[instance.deviceType],
+      'packageName': instance.packageName,
+      'notificationId': instance.notificationId,
+      'appBuildVer': instance.appBuildVer,
+      'appSourceVer': instance.appSourceVer,
+      'country': instance.country,
+      'locationLat': instance.locationLat,
+      'locationLong': instance.locationLong,
+      'simCard': instance.simCard,
+      'language': instance.language,
+      'deviceBrand': instance.deviceBrand,
     };
 
 const _$EnumOperatingSystemTypeEnumMap = {

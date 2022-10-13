@@ -7,21 +7,21 @@ part 'bankpayment_public_config_model.g.dart';
 
 @JsonSerializable()
 class BankPaymentPublicConfigModel extends BaseEntity<int> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'ClassName')
+  @JsonKey(name: 'className')
   String? className;
-  @JsonKey(name: 'LinkModuleFileLogoId')
+  @JsonKey(name: 'linkModuleFileLogoId')
   int? linkModuleFileLogoId;
-  @JsonKey(name: 'LinkModuleFileLogoIdSrc')
+  @JsonKey(name: 'linkModuleFileLogoIdSrc')
   String? linkModuleFileLogoIdSrc;
-  @JsonKey(name: 'CurrencyUnit')
-  String? currencyUnit;
-  @JsonKey(name: 'PublicConfigJsonValues')
+  @JsonKey(name: 'linkCurrencyId')
+  int? linkCurrencyId;
+  @JsonKey(name: 'publicConfigJsonValues')
   String? publicConfigJsonValues;
-  @JsonKey(name: 'Memo')
+  @JsonKey(name: 'memo')
   String? memo;
-  @JsonKey(name: 'PrivateSiteConfigs')
+  @JsonKey(name: 'privateSiteConfigs')
   List<BankPaymentPrivateSiteConfigModel>? privateSiteConfigs;
 
   BankPaymentPublicConfigModel();

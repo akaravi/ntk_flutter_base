@@ -9,16 +9,16 @@ part of 'auth_user_forgetpassword_model.dart';
 AuthUserForgetPasswordModel _$AuthUserForgetPasswordModelFromJson(
         Map<String, dynamic> json) =>
     AuthUserForgetPasswordModel()
-      ..captchaKey = json['CaptchaKey'] as String?
-      ..captchaText = json['CaptchaText'] as String?
-      ..email = json['Email'] as String?
-      ..mobile = json['Mobile'] as String?;
+      ..captchaKey = json['captchaKey'] as String?
+      ..captchaText = json['captchaText'] as String?
+      ..email = json['email'] as String?
+      ..mobile = json['mobile'] as String?;
 
 Map<String, dynamic> _$AuthUserForgetPasswordModelToJson(
         AuthUserForgetPasswordModel instance) =>
     <String, dynamic>{
-      'CaptchaKey': instance.captchaKey,
-      'CaptchaText': instance.captchaText,
-      'Email': instance.email,
-      'Mobile': instance.mobile,
+      'captchaKey': instance.captchaKey,
+      'captchaText': instance.captchaText,
+      'email': instance.email,
+      'mobile': instance.mobile,
     };

@@ -4,10 +4,10 @@ part 'shoppingcart_theme_dto_model.g.dart';
 
 @JsonSerializable()
 class ShoppingCartThemeDtoModel {
-  @JsonKey(name: 'BgColor')
+  @JsonKey(name: 'bgColor')
   String? bgColor;
 
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
 
   ShoppingCartThemeDtoModel();

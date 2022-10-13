@@ -4,13 +4,13 @@ part 'linkmanagement_target_shortlink_set_response_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkSetResponceModel {
-  @JsonKey(name: 'Key')
+  @JsonKey(name: 'key')
   String? key;
-  @JsonKey(name: 'ShareExpireDate')
+  @JsonKey(name: 'shareExpireDate')
   String? shareExpireDate;
-  @JsonKey(name: 'ShortLinkUrl')
+  @JsonKey(name: 'shortLinkUrl')
   String? shortLinkUrl;
-  @JsonKey(name: 'ShortLinkQRCodeBase64')
+  @JsonKey(name: 'shortLinkQRCodeBase64')
   String? shortLinkQRCodeBase64;
 
   LinkManagementTargetShortLinkSetResponceModel();

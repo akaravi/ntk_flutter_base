@@ -6,23 +6,23 @@ part 'hypershop_order_dto_model.g.dart';
 
 @JsonSerializable()
 class HyperShopOrderDtoModel {
-  @JsonKey(name: 'OrderId')
+  @JsonKey(name: 'orderId')
   String? orderId;
-  @JsonKey(name: 'AcceptSystem')
+  @JsonKey(name: 'acceptSystem')
   bool? acceptSystem;
-  @JsonKey(name: 'Name')
+  @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'Family')
+  @JsonKey(name: 'family')
   String? family;
-  @JsonKey(name: 'Mobile')
+  @JsonKey(name: 'mobile')
   String? mobile;
-  @JsonKey(name: 'Address')
+  @JsonKey(name: 'address')
   String? address;
-  @JsonKey(name: 'Amount')
+  @JsonKey(name: 'amount')
   double? amount;
-  @JsonKey(name: 'Products')
+  @JsonKey(name: 'products')
   List<HyperShopOrderContentDtoModel>? products;
-  @JsonKey(name: 'PaymentType')
+  @JsonKey(name: 'paymentType')
   int? paymentType;
 
   HyperShopOrderDtoModel();

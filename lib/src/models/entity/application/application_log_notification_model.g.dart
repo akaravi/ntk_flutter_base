@@ -9,83 +9,84 @@ part of 'application_log_notification_model.dart';
 ApplicationLogNotificationModel _$ApplicationLogNotificationModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationLogNotificationModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkApplicationMemberId = json['LinkApplicationMemberId'] as String?
-      ..memberInfo = json['MemberInfo'] == null
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkApplicationMemberId = json['linkApplicationMemberId'] as String?
+      ..memberInfo = json['memberInfo'] == null
           ? null
           : ApplicationMemberInfoModel.fromJson(
-              json['MemberInfo'] as Map<String, dynamic>)
-      ..linkApplicationId = json['LinkApplicationId'] as int?
-      ..application = json['Application'] == null
+              json['memberInfo'] as Map<String, dynamic>)
+      ..linkApplicationId = json['linkApplicationId'] as int?
+      ..application = json['application'] == null
           ? null
           : ApplicationAppModel.fromJson(
-              json['Application'] as Map<String, dynamic>)
-      ..title = json['Title'] as String?
-      ..content = json['Content'] as String?
+              json['application'] as Map<String, dynamic>)
+      ..title = json['title'] as String?
+      ..content = json['content'] as String?
       ..contentType = $enumDecodeNullable(
-          _$EnumNotificationTypeEnumMap, json['ContentType'])
+          _$EnumNotificationTypeEnumMap, json['contentType'])
       ..contentJson = json['contentJson'] as String?
-      ..contentJsonClass = json['ContentJsonClass'] as String?
-      ..smallImageId = json['SmallImageId'] as int?
-      ..bigImageId = json['BigImageId'] as int?
-      ..smallImageIdSrc = json['SmallImageIdSrc'] as String?
-      ..bigImageIdSrc = json['BigImageIdSrc'] as String?
-      ..errorMessage = json['ErrorMessage'] as String?;
+      ..contentJsonClass = json['contentJsonClass'] as String?
+      ..smallImageId = json['smallImageId'] as int?
+      ..bigImageId = json['bigImageId'] as int?
+      ..smallImageIdSrc = json['smallImageIdSrc'] as String?
+      ..bigImageIdSrc = json['bigImageIdSrc'] as String?
+      ..errorMessage = json['errorMessage'] as String?;
 
 Map<String, dynamic> _$ApplicationLogNotificationModelToJson(
         ApplicationLogNotificationModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkApplicationMemberId': instance.linkApplicationMemberId,
-      'MemberInfo': instance.memberInfo,
-      'LinkApplicationId': instance.linkApplicationId,
-      'Application': instance.application,
-      'Title': instance.title,
-      'Content': instance.content,
-      'ContentType': _$EnumNotificationTypeEnumMap[instance.contentType],
+      'linkSiteId': instance.linkSiteId,
+      'linkApplicationMemberId': instance.linkApplicationMemberId,
+      'memberInfo': instance.memberInfo,
+      'linkApplicationId': instance.linkApplicationId,
+      'application': instance.application,
+      'title': instance.title,
+      'content': instance.content,
+      'contentType': _$EnumNotificationTypeEnumMap[instance.contentType],
       'contentJson': instance.contentJson,
-      'ContentJsonClass': instance.contentJsonClass,
-      'SmallImageId': instance.smallImageId,
-      'BigImageId': instance.bigImageId,
-      'SmallImageIdSrc': instance.smallImageIdSrc,
-      'BigImageIdSrc': instance.bigImageIdSrc,
-      'ErrorMessage': instance.errorMessage,
+      'contentJsonClass': instance.contentJsonClass,
+      'smallImageId': instance.smallImageId,
+      'bigImageId': instance.bigImageId,
+      'smallImageIdSrc': instance.smallImageIdSrc,
+      'bigImageIdSrc': instance.bigImageIdSrc,
+      'errorMessage': instance.errorMessage,
     };
 
 const _$EnumRecordStatusEnumMap = {

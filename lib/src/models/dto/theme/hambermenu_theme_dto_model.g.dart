@@ -9,12 +9,12 @@ part of 'hambermenu_theme_dto_model.dart';
 HamberMenuThemeDtoModel _$HamberMenuThemeDtoModelFromJson(
         Map<String, dynamic> json) =>
     HamberMenuThemeDtoModel()
-      ..color = json['BgColor'] as String?
-      ..image = json['Image'] as String?;
+      ..color = json['bgColor'] as String?
+      ..image = json['image'] as String?;
 
 Map<String, dynamic> _$HamberMenuThemeDtoModelToJson(
         HamberMenuThemeDtoModel instance) =>
     <String, dynamic>{
-      'BgColor': instance.color,
-      'Image': instance.image,
+      'bgColor': instance.color,
+      'image': instance.image,
     };

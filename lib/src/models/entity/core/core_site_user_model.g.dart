@@ -8,81 +8,82 @@ part of 'core_site_user_model.dart';
 
 CoreSiteUserModel _$CoreSiteUserModelFromJson(Map<String, dynamic> json) =>
     CoreSiteUserModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..expireDate = json['ExpireDate'] as String?
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkUserId = json['LinkUserId'] as int?
-      ..linkUserGroupId = json['LinkUserGroupId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..expireDate = json['expireDate'] as String?
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkUserId = json['linkUserId'] as int?
+      ..linkUserGroupId = json['linkUserGroupId'] as int?
       ..virtual_CmsSite = json['virtual_CmsSite'] == null
           ? null
           : CoreSiteModel.fromJson(
               json['virtual_CmsSite'] as Map<String, dynamic>)
-      ..cmsSite = json['CmsSite'] == null
+      ..cmsSite = json['cmsSite'] == null
           ? null
-          : CoreSiteModel.fromJson(json['CmsSite'] as Map<String, dynamic>)
+          : CoreSiteModel.fromJson(json['cmsSite'] as Map<String, dynamic>)
       ..virtual_CmsUser = json[' virtual_CmsUser'] == null
           ? null
           : CoreUserModel.fromJson(
               json[' virtual_CmsUser'] as Map<String, dynamic>)
-      ..cmsUser = json['CmsUser'] == null
+      ..cmsUser = json['cmsUser'] == null
           ? null
-          : CoreUserModel.fromJson(json['CmsUser'] as Map<String, dynamic>)
+          : CoreUserModel.fromJson(json['cmsUser'] as Map<String, dynamic>)
       ..virtual_CmsUserGroup = json['virtual_CmsUserGroup'] == null
           ? null
           : CoreUserGroupModel.fromJson(
               json['virtual_CmsUserGroup'] as Map<String, dynamic>)
-      ..cmsUserGroup = json['CmsUserGroup'] == null
+      ..cmsUserGroup = json['cmsUserGroup'] == null
           ? null
           : CoreUserGroupModel.fromJson(
-              json['CmsUserGroup'] as Map<String, dynamic>);
+              json['cmsUserGroup'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$CoreSiteUserModelToJson(CoreSiteUserModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'ExpireDate': instance.expireDate,
-      'LinkSiteId': instance.linkSiteId,
-      'LinkUserId': instance.linkUserId,
-      'LinkUserGroupId': instance.linkUserGroupId,
+      'expireDate': instance.expireDate,
+      'linkSiteId': instance.linkSiteId,
+      'linkUserId': instance.linkUserId,
+      'linkUserGroupId': instance.linkUserGroupId,
       'virtual_CmsSite': instance.virtual_CmsSite,
-      'CmsSite': instance.cmsSite,
+      'cmsSite': instance.cmsSite,
       ' virtual_CmsUser': instance.virtual_CmsUser,
-      'CmsUser': instance.cmsUser,
+      'cmsUser': instance.cmsUser,
       'virtual_CmsUserGroup': instance.virtual_CmsUserGroup,
-      'CmsUserGroup': instance.cmsUserGroup,
+      'cmsUserGroup': instance.cmsUserGroup,
     };
 
 const _$EnumRecordStatusEnumMap = {

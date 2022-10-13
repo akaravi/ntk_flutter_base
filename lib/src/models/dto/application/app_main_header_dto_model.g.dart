@@ -9,41 +9,41 @@ part of 'app_main_header_dto_model.dart';
 AppMainHeaderDtoModel _$AppMainHeaderDtoModelFromJson(
         Map<String, dynamic> json) =>
     AppMainHeaderDtoModel()
-      ..deviceId = json['DeviceId'] as String?
-      ..deviceBrand = json['DeviceBrand'] as String?
-      ..notificationId = json['NotificationId'] as String?
-      ..deviceIP = json['DeviceIP'] as String?
-      ..locationLong = json['LocationLong'] as String?
-      ..locationLat = json['LocationLat'] as String?
-      ..country = json['Country'] as String?
+      ..deviceId = json['deviceId'] as String?
+      ..deviceBrand = json['deviceBrand'] as String?
+      ..notificationId = json['notificationId'] as String?
+      ..deviceIP = json['deviceIP'] as String?
+      ..locationLong = json['locationLong'] as String?
+      ..locationLat = json['locationLat'] as String?
+      ..country = json['country'] as String?
       ..deviceStatus =
-          $enumDecodeNullable(_$EnumDeviceStatusEnumMap, json['DeviceStatus'])
-      ..simCard = json['SimCard'] as String?
-      ..language = json['Language'] as String?
-      ..appSourceVer = json['AppSourceVer'] as String?
-      ..appBuildVer = json['AppBuildVer'] as int?
-      ..packageName = json['PackageName'] as String?
-      ..layout = json['Layout'] as String?
-      ..token = json['Token'] as String?;
+          $enumDecodeNullable(_$EnumDeviceStatusEnumMap, json['deviceStatus'])
+      ..simCard = json['simCard'] as String?
+      ..language = json['language'] as String?
+      ..appSourceVer = json['appSourceVer'] as String?
+      ..appBuildVer = json['appBuildVer'] as int?
+      ..packageName = json['packageName'] as String?
+      ..layout = json['layout'] as String?
+      ..token = json['token'] as String?;
 
 Map<String, dynamic> _$AppMainHeaderDtoModelToJson(
         AppMainHeaderDtoModel instance) =>
     <String, dynamic>{
-      'DeviceId': instance.deviceId,
-      'DeviceBrand': instance.deviceBrand,
-      'NotificationId': instance.notificationId,
-      'DeviceIP': instance.deviceIP,
-      'LocationLong': instance.locationLong,
-      'LocationLat': instance.locationLat,
-      'Country': instance.country,
-      'DeviceStatus': _$EnumDeviceStatusEnumMap[instance.deviceStatus],
-      'SimCard': instance.simCard,
-      'Language': instance.language,
-      'AppSourceVer': instance.appSourceVer,
-      'AppBuildVer': instance.appBuildVer,
-      'PackageName': instance.packageName,
-      'Layout': instance.layout,
-      'Token': instance.token,
+      'deviceId': instance.deviceId,
+      'deviceBrand': instance.deviceBrand,
+      'notificationId': instance.notificationId,
+      'deviceIP': instance.deviceIP,
+      'locationLong': instance.locationLong,
+      'locationLat': instance.locationLat,
+      'country': instance.country,
+      'deviceStatus': _$EnumDeviceStatusEnumMap[instance.deviceStatus],
+      'simCard': instance.simCard,
+      'language': instance.language,
+      'appSourceVer': instance.appSourceVer,
+      'appBuildVer': instance.appBuildVer,
+      'packageName': instance.packageName,
+      'layout': instance.layout,
+      'token': instance.token,
     };
 
 const _$EnumDeviceStatusEnumMap = {

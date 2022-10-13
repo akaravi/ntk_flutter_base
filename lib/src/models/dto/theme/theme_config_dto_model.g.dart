@@ -8,12 +8,12 @@ part of 'theme_config_dto_model.dart';
 
 ThemeConfigDtoModel _$ThemeConfigDtoModelFromJson(Map<String, dynamic> json) =>
     ThemeConfigDtoModel()
-      ..appForceUpdate = json['AppForceUpdate'] as String?
-      ..layoutTheme = json['LayoutTheme'] as String?;
+      ..appForceUpdate = json['appForceUpdate'] as String?
+      ..layoutTheme = json['layoutTheme'] as String?;
 
 Map<String, dynamic> _$ThemeConfigDtoModelToJson(
         ThemeConfigDtoModel instance) =>
     <String, dynamic>{
-      'AppForceUpdate': instance.appForceUpdate,
-      'LayoutTheme': instance.layoutTheme,
+      'appForceUpdate': instance.appForceUpdate,
+      'layoutTheme': instance.layoutTheme,
     };

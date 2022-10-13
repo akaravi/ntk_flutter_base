@@ -7,9 +7,9 @@ part of 'app_main_dto_model.dart';
 // **************************************************************************
 
 AppMainDtoModel _$AppMainDtoModelFromJson(Map<String, dynamic> json) =>
-    AppMainDtoModel()..requestObject = json['RequestObject'];
+    AppMainDtoModel()..requestObject = json['requestObject'];
 
 Map<String, dynamic> _$AppMainDtoModelToJson(AppMainDtoModel instance) =>
     <String, dynamic>{
-      'RequestObject': instance.requestObject,
+      'requestObject': instance.requestObject,
     };

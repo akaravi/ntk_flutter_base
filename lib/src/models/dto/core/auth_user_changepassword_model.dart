@@ -4,9 +4,9 @@ part 'auth_user_changepassword_model.g.dart';
 
 @JsonSerializable()
 class AuthUserChangePasswordModel {
-  @JsonKey(name: 'OldPassword')
+  @JsonKey(name: 'oldPassword')
   String? oldPassword;
-  @JsonKey(name: 'NewPassword')
+  @JsonKey(name: 'newPassword')
   String? newPassword;
 
   AuthUserChangePasswordModel();

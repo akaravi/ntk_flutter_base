@@ -9,12 +9,12 @@ part of 'shoppingcart_theme_dto_model.dart';
 ShoppingCartThemeDtoModel _$ShoppingCartThemeDtoModelFromJson(
         Map<String, dynamic> json) =>
     ShoppingCartThemeDtoModel()
-      ..bgColor = json['BgColor'] as String?
-      ..image = json['Image'] as String?;
+      ..bgColor = json['bgColor'] as String?
+      ..image = json['image'] as String?;
 
 Map<String, dynamic> _$ShoppingCartThemeDtoModelToJson(
         ShoppingCartThemeDtoModel instance) =>
     <String, dynamic>{
-      'BgColor': instance.bgColor,
-      'Image': instance.image,
+      'bgColor': instance.bgColor,
+      'image': instance.image,
     };

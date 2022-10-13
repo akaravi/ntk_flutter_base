@@ -9,35 +9,36 @@ part of 'application_theme_config_model.dart';
 ApplicationThemeConfigModel _$ApplicationThemeConfigModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationThemeConfigModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..titleML = json['TitleML'] as String?
-      ..titleResourceLanguage = json['TitleResourceLanguage'] as String?
-      ..typeId = json['TypeId'] as String?
-      ..linkMainImageId = json['LinkMainImageId'] as int?
-      ..linkSourceId = json['LinkSourceId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..typeId = json['typeId'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkSourceId = json['linkSourceId'] as int?
       ..virtual_Source = json[' virtual_Source'] == null
           ? null
           : ApplicationSourceModel.fromJson(
@@ -47,54 +48,54 @@ ApplicationThemeConfigModel _$ApplicationThemeConfigModelFromJson(
           : ApplicationSourceModel.fromJson(
               json['source'] as Map<String, dynamic>)
       ..themeConfigBuilderJsonValues =
-          json['ThemeConfigBuilderJsonValues'] as String?
+          json['themeConfigBuilderJsonValues'] as String?
       ..themeConfigRuntimeJsonValues =
-          json['ThemeConfigRuntimeJsonValues'] as String?
+          json['themeConfigRuntimeJsonValues'] as String?
       ..themeConfigLayoutJsonValues =
-          json['ThemeConfigLayoutJsonValues'] as String?
-      ..themeConfigJsonValues = json['ThemeConfigJsonValues'] as String?
-      ..themeConfigLayouts = (json['ThemeConfigLayouts'] as List<dynamic>?)
+          json['themeConfigLayoutJsonValues'] as String?
+      ..themeConfigJsonValues = json['themeConfigJsonValues'] as String?
+      ..themeConfigLayouts = (json['themeConfigLayouts'] as List<dynamic>?)
           ?.map(
               (e) => ThemeConfigLayoutModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..applications = (json['Applications'] as List<dynamic>?)
+      ..applications = (json['applications'] as List<dynamic>?)
           ?.map((e) => ApplicationAppModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..linkMainImageIdSrc = json['LinkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationThemeConfigModelToJson(
         ApplicationThemeConfigModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'TitleML': instance.titleML,
-      'TitleResourceLanguage': instance.titleResourceLanguage,
-      'TypeId': instance.typeId,
-      'LinkMainImageId': instance.linkMainImageId,
-      'LinkSourceId': instance.linkSourceId,
+      'linkSiteId': instance.linkSiteId,
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'typeId': instance.typeId,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkSourceId': instance.linkSourceId,
       ' virtual_Source': instance.virtual_Source,
       'source': instance.source,
-      'ThemeConfigBuilderJsonValues': instance.themeConfigBuilderJsonValues,
-      'ThemeConfigRuntimeJsonValues': instance.themeConfigRuntimeJsonValues,
-      'ThemeConfigLayoutJsonValues': instance.themeConfigLayoutJsonValues,
-      'ThemeConfigJsonValues': instance.themeConfigJsonValues,
-      'ThemeConfigLayouts': instance.themeConfigLayouts,
-      'Applications': instance.applications,
-      'LinkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'themeConfigBuilderJsonValues': instance.themeConfigBuilderJsonValues,
+      'themeConfigRuntimeJsonValues': instance.themeConfigRuntimeJsonValues,
+      'themeConfigLayoutJsonValues': instance.themeConfigLayoutJsonValues,
+      'themeConfigJsonValues': instance.themeConfigJsonValues,
+      'themeConfigLayouts': instance.themeConfigLayouts,
+      'applications': instance.applications,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

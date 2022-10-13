@@ -4,19 +4,19 @@ part 'linkmanagement_target_shortlink_get_responce_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementTargetShortLinkGetResponceModel {
-  @JsonKey(name: 'Key')
+  @JsonKey(name: 'key')
   String? key;
-  @JsonKey(name: 'FilesSrc')
+  @JsonKey(name: 'filesSrc')
   List<String>? filesSrc;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'UrlAddress')
+  @JsonKey(name: 'urlAddress')
   String? urlAddress;
-  @JsonKey(name: 'ShareExpireDate')
+  @JsonKey(name: 'shareExpireDate')
   String? shareExpireDate;
-  @JsonKey(name: 'ShortLinkUrl')
+  @JsonKey(name: 'shortLinkUrl')
   String? shortLinkUrl;
-  @JsonKey(name: 'ShortLinkQRCodeBase64')
+  @JsonKey(name: 'shortLinkQRCodeBase64')
   String? shortLinkQRCodeBase64;
 
   LinkManagementTargetShortLinkGetResponceModel();

@@ -4,11 +4,11 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'blog_content_model..dart';
 
-part 'blog_comment_model..g.dart';
+part 'blog_comment_model.g.dart';
 
 @JsonSerializable()
 class BlogCommentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
   @JsonKey(name: 'linkParentId')
   int? linkParentId;
@@ -17,15 +17,15 @@ class BlogCommentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'comment')
   String? comment;
   @JsonKey(name: 'registerDate')
-  String? registerDate;
-  @JsonKey(name: 'SumLikeClick')
+  DateTime? registerDate;
+  @JsonKey(name: 'sumLikeClick')
   int? sumLikeClick;
-  @JsonKey(name: 'SumDisLikeClick')
+  @JsonKey(name: 'sumDisLikeClick')
   int? sumDisLikeClick;
   @JsonKey(name: ' virtual_Content')
   BlogContentModel? virtual_Content;
 
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   BlogContentModel? content;
   BlogCommentModel();
   factory BlogCommentModel.fromJson(Map<String, dynamic> json) =>

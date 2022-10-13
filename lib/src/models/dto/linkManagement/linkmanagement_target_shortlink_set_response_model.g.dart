@@ -10,16 +10,16 @@ LinkManagementTargetShortLinkSetResponceModel
     _$LinkManagementTargetShortLinkSetResponceModelFromJson(
             Map<String, dynamic> json) =>
         LinkManagementTargetShortLinkSetResponceModel()
-          ..key = json['Key'] as String?
-          ..shareExpireDate = json['ShareExpireDate'] as String?
-          ..shortLinkUrl = json['ShortLinkUrl'] as String?
-          ..shortLinkQRCodeBase64 = json['ShortLinkQRCodeBase64'] as String?;
+          ..key = json['key'] as String?
+          ..shareExpireDate = json['shareExpireDate'] as String?
+          ..shortLinkUrl = json['shortLinkUrl'] as String?
+          ..shortLinkQRCodeBase64 = json['shortLinkQRCodeBase64'] as String?;
 
 Map<String, dynamic> _$LinkManagementTargetShortLinkSetResponceModelToJson(
         LinkManagementTargetShortLinkSetResponceModel instance) =>
     <String, dynamic>{
-      'Key': instance.key,
-      'ShareExpireDate': instance.shareExpireDate,
-      'ShortLinkUrl': instance.shortLinkUrl,
-      'ShortLinkQRCodeBase64': instance.shortLinkQRCodeBase64,
+      'key': instance.key,
+      'shareExpireDate': instance.shareExpireDate,
+      'shortLinkUrl': instance.shortLinkUrl,
+      'shortLinkQRCodeBase64': instance.shortLinkQRCodeBase64,
     };

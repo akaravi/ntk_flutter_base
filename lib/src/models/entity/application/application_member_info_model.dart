@@ -8,51 +8,51 @@ part 'application_member_info_model.g.dart';
 
 @JsonSerializable()
 class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkUserId')
+  @JsonKey(name: 'linkUserId')
   int? linkUserId;
-  @JsonKey(name: 'LinkMemberId')
+  @JsonKey(name: 'linkMemberId')
   int? linkMemberId;
-  @JsonKey(name: 'DeviceStatus')
+  @JsonKey(name: 'deviceStatus')
   EnumDeviceStatus? deviceStatus;
-  @JsonKey(name: 'DeviceId')
+  @JsonKey(name: 'deviceId')
   String? deviceId;
-  @JsonKey(name: 'DeviceBrand')
+  @JsonKey(name: 'deviceBrand')
   String? deviceBrand;
-  @JsonKey(name: 'SimCard')
+  @JsonKey(name: 'simCard')
   String? simCard;
-  @JsonKey(name: 'Country')
+  @JsonKey(name: 'country')
   String? country;
-  @JsonKey(name: 'Language')
+  @JsonKey(name: 'language')
   String? language;
-  @JsonKey(name: 'NotificationId')
+  @JsonKey(name: 'notificationId')
   String? notificationId;
-  @JsonKey(name: 'LinkApplicationId')
+  @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
-  @JsonKey(name: 'Application')
+  @JsonKey(name: 'application')
   ApplicationAppModel? application;
-  @JsonKey(name: 'AppBuildVer')
+  @JsonKey(name: 'appBuildVer')
   int? appBuildVer;
-  @JsonKey(name: 'AppSourceVer')
+  @JsonKey(name: 'appSourceVer')
   String? appSourceVer;
-  @JsonKey(name: 'DeviceIP')
+  @JsonKey(name: 'deviceIP')
   String? deviceIP;
-  // @JsonKey(name: 'LocationLat')
+  // @JsonKey(name: 'locationLat')
   // String? locationLat;
-  // @JsonKey(name: 'LocationLong')
+  // @JsonKey(name: 'locationLong')
   // String? locationLong;
-  @JsonKey(name: 'ScorePercent')
+  @JsonKey(name: 'scorePercent')
   int? scorePercent;
-  @JsonKey(name: 'ScoreComment')
+  @JsonKey(name: 'scoreComment')
   String? scoreComment;
-  @JsonKey(name: 'LinkLocationId')
+  @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
-  @JsonKey(name: 'Geolocationlatitude')
+  @JsonKey(name: 'geolocationlatitude')
   int? geolocationlatitude;
-  @JsonKey(name: 'Geolocationlongitude')
+  @JsonKey(name: 'geolocationlongitude')
   int? geolocationlongitude;
-  @JsonKey(name: 'LinkLocationIdTitle')
+  @JsonKey(name: 'linkLocationIdTitle')
   String? linkLocationIdTitle;
-  @JsonKey(name: 'LinkLocationIdParentTitle')
+  @JsonKey(name: 'linkLocationIdParentTitle')
   String? linkLocationIdParentTitle;
   ApplicationMemberInfoModel();
   factory ApplicationMemberInfoModel.fromJson(Map<String, dynamic> json) =>

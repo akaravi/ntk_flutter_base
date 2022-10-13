@@ -4,17 +4,17 @@ part 'token_device_model.g.dart';
 
 @JsonSerializable()
 class TokenDeviceModel {
-  @JsonKey(name: 'LinkSiteId')
+  @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
-  @JsonKey(name: 'LinkDeviceId')
+  @JsonKey(name: 'linkDeviceId')
   int? linkDeviceId;
-  @JsonKey(name: 'LinkApplicationId')
+  @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
-  @JsonKey(name: 'RememberOnDevice')
+  @JsonKey(name: 'rememberOnDevice')
   bool? rememberOnDevice;
-  @JsonKey(name: 'CurrentSiteDomainUrl')
+  @JsonKey(name: 'currentSiteDomainUrl')
   String? currentSiteDomainUrl;
-  @JsonKey(name: 'DeviceToken')
+  @JsonKey(name: 'deviceToken')
   String? deviceToken;
   @JsonKey(name: 'tokenExpireDate')
   String? tokenExpireDate;

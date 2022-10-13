@@ -6,26 +6,26 @@ part 'hypershop_content_model.g.dart';
 class HyperShopContentModel {
   static String CURRENCY_UNIT = "ریال";
 
-  @JsonKey(name: 'Code')
+  @JsonKey(name: 'code')
   String? code;
-  @JsonKey(name: 'Name')
+  @JsonKey(name: 'name')
   String? name;
-  @JsonKey(name: 'Category')
+  @JsonKey(name: 'category')
   String? category;
-  @JsonKey(name: 'CategoryCode')
+  @JsonKey(name: 'categoryCode')
   int? categoryCode;
-  @JsonKey(name: 'Status')
+  @JsonKey(name: 'status')
   bool? status;
 
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
-  @JsonKey(name: 'Memo')
+  @JsonKey(name: 'memo')
   String? memo;
-  @JsonKey(name: 'Price')
+  @JsonKey(name: 'price')
   double? price;
-  @JsonKey(name: 'Count')
+  @JsonKey(name: 'count')
   int? count;
-  @JsonKey(name: 'Unit')
+  @JsonKey(name: 'unit')
   String? unit;
   HyperShopContentModel();
   factory HyperShopContentModel.fromJson(Map<String, dynamic> json) => _$HyperShopContentModelFromJson(json);

@@ -9,77 +9,78 @@ part of 'core_token_micro_service_log_model.dart';
 CoreTokenMicroServiceLogModel _$CoreTokenMicroServiceLogModelFromJson(
         Map<String, dynamic> json) =>
     CoreTokenMicroServiceLogModel()
-      ..id = json['Id'] as String?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as String?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkUserId = json['LinkUserId'] as int?
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..deviceId = json['DeviceId'] as String?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkUserId = json['linkUserId'] as int?
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..deviceId = json['deviceId'] as String?
       ..deviceType =
-          $enumDecodeNullable(_$EnumMicroServiceTypeEnumMap, json['DeviceType'])
+          $enumDecodeNullable(_$EnumMicroServiceTypeEnumMap, json['deviceType'])
       ..userType = $enumDecodeNullable(
-          _$EnumManageUserAccessUserTypesEnumMap, json['UserType'])
+          _$EnumManageUserAccessUserTypesEnumMap, json['userType'])
       ..deviceConnectionType = $enumDecodeNullable(
-          _$EnumMicroServiceConnectionTypeEnumMap, json['DeviceConnectionType'])
+          _$EnumMicroServiceConnectionTypeEnumMap, json['deviceConnectionType'])
       ..deviceConnectionState = $enumDecodeNullable(
           _$EnumMicroServiceConnectionStatusEnumMap,
-          json['DeviceConnectionState'])
-      ..requestDate = json['RequestDate'] as String?
-      ..usedUsername = json['UsedUsername'] as String?
-      ..iP = json['IP'] as String?
-      ..description = json['Description'] as String?
-      ..action = json['Action'] as String?;
+          json['deviceConnectionState'])
+      ..requestDate = json['requestDate'] as String?
+      ..usedUsername = json['usedUsername'] as String?
+      ..iP = json['iP'] as String?
+      ..description = json['description'] as String?
+      ..action = json['action'] as String?;
 
 Map<String, dynamic> _$CoreTokenMicroServiceLogModelToJson(
         CoreTokenMicroServiceLogModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkUserId': instance.linkUserId,
-      'LinkSiteId': instance.linkSiteId,
-      'DeviceId': instance.deviceId,
-      'DeviceType': _$EnumMicroServiceTypeEnumMap[instance.deviceType],
-      'UserType': _$EnumManageUserAccessUserTypesEnumMap[instance.userType],
-      'DeviceConnectionType': _$EnumMicroServiceConnectionTypeEnumMap[
+      'linkUserId': instance.linkUserId,
+      'linkSiteId': instance.linkSiteId,
+      'deviceId': instance.deviceId,
+      'deviceType': _$EnumMicroServiceTypeEnumMap[instance.deviceType],
+      'userType': _$EnumManageUserAccessUserTypesEnumMap[instance.userType],
+      'deviceConnectionType': _$EnumMicroServiceConnectionTypeEnumMap[
           instance.deviceConnectionType],
-      'DeviceConnectionState': _$EnumMicroServiceConnectionStatusEnumMap[
+      'deviceConnectionState': _$EnumMicroServiceConnectionStatusEnumMap[
           instance.deviceConnectionState],
-      'RequestDate': instance.requestDate,
-      'UsedUsername': instance.usedUsername,
-      'IP': instance.iP,
-      'Description': instance.description,
-      'Action': instance.action,
+      'requestDate': instance.requestDate,
+      'usedUsername': instance.usedUsername,
+      'iP': instance.iP,
+      'description': instance.description,
+      'action': instance.action,
     };
 
 const _$EnumRecordStatusEnumMap = {

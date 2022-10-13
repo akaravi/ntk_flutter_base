@@ -4,13 +4,13 @@ part 'auth_user_forgetpassword_model.g.dart';
 
 @JsonSerializable()
 class AuthUserForgetPasswordModel {
-  @JsonKey(name: 'CaptchaKey')
+  @JsonKey(name: 'captchaKey')
   String? captchaKey;
-  @JsonKey(name: 'CaptchaText')
+  @JsonKey(name: 'captchaText')
   String? captchaText;
-  @JsonKey(name: 'Email')
+  @JsonKey(name: 'email')
   String? email;
-  @JsonKey(name: 'Mobile')
+  @JsonKey(name: 'mobile')
   String? mobile;
 
   AuthUserForgetPasswordModel();

@@ -8,23 +8,23 @@ part 'article_comment_model.g.dart';
 
 @JsonSerializable()
 class ArticleCommentModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkContentId')
+  @JsonKey(name: 'linkContentId')
   int? linkContentId;
-  @JsonKey(name: 'LinkParentId')
+  @JsonKey(name: 'linkParentId')
   int? linkParentId;
-  @JsonKey(name: 'Writer')
+  @JsonKey(name: 'writer')
   String? writer;
-  @JsonKey(name: 'Comment')
+  @JsonKey(name: 'comment')
   String? comment;
-  @JsonKey(name: 'RegisterDate')
+  @JsonKey(name: 'registerDate')
   DateTime? registerDate;
-  @JsonKey(name: 'SumLikeClick')
+  @JsonKey(name: 'sumLikeClick')
   int? sumLikeClick;
-  @JsonKey(name: 'SumDisLikeClick')
+  @JsonKey(name: 'sumDisLikeClick')
   int? sumDisLikeClick;
   @JsonKey(name: ' virtual_Content')
   ArticleContentModel? virtual_Content;
-  @JsonKey(name: 'Content')
+  @JsonKey(name: 'content')
   ArticleContentModel? content;
   ArticleCommentModel();
   factory ArticleCommentModel.fromJson(Map<String, dynamic> json) =>

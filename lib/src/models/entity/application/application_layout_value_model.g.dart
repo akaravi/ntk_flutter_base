@@ -9,74 +9,75 @@ part of 'application_layout_value_model.dart';
 ApplicationLayoutValueModel _$ApplicationLayoutValueModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationLayoutValueModel()
-      ..id = json['Id'] as int?
-      ..createdDate = json['CreatedDate'] == null
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
           ? null
-          : DateTime.parse(json['CreatedDate'] as String)
-      ..createdBy = json['CreatedBy'] as int?
-      ..updatedDate = json['UpdatedDate'] == null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
           ? null
-          : DateTime.parse(json['UpdatedDate'] as String)
-      ..updatedBy = json['UpdatedBy'] as int?
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
       ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['RecordStatus'])
-      ..recordStatusText = json['RecordStatusText'] as String?
-      ..antiInjectionGuid = json['AntiInjectionGuid'] as String?
-      ..antiInjectionDate = json['AntiInjectionDate'] == null
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionDate'] as String)
-      ..createAntiInjectionValue = json['CreateAntiInjectionValue'] as bool?
-      ..antiInjectionExpiredMinute = json['AntiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['AntiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['AntiInjectionExpireDate'] == null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
-          : DateTime.parse(json['AntiInjectionExpireDate'] as String)
-      ..linkSiteId = json['LinkSiteId'] as int?
-      ..linkApplicationId = json['LinkApplicationId'] as int?
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkApplicationId = json['linkApplicationId'] as int?
       ..virtual_Application = json['virtual_Application'] == null
           ? null
           : ApplicationAppModel.fromJson(
               json['virtual_Application'] as Map<String, dynamic>)
-      ..application = json['Application'] == null
+      ..application = json['application'] == null
           ? null
           : ApplicationAppModel.fromJson(
-              json['Application'] as Map<String, dynamic>)
-      ..linkLayoutId = json['LinkLayoutId'] as int?
+              json['application'] as Map<String, dynamic>)
+      ..linkLayoutId = json['linkLayoutId'] as int?
       ..virtual_Layout = json['virtual_Layout'] == null
           ? null
           : ApplicationLayoutModel.fromJson(
               json['virtual_Layout'] as Map<String, dynamic>)
-      ..layout = json['Layout'] == null
+      ..layout = json['layout'] == null
           ? null
           : ApplicationLayoutModel.fromJson(
-              json['Layout'] as Map<String, dynamic>)
-      ..jsonFormValues = json['JsonFormValues'] as String?;
+              json['layout'] as Map<String, dynamic>)
+      ..jsonFormValues = json['jsonFormValues'] as String?;
 
 Map<String, dynamic> _$ApplicationLayoutValueModelToJson(
         ApplicationLayoutValueModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'CreatedDate': instance.createdDate?.toIso8601String(),
-      'CreatedBy': instance.createdBy,
-      'UpdatedDate': instance.updatedDate?.toIso8601String(),
-      'UpdatedBy': instance.updatedBy,
-      'RecordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'RecordStatusText': instance.recordStatusText,
-      'AntiInjectionGuid': instance.antiInjectionGuid,
-      'AntiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'CreateAntiInjectionValue': instance.createAntiInjectionValue,
-      'AntiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'AntiInjectionToken': instance.antiInjectionToken,
-      'AntiInjectionExpireDate':
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'LinkSiteId': instance.linkSiteId,
-      'LinkApplicationId': instance.linkApplicationId,
+      'linkSiteId': instance.linkSiteId,
+      'linkApplicationId': instance.linkApplicationId,
       'virtual_Application': instance.virtual_Application,
-      'Application': instance.application,
-      'LinkLayoutId': instance.linkLayoutId,
+      'application': instance.application,
+      'linkLayoutId': instance.linkLayoutId,
       'virtual_Layout': instance.virtual_Layout,
-      'Layout': instance.layout,
-      'JsonFormValues': instance.jsonFormValues,
+      'layout': instance.layout,
+      'jsonFormValues': instance.jsonFormValues,
     };
 
 const _$EnumRecordStatusEnumMap = {

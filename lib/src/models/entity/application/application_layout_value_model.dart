@@ -8,19 +8,19 @@ part 'application_layout_value_model.g.dart';
 
 @JsonSerializable()
 class ApplicationLayoutValueModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkApplicationId')
+  @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
   @JsonKey(name: 'virtual_Application')
   ApplicationAppModel? virtual_Application;
-  @JsonKey(name: 'Application')
+  @JsonKey(name: 'application')
   ApplicationAppModel? application;
-  @JsonKey(name: 'LinkLayoutId')
+  @JsonKey(name: 'linkLayoutId')
   int? linkLayoutId;
   @JsonKey(name: 'virtual_Layout')
   ApplicationLayoutModel? virtual_Layout;
-  @JsonKey(name: 'Layout')
+  @JsonKey(name: 'layout')
   ApplicationLayoutModel? layout;
-  @JsonKey(name: 'JsonFormValues')
+  @JsonKey(name: 'jsonFormValues')
   String? jsonFormValues;
   ApplicationLayoutValueModel();
   factory ApplicationLayoutValueModel.fromJson(Map<String, dynamic> json) =>

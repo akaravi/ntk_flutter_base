@@ -6,15 +6,15 @@ part 'estate_property_detail_value_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyDetailValueModel {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   String? id;
-  @JsonKey(name: 'LinkPropertyDetailId')
+  @JsonKey(name: 'linkPropertyDetailId')
   String? linkPropertyDetailId;
-  @JsonKey(name: 'PropertyDetail')
+  @JsonKey(name: 'propertyDetail')
   EstatePropertyDetailModel? propertyDetail;
-  @JsonKey(name: 'Value')
+  @JsonKey(name: 'value')
   String? value;
-  @JsonKey(name: 'LinkHistoryId')
+  @JsonKey(name: 'linkHistoryId')
   String? linkHistoryId;
   EstatePropertyDetailValueModel();
   factory EstatePropertyDetailValueModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailValueModelFromJson(json);
