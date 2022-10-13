@@ -6,9 +6,8 @@ part of 'error_exception_result_base.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ErrorExceptionResultBase _$ErrorExceptionResultBaseFromJson(
-        Map<String, dynamic> json) =>
-    ErrorExceptionResultBase(
+ErrorExceptionBase _$ErrorExceptionBaseFromJson(Map<String, dynamic> json) =>
+    ErrorExceptionBase(
       json['isSuccess'] as bool,
     )
       ..status = json['status'] as int
@@ -19,8 +18,7 @@ ErrorExceptionResultBase _$ErrorExceptionResultBaseFromJson(
             MapEntry(k, (e as List<dynamic>).map((e) => e as String).toList()),
       );
 
-Map<String, dynamic> _$ErrorExceptionResultBaseToJson(
-        ErrorExceptionResultBase instance) =>
+Map<String, dynamic> _$ErrorExceptionBaseToJson(ErrorExceptionBase instance) =>
     <String, dynamic>{
       'status': instance.status,
       'isSuccess': instance.isSuccess,

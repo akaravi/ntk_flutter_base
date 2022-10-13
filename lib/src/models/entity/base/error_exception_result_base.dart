@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'error_exception_result_base.g.dart';
 
 @JsonSerializable()
-class ErrorExceptionResultBase {
+class ErrorExceptionBase {
   @JsonKey(name: "status")
   int status = 0;
   @JsonKey(name: "isSuccess")
@@ -15,8 +15,8 @@ class ErrorExceptionResultBase {
   @JsonKey(name: "irrors")
   Map<String, List<String>>? errors;
 
-  ErrorExceptionResultBase(this.isSuccess);
+  ErrorExceptionBase(this.isSuccess);
 
-  factory ErrorExceptionResultBase.fromJson(Map<String, dynamic> json) =>
-      _$ErrorExceptionResultBaseFromJson(json);
+  factory ErrorExceptionBase.fromJson(Map<String, dynamic> json) =>
+      _$ErrorExceptionBaseFromJson(json);
 }

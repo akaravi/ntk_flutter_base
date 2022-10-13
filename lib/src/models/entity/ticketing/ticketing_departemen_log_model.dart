@@ -8,7 +8,7 @@ import 'ticketing_departemen_operator_model.dart';
 import 'ticketing_faq_model.dart';
 import 'ticketing_task_model.dart';
 
-part 'ticketing_departemen_log_model,g.dart';
+part 'ticketing_departemen_log_model.g.dart';
 
 
 @JsonSerializable()
