@@ -6,11 +6,11 @@ part of 'error_exception_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ErrorExceptionResult<TEntity> _$ErrorExceptionResultFromJson<TEntity>(
+ErrorException<TEntity> _$ErrorExceptionFromJson<TEntity>(
   Map<String, dynamic> json,
   TEntity Function(Object? json) fromJsonTEntity,
 ) =>
-    ErrorExceptionResult<TEntity>(
+    ErrorException<TEntity>(
       json['isSuccess'] as bool,
     )
       ..status = json['status'] as int
@@ -29,8 +29,8 @@ ErrorExceptionResult<TEntity> _$ErrorExceptionResultFromJson<TEntity>(
           ? null
           : AccessModel.fromJson(json['access'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$ErrorExceptionResultToJson<TEntity>(
-  ErrorExceptionResult<TEntity> instance,
+Map<String, dynamic> _$ErrorExceptionToJson<TEntity>(
+  ErrorException<TEntity> instance,
   Object? Function(TEntity value) toJsonTEntity,
 ) =>
     <String, dynamic>{

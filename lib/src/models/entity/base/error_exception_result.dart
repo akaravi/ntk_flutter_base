@@ -6,7 +6,7 @@ import 'error_exception_result_base.dart';
 part 'error_exception_result.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
-class ErrorExceptionResult<TEntity> extends ErrorExceptionResultBase {
+class ErrorException<TEntity> extends ErrorExceptionBase {
   @JsonKey(name: 'listItems')
   List<TEntity>? listItems;
   @JsonKey(name: 'item')
@@ -18,12 +18,12 @@ class ErrorExceptionResult<TEntity> extends ErrorExceptionResultBase {
   @JsonKey(name: "access")
   AccessModel? access;
 
-  ErrorExceptionResult(bool isSuccess) : super(isSuccess);
+  ErrorException(bool isSuccess) : super(isSuccess);
 
-  factory   ErrorExceptionResult.fromJson(
+  factory   ErrorException.fromJson(
       Map<String, dynamic> json,
       TEntity Function(Object? json) fromJsonTEntity,
-      ) => _$ErrorExceptionResultFromJson(json, fromJsonTEntity);
+      ) => _$ErrorExceptionFromJson(json, fromJsonTEntity);
 
       // factory ErrorException.fromJson(
       //     Map<String, dynamic> map, String Function(dynamic json) param1) =>
