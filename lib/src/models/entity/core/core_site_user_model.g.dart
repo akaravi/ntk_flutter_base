@@ -31,7 +31,9 @@ CoreSiteUserModel _$CoreSiteUserModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..expireDate = json['expireDate'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..linkUserId = json['linkUserId'] as int?
       ..linkUserGroupId = json['linkUserGroupId'] as int?
@@ -74,7 +76,7 @@ Map<String, dynamic> _$CoreSiteUserModelToJson(CoreSiteUserModel instance) =>
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'expireDate': instance.expireDate,
+      'expireDate': instance.expireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'linkUserId': instance.linkUserId,
       'linkUserGroupId': instance.linkUserGroupId,

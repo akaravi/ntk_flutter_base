@@ -1,10 +1,11 @@
+import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:base/src/models/entity/enums/enum_menu_place_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'core_cpmain_menu_model.g.dart';
 
 @JsonSerializable()
-class CoreCpMainMenuModel {
+class CoreCpMainMenuModel extends BaseEntity<int> {
   @JsonKey(name: 'title')
   String? title;
   @JsonKey(name: 'titleML')
@@ -13,14 +14,12 @@ class CoreCpMainMenuModel {
   String? titleResourceLanguage;
   @JsonKey(name: 'color')
   String? color;
-  @JsonKey(name: 'titleEn')
-  String? titleEn;
   @JsonKey(name: 'icon')
   String? icon;
-  @JsonKey(name: 'addressLink')
-  String? addressLink;
   @JsonKey(name: 'routeAddressLink')
   String? routeAddressLink;
+  @JsonKey(name: 'routeAddressBlankPage')
+  bool? routeAddressBlankPage;
   @JsonKey(name: 'linkParentId')
   int? linkParentId;
   @JsonKey(name: 'linkModuleId')

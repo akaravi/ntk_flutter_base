@@ -20,6 +20,8 @@ class CoreSiteDomainAliasModel extends BaseEntity<int> {
   int? linkCmsSiteId;
   @JsonKey(name: 'virtual_CmsSite')
   CoreSiteModel? virtual_CmsSite;
+  @JsonKey(name: 'configNeshanMapApiKey')
+  String? configNeshanMapApiKey;
   CoreSiteDomainAliasModel();
   factory CoreSiteDomainAliasModel.fromJson(Map<String, dynamic> json) =>
       _$CoreSiteDomainAliasModelFromJson(json);

@@ -47,11 +47,7 @@ BlogContentCategoryModel _$BlogContentCategoryModelFromJson(
           ? null
           : BlogCategoryModel.fromJson(json['category'] as Map<String, dynamic>)
       ..linkCategoryId = json['linkCategoryId'] as int?
-      ..linkContentId = json['linkContentId'] as int?
-      ..contentCategores = (json['contentCategores'] as List<dynamic>?)
-          ?.map((e) =>
-              BlogContentCategoryModel.fromJson(e as Map<String, dynamic>))
-          .toList();
+      ..linkContentId = json['linkContentId'] as int?;
 
 Map<String, dynamic> _$BlogContentCategoryModelToJson(
         BlogContentCategoryModel instance) =>
@@ -82,7 +78,6 @@ Map<String, dynamic> _$BlogContentCategoryModelToJson(
       'category': instance.category,
       'linkCategoryId': instance.linkCategoryId,
       'linkContentId': instance.linkContentId,
-      'contentCategores': instance.contentCategores,
     };
 
 const _$EnumRecordStatusEnumMap = {

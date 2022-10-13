@@ -11,7 +11,7 @@ class CoreDeviceModel extends BaseEntity<int> {
   @JsonKey(name: 'securityKey')
   String? securityKey;
   @JsonKey(name: 'expireDate')
-  String? expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'oSType')

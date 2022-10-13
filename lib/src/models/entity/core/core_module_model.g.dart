@@ -10,26 +10,25 @@ CoreModuleModel _$CoreModuleModelFromJson(Map<String, dynamic> json) =>
     CoreModuleModel()
       ..title = json['title'] as String?
       ..titleML = json['titleML'] as String?
-      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage']
       ..className = json['className'] as String?
+      ..needSiteCreditAccount = json['needSiteCreditAccount'] as bool?
+      ..needSiteUserCreditAccount = json['needSiteUserCreditAccount'] as bool?
       ..description = json['description'] as String?
       ..administratorIsActivate = json['administratorIsActivate'] as bool?
-      ..moduleConfigAdminMainJson = json['moduleConfigAdminMainJson'] as String?
-      ..moduleConfigAdminMainJsonForm =
-          json['moduleConfigAdminMainJsonForm'] as String?
+      ..moduleConfigAdminMainJson = json['moduleConfigAdminMainJson']
       ..moduleConfigSiteAccessDefaultJson =
-          json['moduleConfigSiteAccessDefaultJson'] as String?
-      ..moduleConfigSiteAccessJsonFrom =
-          json['moduleConfigSiteAccessJsonFrom'] as String?
-      ..moduleConfigSiteDefaultJson =
-          json['moduleConfigSiteDefaultJson'] as String?
-      ..moduleConfigSiteJsonForm = json['moduleConfigSiteJsonForm'] as String?
-      ..moduleSiteStorageValuesJsonForm =
-          json['moduleSiteStorageValuesJsonForm'] as String?
-      ..moduleSites = json['moduleSites'] as String?
-      ..cmsCpMainMenu = json['cmsCpMainMenu'] as String?
-      ..cmsModuleProcess = json['cmsModuleProcess'] as String?
-      ..cmsSiteCategoryCmsModule = json['cmsSiteCategoryCmsModule'] as String?;
+          json['moduleConfigSiteAccessDefaultJson']
+      ..moduleConfigSiteAccessJsonFrom = json['moduleConfigSiteAccessJsonFrom']
+      ..moduleConfigSiteDefaultJson = json['moduleConfigSiteDefaultJson']
+      ..moduleSites = json['moduleSites']
+      ..cmsCpMainMenu = json['cmsCpMainMenu']
+      ..cmsModuleProcess = json['cmsModuleProcess']
+      ..cmsSiteCategoryCmsModule = json['cmsSiteCategoryCmsModule']
+      ..ruleHtmlBody = json['ruleHtmlBody'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..showInOrder = json['showInOrder'] as int?;
 
 Map<String, dynamic> _$CoreModuleModelToJson(CoreModuleModel instance) =>
     <String, dynamic>{
@@ -37,19 +36,21 @@ Map<String, dynamic> _$CoreModuleModelToJson(CoreModuleModel instance) =>
       'titleML': instance.titleML,
       'titleResourceLanguage': instance.titleResourceLanguage,
       'className': instance.className,
+      'needSiteCreditAccount': instance.needSiteCreditAccount,
+      'needSiteUserCreditAccount': instance.needSiteUserCreditAccount,
       'description': instance.description,
       'administratorIsActivate': instance.administratorIsActivate,
       'moduleConfigAdminMainJson': instance.moduleConfigAdminMainJson,
-      'moduleConfigAdminMainJsonForm': instance.moduleConfigAdminMainJsonForm,
       'moduleConfigSiteAccessDefaultJson':
           instance.moduleConfigSiteAccessDefaultJson,
       'moduleConfigSiteAccessJsonFrom': instance.moduleConfigSiteAccessJsonFrom,
       'moduleConfigSiteDefaultJson': instance.moduleConfigSiteDefaultJson,
-      'moduleConfigSiteJsonForm': instance.moduleConfigSiteJsonForm,
-      'moduleSiteStorageValuesJsonForm':
-          instance.moduleSiteStorageValuesJsonForm,
       'moduleSites': instance.moduleSites,
       'cmsCpMainMenu': instance.cmsCpMainMenu,
       'cmsModuleProcess': instance.cmsModuleProcess,
       'cmsSiteCategoryCmsModule': instance.cmsSiteCategoryCmsModule,
+      'ruleHtmlBody': instance.ruleHtmlBody,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'showInOrder': instance.showInOrder,
     };

@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_site_category_cms_module_model.dart';
+part of 'core_currency_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoreSiteCategoryCmsModuleModel _$CoreSiteCategoryCmsModuleModelFromJson(
-        Map<String, dynamic> json) =>
-    CoreSiteCategoryCmsModuleModel()
+CoreCurrencyModel _$CoreCurrencyModelFromJson(Map<String, dynamic> json) =>
+    CoreCurrencyModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,27 +31,18 @@ CoreSiteCategoryCmsModuleModel _$CoreSiteCategoryCmsModuleModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkCmsSiteCategoryId = json['linkCmsSiteCategoryId'] as int?
-      ..virtual_CmsSiteCategory = json['virtual_CmsSiteCategory'] == null
-          ? null
-          : CoreSiteCategoryModel.fromJson(
-              json['virtual_CmsSiteCategory'] as Map<String, dynamic>)
-      ..vmsSiteCategory = json['vmsSiteCategory'] == null
-          ? null
-          : CoreSiteCategoryModel.fromJson(
-              json['vmsSiteCategory'] as Map<String, dynamic>)
-      ..linkCmsModuleId = json['linkCmsModuleId'] as int?
-      ..virtual_CmsModule = json['virtual_CmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(
-              json['virtual_CmsModule'] as Map<String, dynamic>)
-      ..cmsModule = json['cmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(json['cmsModule'] as Map<String, dynamic>)
-      ..configValuesJson = json['configValuesJson'] as String?;
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..symbol = json['symbol'] as String?
+      ..isDefault = json['isDefault'] as bool?
+      ..exchangeBuyRatio = json['exchangeBuyRatio'] as int?
+      ..exchangeSaleRatio = json['exchangeSaleRatio'] as int?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..masterCurrency = json['masterCurrency'] as String?;
 
-Map<String, dynamic> _$CoreSiteCategoryCmsModuleModelToJson(
-        CoreSiteCategoryCmsModuleModel instance) =>
+Map<String, dynamic> _$CoreCurrencyModelToJson(CoreCurrencyModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -68,13 +58,16 @@ Map<String, dynamic> _$CoreSiteCategoryCmsModuleModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkCmsSiteCategoryId': instance.linkCmsSiteCategoryId,
-      'virtual_CmsSiteCategory': instance.virtual_CmsSiteCategory,
-      'vmsSiteCategory': instance.vmsSiteCategory,
-      'linkCmsModuleId': instance.linkCmsModuleId,
-      'virtual_CmsModule': instance.virtual_CmsModule,
-      'cmsModule': instance.cmsModule,
-      'configValuesJson': instance.configValuesJson,
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'symbol': instance.symbol,
+      'isDefault': instance.isDefault,
+      'exchangeBuyRatio': instance.exchangeBuyRatio,
+      'exchangeSaleRatio': instance.exchangeSaleRatio,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'masterCurrency': instance.masterCurrency,
     };
 
 const _$EnumRecordStatusEnumMap = {

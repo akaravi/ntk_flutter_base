@@ -14,8 +14,12 @@ class CoreSiteCategoryModel extends BaseEntity<int> {
   String? title;
   @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
+  @JsonKey(name: 'domains')
+  String? domains;
   @JsonKey(name: 'description')
   String? description;
+  @JsonKey(name: 'ruleHtmlBody')
+  String? ruleHtmlBody;
   @JsonKey(name: 'sites')
   List<CoreSiteModel>? sites;
 

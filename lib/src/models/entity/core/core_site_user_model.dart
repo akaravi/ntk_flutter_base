@@ -11,7 +11,7 @@ part 'core_site_user_model.g.dart';
 @JsonSerializable()
 class CoreSiteUserModel extends BaseEntity<int> {
   @JsonKey(name: 'expireDate')
-  String? expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
   @JsonKey(name: 'linkUserId')

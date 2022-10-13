@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_site_category_cms_module_model.dart';
+part of 'core_module_sale_invoice_detail_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoreSiteCategoryCmsModuleModel _$CoreSiteCategoryCmsModuleModelFromJson(
+CoreModuleSaleInvoiceDetailModel _$CoreModuleSaleInvoiceDetailModelFromJson(
         Map<String, dynamic> json) =>
-    CoreSiteCategoryCmsModuleModel()
+    CoreModuleSaleInvoiceDetailModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,27 +32,28 @@ CoreSiteCategoryCmsModuleModel _$CoreSiteCategoryCmsModuleModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkCmsSiteCategoryId = json['linkCmsSiteCategoryId'] as int?
-      ..virtual_CmsSiteCategory = json['virtual_CmsSiteCategory'] == null
+      ..fromDate = json['fromDate'] == null
           ? null
-          : CoreSiteCategoryModel.fromJson(
-              json['virtual_CmsSiteCategory'] as Map<String, dynamic>)
-      ..vmsSiteCategory = json['vmsSiteCategory'] == null
+          : DateTime.parse(json['fromDate'] as String)
+      ..expireDate = json['expireDate'] == null
           ? null
-          : CoreSiteCategoryModel.fromJson(
-              json['vmsSiteCategory'] as Map<String, dynamic>)
-      ..linkCmsModuleId = json['linkCmsModuleId'] as int?
-      ..virtual_CmsModule = json['virtual_CmsModule'] == null
+          : DateTime.parse(json['expireDate'] as String)
+      ..salePrice = json['salePrice'] as int?
+      ..enumCmsModuleSaleItemType = json['enumCmsModuleSaleItemType'] as int?
+      ..linkModuleId = json['linkModuleId'] as int?
+      ..virtual_Module = json['virtual_Module'] == null
           ? null
           : CoreModuleModel.fromJson(
-              json['virtual_CmsModule'] as Map<String, dynamic>)
-      ..cmsModule = json['cmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(json['cmsModule'] as Map<String, dynamic>)
-      ..configValuesJson = json['configValuesJson'] as String?;
+              json['virtual_Module'] as Map<String, dynamic>)
+      ..description = json['description'] as String?
+      ..errorMessage = json['errorMessage'] as String?
+      ..hasWarning = json['hasWarning'] as bool?
+      ..hasError = json['hasError'] as bool?
+      ..linkModuleSaleInvoiceId = json['linkModuleSaleInvoiceId'] as int?
+      ..virtual_ModuleSaleInvoice = json['virtual_ModuleSaleInvoice'];
 
-Map<String, dynamic> _$CoreSiteCategoryCmsModuleModelToJson(
-        CoreSiteCategoryCmsModuleModel instance) =>
+Map<String, dynamic> _$CoreModuleSaleInvoiceDetailModelToJson(
+        CoreModuleSaleInvoiceDetailModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -68,13 +69,18 @@ Map<String, dynamic> _$CoreSiteCategoryCmsModuleModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkCmsSiteCategoryId': instance.linkCmsSiteCategoryId,
-      'virtual_CmsSiteCategory': instance.virtual_CmsSiteCategory,
-      'vmsSiteCategory': instance.vmsSiteCategory,
-      'linkCmsModuleId': instance.linkCmsModuleId,
-      'virtual_CmsModule': instance.virtual_CmsModule,
-      'cmsModule': instance.cmsModule,
-      'configValuesJson': instance.configValuesJson,
+      'fromDate': instance.fromDate?.toIso8601String(),
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'salePrice': instance.salePrice,
+      'enumCmsModuleSaleItemType': instance.enumCmsModuleSaleItemType,
+      'linkModuleId': instance.linkModuleId,
+      'virtual_Module': instance.virtual_Module,
+      'description': instance.description,
+      'errorMessage': instance.errorMessage,
+      'hasWarning': instance.hasWarning,
+      'hasError': instance.hasError,
+      'linkModuleSaleInvoiceId': instance.linkModuleSaleInvoiceId,
+      'virtual_ModuleSaleInvoice': instance.virtual_ModuleSaleInvoice,
     };
 
 const _$EnumRecordStatusEnumMap = {

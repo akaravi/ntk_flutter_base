@@ -42,7 +42,8 @@ CoreSiteDomainAliasModel _$CoreSiteDomainAliasModelFromJson(
       ..virtual_CmsSite = json['virtual_CmsSite'] == null
           ? null
           : CoreSiteModel.fromJson(
-              json['virtual_CmsSite'] as Map<String, dynamic>);
+              json['virtual_CmsSite'] as Map<String, dynamic>)
+      ..configNeshanMapApiKey = json['configNeshanMapApiKey'] as String?;
 
 Map<String, dynamic> _$CoreSiteDomainAliasModelToJson(
         CoreSiteDomainAliasModel instance) =>
@@ -67,6 +68,7 @@ Map<String, dynamic> _$CoreSiteDomainAliasModelToJson(
       'redirect': instance.redirect,
       'linkCmsSiteId': instance.linkCmsSiteId,
       'virtual_CmsSite': instance.virtual_CmsSite,
+      'configNeshanMapApiKey': instance.configNeshanMapApiKey,
     };
 
 const _$EnumRecordStatusEnumMap = {

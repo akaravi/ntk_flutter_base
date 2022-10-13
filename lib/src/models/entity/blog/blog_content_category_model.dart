@@ -17,8 +17,6 @@ class BlogContentCategoryModel extends BaseEntityCategory<int> {
   int? linkCategoryId;
   @JsonKey(name: 'linkContentId')
   int? linkContentId;
-  @JsonKey(name: 'contentCategores')
-  List<BlogContentCategoryModel>? contentCategores;
   BlogContentCategoryModel();
   factory BlogContentCategoryModel.fromJson(Map<String, dynamic> json) =>
       _$BlogContentCategoryModelFromJson(json);

@@ -9,35 +9,41 @@ class CoreModuleModel {
   @JsonKey(name: 'titleML')
   String? titleML;
   @JsonKey(name: 'titleResourceLanguage')
-  String? titleResourceLanguage;
+  Object? titleResourceLanguage;
   @JsonKey(name: 'className')
   String? className;
+  @JsonKey(name: 'needSiteCreditAccount')
+  bool? needSiteCreditAccount;
+  @JsonKey(name: 'needSiteUserCreditAccount')
+  bool? needSiteUserCreditAccount;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'administratorIsActivate')
   bool? administratorIsActivate;
   @JsonKey(name: 'moduleConfigAdminMainJson')
-  String? moduleConfigAdminMainJson;
-  @JsonKey(name: 'moduleConfigAdminMainJsonForm')
-  String? moduleConfigAdminMainJsonForm;
+  Object? moduleConfigAdminMainJson;
   @JsonKey(name: 'moduleConfigSiteAccessDefaultJson')
-  String? moduleConfigSiteAccessDefaultJson;
+  Object? moduleConfigSiteAccessDefaultJson;
   @JsonKey(name: 'moduleConfigSiteAccessJsonFrom')
-  String? moduleConfigSiteAccessJsonFrom;
+  Object? moduleConfigSiteAccessJsonFrom;
   @JsonKey(name: 'moduleConfigSiteDefaultJson')
-  String? moduleConfigSiteDefaultJson;
-  @JsonKey(name: 'moduleConfigSiteJsonForm')
-  String? moduleConfigSiteJsonForm;
-  @JsonKey(name: 'moduleSiteStorageValuesJsonForm')
-  String? moduleSiteStorageValuesJsonForm;
+  Object? moduleConfigSiteDefaultJson;
   @JsonKey(name: 'moduleSites')
-  String? moduleSites;
+  Object? moduleSites;
   @JsonKey(name: 'cmsCpMainMenu')
-  String? cmsCpMainMenu;
+  Object? cmsCpMainMenu;
   @JsonKey(name: 'cmsModuleProcess')
-  String? cmsModuleProcess;
+  Object? cmsModuleProcess;
   @JsonKey(name: 'cmsSiteCategoryCmsModule')
-  String? cmsSiteCategoryCmsModule;
+  Object? cmsSiteCategoryCmsModule;
+  @JsonKey(name: 'ruleHtmlBody')
+  String? ruleHtmlBody;
+  @JsonKey(name: 'linkMainImageId')
+  int? linkMainImageId;
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
+  @JsonKey(name: 'showInOrder')
+  int? showInOrder;
 
   CoreModuleModel();
   factory CoreModuleModel.fromJson(Map<String, dynamic> json) =>

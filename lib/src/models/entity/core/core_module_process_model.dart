@@ -1,3 +1,4 @@
+import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'core_module_model.dart';
@@ -6,7 +7,7 @@ import 'core_module_process_customize_model.dart';
 part 'core_module_process_model.g.dart';
 
 @JsonSerializable()
-class CoreModuleProcessModel {
+class CoreModuleProcessModel extends BaseEntity<int> {
   @JsonKey(name: 'titleML')
   String? titleML;
   @JsonKey(name: 'title')

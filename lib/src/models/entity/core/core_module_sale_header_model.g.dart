@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_site_category_cms_module_model.dart';
+part of 'core_module_sale_header_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoreSiteCategoryCmsModuleModel _$CoreSiteCategoryCmsModuleModelFromJson(
+CoreModuleSaleHeaderModel _$CoreModuleSaleHeaderModelFromJson(
         Map<String, dynamic> json) =>
-    CoreSiteCategoryCmsModuleModel()
+    CoreModuleSaleHeaderModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,27 +32,32 @@ CoreSiteCategoryCmsModuleModel _$CoreSiteCategoryCmsModuleModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkCmsSiteCategoryId = json['linkCmsSiteCategoryId'] as int?
-      ..virtual_CmsSiteCategory = json['virtual_CmsSiteCategory'] == null
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..fromDate = json['fromDate'] == null
           ? null
-          : CoreSiteCategoryModel.fromJson(
-              json['virtual_CmsSiteCategory'] as Map<String, dynamic>)
-      ..vmsSiteCategory = json['vmsSiteCategory'] == null
+          : DateTime.parse(json['fromDate'] as String)
+      ..expireDate = json['expireDate'] == null
           ? null
-          : CoreSiteCategoryModel.fromJson(
-              json['vmsSiteCategory'] as Map<String, dynamic>)
-      ..linkCmsModuleId = json['linkCmsModuleId'] as int?
-      ..virtual_CmsModule = json['virtual_CmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(
-              json['virtual_CmsModule'] as Map<String, dynamic>)
-      ..cmsModule = json['cmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(json['cmsModule'] as Map<String, dynamic>)
-      ..configValuesJson = json['configValuesJson'] as String?;
+          : DateTime.parse(json['expireDate'] as String)
+      ..salePrice = json['salePrice'] as int?
+      ..allowReuseDay = json['allowReuseDay'] as int?
+      ..hasDemo = json['hasDemo'] as bool?
+      ..linkModuleSaleHeaderGroupId =
+          json['linkModuleSaleHeaderGroupId'] as int?
+      ..virtual_CmsModuleSaleHeaderGroup =
+          json['virtual_CmsModuleSaleHeaderGroup'] == null
+              ? null
+              : CoreModuleSaleHeaderGroupModel.fromJson(
+                  json['virtual_CmsModuleSaleHeaderGroup']
+                      as Map<String, dynamic>)
+      ..items = json['items'] as List<dynamic>?
+      ..serials = json['serials'] as List<dynamic>?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
-Map<String, dynamic> _$CoreSiteCategoryCmsModuleModelToJson(
-        CoreSiteCategoryCmsModuleModel instance) =>
+Map<String, dynamic> _$CoreModuleSaleHeaderModelToJson(
+        CoreModuleSaleHeaderModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -68,13 +73,20 @@ Map<String, dynamic> _$CoreSiteCategoryCmsModuleModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkCmsSiteCategoryId': instance.linkCmsSiteCategoryId,
-      'virtual_CmsSiteCategory': instance.virtual_CmsSiteCategory,
-      'vmsSiteCategory': instance.vmsSiteCategory,
-      'linkCmsModuleId': instance.linkCmsModuleId,
-      'virtual_CmsModule': instance.virtual_CmsModule,
-      'cmsModule': instance.cmsModule,
-      'configValuesJson': instance.configValuesJson,
+      'title': instance.title,
+      'description': instance.description,
+      'fromDate': instance.fromDate?.toIso8601String(),
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'salePrice': instance.salePrice,
+      'allowReuseDay': instance.allowReuseDay,
+      'hasDemo': instance.hasDemo,
+      'linkModuleSaleHeaderGroupId': instance.linkModuleSaleHeaderGroupId,
+      'virtual_CmsModuleSaleHeaderGroup':
+          instance.virtual_CmsModuleSaleHeaderGroup,
+      'items': instance.items,
+      'serials': instance.serials,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

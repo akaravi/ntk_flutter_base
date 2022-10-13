@@ -31,10 +31,19 @@ CoreGuideModel _$CoreGuideModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..title = json['title'] as String?
+      ..key = json['key'] as String?
+      ..titleFa = json['titleFa'] as String?
+      ..descriptionFa = json['descriptionFa'] as String?
       ..bodyFa = json['bodyFa'] as String?
+      ..titleEn = json['titleEn'] as String?
+      ..descriptionEn = json['descriptionEn'] as String?
       ..bodyEn = json['bodyEn'] as String?
+      ..titleAr = json['titleAr'] as String?
+      ..descriptionAr = json['descriptionAr'] as String?
       ..bodyAr = json['bodyAr'] as String?
+      ..titleDe = json['titleDe'] as String?
+      ..descriptionDe = json['descriptionDe'] as String?
+      ..bodyDe = json['bodyDe'] as String?
       ..linkFileIds = json['linkFileIds'] as String?
       ..linkParentId = json['linkParentId'] as int?
       ..virtual_Parent = json['virtual_Parent'] == null
@@ -64,10 +73,19 @@ Map<String, dynamic> _$CoreGuideModelToJson(CoreGuideModel instance) =>
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'title': instance.title,
+      'key': instance.key,
+      'titleFa': instance.titleFa,
+      'descriptionFa': instance.descriptionFa,
       'bodyFa': instance.bodyFa,
+      'titleEn': instance.titleEn,
+      'descriptionEn': instance.descriptionEn,
       'bodyEn': instance.bodyEn,
+      'titleAr': instance.titleAr,
+      'descriptionAr': instance.descriptionAr,
       'bodyAr': instance.bodyAr,
+      'titleDe': instance.titleDe,
+      'descriptionDe': instance.descriptionDe,
+      'bodyDe': instance.bodyDe,
       'linkFileIds': instance.linkFileIds,
       'linkParentId': instance.linkParentId,
       'virtual_Parent': instance.virtual_Parent,

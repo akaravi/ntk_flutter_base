@@ -14,8 +14,8 @@ class CoreSiteCategoryCmsModuleModel extends BaseEntity<int> {
 
   @JsonKey(name: 'virtual_CmsSiteCategory')
   CoreSiteCategoryModel? virtual_CmsSiteCategory;
-  @JsonKey(name: 'cmsSiteCategory')
-  CoreSiteCategoryModel? cmsSiteCategory;
+  @JsonKey(name: 'vmsSiteCategory')
+  CoreSiteCategoryModel? vmsSiteCategory;
   @JsonKey(name: 'linkCmsModuleId')
   int? linkCmsModuleId;
 

@@ -32,7 +32,9 @@ CoreDeviceModel _$CoreDeviceModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..securityKey = json['securityKey'] as String?
-      ..expireDate = json['expireDate'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
       ..description = json['description'] as String?
       ..oSType = json['oSType'] as int?
       ..deviceType =
@@ -66,7 +68,7 @@ Map<String, dynamic> _$CoreDeviceModelToJson(CoreDeviceModel instance) =>
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'securityKey': instance.securityKey,
-      'expireDate': instance.expireDate,
+      'expireDate': instance.expireDate?.toIso8601String(),
       'description': instance.description,
       'oSType': instance.oSType,
       'deviceType': _$EnumDeviceTypeEnumMap[instance.deviceType],

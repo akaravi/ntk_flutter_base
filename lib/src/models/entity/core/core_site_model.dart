@@ -1,4 +1,5 @@
 import 'package:base/src/models/entity/coremain/core_module_site_model.dart';
+import 'package:base/src/models/entity/enums/enum_language.dart';
 import 'package:base/src/models/entity/enums/enum_site_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -13,11 +14,11 @@ part 'core_site_model.g.dart';
 class CoreSiteModel {
   @JsonKey(name: 'currentSiteDomainUrl')
   String? currentSiteDomainUrl;
-  @JsonKey(name: 'linkMainImageIdSrc')
-  String? linkMainImageIdSrc;
+  @JsonKey(name: 'mainImageSrc')
+  String? mainImageSrc;
 
   @JsonKey(name: 'expireDate')
-  String? expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'linkCreatedBySiteId')
   int? linkCreatedBySiteId;
 
@@ -27,22 +28,28 @@ class CoreSiteModel {
   CoreSiteModel? parentCreator;
   @JsonKey(name: 'title')
   String? title;
+  @JsonKey(name: 'copyright')
+  String? copyright;
   @JsonKey(name: 'ownerSiteSetStatus')
   EnumSiteStatus? ownerSiteSetStatus;
   @JsonKey(name: 'userLanguage')
-  int? userLanguage;
+  EnumLanguage? userLanguage;
   @JsonKey(name: 'subDomain')
   String? subDomain;
   @JsonKey(name: 'domain')
   String? domain;
+  @JsonKey(name: 'ssl')
+  bool? ssl;
   @JsonKey(name: 'redirect')
   String? redirect;
-  @JsonKey(name: 'keyword')
-  String? keyword;
-  @JsonKey(name: 'description')
-  String? description;
   @JsonKey(name: 'linkFavIconId')
   int? linkFavIconId;
+  @JsonKey(name: 'linkFavIconIdSrc')
+  String? linkFavIconIdSrc;
+  @JsonKey(name: 'linkImageLogoId')
+  int? linkImageLogoId;
+  @JsonKey(name: 'linkImageLogoIdSrc')
+  String? linkImageLogoIdSrc;
   @JsonKey(name: 'linkSiteCategoryId')
   int? linkSiteCategoryId;
 
@@ -57,11 +64,17 @@ class CoreSiteModel {
   @JsonKey(name: 'accountingFormNo')
   int? accountingFormNo;
   @JsonKey(name: 'accountingFormCreatedDate')
-  String? accountingFormCreatedDate;
+  DateTime? accountingFormCreatedDate;
   @JsonKey(name: 'accountingFormUpdatedDate')
-  String? accountingFormUpdatedDate;
+  DateTime? accountingFormUpdatedDate;
+  @JsonKey(name: 'accountingMemo')
+  String? accountingMemo;
+  @JsonKey(name: 'adminSiteMemo')
+  String? adminSiteMemo;
+  @JsonKey(name: 'adminMainMemo')
+  String? adminMainMemo;
   @JsonKey(name: 'siteUsers')
-  List<CoreSiteUserModel>? SiteUsers;
+  List<CoreSiteUserModel>? siteUsers;
   @JsonKey(name: 'moduleSites')
   List<CoreModuleSiteModel>? moduleSites;
   @JsonKey(name: 'domainAliases')
@@ -70,12 +83,12 @@ class CoreSiteModel {
   List<CoreSiteModel>? childernCreateds;
   @JsonKey(name: 'devices')
   List<CoreDeviceModel>? devices;
-  @JsonKey(name: 'copyright')
-  String? copyright;
-  @JsonKey(name: 'webMasterEmail')
-  String? webMasterEmail;
-  @JsonKey(name: 'webEditorEmail')
-  String? webEditorEmail;
+  @JsonKey(name: 'configNeshanMapApiKey')
+  String? configNeshanMapApiKey;
+  @JsonKey(name: 'linkResellerSiteId')
+  int? linkResellerSiteId;
+  @JsonKey(name: 'linkResellerUserId')
+  int? linkResellerUserId;
 
   CoreSiteModel();
   factory CoreSiteModel.fromJson(Map<String, dynamic> json) =>

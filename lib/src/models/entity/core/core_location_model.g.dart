@@ -32,15 +32,20 @@ CoreLocationModel _$CoreLocationModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
       ..linkParentId = json['linkParentId'] as int?
       ..linkParentIdNode = json['linkParentIdNode'] as String?
       ..geoLocationLatitude = (json['geoLocationLatitude'] as num?)?.toDouble()
       ..geoLocationLongitude =
           (json['geoLocationLongitude'] as num?)?.toDouble()
-      ..locationType = json['locationType'] as int?
+      ..locationType =
+          $enumDecodeNullable(_$EnumLocationTypeEnumMap, json['locationType'])
       ..virtual_Parent = json['virtual_Parent']
       ..parent = json['prent']
-      ..children = json['children'];
+      ..children = json['children']
+      ..linkImageId = json['linkImageId'] as int?
+      ..linkImageIdSrc = json['linkImageIdSrc'] as String?;
 
 Map<String, dynamic> _$CoreLocationModelToJson(CoreLocationModel instance) =>
     <String, dynamic>{
@@ -59,14 +64,18 @@ Map<String, dynamic> _$CoreLocationModelToJson(CoreLocationModel instance) =>
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
       'linkParentId': instance.linkParentId,
       'linkParentIdNode': instance.linkParentIdNode,
       'geoLocationLatitude': instance.geoLocationLatitude,
       'geoLocationLongitude': instance.geoLocationLongitude,
-      'locationType': instance.locationType,
+      'locationType': _$EnumLocationTypeEnumMap[instance.locationType],
       'virtual_Parent': instance.virtual_Parent,
       'prent': instance.parent,
       'children': instance.children,
+      'linkImageId': instance.linkImageId,
+      'linkImageIdSrc': instance.linkImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -76,4 +85,15 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumLocationTypeEnumMap = {
+  EnumLocationType.country: 1,
+  EnumLocationType.state: 2,
+  EnumLocationType.province: 3,
+  EnumLocationType.city: 4,
+  EnumLocationType.village: 5,
+  EnumLocationType.district: 6,
+  EnumLocationType.neighbourhood: 7,
+  EnumLocationType.capitalCity: 8,
 };
