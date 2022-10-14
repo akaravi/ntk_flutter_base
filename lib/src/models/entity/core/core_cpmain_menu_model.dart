@@ -2,6 +2,8 @@ import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:base/src/models/entity/enums/enum_menu_place_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../enums/enum_record_status.dart';
+
 part 'core_cpmain_menu_model.g.dart';
 
 @JsonSerializable()
