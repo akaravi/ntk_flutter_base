@@ -1,5 +1,6 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:base/src/models/entity/enums/enum_gender_type.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'core_user_model.g.dart';
 
@@ -10,7 +11,7 @@ class CoreUserModel extends BaseEntity<int> {
   @JsonKey(name: 'pwd')
   String? pwd;
   @JsonKey(name: 'expireDate')
-  DateTime expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'email')
   String? email;
   @JsonKey(name: 'emailConfirmed')

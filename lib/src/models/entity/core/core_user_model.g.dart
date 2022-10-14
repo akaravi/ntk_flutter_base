@@ -33,7 +33,9 @@ CoreUserModel _$CoreUserModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..username = json['username'] as String?
       ..pwd = json['pwd'] as String?
-      ..expireDate = DateTime.parse(json['expireDate'] as String)
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
       ..email = json['email'] as String?
       ..emailConfirmed = json['emailConfirmed'] as bool?
       ..mobile = json['mobile'] as String?
@@ -80,7 +82,7 @@ Map<String, dynamic> _$CoreUserModelToJson(CoreUserModel instance) =>
           instance.antiInjectionExpireDate?.toIso8601String(),
       'username': instance.username,
       'pwd': instance.pwd,
-      'expireDate': instance.expireDate.toIso8601String(),
+      'expireDate': instance.expireDate?.toIso8601String(),
       'email': instance.email,
       'emailConfirmed': instance.emailConfirmed,
       'mobile': instance.mobile,
