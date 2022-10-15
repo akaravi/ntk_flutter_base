@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_user_claim_type_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
+CoreUserClaimTypeModel _$CoreUserClaimTypeModelFromJson(
         Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
+    CoreUserClaimTypeModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +32,26 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
-      ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
-          ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
-          ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..description = json['description'] as String?
+      ..dismissOnEdit = json['dismissOnEdit'] as bool?
+      ..kind = json['kind'] as int?
+      ..userClaims = (json['userClaims'] as List<dynamic>?)
+          ?.map((e) =>
+              CoreUserClaimContentModel.fromJson(e as Map<String, dynamic>))
           .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..userClaimGroupDetails = (json['userClaimGroupDetails']
+              as List<dynamic>?)
+          ?.map((e) =>
+              CoreUserClaimGroupDetailModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..linkMainImageId = json[' linkMainImageId'] as int?
       ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreUserClaimTypeModelToJson(
+        CoreUserClaimTypeModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,13 +67,15 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
-      'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'description': instance.description,
+      'dismissOnEdit': instance.dismissOnEdit,
+      'kind': instance.kind,
+      'userClaims': instance.userClaims,
+      'userClaimGroupDetails': instance.userClaimGroupDetails,
+      ' linkMainImageId': instance.linkMainImageId,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 

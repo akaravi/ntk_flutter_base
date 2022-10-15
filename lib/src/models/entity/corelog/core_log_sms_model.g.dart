@@ -1,15 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_log_sms_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
-        Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
-      ..id = json['id'] as int?
+CoreLogSmsModel _$CoreLogSmsModelFromJson(Map<String, dynamic> json) =>
+    CoreLogSmsModel()
+      ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -32,25 +31,21 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..sendStatusType = $enumDecodeNullable(
+          _$EnumSendSmsStatusTypeEnumMap, json['sendStatusType'])
       ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
       ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
-          ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
-          ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..linkMemberId = json['linkMemberId'] as String?
+      ..moduleName = json['moduleName'] as String?
+      ..moduleEntityName = json['moduleEntityName'] as String?
+      ..moduleEntityId = json['moduleEntityId'] as String?
+      ..fromNumber = json['fromNumber'] as String?
+      ..toNumber = json['toNumber'] as String?
+      ..message = json['message'] as String?
+      ..apiNumber = json['apiNumber'] as int?
+      ..returnApi = json['returnApi'] as String?;
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreLogSmsModelToJson(CoreLogSmsModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,14 +61,18 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
+      'sendStatusType': _$EnumSendSmsStatusTypeEnumMap[instance.sendStatusType],
       'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
       'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkMemberId': instance.linkMemberId,
+      'moduleName': instance.moduleName,
+      'moduleEntityName': instance.moduleEntityName,
+      'moduleEntityId': instance.moduleEntityId,
+      'fromNumber': instance.fromNumber,
+      'toNumber': instance.toNumber,
+      'message': instance.message,
+      'apiNumber': instance.apiNumber,
+      'returnApi': instance.returnApi,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -83,4 +82,13 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumSendSmsStatusTypeEnumMap = {
+  EnumSendSmsStatusType.none: 0,
+  EnumSendSmsStatusType.sending: 1,
+  EnumSendSmsStatusType.sended: 2,
+  EnumSendSmsStatusType.sendParameterError: 3,
+  EnumSendSmsStatusType.sendConnectionError: 4,
+  EnumSendSmsStatusType.sendServerApiError: 5,
 };

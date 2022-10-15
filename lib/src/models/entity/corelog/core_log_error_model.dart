@@ -5,16 +5,16 @@ part 'core_log_error_model.g.dart';
 
 @JsonSerializable()
 class CoreLogErrorModel extends BaseEntity<String> {
+  @JsonKey(name: 'linkUserId')
+  int? linkUserId;
+  @JsonKey(name: 'linkMemberId')
+  String? linkMemberId;
   @JsonKey(name: 'moduleName')
   String? moduleName;
   @JsonKey(name: 'moduleEntityName')
   String? moduleEntityName;
-  @JsonKey(name: 'linkUserId')
-  int? linkUserId;
-  @JsonKey(name: 'linkMemberUserId')
-  int? linkMemberUserId;
-  @JsonKey(name: 'entityId')
-  int? entityId;
+  @JsonKey(name: 'moduleEntityId')
+  int? moduleEntityId;
   @JsonKey(name: 'description')
   String? description;
   CoreLogErrorModel();

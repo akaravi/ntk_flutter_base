@@ -1,6 +1,7 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../enums/enum_record_status.dart';
 import 'core_module_model.dart';
 
 part 'core_module_sale_invoice_detail_model.g.dart';
@@ -29,11 +30,13 @@ class CoreModuleSaleInvoiceDetailModel extends BaseEntity<int> {
   bool? hasError;
   @JsonKey(name: 'linkModuleSaleInvoiceId')
   int? linkModuleSaleInvoiceId;
+  @JsonKey(name: 'virtual_ModuleSaleInvoice')
+  CoreModuleSaleInvoiceDetailModel? virtual_ModuleSaleInvoice;
   CoreModuleSaleInvoiceDetailModel();
-    @JsonKey(name: 'virtual_ModuleSaleInvoice')
-  CoreModuleSaleInvoiceModel? virtual_ModuleSaleInvoice;
-  factory CoreModuleSaleInvoiceDetailModel.fromJson(Map<String, dynamic> json) =>
+  factory CoreModuleSaleInvoiceDetailModel.fromJson(
+          Map<String, dynamic> json) =>
       _$CoreModuleSaleInvoiceDetailModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$CoreModuleSaleInvoiceDetailModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$CoreModuleSaleInvoiceDetailModelToJson(this);
 }

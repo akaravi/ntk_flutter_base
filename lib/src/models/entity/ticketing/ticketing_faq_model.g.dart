@@ -44,7 +44,10 @@ TicketingFaqModel _$TicketingFaqModelFromJson(Map<String, dynamic> json) =>
           ? null
           : TicketingDepartemenModel.fromJson(
               json['ticketingDepartemen'] as Map<String, dynamic>)
-      ..linkFileIds = json['linkFileIds'] as String?;
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList();
 
 Map<String, dynamic> _$TicketingFaqModelToJson(TicketingFaqModel instance) =>
     <String, dynamic>{
@@ -69,6 +72,7 @@ Map<String, dynamic> _$TicketingFaqModelToJson(TicketingFaqModel instance) =>
       ' virtual_TicketingDepartemen': instance.virtual_TicketingDepartemen,
       'ticketingDepartemen': instance.ticketingDepartemen,
       'linkFileIds': instance.linkFileIds,
+      'linkFileIdsSrc': instance.linkFileIdsSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

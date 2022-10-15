@@ -19,7 +19,12 @@ class TicketingDepartemenOperatorModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'departemen')
   TicketingDepartemenModel? departemen;
   @JsonKey(name: 'answers')
-  List<TicketingAnswerModel>? answers;TicketingDepartemenOperatorModel();
+  List<TicketingAnswerModel>? answers;
+  @JsonKey(name: 'linkMainImageId')
+  int? linkMainImageId;
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
+  TicketingDepartemenOperatorModel();
   factory TicketingDepartemenOperatorModel.fromJson(Map<String, dynamic> json) => _$TicketingDepartemenOperatorModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$TicketingDepartemenOperatorModelToJson(this);

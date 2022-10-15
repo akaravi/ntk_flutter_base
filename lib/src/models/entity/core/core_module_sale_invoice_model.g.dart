@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_module_sale_invoice_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
+CoreModuleSaleInvoiceModel _$CoreModuleSaleInvoiceModelFromJson(
         Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
+    CoreModuleSaleInvoiceModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +32,34 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
-      ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
+      ..linkSiteIdBuyer = json['linkSiteIdBuyer'] as int?
+      ..virtual_SiteBuyer = json['virtual_SiteBuyer'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
+          : CoreSiteModel.fromJson(
+              json['virtual_SiteBuyer'] as Map<String, dynamic>)
+      ..hasUsed = json['hasUsed'] as bool?
+      ..price = json['price'] as int?
+      ..linkModuleSaleHeaderId = json['linkModuleSaleHeaderId'] as int?
+      ..virtual_ModuleSaleHeader = json['virtual_ModuleSaleHeader'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+          : CoreModuleSaleHeaderModel.fromJson(
+              json['virtual_ModuleSaleHeader'] as Map<String, dynamic>)
+      ..linkModuleSaleSerialId = json['linkModuleSaleSerialId'] as int?
+      ..virtual_ModuleSaleSerial = json['virtual_ModuleSaleSerial'] == null
+          ? null
+          : CoreModuleSaleSerialModel.fromJson(
+              json['virtual_ModuleSaleSerial'] as Map<String, dynamic>)
+      ..amount = json['amount'] as int?
+      ..systemTransactionId = json['systemTransactionId'] as int?
+      ..systemPaymentIsSuccess = json['systemPaymentIsSuccess'] as int?
+      ..moduleSaleInvoiceDetails =
+          (json['moduleSaleInvoiceDetails'] as List<dynamic>?)
+              ?.map((e) => CoreModuleSaleInvoiceDetailModel.fromJson(
+                  e as Map<String, dynamic>))
+              .toList();
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreModuleSaleInvoiceModelToJson(
+        CoreModuleSaleInvoiceModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,14 +75,18 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
-      'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkSiteIdBuyer': instance.linkSiteIdBuyer,
+      'virtual_SiteBuyer': instance.virtual_SiteBuyer,
+      'hasUsed': instance.hasUsed,
+      'price': instance.price,
+      'linkModuleSaleHeaderId': instance.linkModuleSaleHeaderId,
+      'virtual_ModuleSaleHeader': instance.virtual_ModuleSaleHeader,
+      'linkModuleSaleSerialId': instance.linkModuleSaleSerialId,
+      'virtual_ModuleSaleSerial': instance.virtual_ModuleSaleSerial,
+      'amount': instance.amount,
+      'systemTransactionId': instance.systemTransactionId,
+      'systemPaymentIsSuccess': instance.systemPaymentIsSuccess,
+      'moduleSaleInvoiceDetails': instance.moduleSaleInvoiceDetails,
     };
 
 const _$EnumRecordStatusEnumMap = {

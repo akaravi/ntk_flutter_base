@@ -33,13 +33,14 @@ TicketingAnswerModel _$TicketingAnswerModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
+      ..linkMemberId = json['linkMemberId'] as String?
       ..linkTaskId = json['linkTaskId'] as int?
-      ..linkMemberUserId = json['linkMemberUserId'] as int?
       ..htmlBody = json['htmlBody'] as String?
       ..virtual_Ticket = json['virtual_Ticket'] == null
           ? null
           : TicketingTaskModel.fromJson(
               json['virtual_Ticket'] as Map<String, dynamic>)
+      ..answerStatus = json['answerStatus'] as int?
       ..ticket = json['ticket'] == null
           ? null
           : TicketingTaskModel.fromJson(json['ticket'] as Map<String, dynamic>)
@@ -67,7 +68,11 @@ TicketingAnswerModel _$TicketingAnswerModelFromJson(
           .toList()
       ..uploadFileGUID = (json['uploadFileGUID'] as List<dynamic>?)
           ?.map((e) => e as String)
-          .toList();
+          .toList()
+      ..moduleCoreCreatedBy = json['moduleCoreCreatedBy'] == null
+          ? null
+          : CoreUserModel.fromJson(
+              json['moduleCoreCreatedBy'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$TicketingAnswerModelToJson(
         TicketingAnswerModel instance) =>
@@ -87,10 +92,11 @@ Map<String, dynamic> _$TicketingAnswerModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
+      'linkMemberId': instance.linkMemberId,
       'linkTaskId': instance.linkTaskId,
-      'linkMemberUserId': instance.linkMemberUserId,
       'htmlBody': instance.htmlBody,
       'virtual_Ticket': instance.virtual_Ticket,
+      'answerStatus': instance.answerStatus,
       'ticket': instance.ticket,
       'linkTicketingDepartemenId': instance.linkTicketingDepartemenId,
       'virtual_Departemen': instance.virtual_Departemen,
@@ -101,6 +107,7 @@ Map<String, dynamic> _$TicketingAnswerModelToJson(
       'linkFileIds': instance.linkFileIds,
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'uploadFileGUID': instance.uploadFileGUID,
+      'moduleCoreCreatedBy': instance.moduleCoreCreatedBy,
     };
 
 const _$EnumRecordStatusEnumMap = {

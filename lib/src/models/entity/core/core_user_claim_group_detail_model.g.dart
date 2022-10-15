@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_user_claim_group_detail_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
+CoreUserClaimGroupDetailModel _$CoreUserClaimGroupDetailModelFromJson(
         Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
+    CoreUserClaimGroupDetailModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +32,20 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
-      ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
+      ..linkUserClaimGroupId = json['linkUserClaimGroupId'] as int?
+      ..linkUserClaimTypeId = json['linkUserClaimTypeId'] as int?
+      ..isRequired = json['isRequired'] as bool?
+      ..virtual_UserClaimGroup = json[' virtual_UserClaimGroup'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
+          : CoreUserClaimGroupModel.fromJson(
+              json[' virtual_UserClaimGroup'] as Map<String, dynamic>)
+      ..virtual_UserClaimType = json[' virtual_UserClaimType'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+          : CoreUserClaimTypeModel.fromJson(
+              json[' virtual_UserClaimType'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreUserClaimGroupDetailModelToJson(
+        CoreUserClaimGroupDetailModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,14 +61,11 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
-      'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkUserClaimGroupId': instance.linkUserClaimGroupId,
+      'linkUserClaimTypeId': instance.linkUserClaimTypeId,
+      'isRequired': instance.isRequired,
+      ' virtual_UserClaimGroup': instance.virtual_UserClaimGroup,
+      ' virtual_UserClaimType': instance.virtual_UserClaimType,
     };
 
 const _$EnumRecordStatusEnumMap = {

@@ -25,7 +25,8 @@ class PollingOptionModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'virtual_PollingContent')
   PollingContentModel? virtual_PollingContent;
   @JsonKey(name: 'pollingContent')
-  PollingContentModel? pollingContent;PollingOptionModel();
+  PollingContentModel? pollingContent;
+  PollingOptionModel();
   factory PollingOptionModel.fromJson(Map<String, dynamic> json) => _$PollingOptionModelFromJson(json);
   Map<String, dynamic> toJson() => _$PollingOptionModelToJson(this);
 }

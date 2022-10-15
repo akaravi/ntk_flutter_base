@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_user_claim_group_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
+CoreUserClaimGroupModel _$CoreUserClaimGroupModelFromJson(
         Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
+    CoreUserClaimGroupModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +32,25 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
-      ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
-          ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
-          ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..description = json['description'] as String?
+      ..linkModuleId = json['linkModuleId'] as int?
+      ..linkSiteCategoryId = json['linkSiteCategoryId'] as int?
+      ..linkApplicationId = json['linkApplicationId'] as int?
+      ..linkApplicationSourceId = json[' linkApplicationSourceId'] as int?
+      ..linkUserGroupId = json['linkUserGroupId'] as int?
+      ..actionType = $enumDecodeNullable(
+          _$EnumUserClaimGroupActionTypeEnumMap, json[' actionType'])
+      ..userClaimGroupDetails = (json[' userClaimGroupDetails']
+              as List<dynamic>?)
+          ?.map((e) =>
+              CoreUserClaimGroupDetailModel.fromJson(e as Map<String, dynamic>))
+          .toList();
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreUserClaimGroupModelToJson(
+        CoreUserClaimGroupModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,14 +66,17 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
-      'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'description': instance.description,
+      'linkModuleId': instance.linkModuleId,
+      'linkSiteCategoryId': instance.linkSiteCategoryId,
+      'linkApplicationId': instance.linkApplicationId,
+      ' linkApplicationSourceId': instance.linkApplicationSourceId,
+      'linkUserGroupId': instance.linkUserGroupId,
+      ' actionType': _$EnumUserClaimGroupActionTypeEnumMap[instance.actionType],
+      ' userClaimGroupDetails': instance.userClaimGroupDetails,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -83,4 +86,9 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumUserClaimGroupActionTypeEnumMap = {
+  EnumUserClaimGroupActionType.approveSharingBankPayment: 0,
+  EnumUserClaimGroupActionType.approveUserBankPayment: 1,
 };

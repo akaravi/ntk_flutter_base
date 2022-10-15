@@ -51,8 +51,14 @@ CoreModuleSaleHeaderModel _$CoreModuleSaleHeaderModelFromJson(
               : CoreModuleSaleHeaderGroupModel.fromJson(
                   json['virtual_CmsModuleSaleHeaderGroup']
                       as Map<String, dynamic>)
-      ..items = json['items'] as List<dynamic>?
-      ..serials = json['serials'] as List<dynamic>?
+      ..items = (json['items'] as List<dynamic>?)
+          ?.map((e) =>
+              CoreModuleSaleItemModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..serials = (json['serials'] as List<dynamic>?)
+          ?.map((e) =>
+              CoreModuleSaleSerialModel.fromJson(e as Map<String, dynamic>))
+          .toList()
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 

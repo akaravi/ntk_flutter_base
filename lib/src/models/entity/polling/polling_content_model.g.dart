@@ -32,7 +32,9 @@ PollingContentModel _$PollingContentModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..expireDate = json['expireDate'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
       ..title = json['title'] as String?
       ..question = json['question'] as String?
       ..viewStatisticsBeforeVote = json['viewStatisticsBeforeVote'] as bool?
@@ -49,6 +51,9 @@ PollingContentModel _$PollingContentModelFromJson(Map<String, dynamic> json) =>
       ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
           (json['geolocationlongitude'] as num?)?.toDouble()
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
+      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
       ..linkCategoryId = json['linkCategoryId'] as int?
       ..linkFileIds = json['linkFileIds'] as String?
       ..linkFilePodcastId = json['linkFilePodcastId'] as int?
@@ -87,7 +92,7 @@ Map<String, dynamic> _$PollingContentModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'expireDate': instance.expireDate,
+      'expireDate': instance.expireDate?.toIso8601String(),
       'title': instance.title,
       'question': instance.question,
       'viewStatisticsBeforeVote': instance.viewStatisticsBeforeVote,
@@ -97,6 +102,9 @@ Map<String, dynamic> _$PollingContentModelToJson(
       'fromDate': instance.fromDate,
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
+      'linkLocationId': instance.linkLocationId,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
       'linkCategoryId': instance.linkCategoryId,
       'linkFileIds': instance.linkFileIds,
       'linkFilePodcastId': instance.linkFilePodcastId,

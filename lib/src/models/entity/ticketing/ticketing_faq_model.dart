@@ -20,7 +20,10 @@ class TicketingFaqModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'ticketingDepartemen')
   TicketingDepartemenModel? ticketingDepartemen;
   @JsonKey(name: 'linkFileIds')
-  String? linkFileIds;TicketingFaqModel();
+  String? linkFileIds;
+  @JsonKey(name: 'linkFileIdsSrc')
+  List<String>? linkFileIdsSrc;
+  TicketingFaqModel();
   factory TicketingFaqModel.fromJson(Map<String, dynamic> json) => _$TicketingFaqModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$TicketingFaqModelToJson(this);

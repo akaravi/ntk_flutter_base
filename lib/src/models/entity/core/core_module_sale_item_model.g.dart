@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_module_sale_item_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
+CoreModuleSaleItemModel _$CoreModuleSaleItemModelFromJson(
         Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
+    CoreModuleSaleItemModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +32,28 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
-      ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
+      ..linkModuleSaleHeader = json['linkModuleSaleHeader'] as int?
+      ..expireDate = json['expireDate'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
+          : DateTime.parse(json['expireDate'] as String)
+      ..description = json['description'] as String?
+      ..monthLength = json['monthLength'] as int?
+      ..linkModuleId = json['linkModuleId'] as int?
+      ..enumCmsModuleSaleItemType = $enumDecodeNullable(
+          _$EnumCmsModuleSaleItemTypeEnumMap, json['enumCmsModuleSaleItemType'])
+      ..moduleSiteAccessJsonValue = json['moduleSiteAccessJsonValue'] as String?
+      ..virtual_CmsModuleSaleHeader =
+          json['virtual_CmsModuleSaleHeader'] == null
+              ? null
+              : CoreModuleSaleItemModel.fromJson(
+                  json['virtual_CmsModuleSaleHeader'] as Map<String, dynamic>)
+      ..virtual_Module = json['virtual_Module'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+          : CoreModuleModel.fromJson(
+              json['virtual_Module'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreModuleSaleItemModelToJson(
+        CoreModuleSaleItemModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,14 +69,16 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
-      'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkModuleSaleHeader': instance.linkModuleSaleHeader,
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'description': instance.description,
+      'monthLength': instance.monthLength,
+      'linkModuleId': instance.linkModuleId,
+      'enumCmsModuleSaleItemType': _$EnumCmsModuleSaleItemTypeEnumMap[
+          instance.enumCmsModuleSaleItemType],
+      'moduleSiteAccessJsonValue': instance.moduleSiteAccessJsonValue,
+      'virtual_CmsModuleSaleHeader': instance.virtual_CmsModuleSaleHeader,
+      'virtual_Module': instance.virtual_Module,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -83,4 +88,10 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumCmsModuleSaleItemTypeEnumMap = {
+  EnumCmsModuleSaleItemType.saleOrRenew: 0,
+  EnumCmsModuleSaleItemType.onlyFirstSale: 1,
+  EnumCmsModuleSaleItemType.onlyReNew: 2,
 };

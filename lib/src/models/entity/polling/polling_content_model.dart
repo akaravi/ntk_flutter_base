@@ -7,12 +7,10 @@ import 'polling_option_model.dart';
 
 part 'polling_content_model.g.dart';
 
-
-
 @JsonSerializable()
 class PollingContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'expireDate')
-  String? expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'title')
   String? title;
   @JsonKey(name: 'question')
@@ -31,6 +29,12 @@ class PollingContentModel extends BaseModuleEntity<int> {
   double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
+  @JsonKey(name: 'linkLocationId')
+  int? linkLocationId;
+  @JsonKey(name: 'linkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'linkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
   @JsonKey(name: 'linkCategoryId')
   int? linkCategoryId;
   @JsonKey(name: 'linkFileIds')
@@ -60,7 +64,9 @@ class PollingContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'maxVoteForEachOption')
   int? maxVoteForEachOption;
   @JsonKey(name: 'options')
-  List<PollingOptionModel>? options;PollingContentModel();
-  factory PollingContentModel.fromJson(Map<String, dynamic> json) => _$PollingContentModelFromJson(json);
+  List<PollingOptionModel>? options;
+  PollingContentModel();
+  factory PollingContentModel.fromJson(Map<String, dynamic> json) =>
+      _$PollingContentModelFromJson(json);
   Map<String, dynamic> toJson() => _$PollingContentModelToJson(this);
 }

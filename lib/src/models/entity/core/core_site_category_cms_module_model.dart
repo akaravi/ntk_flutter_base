@@ -25,4 +25,9 @@ class CoreSiteCategoryCmsModuleModel extends BaseEntity<int> {
   CoreModuleModel? cmsModule;
   @JsonKey(name: 'configValuesJson')
   String? configValuesJson;
+  CoreSiteCategoryCmsModuleModel();
+  factory CoreSiteCategoryCmsModuleModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreSiteCategoryCmsModuleModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreSiteCategoryCmsModuleModelToJson(this);
 }

@@ -51,7 +51,9 @@ TicketingDepartemenModel _$TicketingDepartemenModelFromJson(
       ..operators = (json['operators'] as List<dynamic>?)
           ?.map((e) => TicketingDepartemenOperatorModel.fromJson(
               e as Map<String, dynamic>))
-          .toList();
+          .toList()
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$TicketingDepartemenModelToJson(
         TicketingDepartemenModel instance) =>
@@ -80,6 +82,8 @@ Map<String, dynamic> _$TicketingDepartemenModelToJson(
       'ticketAnswers': instance.ticketAnswers,
       'faqs': instance.faqs,
       'operators': instance.operators,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

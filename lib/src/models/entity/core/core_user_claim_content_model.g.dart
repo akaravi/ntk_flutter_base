@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'ticketing_departemen_operator_model.dart';
+part of 'core_user_claim_content_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
+CoreUserClaimContentModel _$CoreUserClaimContentModelFromJson(
         Map<String, dynamic> json) =>
-    TicketingDepartemenOperatorModel()
+    CoreUserClaimContentModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +32,35 @@ TicketingDepartemenOperatorModel _$TicketingDepartemenOperatorModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..linkDepartemenId = json['linkDepartemenId'] as int?
+      ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..description = json['description'] as String?
       ..linkUserId = json['linkUserId'] as int?
-      ..virtual_Departemen = json[' virtual_Departemen'] == null
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkUserIdApprover = json['linkUserIdApprover'] as int?
+      ..virtual_CoreUser = json[' virtual_CoreUser'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json[' virtual_Departemen'] as Map<String, dynamic>)
-      ..departemen = json['departemen'] == null
+          : CoreUserModel.fromJson(
+              json[' virtual_CoreUser'] as Map<String, dynamic>)
+      ..isApproved = json['isApproved'] as bool?
+      ..approvedResult = json['approvedResult'] as String?
+      ..approveCheckDate = json['approveCheckDate'] == null
           ? null
-          : TicketingDepartemenModel.fromJson(
-              json['departemen'] as Map<String, dynamic>)
-      ..answers = (json['answers'] as List<dynamic>?)
-          ?.map((e) => TicketingAnswerModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+          : DateTime.parse(json['approveCheckDate'] as String)
+      ..linkFileContentId = json['linkFileContentId'] as int?
+      ..linkFileContentIdSrc = json['linkFileContentIdSrc'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
+      ..linkUserClaimTypeId = json['linkUserClaimTypeId'] as int?
+      ..virtual_UserClaimType = json[' virtual_UserClaimType'] == null
+          ? null
+          : CoreUserClaimTypeModel.fromJson(
+              json[' virtual_UserClaimType'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
-        TicketingDepartemenOperatorModel instance) =>
+Map<String, dynamic> _$CoreUserClaimContentModelToJson(
+        CoreUserClaimContentModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,14 +76,22 @@ Map<String, dynamic> _$TicketingDepartemenOperatorModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'linkDepartemenId': instance.linkDepartemenId,
+      'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'description': instance.description,
       'linkUserId': instance.linkUserId,
-      ' virtual_Departemen': instance.virtual_Departemen,
-      'departemen': instance.departemen,
-      'answers': instance.answers,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkSiteId': instance.linkSiteId,
+      'linkUserIdApprover': instance.linkUserIdApprover,
+      ' virtual_CoreUser': instance.virtual_CoreUser,
+      'isApproved': instance.isApproved,
+      'approvedResult': instance.approvedResult,
+      'approveCheckDate': instance.approveCheckDate?.toIso8601String(),
+      'linkFileContentId': instance.linkFileContentId,
+      'linkFileContentIdSrc': instance.linkFileContentIdSrc,
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'linkUserClaimTypeId': instance.linkUserClaimTypeId,
+      ' virtual_UserClaimType': instance.virtual_UserClaimType,
     };
 
 const _$EnumRecordStatusEnumMap = {

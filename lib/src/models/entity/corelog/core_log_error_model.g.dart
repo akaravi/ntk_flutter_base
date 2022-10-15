@@ -31,11 +31,11 @@ CoreLogErrorModel _$CoreLogErrorModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkUserId = json['linkUserId'] as int?
+      ..linkMemberId = json['linkMemberId'] as String?
       ..moduleName = json['moduleName'] as String?
       ..moduleEntityName = json['moduleEntityName'] as String?
-      ..linkUserId = json['linkUserId'] as int?
-      ..linkMemberUserId = json['linkMemberUserId'] as int?
-      ..entityId = json['entityId'] as int?
+      ..moduleEntityId = json['moduleEntityId'] as int?
       ..description = json['description'] as String?;
 
 Map<String, dynamic> _$CoreLogErrorModelToJson(CoreLogErrorModel instance) =>
@@ -54,11 +54,11 @@ Map<String, dynamic> _$CoreLogErrorModelToJson(CoreLogErrorModel instance) =>
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
+      'linkUserId': instance.linkUserId,
+      'linkMemberId': instance.linkMemberId,
       'moduleName': instance.moduleName,
       'moduleEntityName': instance.moduleEntityName,
-      'linkUserId': instance.linkUserId,
-      'linkMemberUserId': instance.linkMemberUserId,
-      'entityId': instance.entityId,
+      'moduleEntityId': instance.moduleEntityId,
       'description': instance.description,
     };
 

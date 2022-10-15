@@ -17,7 +17,11 @@ class PollingVoteModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'deviceUserSerial')
   String? deviceUserSerial;
   @JsonKey(name: 'otherInfo')
-  String? otherInfo;PollingVoteModel();
+  String? otherInfo;
+
+  @JsonKey(name: 'linkMemberId')
+  String? linkMemberId;
+  PollingVoteModel();
   factory PollingVoteModel.fromJson(Map<String, dynamic> json) => _$PollingVoteModelFromJson(json);
   Map<String, dynamic> toJson() => _$PollingVoteModelToJson(this);
 }

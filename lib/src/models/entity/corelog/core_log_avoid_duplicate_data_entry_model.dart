@@ -5,16 +5,16 @@ part 'core_log_avoid_duplicate_data_entry_model.g.dart';
 
 @JsonSerializable()
 class CoreLogAvoidDuplicateDataEntryModel extends BaseEntity<String> {
+  @JsonKey(name: 'linkUserId')
+  int? linkUserId;
+  @JsonKey(name: 'linkMemberId')
+  String? linkMemberId;
   @JsonKey(name: 'moduleName')
   String? moduleName;
   @JsonKey(name: 'moduleEntityName')
   String? moduleEntityName;
-  @JsonKey(name: 'linkUserId')
-  int? linkUserId;
-  @JsonKey(name: 'linkMemberUserId')
-  int? linkMemberUserId;
-  @JsonKey(name: 'entityId')
-  int? entityId;
+  @JsonKey(name: 'moduleEntityId')
+  int? moduleEntityId;
   CoreLogAvoidDuplicateDataEntryModel();
   factory CoreLogAvoidDuplicateDataEntryModel.fromJson(
           Map<String, dynamic> json) =>

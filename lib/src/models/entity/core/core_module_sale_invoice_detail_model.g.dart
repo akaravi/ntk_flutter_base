@@ -50,7 +50,10 @@ CoreModuleSaleInvoiceDetailModel _$CoreModuleSaleInvoiceDetailModelFromJson(
       ..hasWarning = json['hasWarning'] as bool?
       ..hasError = json['hasError'] as bool?
       ..linkModuleSaleInvoiceId = json['linkModuleSaleInvoiceId'] as int?
-      ..virtual_ModuleSaleInvoice = json['virtual_ModuleSaleInvoice'];
+      ..virtual_ModuleSaleInvoice = json['virtual_ModuleSaleInvoice'] == null
+          ? null
+          : CoreModuleSaleInvoiceDetailModel.fromJson(
+              json['virtual_ModuleSaleInvoice'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$CoreModuleSaleInvoiceDetailModelToJson(
         CoreModuleSaleInvoiceDetailModel instance) =>

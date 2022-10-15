@@ -36,7 +36,8 @@ PollingVoteModel _$PollingVoteModelFromJson(Map<String, dynamic> json) =>
       ..linkPollingOptionId = json['linkPollingOptionId'] as int?
       ..optionScore = json['optionScore'] as int?
       ..deviceUserSerial = json['deviceUserSerial'] as String?
-      ..otherInfo = json['otherInfo'] as String?;
+      ..otherInfo = json['otherInfo'] as String?
+      ..linkMemberId = json['linkMemberId'] as String?;
 
 Map<String, dynamic> _$PollingVoteModelToJson(PollingVoteModel instance) =>
     <String, dynamic>{
@@ -60,6 +61,7 @@ Map<String, dynamic> _$PollingVoteModelToJson(PollingVoteModel instance) =>
       'optionScore': instance.optionScore,
       'deviceUserSerial': instance.deviceUserSerial,
       'otherInfo': instance.otherInfo,
+      'linkMemberId': instance.linkMemberId,
     };
 
 const _$EnumRecordStatusEnumMap = {

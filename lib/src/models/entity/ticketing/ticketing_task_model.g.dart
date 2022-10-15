@@ -32,7 +32,9 @@ TicketingTaskModel _$TicketingTaskModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..expireDate = json['expireDate'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
       ..title = json['title'] as String?
       ..htmlBody = json['htmlBody'] as String?
       ..fullName = json['fullName'] as String?
@@ -40,7 +42,7 @@ TicketingTaskModel _$TicketingTaskModelFromJson(Map<String, dynamic> json) =>
       ..email = json['email'] as String?
       ..priority = json['priority'] as int?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
-      ..linkMemberUserId = json['linkMemberUserId'] as int?
+      ..linkMemberId = json['linkMemberId'] as String?
       ..linkTicketingDepartemenId = json['linkTicketingDepartemenId'] as int?
       ..ticketStatus = json['ticketStatus'] as int?
       ..userIpAddress = json['userIpAddress'] as String?
@@ -65,7 +67,11 @@ TicketingTaskModel _$TicketingTaskModelFromJson(Map<String, dynamic> json) =>
           .toList()
       ..uploadFileGUID = (json['uploadFileGUID'] as List<dynamic>?)
           ?.map((e) => e as String)
-          .toList();
+          .toList()
+      ..moduleCoreCreatedBy = json['moduleCoreCreatedBy'] == null
+          ? null
+          : CoreUserModel.fromJson(
+              json['moduleCoreCreatedBy'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$TicketingTaskModelToJson(TicketingTaskModel instance) =>
     <String, dynamic>{
@@ -84,7 +90,7 @@ Map<String, dynamic> _$TicketingTaskModelToJson(TicketingTaskModel instance) =>
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'expireDate': instance.expireDate,
+      'expireDate': instance.expireDate?.toIso8601String(),
       'title': instance.title,
       'htmlBody': instance.htmlBody,
       'fullName': instance.fullName,
@@ -92,7 +98,7 @@ Map<String, dynamic> _$TicketingTaskModelToJson(TicketingTaskModel instance) =>
       'email': instance.email,
       'priority': instance.priority,
       'linkCmsUserId': instance.linkCmsUserId,
-      'linkMemberUserId': instance.linkMemberUserId,
+      'linkMemberId': instance.linkMemberId,
       'linkTicketingDepartemenId': instance.linkTicketingDepartemenId,
       'ticketStatus': instance.ticketStatus,
       'userIpAddress': instance.userIpAddress,
@@ -106,6 +112,7 @@ Map<String, dynamic> _$TicketingTaskModelToJson(TicketingTaskModel instance) =>
       'linkFileIds': instance.linkFileIds,
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'uploadFileGUID': instance.uploadFileGUID,
+      'moduleCoreCreatedBy': instance.moduleCoreCreatedBy,
     };
 
 const _$EnumRecordStatusEnumMap = {
