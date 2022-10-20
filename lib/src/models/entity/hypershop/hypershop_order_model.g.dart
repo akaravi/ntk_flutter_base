@@ -32,8 +32,10 @@ HyperShopOrderModel _$HyperShopOrderModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..orderType = json['orderType'] as int?
-      ..paymentType = json['paymentType'] as int?
+      ..paymentType = $enumDecodeNullable(
+          _$EnumHyperShopPaymentTypeEnumMap, json['paymentType'])
+      ..orderType = $enumDecodeNullable(
+          _$EnumHyperShopOrderTypeEnumMap, json['orderType'])
       ..systemTransactionId = json['systemTransactionId'] as int?
       ..systemPaymentIsSuccess = json['systemPaymentIsSuccess'] as int?
       ..systemMicroServiceOrderId = json['systemMicroServiceOrderId'] as String?
@@ -46,18 +48,17 @@ HyperShopOrderModel _$HyperShopOrderModelFromJson(Map<String, dynamic> json) =>
       ..name = json['name'] as String?
       ..family = json['family'] as String?
       ..mobile = json['mobile'] as String?
+      ..geoLocationLatitude = json['geoLocationLatitude'] as String?
+      ..geoLocationLongitude = json['geoLocationLongitude'] as String?
       ..address = json['address'] as String?
-      ..products = (json['products'] as List<dynamic>?)
-          ?.map((e) =>
-              HyperShopOrderContentModel.fromJson(e as Map<String, dynamic>))
-          .toList()
       ..amount = (json['amount'] as num?)?.toDouble()
       ..feeTax = (json['feeTax'] as num?)?.toDouble()
       ..feeTransport = (json['feeTransport'] as num?)?.toDouble()
       ..amountPure = (json['amountPure'] as num?)?.toDouble()
-      ..delivaryPrice = (json['delivaryPrice'] as num?)?.toDouble()
-      ..geoLocationLatitude = json['geoLocationLatitude'] as String?
-      ..geoLocationLongitude = json['geoLocationLongitude'] as String?;
+      ..products = (json['products'] as List<dynamic>?)
+          ?.map((e) =>
+              HyperShopOrderContentModel.fromJson(e as Map<String, dynamic>))
+          .toList();
 
 Map<String, dynamic> _$HyperShopOrderModelToJson(
         HyperShopOrderModel instance) =>
@@ -77,8 +78,8 @@ Map<String, dynamic> _$HyperShopOrderModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'orderType': instance.orderType,
-      'paymentType': instance.paymentType,
+      'paymentType': _$EnumHyperShopPaymentTypeEnumMap[instance.paymentType],
+      'orderType': _$EnumHyperShopOrderTypeEnumMap[instance.orderType],
       'systemTransactionId': instance.systemTransactionId,
       'systemPaymentIsSuccess': instance.systemPaymentIsSuccess,
       'systemMicroServiceOrderId': instance.systemMicroServiceOrderId,
@@ -89,15 +90,14 @@ Map<String, dynamic> _$HyperShopOrderModelToJson(
       'name': instance.name,
       'family': instance.family,
       'mobile': instance.mobile,
+      'geoLocationLatitude': instance.geoLocationLatitude,
+      'geoLocationLongitude': instance.geoLocationLongitude,
       'address': instance.address,
-      'products': instance.products,
       'amount': instance.amount,
       'feeTax': instance.feeTax,
       'feeTransport': instance.feeTransport,
       'amountPure': instance.amountPure,
-      'delivaryPrice': instance.delivaryPrice,
-      'geoLocationLatitude': instance.geoLocationLatitude,
-      'geoLocationLongitude': instance.geoLocationLongitude,
+      'products': instance.products,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -107,4 +107,21 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumHyperShopPaymentTypeEnumMap = {
+  EnumHyperShopPaymentType.none: 0,
+  EnumHyperShopPaymentType.online: 1,
+  EnumHyperShopPaymentType.onPLace: 2,
+  EnumHyperShopPaymentType.onlineAndOnPlace: 3,
+};
+
+const _$EnumHyperShopOrderTypeEnumMap = {
+  EnumHyperShopOrderType.open: 0,
+  EnumHyperShopOrderType.ayment: 1,
+  EnumHyperShopOrderType.startDelivery: 2,
+  EnumHyperShopOrderType.inDelivery: 3,
+  EnumHyperShopOrderType.endDelivery: 4,
+  EnumHyperShopOrderType.close: 10,
+  EnumHyperShopOrderType.deleted: 11,
 };

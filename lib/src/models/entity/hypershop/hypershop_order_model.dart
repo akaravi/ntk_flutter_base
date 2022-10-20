@@ -1,4 +1,6 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
+import 'package:base/src/models/entity/enums/enum_hypershop_order_type.dart';
+import 'package:base/src/models/entity/enums/enum_hypershop_payment_type.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -6,12 +8,12 @@ import 'hypershop_order_content_model.dart';
 
 part 'hypershop_order_model.g.dart';
 
-
 @JsonSerializable()
 class HyperShopOrderModel extends BaseModuleEntity<int> {
-  int? orderType;
   @JsonKey(name: 'paymentType')
-  int? paymentType; //as
+  EnumHyperShopPaymentType? paymentType;
+  @JsonKey(name: 'orderType')
+  EnumHyperShopOrderType? orderType;
   @JsonKey(name: 'systemTransactionId')
   int? systemTransactionId;
   @JsonKey(name: 'systemPaymentIsSuccess')
@@ -32,11 +34,12 @@ class HyperShopOrderModel extends BaseModuleEntity<int> {
   String? family;
   @JsonKey(name: 'mobile')
   String? mobile;
+  @JsonKey(name: 'geoLocationLatitude')
+  String? geoLocationLatitude;
+  @JsonKey(name: 'geoLocationLongitude')
+  String? geoLocationLongitude;
   @JsonKey(name: 'address')
   String? address;
-
-  @JsonKey(name: 'products')
-  List<HyperShopOrderContentModel>? products;
   @JsonKey(name: 'amount')
   double? amount;
   @JsonKey(name: 'feeTax')
@@ -45,13 +48,12 @@ class HyperShopOrderModel extends BaseModuleEntity<int> {
   double? feeTransport;
   @JsonKey(name: 'amountPure')
   double? amountPure;
-  @JsonKey(name: 'delivaryPrice')
-  double? delivaryPrice;
-  @JsonKey(name: 'geoLocationLatitude')
-  String? geoLocationLatitude;
-  @JsonKey(name: 'geoLocationLongitude')
-  String? geoLocationLongitude;HyperShopOrderModel();
-  factory HyperShopOrderModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderModelFromJson(json);
+  @JsonKey(name: 'products')
+  List<HyperShopOrderContentModel>? products;
+
+  HyperShopOrderModel();
+  factory HyperShopOrderModel.fromJson(Map<String, dynamic> json) =>
+      _$HyperShopOrderModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$HyperShopOrderModelToJson(this);
 }

@@ -9,18 +9,16 @@ part of 'news_content_similar_model.dart';
 NewsContentSimilarModel _$NewsContentSimilarModelFromJson(
         Map<String, dynamic> json) =>
     NewsContentSimilarModel()
-      ..title = json['title'] as String?
-      ..linkSourceId = json['linkSourceid'] as String?
-      ..linkDestinationiId = json['linkDestinationid'] as String?
-      ..virtual_Source = json['virtual_Source'] as String?
-      ..source = json['source'] as String?
-      ..virtual_Destination = json['virtual_Destination'] as String?
-      ..destination = json['destination'] as String?;
+      ..linkSourceId = json['linkSourceid'] as int?
+      ..linkDestinationiId = json['linkDestinationid'] as int?
+      ..virtual_Source = json['virtual_Source']
+      ..source = json['source']
+      ..virtual_Destination = json['virtual_Destination']
+      ..destination = json['destination'];
 
 Map<String, dynamic> _$NewsContentSimilarModelToJson(
         NewsContentSimilarModel instance) =>
     <String, dynamic>{
-      'title': instance.title,
       'linkSourceid': instance.linkSourceId,
       'linkDestinationid': instance.linkDestinationiId,
       'virtual_Source': instance.virtual_Source,

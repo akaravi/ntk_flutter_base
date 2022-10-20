@@ -7,13 +7,13 @@ part 'news_content_tag_model.g.dart';
 @JsonSerializable()
 class NewsContentTagModel {
   @JsonKey(name: 'linkContentid')
-  String? linkContentId;
+  int? linkContentId;
   @JsonKey(name: 'linkTagid')
   int? linkTagId;
   @JsonKey(name: 'virtual_ModuleContent')
-  NewsContentModel? virtual_ModuleContent;
+  Object? virtual_ModuleContent;
   @JsonKey(name: 'moduleContent')
-  NewsContentModel? moduleContent;
+  Object? moduleContent;
 
   NewsContentTagModel();
   factory NewsContentTagModel.fromJson(Map<String, dynamic> json) =>

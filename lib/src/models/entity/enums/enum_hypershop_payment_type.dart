@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonEnum()
-enum enumHyperShopPaymentType {
+enum EnumHyperShopPaymentType {
   @JsonValue(0)
   none,
   @JsonValue(1)

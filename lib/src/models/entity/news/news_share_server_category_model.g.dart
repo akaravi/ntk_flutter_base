@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'news_comment_model.dart';
+part of 'news_share_server_category_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-NewsCommentModel _$NewsCommentModelFromJson(Map<String, dynamic> json) =>
-    NewsCommentModel()
+NewsShareServerCategoryModel _$NewsShareServerCategoryModelFromJson(
+        Map<String, dynamic> json) =>
+    NewsShareServerCategoryModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,24 +33,27 @@ NewsCommentModel _$NewsCommentModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..linkContentId = json['linkContentId'] as int?
-      ..linkParentId = json['linkParentId'] as int?
-      ..writer = json['writer'] as String?
-      ..comment = json['comment'] as String?
-      ..registerDate = json['registerDate'] == null
+      ..description = json['description'] as String?
+      ..linkShareMainAdminSettingId =
+          json['linkShareMainAdminSettingId'] as int?
+      ..title = json['ttitle'] as String?
+      ..linkServerCategoryId = json['linkServerCategoryId'] as int?
+      ..serverCategory = json['serverCategory'] == null
           ? null
-          : DateTime.parse(json['registerDate'] as String)
-      ..sumLikeClick = json['sumLikeClick'] as int?
-      ..sumDisLikeClick = json['sumDisLikeClick'] as int?
-      ..virtual_Content = json['virtual_Content'] == null
+          : NewsCategoryModel.fromJson(
+              json['serverCategory'] as Map<String, dynamic>)
+      ..shareMainAdminSetting = json['shareMainAdminSetting'] == null
           ? null
-          : NewsContentModel.fromJson(
-              json['virtual_Content'] as Map<String, dynamic>)
-      ..content = json['content'] == null
-          ? null
-          : NewsContentModel.fromJson(json['content'] as Map<String, dynamic>);
+          : NewsShareMainAdminSettingModel.fromJson(
+              json['shareMainAdminSetting'] as Map<String, dynamic>)
+      ..shareReciverCategories =
+          (json['shareReciverCategories'] as List<dynamic>?)
+              ?.map((e) => NewsShareReceiverCategoryModel.fromJson(
+                  e as Map<String, dynamic>))
+              .toList();
 
-Map<String, dynamic> _$NewsCommentModelToJson(NewsCommentModel instance) =>
+Map<String, dynamic> _$NewsShareServerCategoryModelToJson(
+        NewsShareServerCategoryModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -66,15 +70,13 @@ Map<String, dynamic> _$NewsCommentModelToJson(NewsCommentModel instance) =>
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'linkContentId': instance.linkContentId,
-      'linkParentId': instance.linkParentId,
-      'writer': instance.writer,
-      'comment': instance.comment,
-      'registerDate': instance.registerDate?.toIso8601String(),
-      'sumLikeClick': instance.sumLikeClick,
-      'sumDisLikeClick': instance.sumDisLikeClick,
-      'virtual_Content': instance.virtual_Content,
-      'content': instance.content,
+      'description': instance.description,
+      'linkShareMainAdminSettingId': instance.linkShareMainAdminSettingId,
+      'ttitle': instance.title,
+      'linkServerCategoryId': instance.linkServerCategoryId,
+      'serverCategory': instance.serverCategory,
+      'shareMainAdminSetting': instance.shareMainAdminSetting,
+      'shareReciverCategories': instance.shareReciverCategories,
     };
 
 const _$EnumRecordStatusEnumMap = {

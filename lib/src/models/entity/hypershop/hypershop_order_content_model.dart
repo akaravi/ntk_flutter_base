@@ -23,12 +23,7 @@ class HyperShopOrderContentModel {
   double? price;
   @JsonKey(name: 'count')
   int? count;
-  @JsonKey(name: 'totalCount')
-  int? totalCount;
-  @JsonKey(name: 'image')
-  String? image;
-  @JsonKey(name: 'unit')
-  String? unit;HyperShopOrderContentModel();
+  HyperShopOrderContentModel();
   factory HyperShopOrderContentModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderContentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$HyperShopOrderContentModelToJson(this);

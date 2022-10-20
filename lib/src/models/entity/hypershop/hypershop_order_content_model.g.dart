@@ -17,10 +17,7 @@ HyperShopOrderContentModel _$HyperShopOrderContentModelFromJson(
       ..name = json['name'] as String?
       ..memo = json['memo'] as String?
       ..price = (json['price'] as num?)?.toDouble()
-      ..count = json['count'] as int?
-      ..totalCount = json['totalCount'] as int?
-      ..image = json['image'] as String?
-      ..unit = json['unit'] as String?;
+      ..count = json['count'] as int?;
 
 Map<String, dynamic> _$HyperShopOrderContentModelToJson(
         HyperShopOrderContentModel instance) =>
@@ -32,7 +29,4 @@ Map<String, dynamic> _$HyperShopOrderContentModelToJson(
       'memo': instance.memo,
       'price': instance.price,
       'count': instance.count,
-      'totalCount': instance.totalCount,
-      'image': instance.image,
-      'unit': instance.unit,
     };

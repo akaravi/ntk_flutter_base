@@ -4,6 +4,8 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'news_category_model.dart';
+import 'news_comment_model.dart';
+import 'news_content_category_model.dart';
 import 'news_content_similar_model.dart';
 import 'news_content_tag_model.dart';
 
@@ -20,11 +22,17 @@ class NewsContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'body')
   String? body;
   @JsonKey(name: 'fromDate')
-  String? fromDate;
+  DateTime? fromDate;
   @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
+  @JsonKey(name: 'linkLocationId')
+  int? linkLocationId;
+  @JsonKey(name: 'linkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'linkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
   @JsonKey(name: 'keyword')
   String? keyword;
   @JsonKey(name: 'linkFileIds')
@@ -43,10 +51,8 @@ class NewsContentModel extends BaseModuleEntity<int> {
   int? viewCount;
   @JsonKey(name: 'favorited')
   bool? favorited;
-  @JsonKey(name: 'linkMainImageIdSrc')
-  String? linkMainImageIdSrc;
   @JsonKey(name: 'expireDate')
-  String? expireDate;
+  DateTime? expireDate;
   @JsonKey(name: 'moduleCoreCreatedBy')
   CoreUserModel? moduleCoreCreatedBy;
 
@@ -56,7 +62,7 @@ class NewsContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'source')
   String? source;
   @JsonKey(name: 'comments')
-  String? comments;
+  NewsCommentModel? comments;
   @JsonKey(name: ' virtual_Category')
   NewsCategoryModel? virtual_Category;
 
@@ -67,17 +73,25 @@ class NewsContentModel extends BaseModuleEntity<int> {
   List<NewsContentTagModel>? contentTags;
   @JsonKey(name: 'similars')
   List<NewsContentSimilarModel>? similars;
+  @JsonKey(name: 'contentCategores')
+  List<NewsContentCategoryModel>? contentCategores;
+
   @JsonKey(name: 'otherInfos')
   String? otherInfos;
   @JsonKey(name: 'contentAndParameterValues')
   Object? contentAndParameterValues;
-
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
   @JsonKey(name: 'linkFileMovieIdSrc')
   String? linkFileMovieIdSrc;
   @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
+  @JsonKey(name: 'urlViewContent')
+  String? urlViewContent;
+  @JsonKey(name: 'urlViewContentQRCodeBase64')
+  String? urlViewContentQRCodeBase64;
 
   NewsContentModel();
 

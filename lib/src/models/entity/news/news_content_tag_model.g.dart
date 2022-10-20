@@ -8,16 +8,10 @@ part of 'news_content_tag_model.dart';
 
 NewsContentTagModel _$NewsContentTagModelFromJson(Map<String, dynamic> json) =>
     NewsContentTagModel()
-      ..linkContentId = json['linkContentid'] as String?
+      ..linkContentId = json['linkContentid'] as int?
       ..linkTagId = json['linkTagid'] as int?
-      ..virtual_ModuleContent = json['virtual_ModuleContent'] == null
-          ? null
-          : NewsContentModel.fromJson(
-              json['virtual_ModuleContent'] as Map<String, dynamic>)
-      ..moduleContent = json['moduleContent'] == null
-          ? null
-          : NewsContentModel.fromJson(
-              json['moduleContent'] as Map<String, dynamic>);
+      ..virtual_ModuleContent = json['virtual_ModuleContent']
+      ..moduleContent = json['moduleContent'];
 
 Map<String, dynamic> _$NewsContentTagModelToJson(
         NewsContentTagModel instance) =>
