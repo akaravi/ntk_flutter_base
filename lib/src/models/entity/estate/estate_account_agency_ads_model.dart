@@ -1,10 +1,11 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
-part 'estate_property_ads_model.g.dart';
+
+part 'estate_account_agency_ads_model.g.dart';
 
 @JsonSerializable()
-class EstatePropertyAdsModel extends BaseModuleEntity<String> {
+class EstateAccountAgencyAdsModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'Title')
   String? title;
   @JsonKey(name: 'Description')
@@ -13,8 +14,8 @@ class EstatePropertyAdsModel extends BaseModuleEntity<String> {
   int? stationLevel;
   @JsonKey(name: 'ViewLevel')
   int? viewLevel;
-  @JsonKey(name: 'LinkPropertyId')
-  String? linkPropertyId;
+  @JsonKey(name: 'linkAccountAgencyId')
+  String? linkAccountAgencyId;
   @JsonKey(name: 'FromDate')
   DateTime? fromDate;
   @JsonKey(name: 'ExpireDate')
@@ -33,9 +34,10 @@ class EstatePropertyAdsModel extends BaseModuleEntity<String> {
   int? feeTax;
   @JsonKey(name: 'amount')
   int? amount;
-  EstatePropertyAdsModel();
-  factory EstatePropertyAdsModel.fromJson(Map<String, dynamic> json) =>
-      _$EstatePropertyAdsModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$EstatePropertyAdsModelToJson(this);
+  EstateAccountAgencyAdsModel();
+  factory EstateAccountAgencyAdsModel.fromJson(Map<String, dynamic> json) =>
+      _$EstateAccountAgencyAdsModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EstateAccountAgencyAdsModelToJson(this);
 }

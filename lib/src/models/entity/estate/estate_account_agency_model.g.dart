@@ -39,6 +39,8 @@ EstateAccountAgencyModel _$EstateAccountAgencyModelFromJson(
       ..title = json['title'] as String?
       ..description = json['description'] as String?
       ..linkLocationId = json['linkLocationId'] as int?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
+      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
       ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
           (json['geolocationlongitude'] as num?)?.toDouble()
@@ -75,6 +77,8 @@ Map<String, dynamic> _$EstateAccountAgencyModelToJson(
       'title': instance.title,
       'description': instance.description,
       'linkLocationId': instance.linkLocationId,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
       'address': instance.address,

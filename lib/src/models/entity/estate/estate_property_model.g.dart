@@ -37,14 +37,24 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..mainAdminRecordStatus = $enumDecodeNullable(
           _$EnumRecordStatusEnumMap, json['mainAdminRecordStatus'])
       ..createdYaer = json['createdYaer'] as int?
+      ..createdYaerType =
+          $enumDecodeNullable(_$DateTypeEnumEnumMap, json['createdYaerType'])
       ..partition = json['partition'] as int?
       ..area = json['area'] as int?
-      ..linkEstateUserId = json['linkEstateUserId'] as String?
-      ..linkLocationId = json['linkLocationId'] as int?
-      ..description = json['description'] as String?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
+      ..linkEstateUserId = json['linkEstateUserId'] as String?
+      ..isSoldIt = json['isSoldIt'] as bool?
+      ..reviewDataAfterSoldIt = json['reviewDataAfterSoldIt'] == null
+          ? null
+          : DateTime.parse(json['reviewDataAfterSoldIt'] as String)
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..linkLocationCountryId = json['linkLocationCountryId'] as int?
+      ..description = json['description'] as String?
+      ..descriptionHidden = json['descriptionHidden'] as String?
+      ..viewConfigHiddenInList = json['viewConfigHiddenInList'] as bool?
       ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
       ..linkPropertyTypeUsageId = json['linkPropertyTypeUsageId'] as String?
+      ..linkPropertyProjectId = json['linkPropertyProjectId'] as String?
       ..propertyTypeLanduse = json['propertyTypeLanduse'] == null
           ? null
           : EstatePropertyTypeLanduseModel.fromJson(
@@ -53,10 +63,9 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
           ? null
           : EstatePropertyTypeUsageModel.fromJson(
               json['propertyTypeUsage'] as Map<String, dynamic>)
-      ..favorited = json['favorited'] as bool?
-      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
-      ..geolocationlongitude =
-          (json['geolocationlongitude'] as num?)?.toDouble()
+      ..sharingKey = json['sharingKey'] as int?
+      ..geolocationlatitude = json['geolocationlatitude'] as int?
+      ..geolocationlongitude = json['geolocationlongitude'] as int?
       ..address = json['address'] as String?
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkExtraImageIds = json['linkExtraImageIds'] as String?
@@ -89,9 +98,18 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..uploadFileGUID = (json['uploadFileGUID'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
+      ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentQRCodeBase64 =
+          json['urlViewContentQRCodeBase64'] as String?
+      ..linkLocationCountryIdTitle =
+          json['linkLocationCountryIdTitle'] as String?
       ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
-      ..linkLocationIdParentTitle =
-          json['linkLocationIdParentTitle'] as String?;
+      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
+      ..favorited = json['favorited'] as bool?
+      ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?
+      ..actionSendSmsToAgent = json['actionSendSmsToAgent'] as bool?
+      ..actionSendSmsToCustomerOrder =
+          json['actionSendSmsToCustomerOrder'] as bool?;
 
 Map<String, dynamic> _$EstatePropertyModelToJson(
         EstatePropertyModel instance) =>
@@ -116,17 +134,25 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'mainAdminRecordStatus':
           _$EnumRecordStatusEnumMap[instance.mainAdminRecordStatus],
       'createdYaer': instance.createdYaer,
+      'createdYaerType': _$DateTypeEnumEnumMap[instance.createdYaerType],
       'partition': instance.partition,
       'area': instance.area,
-      'linkEstateUserId': instance.linkEstateUserId,
-      'linkLocationId': instance.linkLocationId,
-      'description': instance.description,
       'linkCmsUserId': instance.linkCmsUserId,
+      'linkEstateUserId': instance.linkEstateUserId,
+      'isSoldIt': instance.isSoldIt,
+      'reviewDataAfterSoldIt':
+          instance.reviewDataAfterSoldIt?.toIso8601String(),
+      'linkLocationId': instance.linkLocationId,
+      'linkLocationCountryId': instance.linkLocationCountryId,
+      'description': instance.description,
+      'descriptionHidden': instance.descriptionHidden,
+      'viewConfigHiddenInList': instance.viewConfigHiddenInList,
       'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'linkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
+      'linkPropertyProjectId': instance.linkPropertyProjectId,
       'propertyTypeLanduse': instance.propertyTypeLanduse,
       'propertyTypeUsage': instance.propertyTypeUsage,
-      'favorited': instance.favorited,
+      'sharingKey': instance.sharingKey,
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
       'address': instance.address,
@@ -147,8 +173,15 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkExtraImageIdsSrc': instance.linkExtraImageIdsSrc,
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'uploadFileGUID': instance.uploadFileGUID,
+      'urlViewContent': instance.urlViewContent,
+      'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
+      'linkLocationCountryIdTitle': instance.linkLocationCountryIdTitle,
       'linkLocationIdTitle': instance.linkLocationIdTitle,
       'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'favorited': instance.favorited,
+      'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
+      'actionSendSmsToAgent': instance.actionSendSmsToAgent,
+      'actionSendSmsToCustomerOrder': instance.actionSendSmsToCustomerOrder,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -158,4 +191,10 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$DateTypeEnumEnumMap = {
+  DateTypeEnum.shamsi: 0,
+  DateTypeEnum.miladi: 1,
+  DateTypeEnum.ghamari: 3,
 };

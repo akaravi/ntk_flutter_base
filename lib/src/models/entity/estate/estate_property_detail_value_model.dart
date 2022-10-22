@@ -17,7 +17,8 @@ class EstatePropertyDetailValueModel {
   @JsonKey(name: 'linkHistoryId')
   String? linkHistoryId;
   EstatePropertyDetailValueModel();
-  factory EstatePropertyDetailValueModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailValueModelFromJson(json);
+  factory EstatePropertyDetailValueModel.fromJson(Map<String, dynamic> json) =>
+      _$EstatePropertyDetailValueModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstatePropertyDetailValueModelToJson(this);
 }

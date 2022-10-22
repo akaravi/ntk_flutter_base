@@ -34,25 +34,43 @@ EstateContractTypeModel _$EstateContractTypeModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..contentCount = json['contentCount'] as int?
+      ..titleSoldIt = json['titleSoldIt'] as String?
+      ..titleSoldItML = json['titleSoldItML'] as String?
+      ..titleSoldItResourceLanguage =
+          json['titleSoldItResourceLanguage'] as String?
       ..description = json['description'] as String?
       ..hasSalePrice = json['hasSalePrice'] as bool?
       ..hasRentPrice = json['hasRentPrice'] as bool?
       ..hasDepositPrice = json['hasDepositPrice'] as bool?
-      ..unitSalePrice = json['unitSalePrice'] as String?
-      ..unitRentPrice = json['unitRentPrice'] as String?
-      ..unitDepositPrice = json['unitDepositPrice'] as String?
-      ..salePriceAllowAgreement = json['salePriceAllowAgreement'] as bool?
-      ..salePriceMin = json['salePriceMin'] as int?
-      ..salePriceMax = json['salePriceMax'] as int?
-      ..rentPriceAllowAgreement = json['rentPriceAllowAgreement'] as bool?
-      ..rentPriceMin = json['rentPriceMin'] as int?
-      ..rentPriceMax = json['rentPriceMax'] as int?
-      ..depositPriceAllowAgreement = json['depositPriceAllowAgreement'] as bool?
-      ..depositPriceMin = json['depositPriceMin'] as int?
-      ..depositPriceMax = json['depositPriceMax'] as int?
+      ..hasPeriodPrice = json['hasPeriodPrice'] as bool?
       ..titleSalePrice = json['titleSalePrice'] as String?
+      ..titleSalePriceML = json['titleSalePriceML'] as String?
+      ..titleSalePriceResourceLanguage =
+          json['titleSalePriceResourceLanguage'] as String?
+      ..titleRentPrice = json['titleRentPrice'] as String?
+      ..titleRentPriceML = json['titleRentPriceML'] as String?
+      ..titleRentPriceResourceLanguage =
+          json['titleRentPriceResourceLanguage'] as String?
       ..titleDepositPrice = json['titleDepositPrice'] as String?
-      ..titleRentPrice = json['titleRentPrice'] as String?;
+      ..titleDepositPriceML = json['titleDepositPriceML'] as String?
+      ..titleDepositPriceResourceLanguage =
+          json['titleDepositPriceResourceLanguage'] as String?
+      ..titlePeriodPrice = json['titlePeriodPrice'] as String?
+      ..titlePeriodPriceML = json['titlePeriodPriceML'] as String?
+      ..titlePeriodPriceResourceLanguage =
+          json['titlePeriodPriceResourceLanguage'] as String?
+      ..salePriceAllowAgreement = json['salePriceAllowAgreement'] as bool?
+      ..rentPriceAllowAgreement = json['rentPriceAllowAgreement'] as bool?
+      ..rentPriceAllowPriodCount = json['rentPriceAllowPriodCount'] as bool?
+      ..rentPricePriodTitle = json['rentPricePriodTitle'] as String?
+      ..rentPricePriodTitleML = json['rentPricePriodTitleML'] as String?
+      ..rentPricePriodTitleResourceLanguage =
+          json['rentPricePriodTitleResourceLanguage'] as String?
+      ..depositPriceAllowAgreement = json['depositPriceAllowAgreement'] as bool?
+      ..periodPriceAllowAgreement = json['periodPriceAllowAgreement'] as bool?;
 
 Map<String, dynamic> _$EstateContractTypeModelToJson(
         EstateContractTypeModel instance) =>
@@ -73,25 +91,40 @@ Map<String, dynamic> _$EstateContractTypeModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'contentCount': instance.contentCount,
+      'titleSoldIt': instance.titleSoldIt,
+      'titleSoldItML': instance.titleSoldItML,
+      'titleSoldItResourceLanguage': instance.titleSoldItResourceLanguage,
       'description': instance.description,
       'hasSalePrice': instance.hasSalePrice,
       'hasRentPrice': instance.hasRentPrice,
       'hasDepositPrice': instance.hasDepositPrice,
-      'unitSalePrice': instance.unitSalePrice,
-      'unitRentPrice': instance.unitRentPrice,
-      'unitDepositPrice': instance.unitDepositPrice,
-      'salePriceAllowAgreement': instance.salePriceAllowAgreement,
-      'salePriceMin': instance.salePriceMin,
-      'salePriceMax': instance.salePriceMax,
-      'rentPriceAllowAgreement': instance.rentPriceAllowAgreement,
-      'rentPriceMin': instance.rentPriceMin,
-      'rentPriceMax': instance.rentPriceMax,
-      'depositPriceAllowAgreement': instance.depositPriceAllowAgreement,
-      'depositPriceMin': instance.depositPriceMin,
-      'depositPriceMax': instance.depositPriceMax,
+      'hasPeriodPrice': instance.hasPeriodPrice,
       'titleSalePrice': instance.titleSalePrice,
-      'titleDepositPrice': instance.titleDepositPrice,
+      'titleSalePriceML': instance.titleSalePriceML,
+      'titleSalePriceResourceLanguage': instance.titleSalePriceResourceLanguage,
       'titleRentPrice': instance.titleRentPrice,
+      'titleRentPriceML': instance.titleRentPriceML,
+      'titleRentPriceResourceLanguage': instance.titleRentPriceResourceLanguage,
+      'titleDepositPrice': instance.titleDepositPrice,
+      'titleDepositPriceML': instance.titleDepositPriceML,
+      'titleDepositPriceResourceLanguage':
+          instance.titleDepositPriceResourceLanguage,
+      'titlePeriodPrice': instance.titlePeriodPrice,
+      'titlePeriodPriceML': instance.titlePeriodPriceML,
+      'titlePeriodPriceResourceLanguage':
+          instance.titlePeriodPriceResourceLanguage,
+      'salePriceAllowAgreement': instance.salePriceAllowAgreement,
+      'rentPriceAllowAgreement': instance.rentPriceAllowAgreement,
+      'rentPriceAllowPriodCount': instance.rentPriceAllowPriodCount,
+      'rentPricePriodTitle': instance.rentPricePriodTitle,
+      'rentPricePriodTitleML': instance.rentPricePriodTitleML,
+      'rentPricePriodTitleResourceLanguage':
+          instance.rentPricePriodTitleResourceLanguage,
+      'depositPriceAllowAgreement': instance.depositPriceAllowAgreement,
+      'periodPriceAllowAgreement': instance.periodPriceAllowAgreement,
     };
 
 const _$EnumRecordStatusEnumMap = {

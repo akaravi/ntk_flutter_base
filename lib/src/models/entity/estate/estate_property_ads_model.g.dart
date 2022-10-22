@@ -38,8 +38,19 @@ EstatePropertyAdsModel _$EstatePropertyAdsModelFromJson(
       ..stationLevel = json['StationLevel'] as int?
       ..viewLevel = json['ViewLevel'] as int?
       ..linkPropertyId = json['LinkPropertyId'] as String?
-      ..fromDate = json['FromDate'] as String?
-      ..expireDate = json['ExpireDate'] as String?;
+      ..fromDate = json['FromDate'] == null
+          ? null
+          : DateTime.parse(json['FromDate'] as String)
+      ..expireDate = json['ExpireDate'] == null
+          ? null
+          : DateTime.parse(json['ExpireDate'] as String)
+      ..linkAdsTypeId = json['linkAdsTypeId'] as String?
+      ..systemTransactionId = json['systemTransactionId'] as int?
+      ..systemPaymentIsSuccess = json['systemPaymentIsSuccess'] as int?
+      ..amountPure = json['amountPure'] as int?
+      ..feeTransport = json['feeTransport'] as int?
+      ..feeTax = json['feeTax'] as int?
+      ..amount = json['amount'] as int?;
 
 Map<String, dynamic> _$EstatePropertyAdsModelToJson(
         EstatePropertyAdsModel instance) =>
@@ -64,8 +75,15 @@ Map<String, dynamic> _$EstatePropertyAdsModelToJson(
       'StationLevel': instance.stationLevel,
       'ViewLevel': instance.viewLevel,
       'LinkPropertyId': instance.linkPropertyId,
-      'FromDate': instance.fromDate,
-      'ExpireDate': instance.expireDate,
+      'FromDate': instance.fromDate?.toIso8601String(),
+      'ExpireDate': instance.expireDate?.toIso8601String(),
+      'linkAdsTypeId': instance.linkAdsTypeId,
+      'systemTransactionId': instance.systemTransactionId,
+      'systemPaymentIsSuccess': instance.systemPaymentIsSuccess,
+      'amountPure': instance.amountPure,
+      'feeTransport': instance.feeTransport,
+      'feeTax': instance.feeTax,
+      'amount': instance.amount,
     };
 
 const _$EnumRecordStatusEnumMap = {

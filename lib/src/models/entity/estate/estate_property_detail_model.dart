@@ -9,7 +9,6 @@ class EstatePropertyDetailModel {
   String? id;
   @JsonKey(name: 'title')
   String? title;
-
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'iconFont')
@@ -17,8 +16,7 @@ class EstatePropertyDetailModel {
   @JsonKey(name: 'iconColor')
   String? iconColor;
   @JsonKey(name: 'inputDataType')
-  int? inputDataType;
-  EnumInputDataType? inputDataTypeEnum;
+  EnumInputDataType? inputDataType;
 
   @JsonKey(name: 'invisibleForEndUser')
   bool? invisibleForEndUser;
@@ -31,10 +29,8 @@ class EstatePropertyDetailModel {
 
   @JsonKey(name: 'required')
   bool? required;
-
   @JsonKey(name: 'isHistoryable')
   bool? isHistoryable;
-
   @JsonKey(name: 'isSearchable')
   bool? isSearchable;
   @JsonKey(name: 'showInFormOrder')
@@ -51,14 +47,14 @@ class EstatePropertyDetailModel {
   bool? configValueForceUseDefaultValue;
   @JsonKey(name: 'configValueMultipleChoice')
   bool? configValueMultipleChoice;
-
   @JsonKey(name: 'configValueIntValueMin')
   int? configValueIntValueMin;
-
   @JsonKey(name: 'configValueIntValueMax')
   int? configValueIntValueMax;
+  
   EstatePropertyDetailModel();
-  factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailModelFromJson(json);
+  factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) =>
+      _$EstatePropertyDetailModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstatePropertyDetailModelToJson(this);
 }

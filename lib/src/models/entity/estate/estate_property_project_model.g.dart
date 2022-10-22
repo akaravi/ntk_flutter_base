@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_account_user_model.dart';
+part of 'estate_property_project_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateAccountUserModel _$EstateAccountUserModelFromJson(
+EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
         Map<String, dynamic> json) =>
-    EstateAccountUserModel()
+    EstatePropertyProjectModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -33,29 +33,40 @@ EstateAccountUserModel _$EstateAccountUserModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..title = json['title'] as String?
       ..description = json['description'] as String?
-      ..joinId = json['joinId'] as String?
+      ..body = json['body'] as String?
+      ..geolocationlatitude = json['geolocationlatitude'] as int?
+      ..geolocationlongitude = json['geolocationlongitude'] as int?
       ..linkLocationId = json['linkLocationId'] as int?
-      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
-      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
-      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
-      ..geolocationlongitude =
-          (json['geolocationlongitude'] as num?)?.toDouble()
-      ..dateManufacture = json['dateManufacture'] == null
-          ? null
-          : DateTime.parse(json['dateManufacture'] as String)
-      ..placeProduction = json['placeProduction'] as String?
-      ..serialRfId = json['serialRfId'] as String?
-      ..serialNumber = json['serialNumber'] as String?
-      ..phoneNumber = json['phoneNumber'] as String?
-      ..address = json['address'] as String?
+      ..keyword = json['keyword'] as String?
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..linkExtraImageIds = json['linkExtraImageIds'] as String?
+      ..linkFilePodcastId = json['linkFilePodcastId'] as int?
+      ..linkFileMovieId = json['linkFileMovieId'] as int?
       ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..scoreClick = json['scoreClick'] as int?
+      ..scoreSumPercent = json['scoreSumPercent'] as int?
+      ..viewCount = json['viewCount'] as int?
+      ..favorited = json['favorited'] as bool?
+      ..fromDate = json['fromDate'] == null
+          ? null
+          : DateTime.parse(json['fromDate'] as String)
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..linkFilePodcastIdSrc = json['linkFilePodcastIdSrc'] as String?
+      ..linkFileMovieIdSrc = json['linkFileMovieIdSrc'] as String?
+      ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList()
+      ..linkExtraImageIdsSrc = (json['linkExtraImageIdsSrc'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList();
 
-Map<String, dynamic> _$EstateAccountUserModelToJson(
-        EstateAccountUserModel instance) =>
+Map<String, dynamic> _$EstatePropertyProjectModelToJson(
+        EstatePropertyProjectModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -72,23 +83,29 @@ Map<String, dynamic> _$EstateAccountUserModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'linkCmsUserId': instance.linkCmsUserId,
       'title': instance.title,
       'description': instance.description,
-      'joinId': instance.joinId,
-      'linkLocationId': instance.linkLocationId,
-      'linkLocationIdTitle': instance.linkLocationIdTitle,
-      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'body': instance.body,
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
-      'dateManufacture': instance.dateManufacture?.toIso8601String(),
-      'placeProduction': instance.placeProduction,
-      'serialRfId': instance.serialRfId,
-      'serialNumber': instance.serialNumber,
-      'phoneNumber': instance.phoneNumber,
-      'address': instance.address,
+      'linkLocationId': instance.linkLocationId,
+      'keyword': instance.keyword,
+      'linkFileIds': instance.linkFileIds,
+      'linkExtraImageIds': instance.linkExtraImageIds,
+      'linkFilePodcastId': instance.linkFilePodcastId,
+      'linkFileMovieId': instance.linkFileMovieId,
       'linkMainImageId': instance.linkMainImageId,
+      'scoreClick': instance.scoreClick,
+      'scoreSumPercent': instance.scoreSumPercent,
+      'viewCount': instance.viewCount,
+      'favorited': instance.favorited,
+      'fromDate': instance.fromDate?.toIso8601String(),
+      'expireDate': instance.expireDate?.toIso8601String(),
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkFilePodcastIdSrc': instance.linkFilePodcastIdSrc,
+      'linkFileMovieIdSrc': instance.linkFileMovieIdSrc,
+      'linkFileIdsSrc': instance.linkFileIdsSrc,
+      'linkExtraImageIdsSrc': instance.linkExtraImageIdsSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

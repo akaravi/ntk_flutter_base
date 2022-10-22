@@ -11,6 +11,12 @@ part 'estate_property_type_landuse_model.g.dart';
 class EstatePropertyTypeLanduseModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'title')
   String? title;
+  @JsonKey(name: 'titleML')
+  String? titleML;
+  @JsonKey(name: 'titleResourceLanguage')
+  String? titleResourceLanguage;
+  @JsonKey(name: 'contentCount')
+  int? contentCount;
   @JsonKey(name: 'titleCreatedYaer')
   String? titleCreatedYaer;
   @JsonKey(name: 'titlePartition')
@@ -30,7 +36,8 @@ class EstatePropertyTypeLanduseModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'propertyDetails')
   List<EstatePropertyDetailModel>? propertyDetails;
   EstatePropertyTypeLanduseModel();
-  factory EstatePropertyTypeLanduseModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyTypeLanduseModelFromJson(json);
+  factory EstatePropertyTypeLanduseModel.fromJson(Map<String, dynamic> json) =>
+      _$EstatePropertyTypeLanduseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstatePropertyTypeLanduseModelToJson(this);
 }

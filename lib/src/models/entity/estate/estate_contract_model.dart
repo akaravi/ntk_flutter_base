@@ -6,7 +6,6 @@ import 'estate_contract_type_model.dart';
 
 part 'estate_contract_model.g.dart';
 
-
 @JsonSerializable()
 class EstateContractModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'description')
@@ -29,9 +28,23 @@ class EstateContractModel extends BaseModuleEntity<String> {
   bool? depositPriceByAgreement;
   @JsonKey(name: 'depositPrice')
   double? depositPrice;
-  @JsonKey(name: ' unitSalePrice')
-  String unitSalePrice = "تومان";EstateContractModel();
-  factory EstateContractModel.fromJson(Map<String, dynamic> json) => _$EstateContractModelFromJson(json);
+  @JsonKey(name: 'periodPriceByAgreement')
+  bool? periodPriceByAgreement;
+  @JsonKey(name: 'periodPrice')
+  double? periodPrice;
+  @JsonKey(name: 'periodCount')
+  double? periodCount;
+  @JsonKey(name: 'linkCoreCurrencyId')
+  int? linkCoreCurrencyId;
+  @JsonKey(name: 'currencyTitle')
+  String? currencyTitle;
+  @JsonKey(name: 'currencySymbol')
+  String? currencySymbol;
+  // @JsonKey(name: ' unitSalePrice')
+  // String unitSalePrice = "تومان";
+  EstateContractModel();
+  factory EstateContractModel.fromJson(Map<String, dynamic> json) =>
+      _$EstateContractModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstateContractModelToJson(this);
 }

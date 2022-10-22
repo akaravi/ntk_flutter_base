@@ -7,7 +7,6 @@ import 'estate_property_detail_value_model.dart';
 
 part 'estate_property_detail_group_model.g.dart';
 
-
 @JsonSerializable()
 class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'title')
@@ -28,8 +27,9 @@ class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
   String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'propertyDetails')
   List<EstatePropertyDetailModel>? propertyDetails;
-  List<EstatePropertyDetailValueModel>? propertyValues;EstatePropertyDetailGroupModel();
-  factory EstatePropertyDetailGroupModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyDetailGroupModelFromJson(json);
+  EstatePropertyDetailGroupModel();
+  factory EstatePropertyDetailGroupModel.fromJson(Map<String, dynamic> json) =>
+      _$EstatePropertyDetailGroupModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstatePropertyDetailGroupModelToJson(this);
 }

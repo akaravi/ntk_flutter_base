@@ -44,10 +44,6 @@ EstatePropertyDetailGroupModel _$EstatePropertyDetailGroupModelFromJson(
       ..propertyDetails = (json['propertyDetails'] as List<dynamic>?)
           ?.map((e) =>
               EstatePropertyDetailModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..propertyValues = (json['propertyValues'] as List<dynamic>?)
-          ?.map((e) => EstatePropertyDetailValueModel.fromJson(
-              e as Map<String, dynamic>))
           .toList();
 
 Map<String, dynamic> _$EstatePropertyDetailGroupModelToJson(
@@ -77,7 +73,6 @@ Map<String, dynamic> _$EstatePropertyDetailGroupModelToJson(
       'isSearchable': instance.isSearchable,
       'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'propertyDetails': instance.propertyDetails,
-      'propertyValues': instance.propertyValues,
     };
 
 const _$EnumRecordStatusEnumMap = {

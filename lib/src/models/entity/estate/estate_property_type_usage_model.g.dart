@@ -34,6 +34,9 @@ EstatePropertyTypeUsageModel _$EstatePropertyTypeUsageModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..contentCount = json['contentCount'] as String?
       ..description = json['description'] as String?
       ..iconFont = json['iconFont'] as String?
       ..iconColor = json['iconColor'] as String?
@@ -63,6 +66,9 @@ Map<String, dynamic> _$EstatePropertyTypeUsageModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'contentCount': instance.contentCount,
       'description': instance.description,
       'iconFont': instance.iconFont,
       'iconColor': instance.iconColor,

@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_account_user_model.dart';
+part of 'estate_billboard_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateAccountUserModel _$EstateAccountUserModelFromJson(
+EstateBillboardModel _$EstateBillboardModelFromJson(
         Map<String, dynamic> json) =>
-    EstateAccountUserModel()
+    EstateBillboardModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -33,29 +33,40 @@ EstateAccountUserModel _$EstateAccountUserModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..linkCmsUserId = json['linkCmsUserId'] as int?
-      ..title = json['title'] as String?
-      ..description = json['description'] as String?
-      ..joinId = json['joinId'] as String?
-      ..linkLocationId = json['linkLocationId'] as int?
-      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
-      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
-      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
-      ..geolocationlongitude =
-          (json['geolocationlongitude'] as num?)?.toDouble()
-      ..dateManufacture = json['dateManufacture'] == null
-          ? null
-          : DateTime.parse(json['dateManufacture'] as String)
-      ..placeProduction = json['placeProduction'] as String?
-      ..serialRfId = json['serialRfId'] as String?
-      ..serialNumber = json['serialNumber'] as String?
-      ..phoneNumber = json['phoneNumber'] as String?
-      ..address = json['address'] as String?
+      ..title = json['Title'] as String?
+      ..description = json['Description'] as String?
+      ..descriptionHidden = json['descriptionHidden'] as String?
+      ..includeAllSite = json['includeAllSite'] as bool?
+      ..speedView = json['speedView'] as int?
+      ..reloadViewPerMin = json['reloadViewPerMin'] as int?
+      ..linkPropertyIds = (json['linkPropertyIds'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList()
+      ..linkLocationIds = (json['linkLocationIds'] as List<dynamic>?)
+          ?.map((e) => e as int)
+          .toList()
+      ..linkPropertyTypeLanduseIds =
+          (json['linkPropertyTypeLanduseIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
+      ..linkPropertyTypeUsageIds =
+          (json['linkPropertyTypeUsageIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
+      ..linkContractTypeIds = (json['linkContractTypeIds'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList()
       ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentQRCodeBase64 =
+          json['urlViewContentQRCodeBase64'] as String?
+      ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
+      ..currencyTitle = json['currencyTitle'] as String?
+      ..currencySymbol = json['currencySymbol'] as String?;
 
-Map<String, dynamic> _$EstateAccountUserModelToJson(
-        EstateAccountUserModel instance) =>
+Map<String, dynamic> _$EstateBillboardModelToJson(
+        EstateBillboardModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -72,23 +83,24 @@ Map<String, dynamic> _$EstateAccountUserModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'linkCmsUserId': instance.linkCmsUserId,
-      'title': instance.title,
-      'description': instance.description,
-      'joinId': instance.joinId,
-      'linkLocationId': instance.linkLocationId,
-      'linkLocationIdTitle': instance.linkLocationIdTitle,
-      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
-      'geolocationlatitude': instance.geolocationlatitude,
-      'geolocationlongitude': instance.geolocationlongitude,
-      'dateManufacture': instance.dateManufacture?.toIso8601String(),
-      'placeProduction': instance.placeProduction,
-      'serialRfId': instance.serialRfId,
-      'serialNumber': instance.serialNumber,
-      'phoneNumber': instance.phoneNumber,
-      'address': instance.address,
+      'Title': instance.title,
+      'Description': instance.description,
+      'descriptionHidden': instance.descriptionHidden,
+      'includeAllSite': instance.includeAllSite,
+      'speedView': instance.speedView,
+      'reloadViewPerMin': instance.reloadViewPerMin,
+      'linkPropertyIds': instance.linkPropertyIds,
+      'linkLocationIds': instance.linkLocationIds,
+      'linkPropertyTypeLanduseIds': instance.linkPropertyTypeLanduseIds,
+      'linkPropertyTypeUsageIds': instance.linkPropertyTypeUsageIds,
+      'linkContractTypeIds': instance.linkContractTypeIds,
       'linkMainImageId': instance.linkMainImageId,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'urlViewContent': instance.urlViewContent,
+      'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
+      'linkCoreCurrencyId': instance.linkCoreCurrencyId,
+      'currencyTitle': instance.currencyTitle,
+      'currencySymbol': instance.currencySymbol,
     };
 
 const _$EnumRecordStatusEnumMap = {

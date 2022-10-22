@@ -14,9 +14,8 @@ EstatePropertyDetailModel _$EstatePropertyDetailModelFromJson(
       ..description = json['description'] as String?
       ..iconFont = json['iconFont'] as String?
       ..iconColor = json['iconColor'] as String?
-      ..inputDataType = json['inputDataType'] as int?
-      ..inputDataTypeEnum = $enumDecodeNullable(
-          _$EnumInputDataTypeEnumMap, json['inputDataTypeEnum'])
+      ..inputDataType =
+          $enumDecodeNullable(_$EnumInputDataTypeEnumMap, json['inputDataType'])
       ..invisibleForEndUser = json['invisibleForEndUser'] as bool?
       ..invisibleForSubmiter = json['invisibleForSubmiter'] as bool?
       ..unit = json['unit'] as String?
@@ -46,9 +45,7 @@ Map<String, dynamic> _$EstatePropertyDetailModelToJson(
       'description': instance.description,
       'iconFont': instance.iconFont,
       'iconColor': instance.iconColor,
-      'inputDataType': instance.inputDataType,
-      'inputDataTypeEnum':
-          _$EnumInputDataTypeEnumMap[instance.inputDataTypeEnum],
+      'inputDataType': _$EnumInputDataTypeEnumMap[instance.inputDataType],
       'invisibleForEndUser': instance.invisibleForEndUser,
       'invisibleForSubmiter': instance.invisibleForSubmiter,
       'unit': instance.unit,

@@ -45,7 +45,12 @@ EstateContractModel _$EstateContractModelFromJson(Map<String, dynamic> json) =>
       ..rentPrice = (json['rentPrice'] as num?)?.toDouble()
       ..depositPriceByAgreement = json['depositPriceByAgreement'] as bool?
       ..depositPrice = (json['depositPrice'] as num?)?.toDouble()
-      ..unitSalePrice = json[' unitSalePrice'] as String;
+      ..periodPriceByAgreement = json['periodPriceByAgreement'] as bool?
+      ..periodPrice = (json['periodPrice'] as num?)?.toDouble()
+      ..periodCount = (json['periodCount'] as num?)?.toDouble()
+      ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
+      ..currencyTitle = json['currencyTitle'] as String?
+      ..currencySymbol = json['currencySymbol'] as String?;
 
 Map<String, dynamic> _$EstateContractModelToJson(
         EstateContractModel instance) =>
@@ -75,7 +80,12 @@ Map<String, dynamic> _$EstateContractModelToJson(
       'rentPrice': instance.rentPrice,
       'depositPriceByAgreement': instance.depositPriceByAgreement,
       'depositPrice': instance.depositPrice,
-      ' unitSalePrice': instance.unitSalePrice,
+      'periodPriceByAgreement': instance.periodPriceByAgreement,
+      'periodPrice': instance.periodPrice,
+      'periodCount': instance.periodCount,
+      'linkCoreCurrencyId': instance.linkCoreCurrencyId,
+      'currencyTitle': instance.currencyTitle,
+      'currencySymbol': instance.currencySymbol,
     };
 
 const _$EnumRecordStatusEnumMap = {

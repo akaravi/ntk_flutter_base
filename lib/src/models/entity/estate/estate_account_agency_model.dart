@@ -4,7 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'estate_account_agency_model.g.dart';
 
-
 @JsonSerializable()
 class EstateAccountAgencyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'mainAdminRecordStatus')
@@ -17,6 +16,10 @@ class EstateAccountAgencyModel extends BaseModuleEntity<String> {
   String? description;
   @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
+  @JsonKey(name: 'linkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'linkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
   @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
@@ -34,8 +37,10 @@ class EstateAccountAgencyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkExtraImageIds')
   String? linkExtraImageIds;
   @JsonKey(name: 'linkExtraImageIdsSrc')
-  List<String>? linkExtraImageIdsSrc;EstateAccountAgencyModel();
-  factory EstateAccountAgencyModel.fromJson(Map<String, dynamic> json) => _$EstateAccountAgencyModelFromJson(json);
+  List<String>? linkExtraImageIdsSrc;
+  EstateAccountAgencyModel();
+  factory EstateAccountAgencyModel.fromJson(Map<String, dynamic> json) =>
+      _$EstateAccountAgencyModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstateAccountAgencyModelToJson(this);
 }

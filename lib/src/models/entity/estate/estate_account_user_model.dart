@@ -4,7 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'estate_account_user_model.g.dart';
 
-
 @JsonSerializable()
 class EstateAccountUserModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkCmsUserId')
@@ -17,12 +16,16 @@ class EstateAccountUserModel extends BaseModuleEntity<String> {
   String? joinId;
   @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
+  @JsonKey(name: 'linkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'linkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
   @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
   @JsonKey(name: 'dateManufacture')
-  String? dateManufacture;
+  DateTime? dateManufacture;
   @JsonKey(name: 'placeProduction')
   String? placeProduction;
   @JsonKey(name: 'serialRfId')
@@ -38,11 +41,9 @@ class EstateAccountUserModel extends BaseModuleEntity<String> {
   int? linkMainImageId;
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'linkLocationIdTitle')
-  String? linkLocationIdTitle;
-  @JsonKey(name: 'linkLocationIdParentTitle')
-  String? linkLocationIdParentTitle;EstateAccountUserModel();
-  factory EstateAccountUserModel.fromJson(Map<String, dynamic> json) => _$EstateAccountUserModelFromJson(json);
+  EstateAccountUserModel();
+  factory EstateAccountUserModel.fromJson(Map<String, dynamic> json) =>
+      _$EstateAccountUserModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstateAccountUserModelToJson(this);
 }

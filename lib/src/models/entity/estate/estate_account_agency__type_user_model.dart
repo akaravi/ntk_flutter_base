@@ -5,20 +5,21 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'estate_account_agency__type_user_model.g.dart';
 
-
 @JsonSerializable()
 class EstateAccountAgencyTypeUserModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'accountUserType')
-  int? accountUserType;
-  @JsonKey(name: 'accountUserTypeEnum')
-  EnumEstateUserType? accountUserTypeEnum;
+  EnumEstateUserType? accountUserType;
   @JsonKey(name: 'linkAccountUserId')
   String? linkAccountUserId;
   @JsonKey(name: 'linkAccountAgencyId')
   String? linkAccountAgencyId;
   @JsonKey(name: 'linkPropertyId')
-  String? linkPropertyId;EstateAccountAgencyTypeUserModel();
-  factory EstateAccountAgencyTypeUserModel.fromJson(Map<String, dynamic> json) => _$EstateAccountAgencyTypeUserModelFromJson(json);
+  String? linkPropertyId;
+  EstateAccountAgencyTypeUserModel();
+  factory EstateAccountAgencyTypeUserModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$EstateAccountAgencyTypeUserModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$EstateAccountAgencyTypeUserModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$EstateAccountAgencyTypeUserModelToJson(this);
 }

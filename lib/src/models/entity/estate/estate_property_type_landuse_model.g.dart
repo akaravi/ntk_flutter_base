@@ -34,6 +34,9 @@ EstatePropertyTypeLanduseModel _$EstatePropertyTypeLanduseModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..contentCount = json['contentCount'] as int?
       ..titleCreatedYaer = json['titleCreatedYaer'] as String?
       ..titlePartition = json['titlePartition'] as String?
       ..description = json['description'] as String?
@@ -69,6 +72,9 @@ Map<String, dynamic> _$EstatePropertyTypeLanduseModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
+      'contentCount': instance.contentCount,
       'titleCreatedYaer': instance.titleCreatedYaer,
       'titlePartition': instance.titlePartition,
       'description': instance.description,

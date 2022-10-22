@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_account_agency__type_user_model.dart';
+part of 'estate_ads_type_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
-        Map<String, dynamic> json) =>
-    EstateAccountAgencyTypeUserModel()
+EstateAdsTypeModel _$EstateAdsTypeModelFromJson(Map<String, dynamic> json) =>
+    EstateAdsTypeModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -33,14 +32,24 @@ EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..accountUserType = $enumDecodeNullable(
-          _$EnumEstateUserTypeEnumMap, json['accountUserType'])
-      ..linkAccountUserId = json['linkAccountUserId'] as String?
-      ..linkAccountAgencyId = json['linkAccountAgencyId'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?;
+      ..title = json['Title'] as String?
+      ..description = json['Description'] as String?
+      ..paymentForMainSite = json['paymentForMainSite'] as bool?
+      ..stationLevel = json['StationLevel'] as int?
+      ..viewLevel = json['ViewLevel'] as int?
+      ..dayOfActivity = json['dayOfActivity'] as int?
+      ..salePrice = json['salePrice'] as int?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..stationLevelDescription =
+          (json['stationLevelDescription'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
+      ..viewLevelDescription = (json['viewLevelDescription'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList();
 
-Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
-        EstateAccountAgencyTypeUserModel instance) =>
+Map<String, dynamic> _$EstateAdsTypeModelToJson(EstateAdsTypeModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -57,10 +66,17 @@ Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'accountUserType': _$EnumEstateUserTypeEnumMap[instance.accountUserType],
-      'linkAccountUserId': instance.linkAccountUserId,
-      'linkAccountAgencyId': instance.linkAccountAgencyId,
-      'linkPropertyId': instance.linkPropertyId,
+      'Title': instance.title,
+      'Description': instance.description,
+      'paymentForMainSite': instance.paymentForMainSite,
+      'StationLevel': instance.stationLevel,
+      'ViewLevel': instance.viewLevel,
+      'dayOfActivity': instance.dayOfActivity,
+      'salePrice': instance.salePrice,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'stationLevelDescription': instance.stationLevelDescription,
+      'viewLevelDescription': instance.viewLevelDescription,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -70,10 +86,4 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
-};
-
-const _$EnumEstateUserTypeEnumMap = {
-  EnumEstateUserType.customer: 1,
-  EnumEstateUserType.agent: 2,
-  EnumEstateUserType.agency: 3,
 };
