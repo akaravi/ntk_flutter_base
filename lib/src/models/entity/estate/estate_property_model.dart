@@ -91,7 +91,10 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
 
   @JsonKey(name: 'scoreSumPercent')
   int? scoreSumPercent;
-
+  @JsonKey(name: 'adsActive')
+  bool? adsActive;
+  @JsonKey(name: 'adsExpireDate')
+  DateTime? adsExpireDate;
   @JsonKey(name: 'viewCount')
   int? viewCount;
 

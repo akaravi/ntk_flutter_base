@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_module_tag_category_model.dart';
+part of 'core_module_relationship_content_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoreModuleTagCategoryModel _$CoreModuleTagCategoryModelFromJson(
+CoreModuleRelationshipContentModel _$CoreModuleRelationshipContentModelFromJson(
         Map<String, dynamic> json) =>
-    CoreModuleTagCategoryModel()
+    CoreModuleRelationshipContentModel()
       ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -34,31 +34,13 @@ CoreModuleTagCategoryModel _$CoreModuleTagCategoryModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
-      ..description = json['description'] as String?
-      ..fontIcon = json['fontIcon'] as String?
-      ..linkParentIdNode = json['linkParentIdNode'] as String?
-      ..linkParentId = json['linkParentId'] as int?
-      ..category = json['category'] == null
-          ? null
-          : CoreModuleTagCategoryModel.fromJson(
-              json['category'] as Map<String, dynamic>)
-      ..virtual_Category = json['virtual_Category'] == null
-          ? null
-          : CoreModuleTagCategoryModel.fromJson(
-              json['virtual_Category'] as Map<String, dynamic>)
-      ..children = (json['children'] as List<dynamic>?)
-          ?.map((e) =>
-              CoreModuleTagCategoryModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..tags = (json['tags'] as List<dynamic>?)
-          ?.map((e) => CoreModuleTagModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..moduleNameMain = json['moduleNameMain'] as int?
+      ..linkModuleContentIdMain = json['linkModuleContentIdMain'] as int?
+      ..moduleNameOther = json['moduleNameOther'] as int?
+      ..linkModuleContentIdOther = json['linkModuleContentIdOther'] as int?;
 
-Map<String, dynamic> _$CoreModuleTagCategoryModelToJson(
-        CoreModuleTagCategoryModel instance) =>
+Map<String, dynamic> _$CoreModuleRelationshipContentModelToJson(
+        CoreModuleRelationshipContentModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -76,17 +58,10 @@ Map<String, dynamic> _$CoreModuleTagCategoryModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
-      'titleResourceLanguage': instance.titleResourceLanguage,
-      'description': instance.description,
-      'fontIcon': instance.fontIcon,
-      'linkParentIdNode': instance.linkParentIdNode,
-      'linkParentId': instance.linkParentId,
-      'category': instance.category,
-      'virtual_Category': instance.virtual_Category,
-      'children': instance.children,
-      'tags': instance.tags,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'moduleNameMain': instance.moduleNameMain,
+      'linkModuleContentIdMain': instance.linkModuleContentIdMain,
+      'moduleNameOther': instance.moduleNameOther,
+      'linkModuleContentIdOther': instance.linkModuleContentIdOther,
     };
 
 const _$EnumRecordStatusEnumMap = {

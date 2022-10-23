@@ -72,6 +72,10 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..linkFileIds = json['linkFileIds'] as String?
       ..scoreClick = json['scoreClick'] as int?
       ..scoreSumPercent = json['scoreSumPercent'] as int?
+      ..adsActive = json['adsActive'] as bool?
+      ..adsExpireDate = json['adsExpireDate'] == null
+          ? null
+          : DateTime.parse(json['adsExpireDate'] as String)
       ..viewCount = json['viewCount'] as int?
       ..aboutAgentTel = json['aboutAgentTel'] as String?
       ..aboutAgentMobile = json['aboutAgentMobile'] as String?
@@ -161,6 +165,8 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkFileIds': instance.linkFileIds,
       'scoreClick': instance.scoreClick,
       'scoreSumPercent': instance.scoreSumPercent,
+      'adsActive': instance.adsActive,
+      'adsExpireDate': instance.adsExpireDate?.toIso8601String(),
       'viewCount': instance.viewCount,
       'aboutAgentTel': instance.aboutAgentTel,
       'aboutAgentMobile': instance.aboutAgentMobile,

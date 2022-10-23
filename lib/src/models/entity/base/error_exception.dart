@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'access_model.dart';
-import 'error_exception_result_base.dart';
+import 'error_exception_base.dart';
 
-part 'error_exception_result.g.dart';
+part 'error_exception.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class ErrorException<TEntity> extends ErrorExceptionBase {

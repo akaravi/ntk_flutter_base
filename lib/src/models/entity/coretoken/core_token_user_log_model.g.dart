@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_token_model.dart';
+part of 'core_token_user_log_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserTokenModel _$UserTokenModelFromJson(Map<String, dynamic> json) =>
-    UserTokenModel()
+CoreTokenUserLogModel _$CoreTokenUserLogModelFromJson(
+        Map<String, dynamic> json) =>
+    CoreTokenUserLogModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -32,25 +33,31 @@ UserTokenModel _$UserTokenModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkUserId = json['linkUserId'] as int?
-      ..linkMemberUserId = json['linkMemberUserId'] as int?
+      ..linkMemberId = json['linkMemberId'] as String?
       ..linkSiteId = json['linkSiteId'] as int?
       ..deviceClientMAC = json['deviceClientMAC'] as String?
       ..linkDeviceId = json['linkDeviceId'] as int?
       ..token = json['token'] as String?
-      ..expireDate = json['expireDate'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
       ..userAccessAreaType = $enumDecodeNullable(
           _$EnumManageUserAccessAreaTypesEnumMap, json['userAccessAreaType'])
-      ..userType = $enumDecodeNullable(
-          _$EnumManageUserAccessUserTypesEnumMap, json['userType'])
+      ..userAccessUserType = $enumDecodeNullable(
+          _$EnumManageUserAccessUserTypesEnumMap, json['userAccessUserType'])
+      ..userAccessAreaTypeTitle = json['userAccessAreaTypeTitle'] as String?
+      ..userAccessUserTypeTitle = json['userAccessUserTypeTitle'] as String?
       ..userAccessAdminAllowToAllData =
           json['userAccessAdminAllowToAllData'] as bool?
       ..userAccessAdminAllowToProfessionalData =
           json['userAccessAdminAllowToProfessionalData'] as bool?
       ..rememberOnDevice = json['rememberOnDevice'] as bool?
       ..browserLanguage = json['browserLanguage'] as String?
-      ..userLanguage = json['userLanguage'] as int?;
+      ..userLanguage = json['userLanguage'] as int?
+      ..action = json['action'] as String?;
 
-Map<String, dynamic> _$UserTokenModelToJson(UserTokenModel instance) =>
+Map<String, dynamic> _$CoreTokenUserLogModelToJson(
+        CoreTokenUserLogModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -67,21 +74,25 @@ Map<String, dynamic> _$UserTokenModelToJson(UserTokenModel instance) =>
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkUserId': instance.linkUserId,
-      'linkMemberUserId': instance.linkMemberUserId,
+      'linkMemberId': instance.linkMemberId,
       'linkSiteId': instance.linkSiteId,
       'deviceClientMAC': instance.deviceClientMAC,
       'linkDeviceId': instance.linkDeviceId,
       'token': instance.token,
-      'expireDate': instance.expireDate,
+      'expireDate': instance.expireDate?.toIso8601String(),
       'userAccessAreaType':
           _$EnumManageUserAccessAreaTypesEnumMap[instance.userAccessAreaType],
-      'userType': _$EnumManageUserAccessUserTypesEnumMap[instance.userType],
+      'userAccessUserType':
+          _$EnumManageUserAccessUserTypesEnumMap[instance.userAccessUserType],
+      'userAccessAreaTypeTitle': instance.userAccessAreaTypeTitle,
+      'userAccessUserTypeTitle': instance.userAccessUserTypeTitle,
       'userAccessAdminAllowToAllData': instance.userAccessAdminAllowToAllData,
       'userAccessAdminAllowToProfessionalData':
           instance.userAccessAdminAllowToProfessionalData,
       'rememberOnDevice': instance.rememberOnDevice,
       'browserLanguage': instance.browserLanguage,
       'userLanguage': instance.userLanguage,
+      'action': instance.action,
     };
 
 const _$EnumRecordStatusEnumMap = {

@@ -9,7 +9,7 @@ part of 'application_score_dto_model.dart';
 ApplicationScoreDtoModel _$ApplicationScoreDtoModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationScoreDtoModel()
-      ..linkApiId = json['linkApiId'] as int?
+      ..linkApiPathId = json['linkApiPathId'] as int?
       ..appMemberId = json['appMemberId'] as String?
       ..scoreComment = json['scoreComment'] as String?
       ..scorePercent = json['scorePercent'] as int?;
@@ -17,7 +17,7 @@ ApplicationScoreDtoModel _$ApplicationScoreDtoModelFromJson(
 Map<String, dynamic> _$ApplicationScoreDtoModelToJson(
         ApplicationScoreDtoModel instance) =>
     <String, dynamic>{
-      'linkApiId': instance.linkApiId,
+      'linkApiPathId': instance.linkApiPathId,
       'appMemberId': instance.appMemberId,
       'scoreComment': instance.scoreComment,
       'scorePercent': instance.scorePercent,

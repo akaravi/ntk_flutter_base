@@ -2,7 +2,7 @@ import 'package:base/src/backend/api/application/application_theme_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
 import 'package:base/src/models/entity/application/application_theme_config_model.dart';
-import 'package:base/src/models/entity/base/error_exception_result.dart';
+import 'package:base/src/models/entity/base/error_exception.dart';
 
 class ApplicationThemeService extends DioApi {
   //api caller reference

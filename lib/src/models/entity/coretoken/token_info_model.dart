@@ -1,0 +1,77 @@
+import 'package:base/src/models/entity/base/base_entity.dart';
+import 'package:base/src/models/entity/enums/enum_manage_user_access_area_types.dart';
+import 'package:base/src/models/entity/enums/enum_manage_user_access_controller_types.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+part 'token_info_model.g.dart';
+
+@JsonSerializable()
+class TokenInfoModel {
+  @JsonKey(name: 'token')
+  String? token;
+  @JsonKey(name: 'deviceToken')
+  String? deviceToken;
+  @JsonKey(name: 'refreshToken')
+  String? refreshToken;
+  @JsonKey(name: 'tokenExpireDate')
+  DateTime? tokenExpireDate;
+  @JsonKey(name: 'siteId')
+  int? siteId;
+  @JsonKey(name: 'userId')
+  int? userId;
+  @JsonKey(name: 'memberId')
+  int? memberId;
+  @JsonKey(name: 'memberUserId')
+  String? memberUserId;
+  @JsonKey(name: 'deviceId')
+  int? deviceId;
+  @JsonKey(name: 'applicationId')
+  int? applicationId;
+  @JsonKey(name: 'userGroupId')
+  int? userGroupId;
+  @JsonKey(name: 'userAccessAdminAllowToProfessionalData')
+  bool? userAccessAdminAllowToProfessionalData;
+  @JsonKey(name: 'userAccessAdminAllowToAllData')
+  bool? userAccessAdminAllowToAllData;
+  @JsonKey(name: 'userAccessAreaType')
+  EnumManageUserAccessAreaTypes? userAccessAreaType;
+  @JsonKey(name: 'userAccessUserType')
+  EnumManageUserAccessUserTypes? userAccessUserType;
+  @JsonKey(name: 'userAccessUserTypeTitle')
+  String? userAccessUserTypeTitle;
+  @JsonKey(name: 'userAccessUserAreaTitle')
+  String? userAccessUserAreaTitle;
+  @JsonKey(name: 'username')
+  String? username;
+  @JsonKey(name: 'name')
+  String? name;
+  @JsonKey(name: 'lastName')
+  String? lastName;
+  @JsonKey(name: 'fullName')
+  String? fullName;
+  @JsonKey(name: 'language')
+  String? language;
+  @JsonKey(name: 'domain')
+  String? domain;
+  @JsonKey(name: 'subDomain')
+  String? subDomain;
+  @JsonKey(name: 'currentSiteDomainUrl')
+  String? currentSiteDomainUrl;
+  @JsonKey(name: 'title')
+  String? title;
+  @JsonKey(name: 'photoUrl')
+  String? photoUrl;
+  @JsonKey(name: 'mobile')
+  String? mobile;
+  @JsonKey(name: 'mobileConfirmed')
+  bool? mobileConfirmed;
+  @JsonKey(name: 'email')
+  String? email;
+  @JsonKey(name: 'emailConfirmed')
+  bool? emailConfirmed;
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
+  @JsonKey(name: 'direction')
+  String? direction;
+}

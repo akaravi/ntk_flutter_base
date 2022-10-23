@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_module_tag_category_model.dart';
+part of 'core_token_activation_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoreModuleTagCategoryModel _$CoreModuleTagCategoryModelFromJson(
+CoreTokenActivationModel _$CoreTokenActivationModelFromJson(
         Map<String, dynamic> json) =>
-    CoreModuleTagCategoryModel()
-      ..id = json['id'] as int?
+    CoreTokenActivationModel()
+      ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -32,33 +32,19 @@ CoreModuleTagCategoryModel _$CoreModuleTagCategoryModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..activateType = json['activateType'] as int?
+      ..linkUserId = json['linkUserId'] as int?
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['title'] as String?
-      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
-      ..description = json['description'] as String?
-      ..fontIcon = json['fontIcon'] as String?
-      ..linkParentIdNode = json['linkParentIdNode'] as String?
-      ..linkParentId = json['linkParentId'] as int?
-      ..category = json['category'] == null
-          ? null
-          : CoreModuleTagCategoryModel.fromJson(
-              json['category'] as Map<String, dynamic>)
-      ..virtual_Category = json['virtual_Category'] == null
-          ? null
-          : CoreModuleTagCategoryModel.fromJson(
-              json['virtual_Category'] as Map<String, dynamic>)
-      ..children = (json['children'] as List<dynamic>?)
-          ?.map((e) =>
-              CoreModuleTagCategoryModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..tags = (json['tags'] as List<dynamic>?)
-          ?.map((e) => CoreModuleTagModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..username = json['username'] as String?
+      ..email = json['email'] as String?
+      ..mobile = json['mobile'] as String?
+      ..activateCode = json['activateCode'] as String?
+      ..activateShortCode = json['activateShortCode'] as String?
+      ..useed = json['useed'] as bool?
+      ..userLanguage = json['userLanguage'] as int?;
 
-Map<String, dynamic> _$CoreModuleTagCategoryModelToJson(
-        CoreModuleTagCategoryModel instance) =>
+Map<String, dynamic> _$CoreTokenActivationModelToJson(
+        CoreTokenActivationModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -74,19 +60,16 @@ Map<String, dynamic> _$CoreModuleTagCategoryModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
+      'activateType': instance.activateType,
+      'linkUserId': instance.linkUserId,
       'linkSiteId': instance.linkSiteId,
-      'title': instance.title,
-      'titleResourceLanguage': instance.titleResourceLanguage,
-      'description': instance.description,
-      'fontIcon': instance.fontIcon,
-      'linkParentIdNode': instance.linkParentIdNode,
-      'linkParentId': instance.linkParentId,
-      'category': instance.category,
-      'virtual_Category': instance.virtual_Category,
-      'children': instance.children,
-      'tags': instance.tags,
-      'linkMainImageId': instance.linkMainImageId,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'username': instance.username,
+      'email': instance.email,
+      'mobile': instance.mobile,
+      'activateCode': instance.activateCode,
+      'activateShortCode': instance.activateShortCode,
+      'useed': instance.useed,
+      'userLanguage': instance.userLanguage,
     };
 
 const _$EnumRecordStatusEnumMap = {

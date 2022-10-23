@@ -33,11 +33,13 @@ CoreModuleTagModel _$CoreModuleTagModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkCategoryId = json['linkCategoryId'] as String?
+      ..linkCategoryId = json['linkCategoryId'] as int?
       ..category = json['category'] == null
           ? null
           : CoreModuleTagCategoryModel.fromJson(
-              json['category'] as Map<String, dynamic>);
+              json['category'] as Map<String, dynamic>)
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$CoreModuleTagModelToJson(CoreModuleTagModel instance) =>
     <String, dynamic>{
@@ -59,6 +61,8 @@ Map<String, dynamic> _$CoreModuleTagModelToJson(CoreModuleTagModel instance) =>
       'title': instance.title,
       'linkCategoryId': instance.linkCategoryId,
       'category': instance.category,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

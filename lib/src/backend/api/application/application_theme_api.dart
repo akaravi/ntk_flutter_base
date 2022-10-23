@@ -1,5 +1,5 @@
 import 'package:base/src/models/entity/application/application_theme_config_model.dart';
-import 'package:base/src/models/entity/base/error_exception_result.dart';
+import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

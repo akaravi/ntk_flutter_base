@@ -5,7 +5,6 @@ import 'package:json_annotation/json_annotation.dart';
 import 'core_module_tag_model.dart';
 part 'core_module_tag_category_model.g.dart';
 
-
 @JsonSerializable()
 class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'title')
@@ -28,8 +27,14 @@ class CoreModuleTagCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'children')
   List<CoreModuleTagCategoryModel>? children;
   @JsonKey(name: 'tags')
-  List<CoreModuleTagModel>? tags;CoreModuleTagCategoryModel();
-  factory CoreModuleTagCategoryModel.fromJson(Map<String, dynamic> json) => _$CoreModuleTagCategoryModelFromJson(json);
+  List<CoreModuleTagModel>? tags;
+  @JsonKey(name: 'linkMainImageId')
+  int? linkMainImageId;
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
+  CoreModuleTagCategoryModel();
+  factory CoreModuleTagCategoryModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreModuleTagCategoryModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$CoreModuleTagCategoryModelToJson(this);
 }

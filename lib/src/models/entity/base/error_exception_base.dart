@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'error_exception_result_base.g.dart';
+part 'error_exception_base.g.dart';
 
 @JsonSerializable()
 class ErrorExceptionBase {

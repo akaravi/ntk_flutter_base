@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:base/src/models/entity/base/error_exception_result.dart';
+import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/file/file_upload_model.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
