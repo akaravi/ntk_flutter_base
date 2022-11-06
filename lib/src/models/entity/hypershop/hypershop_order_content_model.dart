@@ -4,7 +4,6 @@ import 'hypershop_order_model.dart';
 
 part 'hypershop_order_content_model.g.dart';
 
-
 @JsonSerializable()
 class HyperShopOrderContentModel {
   static String CURRENCY_UNIT = "ریال";
@@ -24,7 +23,8 @@ class HyperShopOrderContentModel {
   @JsonKey(name: 'count')
   int? count;
   HyperShopOrderContentModel();
-  factory HyperShopOrderContentModel.fromJson(Map<String, dynamic> json) => _$HyperShopOrderContentModelFromJson(json);
+  factory HyperShopOrderContentModel.fromJson(Map<String, dynamic> json) =>
+      _$HyperShopOrderContentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$HyperShopOrderContentModelToJson(this);
 }

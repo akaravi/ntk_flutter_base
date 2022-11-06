@@ -15,7 +15,7 @@ class EstatePropertyTypeUsageModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'titleResourceLanguage')
   String? titleResourceLanguage;
   @JsonKey(name: 'contentCount')
-  String? contentCount;
+  int? contentCount;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'iconFont')
