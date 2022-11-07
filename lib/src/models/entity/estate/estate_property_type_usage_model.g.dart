@@ -36,7 +36,7 @@ EstatePropertyTypeUsageModel _$EstatePropertyTypeUsageModelFromJson(
       ..title = json['title'] as String?
       ..titleML = json['titleML'] as String?
       ..titleResourceLanguage = json['titleResourceLanguage'] as String?
-      ..contentCount = json['contentCount'] as String?
+      ..contentCount = json['contentCount'] as int?
       ..description = json['description'] as String?
       ..iconFont = json['iconFont'] as String?
       ..iconColor = json['iconColor'] as String?

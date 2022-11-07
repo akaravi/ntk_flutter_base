@@ -11,7 +11,8 @@ class EstatePropertyShareAgentModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkEstatePropertyId')
   String? linkEstatePropertyId;
   EstatePropertyShareAgentModel();
-  factory EstatePropertyShareAgentModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyShareAgentModelFromJson(json);
+  factory EstatePropertyShareAgentModel.fromJson(Map<String, dynamic> json) =>
+      _$EstatePropertyShareAgentModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstatePropertyShareAgentModelToJson(this);
 }

@@ -42,12 +42,12 @@ class HyperShopOrderModel extends BaseModuleEntity<int> {
   String? address;
   @JsonKey(name: 'amount')
   double? amount;
-  @JsonKey(name: 'feeTax')
-  double? feeTax;
-  @JsonKey(name: 'feeTransport')
-  double? feeTransport;
   @JsonKey(name: 'amountPure')
   double? amountPure;
+  @JsonKey(name: 'feeTransport')
+  double? feeTransport;
+  @JsonKey(name: 'feeTax')
+  double? feeTax;
   @JsonKey(name: 'products')
   List<HyperShopOrderContentModel>? products;
 

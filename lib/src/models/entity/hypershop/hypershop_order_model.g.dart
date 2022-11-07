@@ -52,9 +52,9 @@ HyperShopOrderModel _$HyperShopOrderModelFromJson(Map<String, dynamic> json) =>
       ..geoLocationLongitude = json['geoLocationLongitude'] as String?
       ..address = json['address'] as String?
       ..amount = (json['amount'] as num?)?.toDouble()
-      ..feeTax = (json['feeTax'] as num?)?.toDouble()
-      ..feeTransport = (json['feeTransport'] as num?)?.toDouble()
       ..amountPure = (json['amountPure'] as num?)?.toDouble()
+      ..feeTransport = (json['feeTransport'] as num?)?.toDouble()
+      ..feeTax = (json['feeTax'] as num?)?.toDouble()
       ..products = (json['products'] as List<dynamic>?)
           ?.map((e) =>
               HyperShopOrderContentModel.fromJson(e as Map<String, dynamic>))
@@ -94,9 +94,9 @@ Map<String, dynamic> _$HyperShopOrderModelToJson(
       'geoLocationLongitude': instance.geoLocationLongitude,
       'address': instance.address,
       'amount': instance.amount,
-      'feeTax': instance.feeTax,
-      'feeTransport': instance.feeTransport,
       'amountPure': instance.amountPure,
+      'feeTransport': instance.feeTransport,
+      'feeTax': instance.feeTax,
       'products': instance.products,
     };
 
