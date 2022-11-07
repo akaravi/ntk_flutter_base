@@ -11,6 +11,12 @@ part 'core_token_user_bad_login_model.g.dart';
 
 @JsonSerializable()
 class CoreTokenUserBadLoginModel extends BaseEntity<String> {
+  @JsonKey(name:' userAccessAreaType')
+  EnumManageUserAccessAreaTypes?  userAccessAreaType;
+  @JsonKey(name:'deviceClientMAC')
+  String? deviceClientMAC;
+  @JsonKey(name:'linkDeviceId')
+  int? linkDeviceId;
   @JsonKey(name: 'linkApplicationId')
   int? linkApplicationId;
   @JsonKey(name: 'requestDate')
@@ -19,6 +25,12 @@ class CoreTokenUserBadLoginModel extends BaseEntity<String> {
   String? usedUsername;
   @JsonKey(name: 'usedPwd')
   String? usedPwd;
+  @JsonKey(name:'linkUserId')
+  int? linkUserId;
+  @JsonKey(name:'linkSiteId')
+  int? linkSiteId;
+  @JsonKey(name:'linkMemberId')
+  String? linkMemberId;
   CoreTokenUserBadLoginModel();
   factory CoreTokenUserBadLoginModel.fromJson(Map<String, dynamic> json) => _$CoreTokenUserBadLoginModelFromJson(json);
 

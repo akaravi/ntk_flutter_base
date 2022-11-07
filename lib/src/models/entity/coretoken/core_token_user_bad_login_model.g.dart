@@ -32,10 +32,17 @@ CoreTokenUserBadLoginModel _$CoreTokenUserBadLoginModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..userAccessAreaType = $enumDecodeNullable(
+          _$EnumManageUserAccessAreaTypesEnumMap, json[' userAccessAreaType'])
+      ..deviceClientMAC = json['deviceClientMAC'] as String?
+      ..linkDeviceId = json['linkDeviceId'] as int?
       ..linkApplicationId = json['linkApplicationId'] as int?
       ..requestDate = json['requestDate'] as String?
       ..usedUsername = json['usedUsername'] as String?
-      ..usedPwd = json['usedPwd'] as String?;
+      ..usedPwd = json['usedPwd'] as String?
+      ..linkUserId = json['linkUserId'] as int?
+      ..linkSiteId = json['linkSiteId'] as int?
+      ..linkMemberId = json['linkMemberId'] as String?;
 
 Map<String, dynamic> _$CoreTokenUserBadLoginModelToJson(
         CoreTokenUserBadLoginModel instance) =>
@@ -54,10 +61,17 @@ Map<String, dynamic> _$CoreTokenUserBadLoginModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
+      ' userAccessAreaType':
+          _$EnumManageUserAccessAreaTypesEnumMap[instance.userAccessAreaType],
+      'deviceClientMAC': instance.deviceClientMAC,
+      'linkDeviceId': instance.linkDeviceId,
       'linkApplicationId': instance.linkApplicationId,
       'requestDate': instance.requestDate,
       'usedUsername': instance.usedUsername,
       'usedPwd': instance.usedPwd,
+      'linkUserId': instance.linkUserId,
+      'linkSiteId': instance.linkSiteId,
+      'linkMemberId': instance.linkMemberId,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -67,4 +81,15 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumManageUserAccessAreaTypesEnumMap = {
+  EnumManageUserAccessAreaTypes.none: 0,
+  EnumManageUserAccessAreaTypes.all: 1,
+  EnumManageUserAccessAreaTypes.backgroundSystem: 2,
+  EnumManageUserAccessAreaTypes.windowsService: 3,
+  EnumManageUserAccessAreaTypes.controlPanel: 4,
+  EnumManageUserAccessAreaTypes.website: 5,
+  EnumManageUserAccessAreaTypes.webService: 6,
+  EnumManageUserAccessAreaTypes.application: 7,
 };

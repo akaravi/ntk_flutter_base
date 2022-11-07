@@ -37,6 +37,7 @@ CoreTokenUserLogModel _$CoreTokenUserLogModelFromJson(
       ..linkSiteId = json['linkSiteId'] as int?
       ..deviceClientMAC = json['deviceClientMAC'] as String?
       ..linkDeviceId = json['linkDeviceId'] as int?
+      ..linkApplicationId = json['linkApplicationId'] as int?
       ..token = json['token'] as String?
       ..expireDate = json['expireDate'] == null
           ? null
@@ -54,7 +55,7 @@ CoreTokenUserLogModel _$CoreTokenUserLogModelFromJson(
       ..rememberOnDevice = json['rememberOnDevice'] as bool?
       ..browserLanguage = json['browserLanguage'] as String?
       ..userLanguage = json['userLanguage'] as int?
-      ..action = json['action'] as String?;
+      ..description = json['description'] as String?;
 
 Map<String, dynamic> _$CoreTokenUserLogModelToJson(
         CoreTokenUserLogModel instance) =>
@@ -78,6 +79,7 @@ Map<String, dynamic> _$CoreTokenUserLogModelToJson(
       'linkSiteId': instance.linkSiteId,
       'deviceClientMAC': instance.deviceClientMAC,
       'linkDeviceId': instance.linkDeviceId,
+      'linkApplicationId': instance.linkApplicationId,
       'token': instance.token,
       'expireDate': instance.expireDate?.toIso8601String(),
       'userAccessAreaType':
@@ -92,7 +94,7 @@ Map<String, dynamic> _$CoreTokenUserLogModelToJson(
       'rememberOnDevice': instance.rememberOnDevice,
       'browserLanguage': instance.browserLanguage,
       'userLanguage': instance.userLanguage,
-      'action': instance.action,
+      'description': instance.description,
     };
 
 const _$EnumRecordStatusEnumMap = {

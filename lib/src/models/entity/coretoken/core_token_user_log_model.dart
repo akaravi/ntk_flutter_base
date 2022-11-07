@@ -12,8 +12,8 @@ part 'core_token_user_log_model.g.dart';
 
 @JsonSerializable()
 class CoreTokenUserLogModel extends CoreTokenUserModel {
-  @JsonKey(name: 'action')
-  String? action;
+  @JsonKey(name: 'description')
+  String? description;
   CoreTokenUserLogModel();
   factory CoreTokenUserLogModel.fromJson(Map<String, dynamic> json) =>
       _$CoreTokenUserLogModelFromJson(json);

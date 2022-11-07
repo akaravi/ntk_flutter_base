@@ -18,6 +18,8 @@ class CoreTokenUserModel extends BaseEntity<String> {
   String? deviceClientMAC;
   @JsonKey(name: 'linkDeviceId')
   int? linkDeviceId;
+  @JsonKey(name: 'linkApplicationId')
+ int? linkApplicationId;
   @JsonKey(name: 'token')
   String? token;
   @JsonKey(name: 'expireDate')

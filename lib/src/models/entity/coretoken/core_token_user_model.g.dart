@@ -36,6 +36,7 @@ CoreTokenUserModel _$CoreTokenUserModelFromJson(Map<String, dynamic> json) =>
       ..linkSiteId = json['linkSiteId'] as int?
       ..deviceClientMAC = json['deviceClientMAC'] as String?
       ..linkDeviceId = json['linkDeviceId'] as int?
+      ..linkApplicationId = json['linkApplicationId'] as int?
       ..token = json['token'] as String?
       ..expireDate = json['expireDate'] == null
           ? null
@@ -75,6 +76,7 @@ Map<String, dynamic> _$CoreTokenUserModelToJson(CoreTokenUserModel instance) =>
       'linkSiteId': instance.linkSiteId,
       'deviceClientMAC': instance.deviceClientMAC,
       'linkDeviceId': instance.linkDeviceId,
+      'linkApplicationId': instance.linkApplicationId,
       'token': instance.token,
       'expireDate': instance.expireDate?.toIso8601String(),
       'userAccessAreaType':
