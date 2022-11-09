@@ -6,19 +6,19 @@ part 'estate_account_agency_ads_model.g.dart';
 
 @JsonSerializable()
 class EstateAccountAgencyAdsModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
-  @JsonKey(name: 'StationLevel')
+  @JsonKey(name: 'stationLevel')
   int? stationLevel;
-  @JsonKey(name: 'ViewLevel')
+  @JsonKey(name: 'viewLevel')
   int? viewLevel;
   @JsonKey(name: 'linkAccountAgencyId')
   String? linkAccountAgencyId;
-  @JsonKey(name: 'FromDate')
+  @JsonKey(name: 'fromDate')
   DateTime? fromDate;
-  @JsonKey(name: 'ExpireDate')
+  @JsonKey(name: 'expireDate')
   DateTime? expireDate;
   @JsonKey(name: 'linkAdsTypeId')
   String? linkAdsTypeId;

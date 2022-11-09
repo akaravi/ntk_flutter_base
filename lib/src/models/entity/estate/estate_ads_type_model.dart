@@ -6,15 +6,15 @@ part 'estate_ads_type_model.g.dart';
 
 @JsonSerializable()
 class EstateAdsTypeModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'paymentForMainSite')
   bool? paymentForMainSite;
-  @JsonKey(name: 'StationLevel')
+  @JsonKey(name: 'stationLevel')
   int? stationLevel;
-  @JsonKey(name: 'ViewLevel')
+  @JsonKey(name: 'viewLevel')
   int? viewLevel;
   @JsonKey(name: 'dayOfActivity')
   int? dayOfActivity;

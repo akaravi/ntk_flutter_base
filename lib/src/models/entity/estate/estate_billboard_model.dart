@@ -6,9 +6,9 @@ part 'estate_billboard_model.g.dart';
 
 @JsonSerializable()
 class EstateBillboardModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'descriptionHidden')
   String? descriptionHidden;

@@ -34,7 +34,6 @@ class EstateAccountUserModel extends BaseModuleEntity<String> {
   String? serialNumber;
   @JsonKey(name: 'phoneNumber')
   String? phoneNumber;
-
   @JsonKey(name: 'address')
   String? address;
   @JsonKey(name: 'linkMainImageId')
