@@ -35,7 +35,15 @@ EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
       ..linkPropertyId = json['linkPropertyId'] as String?
-      ..linkFileIds = json['linkFileIds'] as String?;
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..linkActivityTypeId = json['linkActivityTypeId'] as String?
+      ..appointmentDateFrom = json['appointmentDateFrom'] == null
+          ? null
+          : DateTime.parse(json['appointmentDateFrom'] as String)
+      ..appointmentDateTo = json['appointmentDateTo'] == null
+          ? null
+          : DateTime.parse(json['appointmentDateTo'] as String)
+      ..description = json['description'] as String?;
 
 Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
         EstatePropertyHistoryModel instance) =>
@@ -58,6 +66,10 @@ Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
       'title': instance.title,
       'linkPropertyId': instance.linkPropertyId,
       'linkFileIds': instance.linkFileIds,
+      'linkActivityTypeId': instance.linkActivityTypeId,
+      'appointmentDateFrom': instance.appointmentDateFrom?.toIso8601String(),
+      'appointmentDateTo': instance.appointmentDateTo?.toIso8601String(),
+      'description': instance.description,
     };
 
 const _$EnumRecordStatusEnumMap = {

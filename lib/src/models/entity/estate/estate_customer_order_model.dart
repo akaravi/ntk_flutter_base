@@ -9,9 +9,9 @@ part 'estate_customer_order_model.g.dart';
 
 @JsonSerializable()
 class EstateCustomerOrderModel extends BaseModuleEntity<String> {
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
-  @JsonKey(name: 'Description')
+  @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'descriptionHidden')
   String? descriptionHidden;
@@ -26,11 +26,11 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkLocationIds')
   List<int>? linkLocationIds;
   @JsonKey(name: 'linkPropertyTypeLanduseId')
-  List<String>? linkPropertyTypeLanduseId;
+  String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'linkPropertyTypeUsageId')
-  List<String>? linkPropertyTypeUsageId;
+  String? linkPropertyTypeUsageId;
   @JsonKey(name: 'linkContractTypeId')
-  List<String>? linkContractTypeId;
+  String? linkContractTypeId;
   @JsonKey(name: 'createdYaer')
   int? createdYaer;
   @JsonKey(name: 'partition')
@@ -61,6 +61,16 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? urlViewContent;
   @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
+  @JsonKey(name: 'linkCoreCurrencyId')
+  int? linkCoreCurrencyId;
+  @JsonKey(name: 'currencyTitle')
+  String? currencyTitle;
+  @JsonKey(name: 'currencySymbol')
+  String? currencySymbol;
+  @JsonKey(name: 'contactMobiles')
+  String? contactMobiles;
+  @JsonKey(name: 'contactMobileList')
+  List<String>? contactMobileList;
 
   EstateCustomerOrderModel();
   factory EstateCustomerOrderModel.fromJson(Map<String, dynamic> json) =>

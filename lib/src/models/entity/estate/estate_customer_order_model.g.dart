@@ -33,8 +33,8 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
       ..descriptionHidden = json['descriptionHidden'] as String?
       ..linkEstateUserId = json['linkEstateUserId'] as String?
       ..areaAddress = json['areaAddress'] as String?
@@ -45,17 +45,9 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..linkLocationIds = (json['linkLocationIds'] as List<dynamic>?)
           ?.map((e) => e as int)
           .toList()
-      ..linkPropertyTypeLanduseId =
-          (json['linkPropertyTypeLanduseId'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList()
-      ..linkPropertyTypeUsageId =
-          (json['linkPropertyTypeUsageId'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList()
-      ..linkContractTypeId = (json['linkContractTypeId'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList()
+      ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
+      ..linkPropertyTypeUsageId = json['linkPropertyTypeUsageId'] as String?
+      ..linkContractTypeId = json['linkContractTypeId'] as String?
       ..createdYaer = json['createdYaer'] as int?
       ..partition = json['partition'] as int?
       ..area = json['area'] as int?
@@ -77,7 +69,14 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
           .toList()
       ..urlViewContent = json['urlViewContent'] as String?
       ..urlViewContentQRCodeBase64 =
-          json['urlViewContentQRCodeBase64'] as String?;
+          json['urlViewContentQRCodeBase64'] as String?
+      ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
+      ..currencyTitle = json['currencyTitle'] as String?
+      ..currencySymbol = json['currencySymbol'] as String?
+      ..contactMobiles = json['contactMobiles'] as String?
+      ..contactMobileList = (json['contactMobileList'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList();
 
 Map<String, dynamic> _$EstateCustomerOrderModelToJson(
         EstateCustomerOrderModel instance) =>
@@ -97,8 +96,8 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'Description': instance.description,
+      'title': instance.title,
+      'description': instance.description,
       'descriptionHidden': instance.descriptionHidden,
       'linkEstateUserId': instance.linkEstateUserId,
       'areaAddress': instance.areaAddress,
@@ -123,6 +122,11 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'propertyDetailGroups': instance.propertyDetailGroups,
       'urlViewContent': instance.urlViewContent,
       'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
+      'linkCoreCurrencyId': instance.linkCoreCurrencyId,
+      'currencyTitle': instance.currencyTitle,
+      'currencySymbol': instance.currencySymbol,
+      'contactMobiles': instance.contactMobiles,
+      'contactMobileList': instance.contactMobileList,
     };
 
 const _$EnumRecordStatusEnumMap = {

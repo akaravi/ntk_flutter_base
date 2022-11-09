@@ -32,11 +32,11 @@ EstateAdsTypeModel _$EstateAdsTypeModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
       ..paymentForMainSite = json['paymentForMainSite'] as bool?
-      ..stationLevel = json['StationLevel'] as int?
-      ..viewLevel = json['ViewLevel'] as int?
+      ..stationLevel = json['stationLevel'] as int?
+      ..viewLevel = json['viewLevel'] as int?
       ..dayOfActivity = json['dayOfActivity'] as int?
       ..salePrice = json['salePrice'] as int?
       ..linkMainImageId = json['linkMainImageId'] as int?
@@ -66,11 +66,11 @@ Map<String, dynamic> _$EstateAdsTypeModelToJson(EstateAdsTypeModel instance) =>
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'Description': instance.description,
+      'title': instance.title,
+      'description': instance.description,
       'paymentForMainSite': instance.paymentForMainSite,
-      'StationLevel': instance.stationLevel,
-      'ViewLevel': instance.viewLevel,
+      'stationLevel': instance.stationLevel,
+      'viewLevel': instance.viewLevel,
       'dayOfActivity': instance.dayOfActivity,
       'salePrice': instance.salePrice,
       'linkMainImageId': instance.linkMainImageId,

@@ -12,6 +12,17 @@ class EstatePropertyHistoryModel extends BaseModuleEntity<String> {
   String? linkPropertyId;
   @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
+  @JsonKey(name: 'linkActivityTypeId')
+  String? linkActivityTypeId;
+  @JsonKey(name: 'appointmentDateFrom')
+  DateTime? appointmentDateFrom;
+  @JsonKey(name: 'appointmentDateTo')
+   DateTime? appointmentDateTo;
+  @JsonKey(name: 'description')
+   String? description;
+
+
+  
   EstatePropertyHistoryModel();
   factory EstatePropertyHistoryModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyHistoryModelFromJson(json);

@@ -33,17 +33,17 @@ EstateAccountAgencyAdsModel _$EstateAccountAgencyAdsModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['Title'] as String?
-      ..description = json['Description'] as String?
-      ..stationLevel = json['StationLevel'] as int?
-      ..viewLevel = json['ViewLevel'] as int?
+      ..title = json['title'] as String?
+      ..description = json['description'] as String?
+      ..stationLevel = json['stationLevel'] as int?
+      ..viewLevel = json['viewLevel'] as int?
       ..linkAccountAgencyId = json['linkAccountAgencyId'] as String?
-      ..fromDate = json['FromDate'] == null
+      ..fromDate = json['fromDate'] == null
           ? null
-          : DateTime.parse(json['FromDate'] as String)
-      ..expireDate = json['ExpireDate'] == null
+          : DateTime.parse(json['fromDate'] as String)
+      ..expireDate = json['expireDate'] == null
           ? null
-          : DateTime.parse(json['ExpireDate'] as String)
+          : DateTime.parse(json['expireDate'] as String)
       ..linkAdsTypeId = json['linkAdsTypeId'] as String?
       ..systemTransactionId = json['systemTransactionId'] as int?
       ..systemPaymentIsSuccess = json['systemPaymentIsSuccess'] as int?
@@ -70,13 +70,13 @@ Map<String, dynamic> _$EstateAccountAgencyAdsModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'Title': instance.title,
-      'Description': instance.description,
-      'StationLevel': instance.stationLevel,
-      'ViewLevel': instance.viewLevel,
+      'title': instance.title,
+      'description': instance.description,
+      'stationLevel': instance.stationLevel,
+      'viewLevel': instance.viewLevel,
       'linkAccountAgencyId': instance.linkAccountAgencyId,
-      'FromDate': instance.fromDate?.toIso8601String(),
-      'ExpireDate': instance.expireDate?.toIso8601String(),
+      'fromDate': instance.fromDate?.toIso8601String(),
+      'expireDate': instance.expireDate?.toIso8601String(),
       'linkAdsTypeId': instance.linkAdsTypeId,
       'systemTransactionId': instance.systemTransactionId,
       'systemPaymentIsSuccess': instance.systemPaymentIsSuccess,

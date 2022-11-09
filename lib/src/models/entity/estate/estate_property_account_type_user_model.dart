@@ -6,16 +6,20 @@ part 'estate_property_account_type_user_model.g.dart';
 
 @JsonSerializable()
 class EstatePropertyAccountTypeUserModel extends BaseModuleEntity<String> {
+  // tslint:disable-next-line: variable-name
   @JsonKey(name: 'user_Id')
   String? user_Id;
 
+  // tslint:disable-next-line: variable-name
   @JsonKey(name: 'type_Id')
   String? type_Id;
 
+// tslint:disable-next-line: variable-name
   @JsonKey(name: 'property_Id')
   String? property_Id;
   EstatePropertyAccountTypeUserModel();
-  factory EstatePropertyAccountTypeUserModel.fromJson(Map<String, dynamic> json) => _$EstatePropertyAccountTypeUserModelFromJson(json);
+  factory EstatePropertyAccountTypeUserModel.fromJson(Map<String, dynamic> json) =>
+   _$EstatePropertyAccountTypeUserModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$EstatePropertyAccountTypeUserModelToJson(this);
 }

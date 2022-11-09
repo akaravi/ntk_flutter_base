@@ -127,9 +127,7 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkFileIdsSrc')
   List<String>? linkFileIdsSrc;
 
-  /**
-   * برای انتصا مسقیم فایل آپلود شده
-   */
+  /*** برای انتصا مسقیم فایل آپلود شده*/
   @JsonKey(name: 'uploadFileGUID')
   List<String>? uploadFileGUID;
   @JsonKey(name: 'urlViewContent')
