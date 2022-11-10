@@ -1,7 +1,9 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'data_provider_plan_category_model.g.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
+
+part 'data_provider_transaction_model.g.dart';
 
 @JsonSerializable()
  class DataProviderTransactionModel extends BaseModuleEntity<int> {
