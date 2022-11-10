@@ -3,14 +3,14 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 
-part 'data_provider_log_client_model.g.dart';
+part 'data_provider_log_plan_model.g.dart';
 
 @JsonSerializable()
- class DataProviderLogClientModel extends BaseModuleEntity<String> {
+ class DataProviderLogPlanModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkLogDataId')
   String? linkLogDataId;
-  @JsonKey(name: 'linkClientId')
-  int? linkClientId;
+  @JsonKey(name: 'linkSourceId')
+  int? linkSourceId;
   @JsonKey(name: 'linkPlanId')
   int? linkPlanId;
   @JsonKey(name: 'dataJson')
@@ -19,11 +19,11 @@ part 'data_provider_log_client_model.g.dart';
   String? otherDataJson;
   
 
- DataProviderLogClientModel();
-  factory DataProviderLogClientModel.fromJson(
+ DataProviderLogPlanModel();
+  factory DataProviderLogPlanModel.fromJson(
           Map<String, dynamic> json) =>
-      _$DataProviderLogClientModelFromJson(json);
+      _$DataProviderLogPlanModelFromJson(json);
 
   Map<String, dynamic> toJson() =>
-      _$DataProviderLogClientModelToJson(this);
+      _$DataProviderLogPlanModelToJson(this);
 }
