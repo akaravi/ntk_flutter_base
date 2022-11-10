@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_property_history_model.dart';
+part of 'estate_activity_type_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
+EstateActivityTypeModel _$EstateActivityTypeModelFromJson(
         Map<String, dynamic> json) =>
-    EstatePropertyHistoryModel()
+    EstateActivityTypeModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -34,23 +34,16 @@ EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?
-      ..linkFileIds = json['linkFileIds'] as String?
-      ..activityType = json['activityType'] == null
-          ? null
-          : EstateActivityTypeModel.fromJson(
-              json['activityType'] as Map<String, dynamic>)
-      ..linkActivityTypeId = json['linkActivityTypeId'] as String?
-      ..appointmentDateFrom = json['appointmentDateFrom'] == null
-          ? null
-          : DateTime.parse(json['appointmentDateFrom'] as String)
-      ..appointmentDateTo = json['appointmentDateTo'] == null
-          ? null
-          : DateTime.parse(json['appointmentDateTo'] as String)
-      ..description = json['description'] as String?;
+      ..titleML = json['titleML'] as String?
+      ..titleResourceLanguage = json['titleResourceLanguage'] as String?
+      ..description = json['description'] as String?
+      ..iconFont = json['iconFont'] as String?
+      ..iconColor = json['iconColor'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
-Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
-        EstatePropertyHistoryModel instance) =>
+Map<String, dynamic> _$EstateActivityTypeModelToJson(
+        EstateActivityTypeModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -68,13 +61,13 @@ Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
-      'linkPropertyId': instance.linkPropertyId,
-      'linkFileIds': instance.linkFileIds,
-      'activityType': instance.activityType,
-      'linkActivityTypeId': instance.linkActivityTypeId,
-      'appointmentDateFrom': instance.appointmentDateFrom?.toIso8601String(),
-      'appointmentDateTo': instance.appointmentDateTo?.toIso8601String(),
+      'titleML': instance.titleML,
+      'titleResourceLanguage': instance.titleResourceLanguage,
       'description': instance.description,
+      'iconFont': instance.iconFont,
+      'iconColor': instance.iconColor,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

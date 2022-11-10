@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_property_history_model.dart';
+part of 'data_provider_plan_source_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
+DataProviderPlanSourceModel _$DataProviderPlanSourceModelFromJson(
         Map<String, dynamic> json) =>
-    EstatePropertyHistoryModel()
-      ..id = json['id'] as String?
+    DataProviderPlanSourceModel()
+      ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -33,24 +33,26 @@ EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['title'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?
-      ..linkFileIds = json['linkFileIds'] as String?
-      ..activityType = json['activityType'] == null
+      ..linkPlanId = json['linkPlanId'] as int?
+      ..linkSourceId = json['linkSourceId'] as int?
+      ..plan = json['plan'] == null
           ? null
-          : EstateActivityTypeModel.fromJson(
-              json['activityType'] as Map<String, dynamic>)
-      ..linkActivityTypeId = json['linkActivityTypeId'] as String?
-      ..appointmentDateFrom = json['appointmentDateFrom'] == null
+          : DataProviderPlanModel.fromJson(json['plan'] as Map<String, dynamic>)
+      ..virtual_Plan = json['virtual_Plan'] == null
           ? null
-          : DateTime.parse(json['appointmentDateFrom'] as String)
-      ..appointmentDateTo = json['appointmentDateTo'] == null
+          : DataProviderPlanModel.fromJson(
+              json['virtual_Plan'] as Map<String, dynamic>)
+      ..source = json['source'] == null
           ? null
-          : DateTime.parse(json['appointmentDateTo'] as String)
-      ..description = json['description'] as String?;
+          : DataProviderSourceModel.fromJson(
+              json['source'] as Map<String, dynamic>)
+      ..virtual_Source = json['virtual_Source'] == null
+          ? null
+          : DataProviderSourceModel.fromJson(
+              json['virtual_Source'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
-        EstatePropertyHistoryModel instance) =>
+Map<String, dynamic> _$DataProviderPlanSourceModelToJson(
+        DataProviderPlanSourceModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -67,14 +69,12 @@ Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'title': instance.title,
-      'linkPropertyId': instance.linkPropertyId,
-      'linkFileIds': instance.linkFileIds,
-      'activityType': instance.activityType,
-      'linkActivityTypeId': instance.linkActivityTypeId,
-      'appointmentDateFrom': instance.appointmentDateFrom?.toIso8601String(),
-      'appointmentDateTo': instance.appointmentDateTo?.toIso8601String(),
-      'description': instance.description,
+      'linkPlanId': instance.linkPlanId,
+      'linkSourceId': instance.linkSourceId,
+      'plan': instance.plan,
+      'virtual_Plan': instance.virtual_Plan,
+      'source': instance.source,
+      'virtual_Source': instance.virtual_Source,
     };
 
 const _$EnumRecordStatusEnumMap = {

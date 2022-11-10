@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_property_history_model.dart';
+part of 'data_provider_plan_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
+DataProviderPlanModel _$DataProviderPlanModelFromJson(
         Map<String, dynamic> json) =>
-    EstatePropertyHistoryModel()
-      ..id = json['id'] as String?
+    DataProviderPlanModel()
+      ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -34,23 +34,33 @@ EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?
-      ..linkFileIds = json['linkFileIds'] as String?
-      ..activityType = json['activityType'] == null
+      ..description = json['description'] as String?
+      ..linkPlanCategoryId = json['linkPlanCategoryId'] as int?
+      ..planCategory = json['planCategory'] == null
           ? null
-          : EstateActivityTypeModel.fromJson(
-              json['activityType'] as Map<String, dynamic>)
-      ..linkActivityTypeId = json['linkActivityTypeId'] as String?
-      ..appointmentDateFrom = json['appointmentDateFrom'] == null
+          : DataProviderPlanCategoryModel.fromJson(
+              json['planCategory'] as Map<String, dynamic>)
+      ..virtual_PlanCategory = json['virtual_PlanCategory'] == null
           ? null
-          : DateTime.parse(json['appointmentDateFrom'] as String)
-      ..appointmentDateTo = json['appointmentDateTo'] == null
-          ? null
-          : DateTime.parse(json['appointmentDateTo'] as String)
-      ..description = json['description'] as String?;
+          : DataProviderPlanCategoryModel.fromJson(
+              json['virtual_PlanCategory'] as Map<String, dynamic>)
+      ..planClients = (json['planClients'] as List<dynamic>?)
+          ?.map((e) =>
+              DataProviderPlanClientModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..planSources = (json['planSources'] as List<dynamic>?)
+          ?.map((e) =>
+              DataProviderPlanSourceModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..planPrices = (json['planPrices'] as List<dynamic>?)
+          ?.map((e) =>
+              DataProviderPlanPriceModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
-Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
-        EstatePropertyHistoryModel instance) =>
+Map<String, dynamic> _$DataProviderPlanModelToJson(
+        DataProviderPlanModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -68,13 +78,15 @@ Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
-      'linkPropertyId': instance.linkPropertyId,
-      'linkFileIds': instance.linkFileIds,
-      'activityType': instance.activityType,
-      'linkActivityTypeId': instance.linkActivityTypeId,
-      'appointmentDateFrom': instance.appointmentDateFrom?.toIso8601String(),
-      'appointmentDateTo': instance.appointmentDateTo?.toIso8601String(),
       'description': instance.description,
+      'linkPlanCategoryId': instance.linkPlanCategoryId,
+      'planCategory': instance.planCategory,
+      'virtual_PlanCategory': instance.virtual_PlanCategory,
+      'planClients': instance.planClients,
+      'planSources': instance.planSources,
+      'planPrices': instance.planPrices,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

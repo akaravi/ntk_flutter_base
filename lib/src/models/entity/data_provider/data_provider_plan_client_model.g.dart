@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_property_history_model.dart';
+part of 'data_provider_plan_client_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
+DataProviderPlanClientModel _$DataProviderPlanClientModelFromJson(
         Map<String, dynamic> json) =>
-    EstatePropertyHistoryModel()
-      ..id = json['id'] as String?
+    DataProviderPlanClientModel()
+      ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -33,24 +33,29 @@ EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['title'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?
-      ..linkFileIds = json['linkFileIds'] as String?
-      ..activityType = json['activityType'] == null
+      ..expireDate = json['expireDate'] == null
           ? null
-          : EstateActivityTypeModel.fromJson(
-              json['activityType'] as Map<String, dynamic>)
-      ..linkActivityTypeId = json['linkActivityTypeId'] as String?
-      ..appointmentDateFrom = json['appointmentDateFrom'] == null
+          : DateTime.parse(json['expireDate'] as String)
+      ..linkPlanId = json['linkPlanId'] as int?
+      ..linkClientId = json['linkClientId'] as int?
+      ..plan = json['plan'] == null
           ? null
-          : DateTime.parse(json['appointmentDateFrom'] as String)
-      ..appointmentDateTo = json['appointmentDateTo'] == null
+          : DataProviderPlanModel.fromJson(json['plan'] as Map<String, dynamic>)
+      ..virtual_Plan = json['virtual_Plan'] == null
           ? null
-          : DateTime.parse(json['appointmentDateTo'] as String)
-      ..description = json['description'] as String?;
+          : DataProviderPlanModel.fromJson(
+              json['virtual_Plan'] as Map<String, dynamic>)
+      ..client = json['client'] == null
+          ? null
+          : DataProviderClientModel.fromJson(
+              json['client'] as Map<String, dynamic>)
+      ..virtual_Client = json['virtual_Client'] == null
+          ? null
+          : DataProviderClientModel.fromJson(
+              json['virtual_Client'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
-        EstatePropertyHistoryModel instance) =>
+Map<String, dynamic> _$DataProviderPlanClientModelToJson(
+        DataProviderPlanClientModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -67,14 +72,13 @@ Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'title': instance.title,
-      'linkPropertyId': instance.linkPropertyId,
-      'linkFileIds': instance.linkFileIds,
-      'activityType': instance.activityType,
-      'linkActivityTypeId': instance.linkActivityTypeId,
-      'appointmentDateFrom': instance.appointmentDateFrom?.toIso8601String(),
-      'appointmentDateTo': instance.appointmentDateTo?.toIso8601String(),
-      'description': instance.description,
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'linkPlanId': instance.linkPlanId,
+      'linkClientId': instance.linkClientId,
+      'plan': instance.plan,
+      'virtual_Plan': instance.virtual_Plan,
+      'client': instance.client,
+      'virtual_Client': instance.virtual_Client,
     };
 
 const _$EnumRecordStatusEnumMap = {

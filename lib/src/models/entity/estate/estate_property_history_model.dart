@@ -2,6 +2,8 @@ import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import 'estate_activity_type_model.dart';
+
 part 'estate_property_history_model.g.dart';
 
 @JsonSerializable()
@@ -12,6 +14,8 @@ class EstatePropertyHistoryModel extends BaseModuleEntity<String> {
   String? linkPropertyId;
   @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
+  @JsonKey(name: 'activityType')
+  EstateActivityTypeModel? activityType;
   @JsonKey(name: 'linkActivityTypeId')
   String? linkActivityTypeId;
   @JsonKey(name: 'appointmentDateFrom')

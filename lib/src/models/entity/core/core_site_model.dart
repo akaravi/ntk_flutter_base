@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/coremain/core_module_site_model.dart';
+import 'package:base/src/models/entity/core_main/core_module_site_model.dart';
 import 'package:base/src/models/entity/enums/enum_language.dart';
 import 'package:base/src/models/entity/enums/enum_site_status.dart';
 import 'package:json_annotation/json_annotation.dart';
