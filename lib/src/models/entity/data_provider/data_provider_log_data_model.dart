@@ -6,16 +6,13 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 part 'data_provider_log_data_model.g.dart';
 
 @JsonSerializable()
- class DataProviderLogDataModel extends BaseModuleEntity<String> {
+class DataProviderLogDataModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'dataJson')
   String? dataJson;
-  
 
- DataProviderLogDataModel();
-  factory DataProviderLogDataModel.fromJson(
-          Map<String, dynamic> json) =>
+  DataProviderLogDataModel();
+  factory DataProviderLogDataModel.fromJson(Map<String, dynamic> json) =>
       _$DataProviderLogDataModelFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$DataProviderLogDataModelToJson(this);
+  Map<String, dynamic> toJson() => _$DataProviderLogDataModelToJson(this);
 }

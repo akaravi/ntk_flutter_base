@@ -6,7 +6,7 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 part 'data_provider_transaction_model.g.dart';
 
 @JsonSerializable()
- class DataProviderTransactionModel extends BaseModuleEntity<int> {
+class DataProviderTransactionModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'linkClientId')
@@ -16,40 +16,38 @@ part 'data_provider_transaction_model.g.dart';
   @JsonKey(name: 'linkPlanPriceId')
   int? linkPlanPriceId;
 
-
   @JsonKey(name: 'systemTransactionId')
   int? systemTransactionId;
   @JsonKey(name: 'systemPaymentIsSuccess')
   int? systemPaymentIsSuccess;
-  
-  
-   /// <summary>
+
+  /// <summary>
   /// مبلغ خالص فاکتور
   /// </summary>
- @JsonKey(name: 'amountPure')
+  @JsonKey(name: 'amountPure')
   int? amountPure;
+
   /// <summary>
   /// هزینه حمل و نقل
   /// </summary>
-    @JsonKey(name: 'feeTransport')
-  int? feeTransport; 
+  @JsonKey(name: 'feeTransport')
+  int? feeTransport;
+
   /// <summary>
   /// هزینه مالیات
   /// </summary>
   @JsonKey(name: 'feeTax')
   int? feeTax;
+
   /// <summary>
   /// مبلغ کل پرداختی
   /// </summary>
   @JsonKey(name: 'amount')
   int? amount;
 
-
- DataProviderTransactionModel();
-  factory DataProviderTransactionModel.fromJson(
-          Map<String, dynamic> json) =>
+  DataProviderTransactionModel();
+  factory DataProviderTransactionModel.fromJson(Map<String, dynamic> json) =>
       _$DataProviderTransactionModelFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$DataProviderTransactionModelToJson(this);
+  Map<String, dynamic> toJson() => _$DataProviderTransactionModelToJson(this);
 }
