@@ -10,7 +10,7 @@ import 'data_provider_plan_source_model.dart';
 part 'data_provider_plan_model.g.dart';
 
 @JsonSerializable()
- class DataProviderPlanModel extends BaseModuleEntity<int> {
+class DataProviderPlanModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'title')
   String? title;
   @JsonKey(name: 'description')
@@ -32,11 +32,9 @@ part 'data_provider_plan_model.g.dart';
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
 
- DataProviderPlanModel();
-  factory DataProviderPlanModel.fromJson(
-          Map<String, dynamic> json) =>
+  DataProviderPlanModel();
+  factory DataProviderPlanModel.fromJson(Map<String, dynamic> json) =>
       _$DataProviderPlanModelFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$DataProviderPlanModelToJson(this);
- }
+  Map<String, dynamic> toJson() => _$DataProviderPlanModelToJson(this);
+}

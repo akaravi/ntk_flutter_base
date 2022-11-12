@@ -6,7 +6,7 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 part 'data_provider_log_source_model.g.dart';
 
 @JsonSerializable()
- class DataProviderLogSourceModel extends BaseModuleEntity<String> {
+class DataProviderLogSourceModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkLogDataId')
   String? linkLogDataId;
   @JsonKey(name: 'linkSourceId')
@@ -15,13 +15,10 @@ part 'data_provider_log_source_model.g.dart';
   String? dataJson;
   @JsonKey(name: 'otherDataJson')
   String? otherDataJson;
-  
 
- DataProviderLogSourceModel();
-  factory DataProviderLogSourceModel.fromJson(
-          Map<String, dynamic> json) =>
+  DataProviderLogSourceModel();
+  factory DataProviderLogSourceModel.fromJson(Map<String, dynamic> json) =>
       _$DataProviderLogSourceModelFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$DataProviderLogSourceModelToJson(this);
+  Map<String, dynamic> toJson() => _$DataProviderLogSourceModelToJson(this);
 }

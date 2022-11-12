@@ -8,23 +8,21 @@ import 'data_provider_plan_client_model.dart';
 part 'data_provider_client_model.g.dart';
 
 @JsonSerializable()
- class DataProviderClientModel extends BaseModuleEntity<int> {
-   @JsonKey(name: 'title')
+class DataProviderClientModel extends BaseModuleEntity<int> {
+  @JsonKey(name: 'title')
   String? title;
-   @JsonKey(name: 'description')
+  @JsonKey(name: 'description')
   String? description;
-   @JsonKey(name: 'connectionType')
+  @JsonKey(name: 'connectionType')
   EnumDataProviderClientConnectionType? connectionType;
-   @JsonKey(name: 'keyCode')
+  @JsonKey(name: 'keyCode')
   String? keyCode;
-   @JsonKey(name: 'planClients')
+  @JsonKey(name: 'planClients')
   List<DataProviderPlanClientModel>? planClients;
 
- DataProviderClientModel();
-  factory DataProviderClientModel.fromJson(
-          Map<String, dynamic> json) =>
+  DataProviderClientModel();
+  factory DataProviderClientModel.fromJson(Map<String, dynamic> json) =>
       _$DataProviderClientModelFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$DataProviderClientModelToJson(this);
+  Map<String, dynamic> toJson() => _$DataProviderClientModelToJson(this);
 }
