@@ -1,0 +1,45 @@
+import 'package:json_annotation/json_annotation.dart';
+
+@JsonEnum()
+enum SmsOutBoxTypeEnum {
+  @JsonValue(0)
+  none,
+  @JsonValue(1)
+  one,
+  @JsonValue('list')
+  list,
+  @JsonValue('userList')
+   userList,
+  @JsonValue('From_N_To_M')
+  from_N_To_M,
+  @JsonValue('vCALENDAR')
+  vCALENDAR,
+  @JsonValue('wAPPUSH')
+  wAPPUSH,
+  @JsonValue('bINARY')
+  bINARY,
+  @JsonValue('phoneBook')
+  phoneBook,
+  @JsonValue('cityBook')
+  cityBook,
+  @JsonValue('cityPostCode')
+  cityPostCode,
+  @JsonValue('importFile')
+  importFile,
+  @JsonValue('warinningCredit')
+  warinningCredit,
+  @JsonValue('one_Fast')
+  one_Fast,
+  @JsonValue('api')
+  api,
+  @JsonValue('resms')
+  resms,
+  @JsonValue('sMSBulk_PhoneBook')
+  sMSBulk_PhoneBook,
+  @JsonValue('oneFast')
+  oneFast,
+  @JsonValue('charge')
+  charge,
+  @JsonValue('login')
+  login,
+}
