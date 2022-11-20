@@ -7,7 +7,7 @@ import '../../controller/base/base_list_controller.dart';
 import '../generics/base_list.dart';
 
 class ArticleList extends BaseModelListScreen<ArticleContentModel> {
-  ArticleList() : super(controller: ArticleController(), title: 'News');
+  ArticleList({Key? key}) : super(key: key, controller: ArticleController(), title: 'News');
 }
 
 class ArticleController extends BaseListController<ArticleContentModel> {

@@ -6,10 +6,10 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import '../../controller/base/base_list_controller.dart';
 
 abstract class BaseModelListScreen<model> extends StatefulWidget {
-  BaseListController<model> controller;
-  String title;
+  final BaseListController<model> controller;
+ final String title;
 
-  BaseModelListScreen({
+  const BaseModelListScreen({
     Key? key,
     required this.controller,
     required this.title,

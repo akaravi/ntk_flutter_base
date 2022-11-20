@@ -7,7 +7,7 @@ import '../generics/base_list.dart';
 
 
 class NewsListScreen extends BaseModelListScreen<NewsContentModel> {
-  NewsListScreen() : super(title: 'News',controller: NewsListController());
+  NewsListScreen({Key? key}) : super(key: key, title: 'News',controller: NewsListController());
 
 }
 
