@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_customer_order_model.dart';
+part of 'estate_property_expert_price_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
+EstatePropertyExpertPriceModel _$EstatePropertyExpertPriceModelFromJson(
         Map<String, dynamic> json) =>
-    EstateCustomerOrderModel()
+    EstatePropertyExpertPriceModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -33,57 +33,36 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['title'] as String?
+      ..expertPriceType = $enumDecodeNullable(
+          _$EstatePropertyExpertPriceTypeEnumEnumMap, json['expertPriceType'])
       ..description = json['description'] as String?
-      ..descriptionHidden = json['descriptionHidden'] as String?
-      ..linkEstateUserId = json['linkEstateUserId'] as String?
-      ..linkEstateCustomerCategoryId =
-          json['linkEstateCustomerCategoryId'] as String?
-      ..areaAddress = json['areaAddress'] as String?
-      ..includeAllSite = json['includeAllSite'] as bool?
-      ..linkPropertyIds = (json['linkPropertyIds'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList()
-      ..linkLocationIds = (json['linkLocationIds'] as List<dynamic>?)
-          ?.map((e) => e as int)
-          .toList()
-      ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..linkLocationCountryId = json['linkLocationCountryId'] as int?
+      ..linkLocationCountryIdTitle =
+          json['linkLocationCountryIdTitle'] as String?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
+      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
       ..linkPropertyTypeUsageId = json['linkPropertyTypeUsageId'] as String?
+      ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
       ..linkContractTypeId = json['linkContractTypeId'] as String?
+      ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
       ..createdYaer = json['createdYaer'] as int?
-      ..partition = json['partition'] as int?
-      ..area = json['area'] as int?
+      ..countRow = json['countRow'] as int?
       ..salePriceMin = json['salePriceMin'] as int?
       ..salePriceMax = json['salePriceMax'] as int?
+      ..salePriceAverage = json['salePriceAverage'] as int?
       ..rentPriceMin = json['rentPriceMin'] as int?
       ..rentPriceMax = json['rentPriceMax'] as int?
+      ..rentPriceAverage = json['rentPriceAverage'] as int?
       ..depositPriceMin = json['depositPriceMin'] as int?
       ..depositPriceMax = json['depositPriceMax'] as int?
+      ..depositPriceAverage = json['depositPriceAverage'] as int?
       ..periodPriceMin = json['periodPriceMin'] as int?
       ..periodPriceMax = json['periodPriceMax'] as int?
-      ..propertyDetailValues = (json['propertyDetailValues'] as List<dynamic>?)
-          ?.map((e) => EstatePropertyDetailValueModel.fromJson(
-              e as Map<String, dynamic>))
-          .toList()
-      ..propertyDetailGroups = (json['propertyDetailGroups'] as List<dynamic>?)
-          ?.map((e) => EstatePropertyDetailGroupModel.fromJson(
-              e as Map<String, dynamic>))
-          .toList()
-      ..urlViewContent = json['urlViewContent'] as String?
-      ..urlViewContentQRCodeBase64 =
-          json['urlViewContentQRCodeBase64'] as String?
-      ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
-      ..currencyTitle = json['currencyTitle'] as String?
-      ..currencySymbol = json['currencySymbol'] as String?
-      ..contactMobiles = json['contactMobiles'] as String?
-      ..contactMobileList = (json['contactMobileList'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList()
-      ..lastResultRowCount = json['lastResultRowCount'] as int?
-      ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?;
+      ..periodPriceAverage = json['periodPriceAverage'] as int?;
 
-Map<String, dynamic> _$EstateCustomerOrderModelToJson(
-        EstateCustomerOrderModel instance) =>
+Map<String, dynamic> _$EstatePropertyExpertPriceModelToJson(
+        EstatePropertyExpertPriceModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -100,40 +79,32 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'title': instance.title,
+      'expertPriceType':
+          _$EstatePropertyExpertPriceTypeEnumEnumMap[instance.expertPriceType],
       'description': instance.description,
-      'descriptionHidden': instance.descriptionHidden,
-      'linkEstateUserId': instance.linkEstateUserId,
-      'linkEstateCustomerCategoryId': instance.linkEstateCustomerCategoryId,
-      'areaAddress': instance.areaAddress,
-      'includeAllSite': instance.includeAllSite,
-      'linkPropertyIds': instance.linkPropertyIds,
-      'linkLocationIds': instance.linkLocationIds,
-      'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
+      'linkLocationId': instance.linkLocationId,
+      'linkLocationCountryId': instance.linkLocationCountryId,
+      'linkLocationCountryIdTitle': instance.linkLocationCountryIdTitle,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
       'linkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
+      'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'linkContractTypeId': instance.linkContractTypeId,
+      'linkCoreCurrencyId': instance.linkCoreCurrencyId,
       'createdYaer': instance.createdYaer,
-      'partition': instance.partition,
-      'area': instance.area,
+      'countRow': instance.countRow,
       'salePriceMin': instance.salePriceMin,
       'salePriceMax': instance.salePriceMax,
+      'salePriceAverage': instance.salePriceAverage,
       'rentPriceMin': instance.rentPriceMin,
       'rentPriceMax': instance.rentPriceMax,
+      'rentPriceAverage': instance.rentPriceAverage,
       'depositPriceMin': instance.depositPriceMin,
       'depositPriceMax': instance.depositPriceMax,
+      'depositPriceAverage': instance.depositPriceAverage,
       'periodPriceMin': instance.periodPriceMin,
       'periodPriceMax': instance.periodPriceMax,
-      'propertyDetailValues': instance.propertyDetailValues,
-      'propertyDetailGroups': instance.propertyDetailGroups,
-      'urlViewContent': instance.urlViewContent,
-      'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
-      'linkCoreCurrencyId': instance.linkCoreCurrencyId,
-      'currencyTitle': instance.currencyTitle,
-      'currencySymbol': instance.currencySymbol,
-      'contactMobiles': instance.contactMobiles,
-      'contactMobileList': instance.contactMobileList,
-      'lastResultRowCount': instance.lastResultRowCount,
-      'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
+      'periodPriceAverage': instance.periodPriceAverage,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -143,4 +114,13 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EstatePropertyExpertPriceTypeEnumEnumMap = {
+  EstatePropertyExpertPriceTypeEnum.autoWeek: 11,
+  EstatePropertyExpertPriceTypeEnum.autoMonth: 12,
+  EstatePropertyExpertPriceTypeEnum.autoYear: 13,
+  EstatePropertyExpertPriceTypeEnum.expertWeek: 21,
+  EstatePropertyExpertPriceTypeEnum.expertMonth: 22,
+  EstatePropertyExpertPriceTypeEnum.expertYear: 23,
 };

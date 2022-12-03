@@ -32,6 +32,8 @@ class DataFieldInfoModel {
   bool accessEditField = false;
   @JsonKey(name: 'accessAddField')
   bool accessAddField = false;
+  @JsonKey(name: 'accessExportField')
+  bool accessExportField = false;
   @JsonKey(name: 'fieldsInfo')
   List<FieldInfoModel>? fieldsInfo;
 

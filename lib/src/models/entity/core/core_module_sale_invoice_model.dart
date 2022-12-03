@@ -1,8 +1,7 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 
-import '../enums/enum_record_status.dart';
-import 'core_module_model.dart';
 import 'core_module_sale_header_model.dart';
 import 'core_module_sale_invoice_detail_model.dart';
 import 'core_module_sale_serial_model.dart';

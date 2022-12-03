@@ -9,11 +9,14 @@ part of 'access_model.dart';
 AccessModel _$AccessModelFromJson(Map<String, dynamic> json) => AccessModel()
   ..moduleName = json['moduleName'] as String?
   ..moduleEntityName = json['moduleEntityName'] as String?
+  ..versionModel = json['versionModel'] as String?
+  ..versionService = json['versionService'] as String?
   ..accessDeleteRow = json['accessDeleteRow'] as bool
   ..accessWatchRow = json['accessWatchRow'] as bool
   ..accessCountRow = json['accessCountRow'] as bool
   ..accessEditRow = json['accessEditRow'] as bool
   ..accessAddRow = json['accessAddRow'] as bool
+  ..accessExportFile = json['accessExportFile'] as bool
   ..accessRowInPanelDemo = json['accessRowInPanelDemo'] as bool
   ..accessRowWatchInSharingCategory =
       json['accessRowWatchInSharingCategory'] as bool
@@ -33,11 +36,14 @@ Map<String, dynamic> _$AccessModelToJson(AccessModel instance) =>
     <String, dynamic>{
       'moduleName': instance.moduleName,
       'moduleEntityName': instance.moduleEntityName,
+      'versionModel': instance.versionModel,
+      'versionService': instance.versionService,
       'accessDeleteRow': instance.accessDeleteRow,
       'accessWatchRow': instance.accessWatchRow,
       'accessCountRow': instance.accessCountRow,
       'accessEditRow': instance.accessEditRow,
       'accessAddRow': instance.accessAddRow,
+      'accessExportFile': instance.accessExportFile,
       'accessRowInPanelDemo': instance.accessRowInPanelDemo,
       'accessRowWatchInSharingCategory':
           instance.accessRowWatchInSharingCategory,

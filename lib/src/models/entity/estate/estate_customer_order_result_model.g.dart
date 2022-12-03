@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_account_agency__type_user_model.dart';
+part of 'estate_customer_order_result_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
+EstateCustomerOrderResultModel _$EstateCustomerOrderResultModelFromJson(
         Map<String, dynamic> json) =>
-    EstateAccountAgencyTypeUserModel()
+    EstateCustomerOrderResultModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -33,14 +33,18 @@ EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..accountUserType = $enumDecodeNullable(
-          _$EstateUserTypeEnumEnumMap, json['accountUserType'])
-      ..linkAccountUserId = json['linkAccountUserId'] as String?
-      ..linkAccountAgencyId = json['linkAccountAgencyId'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?;
+      ..linkCustomerOrder = json['linkCustomerOrder'] as String?
+      ..linkProperty = json['linkProperty'] as String?
+      ..autoRecordAdd = json['autoRecordAdd'] as bool?
+      ..linkCmsUserIdCustomer = json['linkCmsUserIdCustomer'] as int?
+      ..statusViewer = json['statusViewer'] as bool?
+      ..linkCmsUserIdViewer = json['linkCmsUserIdViewer'] as int?
+      ..statusTasked = json['statusTasked'] as bool?
+      ..linkCmsUserIdTasked = json['linkCmsUserIdTasked'] as int?
+      ..description = json['description'] as String?;
 
-Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
-        EstateAccountAgencyTypeUserModel instance) =>
+Map<String, dynamic> _$EstateCustomerOrderResultModelToJson(
+        EstateCustomerOrderResultModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -57,10 +61,15 @@ Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'accountUserType': _$EstateUserTypeEnumEnumMap[instance.accountUserType],
-      'linkAccountUserId': instance.linkAccountUserId,
-      'linkAccountAgencyId': instance.linkAccountAgencyId,
-      'linkPropertyId': instance.linkPropertyId,
+      'linkCustomerOrder': instance.linkCustomerOrder,
+      'linkProperty': instance.linkProperty,
+      'autoRecordAdd': instance.autoRecordAdd,
+      'linkCmsUserIdCustomer': instance.linkCmsUserIdCustomer,
+      'statusViewer': instance.statusViewer,
+      'linkCmsUserIdViewer': instance.linkCmsUserIdViewer,
+      'statusTasked': instance.statusTasked,
+      'linkCmsUserIdTasked': instance.linkCmsUserIdTasked,
+      'description': instance.description,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -70,10 +79,4 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
-};
-
-const _$EstateUserTypeEnumEnumMap = {
-  EstateUserTypeEnum.customer: 1,
-  EstateUserTypeEnum.agent: 2,
-  EstateUserTypeEnum.agency: 3,
 };

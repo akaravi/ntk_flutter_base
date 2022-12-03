@@ -1,19 +1,19 @@
+import 'package:base/src/models/entity/base/base_entity.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'feildinfo/datafield_info_model.dart';
-
-part 'access_model.g.dart';
+part 'core_user_support_access_model.g.dart';
 
 @JsonSerializable()
-class AccessModel {
+class CoreUserSupportAccessModel extends BaseEntity<int> {
+  @JsonKey(name: 'linkSiteId')
+  int? linkSiteId;
+  @JsonKey(name: 'linkUserId')
+  int? linkUserId;
   @JsonKey(name: 'moduleName')
   String? moduleName;
   @JsonKey(name: 'moduleEntityName')
   String? moduleEntityName;
-  @JsonKey(name: 'versionModel')
-  String? versionModel;
-  @JsonKey(name: 'versionService')
-  String? versionService;
   @JsonKey(name: 'accessDeleteRow')
   bool accessDeleteRow = false;
   @JsonKey(name: 'accessWatchRow')
@@ -26,10 +26,6 @@ class AccessModel {
   bool accessAddRow = false;
   @JsonKey(name: 'accessExportFile')
   bool accessExportFile = false;
-  @JsonKey(name: 'accessRowInPanelDemo')
-  bool accessRowInPanelDemo = false;
-  @JsonKey(name: 'accessRowWatchInSharingCategory')
-  bool accessRowWatchInSharingCategory = false;
   @JsonKey(name: 'accessWatchRowOtherSiteId')
   bool accessWatchRowOtherSiteId = false;
   @JsonKey(name: 'accessWatchRowOtherCreatedBy')
@@ -45,13 +41,10 @@ class AccessModel {
   @JsonKey(name: 'accessDeleteRowOtherCreatedBy')
   bool accessDeleteRowOtherCreatedBy = false;
 
-  @JsonKey(name: 'fieldsInfo')
-  List<DataFieldInfoModel>? fieldsInfo;
+  CoreUserSupportAccessModel();
 
-  AccessModel();
+  factory CoreUserSupportAccessModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreUserSupportAccessModelFromJson(json);
 
-  factory AccessModel.fromJson(Map<String, dynamic> json) =>
-      _$AccessModelFromJson(json);
-
-  Map<String, dynamic> toJson() => _$AccessModelToJson(this);
+  Map<String, dynamic> toJson() => _$CoreUserSupportAccessModelToJson(this);
 }

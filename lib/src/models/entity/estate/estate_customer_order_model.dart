@@ -17,6 +17,8 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? descriptionHidden;
   @JsonKey(name: 'linkEstateUserId')
   String? linkEstateUserId;
+  @JsonKey(name: 'linkEstateCustomerCategoryId')
+  String? linkEstateCustomerCategoryId;
   @JsonKey(name: 'areaAddress')
   String? areaAddress;
   @JsonKey(name: 'includeAllSite')
@@ -71,6 +73,11 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? contactMobiles;
   @JsonKey(name: 'contactMobileList')
   List<String>? contactMobileList;
+  @JsonKey(name: 'lastResultRowCount')
+  int? lastResultRowCount;
+  /*Action */
+  @JsonKey(name: 'actionSendSmsToCustomer')
+  bool? actionSendSmsToCustomer;
 
   EstateCustomerOrderModel();
   factory EstateCustomerOrderModel.fromJson(Map<String, dynamic> json) =>

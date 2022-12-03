@@ -1,6 +1,6 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
-import 'package:base/src/models/entity/enums/estate/enum_estate_user_type.dart';
+import 'package:base/src/models/entity/enums/estate/estate_user_type_enum.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'estate_account_agency__type_user_model.g.dart';
@@ -8,7 +8,7 @@ part 'estate_account_agency__type_user_model.g.dart';
 @JsonSerializable()
 class EstateAccountAgencyTypeUserModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'accountUserType')
-  EnumEstateUserType? accountUserType;
+  EstateUserTypeEnum? accountUserType;
   @JsonKey(name: 'linkAccountUserId')
   String? linkAccountUserId;
   @JsonKey(name: 'linkAccountAgencyId')

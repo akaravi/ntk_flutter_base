@@ -1,13 +1,10 @@
 import 'package:base/src/models/entity/base/base_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 
-import '../enums/enum_record_status.dart';
-import 'core_module_process_customize_model.dart';
 import 'core_module_sale_header_group_model.dart';
 import 'core_module_sale_item_model.dart';
 import 'core_module_sale_serial_model.dart';
-import 'core_site_category_model.dart';
-import 'core_user_group_model.dart';
 
 part 'core_module_sale_header_model.g.dart';
 

@@ -1,14 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_module_site_model.dart';
+part of 'estate_customer_category_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoreModuleSiteModel _$CoreModuleSiteModelFromJson(Map<String, dynamic> json) =>
-    CoreModuleSiteModel()
-      ..id = json['id'] as int?
+EstateCustomerCategoryModel _$EstateCustomerCategoryModelFromJson(
+        Map<String, dynamic> json) =>
+    EstateCustomerCategoryModel()
+      ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -31,35 +32,16 @@ CoreModuleSiteModel _$CoreModuleSiteModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..expireDate = json['expireDate'] as String?
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkModuleId = json['linkModuleId'] as int?
-      ..reNewDate = json['reNewDate'] as String?
-      ..hasBuyed = json['hasBuyed'] as bool?
-      ..virtual_CmsSite = json['virtual_CmsSite'] == null
-          ? null
-          : CoreSiteModel.fromJson(
-              json['virtual_CmsSite'] as Map<String, dynamic>)
-      ..cmsSite = json['cmsSite'] == null
-          ? null
-          : CoreSiteModel.fromJson(json['cmsSite'] as Map<String, dynamic>)
-      ..virtual_CmsModule = json[' virtual_CmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(
-              json[' virtual_CmsModule'] as Map<String, dynamic>)
-      ..cmsModule = json['cmsModule'] == null
-          ? null
-          : CoreModuleModel.fromJson(json['cmsModule'] as Map<String, dynamic>)
-      ..moduleConfigSiteAccessValuesJson =
-          json['moduleConfigSiteAccessValuesJson'] as String?
-      ..moduleConfigSiteValuesJson =
-          json['moduleConfigSiteValuesJson'] as String?
-      ..moduleSiteStorageValuesJson =
-          json['moduleSiteStorageValuesJson'] as String?;
+      ..description = json['description'] as String?
+      ..iconFont = json['iconFont'] as String?
+      ..iconColor = json['iconColor'] as String?
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
-Map<String, dynamic> _$CoreModuleSiteModelToJson(
-        CoreModuleSiteModel instance) =>
+Map<String, dynamic> _$EstateCustomerCategoryModelToJson(
+        EstateCustomerCategoryModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -75,20 +57,13 @@ Map<String, dynamic> _$CoreModuleSiteModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'expireDate': instance.expireDate,
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
-      'linkModuleId': instance.linkModuleId,
-      'reNewDate': instance.reNewDate,
-      'hasBuyed': instance.hasBuyed,
-      'virtual_CmsSite': instance.virtual_CmsSite,
-      'cmsSite': instance.cmsSite,
-      ' virtual_CmsModule': instance.virtual_CmsModule,
-      'cmsModule': instance.cmsModule,
-      'moduleConfigSiteAccessValuesJson':
-          instance.moduleConfigSiteAccessValuesJson,
-      'moduleConfigSiteValuesJson': instance.moduleConfigSiteValuesJson,
-      'moduleSiteStorageValuesJson': instance.moduleSiteStorageValuesJson,
+      'description': instance.description,
+      'iconFont': instance.iconFont,
+      'iconColor': instance.iconColor,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

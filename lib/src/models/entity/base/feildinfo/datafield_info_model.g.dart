@@ -22,6 +22,7 @@ DataFieldInfoModel _$DataFieldInfoModelFromJson(Map<String, dynamic> json) =>
       ..fieldValue = json['fieldValue'] as String?
       ..fieldTypeFullName = json['fieldTypeFullName'] as String?
       ..accessAddField = json['accessAddField'] as bool
+      ..accessExportField = json['accessExportField'] as bool
       ..fieldsInfo = (json['fieldsInfo'] as List<dynamic>?)
           ?.map((e) => FieldInfoModel.fromJson(e as Map<String, dynamic>))
           .toList();
@@ -41,5 +42,6 @@ Map<String, dynamic> _$DataFieldInfoModelToJson(DataFieldInfoModel instance) =>
       'accessWatchField': instance.accessWatchField,
       'accessEditField': instance.accessEditField,
       'accessAddField': instance.accessAddField,
+      'accessExportField': instance.accessExportField,
       'fieldsInfo': instance.fieldsInfo,
     };

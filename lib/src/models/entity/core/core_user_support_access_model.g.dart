@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_account_agency__type_user_model.dart';
+part of 'core_user_support_access_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
+CoreUserSupportAccessModel _$CoreUserSupportAccessModelFromJson(
         Map<String, dynamic> json) =>
-    EstateAccountAgencyTypeUserModel()
-      ..id = json['id'] as String?
+    CoreUserSupportAccessModel()
+      ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -33,14 +33,29 @@ EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..accountUserType = $enumDecodeNullable(
-          _$EstateUserTypeEnumEnumMap, json['accountUserType'])
-      ..linkAccountUserId = json['linkAccountUserId'] as String?
-      ..linkAccountAgencyId = json['linkAccountAgencyId'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?;
+      ..linkUserId = json['linkUserId'] as int?
+      ..moduleName = json['moduleName'] as String?
+      ..moduleEntityName = json['moduleEntityName'] as String?
+      ..accessDeleteRow = json['accessDeleteRow'] as bool
+      ..accessWatchRow = json['accessWatchRow'] as bool
+      ..accessCountRow = json['accessCountRow'] as bool
+      ..accessEditRow = json['accessEditRow'] as bool
+      ..accessAddRow = json['accessAddRow'] as bool
+      ..accessExportFile = json['accessExportFile'] as bool
+      ..accessWatchRowOtherSiteId = json['accessWatchRowOtherSiteId'] as bool
+      ..accessWatchRowOtherCreatedBy =
+          json['accessWatchRowOtherCreatedBy'] as bool
+      ..accessCountRowOtherSiteId = json['accessCountRowOtherSiteId'] as bool
+      ..accessCountRowOtherCreatedBy =
+          json['accessCountRowOtherCreatedBy'] as bool
+      ..accessEditRowOtherSiteId = json['accessEditRowOtherSiteId'] as bool
+      ..accessEditRowOtherCreatedBy =
+          json['accessEditRowOtherCreatedBy'] as bool
+      ..accessDeleteRowOtherCreatedBy =
+          json['accessDeleteRowOtherCreatedBy'] as bool;
 
-Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
-        EstateAccountAgencyTypeUserModel instance) =>
+Map<String, dynamic> _$CoreUserSupportAccessModelToJson(
+        CoreUserSupportAccessModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -57,10 +72,22 @@ Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'accountUserType': _$EstateUserTypeEnumEnumMap[instance.accountUserType],
-      'linkAccountUserId': instance.linkAccountUserId,
-      'linkAccountAgencyId': instance.linkAccountAgencyId,
-      'linkPropertyId': instance.linkPropertyId,
+      'linkUserId': instance.linkUserId,
+      'moduleName': instance.moduleName,
+      'moduleEntityName': instance.moduleEntityName,
+      'accessDeleteRow': instance.accessDeleteRow,
+      'accessWatchRow': instance.accessWatchRow,
+      'accessCountRow': instance.accessCountRow,
+      'accessEditRow': instance.accessEditRow,
+      'accessAddRow': instance.accessAddRow,
+      'accessExportFile': instance.accessExportFile,
+      'accessWatchRowOtherSiteId': instance.accessWatchRowOtherSiteId,
+      'accessWatchRowOtherCreatedBy': instance.accessWatchRowOtherCreatedBy,
+      'accessCountRowOtherSiteId': instance.accessCountRowOtherSiteId,
+      'accessCountRowOtherCreatedBy': instance.accessCountRowOtherCreatedBy,
+      'accessEditRowOtherSiteId': instance.accessEditRowOtherSiteId,
+      'accessEditRowOtherCreatedBy': instance.accessEditRowOtherCreatedBy,
+      'accessDeleteRowOtherCreatedBy': instance.accessDeleteRowOtherCreatedBy,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -70,10 +97,4 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
-};
-
-const _$EstateUserTypeEnumEnumMap = {
-  EstateUserTypeEnum.customer: 1,
-  EstateUserTypeEnum.agent: 2,
-  EstateUserTypeEnum.agency: 3,
 };

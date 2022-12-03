@@ -1,12 +1,10 @@
+import 'package:base/src/models/entity/base/base_entity.dart';
+import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../enums/enum_record_status.dart';
-import '../base/base_entity.dart';
-import '../enums/enum_cms_module_sale_item_type.dart';
 import 'core_module_model.dart';
-import 'core_module_sale_header_model.dart';
-import 'core_module_sale_invoice_model.dart';
 import 'core_site_model.dart';
+
 part 'core_module_site_model.g.dart';
 
 @JsonSerializable()

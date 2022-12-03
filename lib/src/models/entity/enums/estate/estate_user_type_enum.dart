@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-enum EnumEstateUserType {
+enum EstateUserTypeEnum {
   @JsonValue(1)
   customer,
   @JsonValue(2)
