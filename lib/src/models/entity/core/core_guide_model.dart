@@ -14,24 +14,60 @@ class CoreGuideModel extends BaseEntity<int> {
   String? descriptionFa;
   @JsonKey(name: 'bodyFa')
   String? bodyFa;
+  @JsonKey(name: 'linkFilePodcastIdFa')
+  int? linkFilePodcastIdFa;
+  @JsonKey(name: 'linkFileMovieIdFa')
+  int? linkFileMovieIdFa;
+  @JsonKey(name: 'linkFilePodcastIdFaSrc')
+  String? linkFilePodcastIdFaSrc;
+  @JsonKey(name: 'linkFileMovieIdFaSrc')
+  String? linkFileMovieIdFaSrc;
+
   @JsonKey(name: 'titleEn')
   String? titleEn;
   @JsonKey(name: 'descriptionEn')
   String? descriptionEn;
   @JsonKey(name: 'bodyEn')
   String? bodyEn;
+  @JsonKey(name: 'linkFilePodcastIdEn')
+  int? linkFilePodcastIdEn;
+  @JsonKey(name: 'linkFileMovieIdEn')
+  int? linkFileMovieIdEn;
+  @JsonKey(name: 'linkFilePodcastIdEnSrc')
+  String? linkFilePodcastIdEnSrc;
+  @JsonKey(name: 'linkFileMovieIdEnSrc')
+  String? linkFileMovieIdEnSrc;
+
   @JsonKey(name: 'titleAr')
   String? titleAr;
   @JsonKey(name: 'descriptionAr')
   String? descriptionAr;
   @JsonKey(name: 'bodyAr')
   String? bodyAr;
+  @JsonKey(name: 'linkFilePodcastIdAr')
+  int? linkFilePodcastIdAr;
+  @JsonKey(name: 'linkFileMovieIdAr')
+  int? linkFileMovieIdAr;
+  @JsonKey(name: 'linkFilePodcastIdArSrc')
+  String? linkFilePodcastIdArSrc;
+  @JsonKey(name: 'linkFileMovieIdArSrc')
+  String? linkFileMovieIdArSrc;
+
   @JsonKey(name: 'titleDe')
   String? titleDe;
   @JsonKey(name: 'descriptionDe')
   String? descriptionDe;
   @JsonKey(name: 'bodyDe')
   String? bodyDe;
+  @JsonKey(name: 'linkFilePodcastIdDe')
+  int? linkFilePodcastIdDe;
+  @JsonKey(name: 'linkFileMovieIdDe')
+  int? linkFileMovieIdDe;
+  @JsonKey(name: 'linkFilePodcastIdDeSrc')
+  String? linkFilePodcastIdDeSrc;
+  @JsonKey(name: 'linkFileMovieIdDeSrc')
+  String? linkFileMovieIdDeSrc;
+
   @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
   @JsonKey(name: 'linkParentId')

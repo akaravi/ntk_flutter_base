@@ -1,5 +1,6 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:base/src/models/entity/enums/enum_sort_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'estate_billboard_model.g.dart';
@@ -34,6 +35,8 @@ class EstateBillboardModel extends BaseModuleEntity<String> {
   String? linkMainImageIdSrc;
   @JsonKey(name: 'urlViewContent')
   String? urlViewContent;
+  @JsonKey(name: 'urlViewContentShort')
+  String? urlViewContentShort;
   @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
   @JsonKey(name: 'linkCoreCurrencyId')
@@ -42,6 +45,10 @@ class EstateBillboardModel extends BaseModuleEntity<String> {
   String? currencyTitle;
   @JsonKey(name: 'currencySymbol')
   String? currencySymbol;
+  @JsonKey(name: 'resultSortColumn')
+  String? resultSortColumn;
+  @JsonKey(name: 'resultSortType')
+  EnumSortType? resultSortType;
 
   EstateBillboardModel();
   factory EstateBillboardModel.fromJson(Map<String, dynamic> json) =>

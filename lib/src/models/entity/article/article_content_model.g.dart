@@ -92,6 +92,7 @@ ArticleContentModel _$ArticleContentModelFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList()
       ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentShort = json['urlViewContentShort'] as String?
       ..urlViewContentQRCodeBase64 =
           json['urlViewContentQRCodeBase64'] as String?;
 
@@ -149,6 +150,7 @@ Map<String, dynamic> _$ArticleContentModelToJson(
       'linkFileMovieIdSrc': instance.linkFileMovieIdSrc,
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'urlViewContent': instance.urlViewContent,
+      'urlViewContentShort': instance.urlViewContentShort,
       'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
     };
 

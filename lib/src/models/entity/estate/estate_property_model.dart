@@ -16,6 +16,8 @@ part 'estate_property_model.g.dart';
 class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'title')
   String? title;
+  @JsonKey(name: 'priority')
+  int? priority;
   @JsonKey(name: 'caseCode')
   String? caseCode;
   @JsonKey(name: 'mainAdminRecordStatus')
@@ -32,6 +34,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   int? linkCmsUserId;
   @JsonKey(name: 'linkEstateUserId')
   String? linkEstateUserId;
+  @JsonKey(name: 'linkEstateAgencyId')
+  String? linkEstateAgencyId;
   @JsonKey(name: 'isSoldIt')
   bool? isSoldIt;
   @JsonKey(name: 'reviewDataAfterSoldIt')
@@ -58,7 +62,9 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   EstatePropertyTypeUsageModel? propertyTypeUsage;
 
   @JsonKey(name: 'sharingKey')
-  int? sharingKey;
+  String? sharingKey;
+  @JsonKey(name: 'sharingId')
+  int? sharingId;
 
   /// <summary>
   /// موقعیت جغرافیایی
@@ -70,6 +76,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
 
   @JsonKey(name: 'address')
   String? address;
+  @JsonKey(name: 'addressHidden')
+  String? addressHidden;
   @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'linkExtraImageIds')
@@ -132,6 +140,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   List<String>? uploadFileGUID;
   @JsonKey(name: 'urlViewContent')
   String? urlViewContent;
+  @JsonKey(name: 'urlViewContentShort')
+  String? urlViewContentShort;
   @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
   @JsonKey(name: 'linkLocationCountryIdTitle')
@@ -150,6 +160,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   bool? actionSendSmsToAgent;
   @JsonKey(name: 'actionSendSmsToCustomerOrder')
   bool? actionSendSmsToCustomerOrder;
+  @JsonKey(name: 'actionSendSmsToContactNumber')
+  String? actionSendSmsToContactNumber;
   EstatePropertyModel();
   factory EstatePropertyModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyModelFromJson(json);

@@ -10,6 +10,8 @@ class EstatePropertyShareSiteModel extends BaseModuleEntity<String> {
   int? linkCmsSiteId;
   @JsonKey(name: 'linkEstatePropertyId')
   String? linkEstatePropertyId;
+  @JsonKey(name: 'accessViewHiddenInfo')
+  bool? accessViewHiddenInfo;
   EstatePropertyShareSiteModel();
   factory EstatePropertyShareSiteModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyShareSiteModelFromJson(json);

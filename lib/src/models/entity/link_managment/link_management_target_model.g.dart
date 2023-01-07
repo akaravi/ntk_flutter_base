@@ -67,7 +67,11 @@ LinkManagementTargetModel _$LinkManagementTargetModelFromJson(
       ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
-      ..qRCodeBase64 = json['qRCodeBase64'] as String?;
+      ..qRCodeBase64 = json['qRCodeBase64'] as String?
+      ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentShort = json['urlViewContentShort'] as String?
+      ..urlViewContentQRCodeBase64 =
+          json['urlViewContentQRCodeBase64'] as String?;
 
 Map<String, dynamic> _$LinkManagementTargetModelToJson(
         LinkManagementTargetModel instance) =>
@@ -116,6 +120,9 @@ Map<String, dynamic> _$LinkManagementTargetModelToJson(
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'qRCodeBase64': instance.qRCodeBase64,
+      'urlViewContent': instance.urlViewContent,
+      'urlViewContentShort': instance.urlViewContentShort,
+      'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
     };
 
 const _$EnumRecordStatusEnumMap = {

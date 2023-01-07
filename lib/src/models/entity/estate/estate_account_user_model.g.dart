@@ -50,9 +50,17 @@ EstateAccountUserModel _$EstateAccountUserModelFromJson(
       ..serialRfId = json['serialRfId'] as String?
       ..serialNumber = json['serialNumber'] as String?
       ..phoneNumber = json['phoneNumber'] as String?
+      ..mobileNumber = json['mobileNumber'] as String?
       ..address = json['address'] as String?
       ..linkMainImageId = json['linkMainImageId'] as int?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..accessWatchRowSite = json['accessWatchRowSite'] as bool?
+      ..accessWatchRowOtherAgency = json['accessWatchRowOtherAgency'] as bool?
+      ..accessWatchRowOtherAgent = json['accessWatchRowOtherAgent'] as bool?
+      ..accessAllowShareRowWatchOtherAgency =
+          json['accessAllowShareRowWatchOtherAgency'] as bool?
+      ..accessAllowShareRowWatchOtherAgent =
+          json['accessAllowShareRowWatchOtherAgent'] as bool?;
 
 Map<String, dynamic> _$EstateAccountUserModelToJson(
         EstateAccountUserModel instance) =>
@@ -86,9 +94,17 @@ Map<String, dynamic> _$EstateAccountUserModelToJson(
       'serialRfId': instance.serialRfId,
       'serialNumber': instance.serialNumber,
       'phoneNumber': instance.phoneNumber,
+      'mobileNumber': instance.mobileNumber,
       'address': instance.address,
       'linkMainImageId': instance.linkMainImageId,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'accessWatchRowSite': instance.accessWatchRowSite,
+      'accessWatchRowOtherAgency': instance.accessWatchRowOtherAgency,
+      'accessWatchRowOtherAgent': instance.accessWatchRowOtherAgent,
+      'accessAllowShareRowWatchOtherAgency':
+          instance.accessAllowShareRowWatchOtherAgency,
+      'accessAllowShareRowWatchOtherAgent':
+          instance.accessAllowShareRowWatchOtherAgent,
     };
 
 const _$EnumRecordStatusEnumMap = {

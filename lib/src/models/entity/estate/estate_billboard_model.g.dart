@@ -59,11 +59,15 @@ EstateBillboardModel _$EstateBillboardModelFromJson(
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentShort = json['urlViewContentShort'] as String?
       ..urlViewContentQRCodeBase64 =
           json['urlViewContentQRCodeBase64'] as String?
       ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
       ..currencyTitle = json['currencyTitle'] as String?
-      ..currencySymbol = json['currencySymbol'] as String?;
+      ..currencySymbol = json['currencySymbol'] as String?
+      ..resultSortColumn = json['resultSortColumn'] as String?
+      ..resultSortType =
+          $enumDecodeNullable(_$EnumSortTypeEnumMap, json['resultSortType']);
 
 Map<String, dynamic> _$EstateBillboardModelToJson(
         EstateBillboardModel instance) =>
@@ -97,10 +101,13 @@ Map<String, dynamic> _$EstateBillboardModelToJson(
       'linkMainImageId': instance.linkMainImageId,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'urlViewContent': instance.urlViewContent,
+      'urlViewContentShort': instance.urlViewContentShort,
       'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
       'linkCoreCurrencyId': instance.linkCoreCurrencyId,
       'currencyTitle': instance.currencyTitle,
       'currencySymbol': instance.currencySymbol,
+      'resultSortColumn': instance.resultSortColumn,
+      'resultSortType': _$EnumSortTypeEnumMap[instance.resultSortType],
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -110,4 +117,10 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumSortTypeEnumMap = {
+  EnumSortType.descending: 0,
+  EnumSortType.ascending: 1,
+  EnumSortType.random: 2,
 };

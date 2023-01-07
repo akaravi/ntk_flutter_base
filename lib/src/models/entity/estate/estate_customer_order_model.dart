@@ -1,5 +1,6 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:base/src/models/entity/enums/enum_sort_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'estate_property_detail_group_model.dart';
@@ -15,8 +16,12 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? description;
   @JsonKey(name: 'descriptionHidden')
   String? descriptionHidden;
+  @JsonKey(name: 'caseCode')
+  String? caseCode;
   @JsonKey(name: 'linkEstateUserId')
   String? linkEstateUserId;
+  @JsonKey(name: 'linkEstateAgencyId')
+  String? linkEstateAgencyId;
   @JsonKey(name: 'linkEstateCustomerCategoryId')
   String? linkEstateCustomerCategoryId;
   @JsonKey(name: 'areaAddress')
@@ -25,6 +30,8 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   bool? includeAllSite;
   @JsonKey(name: 'linkPropertyIds')
   List<String>? linkPropertyIds;
+  @JsonKey(name: 'linkPropertyIdsIgnored')
+  List<String>? linkPropertyIdsIgnored;
   @JsonKey(name: 'linkLocationIds')
   List<int>? linkLocationIds;
   @JsonKey(name: 'linkPropertyTypeLanduseId')
@@ -61,6 +68,8 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   List<EstatePropertyDetailGroupModel>? propertyDetailGroups;
   @JsonKey(name: 'urlViewContent')
   String? urlViewContent;
+  @JsonKey(name: 'urlViewContentShort')
+  String? urlViewContentShort;
   @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
   @JsonKey(name: 'linkCoreCurrencyId')
@@ -75,9 +84,15 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   List<String>? contactMobileList;
   @JsonKey(name: 'lastResultRowCount')
   int? lastResultRowCount;
+  @JsonKey(name: 'resultSortColumn')
+  String? resultSortColumn;
+  @JsonKey(name: 'resultSortType')
+  EnumSortType? resultSortType;
   /*Action */
   @JsonKey(name: 'actionSendSmsToCustomer')
   bool? actionSendSmsToCustomer;
+  @JsonKey(name: 'actionSendSmsToContactNumber')
+  String? actionSendSmsToContactNumber;
 
   EstateCustomerOrderModel();
   factory EstateCustomerOrderModel.fromJson(Map<String, dynamic> json) =>

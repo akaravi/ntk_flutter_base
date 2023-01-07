@@ -29,6 +29,8 @@ class EstateAccountAgencyModel extends BaseModuleEntity<String> {
   String? address;
   @JsonKey(name: 'phoneNumber')
   String? phoneNumber;
+  @JsonKey(name: 'mobileNumber')
+  String? mobileNumber;
   @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'linkMainImageIdSrc')
@@ -38,6 +40,17 @@ class EstateAccountAgencyModel extends BaseModuleEntity<String> {
   String? linkExtraImageIds;
   @JsonKey(name: 'linkExtraImageIdsSrc')
   List<String>? linkExtraImageIdsSrc;
+
+  @JsonKey(name: 'accessWatchRowSite')
+  bool? accessWatchRowSite;
+  @JsonKey(name: 'accessWatchRowOtherAgency')
+  bool? accessWatchRowOtherAgency;
+  @JsonKey(name: 'accessWatchRowOtherAgent')
+  bool? accessWatchRowOtherAgent;
+  @JsonKey(name: 'accessAllowShareRowWatchOtherAgency')
+  bool? accessAllowShareRowWatchOtherAgency;
+  @JsonKey(name: 'accessAllowShareRowWatchOtherAgent')
+  bool? accessAllowShareRowWatchOtherAgent;
   EstateAccountAgencyModel();
   factory EstateAccountAgencyModel.fromJson(Map<String, dynamic> json) =>
       _$EstateAccountAgencyModelFromJson(json);

@@ -10,6 +10,8 @@ class EstatePropertyShareAgencyModel extends BaseModuleEntity<String> {
   String? linkEstateAgencyId;
   @JsonKey(name: 'linkEstatePropertyId')
   String? linkEstatePropertyId;
+  @JsonKey(name: 'accessViewHiddenInfo')
+  bool? accessViewHiddenInfo;
   EstatePropertyShareAgencyModel();
   factory EstatePropertyShareAgencyModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyShareAgencyModelFromJson(json);

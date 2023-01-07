@@ -85,6 +85,8 @@ class BlogContentModel extends BaseModuleEntity<int> {
   List<String>? linkFileIdsSrc;
   @JsonKey(name: 'urlViewContent')
   String? urlViewContent;
+  @JsonKey(name: 'urlViewContentShort')
+  String? urlViewContentShort;
   @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
   BlogContentModel();

@@ -10,6 +10,8 @@ class ExportFileModel {
   EnumExportFileType? fileType;
   @JsonKey(name: "recieveMethod")
   EnumExportReceiveMethod? recieveMethod;
+  @JsonKey(name: 'reportFormatFileId')
+  String? reportFormatFileId;
 
   ExportFileModel();
 

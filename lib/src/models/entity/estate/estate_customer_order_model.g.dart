@@ -36,7 +36,9 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..title = json['title'] as String?
       ..description = json['description'] as String?
       ..descriptionHidden = json['descriptionHidden'] as String?
+      ..caseCode = json['caseCode'] as String?
       ..linkEstateUserId = json['linkEstateUserId'] as String?
+      ..linkEstateAgencyId = json['linkEstateAgencyId'] as String?
       ..linkEstateCustomerCategoryId =
           json['linkEstateCustomerCategoryId'] as String?
       ..areaAddress = json['areaAddress'] as String?
@@ -44,6 +46,10 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..linkPropertyIds = (json['linkPropertyIds'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList()
+      ..linkPropertyIdsIgnored =
+          (json['linkPropertyIdsIgnored'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
       ..linkLocationIds = (json['linkLocationIds'] as List<dynamic>?)
           ?.map((e) => e as int)
           .toList()
@@ -70,6 +76,7 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
               e as Map<String, dynamic>))
           .toList()
       ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentShort = json['urlViewContentShort'] as String?
       ..urlViewContentQRCodeBase64 =
           json['urlViewContentQRCodeBase64'] as String?
       ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
@@ -80,7 +87,12 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
           ?.map((e) => e as String)
           .toList()
       ..lastResultRowCount = json['lastResultRowCount'] as int?
-      ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?;
+      ..resultSortColumn = json['resultSortColumn'] as String?
+      ..resultSortType =
+          $enumDecodeNullable(_$EnumSortTypeEnumMap, json['resultSortType'])
+      ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?
+      ..actionSendSmsToContactNumber =
+          json['actionSendSmsToContactNumber'] as String?;
 
 Map<String, dynamic> _$EstateCustomerOrderModelToJson(
         EstateCustomerOrderModel instance) =>
@@ -103,11 +115,14 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'title': instance.title,
       'description': instance.description,
       'descriptionHidden': instance.descriptionHidden,
+      'caseCode': instance.caseCode,
       'linkEstateUserId': instance.linkEstateUserId,
+      'linkEstateAgencyId': instance.linkEstateAgencyId,
       'linkEstateCustomerCategoryId': instance.linkEstateCustomerCategoryId,
       'areaAddress': instance.areaAddress,
       'includeAllSite': instance.includeAllSite,
       'linkPropertyIds': instance.linkPropertyIds,
+      'linkPropertyIdsIgnored': instance.linkPropertyIdsIgnored,
       'linkLocationIds': instance.linkLocationIds,
       'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'linkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
@@ -126,6 +141,7 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'propertyDetailValues': instance.propertyDetailValues,
       'propertyDetailGroups': instance.propertyDetailGroups,
       'urlViewContent': instance.urlViewContent,
+      'urlViewContentShort': instance.urlViewContentShort,
       'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
       'linkCoreCurrencyId': instance.linkCoreCurrencyId,
       'currencyTitle': instance.currencyTitle,
@@ -133,7 +149,10 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'contactMobiles': instance.contactMobiles,
       'contactMobileList': instance.contactMobileList,
       'lastResultRowCount': instance.lastResultRowCount,
+      'resultSortColumn': instance.resultSortColumn,
+      'resultSortType': _$EnumSortTypeEnumMap[instance.resultSortType],
       'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
+      'actionSendSmsToContactNumber': instance.actionSendSmsToContactNumber,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -143,4 +162,10 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
+};
+
+const _$EnumSortTypeEnumMap = {
+  EnumSortType.descending: 0,
+  EnumSortType.ascending: 1,
+  EnumSortType.random: 2,
 };

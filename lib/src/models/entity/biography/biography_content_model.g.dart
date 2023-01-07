@@ -99,6 +99,7 @@ BiographyContentModel _$BiographyContentModelFromJson(
           ? null
           : DateTime.parse(json['datePeriodEnd'] as String)
       ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentShort = json['urlViewContentShort'] as String?
       ..urlViewContentQRCodeBase64 =
           json['urlViewContentQRCodeBase64'] as String?;
 
@@ -157,6 +158,7 @@ Map<String, dynamic> _$BiographyContentModelToJson(
       'datePeriodStart': instance.datePeriodStart?.toIso8601String(),
       'datePeriodEnd': instance.datePeriodEnd?.toIso8601String(),
       'urlViewContent': instance.urlViewContent,
+      'urlViewContentShort': instance.urlViewContentShort,
       'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
     };
 

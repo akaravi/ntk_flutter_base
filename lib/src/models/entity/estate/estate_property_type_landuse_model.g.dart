@@ -37,8 +37,15 @@ EstatePropertyTypeLanduseModel _$EstatePropertyTypeLanduseModelFromJson(
       ..titleML = json['titleML'] as String?
       ..titleResourceLanguage = json['titleResourceLanguage'] as String?
       ..contentCount = json['contentCount'] as int?
+      ..createdYearActive = json['createdYearActive'] as bool?
       ..titleCreatedYaer = json['titleCreatedYaer'] as String?
+      ..titleCreatedYaerML = json['titleCreatedYaerML'] as String?
+      ..titleCreatedYaerResourceLanguage =
+          json['titleCreatedYaerResourceLanguage'] as String?
       ..titlePartition = json['titlePartition'] as String?
+      ..titlePartitionML = json['titlePartitionML'] as String?
+      ..titlePartitionResourceLanguage =
+          json['titlePartitionResourceLanguage'] as String?
       ..description = json['description'] as String?
       ..iconFont = json['iconFont'] as String?
       ..iconColor = json['iconColor'] as String?
@@ -75,8 +82,14 @@ Map<String, dynamic> _$EstatePropertyTypeLanduseModelToJson(
       'titleML': instance.titleML,
       'titleResourceLanguage': instance.titleResourceLanguage,
       'contentCount': instance.contentCount,
+      'createdYearActive': instance.createdYearActive,
       'titleCreatedYaer': instance.titleCreatedYaer,
+      'titleCreatedYaerML': instance.titleCreatedYaerML,
+      'titleCreatedYaerResourceLanguage':
+          instance.titleCreatedYaerResourceLanguage,
       'titlePartition': instance.titlePartition,
+      'titlePartitionML': instance.titlePartitionML,
+      'titlePartitionResourceLanguage': instance.titlePartitionResourceLanguage,
       'description': instance.description,
       'iconFont': instance.iconFont,
       'iconColor': instance.iconColor,

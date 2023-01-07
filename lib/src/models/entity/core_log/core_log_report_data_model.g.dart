@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_account_agency__type_user_model.dart';
+part of 'core_log_report_data_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
+CoreLogReportDataModel _$CoreLogReportDataModelFromJson(
         Map<String, dynamic> json) =>
-    EstateAccountAgencyTypeUserModel()
+    CoreLogReportDataModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -33,14 +33,20 @@ EstateAccountAgencyTypeUserModel _$EstateAccountAgencyTypeUserModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..accountUserType = $enumDecodeNullable(
-          _$EstateUserTypeEnumEnumMap, json['accountUserType'])
-      ..linkAccountUserId = json['linkAccountUserId'] as String?
-      ..linkAccountAgencyId = json['linkAccountAgencyId'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?;
+      ..linkUserId = json['linkUserId'] as int?
+      ..linkMemberId = json['linkMemberId'] as String?
+      ..linkModuleEntityId = json['linkModuleEntityId'] as int?
+      ..linkModuleEntityReportFileId =
+          json['linkModuleEntityReportFileId'] as String?
+      ..moduleEntityId = json['moduleEntityId'] as String?
+      ..expireDate = json['expireDate'] == null
+          ? null
+          : DateTime.parse(json['expireDate'] as String)
+      ..reportFileId = json['reportFileId'] as int?
+      ..reportData = json['reportData'] as String?;
 
-Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
-        EstateAccountAgencyTypeUserModel instance) =>
+Map<String, dynamic> _$CoreLogReportDataModelToJson(
+        CoreLogReportDataModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -57,10 +63,14 @@ Map<String, dynamic> _$EstateAccountAgencyTypeUserModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'accountUserType': _$EstateUserTypeEnumEnumMap[instance.accountUserType],
-      'linkAccountUserId': instance.linkAccountUserId,
-      'linkAccountAgencyId': instance.linkAccountAgencyId,
-      'linkPropertyId': instance.linkPropertyId,
+      'linkUserId': instance.linkUserId,
+      'linkMemberId': instance.linkMemberId,
+      'linkModuleEntityId': instance.linkModuleEntityId,
+      'linkModuleEntityReportFileId': instance.linkModuleEntityReportFileId,
+      'moduleEntityId': instance.moduleEntityId,
+      'expireDate': instance.expireDate?.toIso8601String(),
+      'reportFileId': instance.reportFileId,
+      'reportData': instance.reportData,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -70,10 +80,4 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
-};
-
-const _$EstateUserTypeEnumEnumMap = {
-  EstateUserTypeEnum.customer: 1,
-  EstateUserTypeEnum.agent: 2,
-  EstateUserTypeEnum.agency: 3,
 };

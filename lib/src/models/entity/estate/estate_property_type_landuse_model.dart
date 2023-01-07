@@ -17,10 +17,20 @@ class EstatePropertyTypeLanduseModel extends BaseModuleEntity<String> {
   String? titleResourceLanguage;
   @JsonKey(name: 'contentCount')
   int? contentCount;
+  @JsonKey(name: 'createdYearActive')
+  bool? createdYearActive;
   @JsonKey(name: 'titleCreatedYaer')
   String? titleCreatedYaer;
+  @JsonKey(name: 'titleCreatedYaerML')
+  String? titleCreatedYaerML;
+  @JsonKey(name: 'titleCreatedYaerResourceLanguage')
+  String? titleCreatedYaerResourceLanguage;
   @JsonKey(name: 'titlePartition')
   String? titlePartition;
+  @JsonKey(name: 'titlePartitionML')
+  String? titlePartitionML;
+  @JsonKey(name: 'titlePartitionResourceLanguage')
+  String? titlePartitionResourceLanguage;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'iconFont')

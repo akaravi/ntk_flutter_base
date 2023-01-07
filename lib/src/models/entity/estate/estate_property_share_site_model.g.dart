@@ -34,7 +34,8 @@ EstatePropertyShareSiteModel _$EstatePropertyShareSiteModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..linkCmsSiteId = json['linkCmsSiteId'] as int?
-      ..linkEstatePropertyId = json['linkEstatePropertyId'] as String?;
+      ..linkEstatePropertyId = json['linkEstatePropertyId'] as String?
+      ..accessViewHiddenInfo = json['accessViewHiddenInfo'] as bool?;
 
 Map<String, dynamic> _$EstatePropertyShareSiteModelToJson(
         EstatePropertyShareSiteModel instance) =>
@@ -56,6 +57,7 @@ Map<String, dynamic> _$EstatePropertyShareSiteModelToJson(
       'linkSiteId': instance.linkSiteId,
       'linkCmsSiteId': instance.linkCmsSiteId,
       'linkEstatePropertyId': instance.linkEstatePropertyId,
+      'accessViewHiddenInfo': instance.accessViewHiddenInfo,
     };
 
 const _$EnumRecordStatusEnumMap = {

@@ -33,6 +33,7 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
+      ..priority = json['priority'] as int?
       ..caseCode = json['caseCode'] as String?
       ..mainAdminRecordStatus = $enumDecodeNullable(
           _$EnumRecordStatusEnumMap, json['mainAdminRecordStatus'])
@@ -43,6 +44,7 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..area = json['area'] as int?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..linkEstateUserId = json['linkEstateUserId'] as String?
+      ..linkEstateAgencyId = json['linkEstateAgencyId'] as String?
       ..isSoldIt = json['isSoldIt'] as bool?
       ..reviewDataAfterSoldIt = json['reviewDataAfterSoldIt'] == null
           ? null
@@ -63,10 +65,12 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
           ? null
           : EstatePropertyTypeUsageModel.fromJson(
               json['propertyTypeUsage'] as Map<String, dynamic>)
-      ..sharingKey = json['sharingKey'] as int?
+      ..sharingKey = json['sharingKey'] as String?
+      ..sharingId = json['sharingId'] as int?
       ..geolocationlatitude = json['geolocationlatitude'] as int?
       ..geolocationlongitude = json['geolocationlongitude'] as int?
       ..address = json['address'] as String?
+      ..addressHidden = json['addressHidden'] as String?
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkExtraImageIds = json['linkExtraImageIds'] as String?
       ..linkFileIds = json['linkFileIds'] as String?
@@ -103,6 +107,7 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList()
       ..urlViewContent = json['urlViewContent'] as String?
+      ..urlViewContentShort = json['urlViewContentShort'] as String?
       ..urlViewContentQRCodeBase64 =
           json['urlViewContentQRCodeBase64'] as String?
       ..linkLocationCountryIdTitle =
@@ -113,7 +118,9 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?
       ..actionSendSmsToAgent = json['actionSendSmsToAgent'] as bool?
       ..actionSendSmsToCustomerOrder =
-          json['actionSendSmsToCustomerOrder'] as bool?;
+          json['actionSendSmsToCustomerOrder'] as bool?
+      ..actionSendSmsToContactNumber =
+          json['actionSendSmsToContactNumber'] as String?;
 
 Map<String, dynamic> _$EstatePropertyModelToJson(
         EstatePropertyModel instance) =>
@@ -134,6 +141,7 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
+      'priority': instance.priority,
       'caseCode': instance.caseCode,
       'mainAdminRecordStatus':
           _$EnumRecordStatusEnumMap[instance.mainAdminRecordStatus],
@@ -143,6 +151,7 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'area': instance.area,
       'linkCmsUserId': instance.linkCmsUserId,
       'linkEstateUserId': instance.linkEstateUserId,
+      'linkEstateAgencyId': instance.linkEstateAgencyId,
       'isSoldIt': instance.isSoldIt,
       'reviewDataAfterSoldIt':
           instance.reviewDataAfterSoldIt?.toIso8601String(),
@@ -157,9 +166,11 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'propertyTypeLanduse': instance.propertyTypeLanduse,
       'propertyTypeUsage': instance.propertyTypeUsage,
       'sharingKey': instance.sharingKey,
+      'sharingId': instance.sharingId,
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
       'address': instance.address,
+      'addressHidden': instance.addressHidden,
       'linkMainImageId': instance.linkMainImageId,
       'linkExtraImageIds': instance.linkExtraImageIds,
       'linkFileIds': instance.linkFileIds,
@@ -180,6 +191,7 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'uploadFileGUID': instance.uploadFileGUID,
       'urlViewContent': instance.urlViewContent,
+      'urlViewContentShort': instance.urlViewContentShort,
       'urlViewContentQRCodeBase64': instance.urlViewContentQRCodeBase64,
       'linkLocationCountryIdTitle': instance.linkLocationCountryIdTitle,
       'linkLocationIdTitle': instance.linkLocationIdTitle,
@@ -188,6 +200,7 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
       'actionSendSmsToAgent': instance.actionSendSmsToAgent,
       'actionSendSmsToCustomerOrder': instance.actionSendSmsToCustomerOrder,
+      'actionSendSmsToContactNumber': instance.actionSendSmsToContactNumber,
     };
 
 const _$EnumRecordStatusEnumMap = {

@@ -34,12 +34,25 @@ class EstateAccountUserModel extends BaseModuleEntity<String> {
   String? serialNumber;
   @JsonKey(name: 'phoneNumber')
   String? phoneNumber;
+  @JsonKey(name: 'mobileNumber')
+  String? mobileNumber;
   @JsonKey(name: 'address')
   String? address;
   @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
+
+  @JsonKey(name: 'accessWatchRowSite')
+  bool? accessWatchRowSite;
+  @JsonKey(name: 'accessWatchRowOtherAgency')
+  bool? accessWatchRowOtherAgency;
+  @JsonKey(name: 'accessWatchRowOtherAgent')
+  bool? accessWatchRowOtherAgent;
+  @JsonKey(name: 'accessAllowShareRowWatchOtherAgency')
+  bool? accessAllowShareRowWatchOtherAgency;
+  @JsonKey(name: 'accessAllowShareRowWatchOtherAgent')
+  bool? accessAllowShareRowWatchOtherAgent;
   EstateAccountUserModel();
   factory EstateAccountUserModel.fromJson(Map<String, dynamic> json) =>
       _$EstateAccountUserModelFromJson(json);

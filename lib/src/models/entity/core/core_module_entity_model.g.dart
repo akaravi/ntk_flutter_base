@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_property_history_model.dart';
+part of 'core_module_entity_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
+CoreModuleEntityModel _$CoreModuleEntityModelFromJson(
         Map<String, dynamic> json) =>
-    EstatePropertyHistoryModel()
-      ..id = json['id'] as String?
+    CoreModuleEntityModel()
+      ..id = json['id'] as int?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -32,34 +32,15 @@ EstatePropertyHistoryModel _$EstatePropertyHistoryModelFromJson(
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['title'] as String?
-      ..linkPropertyId = json['linkPropertyId'] as String?
-      ..linkCustomerOrderId = json['linkCustomerOrderId'] as String?
-      ..linkEstateUserId = json['linkEstateUserId'] as String?
-      ..linkEstateAgencyId = json['linkEstateAgencyId'] as String?
-      ..linkActivityTypeId = json['linkActivityTypeId'] as String?
-      ..linkFileIds = json['linkFileIds'] as String?
-      ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList()
-      ..activityType = json['activityType'] == null
-          ? null
-          : EstateActivityTypeModel.fromJson(
-              json['activityType'] as Map<String, dynamic>)
-      ..activityStatus = $enumDecodeNullable(
-          _$ActivityStatusEnumEnumMap, json['activityStatus'])
-      ..appointmentDateFrom = json['appointmentDateFrom'] == null
-          ? null
-          : DateTime.parse(json['appointmentDateFrom'] as String)
-      ..appointmentDateTo = json['appointmentDateTo'] == null
-          ? null
-          : DateTime.parse(json['appointmentDateTo'] as String)
-      ..description = json['description'] as String?
-      ..descriptionHidden = json['descriptionHidden'] as String?;
+      ..linkModuleId = json['linkModuleId'] as int?
+      ..moduleName = json['moduleName'] as String?
+      ..moduleNameML = json['moduleNameML'] as String?
+      ..moduleEntityName = json['moduleEntityName'] as String?
+      ..moduleEntityNameML = json['moduleEntityNameML'] as String?
+      ..description = json['description'] as String?;
 
-Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
-        EstatePropertyHistoryModel instance) =>
+Map<String, dynamic> _$CoreModuleEntityModelToJson(
+        CoreModuleEntityModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -75,21 +56,12 @@ Map<String, dynamic> _$EstatePropertyHistoryModelToJson(
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
-      'title': instance.title,
-      'linkPropertyId': instance.linkPropertyId,
-      'linkCustomerOrderId': instance.linkCustomerOrderId,
-      'linkEstateUserId': instance.linkEstateUserId,
-      'linkEstateAgencyId': instance.linkEstateAgencyId,
-      'linkActivityTypeId': instance.linkActivityTypeId,
-      'linkFileIds': instance.linkFileIds,
-      'linkFileIdsSrc': instance.linkFileIdsSrc,
-      'activityType': instance.activityType,
-      'activityStatus': _$ActivityStatusEnumEnumMap[instance.activityStatus],
-      'appointmentDateFrom': instance.appointmentDateFrom?.toIso8601String(),
-      'appointmentDateTo': instance.appointmentDateTo?.toIso8601String(),
+      'linkModuleId': instance.linkModuleId,
+      'moduleName': instance.moduleName,
+      'moduleNameML': instance.moduleNameML,
+      'moduleEntityName': instance.moduleEntityName,
+      'moduleEntityNameML': instance.moduleEntityNameML,
       'description': instance.description,
-      'descriptionHidden': instance.descriptionHidden,
     };
 
 const _$EnumRecordStatusEnumMap = {
@@ -99,10 +71,4 @@ const _$EnumRecordStatusEnumMap = {
   EnumRecordStatus.pending: 4,
   EnumRecordStatus.deniedConfirmed: 5,
   EnumRecordStatus.archive: 6,
-};
-
-const _$ActivityStatusEnumEnumMap = {
-  ActivityStatusEnum.planned: 0,
-  ActivityStatusEnum.done: 1,
-  ActivityStatusEnum.canceled: 2,
 };

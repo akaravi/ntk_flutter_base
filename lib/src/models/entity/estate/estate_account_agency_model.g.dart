@@ -46,12 +46,20 @@ EstateAccountAgencyModel _$EstateAccountAgencyModelFromJson(
           (json['geolocationlongitude'] as num?)?.toDouble()
       ..address = json['address'] as String?
       ..phoneNumber = json['phoneNumber'] as String?
+      ..mobileNumber = json['mobileNumber'] as String?
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..linkExtraImageIds = json['linkExtraImageIds'] as String?
       ..linkExtraImageIdsSrc = (json['linkExtraImageIdsSrc'] as List<dynamic>?)
           ?.map((e) => e as String)
-          .toList();
+          .toList()
+      ..accessWatchRowSite = json['accessWatchRowSite'] as bool?
+      ..accessWatchRowOtherAgency = json['accessWatchRowOtherAgency'] as bool?
+      ..accessWatchRowOtherAgent = json['accessWatchRowOtherAgent'] as bool?
+      ..accessAllowShareRowWatchOtherAgency =
+          json['accessAllowShareRowWatchOtherAgency'] as bool?
+      ..accessAllowShareRowWatchOtherAgent =
+          json['accessAllowShareRowWatchOtherAgent'] as bool?;
 
 Map<String, dynamic> _$EstateAccountAgencyModelToJson(
         EstateAccountAgencyModel instance) =>
@@ -83,10 +91,18 @@ Map<String, dynamic> _$EstateAccountAgencyModelToJson(
       'geolocationlongitude': instance.geolocationlongitude,
       'address': instance.address,
       'phoneNumber': instance.phoneNumber,
+      'mobileNumber': instance.mobileNumber,
       'linkMainImageId': instance.linkMainImageId,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'linkExtraImageIds': instance.linkExtraImageIds,
       'linkExtraImageIdsSrc': instance.linkExtraImageIdsSrc,
+      'accessWatchRowSite': instance.accessWatchRowSite,
+      'accessWatchRowOtherAgency': instance.accessWatchRowOtherAgency,
+      'accessWatchRowOtherAgent': instance.accessWatchRowOtherAgent,
+      'accessAllowShareRowWatchOtherAgency':
+          instance.accessAllowShareRowWatchOtherAgency,
+      'accessAllowShareRowWatchOtherAgent':
+          instance.accessAllowShareRowWatchOtherAgent,
     };
 
 const _$EnumRecordStatusEnumMap = {

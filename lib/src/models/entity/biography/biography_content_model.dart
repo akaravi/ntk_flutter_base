@@ -86,6 +86,8 @@ class BiographyContentModel extends BaseModuleEntity<int> {
   DateTime? datePeriodEnd;
   @JsonKey(name: 'urlViewContent')
   String? urlViewContent;
+  @JsonKey(name: 'urlViewContentShort')
+  String? urlViewContentShort;
   @JsonKey(name: 'urlViewContentQRCodeBase64')
   String? urlViewContentQRCodeBase64;
   BiographyContentModel();

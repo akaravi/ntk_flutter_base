@@ -4,8 +4,6 @@ import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:base/src/models/entity/enums/enum_sharing_price_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-
-
 part 'link_management_target_model.g.dart';
 
 @JsonSerializable()
@@ -64,6 +62,12 @@ class LinkManagementTargetModel extends BaseModuleEntity<int> {
   List<String>? linkFileIdsSrc;
   @JsonKey(name: 'qRCodeBase64')
   String? qRCodeBase64;
+  @JsonKey(name: 'urlViewContent')
+  String? urlViewContent;
+  @JsonKey(name: 'urlViewContentShort')
+  String? urlViewContentShort;
+  @JsonKey(name: 'urlViewContentQRCodeBase64')
+  String? urlViewContentQRCodeBase64;
 
   LinkManagementTargetModel();
   factory LinkManagementTargetModel.fromJson(Map<String, dynamic> json) =>

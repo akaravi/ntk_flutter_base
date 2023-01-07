@@ -40,8 +40,6 @@ class EstateContractModel extends BaseModuleEntity<String> {
   String? currencyTitle;
   @JsonKey(name: 'currencySymbol')
   String? currencySymbol;
-  // @JsonKey(name: ' unitSalePrice')
-  // String unitSalePrice = "تومان";
   EstateContractModel();
   factory EstateContractModel.fromJson(Map<String, dynamic> json) =>
       _$EstateContractModelFromJson(json);

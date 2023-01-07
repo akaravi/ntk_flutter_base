@@ -11,12 +11,14 @@ ExportFileModel _$ExportFileModelFromJson(Map<String, dynamic> json) =>
       ..fileType =
           $enumDecodeNullable(_$EnumExportFileTypeEnumMap, json['fileType'])
       ..recieveMethod = $enumDecodeNullable(
-          _$EnumExportReceiveMethodEnumMap, json['recieveMethod']);
+          _$EnumExportReceiveMethodEnumMap, json['recieveMethod'])
+      ..reportFormatFileId = json['reportFormatFileId'] as String?;
 
 Map<String, dynamic> _$ExportFileModelToJson(ExportFileModel instance) =>
     <String, dynamic>{
       'fileType': _$EnumExportFileTypeEnumMap[instance.fileType],
       'recieveMethod': _$EnumExportReceiveMethodEnumMap[instance.recieveMethod],
+      'reportFormatFileId': instance.reportFormatFileId,
     };
 
 const _$EnumExportFileTypeEnumMap = {
