@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:base/src/my_application.dart';
+import 'package:base/src/screen/test.dart';
 import 'package:flutter/material.dart';
 
 import 'src/backend/config/my_application_preference.dart';
-import 'src/screen/generics/base_list.dart';
 import 'src/screen/splash.dart';
 
 void main() async {
@@ -16,7 +16,8 @@ void main() async {
       await MyApplicationPreference().read();
 
       //main thread of creating app
-      runApp(const MyApp());
+      // runApp(const MyApp());
+      runApp( Test());
     },
     (error, st) => print(error),
   );
