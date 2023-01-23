@@ -56,6 +56,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   String? linkPropertyTypeUsageId;
   @JsonKey(name: 'linkPropertyProjectId')
   String? linkPropertyProjectId;
+  @JsonKey(name: 'linkPropertyCompanyId')
+  String? linkPropertyCompanyId;
   @JsonKey(name: 'propertyTypeLanduse')
   EstatePropertyTypeLanduseModel? propertyTypeLanduse;
   @JsonKey(name: 'propertyTypeUsage')

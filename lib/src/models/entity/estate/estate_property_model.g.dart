@@ -57,6 +57,7 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
       ..linkPropertyTypeUsageId = json['linkPropertyTypeUsageId'] as String?
       ..linkPropertyProjectId = json['linkPropertyProjectId'] as String?
+      ..linkPropertyCompanyId = json['linkPropertyCompanyId'] as String?
       ..propertyTypeLanduse = json['propertyTypeLanduse'] == null
           ? null
           : EstatePropertyTypeLanduseModel.fromJson(
@@ -163,6 +164,7 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'linkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
       'linkPropertyProjectId': instance.linkPropertyProjectId,
+      'linkPropertyCompanyId': instance.linkPropertyCompanyId,
       'propertyTypeLanduse': instance.propertyTypeLanduse,
       'propertyTypeUsage': instance.propertyTypeUsage,
       'sharingKey': instance.sharingKey,
