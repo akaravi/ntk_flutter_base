@@ -110,7 +110,7 @@ class MyApplicationPreference {
         //set device information
         AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
         app.setDeviceName(androidInfo.device ?? 'notDetectAndroidName');
-        app.setDeviceId(androidInfo.androidId ?? 'notDetectAndroidId');
+        app.setDeviceId(androidInfo.id ?? 'notDetectAndroidId');
       } else if (Platform.isIOS) {
         // iOS-specific code
         app.setDeviceTypeEnum(EnumDeviceType.appleIOS);

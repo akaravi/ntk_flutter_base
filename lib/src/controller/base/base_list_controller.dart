@@ -23,7 +23,7 @@ abstract class BaseListController<model> {
     try {
       var list = await service(filter);
       if (list.length == filter.rowPerPage) {
-        pagingController.appendPage(list, (filter.rowPerPage! + 1));
+        pagingController.appendPage(list, (filter.rowPerPage+ 1));
       } else {
         pagingController.appendLastPage(list);
       }

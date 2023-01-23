@@ -30,6 +30,9 @@ class MyApplication {
   //base url of apis
   final String _baseUrl = 'https://apicms.ir/';
 
+  //base url of apis
+  final String _uploadUrl = 'https://apifile.ir/';
+
   final String _packageName = 'ntk.android.ticketing.APPNTK';
 
   //locale
@@ -68,6 +71,8 @@ class MyApplication {
   String get packageName => _packageName;
 
   String get baseUrl => _baseUrl;
+
+  String get uploadUrl => _uploadUrl;
 
   String get token => _token;
 
