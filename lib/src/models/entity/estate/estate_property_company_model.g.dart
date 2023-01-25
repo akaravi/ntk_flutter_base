@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'estate_property_project_model.dart';
+part of 'estate_property_company_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
+EstatePropertyCompanyModel _$EstatePropertyCompanyModelFromJson(
         Map<String, dynamic> json) =>
-    EstatePropertyProjectModel()
+    EstatePropertyCompanyModel()
       ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
@@ -35,7 +35,6 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
-      ..linkPropertyCompanyId = json['linkPropertyCompanyId'] as String?
       ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
       ..description = json['description'] as String?
       ..address = json['address'] as String?
@@ -55,12 +54,6 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..viewConfigHiddenInList = json['viewConfigHiddenInList'] as bool?
       ..favorited = json['favorited'] as bool?
       ..source = json['source'] as String?
-      ..fromDate = json['fromDate'] == null
-          ? null
-          : DateTime.parse(json['fromDate'] as String)
-      ..expireDate = json['expireDate'] == null
-          ? null
-          : DateTime.parse(json['expireDate'] as String)
       ..linkLocationCountryId = json['linkLocationCountryId'] as int?
       ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..linkFilePodcastIdSrc = json['linkFilePodcastIdSrc'] as String?
@@ -85,8 +78,8 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..aboutTel = json['aboutTel'] as String?
       ..aboutMobile = json['aboutMobile'] as String?;
 
-Map<String, dynamic> _$EstatePropertyProjectModelToJson(
-        EstatePropertyProjectModel instance) =>
+Map<String, dynamic> _$EstatePropertyCompanyModelToJson(
+        EstatePropertyCompanyModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -105,7 +98,6 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
       'linkCmsUserId': instance.linkCmsUserId,
-      'linkPropertyCompanyId': instance.linkPropertyCompanyId,
       'mainAdminRecordStatus': instance.mainAdminRecordStatus,
       'description': instance.description,
       'address': instance.address,
@@ -125,8 +117,6 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'viewConfigHiddenInList': instance.viewConfigHiddenInList,
       'favorited': instance.favorited,
       'source': instance.source,
-      'fromDate': instance.fromDate?.toIso8601String(),
-      'expireDate': instance.expireDate?.toIso8601String(),
       'linkLocationCountryId': instance.linkLocationCountryId,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'linkFilePodcastIdSrc': instance.linkFilePodcastIdSrc,

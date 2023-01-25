@@ -2,16 +2,14 @@ import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'estate_property_project_model.g.dart';
+part 'estate_property_company_model.g.dart';
 
 @JsonSerializable()
-class EstatePropertyProjectModel extends BaseModuleEntity<String> {
+class EstatePropertyCompanyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'title')
   String? title;
   @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'linkPropertyCompanyId')
-  String? linkPropertyCompanyId;
   @JsonKey(name: 'mainAdminRecordStatus')
   String? mainAdminRecordStatus;
   @JsonKey(name: 'description')
@@ -50,10 +48,7 @@ class EstatePropertyProjectModel extends BaseModuleEntity<String> {
   bool? favorited;
   @JsonKey(name: 'source')
   String? source;
-  @JsonKey(name: 'fromDate')
-  DateTime? fromDate;
-  @JsonKey(name: 'expireDate')
-  DateTime? expireDate;
+
   @JsonKey(name: 'linkLocationCountryId')
   int? linkLocationCountryId;
 
@@ -91,9 +86,9 @@ class EstatePropertyProjectModel extends BaseModuleEntity<String> {
 
   // * About */
 
-  EstatePropertyProjectModel();
-  factory EstatePropertyProjectModel.fromJson(Map<String, dynamic> json) =>
-      _$EstatePropertyProjectModelFromJson(json);
+  EstatePropertyCompanyModel();
+  factory EstatePropertyCompanyModel.fromJson(Map<String, dynamic> json) =>
+      _$EstatePropertyCompanyModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$EstatePropertyProjectModelToJson(this);
+  Map<String, dynamic> toJson() => _$EstatePropertyCompanyModelToJson(this);
 }
