@@ -1,4 +1,7 @@
-import 'package:base/src/backend/config/dio_uploader.dart';
+import 'dart:io';
+
+import 'package:base/src/backend/api/file/dio_uploader.dart';
+import 'package:base/src/backend/service/file/file_upload_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
@@ -14,13 +17,13 @@ class Test extends StatelessWidget {
             ),
             body: Center(
                 child: Row(
-              children: [
-                MaterialButton(
-                  child: Text("get file"),
-                  onPressed: getPick,
-                )
-              ],
-            ))));
+                  children: [
+                    MaterialButton(
+                      child: Text("get file"),
+                      onPressed: getPick,
+                    )
+                  ],
+                ))));
   }
 
   getPick() async {
@@ -32,6 +35,7 @@ class Test extends StatelessWidget {
         .files;
     var upload =await ChunkedUploader()
         .upload(filePlatform: file.elementAt(0) );
+    // var upload = FileUploadService().upload(File(file.first.path??""));
     print(upload.toString());
   }
 }

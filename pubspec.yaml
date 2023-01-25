@@ -60,6 +60,7 @@ dependencies:
   universal_io: ^2.0.4
   #for pick file
   file_picker: ^5.2.5
+  http: ^0.13.5
 #run as commands in cmd flutter pub run build_runner build
 dev_dependencies:
   build_runner: ^2.1.7
