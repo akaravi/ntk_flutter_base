@@ -8,15 +8,15 @@ import 'package:retrofit/dio.dart';
 
 class DioApi {
   //default timeout time for all timeout section in millisecond
-  static const int _timeout = 5000;
+  static const Duration _timeout =  Duration(milliseconds: 5000);
 
   Dio jsonDecodeDio() {
     var option = BaseOptions()
       ..baseUrl = NTKApplication.get().baseUrl
       //add timeout
-      ..connectTimeout = _timeout as Duration?
-      ..receiveTimeout = _timeout as Duration?
-      ..sendTimeout = _timeout as Duration?
+      ..connectTimeout = _timeout
+      ..receiveTimeout = _timeout
+      ..sendTimeout = _timeout
       //set headers of request
       ..headers = CustomHeader.getHeaders();
 
