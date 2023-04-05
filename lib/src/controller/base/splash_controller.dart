@@ -3,6 +3,7 @@ import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
+import 'package:base/src/ntk_data.dart';
 import 'package:flutter/material.dart';
 
 import '../panel_controller.dart';
@@ -14,15 +15,16 @@ class SplashController {
 
   Stream<SplashProgress> initApp() async* {
     //get device token at first
-    yield SplashProgress('get token of device', .10);
+
+    yield SplashProgress(NtkGlobalData().stringGetTokenDevice, .10);
     await AuthService().getDeviceToken();
-    yield SplashProgress('check user token', .25);
+    yield SplashProgress(NtkGlobalData().stringGetUserToken, .25);
     await AuthService().checkToken();
-    yield SplashProgress('getting theme data', .45);
+    yield SplashProgress(NtkGlobalData().stringGetTheme, .45);
     await ApplicationThemeService().getTheme();
-    yield SplashProgress('Getting app information', .70);
+    yield SplashProgress(NtkGlobalData().stringGetCurrentApp, .70);
     await ApplicationAppService().currentApp();
-    yield SplashProgress('Getting app information', 1);
+    yield SplashProgress(NtkGlobalData().stringGetCurrentApp, 1);
   }
 
   Future<void> nextPage(BuildContext context) async {

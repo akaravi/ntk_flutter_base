@@ -8,11 +8,11 @@ class ErrorExceptionBase {
   int status = 0;
   @JsonKey(name: "isSuccess")
   bool isSuccess = true;
-  @JsonKey(name: "irrorMessage")
+  @JsonKey(name: "errorMessage")
   String? errorMessage;
   @JsonKey(name: "totalRowCount")
   int? totalRowCount;
-  @JsonKey(name: "irrors")
+  @JsonKey(name: "errors")
   Map<String, List<String>>? errors;
 
   ErrorExceptionBase(this.isSuccess);
