@@ -9,7 +9,7 @@ import 'blog_content_category_model.dart';
 import 'blog_content_similar_model.dart';
 import 'blog_content_tag_model.dart';
 
-part 'blog_content_model..g.dart';
+part 'blog_content_model.g.dart';
 
 @JsonSerializable()
 class BlogContentModel extends BaseModuleEntity<int> {
