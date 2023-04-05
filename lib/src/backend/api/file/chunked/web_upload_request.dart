@@ -33,7 +33,7 @@ class WebUploadRequest {
     _maxChunkSize = min(fileSize, maxChunkSize ?? 1024 * 1024);
   }
 
-  Future<Response?> upload() async {
+  Future<String> upload() async {
     Response? finalResponse;
     for (int i = 0; i < _chunksCount; i++) {
       final start = _getChunkStart(i);
@@ -66,7 +66,7 @@ class WebUploadRequest {
       //-------Your response
       print(result);
     }
-    return finalResponse;
+    return "";
   }
 
   Stream<List<int>> _getChunkStream(int start, int end) async* {

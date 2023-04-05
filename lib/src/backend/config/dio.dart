@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:base/src/backend/config/custom_header.dart';
-import 'package:base/src/my_application.dart';
+import 'package:base/src/ntk_application.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:retrofit/dio.dart';
@@ -12,11 +12,11 @@ class DioApi {
 
   Dio jsonDecodeDio() {
     var option = BaseOptions()
-      ..baseUrl = MyApplication.get().baseUrl
+      ..baseUrl = NTKApplication.get().baseUrl
       //add timeout
-      ..connectTimeout = _timeout
-      ..receiveTimeout = _timeout
-      ..sendTimeout = _timeout
+      ..connectTimeout = _timeout as Duration?
+      ..receiveTimeout = _timeout as Duration?
+      ..sendTimeout = _timeout as Duration?
       //set headers of request
       ..headers = CustomHeader.getHeaders();
 

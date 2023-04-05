@@ -3,13 +3,13 @@ import 'package:base/src/models/entity/enums/enum_devicetype.dart';
 import 'package:base/src/models/entity/enums/enum_language.dart';
 import 'package:base/src/models/entity/enums/enum_operating_system_type.dart';
 
-class MyApplication {
+ class NTKApplication {
   final String _defaultTheme = '1';
-  static MyApplication? _instance;
+  static NTKApplication? _instance;
 
-  factory MyApplication.get() => _instance ??= MyApplication._();
+  factory NTKApplication.get({String? packageName}) => _instance ??= NTKApplication._(packageName!);
 
-  MyApplication._();
+  NTKApplication._(this._packageName);
 
   //enum of type of device
   late EnumDeviceType _deviceTypeEnum;
@@ -33,7 +33,7 @@ class MyApplication {
   //base url of apis
   final String _uploadUrl = 'https://apifile.ir/';
 
-  final String _packageName = 'ntk.android.ticketing.APPNTK';
+  final String _packageName ;
 
   //locale
   EnumLanguage _lang = EnumLanguage.none;
@@ -92,49 +92,49 @@ class ApplicationChangeNotifier {
   //prevent from change in app cycle coding
   ApplicationChangeNotifier(MyApplicationPreference s);
 
-  get defaultTheme => MyApplication.get()._defaultTheme;
+  get defaultTheme => NTKApplication.get()._defaultTheme;
 
   setToken(String s) {
-    MyApplication.get()._token = s;
+    NTKApplication.get()._token = s;
   }
 
   void setLanguage(EnumLanguage s) {
-    MyApplication.get()._lang = s;
+    NTKApplication.get()._lang = s;
   }
 
   void setCountry(String s) {
-    MyApplication.get()._country = s;
+    NTKApplication.get()._country = s;
   }
 
   void simOperator(String s) {
-    MyApplication.get()._simOperator = s;
+    NTKApplication.get()._simOperator = s;
   }
 
   void setSimOperator(String s) {
-    MyApplication.get()._simOperator = s;
+    NTKApplication.get()._simOperator = s;
   }
 
   void setDeviceId(String s) {
-    MyApplication.get()._deviceId = s;
+    NTKApplication.get()._deviceId = s;
   }
 
   void setDeviceName(String s) {
-    MyApplication.get()._deviceName = s;
+    NTKApplication.get()._deviceName = s;
   }
 
   void setDeviceTypeEnum(EnumDeviceType type) {
-    MyApplication.get()._deviceTypeEnum = type;
+    NTKApplication.get()._deviceTypeEnum = type;
   }
 
   void setOsType(EnumOperatingSystemType os) {
-    MyApplication.get()._osTypeEnum = os;
+    NTKApplication.get()._osTypeEnum = os;
   }
 
   void setTheme(newId) {
-    MyApplication.get()._themeID = newId;
+    NTKApplication.get()._themeID = newId;
   }
 
   void setAuthorization(String authToken) {
-    MyApplication.get()._authorization = authToken;
+    NTKApplication.get()._authorization = authToken;
   }
 }

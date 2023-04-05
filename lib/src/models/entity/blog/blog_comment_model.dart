@@ -2,7 +2,7 @@ import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'blog_content_model..dart';
+import 'blog_content_model.dart';
 
 part 'blog_comment_model.g.dart';
 

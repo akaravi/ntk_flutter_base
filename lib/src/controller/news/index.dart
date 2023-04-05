@@ -1,0 +1,1 @@
+export 'news_list_controller.dart';

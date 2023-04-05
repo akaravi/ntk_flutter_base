@@ -1,7 +1,6 @@
 import 'dart:async';
 
-import 'package:base/src/my_application.dart';
-import 'package:base/src/screen/test.dart';
+import 'package:base/src/ntk_application.dart';
 import 'package:flutter/material.dart';
 
 import 'src/backend/config/my_application_preference.dart';
@@ -16,8 +15,8 @@ void main() async {
       await MyApplicationPreference().read();
 
       //main thread of creating app
-      // runApp(const MyApp());
-      runApp( Test());
+      runApp(const MyApp());
+      // runApp( Test());
     },
     (error, st) => print(error),
   );
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: MyApplication.get().baseUrl,
+      title: NTKApplication.get().baseUrl,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

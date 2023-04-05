@@ -13,7 +13,7 @@ import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/base/token_info_model.dart';
 import 'package:base/src/models/entity/core/core_user_model.dart';
 
-import '../../../my_application.dart';
+import '../../../ntk_application.dart';
 
 class AuthService extends DioApi {
   //api caller reference
@@ -24,7 +24,7 @@ class AuthService extends DioApi {
   }
 
   Future<ErrorException<TokenDeviceModel>> getDeviceToken() async {
-    var application = MyApplication.get();
+    var application = NTKApplication.get();
     TokenDeviceClientInfoDtoModel request = TokenDeviceClientInfoDtoModel()
       ..packageName = application.packageName
       ..appBuildVer = application.versionCode

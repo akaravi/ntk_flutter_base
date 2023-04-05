@@ -1,8 +1,9 @@
-import '../../my_application.dart';
+
+import 'package:base/src/ntk_application.dart';
 
 class CustomHeader {
   static Map<String, dynamic> getHeaders() {
-    var values = MyApplication.get();
+    var values = NTKApplication.get();
     Map<String, dynamic> headers = {};
 
     //add token to header

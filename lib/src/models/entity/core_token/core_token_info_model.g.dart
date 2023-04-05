@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'token_info_model.dart';
+part of 'core_token_info_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TokenInfoModel _$TokenInfoModelFromJson(Map<String, dynamic> json) =>
-    TokenInfoModel()
+CoreTokenInfoModel _$CoreTokenInfoModelFromJson(Map<String, dynamic> json) =>
+    CoreTokenInfoModel()
       ..token = json['token'] as String?
       ..deviceToken = json['deviceToken'] as String?
       ..refreshToken = json['refreshToken'] as String?
@@ -48,7 +48,7 @@ TokenInfoModel _$TokenInfoModelFromJson(Map<String, dynamic> json) =>
       ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..direction = json['direction'] as String?;
 
-Map<String, dynamic> _$TokenInfoModelToJson(TokenInfoModel instance) =>
+Map<String, dynamic> _$CoreTokenInfoModelToJson(CoreTokenInfoModel instance) =>
     <String, dynamic>{
       'token': instance.token,
       'deviceToken': instance.deviceToken,

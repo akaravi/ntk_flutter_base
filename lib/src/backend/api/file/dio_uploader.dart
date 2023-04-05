@@ -1,6 +1,6 @@
 import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/file/file_upload_model.dart';
-import 'package:base/src/my_application.dart';
+import 'package:base/src/ntk_application.dart';
 import 'package:base/src/utils/platform_extension.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
@@ -12,10 +12,10 @@ class ChunkedUploader {
   late Dio _dio;
 
   ChunkedUploader() {
-    _dio = Dio(BaseOptions(baseUrl: MyApplication.get().uploadUrl));
+    _dio = Dio(BaseOptions(baseUrl: NTKApplication.get().uploadUrl));
   }
 
-  ErrorException<FileUploadModel> upload({
+  Future<ErrorException<FileUploadModel>> upload({
     required PlatformFile filePlatform,
     Map<String, dynamic>? data,
     CancelToken? cancelToken,
@@ -24,11 +24,11 @@ class ChunkedUploader {
     String method = 'POST',
     String fileKey = 'file',
     String path = "api/v1/upload",
-  }) {
+  }) async {
     //upload on android
     var response;
     if (onAndroid()) {
-      response = UploadRequest(_dio,
+      response = await UploadRequest(_dio,
               filePath: filePlatform.path ?? "",
               path: path,
               fileKey: fileKey,
@@ -39,7 +39,7 @@ class ChunkedUploader {
               onUploadProgress: onUploadProgress)
           .upload();
     } else if (onWeb()) {
-      response = WebUploadRequest(
+      response = await WebUploadRequest(
         _dio,
         file: filePlatform.bytes,
         fileName: "upload",
