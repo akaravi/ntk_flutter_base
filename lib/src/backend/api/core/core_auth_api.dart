@@ -22,53 +22,53 @@ abstract class AuthMethodApi {
 
   AuthMethodApi();
 
-  @GET("api/v1/auth/captcha")
+  @GET("api/v2/auth/captcha")
   Future<ErrorException<CaptchaModel>> captcha();
 
-  @GET("api/v1/auth/CurrentToken")
+  @GET("api/v2/auth/CurrentToken")
   Future<ErrorException<TokenInfoModel>> correctTokenInfo();
 
   @POST("api/v2/auth/GetTokenDevice")
   Future<ErrorException<TokenDeviceModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
 
-  @POST("api/v1/auth/mobileConfirm")
+  @POST("api/v2/auth/mobileConfirm")
   Future<ErrorExceptionBase> mobileConfirm(
       @Body() AuthMobileConfirmDtoModel model);
 
-  @POST("api/v1/auth/emailConfirm")
+  @POST("api/v2/auth/emailConfirm")
   Future<ErrorExceptionBase> emailConfirm(
       @Body() AuthEmailConfirmDtoModel request);
 
-  @POST("api/v1/auth/GetTokenD/signup")
+  @POST("api/v2/auth/GetTokenD/signup")
   Future<ErrorException<CoreUserModel>> signUpUser(
       @Body() AuthUserSignUpModel request);
 
-  @POST("api/v1/auth/signin")
+  @POST("api/v2/auth/signin")
   Future<ErrorException<TokenInfoModel>> signInUser(
       @Body() AuthUserSignInModel request);
 
-  // @GET("api/v1/auth/GetTokenDevice")
+  // @GET("api/v2/auth/GetTokenDevice")
   // Future<ErrorException<TokenInfoModel>> renewToken(
   //     @Body() AuthRenewTokenModel request);
 
-  // @GET("api/v1/auth/GetTokenDevice")
+  // @GET("api/v2/auth/GetTokenDevice")
   // Future<ErrorException<CaptchaModel>> changePassword(
   //     @Body() AuthUserChangePasswordModel request);
 
-  @POST("api/v1/auth/forgetPassword")
+  @POST("api/v2/auth/forgetPassword")
   Future<ErrorException<TokenInfoModel>> forgetPassword(
       @Body() AuthUserChangePasswordModel request);
 
-  @POST("api/v1/auth/signInBySms")
+  @POST("api/v2/auth/signInBySms")
   Future<ErrorException<TokenInfoModel>> signInUserBySMS(
       @Body() AuthUserSignInBySmsDtoModel request);
 
-// @GET("api/v1/auth/GetTokenDevice")
+// @GET("api/v2/auth/GetTokenDevice")
 // Future<ErrorException<CaptchaModel>> logout(
 //     @Body() AuthUserSignOutModel request);
 //
-// @GET("api/v1/auth/GetTokenDevice")
+// @GET("api/v2/auth/GetTokenDevice")
 // Future<ErrorException<CaptchaModel>> existToken(@Body() FilterModel request);
 
 }

@@ -47,7 +47,7 @@ class _FileUploadApi implements FileUploadApi {
     )
             .compose(
               _dio.options,
-              'api/v1/upload',
+              'api/v2/upload',
               queryParameters: queryParameters,
               data: _data,
             )

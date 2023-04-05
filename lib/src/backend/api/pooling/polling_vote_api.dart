@@ -12,7 +12,7 @@ abstract class _PollingOtherApi {
   factory _PollingOtherApi.create(Dio dio, {String baseUrl}) =
       __PollingOtherApi;
 
-  @POST("api/v1/PollingVote/AddBatch")
+  @POST("api/v2/PollingVote/AddBatch")
   Future<ErrorException<PollingVoteModel>> addBatch(
       List<PollingVoteModel> models);
 }

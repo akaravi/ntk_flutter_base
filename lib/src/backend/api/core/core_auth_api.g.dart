@@ -32,7 +32,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/captcha',
+              'api/v2/auth/captcha',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -58,7 +58,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/CurrentToken',
+              'api/v2/auth/CurrentToken',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -112,7 +112,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/mobileConfirm',
+              'api/v2/auth/mobileConfirm',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -136,7 +136,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/emailConfirm',
+              'api/v2/auth/emailConfirm',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -160,7 +160,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/GetTokenD/signup',
+              'api/v2/auth/GetTokenD/signup',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -187,7 +187,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/signin',
+              'api/v2/auth/signin',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -214,7 +214,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/forgetPassword',
+              'api/v2/auth/forgetPassword',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -241,7 +241,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/signInBySms',
+              'api/v2/auth/signInBySms',
               queryParameters: queryParameters,
               data: _data,
             )

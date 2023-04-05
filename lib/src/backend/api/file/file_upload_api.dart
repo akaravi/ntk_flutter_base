@@ -14,7 +14,7 @@ abstract class FileUploadApi {
 
 
 
-  @POST("api/v1/upload")
+  @POST("api/v2/upload")
   @MultiPart()
   Future<ErrorException<FileUploadModel>> uploadFileWithPartMap(
       @Part(name: "filename") String fname, @Part() File file);

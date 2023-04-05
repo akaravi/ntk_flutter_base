@@ -8,7 +8,7 @@ class BaseEntityApi<OUT, ID> extends DioApi
       {this.baseUrl});
 
   //prefix String url of api
-  String prefixUrl = "api/v1/";
+  String prefixUrl = "api/v2/";
   FromJsonConverter<OUT> fromJsonConverter;
   final Dio dio;
 

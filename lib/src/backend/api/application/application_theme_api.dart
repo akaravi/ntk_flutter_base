@@ -11,7 +11,7 @@ abstract class ApplicationThemeMethodApi {
   _ApplicationThemeMethodApi;
 
 
-  @GET("api/v1/ApplicationThemeConfig/CurrentTheme")
+  @GET("api/v2/ApplicationThemeConfig/CurrentTheme")
   Future<ErrorException<ApplicationThemeConfigModel>> getAppTheme();
 
 }

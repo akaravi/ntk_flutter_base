@@ -32,7 +32,7 @@ class _ApplicationThemeMethodApi implements ApplicationThemeMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/ApplicationThemeConfig/CurrentTheme',
+              'api/v2/ApplicationThemeConfig/CurrentTheme',
               queryParameters: queryParameters,
               data: _data,
             )

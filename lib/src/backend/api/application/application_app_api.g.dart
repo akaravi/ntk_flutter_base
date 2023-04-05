@@ -33,7 +33,7 @@ class _ApplicationAppMethodApi implements ApplicationAppMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/Application/ScoreClick',
+              'api/v2/Application/ScoreClick',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -56,7 +56,7 @@ class _ApplicationAppMethodApi implements ApplicationAppMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/Application/CurrentApp',
+              'api/v2/Application/CurrentApp',
               queryParameters: queryParameters,
               data: _data,
             )

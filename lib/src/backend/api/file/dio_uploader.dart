@@ -23,7 +23,7 @@ class ChunkedUploader {
     Function(double)? onUploadProgress,
     String method = 'POST',
     String fileKey = 'file',
-    String path = "api/v1/upload",
+    String path = "api/v2/upload",
   }) async {
     //upload on android
     var response;

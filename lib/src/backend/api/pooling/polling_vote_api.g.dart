@@ -32,7 +32,7 @@ class __PollingOtherApi implements _PollingOtherApi {
     )
             .compose(
               _dio.options,
-              'api/v1/PollingVote/AddBatch',
+              'api/v2/PollingVote/AddBatch',
               queryParameters: queryParameters,
               data: _data,
             )
