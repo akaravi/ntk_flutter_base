@@ -28,7 +28,7 @@ abstract class AuthMethodApi {
   @GET("api/v1/auth/CurrentToken")
   Future<ErrorException<TokenInfoModel>> correctTokenInfo();
 
-  @POST("api/v1/auth/GetTokenDevice")
+  @POST("api/v2/auth/GetTokenDevice")
   Future<ErrorException<TokenDeviceModel>> getTokenDevice(
       @Body() TokenDeviceClientInfoDtoModel request);
 

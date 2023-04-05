@@ -85,7 +85,7 @@ class _AuthMethodApi implements AuthMethodApi {
     )
             .compose(
               _dio.options,
-              'api/v1/auth/GetTokenDevice',
+              'api/v2/auth/GetTokenDevice',
               queryParameters: queryParameters,
               data: _data,
             )

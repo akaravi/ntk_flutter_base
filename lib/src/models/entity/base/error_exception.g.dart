@@ -14,9 +14,9 @@ ErrorException<TEntity> _$ErrorExceptionFromJson<TEntity>(
       json['isSuccess'] as bool,
     )
       ..status = json['status'] as int
-      ..errorMessage = json['irrorMessage'] as String?
+      ..errorMessage = json['errorMessage'] as String?
       ..totalRowCount = json['totalRowCount'] as int?
-      ..errors = (json['irrors'] as Map<String, dynamic>?)?.map(
+      ..errors = (json['errors'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, (e as List<dynamic>).map((e) => e as String).toList()),
       )
@@ -36,9 +36,9 @@ Map<String, dynamic> _$ErrorExceptionToJson<TEntity>(
     <String, dynamic>{
       'status': instance.status,
       'isSuccess': instance.isSuccess,
-      'irrorMessage': instance.errorMessage,
+      'errorMessage': instance.errorMessage,
       'totalRowCount': instance.totalRowCount,
-      'irrors': instance.errors,
+      'errors': instance.errors,
       'listItems': instance.listItems?.map(toJsonTEntity).toList(),
       'item': _$nullableGenericToJson(instance.item, toJsonTEntity),
       'currentPageNumber': instance.currentPageNumber,
