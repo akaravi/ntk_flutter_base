@@ -24,8 +24,6 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
-      ..antiInjectionTokenActionState =
-          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -139,9 +137,9 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..aboutUsLinkImageId = json['aboutUsLinkImageId'] as String?
       ..aboutUsLinkImageIdSrc = json['aboutUsLinkImageIdSrc'] as String?
       ..aboutUsGeolocationlatetitude =
-          json['aboutUsGeolocationlatetitude'] as String?
+          (json['aboutUsGeolocationlatetitude'] as num?)?.toDouble()
       ..aboutUsGeolocationlongitude =
-          json['aboutUsGeolocationlongitude'] as String?
+          (json['aboutUsGeolocationlongitude'] as num?)?.toDouble()
       ..aboutUsLinkFacebook = json['aboutUsLinkFacebook'] as String?
       ..aboutUsLinkTwitter = json['aboutUsLinkTwitter'] as String?
       ..aboutUsLinkGooglePlus = json['aboutUsLinkGooglePlus'] as String?
@@ -170,7 +168,6 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':

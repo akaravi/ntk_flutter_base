@@ -15,8 +15,9 @@ AboutUsModel _$AboutUsModelFromJson(Map<String, dynamic> json) => AboutUsModel()
   ..aboutUsAddress = json['aboutUsAddress'] as String?
   ..aboutUsLinkImageId = json['aboutUsLinkImageId'] as String?
   ..aboutUsGeolocationlatetitude =
-      json['aboutUsGeolocationlatetitude'] as String?
-  ..aboutUsGeolocationlongitude = json['aboutUsGeolocationlongitude'] as String?
+      (json['aboutUsGeolocationlatetitude'] as num?)?.toDouble()
+  ..aboutUsGeolocationlongitude =
+      (json['aboutUsGeolocationlongitude'] as num?)?.toDouble()
   ..aboutUsScoreClick = json['aboutUsScoreClick'] as int?
   ..aboutUsScoreSum = json['aboutUsScoreSum'] as int?;
 

@@ -21,9 +21,9 @@ class AboutUsModel {
   @JsonKey(name: 'aboutUsLinkImageId')
   String? aboutUsLinkImageId;
   @JsonKey(name: 'aboutUsGeolocationlatetitude')
-  String? aboutUsGeolocationlatetitude;
+  double? aboutUsGeolocationlatetitude;
   @JsonKey(name: 'aboutUsGeolocationlongitude')
-  String? aboutUsGeolocationlongitude;
+  double? aboutUsGeolocationlongitude;
   @JsonKey(name: 'aboutUsScoreClick')
   int? aboutUsScoreClick;
   @JsonKey(name: 'aboutUsScoreSum')

@@ -149,9 +149,9 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'aboutUsLinkImageIdSrc')
   String? aboutUsLinkImageIdSrc;
   @JsonKey(name: 'aboutUsGeolocationlatetitude')
-  String? aboutUsGeolocationlatetitude;
+  double? aboutUsGeolocationlatetitude;
   @JsonKey(name: 'aboutUsGeolocationlongitude')
-  String? aboutUsGeolocationlongitude;
+  double? aboutUsGeolocationlongitude;
   @JsonKey(name: 'aboutUsLinkFacebook')
   String? aboutUsLinkFacebook;
   @JsonKey(name: 'aboutUsLinkTwitter')
