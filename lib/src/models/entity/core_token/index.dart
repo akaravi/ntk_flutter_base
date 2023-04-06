@@ -1,5 +1,4 @@
 export 'core_token_info_model.dart';
-export 'token_device_model.dart';
 export 'core_token_user_model.dart';
 export 'core_token_user_log_model.dart';
 export 'core_token_activation_model.dart';

@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'token_device_model.dart';
+part of 'core_token_device_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-TokenDeviceModel _$TokenDeviceModelFromJson(Map<String, dynamic> json) =>
-    TokenDeviceModel()
+CoreTokenDeviceModel _$TokenDeviceModelFromJson(Map<String, dynamic> json) =>
+    CoreTokenDeviceModel()
       ..linkSiteId = json['linkSiteId'] as int?
       ..linkDeviceId = json['linkDeviceId'] as int?
       ..linkApplicationId = json['linkApplicationId'] as int?
@@ -18,7 +18,7 @@ TokenDeviceModel _$TokenDeviceModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['tokenExpireDate'] as String);
 
-Map<String, dynamic> _$TokenDeviceModelToJson(TokenDeviceModel instance) =>
+Map<String, dynamic> _$TokenDeviceModelToJson(CoreTokenDeviceModel instance) =>
     <String, dynamic>{
       'linkSiteId': instance.linkSiteId,
       'linkDeviceId': instance.linkDeviceId,

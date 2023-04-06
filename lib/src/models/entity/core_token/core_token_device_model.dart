@@ -4,10 +4,10 @@ import 'package:base/src/models/entity/enums/enum_manage_user_access_controller_
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'token_device_model.g.dart';
+part 'core_token_device_model.g.dart';
 
 @JsonSerializable()
-class TokenDeviceModel {
+class CoreTokenDeviceModel {
   @JsonKey(name: 'linkSiteId')
   int? linkSiteId;
   @JsonKey(name: 'linkDeviceId')

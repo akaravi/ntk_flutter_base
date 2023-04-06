@@ -27,3 +27,4 @@ export 'link_managment/index.dart';
 export 'universal_menu/index.dart';
 export 'core_module_log/index.dart';
 export 'core_module_main/index.dart';
+export 'base/index.dart';
