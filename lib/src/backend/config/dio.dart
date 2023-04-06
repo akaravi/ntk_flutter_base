@@ -20,25 +20,15 @@ class DioApi {
       //set headers of request
       ..headers = CustomHeader.getHeaders();
 
-    return Dio(option)
-      ..interceptors.add(PrettyDioLogger(
+    return Dio(option)..
+    interceptors.add(PrettyDioLogger(
         requestHeader: true,
         requestBody: true,
         responseBody: true,
-        responseHeader: true,
-        compact: false,
-      ))
-      ..interceptors.add(InterceptorsWrapper(
-        onResponse: (e, handler) {
-          if (e.headers
-                  .value('content-type')
-                  ?.toLowerCase()
-                  .contains('text/plain') ??
-              false) {
-            e.data = jsonDecode(e.data as String);
-            handler.next(e);
-          }
-        },
-      ));
+        responseHeader: false,
+        error: true,
+        compact: true,
+        maxWidth: 90));
+
   }
 }
