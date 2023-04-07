@@ -7,6 +7,8 @@ import 'package:base/src/screen/register_with_mobile.dart';
 import 'package:flutter/material.dart';
 
 import '../field_errors_controller.dart';
+import 'base_main_controller.dart';
+
 
 class RegisterWithMobileController with TextErrorController {
   ///last captcha get form url
@@ -41,6 +43,7 @@ class RegisterWithMobileController with TextErrorController {
     String captchaKey = model.key ?? '';
     return await sendCode(mobile, captchaText, captchaKey);
   }
+
   ///when user want to login with one step verifying mobile number
   ///also provided that enter verify-sms code correctly
   /// if detect mobile number api return entered mobile number to continue
@@ -74,6 +77,10 @@ class RegisterWithMobileController with TextErrorController {
 
   void registerPage(BuildContext context) {
     RegisterController.registerPage(context);
+  }
+
+  void notInterested(BuildContext context, BaseMainController controller) {
+    controller.startScreen(context);
   }
 
   void verifyMobile(BuildContext context, String mobile) {
