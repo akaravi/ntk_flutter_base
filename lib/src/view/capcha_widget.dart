@@ -18,32 +18,28 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
     return FutureBuilder<String>(
         future: _CaptchaController().loadCaptcha(widget.func),
         builder: (context, snapshot) {
-          ImageProvider image;
+          ImageProvider image= AssetImage('assets/drawable/captcha_holder.png',package: 'base');;
           if (snapshot.hasError) {
             image = const AssetImage('assets/drawable/error_captcha.png');
-          } else if (snapshot.connectionState == ConnectionState.none ||
-              snapshot.connectionState == ConnectionState.waiting) {
-            image = const AssetImage('assets/drawable/load_captcha.png');
+          // } else if (snapshot.connectionState == ConnectionState.none ||
+          //     snapshot.connectionState == ConnectionState.waiting) {
+          //   image = const AssetImage('assets/drawable/captcha_holder.png');
           } else if (snapshot.hasData) {
             image = NetworkImage(
               snapshot.data ?? '',
             );
-            image = const AssetImage('assets/drawable/error_captcha.png');
-          } else {
-            image = const AssetImage('assets/drawable/load_captcha.png');
+
           }
           return InkWell(
             //provide get captcha again when click
             onTap: () => setState(() {}),
             child: Container(
                 width: 120,
-                margin: const EdgeInsets.only(left: 4.0),
+
                 decoration: BoxDecoration(
                   image: DecorationImage(image: image, fit: BoxFit.fill),
                   color: Colors.white,
-                  borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(25.0),
-                      bottomRight: Radius.circular(25.0)),
+
                 )),
           );
         });

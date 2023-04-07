@@ -101,10 +101,12 @@ flutter:
     - assets/drawable/app_logo.png
     - assets/drawable/splash_background.jpg
     - assets/drawable/load_captcha.png
+    - assets/drawable/captcha_holder.png
     - assets/drawable/error_captcha.png
     - assets/drawable/empty-box.png
     - assets/drawable/confused-face.png
     - assets/drawable/frustrated-face.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
