@@ -13,7 +13,7 @@ class Intro extends StatelessWidget {
           future: IntroController().getIntro(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return IntroScreen(createSlides(snapshot.data));
+              return IntroWidget(createSlides(snapshot.data));
             }
             return Container();
           }),
@@ -47,10 +47,10 @@ class Intro extends StatelessWidget {
   }
 }
 
-class IntroScreen extends StatelessWidget {
+class IntroWidget extends StatelessWidget {
   List<Slide> slides;
 
-  IntroScreen(this.slides, {Key? key}) : super(key: key);
+  IntroWidget(this.slides, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
