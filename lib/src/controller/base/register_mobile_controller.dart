@@ -22,8 +22,16 @@ class RegisterWithMobileController with TextErrorController {
 
   ///start registering with verify mobile number with sms
   static void registerMobile(BuildContext context) {
-    Future.microtask(() => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => RegisterWithMobile())));
+    Future.microtask(() =>
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => RegisterWithMobile())));
+  }
+
+  ///start registering with verify mobile number with sms
+  static void registerMobileWithPage(BuildContext context, Widget page) {
+    Future.microtask(() =>
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => page)));
   }
 
   ///dispose all instance of controller on exit
@@ -47,8 +55,8 @@ class RegisterWithMobileController with TextErrorController {
   ///when user want to login with one step verifying mobile number
   ///also provided that enter verify-sms code correctly
   /// if detect mobile number api return entered mobile number to continue
-  Future<String> sendCode(
-      String mobile, String captchaText, String captchaKey) async {
+  Future<String> sendCode(String mobile, String captchaText,
+      String captchaKey) async {
     AuthUserSignInBySmsDtoModel req = AuthUserSignInBySmsDtoModel()
       ..mobile = mobile
       ..captchaText = captchaText
