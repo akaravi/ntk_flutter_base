@@ -24,6 +24,7 @@ class Intro extends StatelessWidget {
     List<Slide> list = [];
     data = data ?? [];
     for (var element in data) {
+
       list.add(Slide(
         title: element.title,
         maxLineTitle: 2,

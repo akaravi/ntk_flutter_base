@@ -1,4 +1,3 @@
-
 import 'package:base/src/backend/service/splash/auth_service.dart';
 import 'package:base/src/controller/base/register_mobile_controller.dart';
 import 'package:base/src/models/dto/core/auth_user_signup_model.dart';
@@ -19,14 +18,13 @@ class RegisterController with TextErrorController {
   final TextEditingController userNameTextController = TextEditingController();
   final TextEditingController passwordTextController = TextEditingController();
   final TextEditingController rePasswordTextController =
-  TextEditingController();
+      TextEditingController();
   final TextEditingController captchaTextController = TextEditingController();
 
   ///static method for starting register page
-  static void registerPage(BuildContext context) {
-    Future.microtask(() =>
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Register())));
+  static void registerPage(BuildContext context, {Widget? newWidget}) {
+    Future.microtask(() => Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (context) => newWidget ?? Register())));
   }
 
   ///start login with this method

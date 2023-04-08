@@ -34,8 +34,8 @@ class LoginController with TextErrorController {
   }
 
   /// method for starting register page
-  void registerPage(BuildContext context) {
-    RegisterController.registerPage(context);
+  void registerPage(BuildContext context,{Widget? widget}) {
+    RegisterController.registerPage(context,newWidget: widget);
   }
 
   /// user wants to login with certain mobile number and pass
