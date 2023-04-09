@@ -29,7 +29,7 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'partition')
   int? partition;
   @JsonKey(name: 'area')
-  int? area;
+  double? area;
   @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
   @JsonKey(name: 'linkEstateUserId')
