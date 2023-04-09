@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:base/src/index.dart';
 import 'package:base/src/ntk_application.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Splash(),
+      home: NewsListScreen(),
       // home: ( ArticleList()),
     );
   }
