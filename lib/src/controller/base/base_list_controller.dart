@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 abstract class BaseListController<model> {
-  late PagingController pagingController;
+   PagingController pagingController=PagingController<int,model>(firstPageKey: 1);
   late FilterModel filter;
 
   void showFilters(BuildContext context);
@@ -15,7 +15,7 @@ abstract class BaseListController<model> {
 
   initPageController() {
     filter = FilterModel();
-    pagingController=PagingController<int,model>(firstPageKey: 1);
+    // pagingController=
   }
 
   Future<void> fetchPage(int pageKey) async {

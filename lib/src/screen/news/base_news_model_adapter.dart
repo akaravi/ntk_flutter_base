@@ -6,18 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class NewsModelAdapter extends StatefulWidget {
-  const NewsModelAdapter({
+class BaseNewsModelAdapter extends StatefulWidget {
+  const BaseNewsModelAdapter({
     required this.model,
     Key? key,
   })  : super(key: key);
   final NewsContentModel model;
 
   @override
-  State<NewsModelAdapter> createState() => _NewsModelAdapterState();
+  State<BaseNewsModelAdapter> createState() => _BaseNewsModelAdapterState();
 }
 
-class _NewsModelAdapterState extends State<NewsModelAdapter> {
+class _BaseNewsModelAdapterState extends State<BaseNewsModelAdapter> {
   String get _formattedDurationInMinutes {
     final durationInMinutes =120 / 60;
     return '${durationInMinutes.toStringAsFixed(0)} mins';

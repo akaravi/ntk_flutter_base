@@ -1,4 +1,4 @@
-export 'nwes/index.dart';
+export 'news/index.dart';
 export 'article/index.dart';
 export 'generics/index.dart';
 export 'ticketing/index.dart';

@@ -27,7 +27,8 @@ class SplashController {
     yield SplashProgress(NtkGlobalData().stringGetCurrentApp, 1);
   }
 
-  Future<void> nextPage(BuildContext context) async {
+  Future<void> nextPage(BuildContext context,
+      {Widget? main, Widget? intro, Widget? login}) async {
     var introSeen = await IntroCache().isSeenBefore();
     //not see intro yet
     if (!introSeen) {
@@ -36,7 +37,7 @@ class SplashController {
       var hasLogin = await LoginCache().isLogin();
       var isLoginAsGuest = await LoginCache().isGuest();
       if (hasLogin || isLoginAsGuest) {
-        PanelController.mainPanelPage(context);
+        PanelController.mainPanelPage(context, panel: main);
       } else {
         LoginController.loginInPage(context);
       }
