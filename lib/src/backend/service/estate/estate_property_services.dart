@@ -19,4 +19,5 @@ class EstatePropertyService extends DioApi {
       throw Exception(errorException.errorMessage);
     }
   }
+
 }

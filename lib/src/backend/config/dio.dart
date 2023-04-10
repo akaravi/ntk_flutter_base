@@ -8,7 +8,7 @@ import 'package:retrofit/dio.dart';
 
 class DioApi {
   //default timeout time for all timeout section in millisecond
-  static const Duration _timeout =  Duration(milliseconds: 5000);
+  static const Duration _timeout =  Duration(milliseconds: 25000);
 
   Dio jsonDecodeDio() {
     var option = BaseOptions()
