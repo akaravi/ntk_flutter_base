@@ -51,7 +51,7 @@ class EstatePropertyDetailModel {
   int? configValueIntValueMin;
   @JsonKey(name: 'configValueIntValueMax')
   int? configValueIntValueMax;
-  
+  var value;
   EstatePropertyDetailModel();
   factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyDetailModelFromJson(json);
