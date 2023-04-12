@@ -17,6 +17,10 @@ class LoginCache {
     var sp = await SharedPreferences.getInstance();
     sp.setInt(_Name()._login, id ?? defaultUserID);
   }
+  Future<int> getUserID() async {
+    var sp = await SharedPreferences.getInstance();
+    return sp.getInt(_Name()._login) ?? defaultUserID;
+  }
 
   Future<bool> isLogin() async {
     var sp = await SharedPreferences.getInstance();
