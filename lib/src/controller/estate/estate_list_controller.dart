@@ -29,27 +29,6 @@ class EstateListController extends BaseListController<EstatePropertyModel> {
       return BaseEstateModelAdapter(model: m);
     }
   }
-
-// void showFilters(BuildContext context) {}
-//
-// Future<void> fetchPage(PagingController paging, int pageKey) async {
-//   FilterModel filter = FilterModel()
-//     ..rowPerPage = 5
-//     ..currentPageNumber = pageKey;
-//   try {
-//     var list = await EstateModelService().getAll(filter);
-//     if (list.length == filter.rowPerPage) {
-//       paging.appendPage(list, (filter.rowPerPage! + 1));
-//     } else {
-//       paging.appendLastPage(list);
-//     }
-//   } catch (error) {
-//     paging.error = error;
-//   }
-// }
-//
-// void dispose() {}
-//
 }
 
 class BaseEstateModelAdapter extends StatelessWidget {

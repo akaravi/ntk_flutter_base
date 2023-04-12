@@ -15,7 +15,6 @@ abstract class BaseListController<model> {
 
   initPageController() {
     filter = FilterModel();
-    // pagingController=
   }
 
   Future<void> fetchPage(int pageKey) async {

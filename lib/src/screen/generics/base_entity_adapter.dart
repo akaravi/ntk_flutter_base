@@ -1,13 +1,21 @@
 import 'package:base/src/index.dart';
 import 'package:flutter/material.dart';
 
-abstract class BaseEntityAdapter<Tmodel> extends StatefulWidget {
-  final EstatePropertyModel model;
+class BaseEntityAdapter<Tmodel> extends StatefulWidget {
+  final Tmodel model;
+  StateCreator<BaseEntityAdapterEstate<BaseEntityAdapter<Tmodel>>> stateCreator;
 
-  BaseEntityAdapter({Key? key, this.model});
+  BaseEntityAdapter({Key? key, required this.model, required this.stateCreator});
 
   @override
-  State createState() => createBaseState();
+  State<StatefulWidget> createState() => baseEntityState();
 
-  State <BaseEntityAdapter> createBaseState();
+  State<StatefulWidget> baseEntityState() =>stateCreator();
+
+
 }
+
+abstract class BaseEntityAdapterEstate<T extends BaseEntityAdapter>
+    extends State<T> {
+}
+typedef StateCreator<T extends BaseEntityAdapterEstate> = T Function();
