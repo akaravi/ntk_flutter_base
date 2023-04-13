@@ -10,8 +10,8 @@ class NewsListController extends BaseListController<NewsContentModel> {
   Widget Function(BuildContext context, NewsContentModel m, int index)?
       adapterCreatorFunction;
 
-  NewsListController({this.adapterCreatorFunction, FilterModel? f})
-      : super(filterModel: f);
+  NewsListController({this.adapterCreatorFunction, FilterModel? filter})
+      : super(filterModel: filter);
 
   @override
   Future<List<NewsContentModel>> service(FilterModel filter) {

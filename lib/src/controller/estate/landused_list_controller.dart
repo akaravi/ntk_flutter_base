@@ -9,8 +9,8 @@ class EstateLandUsedListController extends BaseListController<EstatePropertyType
   Widget Function(BuildContext context, EstatePropertyTypeLanduseModel m, int index)?
   adapterCreatorFunction;
 
-  EstateLandUsedListController({this.adapterCreatorFunction, FilterModel? f})
-      : super(filterModel: f);
+  EstateLandUsedListController({this.adapterCreatorFunction, FilterModel? filter})
+      : super(filterModel: filter);
 
   @override
   Future<List<EstatePropertyTypeLanduseModel>> service(FilterModel filter) {
