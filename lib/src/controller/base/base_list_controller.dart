@@ -9,10 +9,9 @@ abstract class BaseListController<model> {
 
   void showFilters(BuildContext context);
 
-  BaseListController();
+  BaseListController({FilterModel? filterModel})
+      : this.filter = filterModel ?? FilterModel();
 
-  BaseListController.withFilter(this.filter)
-      : assert(filter != null);
 
   close(BuildContext context) {
     Navigator.of(context).pop();

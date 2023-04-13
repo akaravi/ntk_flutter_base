@@ -9,7 +9,8 @@ class EstateListController extends BaseListController<EstatePropertyModel> {
   Widget Function(BuildContext context, EstatePropertyModel m, int index)?
       adapterCreatorFunction;
 
-  EstateListController({this.adapterCreatorFunction});
+  EstateListController({this.adapterCreatorFunction, FilterModel? f})
+      : super(filterModel: f);
 
   @override
   Future<List<EstatePropertyModel>> service(FilterModel filter) {
@@ -34,7 +35,7 @@ class EstateListController extends BaseListController<EstatePropertyModel> {
 class BaseEstateModelAdapter extends StatelessWidget {
   EstatePropertyModel model;
 
-  BaseEstateModelAdapter({required this.model,Key? key}) : super(key: key);
+  BaseEstateModelAdapter({required this.model, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
