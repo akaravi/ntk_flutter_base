@@ -9,7 +9,7 @@ export 'estate_account_agency_api.dart';
 export 'estate_prperty_type_usage.dart';
 export 'estate_property_detail_api.dart';
 export 'estate_property_history_api.dart';
-export 'estate_property_type_landuse_.dart';
+export 'estate_property_type_landuse_api.dart';
 export 'estate_property_share_site_api.dart';
 export 'estate_property_share_agent_api.dart';
 export 'estate_property_detail_group_api.dart';

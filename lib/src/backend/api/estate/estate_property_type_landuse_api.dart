@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 class EstatePropertyTypeLanduseMethodApi
     extends BaseEntityApi<EstatePropertyTypeLanduseModel, String> {
-  EstatePropertyTypeLanduseMethodApi.create(Dio dio)
+  EstatePropertyTypeLanduseMethodApi(Dio dio)
       : super(dio, 'EstatePropertyTypeLanduse',
             (t) => EstatePropertyTypeLanduseModel.fromJson(t));
 }
