@@ -1,16 +1,28 @@
-
 import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 abstract class BaseListController<model> {
-   PagingController pagingController=PagingController<int,model>(firstPageKey: 1);
+  PagingController pagingController = PagingController<int, model>(
+      firstPageKey: 1);
   late FilterModel filter;
 
   void showFilters(BuildContext context);
 
   close(BuildContext context) {
     Navigator.of(context).pop();
+  }
+
+  newPage({required BuildContext context,required Widget newScreen}) {
+    Future.microtask(() =>
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => newScreen)));
+  }
+
+  replacePage({required BuildContext context,required Widget newScreen}) {
+    Future.microtask(() =>
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => newScreen)));
   }
 
   initPageController() {
@@ -22,7 +34,7 @@ abstract class BaseListController<model> {
     try {
       var list = await service(filter);
       if (list.length == filter.rowPerPage) {
-        pagingController.appendPage(list, (filter.rowPerPage+ 1));
+        pagingController.appendPage(list, (filter.rowPerPage + 1));
       } else {
         pagingController.appendLastPage(list);
       }
