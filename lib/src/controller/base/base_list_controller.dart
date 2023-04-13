@@ -3,30 +3,33 @@ import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 abstract class BaseListController<model> {
-  PagingController pagingController = PagingController<int, model>(
-      firstPageKey: 1);
+  PagingController pagingController =
+      PagingController<int, model>(firstPageKey: 1);
   late FilterModel filter;
 
   void showFilters(BuildContext context);
+
+  BaseListController();
+
+  BaseListController.withFilter(this.filter)
+      : assert(filter != null);
 
   close(BuildContext context) {
     Navigator.of(context).pop();
   }
 
-  newPage({required BuildContext context,required Widget newScreen}) {
-    Future.microtask(() =>
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => newScreen)));
+  newPage({required BuildContext context, required Widget newScreen}) {
+    Future.microtask(() => Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => newScreen)));
   }
 
-  replacePage({required BuildContext context,required Widget newScreen}) {
-    Future.microtask(() =>
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => newScreen)));
+  replacePage({required BuildContext context, required Widget newScreen}) {
+    Future.microtask(() => Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => newScreen)));
   }
 
   initPageController() {
-    filter = FilterModel();
+    filter ??= FilterModel();
   }
 
   Future<void> fetchPage(int pageKey) async {
