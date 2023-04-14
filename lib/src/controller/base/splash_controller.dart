@@ -20,6 +20,14 @@ class SplashController {
     await AuthService().getDeviceToken();
     yield SplashProgress(NtkGlobalData().stringGetUserToken, .25);
     await AuthService().checkToken();
+    // try {
+    //
+    // } catch (e) {
+    //   if (e is Dio) {
+    //     DioError w = e;
+    //   }
+    // print(e);
+    // }
     yield SplashProgress(NtkGlobalData().stringGetTheme, .45);
     await ApplicationThemeService().getTheme();
     yield SplashProgress(NtkGlobalData().stringGetCurrentApp, .70);

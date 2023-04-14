@@ -14,6 +14,8 @@ import 'package:base/src/models/entity/base/token_info_model.dart';
 import 'package:base/src/models/entity/core/core_user_model.dart';
 
 import '../../../ntk_application.dart';
+import 'package:retrofit/dio.dart';
+import 'package:dio/dio.dart';
 
 class AuthService extends DioApi {
   //api caller reference
@@ -33,75 +35,102 @@ class AuthService extends DioApi {
       ..deviceType = application.deviceTypeEnum
       ..country = application.country
       ..language = application.lang.name;
-    var tokenResponse = await directAPI.getTokenDevice(request);
-    if (!tokenResponse.isSuccess) {
-      throw Exception(tokenResponse);
-    } else {
-      MyApplicationPreference()
-          .changeToken(tokenResponse.item?.deviceToken ?? '');
-      MainScreenCache()
-      //   ..setMemberId(tokenResponse.item?.memberId ?? 0)
-          .setSiteId(tokenResponse.item?.linkSiteId ?? 0);
+    try {
+      var tokenResponse = await directAPI.getTokenDevice(request);
+      if (!tokenResponse.isSuccess) {
+        throw Exception(tokenResponse);
+      } else {
+        MyApplicationPreference()
+            .changeToken(tokenResponse.item?.deviceToken ?? '');
+        MainScreenCache()
+        //   ..setMemberId(tokenResponse.item?.memberId ?? 0)
+            .setSiteId(tokenResponse.item?.linkSiteId ?? 0);
+        return tokenResponse;
+      }
+    } on DioError catch (e) {
+      if ((e.response?.statusCode ?? -1) == 401) {
+        MyApplicationPreference().changeAuthorization("");
+        MyApplicationPreference().changeToken("");
+        //todo
+        return getDeviceToken();
+        // Preferences.with(context).tokenInfo().setAuthorizationToken("");
+        // Preferences.with(context).UserInfo().setMemberId(0);
+        // Preferences.with(context).appVariableInfo().setIsLogin(false);
+      } else {
+        rethrow;
+      }
     }
-    return tokenResponse;
   }
 
   Future<ErrorException<TokenInfoModel>> checkToken() async {
-    var tokenResponse = await directAPI.correctTokenInfo();
-    if (!tokenResponse.isSuccess) {
-      throw Exception(tokenResponse);
+    try {
+      var tokenResponse = await directAPI.correctTokenInfo();
+      if (!tokenResponse.isSuccess) {
+        throw Exception(tokenResponse);
+      } else {
+        MyApplicationPreference()
+            .changeAuthorization(tokenResponse.item?.token ?? '');
+        MainScreenCache().setMemberId(tokenResponse.item?.memberId ?? 0);
+        return tokenResponse;
+      }
+    } on DioError catch (e) {
+      if ((e.response?.statusCode ?? -1) == 401) {
+        MyApplicationPreference().changeAuthorization("");
+        MyApplicationPreference().changeToken("");
+        //todo
+        return checkToken();
+        // Preferences.with(context).tokenInfo().setAuthorizationToken("");
+        // Preferences.with(context).UserInfo().setMemberId(0);
+        // Preferences.with(context).appVariableInfo().setIsLogin(false);
+      } else {
+        rethrow;
+      }
+    }
+  }
+
+  Future<CaptchaModel> getCaptcha() async {
+    var errorException = await directAPI.captcha();
+    if (errorException.isSuccess) {
+      return errorException.item ?? CaptchaModel();
     } else {
-      MyApplicationPreference()
-          .changeAuthorization(tokenResponse.item?.token ?? '');
-      MainScreenCache()
-          .setMemberId(tokenResponse.item?.memberId ?? 0);
-      return tokenResponse;
+      throw Exception(errorException.errorMessage);
     }
   }
-    Future<CaptchaModel> getCaptcha() async {
-      var errorException = await directAPI.captcha();
-      if (errorException.isSuccess) {
-        return errorException.item ?? CaptchaModel();
-      } else {
-        throw Exception(errorException.errorMessage);
-      }
-    }
 
-    Future<ErrorException<TokenInfoModel>> login(
-        AuthUserSignInModel auth) async {
-      auth.siteId = MainScreenCache().siteId;
-      var res = await directAPI.signInUser(auth);
-      if (res.isSuccess) {
-        LoginCache().setUserID(res.item?.userId);
-        return res;
-      } else {
-        throw Exception(res.errorMessage);
-      }
-    }
-
-    Future<ErrorException<CoreUserModel>> register(
-        AuthUserSignUpModel auth) async {
-      auth.siteId = MainScreenCache().siteId;
-      var res = await directAPI.signUpUser(auth);
-      if (res.isSuccess) {
-        return res;
-      } else {
-        throw Exception(res.errorMessage);
-      }
-    }
-
-    Future<ErrorException<TokenInfoModel>> loginWithSMS(
-        AuthUserSignInBySmsDtoModel model,
-        {bool saveId = false}) async {
-      model.siteId = MainScreenCache().siteId;
-      var response = await directAPI.signInUserBySMS(model);
-      if (response.isSuccess) {
-        if (saveId) {
-          LoginCache().setUserID(response.item?.userId);
-        }
-        return response;
-      } else {
-        throw Exception(response.errorMessage);
-      }
+  Future<ErrorException<TokenInfoModel>> login(AuthUserSignInModel auth) async {
+    auth.siteId = MainScreenCache().siteId;
+    var res = await directAPI.signInUser(auth);
+    if (res.isSuccess) {
+      LoginCache().setUserID(res.item?.userId);
+      return res;
+    } else {
+      throw Exception(res.errorMessage);
     }
   }
+
+  Future<ErrorException<CoreUserModel>> register(
+      AuthUserSignUpModel auth) async {
+    auth.siteId = MainScreenCache().siteId;
+    var res = await directAPI.signUpUser(auth);
+    if (res.isSuccess) {
+      return res;
+    } else {
+      throw Exception(res.errorMessage);
+    }
+  }
+
+  Future<ErrorException<TokenInfoModel>> loginWithSMS(
+      AuthUserSignInBySmsDtoModel model,
+      {bool saveId = false}) async {
+    model.siteId = MainScreenCache().siteId;
+    var response = await directAPI.signInUserBySMS(model);
+    if (response.isSuccess) {
+      if (saveId) {
+        LoginCache().setUserID(response.item?.userId);
+      }
+      return response;
+    } else {
+      throw Exception(response.errorMessage);
+    }
+  }
+}
