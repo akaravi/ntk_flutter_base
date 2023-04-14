@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 
 class ApplicationIntroMethodApi
     extends BaseEntityApi<ApplicationIntroModel, int> {
-  ApplicationIntroMethodApi.create(Dio dio)
+  ApplicationIntroMethodApi(Dio dio)
       : super(
             dio, 'ApplicationIntro', (t) => ApplicationIntroModel.fromJson(t));
 }

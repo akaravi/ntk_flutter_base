@@ -9,7 +9,7 @@ class IntroService extends DioApi {
   late ApplicationIntroMethodApi directAPI;
 
   IntroService() {
-    directAPI = ApplicationIntroMethodApi.create(jsonDecodeDio());
+    directAPI = ApplicationIntroMethodApi(jsonDecodeDio());
   }
 
   Future<List<ApplicationIntroModel>> getIntro() async {

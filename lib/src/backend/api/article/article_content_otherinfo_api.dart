@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 class ArticleContentOtherInfoMethodApi
     extends BaseEntityApi<ArticleContentOtherInfoModel, int> {
-  ArticleContentOtherInfoMethodApi.create(Dio dio)
+  ArticleContentOtherInfoMethodApi(Dio dio)
       : super(dio, 'ArticleContentOtherInfo',
             (t) => ArticleContentOtherInfoModel.fromJson(t));
 }

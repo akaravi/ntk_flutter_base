@@ -11,7 +11,7 @@ class ApplicationIntroService extends DioApi {
   String controlerUrl = 'ApplicationIntro';
 
   ApplicationIntroService() {
-    directAPI = ApplicationIntroMethodApi.create(jsonDecodeDio());
+    directAPI = ApplicationIntroMethodApi(jsonDecodeDio());
   }
 
   Future<ErrorException<ApplicationIntroModel>> getAll(

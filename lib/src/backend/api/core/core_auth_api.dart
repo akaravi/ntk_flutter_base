@@ -18,7 +18,7 @@ part 'core_auth_api.g.dart';
 
 @RestApi()
 abstract class AuthMethodApi {
-  factory AuthMethodApi.create(Dio dio, {String baseUrl}) = _AuthMethodApi;
+  factory AuthMethodApi(Dio dio, {String baseUrl}) = _AuthMethodApi;
 
   AuthMethodApi();
 

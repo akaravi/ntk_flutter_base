@@ -4,6 +4,6 @@ import 'package:dio/dio.dart';
 
 class BiographyCommentMethodApi
     extends BaseEntityApi<BiographyCommentModel, int> {
-  BiographyCommentMethodApi.create(Dio dio)
+  BiographyCommentMethodApi(Dio dio)
       : super(dio, 'BiographyComment', (t) => BiographyCommentModel.fromJson(t));
 }

@@ -10,7 +10,7 @@ class ApplicationAppService extends DioApi {
   late ApplicationAppMethodApi directAPI;
 
   ApplicationAppService() {
-    directAPI = ApplicationAppMethodApi.create(jsonDecodeDio());
+    directAPI = ApplicationAppMethodApi(jsonDecodeDio());
   }
 
   Future<ErrorExceptionBase> appScore(ApplicationScoreDtoModel request) async {

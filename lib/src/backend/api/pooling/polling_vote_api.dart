@@ -9,7 +9,7 @@ part 'polling_vote_api.g.dart';
 
 @RestApi()
 abstract class _PollingOtherApi {
-  factory _PollingOtherApi.create(Dio dio, {String baseUrl}) =
+  factory _PollingOtherApi(Dio dio, {String baseUrl}) =
       __PollingOtherApi;
 
   @POST("api/v2/PollingVote/AddBatch")

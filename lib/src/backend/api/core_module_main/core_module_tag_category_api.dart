@@ -4,6 +4,6 @@ import 'package:dio/dio.dart';
 
 class CoreModuleTagMethodApi
     extends BaseEntityApi<CoreModuleTagModel, int> {
-  CoreModuleTagMethodApi.create(Dio dio)
+  CoreModuleTagMethodApi(Dio dio)
       : super(dio, 'CoreModuleTag', (t) => CoreModuleTagModel.fromJson(t));
 }

@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 class BiographyContentOtherInfoMethodApi
     extends BaseEntityApi<BiographyContentOtherInfoModel, int> {
-  BiographyContentOtherInfoMethodApi.create(Dio dio)
+  BiographyContentOtherInfoMethodApi(Dio dio)
       : super(dio, 'BiographyContentOtherInfo',
           (t) => BiographyContentOtherInfoModel.fromJson(t));
 }

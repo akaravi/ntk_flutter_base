@@ -9,7 +9,7 @@ part 'application_app_api.g.dart';
 
 @RestApi()
 abstract class ApplicationAppMethodApi {
-  factory ApplicationAppMethodApi.create(Dio dio, {String baseUrl}) =
+  factory ApplicationAppMethodApi(Dio dio, {String baseUrl}) =
       _ApplicationAppMethodApi;
 
   @POST("api/v2/Application/ScoreClick")

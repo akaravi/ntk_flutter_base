@@ -8,7 +8,7 @@ part 'sample_entity_api.g.dart';
 
 @RestApi()
 abstract class _SGenericSampleEntityApi {
-  factory _SGenericSampleEntityApi.create(Dio dio, {String baseUrl}) = __SGenericSampleEntityApi;
+  factory _SGenericSampleEntityApi(Dio dio, {String baseUrl}) = __SGenericSampleEntityApi;
 
   _SGenericSampleEntityApi();
 

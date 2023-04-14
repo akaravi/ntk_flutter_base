@@ -8,7 +8,7 @@ class FileUploadService extends DioApi {
   late FileUploadApi directAPI;
 
   FileUploadService() {
-    directAPI = FileUploadApi.create(jsonDecodeDio());
+    directAPI = FileUploadApi(jsonDecodeDio());
   }
   upload(File f){
     return directAPI.uploadFileWithPartMap("fname", f);
