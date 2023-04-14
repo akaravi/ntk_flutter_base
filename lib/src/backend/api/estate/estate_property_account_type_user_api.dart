@@ -4,6 +4,6 @@ import 'package:dio/dio.dart';
 
 class EstatePropertyAccountTypeUserMethodApi
     extends BaseEntityApi<EstatePropertyAccountTypeUserModel, String> {
-  EstatePropertyAccountTypeUserMethodApi(Dio dio)
+  EstatePropertyAccountTypeUserMethodApi.create(Dio dio)
       : super(dio, 'EstatePropertyAccountTypeUser', (t) => EstatePropertyAccountTypeUserModel.fromJson(t));
 }

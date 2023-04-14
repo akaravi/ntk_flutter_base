@@ -9,7 +9,7 @@ part 'file_upload_api.g.dart';
 
 @RestApi()
 abstract class FileUploadApi {
-  factory FileUploadApi(Dio dio, {String baseUrl}) =
+  factory FileUploadApi.create(Dio dio, {String baseUrl}) =
   _FileUploadApi;
 
 

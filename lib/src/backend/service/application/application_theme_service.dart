@@ -9,7 +9,7 @@ class ApplicationThemeService extends DioApi {
   late ApplicationThemeMethodApi directAPI;
 
   ApplicationThemeService() {
-    directAPI = ApplicationThemeMethodApi(jsonDecodeDio());
+    directAPI = ApplicationThemeMethodApi.create(jsonDecodeDio());
   }
 
   Future<ErrorException<ApplicationThemeConfigModel>> getTheme() async {
