@@ -6,3 +6,4 @@ export 'base_list_controller.dart';
 export 'register_verify_mobile.dart';
 export 'register_mobile_controller.dart';
 export 'base_main_controller.dart';
+export 'base_controller.dart';
