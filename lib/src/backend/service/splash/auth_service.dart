@@ -22,7 +22,7 @@ class AuthService extends DioApi {
   late AuthMethodApi directAPI;
 
   AuthService() {
-    directAPI = AuthMethodApi(jsonDecodeDio());
+    directAPI = AuthMethodApi.create(jsonDecodeDio());
   }
 
   Future<ErrorException<TokenDeviceModel>> getDeviceToken() async {

@@ -4,6 +4,6 @@ import 'package:dio/dio.dart';
 
 class BankPaymentPrivateSiteConfigMethodApi
     extends BaseEntityApi<BankPaymentPrivateSiteConfigModel, int> {
-  BankPaymentPrivateSiteConfigMethodApi(Dio dio)
+  BankPaymentPrivateSiteConfigMethodApi.create(Dio dio)
       : super(dio, 'BankPaymentPrivateSiteConfig', (t) => BankPaymentPrivateSiteConfigModel.fromJson(t));
 }

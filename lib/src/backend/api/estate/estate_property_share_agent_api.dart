@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 class EstatePropertyShareAgentMethodApi
     extends BaseEntityApi<EstatePropertyShareAgentModel, String> {
-  EstatePropertyShareAgentMethodApi(Dio dio)
+  EstatePropertyShareAgentMethodApi.create(Dio dio)
       : super(dio, 'EstatePropertyShareAgent',
             (t) => EstatePropertyShareAgentModel.fromJson(t));
 }

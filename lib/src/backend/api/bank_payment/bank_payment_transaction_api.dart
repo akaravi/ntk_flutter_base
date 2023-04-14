@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 class BankPaymentTransactionMethodApi
     extends BaseEntityApi<BankPaymentTransactionModel, int> {
-  BankPaymentTransactionMethodApi(Dio dio)
+  BankPaymentTransactionMethodApi.create(Dio dio)
       : super(dio, 'BankPaymentTransaction',
             (t) => BankPaymentTransactionModel.fromJson(t));
 }

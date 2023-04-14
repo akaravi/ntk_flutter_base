@@ -4,6 +4,6 @@ import 'package:dio/dio.dart';
 
 class BlogCategoryMethodApi
     extends BaseEntityApi<BlogCategoryModel, int> {
-  BlogCategoryMethodApi(Dio dio)
+  BlogCategoryMethodApi.create(Dio dio)
       : super(dio, 'BlogCategory', (t) => BlogCategoryModel.fromJson(t));
 }

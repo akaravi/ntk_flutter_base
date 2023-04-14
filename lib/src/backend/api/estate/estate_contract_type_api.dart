@@ -4,6 +4,6 @@ import 'package:dio/dio.dart';
 
 class EstateContractTypeMethodApi
     extends BaseEntityApi<EstateContractTypeModel, String> {
-  EstateContractTypeMethodApi(Dio dio)
+  EstateContractTypeMethodApi.create(Dio dio)
       : super(dio, 'EstateContractType', (t) => EstateContractTypeModel.fromJson(t));
 }
