@@ -18,9 +18,9 @@ class CoreCurrencyModel extends BaseEntity<int> {
   @JsonKey(name: 'isDefault')
   bool? isDefault;
   @JsonKey(name: 'exchangeBuyRatio')
-  int? exchangeBuyRatio;
+  double? exchangeBuyRatio;
   @JsonKey(name: 'exchangeSaleRatio')
-  int? exchangeSaleRatio;
+  double? exchangeSaleRatio;
   @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'linkMainImageIdSrc')
