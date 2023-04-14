@@ -6,4 +6,5 @@ export 'estate/index.dart';
 export 'article/index.dart';
 export 'ticketing/index.dart';
 export 'application/index.dart';
+export 'core//index.dart';
 export 'list_page.dart';
