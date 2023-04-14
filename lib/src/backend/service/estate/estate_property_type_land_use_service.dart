@@ -4,11 +4,11 @@ import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:base/src/models/entity/estate/estate_property_type_landuse_model.dart';
 
 
-class EstatePropertyLandUseService extends DioApi {
+class EstatePropertyTypeLandUseService extends DioApi {
   //api caller reference
   late EstatePropertyTypeLanduseMethodApi  directAPI;
 
-  EstatePropertyLandUseService() {
+  EstatePropertyTypeLandUseService() {
     directAPI = EstatePropertyTypeLanduseMethodApi(jsonDecodeDio());
   }
 
