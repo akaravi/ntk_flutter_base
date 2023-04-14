@@ -6,6 +6,6 @@ class EstatePropertyService extends DioApi {
   late EstatePropertyTypeMethodApi directAPI;
 
   EstatePropertyService() {
-    directAPI = EstatePropertyTypeMethodApi(jsonDecodeDio());
+    directAPI = EstatePropertyTypeMethodApi.create(jsonDecodeDio());
   }
 }
