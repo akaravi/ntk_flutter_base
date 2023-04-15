@@ -20,4 +20,13 @@ class EstatePropertyService extends DioApi {
     }
   }
 
+  Future<List<EstatePropertyModel>> getAllEditor(FilterModel filter) async {
+    var errorException = await directAPI.getAllEditor(filter);
+    if (errorException.isSuccess) {
+      return errorException.listItems ?? [];
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
+  }
+
 }
