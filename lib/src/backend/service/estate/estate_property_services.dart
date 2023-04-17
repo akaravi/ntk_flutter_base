@@ -1,4 +1,5 @@
 import 'package:base/src/backend/api/estate/estate_property_api.dart';
+import 'package:base/src/backend/api/estate/estate_property_detail_favorite_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:base/src/models/entity/estate/estate_property_model.dart';
@@ -6,9 +7,11 @@ import 'package:base/src/models/entity/estate/estate_property_model.dart';
 class EstatePropertyService extends DioApi {
   //api caller reference
   late EstatePropertyMethodApi directAPI;
+  late EstatePropertyFavoriteMethodApi favoriteAPI;
 
   EstatePropertyService() {
     directAPI = EstatePropertyMethodApi(jsonDecodeDio());
+    favoriteAPI = EstatePropertyFavoriteMethodApi.create(jsonDecodeDio());
   }
 
   Future<List<EstatePropertyModel>> getAll(FilterModel filter) async {
@@ -22,6 +25,14 @@ class EstatePropertyService extends DioApi {
 
   Future<List<EstatePropertyModel>> getAllEditor(FilterModel filter) async {
     var errorException = await directAPI.getAllEditor(filter);
+    if (errorException.isSuccess) {
+      return errorException.listItems ?? [];
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
+  }
+  Future<List<EstatePropertyModel>> getFavoriteList(FilterModel filter) async {
+    var errorException = await favoriteAPI.getFavoriteList(filter);
     if (errorException.isSuccess) {
       return errorException.listItems ?? [];
     } else {
