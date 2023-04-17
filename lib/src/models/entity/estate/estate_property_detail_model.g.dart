@@ -35,7 +35,8 @@ EstatePropertyDetailModel _$EstatePropertyDetailModelFromJson(
           json['configValueForceUseDefaultValue'] as bool?
       ..configValueMultipleChoice = json['configValueMultipleChoice'] as bool?
       ..configValueIntValueMin = json['configValueIntValueMin'] as int?
-      ..configValueIntValueMax = json['configValueIntValueMax'] as int?;
+      ..configValueIntValueMax = json['configValueIntValueMax'] as int?
+      ..value = json['value'];
 
 Map<String, dynamic> _$EstatePropertyDetailModelToJson(
         EstatePropertyDetailModel instance) =>
@@ -62,6 +63,7 @@ Map<String, dynamic> _$EstatePropertyDetailModelToJson(
       'configValueMultipleChoice': instance.configValueMultipleChoice,
       'configValueIntValueMin': instance.configValueIntValueMin,
       'configValueIntValueMax': instance.configValueIntValueMax,
+      'value': instance.value,
     };
 
 const _$EnumInputDataTypeEnumMap = {

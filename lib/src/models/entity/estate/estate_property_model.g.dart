@@ -39,7 +39,7 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..createdYaerType =
           $enumDecodeNullable(_$DateTypeEnumEnumMap, json['createdYaerType'])
       ..partition = json['partition'] as int?
-      ..area = json['area'] as double?
+      ..area = (json['area'] as num?)?.toDouble()
       ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..linkEstateUserId = json['linkEstateUserId'] as String?
       ..linkEstateAgencyId = json['linkEstateAgencyId'] as String?

@@ -54,26 +54,26 @@ abstract class _SGenericSampleEntityApi {
       @Path() String fullPath, @Body() List<dynamic> request);
 }
 
-abstract class BaseApi<OUT, ID> {
-  Future<ErrorException<OUT>> getViewModel(ID id);
-
-  Future<ErrorException<OUT>> getAll(FilterModel filter);
-
-  Future<ErrorException<OUT>> getAllEditor(FilterModel filter);
-
-  Future<ErrorException<OUT>> getOne(ID id);
-
-  Future<ErrorExceptionBase> exist(FilterModel filter);
-
-  Future<ErrorExceptionBase> count(FilterModel filter);
-
-  Future<ErrorException<OUT>> exportFile(FilterModel filter);
-
-  Future<ErrorException<OUT>> add(OUT request);
-
-  Future<ErrorException<OUT>> edit(OUT request);
-
-  Future<ErrorException<OUT>> delete(ID id);
-
-  Future<ErrorException<OUT>> deleteAll(List<OUT> objects);
-}
+// abstract class BaseApi<OUT, ID> {
+//   Future<ErrorException<OUT>> getViewModel(ID id);
+//
+//   Future<ErrorException<OUT>> getAll(FilterModel filter);
+//
+//   Future<ErrorException<OUT>> getAllEditor(FilterModel filter);
+//
+//   Future<ErrorException<OUT>> getOne(ID id);
+//
+//   Future<ErrorExceptionBase> exist(FilterModel filter);
+//
+//   Future<ErrorExceptionBase> count(FilterModel filter);
+//
+//   Future<ErrorException<OUT>> exportFile(FilterModel filter);
+//
+//   Future<ErrorException<OUT>> add(OUT request);
+//
+//   Future<ErrorException<OUT>> edit(OUT request);
+//
+//   Future<ErrorException<OUT>> delete(ID id);
+//
+//   Future<ErrorException<OUT>> deleteAll(List<OUT> objects);
+// }
