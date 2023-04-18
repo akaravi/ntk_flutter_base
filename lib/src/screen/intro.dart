@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 
 class Intro extends StatelessWidget {
-  const Intro({Key? key}) : super(key: key);
+
+  const Intro({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,6 @@ class Intro extends StatelessWidget {
     List<Slide> list = [];
     data = data ?? [];
     for (var element in data) {
-
       list.add(Slide(
         title: element.title,
         maxLineTitle: 2,
@@ -118,7 +118,7 @@ class IntroWidget extends StatelessWidget {
     return ButtonStyle(
       shape: MaterialStateProperty.all<OutlinedBorder>(const StadiumBorder()),
       backgroundColor:
-          MaterialStateProperty.all<Color>(const Color(0x33F3B4BA)),
+      MaterialStateProperty.all<Color>(const Color(0x33F3B4BA)),
       overlayColor: MaterialStateProperty.all<Color>(const Color(0x33FFA8B0)),
     );
   }

@@ -4,9 +4,10 @@ import 'package:base/src/models/entity/application/application_intro_model.dart'
 import 'package:base/src/screen/intro.dart';
 import 'package:flutter/material.dart';
 
+import 'base_controller.dart';
 import 'login_controller.dart';
 
-class IntroController {
+class IntroController extends BaseController {
   static void asWelcomePage(BuildContext context) {
     Future.microtask(() => Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => const Intro())));
