@@ -1,4 +1,5 @@
 import 'package:base/src/models/entity/enums/estate/enum_input_data_type.dart';
+import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'estate_property_detail_model.g.dart';
@@ -53,6 +54,8 @@ class EstatePropertyDetailModel {
   int? configValueIntValueMax;
   var value;
   EstatePropertyDetailModel();
+
+  TextEditingController text = TextEditingController();
   factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyDetailModelFromJson(json);
 

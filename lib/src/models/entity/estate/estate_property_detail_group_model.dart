@@ -1,5 +1,6 @@
 import 'package:base/src/models/entity/base/base_module_entity.dart';
 import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'estate_property_detail_model.dart';
@@ -27,9 +28,13 @@ class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
   String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'propertyDetails')
   List<EstatePropertyDetailModel>? propertyDetails;
+
   EstatePropertyDetailGroupModel();
+
   factory EstatePropertyDetailGroupModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyDetailGroupModelFromJson(json);
+
+
 
   Map<String, dynamic> toJson() => _$EstatePropertyDetailGroupModelToJson(this);
 }
