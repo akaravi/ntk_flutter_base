@@ -72,9 +72,9 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   /// موقعیت جغرافیایی
   /// </summary>
   @JsonKey(name: 'geolocationlatitude')
-  int? geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
-  int? geolocationlongitude;
+  double? geolocationlongitude;
 
   @JsonKey(name: 'address')
   String? address;

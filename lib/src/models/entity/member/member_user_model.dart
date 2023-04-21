@@ -48,9 +48,9 @@ class MemberUserModel extends BaseModuleEntity<int> {
  @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
  @JsonKey(name: 'geolocationlatitude')
-  int? geolocationlatitude;
+ double? geolocationlatitude;
  @JsonKey(name: 'geolocationlongitude')
-  int? geolocationlongitude;
+ double? geolocationlongitude;
  @JsonKey(name: 'instagramId')
   String? instagramId;
  @JsonKey(name: 'telegramId')

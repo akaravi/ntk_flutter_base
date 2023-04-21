@@ -47,9 +47,9 @@ class ApplicationMemberInfoModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
   @JsonKey(name: 'geolocationlatitude')
-  int? geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
-  int? geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'linkLocationIdTitle')
   String? linkLocationIdTitle;
   @JsonKey(name: 'linkLocationIdParentTitle')

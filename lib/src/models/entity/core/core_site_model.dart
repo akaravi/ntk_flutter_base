@@ -164,9 +164,9 @@ class CoreSiteModel {
   @JsonKey(name: 'aboutUsLinkImageIdSrc')
   String? aboutUsLinkImageIdSrc;
   @JsonKey(name: 'aboutUsGeolocationlatitude')
-  int? aboutUsGeolocationlatitude;
+  double? aboutUsGeolocationlatitude;
   @JsonKey(name: 'aboutUsGeolocationlongitude')
-  int? aboutUsGeolocationlongitude;
+  double? aboutUsGeolocationlongitude;
   @JsonKey(name: 'aboutUsLinkFacebook')
   String? aboutUsLinkFacebook;
   @JsonKey(name: 'aboutUsLinkTwitter')

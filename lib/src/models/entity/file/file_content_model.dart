@@ -22,9 +22,9 @@ class FileContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'fromDate')
   DateTime? fromDate;
   @JsonKey(name: 'geolocationlatitude')
-  int? geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
-  int? geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'keyword')
   String? keyword;
   @JsonKey(name: 'linkFileIds')

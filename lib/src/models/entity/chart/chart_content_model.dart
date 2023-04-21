@@ -24,9 +24,9 @@ class ChartContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'fromDate')
   DateTime? fromDate;
   @JsonKey(name: 'geolocationlatitude')
-  int? geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
-  int? geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
   @JsonKey(name: 'linkLocationIdTitle')

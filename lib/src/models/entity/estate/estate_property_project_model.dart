@@ -21,9 +21,9 @@ class EstatePropertyProjectModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'body')
   String? body;
   @JsonKey(name: 'geolocationlatitude')
-  int? geolocationlatitude;
+  double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
-  int? geolocationlongitude;
+  double? geolocationlongitude;
   @JsonKey(name: 'linkLocationId')
   int? linkLocationId;
   @JsonKey(name: 'keyword')

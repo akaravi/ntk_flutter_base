@@ -54,8 +54,8 @@ DonateTransactionModel _$DonateTransactionModelFromJson(
       ..name = json['name'] as String?
       ..family = json['family'] as String?
       ..mobile = json['mobile'] as String?
-      ..geoLocationLatitude = json['geoLocationLatitude'] as int?
-      ..geoLocationLongitude = json['geoLocationLongitude'] as int?
+      ..geoLocationLatitude = json['geoLocationLatitude'] as double?
+      ..geoLocationLongitude = json['geoLocationLongitude'] as double?
       ..address = json['address'] as String?
       ..amountPure = json['amountPure'] as int?
       ..feeTransport = json['feeTransport'] as int?

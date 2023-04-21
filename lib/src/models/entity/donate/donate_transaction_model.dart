@@ -40,13 +40,13 @@ class DonateTransactionModel extends BaseModuleEntity<int> {
   /// موقعیت عرض جغرافیایی
   /// </summary>
   @JsonKey(name: 'geoLocationLatitude')
-  int? geoLocationLatitude;
+  double? geoLocationLatitude;
 
   /// <summary>
   /// موقعیت طول جغرافیایی
   /// </summary>
   @JsonKey(name: 'geoLocationLongitude')
-  int? geoLocationLongitude;
+  double? geoLocationLongitude;
   @JsonKey(name: 'address')
   String? address;
 

@@ -52,8 +52,8 @@ ApplicationMemberInfoModel _$ApplicationMemberInfoModelFromJson(
       ..scorePercent = json['scorePercent'] as int?
       ..scoreComment = json['scoreComment'] as String?
       ..linkLocationId = json['linkLocationId'] as int?
-      ..geolocationlatitude = json['geolocationlatitude'] as int?
-      ..geolocationlongitude = json['geolocationlongitude'] as int?
+      ..geolocationlatitude = json['geolocationlatitude'] as double?
+      ..geolocationlongitude = json['geolocationlongitude'] as double?
       ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle =
           json['linkLocationIdParentTitle'] as String?;
