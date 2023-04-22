@@ -1,10 +1,29 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'core_location_api.g.dart';
-@RestApi()
-abstract class CoreLocationApi{
-factory CoreLocationApi.create(Dio dio, {String baseUrl}) = _CoreLocationApi;
+import 'package:base/src/models/entity/base/error_exception.dart';
 
-CoreLocationApi();
+import 'package:base/src/models/entity/base/filter_model.dart';
+
+import 'package:base/src/models/entity/core/core_location_model.dart';
+
+part 'core_location_api.g.dart';
+
+@RestApi()
+abstract class CoreLocationApi {
+  factory CoreLocationApi.create(Dio dio, {String baseUrl}) = _CoreLocationApi;
+
+  CoreLocationApi();
+
+  @POST("api/v2/CoreLocation/GetAllProvinces")
+  Future<ErrorException<CoreLocationModel>> getAllProvinces(
+      @Body() FilterModel request);
+
+  @POST("api/v2/CoreLocation/GetAllCities")
+  Future<ErrorException<CoreLocationModel>> getAllCities(
+      @Body() FilterModel request);
+
+  @POST("api/v2/CoreLocation/GetAllCountry")
+  Future<ErrorException<CoreLocationModel>> getAllCountry(
+      @Body() FilterModel request);
 }
