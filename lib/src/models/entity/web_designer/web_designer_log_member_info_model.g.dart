@@ -37,8 +37,9 @@ WebDesignerLogMemberInfoModel _$WebDesignerLogMemberInfoModelFromJson(
       ..language = json['language'] as String?
       ..notificationId = json['notificationId'] as String?
       ..linkLocationId = json['linkLocationId'] as int?
-      ..geolocationlatitude = json['geolocationlatitude'] as double?
-      ..geolocationlongitude = json['geolocationlongitude'] as double?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
+      ..geolocationlongitude =
+          (json['geolocationlongitude'] as num?)?.toDouble()
       ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle =
           json['linkLocationIdParentTitle'] as String?;

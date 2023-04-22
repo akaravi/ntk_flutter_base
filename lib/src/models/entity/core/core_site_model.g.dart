@@ -110,9 +110,10 @@ CoreSiteModel _$CoreSiteModelFromJson(Map<String, dynamic> json) =>
       ..aboutUsMoreInfoUrl = json['aboutUsMoreInfoUrl'] as String?
       ..aboutUsLinkImageId = json['aboutUsLinkImageId'] as int?
       ..aboutUsLinkImageIdSrc = json['aboutUsLinkImageIdSrc'] as String?
-      ..aboutUsGeolocationlatitude = json['aboutUsGeolocationlatitude'] as double?
+      ..aboutUsGeolocationlatitude =
+          (json['aboutUsGeolocationlatitude'] as num?)?.toDouble()
       ..aboutUsGeolocationlongitude =
-          json['aboutUsGeolocationlongitude'] as double?
+          (json['aboutUsGeolocationlongitude'] as num?)?.toDouble()
       ..aboutUsLinkFacebook = json['aboutUsLinkFacebook'] as String?
       ..aboutUsLinkTwitter = json['aboutUsLinkTwitter'] as String?
       ..aboutUsLinkGooglePlus = json['aboutUsLinkGooglePlus'] as String?

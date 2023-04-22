@@ -38,8 +38,9 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..description = json['description'] as String?
       ..address = json['address'] as String?
       ..body = json['body'] as String?
-      ..geolocationlatitude = json['geolocationlatitude'] as double?
-      ..geolocationlongitude = json['geolocationlongitude'] as double?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
+      ..geolocationlongitude =
+          (json['geolocationlongitude'] as num?)?.toDouble()
       ..linkLocationId = json['linkLocationId'] as int?
       ..keyword = json['keyword'] as String?
       ..linkFileIds = json['linkFileIds'] as String?

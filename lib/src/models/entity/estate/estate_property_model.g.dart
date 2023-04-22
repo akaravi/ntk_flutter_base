@@ -66,8 +66,9 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
               json['propertyTypeUsage'] as Map<String, dynamic>)
       ..sharingKey = json['sharingKey'] as String?
       ..sharingId = json['sharingId'] as int?
-      ..geolocationlatitude = json['geolocationlatitude'] as double?
-      ..geolocationlongitude = json['geolocationlongitude'] as double?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
+      ..geolocationlongitude =
+          (json['geolocationlongitude'] as num?)?.toDouble()
       ..address = json['address'] as String?
       ..addressHidden = json['addressHidden'] as String?
       ..linkMainImageId = json['linkMainImageId'] as int?

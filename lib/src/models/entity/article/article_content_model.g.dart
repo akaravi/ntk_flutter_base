@@ -37,8 +37,9 @@ ArticleContentModel _$ArticleContentModelFromJson(Map<String, dynamic> json) =>
       ..fromDate = json['fromDate'] == null
           ? null
           : DateTime.parse(json['fromDate'] as String)
-      ..geolocationlatitude = json['geolocationlatitude'] as double?
-      ..geolocationlongitude = json['geolocationlongitude'] as double?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
+      ..geolocationlongitude =
+          (json['geolocationlongitude'] as num?)?.toDouble()
       ..linkLocationId = json['linkLocationId'] as int?
       ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?

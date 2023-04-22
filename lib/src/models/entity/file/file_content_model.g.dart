@@ -37,8 +37,9 @@ FileContentModel _$FileContentModelFromJson(Map<String, dynamic> json) =>
       ..fromDate = json['fromDate'] == null
           ? null
           : DateTime.parse(json['fromDate'] as String)
-      ..geolocationlatitude = json['geolocationlatitude'] as double?
-      ..geolocationlongitude = json['geolocationlongitude'] as double?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
+      ..geolocationlongitude =
+          (json['geolocationlongitude'] as num?)?.toDouble()
       ..keyword = json['keyword'] as String?
       ..linkFileIds = json['linkFileIds'] as String?
       ..linkFilePodcastId = json['linkFilePodcastId'] as int?

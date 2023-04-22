@@ -49,8 +49,9 @@ MemberUserModel _$MemberUserModelFromJson(Map<String, dynamic> json) =>
       ..address = json['address'] as String?
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkFileIds = json['linkFileIds'] as String?
-      ..geolocationlatitude = json['geolocationlatitude'] as double?
-      ..geolocationlongitude = json['geolocationlongitude'] as double?
+      ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
+      ..geolocationlongitude =
+          (json['geolocationlongitude'] as num?)?.toDouble()
       ..instagramId = json['instagramId'] as String?
       ..telegramId = json['telegramId'] as String?
       ..otherInfo1 = json['otherInfo1'] as String?

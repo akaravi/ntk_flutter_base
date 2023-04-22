@@ -33,4 +33,9 @@ class CoreLocationModel extends BaseEntity<int> {
   int? linkImageId;
   @JsonKey(name: 'linkImageIdSrc')
   String? linkImageIdSrc;
+  CoreLocationModel();
+  factory CoreLocationModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreLocationModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CoreLocationModelToJson(this);
 }

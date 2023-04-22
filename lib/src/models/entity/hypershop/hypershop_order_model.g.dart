@@ -46,8 +46,9 @@ HyperShopOrderModel _$HyperShopOrderModelFromJson(Map<String, dynamic> json) =>
       ..name = json['name'] as String?
       ..family = json['family'] as String?
       ..mobile = json['mobile'] as String?
-      ..geoLocationLatitude = json['geoLocationLatitude'] as double?
-      ..geoLocationLongitude = json['geoLocationLongitude'] as double?
+      ..geoLocationLatitude = (json['geoLocationLatitude'] as num?)?.toDouble()
+      ..geoLocationLongitude =
+          (json['geoLocationLongitude'] as num?)?.toDouble()
       ..address = json['address'] as String?
       ..amount = (json['amount'] as num?)?.toDouble()
       ..amountPure = (json['amountPure'] as num?)?.toDouble()
