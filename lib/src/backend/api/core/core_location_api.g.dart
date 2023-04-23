@@ -8,7 +8,7 @@ part of 'core_location_api.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _CoreLocationApi implements CoreLocationApi {
+class _CoreLocationApi implements CoreLocationOtherApi {
   _CoreLocationApi(
     this._dio, {
     this.baseUrl,
@@ -111,5 +111,4 @@ class _CoreLocationApi implements CoreLocationApi {
     }
     return requestOptions;
   }
-
 }

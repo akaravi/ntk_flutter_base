@@ -4,10 +4,12 @@ import 'package:base/src/index.dart';
 
 class CoreLocationService extends DioApi {
   //api caller reference
+  late CoreLocationOtherApi directOtherAPI;
   late CoreLocationApi directAPI;
 
   CoreLocationService() {
-    directAPI = CoreLocationApi.create(jsonDecodeDio());
+    directOtherAPI = CoreLocationOtherApi.create(jsonDecodeDio());
+    directAPI = CoreLocationApi(jsonDecodeDio());
   }
 
   Future<List<CoreLocationModel>> getAll(FilterModel filter) async {
@@ -18,15 +20,18 @@ class CoreLocationService extends DioApi {
       throw Exception(errorException.errorMessage);
     }
   }
+
   Future<List<CoreLocationModel>> getAllCountry(FilterModel filter) async {
-    var errorException = await directAPI.getAllCountry(filter);
+    var errorException = await directOtherAPI.getAllCountry(filter);
     if (errorException.isSuccess) {
       return errorException.listItems ?? [];
     } else {
       throw Exception(errorException.errorMessage);
     }
-  }Future<List<CoreLocationModel>> getAllProvince(FilterModel filter) async {
-    var errorException = await directAPI.getAllProvinces(filter);
+  }
+
+  Future<List<CoreLocationModel>> getAllProvince(FilterModel filter) async {
+    var errorException = await directOtherAPI.getAllProvinces(filter);
     if (errorException.isSuccess) {
       return errorException.listItems ?? [];
     } else {

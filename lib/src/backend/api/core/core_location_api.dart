@@ -12,10 +12,10 @@ import '../base/base_entity.dart';
 part 'core_location_api.g.dart';
 
 @RestApi()
-abstract class CoreLocationApi   extends BaseEntityApi<CoreLocationModel, int>  {
-  factory CoreLocationApi.create(Dio dio, {String baseUrl}) = _CoreLocationApi;
+abstract class CoreLocationOtherApi    {
+  factory CoreLocationOtherApi.create(Dio dio, {String baseUrl}) = _CoreLocationApi;
 
-  CoreLocationApi(Dio dio):  super(dio, 'CoreLocation', (t) => CoreLocationModel.fromJson(t));
+
 
   @POST("api/v2/CoreLocation/GetAllProvinces")
   Future<ErrorException<CoreLocationModel>> getAllProvinces(
@@ -28,4 +28,7 @@ abstract class CoreLocationApi   extends BaseEntityApi<CoreLocationModel, int>  
   @POST("api/v2/CoreLocation/GetAllCountry")
   Future<ErrorException<CoreLocationModel>> getAllCountry(
       @Body() FilterModel request);
+}
+class CoreLocationApi extends BaseEntityApi<CoreLocationModel, int> {
+  CoreLocationApi(Dio dio):  super(dio, 'CoreLocation', (t) => CoreLocationModel.fromJson(t));
 }
