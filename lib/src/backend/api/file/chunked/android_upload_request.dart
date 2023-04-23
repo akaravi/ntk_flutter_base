@@ -4,7 +4,9 @@ import 'package:path/path.dart' as p;
 import 'package:universal_io/io.dart';
 import 'package:dio/dio.dart';
 
-class UploadRequest {
+import 'abstract_uploader.dart';
+
+class UploadRequest implements PlatformUploader {
   final Dio dio;
   final String filePath, fileName, path, fileKey;
   final String? method;
@@ -30,7 +32,8 @@ class UploadRequest {
     _maxChunkSize = min(_fileSize, maxChunkSize ?? 1024 * 1024);
   }
 
-  Future<Response?> upload() async {
+  @override
+  Future<String> upload() async {
     Response? finalResponse;
     for (int i = 0; i < _chunksCount; i++) {
       final start = _getChunkStart(i);
@@ -51,7 +54,7 @@ class UploadRequest {
         onSendProgress: (current, total) => _updateProgress(i, current, total),
       );
     }
-    return finalResponse;
+    return finalResponse.toString();
   }
 
   Stream<List<int>> _getChunkStream(int start, int end) =>

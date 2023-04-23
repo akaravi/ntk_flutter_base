@@ -6,7 +6,6 @@ import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 
 import 'chunked/android_upload_request.dart';
-import 'chunked/web_upload_request.dart';
 
 class ChunkedUploader {
   late Dio _dio;
@@ -38,20 +37,21 @@ class ChunkedUploader {
               maxChunkSize: maxChunkSize,
               onUploadProgress: onUploadProgress)
           .upload();
-    } else if (onWeb()) {
-      response = await WebUploadRequest(
-        _dio,
-        file: filePlatform.bytes,
-        fileName: "upload",
-        fileSize: filePlatform.size,
-        fileKey: fileKey,
-        method: method,
-        url: path,
-        cancelToken: cancelToken,
-        maxChunkSize: maxChunkSize,
-        onUploadProgress: onUploadProgress,
-      ).upload();
     }
+      // else if (onWeb()) {
+    //   response = await WebUploadRequest(
+    //     _dio,
+    //     file: filePlatform.bytes,
+    //     fileName: "upload",
+    //     fileSize: filePlatform.size,
+    //     fileKey: fileKey,
+    //     method: method,
+    //     url: path,
+    //     cancelToken: cancelToken,
+    //     maxChunkSize: maxChunkSize,
+    //     onUploadProgress: onUploadProgress,
+    //   ).upload();
+    // }
     return ErrorException<FileUploadModel>.fromJson(
         response,
         (entityJson) =>

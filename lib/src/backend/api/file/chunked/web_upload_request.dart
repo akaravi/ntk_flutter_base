@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'dart:html';
 import 'dart:math';
+
+import 'package:base/src/backend/api/file/chunked/abstract_uploader.dart';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 
-class WebUploadRequest {
+class WebUploadRequest implements PlatformUploader{
   final Dio dio;
   final String url;
   final String method;
