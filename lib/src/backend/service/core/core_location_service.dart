@@ -25,5 +25,12 @@ class CoreLocationService extends DioApi {
     } else {
       throw Exception(errorException.errorMessage);
     }
+  }Future<List<CoreLocationModel>> getAllProvince(FilterModel filter) async {
+    var errorException = await directAPI.getAllProvinces(filter);
+    if (errorException.isSuccess) {
+      return errorException.listItems ?? [];
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
   }
 }

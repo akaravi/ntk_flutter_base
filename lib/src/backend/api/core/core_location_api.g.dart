@@ -112,6 +112,4 @@ class _CoreLocationApi implements CoreLocationApi {
     return requestOptions;
   }
 
-  @override
-  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
