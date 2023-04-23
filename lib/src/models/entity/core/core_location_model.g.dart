@@ -85,6 +85,7 @@ const _$EnumRecordStatusEnumMap = {
 };
 
 const _$EnumLocationTypeEnumMap = {
+  EnumLocationType.unKnown: 0,
   EnumLocationType.country: 1,
   EnumLocationType.state: 2,
   EnumLocationType.province: 3,

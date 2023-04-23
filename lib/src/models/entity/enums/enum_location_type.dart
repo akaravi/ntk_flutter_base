@@ -2,6 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 @JsonEnum()
 enum EnumLocationType {
+  @JsonValue(0)
+  unKnown,
   @JsonValue(1)
   country,
   @JsonValue(2)
