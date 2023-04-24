@@ -5,6 +5,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'estate_property_detail_group_model.dart';
 import 'estate_property_detail_value_model.dart';
+import 'estate_property_type_landuse_model.dart';
+import 'estate_property_type_usage_model.dart';
 
 part 'estate_customer_order_model.g.dart';
 
@@ -45,7 +47,7 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'partition')
   int? partition;
   @JsonKey(name: 'area')
-  int? area;
+  double? area;
   @JsonKey(name: 'salePriceMin')
   int? salePriceMin;
   @JsonKey(name: 'salePriceMax')
@@ -93,7 +95,9 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   bool? actionSendSmsToCustomer;
   @JsonKey(name: 'actionSendSmsToContactNumber')
   String? actionSendSmsToContactNumber;
-
+//as helper to select
+  EstatePropertyTypeLanduseModel? propertyTypeLanduse;
+  EstatePropertyTypeUsageModel? propertyTypeUsage;
   EstateCustomerOrderModel();
   factory EstateCustomerOrderModel.fromJson(Map<String, dynamic> json) =>
       _$EstateCustomerOrderModelFromJson(json);

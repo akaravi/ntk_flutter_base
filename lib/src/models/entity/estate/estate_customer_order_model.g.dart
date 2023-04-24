@@ -56,7 +56,7 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..linkContractTypeId = json['linkContractTypeId'] as String?
       ..createdYaer = json['createdYaer'] as int?
       ..partition = json['partition'] as int?
-      ..area = json['area'] as int?
+      ..area = json['area'] as double?
       ..salePriceMin = json['salePriceMin'] as int?
       ..salePriceMax = json['salePriceMax'] as int?
       ..rentPriceMin = json['rentPriceMin'] as int?
