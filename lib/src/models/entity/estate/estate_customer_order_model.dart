@@ -36,6 +36,8 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   List<String>? linkPropertyIdsIgnored;
   @JsonKey(name: 'linkLocationIds')
   List<int>? linkLocationIds;
+  @JsonKey(name: "locationTitles")
+  List<String>? locationTitles;
   @JsonKey(name: 'linkPropertyTypeLanduseId')
   String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'linkPropertyTypeUsageId')
@@ -90,15 +92,19 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? resultSortColumn;
   @JsonKey(name: 'resultSortType')
   EnumSortType? resultSortType;
+
   /*Action */
   @JsonKey(name: 'actionSendSmsToCustomer')
   bool? actionSendSmsToCustomer;
   @JsonKey(name: 'actionSendSmsToContactNumber')
   String? actionSendSmsToContactNumber;
+
 //as helper to select
   EstatePropertyTypeLanduseModel? propertyTypeLanduse;
   EstatePropertyTypeUsageModel? propertyTypeUsage;
+
   EstateCustomerOrderModel();
+
   factory EstateCustomerOrderModel.fromJson(Map<String, dynamic> json) =>
       _$EstateCustomerOrderModelFromJson(json);
 
