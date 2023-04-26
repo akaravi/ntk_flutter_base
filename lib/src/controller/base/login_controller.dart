@@ -20,9 +20,11 @@ class LoginController with TextErrorController {
   final TextEditingController captchaTextController = TextEditingController();
 
   ///start login with this method
-  static loginInPage(BuildContext context) {
-    Future.microtask(() => Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => Login())));
+  static loginInPage({required BuildContext context, Widget? newLogin}) {
+    Future.microtask(() =>
+        Navigator.of(context)
+            .pushReplacement(
+            MaterialPageRoute(builder: (context) => newLogin ?? Login())));
   }
 
   /// when user wants to go ahead as guest
@@ -34,14 +36,14 @@ class LoginController with TextErrorController {
   }
 
   /// method for starting register page
-  void registerPage(BuildContext context,{Widget? widget}) {
-    RegisterController.registerPage(context,newWidget: widget);
+  void registerPage(BuildContext context, {Widget? widget}) {
+    RegisterController.registerPage(context, newWidget: widget);
   }
 
   /// user wants to login with certain mobile number and pass
   /// captcha also forward to check
-  Future<bool> _loginMobileWithPass(
-      String mobile, String pass, String captchaText, String captchaKey) async {
+  Future<bool> _loginMobileWithPass(String mobile, String pass,
+      String captchaText, String captchaKey) async {
     AuthUserSignInModel req = AuthUserSignInModel()
       ..mobile = mobile
       ..password = pass
@@ -57,8 +59,8 @@ class LoginController with TextErrorController {
 
   ///user wants to login with email and pass that he select
   /// captcha also forward to check
-  Future<bool> _loginEmailWithPass(
-      String email, String pass, String captchaText, String captchaKey) async {
+  Future<bool> _loginEmailWithPass(String email, String pass,
+      String captchaText, String captchaKey) async {
     AuthUserSignInModel req = AuthUserSignInModel()
       ..email = email
       ..password = pass

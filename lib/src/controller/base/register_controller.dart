@@ -29,7 +29,7 @@ class RegisterController with TextErrorController {
 
   ///start login with this method
   void loginPage(BuildContext context) {
-    LoginController.loginInPage(context);
+    LoginController.loginInPage(context: context);
   }
 
   ///load captcha on as model for use on api call

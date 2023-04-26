@@ -40,14 +40,19 @@ class SplashController {
     var introSeen = await IntroCache().isSeenBefore();
     //not see intro yet
     if (!introSeen) {
-      IntroController.asWelcomePage(context);
+      if (intro == null) {
+        IntroController.asWelcomePage(context);
+      }
+      else {
+        IntroController().newPage(context: context, newScreen: intro);
+      }
     } else {
       var hasLogin = await LoginCache().isLogin();
       var isLoginAsGuest = await LoginCache().isGuest();
       if (hasLogin || isLoginAsGuest) {
         PanelController.mainPanelPage(context, panel: main);
       } else {
-        LoginController.loginInPage(context);
+        LoginController.loginInPage(context: context,newLogin:login);
       }
     }
   }
