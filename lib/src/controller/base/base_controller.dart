@@ -12,6 +12,6 @@ class BaseController {
 
   replacePage({required BuildContext context, required Widget newScreen}) {
     Future.microtask(() => Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => newScreen)));
+        .pushReplacement(MaterialPageRoute(builder: (context) => newScreen)));
   }
 }
