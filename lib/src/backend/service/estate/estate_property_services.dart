@@ -1,6 +1,7 @@
 import 'package:base/src/backend/api/estate/estate_property_api.dart';
 import 'package:base/src/backend/api/estate/estate_property_detail_favorite_api.dart';
 import 'package:base/src/backend/config/dio.dart';
+import 'package:base/src/index.dart';
 import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:base/src/models/entity/estate/estate_property_model.dart';
 
@@ -31,6 +32,7 @@ class EstatePropertyService extends DioApi {
       throw Exception(errorException.errorMessage);
     }
   }
+
   Future<List<EstatePropertyModel>> getFavoriteList(FilterModel filter) async {
     var errorException = await favoriteAPI.getFavoriteList(filter);
     if (errorException.isSuccess) {
@@ -40,4 +42,8 @@ class EstatePropertyService extends DioApi {
     }
   }
 
+  Future<ErrorException<EstatePropertyModel>> add(EstatePropertyModel m) async {
+    var errorExeption = await directAPI.add(m);
+    return errorExeption;
+  }
 }

@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CaptchaWidget extends StatefulWidget {
-  Function(CaptchaModel) func;
+ void Function(CaptchaModel)? func;
 
   CaptchaWidget(this.func, {Key? key}) : super(key: key);
 
@@ -48,9 +48,9 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
 
 class _CaptchaController {
   ///load captcha on as model for use on api call
-  Future<String> loadCaptcha(Function(CaptchaModel) func) async {
+  Future<String> loadCaptcha(void Function(CaptchaModel)? func) async {
     CaptchaModel model = await AuthService().getCaptcha();
-    func.call(model);
+    func?.call(model);
     return model.image ?? '';
   }
 }
