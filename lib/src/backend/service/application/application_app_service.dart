@@ -28,7 +28,7 @@ class ApplicationAppService extends DioApi {
         ..appId = res.item?.id ?? 0
         //..qrCode = res.item?.qrCode ?? ''
         ..title = res.item?.aboutUsTitle
-        ..aboutUs(res.item)
+        ..setAboutUs(res.item)
         ..updateInfo(res.item);
     }
     return res;

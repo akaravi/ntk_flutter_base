@@ -1,6 +1,8 @@
 import 'package:base/src/models/entity/application/about_us_model.dart';
 import 'package:base/src/models/entity/application/app_update_class.dart';
 import 'package:base/src/models/entity/application/application_app_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 
 class MainScreenCache {
   String? qrCode;
@@ -8,14 +10,24 @@ class MainScreenCache {
   String? title;
   int? _siteId;
   int? _memberId;
-  AboutUsModel? _aboutUs;
 
   UpdateClass? _updateInfo;
 
   MainScreenCache();
 
-  aboutUs(ApplicationAppModel? item) {
-    _aboutUs = AboutUsModel.convert(item ?? ApplicationAppModel());
+  setAboutUs(ApplicationAppModel? item) async {
+    AboutUsModel _aboutUs = AboutUsModel.convert(item ?? ApplicationAppModel());
+    var sp = await SharedPreferences.getInstance();
+    sp.setString(_Name()._aboutUs, (json.encode(_aboutUs)));
+  }
+
+  Future<AboutUsModel?> aboutUs() async {
+    var sp = await SharedPreferences.getInstance();
+    String? res = sp.getString(_Name()._aboutUs);
+    if (res != null) {
+      return AboutUsModel.fromJson(json.decode(res));
+    }
+    return null;
   }
 
   updateInfo(ApplicationAppModel? item) {
@@ -23,7 +35,7 @@ class MainScreenCache {
   }
 
   setMemberId(int memberId) {
-   _memberId = memberId;
+    _memberId = memberId;
   }
 
   setSiteId(int siteId) {
@@ -33,4 +45,8 @@ class MainScreenCache {
   int? get memberId => _memberId;
 
   int? get siteId => _siteId;
+}
+
+class _Name {
+  final String _aboutUs = "pref_about_us_model";
 }
