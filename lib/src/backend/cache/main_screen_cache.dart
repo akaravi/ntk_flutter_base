@@ -6,10 +6,19 @@ import 'dart:convert';
 
 class MainScreenCache {
   String? qrCode;
-  int? appId;
   String? title;
   int? _siteId;
   int? _memberId;
+
+  setAppId(int value) async {
+    var sp = await SharedPreferences.getInstance();
+    sp.setInt(_Name()._appID, (value));
+  }
+
+  getAppId() async {
+    var sp = await SharedPreferences.getInstance();
+    return sp.getInt(_Name()._appID);
+  }
 
   UpdateClass? _updateInfo;
 
@@ -49,4 +58,5 @@ class MainScreenCache {
 
 class _Name {
   final String _aboutUs = "pref_about_us_model";
+  final String _appID = "pref_app_id_model";
 }

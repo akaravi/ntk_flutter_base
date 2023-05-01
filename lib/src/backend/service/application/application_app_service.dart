@@ -1,4 +1,5 @@
 import 'package:base/src/backend/api/application/application_app_api.dart';
+import 'package:base/src/backend/cache/index.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/backend/cache/main_screen_cache.dart';
 import 'package:base/src/backend/config/my_application_preference.dart';
@@ -14,6 +15,7 @@ class ApplicationAppService extends DioApi {
   }
 
   Future<ErrorExceptionBase> appScore(ApplicationScoreDtoModel request) async {
+    request.linkApiPathId=await MainScreenCache().getAppId();
     var res = await directAPI.submitAppScore(request);
     return res;
   }
@@ -25,7 +27,7 @@ class ApplicationAppService extends DioApi {
       MyApplicationPreference().changeLanguage(res.item?.lang);
       //set qrcode, appId, title, update information, aboutUs page
       MainScreenCache()
-        ..appId = res.item?.id ?? 0
+        ..setAppId(res.item?.id ?? 0)
         //..qrCode = res.item?.qrCode ?? ''
         ..title = res.item?.aboutUsTitle
         ..setAboutUs(res.item)

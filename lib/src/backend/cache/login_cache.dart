@@ -37,6 +37,8 @@ class LoginCache {
     var sp = await SharedPreferences.getInstance();
     return (sp.getInt(_Name()._login) ?? defaultUserID) > defaultUserID;
   }
+
+
 }
 
 class _Name {
