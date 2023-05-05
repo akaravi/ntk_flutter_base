@@ -1,14 +1,16 @@
 import 'package:base/src/models/entity/base/error_exception.dart';
 import 'package:base/src/models/entity/base/error_exception_base.dart';
 import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:dio/dio.dart';
+import 'package:dio/dio.dart' hide Headers;
+
 import 'package:retrofit/retrofit.dart';
 
 part 'sample_entity_api.g.dart';
 
 @RestApi()
 abstract class _SGenericSampleEntityApi {
-  factory _SGenericSampleEntityApi.create(Dio dio, {String baseUrl}) = __SGenericSampleEntityApi;
+  factory _SGenericSampleEntityApi.create(Dio dio, {String baseUrl}) =
+      __SGenericSampleEntityApi;
 
   _SGenericSampleEntityApi();
 
@@ -25,6 +27,10 @@ abstract class _SGenericSampleEntityApi {
 
   @GET("{fullPath}")
   Future<ErrorException<String>> getOne(@Path() String fullPath);
+
+  @GET("{fullPath}")
+  @Headers(<String, dynamic>{"AccessDataType": "Editor"})
+  Future<ErrorException<String>> getOneByEdit(@Path() String fullPath);
 
   @POST("{fullPath}")
   Future<ErrorExceptionBase> exist(

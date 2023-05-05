@@ -13,7 +13,7 @@ part 'core_location_api.g.dart';
 
 @RestApi()
 abstract class CoreLocationOtherApi    {
-  factory CoreLocationOtherApi.create(Dio dio, {String baseUrl}) = _CoreLocationApi;
+  factory CoreLocationOtherApi.create(Dio dio, {String baseUrl}) = _CoreLocationOtherApi;
 
 
 

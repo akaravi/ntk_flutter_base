@@ -131,6 +131,33 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
   }
 
   @override
+  Future<ErrorException<String>> getOneByEdit(fullPath) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'AccessDataType': 'Editor'};
+    _headers.removeWhere((k, v) => v == null);
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<String>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '${fullPath}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<String>.fromJson(
+      _result.data!,
+      (json) => json as String,
+    );
+    return value;
+  }
+
+  @override
   Future<ErrorExceptionBase> exist(
     fullPath,
     filter,

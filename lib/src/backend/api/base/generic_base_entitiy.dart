@@ -77,6 +77,32 @@ class BaseEntityApi<OUT, ID> extends DioApi
   }
 
   @override
+  Future<ErrorException<OUT>> getOneByEdit(ID d) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'AccessDataType': 'Editor'};
+    _headers.removeWhere((k, v) => v == null);
+    final Map<String, dynamic>? _data = null;
+    final _result = await dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<String>>(Options(
+          method: 'GET',
+          headers: _headers,
+          extra: _extra,
+        )
+            .compose(
+          dio.options,
+          (prefixUrl + controllerUrl + "/$d"),
+          queryParameters: queryParameters,
+          data: _data,
+        )
+            .copyWith(baseUrl: baseUrl ?? dio.options.baseUrl)));
+    final value = ErrorException<OUT>.fromJson(
+      _result.data!,
+          (json) => fromJson(json as Map<String, dynamic>),
+    );
+    return value;
+  }
+  @override
   Future<ErrorException<OUT>> getOne(ID d) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

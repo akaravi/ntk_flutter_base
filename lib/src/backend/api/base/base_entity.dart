@@ -22,6 +22,7 @@ abstract class AbstractBaseApi<OUT, ID> {
   Future<ErrorException<OUT>> getAllEditor(FilterModel filter);
 
   Future<ErrorException<OUT>> getOne(ID id);
+  Future<ErrorException<OUT>> getOneByEdit(ID id);
 
   Future<ErrorExceptionBase> exist(FilterModel filter);
 

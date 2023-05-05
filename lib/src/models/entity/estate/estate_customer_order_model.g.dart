@@ -51,12 +51,15 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..linkLocationIds = (json['linkLocationIds'] as List<dynamic>?)
           ?.map((e) => e as int)
           .toList()
+      ..locationTitles = (json['locationTitles'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList()
       ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
       ..linkPropertyTypeUsageId = json['linkPropertyTypeUsageId'] as String?
       ..linkContractTypeId = json['linkContractTypeId'] as String?
       ..createdYaer = json['createdYaer'] as int?
       ..partition = json['partition'] as int?
-      ..area = json['area'] as double?
+      ..area = (json['area'] as num?)?.toDouble()
       ..salePriceMin = json['salePriceMin'] as int?
       ..salePriceMax = json['salePriceMax'] as int?
       ..rentPriceMin = json['rentPriceMin'] as int?
@@ -90,7 +93,15 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
           $enumDecodeNullable(_$EnumSortTypeEnumMap, json['resultSortType'])
       ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?
       ..actionSendSmsToContactNumber =
-          json['actionSendSmsToContactNumber'] as String?;
+          json['actionSendSmsToContactNumber'] as String?
+      ..propertyTypeLanduse = json['propertyTypeLanduse'] == null
+          ? null
+          : EstatePropertyTypeLanduseModel.fromJson(
+              json['propertyTypeLanduse'] as Map<String, dynamic>)
+      ..propertyTypeUsage = json['propertyTypeUsage'] == null
+          ? null
+          : EstatePropertyTypeUsageModel.fromJson(
+              json['propertyTypeUsage'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$EstateCustomerOrderModelToJson(
         EstateCustomerOrderModel instance) =>
@@ -121,6 +132,7 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'linkPropertyIds': instance.linkPropertyIds,
       'linkPropertyIdsIgnored': instance.linkPropertyIdsIgnored,
       'linkLocationIds': instance.linkLocationIds,
+      'locationTitles': instance.locationTitles,
       'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'linkPropertyTypeUsageId': instance.linkPropertyTypeUsageId,
       'linkContractTypeId': instance.linkContractTypeId,
@@ -150,6 +162,8 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'resultSortType': _$EnumSortTypeEnumMap[instance.resultSortType],
       'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
       'actionSendSmsToContactNumber': instance.actionSendSmsToContactNumber,
+      'propertyTypeLanduse': instance.propertyTypeLanduse,
+      'propertyTypeUsage': instance.propertyTypeUsage,
     };
 
 const _$EnumRecordStatusEnumMap = {
