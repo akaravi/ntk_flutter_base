@@ -14,7 +14,7 @@ class FavoriteEstateListController extends BaseListController<EstatePropertyMode
 
   @override
   Future<List<EstatePropertyModel>> service(FilterModel filter) {
-    return EstatePropertyService().getAll(filter);
+    return EstatePropertyService().getFavoriteList(filter);
   }
 
   @override

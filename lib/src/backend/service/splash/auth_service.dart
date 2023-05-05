@@ -57,7 +57,7 @@ class AuthService extends DioApi {
         // Preferences.with(context).UserInfo().setMemberId(0);
         // Preferences.with(context).appVariableInfo().setIsLogin(false);
       } else {
-        rethrow;
+        throw Exception(e);
       }
     }
   }
@@ -125,6 +125,7 @@ class AuthService extends DioApi {
     model.siteId = MainScreenCache().siteId;
     var response = await directAPI.signInUserBySMS(model);
     if (response.isSuccess) {
+      MyApplicationPreference().changeAuthorization(response.item?.token??"");
       if (saveId) {
         LoginCache().setUserID(response.item?.userId);
       }

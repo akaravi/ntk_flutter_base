@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import '../../backend/service/ticketing/ticketing_task_service.dart';
 import 'new_ticket_controller.dart';
 
-class TicketListController extends BaseListController<TicketingTaskModel> {
+class BaseTicketListController extends BaseListController<TicketingTaskModel> {
   newTicket(BuildContext context) {
     NewTicketController.newTicketPage(context);
   }

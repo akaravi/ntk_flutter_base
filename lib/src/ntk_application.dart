@@ -131,6 +131,7 @@ class ApplicationChangeNotifier {
   }
 
   void setTheme(newId) {
+    if(newId!=null)
     NTKApplication.get()._themeID = newId;
   }
 

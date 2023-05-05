@@ -38,6 +38,11 @@ class LoginCache {
     return (sp.getInt(_Name()._login) ?? defaultUserID) > defaultUserID;
   }
 
+  Future<void> exit() async {
+    await setUserID(defaultUserID);
+    await setMobile("");
+  }
+
 
 }
 

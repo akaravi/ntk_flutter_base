@@ -5,6 +5,6 @@ import 'package:dio/dio.dart';
 class EstatePropertyFavoriteMethodApi
     extends BaseFavoriteApi<EstatePropertyModel, String> {
   EstatePropertyFavoriteMethodApi.create(Dio dio)
-      : super(dio, 'EstatePropertyDetail',
+      : super(dio, 'EstateProperty',
           (t) => EstatePropertyModel.fromJson(t));
 }
