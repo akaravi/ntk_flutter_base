@@ -66,6 +66,7 @@ Map<String, dynamic> _$CoreUserClaimGroupDetailModelToJson(
     };
 
 const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
   EnumRecordStatus.available: 1,
   EnumRecordStatus.disable: 2,
   EnumRecordStatus.deleted: 3,

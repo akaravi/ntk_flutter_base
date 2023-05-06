@@ -72,6 +72,7 @@ Map<String, dynamic> _$PollingOptionModelToJson(PollingOptionModel instance) =>
     };
 
 const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
   EnumRecordStatus.available: 1,
   EnumRecordStatus.disable: 2,
   EnumRecordStatus.deleted: 3,

@@ -36,29 +36,29 @@ class EstatePropertyExpertPriceModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'countRow')
   int? countRow;
   @JsonKey(name: 'salePriceMin')
-  int? salePriceMin;
+  num? salePriceMin;
   @JsonKey(name: 'salePriceMax')
-  int? salePriceMax;
+  num? salePriceMax;
   @JsonKey(name: 'salePriceAverage')
-  int? salePriceAverage;
+  num? salePriceAverage;
   @JsonKey(name: 'rentPriceMin')
-  int? rentPriceMin;
+  num? rentPriceMin;
   @JsonKey(name: 'rentPriceMax')
-  int? rentPriceMax;
+  num? rentPriceMax;
   @JsonKey(name: 'rentPriceAverage')
-  int? rentPriceAverage;
+  num? rentPriceAverage;
   @JsonKey(name: 'depositPriceMin')
-  int? depositPriceMin;
+  num? depositPriceMin;
   @JsonKey(name: 'depositPriceMax')
-  int? depositPriceMax;
+  num? depositPriceMax;
   @JsonKey(name: 'depositPriceAverage')
-  int? depositPriceAverage;
+  num? depositPriceAverage;
   @JsonKey(name: 'periodPriceMin')
-  int? periodPriceMin;
+  num? periodPriceMin;
   @JsonKey(name: 'periodPriceMax')
-  int? periodPriceMax;
+  num? periodPriceMax;
   @JsonKey(name: 'periodPriceAverage')
-  int? periodPriceAverage;
+  num? periodPriceAverage;
 
   
   EstatePropertyExpertPriceModel();

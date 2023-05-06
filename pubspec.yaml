@@ -54,7 +54,7 @@ dependencies:
   #for pagination
   infinite_scroll_pagination: ^3.2.0
   #for lunch urls
-  url_launcher: ^6.0.18
+  url_launcher: ^6.1.10
   #for format date
   intl: ^0.17.0
   provider: ^6.0.2

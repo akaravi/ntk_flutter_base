@@ -23,14 +23,16 @@ class EstatePropertyService extends DioApi {
       throw Exception(errorException.errorMessage);
     }
   }
-Future<EstatePropertyModel> getEdit(String id) async {
-  var errorException = await directAPI.getOneByEdit(id);
-  if (errorException.isSuccess) {
-    return errorException.item ?? EstatePropertyModel();
-  } else {
-    throw Exception(errorException.errorMessage);
+
+  Future<EstatePropertyModel> getOneByEdit(String id) async {
+    var errorException = await directAPI.getOneByEdit(id);
+    if (errorException.isSuccess) {
+      return errorException.item ?? EstatePropertyModel();
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
   }
-}
+
   Future<List<EstatePropertyModel>> getAllEditor(FilterModel filter) async {
     var errorException = await directAPI.getAllEditor(filter);
     if (errorException.isSuccess) {
@@ -51,6 +53,17 @@ Future<EstatePropertyModel> getEdit(String id) async {
 
   Future<ErrorException<EstatePropertyModel>> add(EstatePropertyModel m) async {
     var errorExeption = await directAPI.add(m);
+    return errorExeption;
+  }
+
+  Future<ErrorException<EstatePropertyModel>> edit(
+      EstatePropertyModel m) async {
+    var errorExeption = await directAPI.edit(m);
+    return errorExeption;
+  }
+  Future<ErrorException<EstatePropertyModel>> delete(
+      EstatePropertyModel m) async {
+    var errorExeption = await directAPI.delete(m.id??"");
     return errorExeption;
   }
 }

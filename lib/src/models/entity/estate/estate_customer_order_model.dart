@@ -51,21 +51,21 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'area')
   double? area;
   @JsonKey(name: 'salePriceMin')
-  int? salePriceMin;
+  num? salePriceMin;
   @JsonKey(name: 'salePriceMax')
-  int? salePriceMax;
+  num? salePriceMax;
   @JsonKey(name: 'rentPriceMin')
-  int? rentPriceMin;
+  num? rentPriceMin;
   @JsonKey(name: 'rentPriceMax')
-  int? rentPriceMax;
+  num?  rentPriceMax;
   @JsonKey(name: 'depositPriceMin')
-  int? depositPriceMin;
+  num? depositPriceMin;
   @JsonKey(name: 'depositPriceMax')
-  int? depositPriceMax;
+  num? depositPriceMax;
   @JsonKey(name: 'periodPriceMin')
-  int? periodPriceMin;
+  num? periodPriceMin;
   @JsonKey(name: 'periodPriceMax')
-  int? periodPriceMax;
+  num? periodPriceMax;
   @JsonKey(name: 'propertyDetailValues')
   List<EstatePropertyDetailValueModel>? propertyDetailValues;
   @JsonKey(name: 'propertyDetailGroups')

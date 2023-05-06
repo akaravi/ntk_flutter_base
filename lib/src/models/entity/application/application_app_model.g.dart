@@ -259,6 +259,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
     };
 
 const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
   EnumRecordStatus.available: 1,
   EnumRecordStatus.disable: 2,
   EnumRecordStatus.deleted: 3,
@@ -279,6 +280,7 @@ const _$EnumLanguageEnumMap = {
 };
 
 const _$EnumBuildStatusTypeEnumMap = {
+  EnumBuildStatusType.none: 0,
   EnumBuildStatusType.buildOrder: 1,
   EnumBuildStatusType.buildMSMQAdd: 2,
   EnumBuildStatusType.buildMSMQAddError: 3,

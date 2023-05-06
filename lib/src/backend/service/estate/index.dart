@@ -8,3 +8,5 @@ export 'estate_property_type_land_use_service.dart';
 export 'estate_customer_order_service.dart';
 export 'estate_property_project_service.dart';
 export 'estate_property_company_service.dart';
+export 'estate_property_history_service.dart';
+export 'estate_activity_type_service.dart';

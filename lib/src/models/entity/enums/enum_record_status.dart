@@ -2,6 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 @JsonEnum()
 enum EnumRecordStatus {
+  @JsonValue(0)
+  none,
   @JsonValue(1)
   available,
   @JsonValue(2)
