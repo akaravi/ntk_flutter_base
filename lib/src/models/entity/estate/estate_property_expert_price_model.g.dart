@@ -46,18 +46,18 @@ EstatePropertyExpertPriceModel _$EstatePropertyExpertPriceModelFromJson(
       ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
       ..createdYaer = json['createdYaer'] as int?
       ..countRow = json['countRow'] as int?
-      ..salePriceMin = json['salePriceMin'] as int?
-      ..salePriceMax = json['salePriceMax'] as int?
-      ..salePriceAverage = json['salePriceAverage'] as int?
-      ..rentPriceMin = json['rentPriceMin'] as int?
-      ..rentPriceMax = json['rentPriceMax'] as int?
-      ..rentPriceAverage = json['rentPriceAverage'] as int?
-      ..depositPriceMin = json['depositPriceMin'] as int?
-      ..depositPriceMax = json['depositPriceMax'] as int?
-      ..depositPriceAverage = json['depositPriceAverage'] as int?
-      ..periodPriceMin = json['periodPriceMin'] as int?
-      ..periodPriceMax = json['periodPriceMax'] as int?
-      ..periodPriceAverage = json['periodPriceAverage'] as int?;
+      ..salePriceMin = json['salePriceMin'] as num?
+      ..salePriceMax = json['salePriceMax'] as num?
+      ..salePriceAverage = json['salePriceAverage'] as num?
+      ..rentPriceMin = json['rentPriceMin'] as num?
+      ..rentPriceMax = json['rentPriceMax'] as num?
+      ..rentPriceAverage = json['rentPriceAverage'] as num?
+      ..depositPriceMin = json['depositPriceMin'] as num?
+      ..depositPriceMax = json['depositPriceMax'] as num?
+      ..depositPriceAverage = json['depositPriceAverage'] as num?
+      ..periodPriceMin = json['periodPriceMin'] as num?
+      ..periodPriceMax = json['periodPriceMax'] as num?
+      ..periodPriceAverage = json['periodPriceAverage'] as num?;
 
 Map<String, dynamic> _$EstatePropertyExpertPriceModelToJson(
         EstatePropertyExpertPriceModel instance) =>

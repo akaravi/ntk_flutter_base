@@ -60,14 +60,14 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..createdYaer = json['createdYaer'] as int?
       ..partition = json['partition'] as int?
       ..area = (json['area'] as num?)?.toDouble()
-      ..salePriceMin = json['salePriceMin'] as int?
-      ..salePriceMax = json['salePriceMax'] as int?
-      ..rentPriceMin = json['rentPriceMin'] as int?
-      ..rentPriceMax = json['rentPriceMax'] as int?
-      ..depositPriceMin = json['depositPriceMin'] as int?
-      ..depositPriceMax = json['depositPriceMax'] as int?
-      ..periodPriceMin = json['periodPriceMin'] as int?
-      ..periodPriceMax = json['periodPriceMax'] as int?
+      ..salePriceMin = json['salePriceMin'] as num?
+      ..salePriceMax = json['salePriceMax'] as num?
+      ..rentPriceMin = json['rentPriceMin'] as num?
+      ..rentPriceMax = json['rentPriceMax'] as num?
+      ..depositPriceMin = json['depositPriceMin'] as num?
+      ..depositPriceMax = json['depositPriceMax'] as num?
+      ..periodPriceMin = json['periodPriceMin'] as num?
+      ..periodPriceMax = json['periodPriceMax'] as num?
       ..propertyDetailValues = (json['propertyDetailValues'] as List<dynamic>?)
           ?.map((e) => EstatePropertyDetailValueModel.fromJson(
               e as Map<String, dynamic>))
