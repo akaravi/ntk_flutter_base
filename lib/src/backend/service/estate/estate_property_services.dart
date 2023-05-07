@@ -23,6 +23,14 @@ class EstatePropertyService extends DioApi {
       throw Exception(errorException.errorMessage);
     }
   }
+  Future<List<EstatePropertyModel>> getAllWithCustomerId(String id,FilterModel filter) async {
+    var errorException = await directAPI.getWithCustomerId(id,filter);
+    if (errorException.isSuccess) {
+      return errorException.listItems ?? [];
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
+  }
 
   Future<EstatePropertyModel> getOneByEdit(String id) async {
     var errorException = await directAPI.getOneByEdit(id);

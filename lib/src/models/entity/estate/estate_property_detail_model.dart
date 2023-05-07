@@ -54,9 +54,9 @@ class EstatePropertyDetailModel {
   int? configValueIntValueMax;
   var value;
   EstatePropertyDetailModel();
-  @JsonKey(includeFromJson: true,includeToJson: false)
+
   //in order to skip error on build json comment this line after do that uncomment :D
-  TextEditingController? text = TextEditingController();
+  TextEditingController text = TextEditingController();
   factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) =>
       _$EstatePropertyDetailModelFromJson(json);
 
