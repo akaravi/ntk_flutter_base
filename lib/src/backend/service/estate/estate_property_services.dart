@@ -23,8 +23,10 @@ class EstatePropertyService extends DioApi {
       throw Exception(errorException.errorMessage);
     }
   }
-  Future<List<EstatePropertyModel>> getAllWithCustomerId(String id,FilterModel filter) async {
-    var errorException = await directAPI.getWithCustomerId(id,filter);
+
+  Future<List<EstatePropertyModel>> getAllWithCustomerId(
+      String id, FilterModel filter) async {
+    var errorException = await directAPI.getWithCustomerId(id, filter);
     if (errorException.isSuccess) {
       return errorException.listItems ?? [];
     } else {
@@ -69,9 +71,10 @@ class EstatePropertyService extends DioApi {
     var errorExeption = await directAPI.edit(m);
     return errorExeption;
   }
+
   Future<ErrorException<EstatePropertyModel>> delete(
       EstatePropertyModel m) async {
-    var errorExeption = await directAPI.delete(m.id??"");
+    var errorExeption = await directAPI.delete(m.id ?? "");
     return errorExeption;
   }
 }

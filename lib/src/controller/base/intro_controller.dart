@@ -21,7 +21,7 @@ class IntroController extends BaseController {
     else {
       //set as seen from now
       IntroCache().hasBeenSeen();
-      LoginController().registerPage(context, widget: newWidget);
+      BaseController().newPage(context: context, newScreen: newWidget??Container());
     }
   }
 

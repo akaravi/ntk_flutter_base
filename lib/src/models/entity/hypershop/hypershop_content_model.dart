@@ -27,7 +27,7 @@ class HyperShopContentModel {
   @JsonKey(name: 'price')
   double? price;
   @JsonKey(name: 'salePrice')
-  int? salePrice;
+  num? salePrice;
   @JsonKey(name: 'count')
   int? count;
   @JsonKey(name: 'discount')

@@ -19,7 +19,7 @@ class CoreModuleSaleHeaderModel extends BaseEntity<int> {
   @JsonKey(name: 'expireDate')
   DateTime? expireDate;
   @JsonKey(name: 'salePrice')
-  int? salePrice;
+  num? salePrice;
   @JsonKey(name: 'allowReuseDay')
   int? allowReuseDay;
   @JsonKey(name: 'hasDemo')

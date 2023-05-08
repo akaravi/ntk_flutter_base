@@ -19,7 +19,7 @@ class EstateAdsTypeModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'dayOfActivity')
   int? dayOfActivity;
   @JsonKey(name: 'salePrice')
-  int? salePrice;
+  num? salePrice;
   @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
   @JsonKey(name: 'linkMainImageIdSrc')

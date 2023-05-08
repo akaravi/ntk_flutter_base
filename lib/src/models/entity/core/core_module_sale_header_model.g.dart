@@ -38,7 +38,7 @@ CoreModuleSaleHeaderModel _$CoreModuleSaleHeaderModelFromJson(
       ..expireDate = json['expireDate'] == null
           ? null
           : DateTime.parse(json['expireDate'] as String)
-      ..salePrice = json['salePrice'] as int?
+      ..salePrice = json['salePrice'] as num?
       ..allowReuseDay = json['allowReuseDay'] as int?
       ..hasDemo = json['hasDemo'] as bool?
       ..linkModuleSaleHeaderGroupId =

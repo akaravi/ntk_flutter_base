@@ -13,7 +13,7 @@ class CoreModuleSaleInvoiceDetailModel extends BaseEntity<int> {
   @JsonKey(name: 'expireDate')
   DateTime? expireDate;
   @JsonKey(name: 'salePrice')
-  int? salePrice;
+  num? salePrice;
   @JsonKey(name: 'enumCmsModuleSaleItemType')
   int? enumCmsModuleSaleItemType;
   @JsonKey(name: 'linkModuleId')

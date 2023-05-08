@@ -19,7 +19,7 @@ HyperShopContentModel _$HyperShopContentModelFromJson(
       ..image = json['image'] as String?
       ..memo = json['memo'] as String?
       ..price = (json['price'] as num?)?.toDouble()
-      ..salePrice = json['salePrice'] as int?
+      ..salePrice = json['salePrice'] as num?
       ..count = json['count'] as int?
       ..discount = json['discount'] as int?
       ..shortDetails = json['shortDetails'] as String?

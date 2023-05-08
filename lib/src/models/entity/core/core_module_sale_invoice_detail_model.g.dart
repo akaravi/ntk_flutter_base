@@ -36,7 +36,7 @@ CoreModuleSaleInvoiceDetailModel _$CoreModuleSaleInvoiceDetailModelFromJson(
       ..expireDate = json['expireDate'] == null
           ? null
           : DateTime.parse(json['expireDate'] as String)
-      ..salePrice = json['salePrice'] as int?
+      ..salePrice = json['salePrice'] as num?
       ..enumCmsModuleSaleItemType = json['enumCmsModuleSaleItemType'] as int?
       ..linkModuleId = json['linkModuleId'] as int?
       ..virtual_Module = json['virtual_Module'] == null

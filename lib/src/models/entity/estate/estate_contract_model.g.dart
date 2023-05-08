@@ -38,13 +38,13 @@ EstateContractModel _$EstateContractModelFromJson(Map<String, dynamic> json) =>
               json['contractType'] as Map<String, dynamic>)
       ..linkPropertyId = json['linkPropertyId'] as String?
       ..salePriceByAgreement = json['salePriceByAgreement'] as bool?
-      ..salePrice = json['salePrice'] as int?
+      ..salePrice = json['salePrice'] as num?
       ..rentPriceByAgreement = json['rentPriceByAgreement'] as bool?
-      ..rentPrice = json['rentPrice'] as int?
+      ..rentPrice = json['rentPrice'] as num?
       ..depositPriceByAgreement = json['depositPriceByAgreement'] as bool?
-      ..depositPrice = json['depositPrice'] as int?
+      ..depositPrice = json['depositPrice'] as num?
       ..periodPriceByAgreement = json['periodPriceByAgreement'] as bool?
-      ..periodPrice = json['periodPrice'] as int?
+      ..periodPrice = json['periodPrice'] as num?
       ..periodCount = json['periodCount'] as int?
       ..linkCoreCurrencyId = json['linkCoreCurrencyId'] as int?
       ..currencyTitle = json['currencyTitle'] as String?

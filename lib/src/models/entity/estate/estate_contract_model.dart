@@ -19,19 +19,19 @@ class EstateContractModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'salePriceByAgreement')
   bool? salePriceByAgreement;
   @JsonKey(name: 'salePrice')
-  int? salePrice;
+  num? salePrice;
   @JsonKey(name: 'rentPriceByAgreement')
   bool? rentPriceByAgreement;
   @JsonKey(name: 'rentPrice')
-  int? rentPrice;
+  num? rentPrice;
   @JsonKey(name: 'depositPriceByAgreement')
   bool? depositPriceByAgreement;
   @JsonKey(name: 'depositPrice')
-  int? depositPrice;
+  num? depositPrice;
   @JsonKey(name: 'periodPriceByAgreement')
   bool? periodPriceByAgreement;
   @JsonKey(name: 'periodPrice')
-  int? periodPrice;
+  num? periodPrice;
   @JsonKey(name: 'periodCount')
   int? periodCount;
   @JsonKey(name: 'linkCoreCurrencyId')

@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CaptchaWidget extends StatefulWidget {
- void Function(CaptchaModel)? func;
+  void Function(CaptchaModel)? func;
 
   CaptchaWidget(this.func, {Key? key}) : super(key: key);
 
@@ -18,21 +18,25 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
     return FutureBuilder<String>(
         future: _CaptchaController().loadCaptcha(widget.func),
         builder: (context, snapshot) {
-          ImageProvider image= AssetImage('assets/drawable/captcha_holder.png',package: 'base');;
+          ImageProvider image = AssetImage(
+              'assets/drawable/captcha_holder.png', package: 'base');
+          ;
           if (snapshot.hasError) {
             image = const AssetImage('assets/drawable/error_captcha.png');
-          // } else if (snapshot.connectionState == ConnectionState.none ||
-          //     snapshot.connectionState == ConnectionState.waiting) {
-          //   image = const AssetImage('assets/drawable/captcha_holder.png');
+            // } else if (snapshot.connectionState == ConnectionState.none ||
+            //     snapshot.connectionState == ConnectionState.waiting) {
+            //   image = const AssetImage('assets/drawable/captcha_holder.png');
           } else if (snapshot.hasData) {
             image = NetworkImage(
               snapshot.data ?? '',
             );
-
           }
           return InkWell(
             //provide get captcha again when click
-            onTap: () => setState(() {}),
+            onTap: () =>
+                setState(() {
+                  _CaptchaController.captcha = null;
+                }),
             child: Container(
                 width: 120,
 
@@ -47,10 +51,15 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
 }
 
 class _CaptchaController {
+  static CaptchaModel? captcha;
+
   ///load captcha on as model for use on api call
   Future<String> loadCaptcha(void Function(CaptchaModel)? func) async {
-    CaptchaModel model = await AuthService().getCaptcha();
-    func?.call(model);
-    return model.image ?? '';
+    if (captcha == null) {
+      captcha = await AuthService().getCaptcha();
+    }
+    func?.call(captcha ?? new CaptchaModel());
+
+    return captcha?.image ?? '';
   }
 }

@@ -1,8 +1,9 @@
-
 import 'package:base/src/backend/api/estate/estate_customer_order_api.dart';
 import 'package:base/src/backend/config/dio.dart';
 import 'package:base/src/models/entity/base/filter_model.dart';
 import 'package:base/src/models/entity/estate/estate_customer_order_model.dart';
+
+import '../../../models/entity/base/error_exception.dart';
 
 class EstateCustomerOrderService extends DioApi {
   //api caller reference
@@ -21,7 +22,8 @@ class EstateCustomerOrderService extends DioApi {
     }
   }
 
-  Future<List<EstateCustomerOrderModel>> getAllEditor(FilterModel filter) async {
+  Future<List<EstateCustomerOrderModel>> getAllEditor(
+      FilterModel filter) async {
     var errorException = await directAPI.getAllEditor(filter);
     if (errorException.isSuccess) {
       return errorException.listItems ?? [];
@@ -30,4 +32,27 @@ class EstateCustomerOrderService extends DioApi {
     }
   }
 
+  Future<EstateCustomerOrderModel> getOneByEdit(String id) async {
+    var errorException = await directAPI.getOneByEdit(id);
+    if (errorException.isSuccess) {
+      return errorException.item ?? EstateCustomerOrderModel();
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
+  }
+  Future<ErrorException<EstateCustomerOrderModel>> add(EstateCustomerOrderModel m) async {
+    var errorExeption = await directAPI.add(m);
+    return errorExeption;
+  }
+  Future<ErrorException<EstateCustomerOrderModel>> edit(
+      EstateCustomerOrderModel m) async {
+    var errorExeption = await directAPI.edit(m);
+    return errorExeption;
+  }
+
+  Future<ErrorException<EstateCustomerOrderModel>> delete(
+      EstateCustomerOrderModel m) async {
+    var errorExeption = await directAPI.delete(m.id ?? "");
+    return errorExeption;
+  }
 }
