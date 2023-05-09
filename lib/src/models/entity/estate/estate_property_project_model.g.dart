@@ -34,7 +34,7 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..title = json['title'] as String?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..linkPropertyCompanyId = json['linkPropertyCompanyId'] as String?
-      ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
+      // ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
       ..description = json['description'] as String?
       ..address = json['address'] as String?
       ..body = json['body'] as String?
@@ -104,7 +104,7 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'title': instance.title,
       'linkCmsUserId': instance.linkCmsUserId,
       'linkPropertyCompanyId': instance.linkPropertyCompanyId,
-      'mainAdminRecordStatus': instance.mainAdminRecordStatus,
+      // 'mainAdminRecordStatus': instance.mainAdminRecordStatus,
       'description': instance.description,
       'address': instance.address,
       'body': instance.body,

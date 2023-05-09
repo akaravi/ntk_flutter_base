@@ -10,8 +10,8 @@ class EstatePropertyCompanyModel extends BaseModuleEntity<String> {
   String? title;
   @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  @JsonKey(name: 'mainAdminRecordStatus')
-  String? mainAdminRecordStatus;
+  // @JsonKey(name: 'mainAdminRecordStatus')
+  // String? mainAdminRecordStatus;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'address')

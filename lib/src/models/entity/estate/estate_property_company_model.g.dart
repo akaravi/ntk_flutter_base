@@ -33,7 +33,6 @@ EstatePropertyCompanyModel _$EstatePropertyCompanyModelFromJson(
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
-      ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
       ..description = json['description'] as String?
       ..address = json['address'] as String?
       ..body = json['body'] as String?
@@ -96,7 +95,6 @@ Map<String, dynamic> _$EstatePropertyCompanyModelToJson(
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
       'linkCmsUserId': instance.linkCmsUserId,
-      'mainAdminRecordStatus': instance.mainAdminRecordStatus,
       'description': instance.description,
       'address': instance.address,
       'body': instance.body,

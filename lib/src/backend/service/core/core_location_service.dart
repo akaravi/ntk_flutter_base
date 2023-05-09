@@ -19,6 +19,13 @@ class CoreLocationService extends DioApi {
     } else {
       throw Exception(errorException.errorMessage);
     }
+  }  Future<CoreLocationModel> getOne(int id) async {
+    var errorException = await directAPI.getOne(id);
+    if (errorException.isSuccess) {
+      return errorException.item ?? CoreLocationModel();
+    } else {
+      throw Exception(errorException.errorMessage);
+    }
   }
 
   Future<List<CoreLocationModel>> getAllCountry(FilterModel filter) async {

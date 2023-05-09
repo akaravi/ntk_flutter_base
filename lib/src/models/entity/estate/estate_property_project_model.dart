@@ -12,8 +12,8 @@ class EstatePropertyProjectModel extends BaseModuleEntity<String> {
   int? linkCmsUserId;
   @JsonKey(name: 'linkPropertyCompanyId')
   String? linkPropertyCompanyId;
-  @JsonKey(name: 'mainAdminRecordStatus')
-  String? mainAdminRecordStatus;
+  // @JsonKey(name: 'mainAdminRecordStatus')
+  // String? mainAdminRecordStatus;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'address')

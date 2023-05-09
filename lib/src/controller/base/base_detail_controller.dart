@@ -11,13 +11,14 @@ abstract class BaseDetailController<TKey, TModel> {
   BaseDetailController(this.id);
 
   static detailPage(BuildContext context, {required Widget detailScreen}) {
-    Future.microtask(() => Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => detailScreen)));
+    Future.microtask(() =>
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => detailScreen)));
   }
 }
 
 abstract class BaseEntityDetailController<Tkey,
-        TModel extends BaseModuleEntity<Tkey>>
+TModel extends BaseModuleEntity<Tkey>>
     extends BaseDetailController<Tkey, TModel> {
   BaseEntityApi<TModel, Tkey> api;
 
@@ -28,6 +29,6 @@ abstract class BaseEntityDetailController<Tkey,
     yield errorException;
   }
 
-  static detailPage(BuildContext context, {required Widget detailScreen}) =>
+  void detailScreen(BuildContext context, {required Widget detailScreen}) =>
       BaseDetailController.detailPage(context, detailScreen: detailScreen);
 }
