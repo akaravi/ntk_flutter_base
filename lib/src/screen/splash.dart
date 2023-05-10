@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
-
+   Splash({Key? key}) : super(key: key);
+  SplashController splashController= SplashController();
   @override
   _SplashState createState() => _SplashState();
 }
@@ -38,7 +38,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return StreamBuilder<SplashProgress>(
-        stream: SplashController().initApp(),
+        stream: widget.splashController.initApp(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             //get progress send

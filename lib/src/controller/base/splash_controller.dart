@@ -12,31 +12,35 @@ import 'login_controller.dart';
 
 class SplashController {
   //api caller reference
+  bool started = false;
 
   Stream<SplashProgress> initApp() async* {
     //get device token at first
-
-    yield SplashProgress(NtkGlobalData().stringGetTokenDevice, .10);
-    await AuthService().getDeviceToken();
-    yield SplashProgress(NtkGlobalData().stringGetUserToken, .25);
-    await AuthService().checkToken();
-    // try {
-    //
-    // } catch (e) {
-    //   if (e is Dio) {
-    //     DioError w = e;
-    //   }
-    // print(e);
-    // }
-    yield SplashProgress(NtkGlobalData().stringGetTheme, .45);
-    await ApplicationThemeService().getTheme();
-    yield SplashProgress(NtkGlobalData().stringGetCurrentApp, .70);
-    await ApplicationAppService().currentApp();
-    yield SplashProgress(NtkGlobalData().stringGetCurrentApp, 1);
+    if (!started) {
+      started = true;
+      yield SplashProgress(NtkGlobalData().stringGetTokenDevice, .10);
+      await AuthService().getDeviceToken();
+      yield SplashProgress(NtkGlobalData().stringGetUserToken, .25);
+      await AuthService().checkToken();
+      // try {
+      //
+      // } catch (e) {
+      //   if (e is Dio) {
+      //     DioError w = e;
+      //   }
+      // print(e);
+      // }
+      yield SplashProgress(NtkGlobalData().stringGetTheme, .45);
+      await ApplicationThemeService().getTheme();
+      yield SplashProgress(NtkGlobalData().stringGetCurrentApp, .70);
+      await ApplicationAppService().currentApp();
+      yield SplashProgress(NtkGlobalData().stringGetCurrentApp, 1);
+      started=false;
+    }
   }
 
   Future<void> nextPage(BuildContext context,
-      {Widget? main, Widget? intro, Widget? login}) async {
+      {Widget Function(BuildContext)? main, Widget Function(BuildContext)? intro, Widget Function(BuildContext)? login}) async {
     var introSeen = await IntroCache().isSeenBefore();
     //not see intro yet
     if (!introSeen) {
@@ -44,7 +48,7 @@ class SplashController {
         IntroController.asWelcomePage(context);
       }
       else {
-        IntroController().newPage(context: context, newScreen: intro);
+        IntroController().newPage(context: context, newWidget: intro);
       }
     } else {
       var hasLogin = await LoginCache().isLogin();
@@ -52,7 +56,7 @@ class SplashController {
       if (hasLogin || isLoginAsGuest) {
         PanelController.mainPanelPage(context, panel: main);
       } else {
-        LoginController.loginInPage(context: context,newLogin:login);
+        LoginController.loginInPage(context: context, newLogin: login);
       }
     }
   }

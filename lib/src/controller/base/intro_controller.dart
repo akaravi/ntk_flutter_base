@@ -13,7 +13,7 @@ class IntroController extends BaseController {
         context, MaterialPageRoute(builder: (context) => const Intro())));
   }
 
-  Future<void> nextPage(BuildContext context, {Widget? newWidget}) async {
+  Future<void> nextPage(BuildContext context, {Widget Function(BuildContext)?  newWidget}) async {
     //page open as features page so close only
     if (await IntroCache().isSeenBefore()) {
       Navigator.of(context).pop();
@@ -21,7 +21,7 @@ class IntroController extends BaseController {
     else {
       //set as seen from now
       IntroCache().hasBeenSeen();
-      BaseController().newPage(context: context, newScreen: newWidget??Container());
+      BaseController().newPage(context: context,   newWidget:   newWidget??(context) => Container());
     }
   }
 
