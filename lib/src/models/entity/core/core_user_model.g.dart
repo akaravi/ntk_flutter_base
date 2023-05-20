@@ -8,6 +8,27 @@ part of 'core_user_model.dart';
 
 CoreUserModel _$CoreUserModelFromJson(Map<String, dynamic> json) =>
     CoreUserModel()
+      ..id = json['id'] as int?
+      ..createdDate = json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
+          ? null
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
+      ..recordStatus =
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
+          ? null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
+          ? null
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..username = json['username'] as String?
       ..pwd = json['pwd'] as String?
       ..expireDate = json['expireDate'] == null
@@ -25,7 +46,7 @@ CoreUserModel _$CoreUserModelFromJson(Map<String, dynamic> json) =>
       ..birthDay = json['birthDay'] == null
           ? null
           : DateTime.parse(json['birthDay'] as String)
-      ..gender = json['gender']
+      ..gender = $enumDecodeNullable(_$EnumGenderTypeEnumMap, json['gender'])
       ..companyName = json['companyName'] as String?
       ..address = json['address'] as String?
       ..postalCode = json['postalCode'] as String?
@@ -43,6 +64,19 @@ CoreUserModel _$CoreUserModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$CoreUserModelToJson(CoreUserModel instance) =>
     <String, dynamic>{
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
+          instance.antiInjectionExpireDate?.toIso8601String(),
       'username': instance.username,
       'pwd': instance.pwd,
       'expireDate': instance.expireDate?.toIso8601String(),
@@ -54,7 +88,7 @@ Map<String, dynamic> _$CoreUserModelToJson(CoreUserModel instance) =>
       'name': instance.name,
       'lastName': instance.lastName,
       'birthDay': instance.birthDay?.toIso8601String(),
-      'gender': instance.gender,
+      'gender': _$EnumGenderTypeEnumMap[instance.gender],
       'companyName': instance.companyName,
       'address': instance.address,
       'postalCode': instance.postalCode,
@@ -69,3 +103,20 @@ Map<String, dynamic> _$CoreUserModelToJson(CoreUserModel instance) =>
       'linkLocationIdTitle': instance.linkLocationIdTitle,
       'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
     };
+
+const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
+  EnumRecordStatus.available: 1,
+  EnumRecordStatus.disable: 2,
+  EnumRecordStatus.deleted: 3,
+  EnumRecordStatus.pending: 4,
+  EnumRecordStatus.deniedConfirmed: 5,
+  EnumRecordStatus.archive: 6,
+};
+
+const _$EnumGenderTypeEnumMap = {
+  EnumGenderType.none: 0,
+  EnumGenderType.man: 1,
+  EnumGenderType.female: 2,
+  EnumGenderType.company: 3,
+};

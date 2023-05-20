@@ -20,7 +20,8 @@ BaseModuleEntity<TKey> _$BaseModuleEntityFromJson<TKey>(
           ? null
           : DateTime.parse(json['updatedDate'] as String)
       ..updatedBy = json['updatedBy'] as int?
-      ..recordStatus = json['recordStatus']
+      ..recordStatus =
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
       ..antiInjectionRun = json['antiInjectionRun'] as bool?
       ..antiInjectionGuid = json['antiInjectionGuid'] as String?
       ..antiInjectionDate = json['antiInjectionDate'] == null
@@ -43,7 +44,7 @@ Map<String, dynamic> _$BaseModuleEntityToJson<TKey>(
       'createdBy': instance.createdBy,
       'updatedDate': instance.updatedDate?.toIso8601String(),
       'updatedBy': instance.updatedBy,
-      'recordStatus': instance.recordStatus,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
@@ -59,6 +60,16 @@ T? _$nullableGenericFromJson<T>(
   T Function(Object? json) fromJson,
 ) =>
     input == null ? null : fromJson(input);
+
+const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
+  EnumRecordStatus.available: 1,
+  EnumRecordStatus.disable: 2,
+  EnumRecordStatus.deleted: 3,
+  EnumRecordStatus.pending: 4,
+  EnumRecordStatus.deniedConfirmed: 5,
+  EnumRecordStatus.archive: 6,
+};
 
 Object? _$nullableGenericToJson<T>(
   T? input,

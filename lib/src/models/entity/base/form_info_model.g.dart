@@ -14,7 +14,8 @@ FormInfoModel _$FormInfoModelFromJson(Map<String, dynamic> json) =>
       ..formError = json['formError'] as String
       ..formSubmitAllow = json['formSubmitAllow'] as bool
       ..formErrorStatus = json['formErrorStatus'] as bool
-      ..formSubmitedStatus = json['formSubmitedStatus']
+      ..formSubmitedStatus = $enumDecodeNullable(
+          _$EnumFormSubmitedStatusEnumMap, json['formSubmitedStatus'])
       ..buttonSubmittedEnabled = json['buttonSubmittedEnabled'] as bool
       ..viewlodingEnabled = json['viewlodingEnabled'] as bool;
 
@@ -26,7 +27,14 @@ Map<String, dynamic> _$FormInfoModelToJson(FormInfoModel instance) =>
       'formError': instance.formError,
       'formSubmitAllow': instance.formSubmitAllow,
       'formErrorStatus': instance.formErrorStatus,
-      'formSubmitedStatus': instance.formSubmitedStatus,
+      'formSubmitedStatus':
+          _$EnumFormSubmitedStatusEnumMap[instance.formSubmitedStatus],
       'buttonSubmittedEnabled': instance.buttonSubmittedEnabled,
       'viewlodingEnabled': instance.viewlodingEnabled,
     };
+
+const _$EnumFormSubmitedStatusEnumMap = {
+  EnumFormSubmitedStatus.none: 0,
+  EnumFormSubmitedStatus.success: 1,
+  EnumFormSubmitedStatus.error: 2,
+};

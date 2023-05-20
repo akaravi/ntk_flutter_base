@@ -19,46 +19,52 @@ class _ApplicationAppMethodApi implements ApplicationAppMethodApi {
   String? baseUrl;
 
   @override
-  Future<dynamic> submitAppScore(request) async {
+  Future<ErrorExceptionBase> submitAppScore(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ErrorExceptionBase>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'api/v2/Application/ScoreClick',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data;
+            .compose(
+              _dio.options,
+              'api/v2/Application/ScoreClick',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorExceptionBase.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<dynamic> currentApp() async {
+  Future<ErrorException<ApplicationAppModel>> currentApp() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<ApplicationAppModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'api/v2/Application/CurrentApp',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data;
+            .compose(
+              _dio.options,
+              'api/v2/Application/CurrentApp',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<ApplicationAppModel>.fromJson(
+      _result.data!,
+      (json) => ApplicationAppModel.fromJson(json as Map<String, dynamic>),
+    );
     return value;
   }
 

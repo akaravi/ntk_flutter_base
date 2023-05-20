@@ -19,7 +19,7 @@ class _FileUploadApi implements FileUploadApi {
   String? baseUrl;
 
   @override
-  Future<dynamic> uploadFileWithPartMap(
+  Future<ErrorException<FileUploadModel>> uploadFileWithPartMap(
     fname,
     file,
   ) async {
@@ -38,20 +38,24 @@ class _FileUploadApi implements FileUploadApi {
         filename: file.path.split(Platform.pathSeparator).last,
       ),
     ));
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<FileUploadModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: 'multipart/form-data',
     )
-        .compose(
-          _dio.options,
-          'api/v2/upload',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data;
+            .compose(
+              _dio.options,
+              'api/v2/upload',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<FileUploadModel>.fromJson(
+      _result.data!,
+      (json) => FileUploadModel.fromJson(json as Map<String, dynamic>),
+    );
     return value;
   }
 

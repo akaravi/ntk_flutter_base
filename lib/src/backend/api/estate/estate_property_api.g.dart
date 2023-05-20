@@ -19,7 +19,7 @@ class __OtherEstatePropertyApi implements _OtherEstatePropertyApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<dynamic>> getWithCustomerId(
+  Future<ErrorException<EstatePropertyModel>> getWithCustomerId(
     customerOrderId,
     filter,
   ) async {
@@ -29,7 +29,7 @@ class __OtherEstatePropertyApi implements _OtherEstatePropertyApi {
     final _data = <String, dynamic>{};
     _data.addAll(filter.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<dynamic>>(Options(
+        _setStreamType<ErrorException<EstatePropertyModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -41,9 +41,9 @@ class __OtherEstatePropertyApi implements _OtherEstatePropertyApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<dynamic>.fromJson(
+    final value = ErrorException<EstatePropertyModel>.fromJson(
       _result.data!,
-      (json) => json as dynamic,
+      (json) => EstatePropertyModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

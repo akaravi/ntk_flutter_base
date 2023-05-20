@@ -9,9 +9,11 @@ part of 'filter_data_model.dart';
 FilterDataModel _$FilterDataModelFromJson(Map<String, dynamic> json) =>
     FilterDataModel()
       ..propertyName = json['propertyName'] as String?
-      ..clauseType = json['clauseType']
+      ..clauseType =
+          $enumDecodeNullable(_$EnumClauseTypeEnumMap, json['clauseType'])
       ..propertyAnyName = json['propertyAnyName'] as String?
-      ..searchType = json['searchType']
+      ..searchType = $enumDecodeNullable(
+          _$EnumFilterDataModelSearchTypesEnumMap, json['searchType'])
       ..filters = (json['filters'] as List<dynamic>?)
           ?.map((e) => FilterDataModel.fromJson(e as Map<String, dynamic>))
           .toList()
@@ -26,9 +28,10 @@ FilterDataModel _$FilterDataModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$FilterDataModelToJson(FilterDataModel instance) =>
     <String, dynamic>{
       'propertyName': instance.propertyName,
-      'clauseType': instance.clauseType,
+      'clauseType': _$EnumClauseTypeEnumMap[instance.clauseType],
       'propertyAnyName': instance.propertyAnyName,
-      'searchType': instance.searchType,
+      'searchType':
+          _$EnumFilterDataModelSearchTypesEnumMap[instance.searchType],
       'filters': instance.filters,
       'value': instance.value,
       'values': instance.values,
@@ -36,3 +39,22 @@ Map<String, dynamic> _$FilterDataModelToJson(FilterDataModel instance) =>
       'longitudeValue': instance.longitudeValue,
       'latitudeLongitudeDistanceValue': instance.latitudeLongitudeDistanceValue,
     };
+
+const _$EnumClauseTypeEnumMap = {
+  EnumClauseType.or: 1,
+  EnumClauseType.and: 2,
+};
+
+const _$EnumFilterDataModelSearchTypesEnumMap = {
+  EnumFilterDataModelSearchTypes.equal: 0,
+  EnumFilterDataModelSearchTypes.notEqual: 1,
+  EnumFilterDataModelSearchTypes.lessThan: 2,
+  EnumFilterDataModelSearchTypes.greaterThan: 3,
+  EnumFilterDataModelSearchTypes.between: 4,
+  EnumFilterDataModelSearchTypes.contains: 5,
+  EnumFilterDataModelSearchTypes.notContains: 6,
+  EnumFilterDataModelSearchTypes.beginsWith: 7,
+  EnumFilterDataModelSearchTypes.endsWith: 8,
+  EnumFilterDataModelSearchTypes.lessThanOrEqualTo: 9,
+  EnumFilterDataModelSearchTypes.greaterThanOrEqualTo: 10,
+};

@@ -8,12 +8,36 @@ part of 'estate_property_model.dart';
 
 EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
     EstatePropertyModel()
+      ..id = json['id'] as String?
+      ..createdDate = json['createdDate'] == null
+          ? null
+          : DateTime.parse(json['createdDate'] as String)
+      ..createdBy = json['createdBy'] as int?
+      ..updatedDate = json['updatedDate'] == null
+          ? null
+          : DateTime.parse(json['updatedDate'] as String)
+      ..updatedBy = json['updatedBy'] as int?
+      ..recordStatus =
+          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
+      ..antiInjectionRun = json['antiInjectionRun'] as bool?
+      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+      ..antiInjectionDate = json['antiInjectionDate'] == null
+          ? null
+          : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
+      ..antiInjectionToken = json['antiInjectionToken'] as String?
+      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
+          ? null
+          : DateTime.parse(json['antiInjectionExpireDate'] as String)
+      ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
       ..priority = json['priority'] as int?
       ..caseCode = json['caseCode'] as String?
-      ..mainAdminRecordStatus = json['mainAdminRecordStatus']
+      ..mainAdminRecordStatus = $enumDecodeNullable(
+          _$EnumRecordStatusEnumMap, json['mainAdminRecordStatus'])
       ..createdYaer = json['createdYaer'] as int?
-      ..createdYaerType = json['createdYaerType']
+      ..createdYaerType =
+          $enumDecodeNullable(_$DateTypeEnumEnumMap, json['createdYaerType'])
       ..partition = json['partition'] as int?
       ..area = (json['area'] as num?)?.toDouble()
       ..linkCmsUserId = json['linkCmsUserId'] as int?
@@ -101,12 +125,27 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$EstatePropertyModelToJson(
         EstatePropertyModel instance) =>
     <String, dynamic>{
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
+          instance.antiInjectionExpireDate?.toIso8601String(),
+      'linkSiteId': instance.linkSiteId,
       'title': instance.title,
       'priority': instance.priority,
       'caseCode': instance.caseCode,
-      'mainAdminRecordStatus': instance.mainAdminRecordStatus,
+      'mainAdminRecordStatus':
+          _$EnumRecordStatusEnumMap[instance.mainAdminRecordStatus],
       'createdYaer': instance.createdYaer,
-      'createdYaerType': instance.createdYaerType,
+      'createdYaerType': _$DateTypeEnumEnumMap[instance.createdYaerType],
       'partition': instance.partition,
       'area': instance.area,
       'linkCmsUserId': instance.linkCmsUserId,
@@ -163,3 +202,19 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'actionSendSmsToCustomerOrder': instance.actionSendSmsToCustomerOrder,
       'actionSendSmsToContactNumber': instance.actionSendSmsToContactNumber,
     };
+
+const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
+  EnumRecordStatus.available: 1,
+  EnumRecordStatus.disable: 2,
+  EnumRecordStatus.deleted: 3,
+  EnumRecordStatus.pending: 4,
+  EnumRecordStatus.deniedConfirmed: 5,
+  EnumRecordStatus.archive: 6,
+};
+
+const _$DateTypeEnumEnumMap = {
+  DateTypeEnum.shamsi: 0,
+  DateTypeEnum.miladi: 1,
+  DateTypeEnum.ghamari: 3,
+};

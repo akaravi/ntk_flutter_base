@@ -9,8 +9,33 @@ part of 'link_management_billboard_pattern_model.dart';
 LinkManagementBillboardPatternModel
     _$LinkManagementBillboardPatternModelFromJson(Map<String, dynamic> json) =>
         LinkManagementBillboardPatternModel()
-          ..sharingLinkType = json['sharingLinkType']
-          ..settingType = json['settingType']
+          ..id = json['id'] as int?
+          ..createdDate = json['createdDate'] == null
+              ? null
+              : DateTime.parse(json['createdDate'] as String)
+          ..createdBy = json['createdBy'] as int?
+          ..updatedDate = json['updatedDate'] == null
+              ? null
+              : DateTime.parse(json['updatedDate'] as String)
+          ..updatedBy = json['updatedBy'] as int?
+          ..recordStatus = $enumDecodeNullable(
+              _$EnumRecordStatusEnumMap, json['recordStatus'])
+          ..antiInjectionRun = json['antiInjectionRun'] as bool?
+          ..antiInjectionGuid = json['antiInjectionGuid'] as String?
+          ..antiInjectionDate = json['antiInjectionDate'] == null
+              ? null
+              : DateTime.parse(json['antiInjectionDate'] as String)
+          ..antiInjectionExpiredMinute =
+              json['antiInjectionExpiredMinute'] as int?
+          ..antiInjectionToken = json['antiInjectionToken'] as String?
+          ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
+              ? null
+              : DateTime.parse(json['antiInjectionExpireDate'] as String)
+          ..linkSiteId = json['linkSiteId'] as int?
+          ..sharingLinkType = $enumDecodeNullable(
+              _$EnumSharingPriceTypeEnumMap, json['sharingLinkType'])
+          ..settingType = $enumDecodeNullable(
+              _$EnumManagementContentSettingTypeEnumMap, json['settingType'])
           ..title = json['title'] as String?
           ..clickPrice = json['clickPrice'] as int?
           ..viewPrice = json['viewPrice'] as int?
@@ -37,8 +62,24 @@ LinkManagementBillboardPatternModel
 Map<String, dynamic> _$LinkManagementBillboardPatternModelToJson(
         LinkManagementBillboardPatternModel instance) =>
     <String, dynamic>{
-      'sharingLinkType': instance.sharingLinkType,
-      'settingType': instance.settingType,
+      'id': instance.id,
+      'createdDate': instance.createdDate?.toIso8601String(),
+      'createdBy': instance.createdBy,
+      'updatedDate': instance.updatedDate?.toIso8601String(),
+      'updatedBy': instance.updatedBy,
+      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
+      'antiInjectionRun': instance.antiInjectionRun,
+      'antiInjectionGuid': instance.antiInjectionGuid,
+      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
+      'antiInjectionToken': instance.antiInjectionToken,
+      'antiInjectionExpireDate':
+          instance.antiInjectionExpireDate?.toIso8601String(),
+      'linkSiteId': instance.linkSiteId,
+      'sharingLinkType':
+          _$EnumSharingPriceTypeEnumMap[instance.sharingLinkType],
+      'settingType':
+          _$EnumManagementContentSettingTypeEnumMap[instance.settingType],
       'title': instance.title,
       'clickPrice': instance.clickPrice,
       'viewPrice': instance.viewPrice,
@@ -54,3 +95,30 @@ Map<String, dynamic> _$LinkManagementBillboardPatternModelToJson(
       'linkBackgroundIdSrc': instance.linkBackgroundIdSrc,
       'linkFileIdsSrc': instance.linkFileIdsSrc,
     };
+
+const _$EnumRecordStatusEnumMap = {
+  EnumRecordStatus.none: 0,
+  EnumRecordStatus.available: 1,
+  EnumRecordStatus.disable: 2,
+  EnumRecordStatus.deleted: 3,
+  EnumRecordStatus.pending: 4,
+  EnumRecordStatus.deniedConfirmed: 5,
+  EnumRecordStatus.archive: 6,
+};
+
+const _$EnumSharingPriceTypeEnumMap = {
+  EnumSharingPriceType.perClickCountAndView: 0,
+  EnumSharingPriceType.perClickCount: 1,
+  EnumSharingPriceType.perView: 2,
+};
+
+const _$EnumManagementContentSettingTypeEnumMap = {
+  EnumManagementContentSettingType.rss: 0,
+  EnumManagementContentSettingType.html: 1,
+  EnumManagementContentSettingType.banner: 2,
+  EnumManagementContentSettingType.videoBanner: 3,
+  EnumManagementContentSettingType.aparat: 4,
+  EnumManagementContentSettingType.mobileHtml: 5,
+  EnumManagementContentSettingType.mobileBanner: 6,
+  EnumManagementContentSettingType.mobileVideo: 7,
+};

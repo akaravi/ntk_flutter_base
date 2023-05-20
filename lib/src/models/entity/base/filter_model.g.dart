@@ -13,7 +13,7 @@ FilterModel _$FilterModelFromJson(Map<String, dynamic> json) => FilterModel()
   ..skipRowData = json['skipRowData'] as int
   ..currentPageNumber = json['currentPageNumber'] as int
   ..rowPerPage = json['rowPerPage'] as int
-  ..sortType = json['sortType']
+  ..sortType = $enumDecodeNullable(_$EnumSortTypeEnumMap, json['sortType'])
   ..sortColumn = json['sortColumn'] as String?
   ..filters = (json['filters'] as List<dynamic>?)
       ?.map((e) => FilterDataModel.fromJson(e as Map<String, dynamic>))
@@ -27,7 +27,13 @@ Map<String, dynamic> _$FilterModelToJson(FilterModel instance) =>
       'skipRowData': instance.skipRowData,
       'currentPageNumber': instance.currentPageNumber,
       'rowPerPage': instance.rowPerPage,
-      'sortType': instance.sortType,
+      'sortType': _$EnumSortTypeEnumMap[instance.sortType],
       'sortColumn': instance.sortColumn,
       'filters': instance.filters,
     };
+
+const _$EnumSortTypeEnumMap = {
+  EnumSortType.descending: 0,
+  EnumSortType.ascending: 1,
+  EnumSortType.random: 2,
+};

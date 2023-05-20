@@ -19,68 +19,83 @@ class _CoreLocationOtherApi implements CoreLocationOtherApi {
   String? baseUrl;
 
   @override
-  Future<dynamic> getAllProvinces(request) async {
+  Future<ErrorException<CoreLocationModel>> getAllProvinces(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<CoreLocationModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'api/v2/CoreLocation/GetAllProvinces',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data;
+            .compose(
+              _dio.options,
+              'api/v2/CoreLocation/GetAllProvinces',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<CoreLocationModel>.fromJson(
+      _result.data!,
+      (json) => CoreLocationModel.fromJson(json as Map<String, dynamic>),
+    );
     return value;
   }
 
   @override
-  Future<dynamic> getAllCities(request) async {
+  Future<ErrorException<CoreLocationModel>> getAllCities(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<CoreLocationModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'api/v2/CoreLocation/GetAllCities',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data;
+            .compose(
+              _dio.options,
+              'api/v2/CoreLocation/GetAllCities',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<CoreLocationModel>.fromJson(
+      _result.data!,
+      (json) => CoreLocationModel.fromJson(json as Map<String, dynamic>),
+    );
     return value;
   }
 
   @override
-  Future<dynamic> getAllCountry(request) async {
+  Future<ErrorException<CoreLocationModel>> getAllCountry(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = request;
-    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ErrorException<CoreLocationModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'api/v2/CoreLocation/GetAllCountry',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data;
+            .compose(
+              _dio.options,
+              'api/v2/CoreLocation/GetAllCountry',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ErrorException<CoreLocationModel>.fromJson(
+      _result.data!,
+      (json) => CoreLocationModel.fromJson(json as Map<String, dynamic>),
+    );
     return value;
   }
 
