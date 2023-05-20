@@ -7,7 +7,7 @@ import 'package:base/src/models/entity/enums/enum_operating_system_type.dart';
   final String _defaultTheme = '1';
   static NTKApplication? _instance;
 
-  factory NTKApplication.get({String? packageName}) => _instance ??= NTKApplication._(packageName!);
+  factory NTKApplication.get({String? packageName}) => _instance ??= NTKApplication._(packageName  !);
 
   NTKApplication._(this._packageName);
 

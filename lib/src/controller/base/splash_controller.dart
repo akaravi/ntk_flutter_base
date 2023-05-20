@@ -3,6 +3,8 @@ import 'package:base/src/backend/cache/login_cache.dart';
 import 'package:base/src/backend/service/application/application_app_service.dart';
 import 'package:base/src/backend/service/application/application_theme_service.dart';
 import 'package:base/src/backend/service/splash/auth_service.dart';
+import 'package:base/src/controller/base/base_controller.dart';
+import 'package:base/src/index.dart';
 import 'package:base/src/ntk_data.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +37,7 @@ class SplashController {
       yield SplashProgress(NtkGlobalData().stringGetCurrentApp, .70);
       await ApplicationAppService().currentApp();
       yield SplashProgress(NtkGlobalData().stringGetCurrentApp, 1);
-      started=false;
+      started = false;
     }
   }
 
@@ -59,6 +61,11 @@ class SplashController {
         LoginController.loginInPage(context: context, newLogin: login);
       }
     }
+  }
+
+  restart(BuildContext context, Widget Function(BuildContext)? splash) {
+    BaseController().replacePage(
+        context: context, newWidget: splash ?? (c) => Splash());
   }
 }
 

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CaptchaWidget extends StatefulWidget {
+  static CaptchaModel? captcha;
   void Function(CaptchaModel)? func;
 
   CaptchaWidget(this.func, {Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
             //provide get captcha again when click
             onTap: () =>
                 setState(() {
-                  _CaptchaController.captcha = null;
+                  CaptchaWidget.captcha  = null;
                 }),
             child: Container(
                 width: 120,
@@ -51,15 +52,15 @@ class _CaptchaWidgetState extends State<CaptchaWidget> {
 }
 
 class _CaptchaController {
-  static CaptchaModel? captcha;
+
 
   ///load captcha on as model for use on api call
   Future<String> loadCaptcha(void Function(CaptchaModel)? func) async {
-    if (captcha == null) {
-      captcha = await AuthService().getCaptcha();
+    if (CaptchaWidget.captcha == null) {
+      CaptchaWidget.captcha = await AuthService().getCaptcha();
     }
-    func?.call(captcha ?? new CaptchaModel());
+    func?.call(CaptchaWidget.captcha ?? new CaptchaModel());
 
-    return captcha?.image ?? '';
+    return   CaptchaWidget.captcha ?.image ?? '';
   }
 }
