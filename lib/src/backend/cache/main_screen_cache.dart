@@ -1,6 +1,6 @@
-import 'package:base/src/models/entity/application/about_us_model.dart';
-import 'package:base/src/models/entity/application/app_update_class.dart';
-import 'package:base/src/models/entity/application/application_app_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/application/about_us_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/application/app_update_class.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/application/application_app_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 

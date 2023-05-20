@@ -1,7 +1,7 @@
-import 'package:base/src/models/entity/base/base_module_entity.dart';
-import 'package:base/src/models/entity/enums/enum_management_content_setting_type.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
-import 'package:base/src/models/entity/enums/enum_sharing_price_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_management_content_setting_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_sharing_price_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'link_management_target_model.g.dart';

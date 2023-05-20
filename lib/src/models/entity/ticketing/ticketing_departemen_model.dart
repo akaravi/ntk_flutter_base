@@ -1,7 +1,7 @@
-import 'package:base/src/models/entity/base/base_module_entity.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
-import 'package:base/src/models/entity/enums/enum_ticket_access_status.dart';
-import 'package:base/src/models/entity/enums/enum_ticketing_departemen_priority.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_ticket_access_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_ticketing_departemen_priority.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'ticketing_answer_model.dart';

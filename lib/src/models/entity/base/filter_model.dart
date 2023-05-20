@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/enums/enum_sort_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_sort_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'filter_data_model.dart';

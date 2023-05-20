@@ -1,4 +1,4 @@
-import 'package:base/src/index.dart';
+import 'package:ntk_cms_flutter_base/src/index.dart';
 import 'package:flutter/material.dart';
 
 import '../../backend/api/base/base_entity.dart';

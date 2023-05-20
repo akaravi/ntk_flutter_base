@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/article/article_content_model.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/article/article_content_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../backend/service/article/article_model_service.dart';

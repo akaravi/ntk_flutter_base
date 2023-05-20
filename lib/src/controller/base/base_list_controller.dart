@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 

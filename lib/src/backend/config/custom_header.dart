@@ -1,5 +1,5 @@
 
-import 'package:base/src/ntk_application.dart';
+import 'package:ntk_cms_flutter_base/src/ntk_application.dart';
 
 class CustomHeader {
   static Map<String, dynamic> getHeaders() {

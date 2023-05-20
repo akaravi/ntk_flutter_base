@@ -1,8 +1,8 @@
 
-import 'package:base/src/models/entity/base/base_module_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 import 'member_property_detail_value_model.dart';
 import 'member_property_model.dart';

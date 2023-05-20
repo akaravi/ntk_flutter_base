@@ -1,7 +1,7 @@
-import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/enums/core/report_file_type_enum.dart';
-import 'package:base/src/models/entity/enums/enum_location_type.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/core/report_file_type_enum.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_location_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'core_module_entity_report_file_model.g.dart';

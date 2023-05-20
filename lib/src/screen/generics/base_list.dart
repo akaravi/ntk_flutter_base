@@ -1,5 +1,5 @@
-import 'package:base/src/screen/generics/empty_list_indicator.dart';
-import 'package:base/src/screen/generics/error_indicator.dart';
+import 'package:ntk_cms_flutter_base/src/screen/generics/empty_list_indicator.dart';
+import 'package:ntk_cms_flutter_base/src/screen/generics/error_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 

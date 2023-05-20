@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
-import 'package:base/src/models/entity/base/error_exception.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/error_exception.dart';
 
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 
-import 'package:base/src/models/entity/core/core_location_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/core/core_location_model.dart';
 
 import '../base/base_entity.dart';
 

@@ -1,7 +1,7 @@
-import 'package:base/src/backend/api/estate/estate_customer_order_api.dart';
-import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:base/src/models/entity/estate/estate_customer_order_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/estate/estate_customer_order_api.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/dio.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/estate/estate_customer_order_model.dart';
 
 import '../../../models/entity/base/error_exception.dart';
 

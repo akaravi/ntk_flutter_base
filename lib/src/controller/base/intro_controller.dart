@@ -1,7 +1,7 @@
-import 'package:base/src/backend/cache/intro_cache.dart';
-import 'package:base/src/backend/service/intro/intro_service.dart';
-import 'package:base/src/models/entity/application/application_intro_model.dart';
-import 'package:base/src/screen/intro.dart';
+import 'package:ntk_cms_flutter_base/src/backend/cache/intro_cache.dart';
+import 'package:ntk_cms_flutter_base/src/backend/service/intro/intro_service.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/application/application_intro_model.dart';
+import 'package:ntk_cms_flutter_base/src/screen/intro.dart';
 import 'package:flutter/material.dart';
 
 import 'base_controller.dart';

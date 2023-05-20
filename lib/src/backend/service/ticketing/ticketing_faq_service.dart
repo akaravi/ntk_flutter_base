@@ -1,5 +1,5 @@
-import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/dio.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 
 import '../../../models/entity/ticketing/ticketing_faq_model.dart';
 import '../../api/ticketing/ticketing_faq_api.dart';

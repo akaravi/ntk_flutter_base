@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:base/src/index.dart';
-import 'package:base/src/ntk_application.dart';
+import 'package:ntk_cms_flutter_base/src/index.dart';
+import 'package:ntk_cms_flutter_base/src/ntk_application.dart';
 import 'package:flutter/material.dart';
 
 import 'src/backend/config/my_application_preference.dart';

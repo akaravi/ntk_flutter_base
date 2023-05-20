@@ -1,6 +1,6 @@
-import 'package:base/src/backend/api/pooling/polling_vote_api.dart';
-import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/models/entity/polling/polling_vote_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/pooling/polling_vote_api.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/dio.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/polling/polling_vote_model.dart';
 
 class PollingVoteService extends DioApi {
   //api caller reference

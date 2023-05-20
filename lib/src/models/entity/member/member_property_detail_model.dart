@@ -1,9 +1,9 @@
 
-import 'package:base/src/models/entity/base/base_module_entity.dart';
-import 'package:base/src/models/entity/enums/estate/enum_input_data_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/estate/enum_input_data_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 import '../enums/enum_ui_property_design.dart';
 import 'member_property_detail_group_model.dart';

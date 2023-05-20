@@ -1,7 +1,7 @@
-import 'package:base/src/backend/api/news/news_content_api.dart';
-import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:base/src/models/entity/news/news_content_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/news/news_content_api.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/dio.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/news/news_content_model.dart';
 
 class NewsModelService extends DioApi {
   //api caller reference

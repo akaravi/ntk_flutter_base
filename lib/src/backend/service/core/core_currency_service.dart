@@ -1,6 +1,6 @@
-import 'package:base/src/backend/api/core/core_currency_api.dart';
-import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/index.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/core/core_currency_api.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/dio.dart';
+import 'package:ntk_cms_flutter_base/src/index.dart';
 
 class CoreCurrencyService extends DioApi {
   //api caller reference

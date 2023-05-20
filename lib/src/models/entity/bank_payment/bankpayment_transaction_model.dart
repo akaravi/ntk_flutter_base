@@ -1,6 +1,6 @@
-import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/base/feildinfo/get_properties_info_model.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/feildinfo/get_properties_info_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'bankpayment_private_siteconfig_model.dart';

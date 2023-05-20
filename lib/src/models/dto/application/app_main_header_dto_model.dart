@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/enums/enum_device_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_device_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'app_main_header_dto_model.g.dart';

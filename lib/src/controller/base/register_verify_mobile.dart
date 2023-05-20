@@ -1,8 +1,8 @@
-import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/controller/base/register_mobile_controller.dart';
-import 'package:base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
-import 'package:base/src/models/entity/base/captcha_model.dart';
-import 'package:base/src/screen/register_with_mobile_verify.dart';
+import 'package:ntk_cms_flutter_base/src/backend/service/splash/auth_service.dart';
+import 'package:ntk_cms_flutter_base/src/controller/base/register_mobile_controller.dart';
+import 'package:ntk_cms_flutter_base/src/models/dto/core/auth_user_signin_bysms_dto_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/captcha_model.dart';
+import 'package:ntk_cms_flutter_base/src/screen/register_with_mobile_verify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 

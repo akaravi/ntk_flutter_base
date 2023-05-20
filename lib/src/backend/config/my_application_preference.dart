@@ -1,8 +1,8 @@
 import 'dart:io' show Platform;
 
-import 'package:base/src/models/entity/enums/enum_devicetype.dart';
-import 'package:base/src/models/entity/enums/enum_language.dart';
-import 'package:base/src/models/entity/enums/enum_operating_system_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_devicetype.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_language.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_operating_system_type.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:shared_preferences/shared_preferences.dart';

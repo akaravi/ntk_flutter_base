@@ -1,7 +1,7 @@
-import 'package:base/src/models/entity/base/error_exception.dart';
-import 'package:base/src/models/entity/file/file_upload_model.dart';
-import 'package:base/src/ntk_application.dart';
-import 'package:base/src/utils/platform_extension.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/error_exception.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/file/file_upload_model.dart';
+import 'package:ntk_cms_flutter_base/src/ntk_application.dart';
+import 'package:ntk_cms_flutter_base/src/utils/platform_extension.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 

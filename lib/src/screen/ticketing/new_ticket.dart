@@ -1,4 +1,4 @@
-import 'package:base/src/controller/ticket/new_ticket_controller.dart';
+import 'package:ntk_cms_flutter_base/src/controller/ticket/new_ticket_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/base_ticket_page.dart';

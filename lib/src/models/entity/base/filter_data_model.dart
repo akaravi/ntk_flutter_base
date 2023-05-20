@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/enums/enum_clause_type.dart';
-import 'package:base/src/models/entity/enums/enum_filter_datamodel_search_types.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_clause_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_filter_datamodel_search_types.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'filter_data_model.g.dart';

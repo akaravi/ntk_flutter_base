@@ -1,10 +1,10 @@
-import 'package:base/src/backend/cache/login_cache.dart';
-import 'package:base/src/backend/service/splash/auth_service.dart';
-import 'package:base/src/controller/field_errors_controller.dart';
-import 'package:base/src/controller/base/register_controller.dart';
-import 'package:base/src/models/dto/core/auth_user_signin_model.dart';
-import 'package:base/src/models/entity/base/captcha_model.dart';
-import 'package:base/src/screen/login.dart';
+import 'package:ntk_cms_flutter_base/src/backend/cache/login_cache.dart';
+import 'package:ntk_cms_flutter_base/src/backend/service/splash/auth_service.dart';
+import 'package:ntk_cms_flutter_base/src/controller/field_errors_controller.dart';
+import 'package:ntk_cms_flutter_base/src/controller/base/register_controller.dart';
+import 'package:ntk_cms_flutter_base/src/models/dto/core/auth_user_signin_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/captcha_model.dart';
+import 'package:ntk_cms_flutter_base/src/screen/login.dart';
 import 'package:flutter/material.dart';
 
 import '../panel_controller.dart';

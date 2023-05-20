@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'core_log_avoid_duplicate_data_entry_model.g.dart';
 

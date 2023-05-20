@@ -1,6 +1,6 @@
-import 'package:base/src/backend/service/estate/estate_property_services.dart';
-import 'package:base/src/index.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/service/estate/estate_property_services.dart';
+import 'package:ntk_cms_flutter_base/src/index.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 import 'package:flutter/material.dart';
 
 import '../base/base_list_controller.dart';

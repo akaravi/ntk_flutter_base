@@ -1,5 +1,5 @@
-import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'core_user_support_access_model.g.dart';

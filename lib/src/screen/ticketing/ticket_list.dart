@@ -1,6 +1,6 @@
-import 'package:base/src/controller/ticket/ticket_list_controller.dart';
-import 'package:base/src/models/entity/ticketing/ticketing_task_model.dart';
-import 'package:base/src/screen/generics/base_list.dart';
+import 'package:ntk_cms_flutter_base/src/controller/ticket/ticket_list_controller.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/ticketing/ticketing_task_model.dart';
+import 'package:ntk_cms_flutter_base/src/screen/generics/base_list.dart';
 import 'package:flutter/material.dart';
 
 class TicketList extends BaseModelListScreen<TicketingTaskModel> {

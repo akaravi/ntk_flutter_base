@@ -1,6 +1,6 @@
-import 'package:base/src/backend/service/article/article_model_service.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:base/src/models/entity/article/article_content_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/service/article/article_model_service.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/article/article_content_model.dart';
 import 'package:flutter/material.dart';
 
 import '../base/base_list_controller.dart';

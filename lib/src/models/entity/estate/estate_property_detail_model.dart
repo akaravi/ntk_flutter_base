@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/enums/estate/enum_input_data_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/estate/enum_input_data_type.dart';
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 

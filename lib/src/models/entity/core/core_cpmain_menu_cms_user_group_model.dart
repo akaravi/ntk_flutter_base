@@ -1,6 +1,6 @@
-import 'package:base/src/models/entity/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 import 'core_cpmain_menu_model.dart';
 import 'core_user_group_model.dart';

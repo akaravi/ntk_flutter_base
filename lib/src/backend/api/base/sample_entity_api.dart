@@ -1,6 +1,6 @@
-import 'package:base/src/models/entity/base/error_exception.dart';
-import 'package:base/src/models/entity/base/error_exception_base.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/error_exception.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/error_exception_base.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 import 'package:dio/dio.dart' hide Headers;
 
 import 'package:retrofit/retrofit.dart';

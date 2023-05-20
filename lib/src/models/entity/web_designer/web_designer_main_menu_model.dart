@@ -1,10 +1,10 @@
 
 
-import 'package:base/src/models/entity/base/base_module_entity.dart';
-import 'package:base/src/models/entity/enums/enum_menu_place_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_menu_place_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 part 'web_designer_main_menu_model.g.dart';
 

@@ -1,4 +1,4 @@
-import 'package:base/src/index.dart';
+import 'package:ntk_cms_flutter_base/src/index.dart';
 import 'package:dio/dio.dart';
 
 class EstatePropertyCompanyMethodApi

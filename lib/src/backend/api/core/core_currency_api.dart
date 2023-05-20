@@ -1,4 +1,4 @@
-import 'package:base/src/backend/api/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/base/base_entity.dart';
 import 'package:dio/dio.dart';
 
 import '../../../models/entity/core/core_currency_model.dart';

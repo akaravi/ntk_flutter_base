@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:base/src/backend/config/custom_header.dart';
-import 'package:base/src/ntk_application.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/custom_header.dart';
+import 'package:ntk_cms_flutter_base/src/ntk_application.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:retrofit/dio.dart';

@@ -1,7 +1,7 @@
-import 'package:base/src/controller/base/base_list_controller.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:base/src/models/entity/ticketing/ticketing_task_model.dart';
-import 'package:base/src/screen/ticketing/ticket_model_adapter.dart';
+import 'package:ntk_cms_flutter_base/src/controller/base/base_list_controller.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/ticketing/ticketing_task_model.dart';
+import 'package:ntk_cms_flutter_base/src/screen/ticketing/ticket_model_adapter.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import '../../backend/service/ticketing/ticketing_task_service.dart';

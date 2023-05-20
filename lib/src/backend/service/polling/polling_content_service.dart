@@ -1,7 +1,7 @@
-import 'package:base/src/backend/api/index.dart';
-import 'package:base/src/backend/config/dio.dart';
-import 'package:base/src/index.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/index.dart';
+import 'package:ntk_cms_flutter_base/src/backend/config/dio.dart';
+import 'package:ntk_cms_flutter_base/src/index.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 
 class PollingModelService extends DioApi {
   //api caller reference

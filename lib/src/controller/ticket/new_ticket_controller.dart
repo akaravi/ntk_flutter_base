@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/ticketing/ticketing_departemen_operator_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/ticketing/ticketing_departemen_operator_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../screen/ticketing/new_ticket.dart';

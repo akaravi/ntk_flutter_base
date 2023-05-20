@@ -1,7 +1,7 @@
-import 'package:base/src/models/entity/base/base_entity.dart';
-import 'package:base/src/models/entity/enums/core/enum_user_claim_group_action_type.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/core/enum_user_claim_group_action_type.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 import 'core_user_claim_group_detail_model.dart';
 

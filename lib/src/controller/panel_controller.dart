@@ -1,4 +1,4 @@
-import 'package:base/src/screen/main_panel.dart';
+import 'package:ntk_cms_flutter_base/src/screen/main_panel.dart';
 import 'package:flutter/material.dart';
 
 class PanelController {

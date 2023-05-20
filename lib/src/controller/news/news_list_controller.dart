@@ -1,7 +1,7 @@
-import 'package:base/src/backend/service/news/news_model_service.dart';
-import 'package:base/src/models/entity/base/filter_model.dart';
-import 'package:base/src/models/entity/news/news_content_model.dart';
-import 'package:base/src/screen/news/base_news_model_adapter.dart';
+import 'package:ntk_cms_flutter_base/src/backend/service/news/news_model_service.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/news/news_content_model.dart';
+import 'package:ntk_cms_flutter_base/src/screen/news/base_news_model_adapter.dart';
 import 'package:flutter/material.dart';
 
 import '../base/base_list_controller.dart';

@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:html';
 import 'dart:math';
 
-import 'package:base/src/backend/api/file/chunked/abstract_uploader.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/file/chunked/abstract_uploader.dart';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 

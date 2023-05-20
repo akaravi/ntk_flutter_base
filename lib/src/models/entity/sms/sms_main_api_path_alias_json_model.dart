@@ -1,9 +1,9 @@
-import 'package:base/src/models/entity/base/feildinfo/get_properties_info_model.dart';
-import 'package:base/src/models/entity/sms/sms_main_api_path_model.dart';
-import 'package:base/src/models/entity/sms/sms_main_api_path_process_flow_model.dart';
-import 'package:base/src/models/entity/sms/sms_main_api_path_super_seder_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/base/feildinfo/get_properties_info_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/sms/sms_main_api_path_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/sms/sms_main_api_path_process_flow_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/sms/sms_main_api_path_super_seder_model.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 import 'sms_main_api_company_model.dart';
 import 'sms_main_api_path_and_api_number_model.dart';

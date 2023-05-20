@@ -1,6 +1,6 @@
-import 'package:base/src/backend/api/base/base_entity.dart';
-import 'package:base/src/backend/index.dart';
-import 'package:base/src/controller/base/base_detail_controller.dart';
+import 'package:ntk_cms_flutter_base/src/backend/api/base/base_entity.dart';
+import 'package:ntk_cms_flutter_base/src/backend/index.dart';
+import 'package:ntk_cms_flutter_base/src/controller/base/base_detail_controller.dart';
 
 import '../../models/entity/news/news_content_model.dart';
 
