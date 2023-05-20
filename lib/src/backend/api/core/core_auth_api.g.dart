@@ -19,237 +19,200 @@ class _AuthMethodApi implements AuthMethodApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<CaptchaModel>> captcha() async {
+  Future<dynamic> captcha() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CaptchaModel>>(Options(
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/captcha',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CaptchaModel>.fromJson(
-      _result.data!,
-      (json) => CaptchaModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/captcha',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> correctTokenInfo() async {
+  Future<dynamic> correctTokenInfo() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<TokenInfoModel>>(Options(
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/CurrentToken',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<TokenInfoModel>.fromJson(
-      _result.data!,
-      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/CurrentToken',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<TokenDeviceModel>> getTokenDevice(request) async {
+  Future<dynamic> getTokenDevice(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<TokenDeviceModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/GetTokenDevice',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<TokenDeviceModel>.fromJson(
-      _result.data!,
-      (json) => TokenDeviceModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/GetTokenDevice',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorExceptionBase> mobileConfirm(model) async {
+  Future<dynamic> mobileConfirm(model) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(model.toJson());
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<ErrorExceptionBase>(Options(
+    final _data = model;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/mobileConfirm',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorExceptionBase.fromJson(_result.data!);
+        .compose(
+          _dio.options,
+          'api/v2/auth/mobileConfirm',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorExceptionBase> emailConfirm(request) async {
+  Future<dynamic> emailConfirm(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<ErrorExceptionBase>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/emailConfirm',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorExceptionBase.fromJson(_result.data!);
+        .compose(
+          _dio.options,
+          'api/v2/auth/emailConfirm',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<CoreUserModel>> signUpUser(request) async {
+  Future<dynamic> signUpUser(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CoreUserModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/GetTokenD/signup',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CoreUserModel>.fromJson(
-      _result.data!,
-      (json) => CoreUserModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/GetTokenD/signup',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> signInUser(request) async {
+  Future<dynamic> signInUser(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<TokenInfoModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/signin',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<TokenInfoModel>.fromJson(
-      _result.data!,
-      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/signin',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> forgetPassword(request) async {
+  Future<dynamic> forgetPassword(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<TokenInfoModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/forgetPassword',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<TokenInfoModel>.fromJson(
-      _result.data!,
-      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/forgetPassword',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> signInUserBySMS(request) async {
+  Future<dynamic> signInUserBySMS(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<TokenInfoModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/auth/signInBySms',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<TokenInfoModel>.fromJson(
-      _result.data!,
-      (json) => TokenInfoModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/auth/signInBySms',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 

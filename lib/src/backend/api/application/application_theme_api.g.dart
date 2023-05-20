@@ -19,29 +19,24 @@ class _ApplicationThemeMethodApi implements ApplicationThemeMethodApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<ApplicationThemeConfigModel>> getAppTheme() async {
+  Future<dynamic> getAppTheme() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<ApplicationThemeConfigModel>>(Options(
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/ApplicationThemeConfig/CurrentTheme',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<ApplicationThemeConfigModel>.fromJson(
-      _result.data!,
-      (json) =>
-          ApplicationThemeConfigModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/ApplicationThemeConfig/CurrentTheme',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 

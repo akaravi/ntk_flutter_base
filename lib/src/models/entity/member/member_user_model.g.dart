@@ -8,32 +8,10 @@ part of 'member_user_model.dart';
 
 MemberUserModel _$MemberUserModelFromJson(Map<String, dynamic> json) =>
     MemberUserModel()
-      ..id = json['id'] as int?
-      ..createdDate = json['createdDate'] == null
-          ? null
-          : DateTime.parse(json['createdDate'] as String)
-      ..createdBy = json['createdBy'] as int?
-      ..updatedDate = json['updatedDate'] == null
-          ? null
-          : DateTime.parse(json['updatedDate'] as String)
-      ..updatedBy = json['updatedBy'] as int?
-      ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
-      ..antiInjectionRun = json['antiInjectionRun'] as bool?
-      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
-      ..antiInjectionDate = json['antiInjectionDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionDate'] as String)
-      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['antiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
       ..linkCmsUserId = json['linkCmsUserId'] as String?
       ..deviceId = json['deviceId'] as String?
       ..joinId = json['joinId'] as String?
-      ..gender = $enumDecodeNullable(_$EnumGenderTypeEnumMap, json['gender'])
+      ..gender = json['gender']
       ..firstName = json['firstName'] as String?
       ..lastName = json['lastName'] as String?
       ..linkLocationId = json['linkLocationId'] as int?
@@ -78,24 +56,10 @@ MemberUserModel _$MemberUserModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$MemberUserModelToJson(MemberUserModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'createdDate': instance.createdDate?.toIso8601String(),
-      'createdBy': instance.createdBy,
-      'updatedDate': instance.updatedDate?.toIso8601String(),
-      'updatedBy': instance.updatedBy,
-      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'antiInjectionRun': instance.antiInjectionRun,
-      'antiInjectionGuid': instance.antiInjectionGuid,
-      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'antiInjectionToken': instance.antiInjectionToken,
-      'antiInjectionExpireDate':
-          instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
       'linkCmsUserId': instance.linkCmsUserId,
       'deviceId': instance.deviceId,
       'joinId': instance.joinId,
-      'gender': _$EnumGenderTypeEnumMap[instance.gender],
+      'gender': instance.gender,
       'firstName': instance.firstName,
       'lastName': instance.lastName,
       'linkLocationId': instance.linkLocationId,
@@ -129,20 +93,3 @@ Map<String, dynamic> _$MemberUserModelToJson(MemberUserModel instance) =>
       'memberPropertes': instance.memberPropertes,
       'memberUserSites': instance.memberUserSites,
     };
-
-const _$EnumRecordStatusEnumMap = {
-  EnumRecordStatus.none: 0,
-  EnumRecordStatus.available: 1,
-  EnumRecordStatus.disable: 2,
-  EnumRecordStatus.deleted: 3,
-  EnumRecordStatus.pending: 4,
-  EnumRecordStatus.deniedConfirmed: 5,
-  EnumRecordStatus.archive: 6,
-};
-
-const _$EnumGenderTypeEnumMap = {
-  EnumGenderType.none: 0,
-  EnumGenderType.man: 1,
-  EnumGenderType.female: 2,
-  EnumGenderType.company: 3,
-};

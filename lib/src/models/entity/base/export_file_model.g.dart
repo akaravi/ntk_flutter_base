@@ -8,28 +8,13 @@ part of 'export_file_model.dart';
 
 ExportFileModel _$ExportFileModelFromJson(Map<String, dynamic> json) =>
     ExportFileModel()
-      ..fileType =
-          $enumDecodeNullable(_$EnumExportFileTypeEnumMap, json['fileType'])
-      ..recieveMethod = $enumDecodeNullable(
-          _$EnumExportReceiveMethodEnumMap, json['recieveMethod'])
+      ..fileType = json['fileType']
+      ..recieveMethod = json['recieveMethod']
       ..reportFormatFileId = json['reportFormatFileId'] as String?;
 
 Map<String, dynamic> _$ExportFileModelToJson(ExportFileModel instance) =>
     <String, dynamic>{
-      'fileType': _$EnumExportFileTypeEnumMap[instance.fileType],
-      'recieveMethod': _$EnumExportReceiveMethodEnumMap[instance.recieveMethod],
+      'fileType': instance.fileType,
+      'recieveMethod': instance.recieveMethod,
       'reportFormatFileId': instance.reportFormatFileId,
     };
-
-const _$EnumExportFileTypeEnumMap = {
-  EnumExportFileType.none: 0,
-  EnumExportFileType.excel: 1,
-  EnumExportFileType.pdf: 2,
-  EnumExportFileType.text: 3,
-};
-
-const _$EnumExportReceiveMethodEnumMap = {
-  EnumExportReceiveMethod.now: 0,
-  EnumExportReceiveMethod.email: 1,
-  EnumExportReceiveMethod.fileManeger: 2,
-};

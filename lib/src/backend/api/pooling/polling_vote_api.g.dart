@@ -19,28 +19,24 @@ class __PollingOtherApi implements _PollingOtherApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<PollingVoteModel>> addBatch(models) async {
+  Future<dynamic> addBatch(models) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<PollingVoteModel>>(Options(
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/PollingVote/AddBatch',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<PollingVoteModel>.fromJson(
-      _result.data!,
-      (json) => PollingVoteModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/PollingVote/AddBatch',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 

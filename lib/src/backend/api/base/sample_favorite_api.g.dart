@@ -19,7 +19,7 @@ class __SGenericSampleFavoriteApi implements _SGenericSampleFavoriteApi {
   String? baseUrl;
 
   @override
-  Future<ErrorExceptionBase> addFavorite(
+  Future<dynamic> addFavorite(
     fullPath,
     Id,
   ) async {
@@ -27,25 +27,24 @@ class __SGenericSampleFavoriteApi implements _SGenericSampleFavoriteApi {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = Id;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<ErrorExceptionBase>(Options(
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              '${fullPath}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorExceptionBase.fromJson(_result.data!);
+        .compose(
+          _dio.options,
+          '${fullPath}',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorExceptionBase> removeFavorite(
+  Future<dynamic> removeFavorite(
     fullPath,
     Id,
   ) async {
@@ -53,50 +52,44 @@ class __SGenericSampleFavoriteApi implements _SGenericSampleFavoriteApi {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = Id;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<ErrorExceptionBase>(Options(
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              '${fullPath}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorExceptionBase.fromJson(_result.data!);
+        .compose(
+          _dio.options,
+          '${fullPath}',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<String>> getAllFavorite(
+  Future<dynamic> getAllFavorite(
     fullPath,
     filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(filter.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<String>>(Options(
+    final _data = filter;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              '${fullPath}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<String>.fromJson(
-      _result.data!,
-      (json) => json as String,
-    );
+        .compose(
+          _dio.options,
+          '${fullPath}',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 

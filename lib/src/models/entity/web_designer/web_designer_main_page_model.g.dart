@@ -9,28 +9,6 @@ part of 'web_designer_main_page_model.dart';
 WebDesignerMainPageModel _$WebDesignerMainPageModelFromJson(
         Map<String, dynamic> json) =>
     WebDesignerMainPageModel()
-      ..id = json['id'] as String?
-      ..createdDate = json['createdDate'] == null
-          ? null
-          : DateTime.parse(json['createdDate'] as String)
-      ..createdBy = json['createdBy'] as int?
-      ..updatedDate = json['updatedDate'] == null
-          ? null
-          : DateTime.parse(json['updatedDate'] as String)
-      ..updatedBy = json['updatedBy'] as int?
-      ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
-      ..antiInjectionRun = json['antiInjectionRun'] as bool?
-      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
-      ..antiInjectionDate = json['antiInjectionDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionDate'] as String)
-      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['antiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
       ..linkFavFileId = json['linkFavFileId'] as int?
       ..title = json['title'] as String?
       ..keyword = json['keyword'] as String?
@@ -40,8 +18,7 @@ WebDesignerMainPageModel _$WebDesignerMainPageModelFromJson(
       ..pageDependencyIsDefaultPageLinkSiteCategoryId =
           json['pageDependencyIsDefaultPageLinkSiteCategoryId'] as int?
       ..pageJsonValue = json['pageJsonValue'] as String?
-      ..pageAbilityType = $enumDecodeNullable(
-          _$EnumPageAbilityTypeEnumMap, json['pageAbilityType'])
+      ..pageAbilityType = json['pageAbilityType']
       ..export1 = json['export1'] as String?
       ..export2 = json['export2'] as String?
       ..export3 = json['export3'] as String?
@@ -62,20 +39,6 @@ WebDesignerMainPageModel _$WebDesignerMainPageModelFromJson(
 Map<String, dynamic> _$WebDesignerMainPageModelToJson(
         WebDesignerMainPageModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'createdDate': instance.createdDate?.toIso8601String(),
-      'createdBy': instance.createdBy,
-      'updatedDate': instance.updatedDate?.toIso8601String(),
-      'updatedBy': instance.updatedBy,
-      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'antiInjectionRun': instance.antiInjectionRun,
-      'antiInjectionGuid': instance.antiInjectionGuid,
-      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'antiInjectionToken': instance.antiInjectionToken,
-      'antiInjectionExpireDate':
-          instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
       'linkFavFileId': instance.linkFavFileId,
       'title': instance.title,
       'keyword': instance.keyword,
@@ -84,7 +47,7 @@ Map<String, dynamic> _$WebDesignerMainPageModelToJson(
       'pageDependencyIsDefaultPageLinkSiteCategoryId':
           instance.pageDependencyIsDefaultPageLinkSiteCategoryId,
       'pageJsonValue': instance.pageJsonValue,
-      'pageAbilityType': _$EnumPageAbilityTypeEnumMap[instance.pageAbilityType],
+      'pageAbilityType': instance.pageAbilityType,
       'export1': instance.export1,
       'export2': instance.export2,
       'export3': instance.export3,
@@ -101,19 +64,3 @@ Map<String, dynamic> _$WebDesignerMainPageModelToJson(
       'linkPageTemplateGuId': instance.linkPageTemplateGuId,
       'thumbnailImageSrc': instance.thumbnailImageSrc,
     };
-
-const _$EnumRecordStatusEnumMap = {
-  EnumRecordStatus.none: 0,
-  EnumRecordStatus.available: 1,
-  EnumRecordStatus.disable: 2,
-  EnumRecordStatus.deleted: 3,
-  EnumRecordStatus.pending: 4,
-  EnumRecordStatus.deniedConfirmed: 5,
-  EnumRecordStatus.archive: 6,
-};
-
-const _$EnumPageAbilityTypeEnumMap = {
-  EnumPageAbilityType.none: 0,
-  EnumPageAbilityType.normal: 1,
-  EnumPageAbilityType.master: 2,
-};

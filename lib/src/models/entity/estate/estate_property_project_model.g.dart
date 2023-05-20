@@ -9,32 +9,9 @@ part of 'estate_property_project_model.dart';
 EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
         Map<String, dynamic> json) =>
     EstatePropertyProjectModel()
-      ..id = json['id'] as String?
-      ..createdDate = json['createdDate'] == null
-          ? null
-          : DateTime.parse(json['createdDate'] as String)
-      ..createdBy = json['createdBy'] as int?
-      ..updatedDate = json['updatedDate'] == null
-          ? null
-          : DateTime.parse(json['updatedDate'] as String)
-      ..updatedBy = json['updatedBy'] as int?
-      ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
-      ..antiInjectionRun = json['antiInjectionRun'] as bool?
-      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
-      ..antiInjectionDate = json['antiInjectionDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionDate'] as String)
-      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['antiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..linkPropertyCompanyId = json['linkPropertyCompanyId'] as String?
-      // ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
       ..description = json['description'] as String?
       ..address = json['address'] as String?
       ..body = json['body'] as String?
@@ -87,24 +64,9 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
 Map<String, dynamic> _$EstatePropertyProjectModelToJson(
         EstatePropertyProjectModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'createdDate': instance.createdDate?.toIso8601String(),
-      'createdBy': instance.createdBy,
-      'updatedDate': instance.updatedDate?.toIso8601String(),
-      'updatedBy': instance.updatedBy,
-      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'antiInjectionRun': instance.antiInjectionRun,
-      'antiInjectionGuid': instance.antiInjectionGuid,
-      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'antiInjectionToken': instance.antiInjectionToken,
-      'antiInjectionExpireDate':
-          instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
       'title': instance.title,
       'linkCmsUserId': instance.linkCmsUserId,
       'linkPropertyCompanyId': instance.linkPropertyCompanyId,
-      // 'mainAdminRecordStatus': instance.mainAdminRecordStatus,
       'description': instance.description,
       'address': instance.address,
       'body': instance.body,
@@ -141,13 +103,3 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'aboutTel': instance.aboutTel,
       'aboutMobile': instance.aboutMobile,
     };
-
-const _$EnumRecordStatusEnumMap = {
-  EnumRecordStatus.none: 0,
-  EnumRecordStatus.available: 1,
-  EnumRecordStatus.disable: 2,
-  EnumRecordStatus.deleted: 3,
-  EnumRecordStatus.pending: 4,
-  EnumRecordStatus.deniedConfirmed: 5,
-  EnumRecordStatus.archive: 6,
-};

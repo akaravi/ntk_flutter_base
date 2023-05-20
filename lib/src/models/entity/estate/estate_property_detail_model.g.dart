@@ -14,8 +14,7 @@ EstatePropertyDetailModel _$EstatePropertyDetailModelFromJson(
       ..description = json['description'] as String?
       ..iconFont = json['iconFont'] as String?
       ..iconColor = json['iconColor'] as String?
-      ..inputDataType =
-          $enumDecodeNullable(_$EnumInputDataTypeEnumMap, json['inputDataType'])
+      ..inputDataType = json['inputDataType']
       ..invisibleForEndUser = json['invisibleForEndUser'] as bool?
       ..invisibleForSubmiter = json['invisibleForSubmiter'] as bool?
       ..unit = json['unit'] as String?
@@ -46,7 +45,7 @@ Map<String, dynamic> _$EstatePropertyDetailModelToJson(
       'description': instance.description,
       'iconFont': instance.iconFont,
       'iconColor': instance.iconColor,
-      'inputDataType': _$EnumInputDataTypeEnumMap[instance.inputDataType],
+      'inputDataType': instance.inputDataType,
       'invisibleForEndUser': instance.invisibleForEndUser,
       'invisibleForSubmiter': instance.invisibleForSubmiter,
       'unit': instance.unit,
@@ -65,12 +64,3 @@ Map<String, dynamic> _$EstatePropertyDetailModelToJson(
       'configValueIntValueMax': instance.configValueIntValueMax,
       'value': instance.value,
     };
-
-const _$EnumInputDataTypeEnumMap = {
-  EnumInputDataType.string: 0,
-  EnumInputDataType.int: 1,
-  EnumInputDataType.boolean: 2,
-  EnumInputDataType.float: 3,
-  EnumInputDataType.date: 4,
-  EnumInputDataType.textArea: 5,
-};

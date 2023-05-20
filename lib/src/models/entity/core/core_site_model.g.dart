@@ -24,10 +24,8 @@ CoreSiteModel _$CoreSiteModelFromJson(Map<String, dynamic> json) =>
               json['parentCreator'] as Map<String, dynamic>)
       ..title = json['title'] as String?
       ..copyright = json['copyright'] as String?
-      ..ownerSiteSetStatus = $enumDecodeNullable(
-          _$EnumSiteStatusEnumMap, json['ownerSiteSetStatus'])
-      ..userLanguage =
-          $enumDecodeNullable(_$EnumLanguageEnumMap, json['userLanguage'])
+      ..ownerSiteSetStatus = json['ownerSiteSetStatus']
+      ..userLanguage = json['userLanguage']
       ..subDomain = json['subDomain'] as String?
       ..domain = json['domain'] as String?
       ..ssl = json['ssl'] as bool?
@@ -148,9 +146,8 @@ Map<String, dynamic> _$CoreSiteModelToJson(CoreSiteModel instance) =>
       'parentCreator': instance.parentCreator,
       'title': instance.title,
       'copyright': instance.copyright,
-      'ownerSiteSetStatus':
-          _$EnumSiteStatusEnumMap[instance.ownerSiteSetStatus],
-      'userLanguage': _$EnumLanguageEnumMap[instance.userLanguage],
+      'ownerSiteSetStatus': instance.ownerSiteSetStatus,
+      'userLanguage': instance.userLanguage,
       'subDomain': instance.subDomain,
       'domain': instance.domain,
       'ssl': instance.ssl,
@@ -238,21 +235,3 @@ Map<String, dynamic> _$CoreSiteModelToJson(CoreSiteModel instance) =>
       'seoTwitterCardSite': instance.seoTwitterCardSite,
       'seoTwitterCardCreator': instance.seoTwitterCardCreator,
     };
-
-const _$EnumSiteStatusEnumMap = {
-  EnumSiteStatus.active: 1,
-  EnumSiteStatus.inactive: 2,
-  EnumSiteStatus.maintenance: 3,
-  EnumSiteStatus.allowedUser: 4,
-};
-
-const _$EnumLanguageEnumMap = {
-  EnumLanguage.none: 0,
-  EnumLanguage.fa: 1,
-  EnumLanguage.en: 2,
-  EnumLanguage.de: 3,
-  EnumLanguage.fr: 4,
-  EnumLanguage.ch: 5,
-  EnumLanguage.jp: 6,
-  EnumLanguage.es: 7,
-};

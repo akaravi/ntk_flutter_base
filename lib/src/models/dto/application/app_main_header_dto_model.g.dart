@@ -16,8 +16,7 @@ AppMainHeaderDtoModel _$AppMainHeaderDtoModelFromJson(
       ..locationLong = json['locationLong'] as String?
       ..locationLat = json['locationLat'] as String?
       ..country = json['country'] as String?
-      ..deviceStatus =
-          $enumDecodeNullable(_$EnumDeviceStatusEnumMap, json['deviceStatus'])
+      ..deviceStatus = json['deviceStatus']
       ..simCard = json['simCard'] as String?
       ..language = json['language'] as String?
       ..appSourceVer = json['appSourceVer'] as String?
@@ -36,7 +35,7 @@ Map<String, dynamic> _$AppMainHeaderDtoModelToJson(
       'locationLong': instance.locationLong,
       'locationLat': instance.locationLat,
       'country': instance.country,
-      'deviceStatus': _$EnumDeviceStatusEnumMap[instance.deviceStatus],
+      'deviceStatus': instance.deviceStatus,
       'simCard': instance.simCard,
       'language': instance.language,
       'appSourceVer': instance.appSourceVer,
@@ -45,9 +44,3 @@ Map<String, dynamic> _$AppMainHeaderDtoModelToJson(
       'layout': instance.layout,
       'token': instance.token,
     };
-
-const _$EnumDeviceStatusEnumMap = {
-  EnumDeviceStatus.none: 0,
-  EnumDeviceStatus.install: 1,
-  EnumDeviceStatus.uninstall: 2,
-};

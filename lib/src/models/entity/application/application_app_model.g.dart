@@ -8,30 +8,8 @@ part of 'application_app_model.dart';
 
 ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
     ApplicationAppModel()
-      ..id = json['id'] as int?
-      ..createdDate = json['createdDate'] == null
-          ? null
-          : DateTime.parse(json['createdDate'] as String)
-      ..createdBy = json['createdBy'] as int?
-      ..updatedDate = json['updatedDate'] == null
-          ? null
-          : DateTime.parse(json['updatedDate'] as String)
-      ..updatedBy = json['updatedBy'] as int?
-      ..recordStatus =
-          $enumDecodeNullable(_$EnumRecordStatusEnumMap, json['recordStatus'])
-      ..antiInjectionRun = json['antiInjectionRun'] as bool?
-      ..antiInjectionGuid = json['antiInjectionGuid'] as String?
-      ..antiInjectionDate = json['antiInjectionDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionDate'] as String)
-      ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
-      ..antiInjectionToken = json['antiInjectionToken'] as String?
-      ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
-          ? null
-          : DateTime.parse(json['antiInjectionExpireDate'] as String)
-      ..linkSiteId = json['linkSiteId'] as int?
       ..appKey = json['appKey'] as String?
-      ..lang = $enumDecodeNullable(_$EnumLanguageEnumMap, json['lang'])
+      ..lang = json['lang']
       ..expireDate = json['expireDate'] == null
           ? null
           : DateTime.parse(json['expireDate'] as String)
@@ -58,8 +36,7 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..forceUpdate = json['forceUpdate'] as bool?
       ..allowDirectShareApp = json['allowDirectShareApp'] as bool?
       ..lastBuildAppKey = json['lastBuildAppKey'] as String?
-      ..lastBuildStatus = $enumDecodeNullable(
-          _$EnumBuildStatusTypeEnumMap, json['lastBuildStatus'])
+      ..lastBuildStatus = json['lastBuildStatus']
       ..lastNotificationOrderDate = json['lastNotificationOrderDate'] == null
           ? null
           : DateTime.parse(json['lastNotificationOrderDate'] as String)
@@ -100,16 +77,10 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
           json['configRuntimeSiteJsonValues'] as String?
       ..scoreClick = json['scoreClick'] as int?
       ..scoreSumPercent = json['scoreSumPercent'] as int?
-      ..adminConfigFormFormatter = (json['adminConfigFormFormatter']
-              as List<dynamic>?)
-          ?.map(
-              (e) => GetPropertiesInfoModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..userConfigFormFormatter = (json['userConfigFormFormatter']
-              as List<dynamic>?)
-          ?.map(
-              (e) => GetPropertiesInfoModel.fromJson(e as Map<String, dynamic>))
-          .toList()
+      ..adminConfigFormFormatter =
+          json['adminConfigFormFormatter'] as List<dynamic>?
+      ..userConfigFormFormatter =
+          json['userConfigFormFormatter'] as List<dynamic>?
       ..themeConfigJsonValues = json['themeConfigJsonValues'] as String?
       ..buildKey1String = json['buildKey1String'] as String?
       ..buildKey1Value = json['buildKey1Value'] as String?
@@ -159,22 +130,8 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ApplicationAppModelToJson(
         ApplicationAppModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'createdDate': instance.createdDate?.toIso8601String(),
-      'createdBy': instance.createdBy,
-      'updatedDate': instance.updatedDate?.toIso8601String(),
-      'updatedBy': instance.updatedBy,
-      'recordStatus': _$EnumRecordStatusEnumMap[instance.recordStatus],
-      'antiInjectionRun': instance.antiInjectionRun,
-      'antiInjectionGuid': instance.antiInjectionGuid,
-      'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
-      'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
-      'antiInjectionToken': instance.antiInjectionToken,
-      'antiInjectionExpireDate':
-          instance.antiInjectionExpireDate?.toIso8601String(),
-      'linkSiteId': instance.linkSiteId,
       'appKey': instance.appKey,
-      'lang': _$EnumLanguageEnumMap[instance.lang],
+      'lang': instance.lang,
       'expireDate': instance.expireDate?.toIso8601String(),
       'linkFileIdIcon': instance.linkFileIdIcon,
       'linkFileIdLogo': instance.linkFileIdLogo,
@@ -193,7 +150,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'forceUpdate': instance.forceUpdate,
       'allowDirectShareApp': instance.allowDirectShareApp,
       'lastBuildAppKey': instance.lastBuildAppKey,
-      'lastBuildStatus': _$EnumBuildStatusTypeEnumMap[instance.lastBuildStatus],
+      'lastBuildStatus': instance.lastBuildStatus,
       'lastNotificationOrderDate':
           instance.lastNotificationOrderDate?.toIso8601String(),
       'lastBuildOrderDate': instance.lastBuildOrderDate?.toIso8601String(),
@@ -257,48 +214,3 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'linkFileIdLogoSrc': instance.linkFileIdLogoSrc,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
-
-const _$EnumRecordStatusEnumMap = {
-  EnumRecordStatus.none: 0,
-  EnumRecordStatus.available: 1,
-  EnumRecordStatus.disable: 2,
-  EnumRecordStatus.deleted: 3,
-  EnumRecordStatus.pending: 4,
-  EnumRecordStatus.deniedConfirmed: 5,
-  EnumRecordStatus.archive: 6,
-};
-
-const _$EnumLanguageEnumMap = {
-  EnumLanguage.none: 0,
-  EnumLanguage.fa: 1,
-  EnumLanguage.en: 2,
-  EnumLanguage.de: 3,
-  EnumLanguage.fr: 4,
-  EnumLanguage.ch: 5,
-  EnumLanguage.jp: 6,
-  EnumLanguage.es: 7,
-};
-
-const _$EnumBuildStatusTypeEnumMap = {
-  EnumBuildStatusType.none: 0,
-  EnumBuildStatusType.buildOrder: 1,
-  EnumBuildStatusType.buildMSMQAdd: 2,
-  EnumBuildStatusType.buildMSMQAddError: 3,
-  EnumBuildStatusType.buildMSMQRead: 4,
-  EnumBuildStatusType.buildMSMQRun: 5,
-  EnumBuildStatusType.buildError: 6,
-  EnumBuildStatusType.buildSuccessfully: 7,
-  EnumBuildStatusType.buildUnsuccessfully: 8,
-  EnumBuildStatusType.buildMSMQRunNowBuildTempPathCreate: 9,
-  EnumBuildStatusType.buildMSMQRunNowFiledownloaded: 10,
-  EnumBuildStatusType.buildMSMQRunNowGitPull: 11,
-  EnumBuildStatusType.buildMSMQRunNowBuildStart: 12,
-  EnumBuildStatusType.buildMSMQRunNowBuildEnd: 120,
-  EnumBuildStatusType.buildMSMQRunNowFileCopy: 13,
-  EnumBuildStatusType.copyAppReleaseToExportApplication: 14,
-  EnumBuildStatusType.buildMSMQRunNowBuildDownloadFiles: 15,
-  EnumBuildStatusType.buildGitError: 16,
-  EnumBuildStatusType.buildUnsuccessfullyButFileNotExist: 17,
-  EnumBuildStatusType
-      .buildSuccessfullyAndCopyAppReleaseToExportApplicationfully: 20,
-};

@@ -19,83 +19,68 @@ class _CoreLocationOtherApi implements CoreLocationOtherApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<CoreLocationModel>> getAllProvinces(request) async {
+  Future<dynamic> getAllProvinces(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CoreLocationModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/CoreLocation/GetAllProvinces',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CoreLocationModel>.fromJson(
-      _result.data!,
-      (json) => CoreLocationModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/CoreLocation/GetAllProvinces',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<CoreLocationModel>> getAllCities(request) async {
+  Future<dynamic> getAllCities(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CoreLocationModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/CoreLocation/GetAllCities',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CoreLocationModel>.fromJson(
-      _result.data!,
-      (json) => CoreLocationModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/CoreLocation/GetAllCities',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
   @override
-  Future<ErrorException<CoreLocationModel>> getAllCountry(request) async {
+  Future<dynamic> getAllCountry(request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(request.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ErrorException<CoreLocationModel>>(Options(
+    final _data = request;
+    final _result = await _dio.fetch(_setStreamType<dynamic>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'api/v2/CoreLocation/GetAllCountry',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ErrorException<CoreLocationModel>.fromJson(
-      _result.data!,
-      (json) => CoreLocationModel.fromJson(json as Map<String, dynamic>),
-    );
+        .compose(
+          _dio.options,
+          'api/v2/CoreLocation/GetAllCountry',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = _result.data;
     return value;
   }
 
