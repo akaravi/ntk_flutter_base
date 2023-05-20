@@ -109,16 +109,30 @@ class MyApplicationPreference {
         app.setOsType(EnumOperatingSystemType.googleAndroid);
         //set device information
         AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-        app.setDeviceName(androidInfo.device ?? 'notDetectAndroidName');
-        app.setDeviceId(androidInfo.id ?? 'notDetectAndroidId');
+        //karavi app.setDeviceName(androidInfo.device ?? 'notDetectAndroidName');
+        if(androidInfo.device!=''){
+          app.setDeviceName(androidInfo.device);
+        }
+        else 
+        {
+          app.setDeviceName( 'notDetectAndroidName');
+        }
+        if(androidInfo.id!=''){
+          app.setDeviceId(androidInfo.id );
+        }else{
+          app.setDeviceId( 'notDetectAndroidId');
+        }
       } else if (Platform.isIOS) {
         // iOS-specific code
         app.setDeviceTypeEnum(EnumDeviceType.appleIOS);
         app.setOsType(EnumOperatingSystemType.appleIOS);
         //set device information
         IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
-        app.setDeviceName(iosInfo.utsname.machine ?? 'notDetectIOSName');
-        app.setDeviceId(iosInfo.identifierForVendor ?? 'notDetectIosVendorId');
+        
+        app.setDeviceName(iosInfo.utsname.machine?? 'notDetectIOSName' );
+        app.setDeviceId(iosInfo.identifierForVendor??'notDetectIosVendorId' );
+        
+        
       } else if (Platform.isWindows) {
         // windows code
         app.setDeviceTypeEnum(EnumDeviceType.windows);

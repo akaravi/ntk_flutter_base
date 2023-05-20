@@ -1,9 +1,7 @@
 import 'dart:math';
-
 import 'package:path/path.dart' as p;
 import 'package:universal_io/io.dart';
 import 'package:dio/dio.dart';
-
 import 'abstract_uploader.dart';
 
 class UploadRequest implements PlatformUploader {

@@ -18,7 +18,8 @@ abstract class BaseListController<model> extends BaseController {
 
 
   initPageController() {
-    filter ??= FilterModel();
+    //karavi filter ??= FilterModel();
+    filter = FilterModel();
   }
 
   Future<void> fetchPage(int pageKey) async {
