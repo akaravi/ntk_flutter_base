@@ -1,4 +1,4 @@
-import 'package:base/src/models/entity/enums/estate/enum_input_data_type.dart';
+import 'package:ntk_flutter_base/src/models/entity/enums/estate/enum_input_data_type.dart';
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -53,6 +53,9 @@ class EstatePropertyDetailModel {
   @JsonKey(name: 'configValueIntValueMax')
   int? configValueIntValueMax;
   var value;
+
+  //in order to skip error on build json comment this line after do that uncomment :D
+  TextEditingController text = TextEditingController();
   EstatePropertyDetailModel();
 
   
