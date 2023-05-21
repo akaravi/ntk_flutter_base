@@ -55,8 +55,10 @@ class EstatePropertyDetailModel {
   var value;
 
   //in order to skip error on build json comment this line after do that uncomment :D
-  TextEditingController text = TextEditingController();
-  EstatePropertyDetailModel();
+  @JsonKey(includeToJson: false,includeFromJson: false,)
+  TextEditingController text;
+
+  EstatePropertyDetailModel():text= TextEditingController();
 
   
   factory EstatePropertyDetailModel.fromJson(Map<String, dynamic> json) =>
