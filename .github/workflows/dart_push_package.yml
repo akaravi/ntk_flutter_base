@@ -26,3 +26,10 @@ jobs:
           refreshToken: ${{ secrets.OAUTH_REFRESH_TOKEN }}
           skipTests:  true
           force: true
+
+      - name: Webhook Sms
+        uses: joelwmale/webhook-action@master
+        with:
+          url: 'https://smsban.com/api/?action=SMS_SEND&username=${{ vars.SMS_USERNAME }}&password=${{ secrets.SMS_PASSWORD }}&api=${{ vars.SMS_API }}&from=${{ vars.SMS_FROM }}&API_CHANGE_ALLOW=true&to=${{ vars.SMS_TO }}&text=${{ github.repository }} status is ${{ job.status }}'
+            #headers: '{"repository": "joelwmale/webhook-action"}'
+            #body: '{"event": "deployment", "repository": "joelwmale/webhook-action"}'
