@@ -20,8 +20,8 @@ class __SGenericSampleFavoriteApi implements _SGenericSampleFavoriteApi {
 
   @override
   Future<ErrorExceptionBase> addFavorite(
-    fullPath,
-    Id,
+    String fullPath,
+    Object Id,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -46,8 +46,8 @@ class __SGenericSampleFavoriteApi implements _SGenericSampleFavoriteApi {
 
   @override
   Future<ErrorExceptionBase> removeFavorite(
-    fullPath,
-    Id,
+    String fullPath,
+    Object Id,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -72,8 +72,8 @@ class __SGenericSampleFavoriteApi implements _SGenericSampleFavoriteApi {
 
   @override
   Future<ErrorException<String>> getAllFavorite(
-    fullPath,
-    filter,
+    String fullPath,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

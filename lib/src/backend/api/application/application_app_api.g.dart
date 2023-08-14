@@ -19,7 +19,8 @@ class _ApplicationAppMethodApi implements ApplicationAppMethodApi {
   String? baseUrl;
 
   @override
-  Future<ErrorExceptionBase> submitAppScore(request) async {
+  Future<ErrorExceptionBase> submitAppScore(
+      ApplicationScoreDtoModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

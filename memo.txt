@@ -3,6 +3,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 flutter analyze
 flutter pub publish
 ==== https://docs.flutter.dev/reference/flutter-cli
+
 =================================================Here’s how you might use the flutter tool to create, analyze, test, and run an app:
 flutter create my_app
 cd my_app

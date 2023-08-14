@@ -19,7 +19,8 @@ class _CoreLocationOtherApi implements CoreLocationOtherApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<CoreLocationModel>> getAllProvinces(request) async {
+  Future<ErrorException<CoreLocationModel>> getAllProvinces(
+      FilterModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -46,7 +47,8 @@ class _CoreLocationOtherApi implements CoreLocationOtherApi {
   }
 
   @override
-  Future<ErrorException<CoreLocationModel>> getAllCities(request) async {
+  Future<ErrorException<CoreLocationModel>> getAllCities(
+      FilterModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -73,7 +75,8 @@ class _CoreLocationOtherApi implements CoreLocationOtherApi {
   }
 
   @override
-  Future<ErrorException<CoreLocationModel>> getAllCountry(request) async {
+  Future<ErrorException<CoreLocationModel>> getAllCountry(
+      FilterModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

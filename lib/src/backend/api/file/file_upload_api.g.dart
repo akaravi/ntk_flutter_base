@@ -20,8 +20,8 @@ class _FileUploadApi implements FileUploadApi {
 
   @override
   Future<ErrorException<FileUploadModel>> uploadFileWithPartMap(
-    fname,
-    file,
+    String fname,
+    File file,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

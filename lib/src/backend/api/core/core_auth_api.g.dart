@@ -71,7 +71,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorException<TokenDeviceModel>> getTokenDevice(request) async {
+  Future<ErrorException<TokenDeviceModel>> getTokenDevice(
+      TokenDeviceClientInfoDtoModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -98,7 +99,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorExceptionBase> mobileConfirm(model) async {
+  Future<ErrorExceptionBase> mobileConfirm(
+      AuthMobileConfirmDtoModel model) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -122,7 +124,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorExceptionBase> emailConfirm(request) async {
+  Future<ErrorExceptionBase> emailConfirm(
+      AuthEmailConfirmDtoModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -146,7 +149,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorException<CoreUserModel>> signUpUser(request) async {
+  Future<ErrorException<CoreUserModel>> signUpUser(
+      AuthUserSignUpModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -173,7 +177,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> signInUser(request) async {
+  Future<ErrorException<TokenInfoModel>> signInUser(
+      AuthUserSignInModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -200,7 +205,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> forgetPassword(request) async {
+  Future<ErrorException<TokenInfoModel>> forgetPassword(
+      AuthUserChangePasswordModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -227,7 +233,8 @@ class _AuthMethodApi implements AuthMethodApi {
   }
 
   @override
-  Future<ErrorException<TokenInfoModel>> signInUserBySMS(request) async {
+  Future<ErrorException<TokenInfoModel>> signInUserBySMS(
+      AuthUserSignInBySmsDtoModel request) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

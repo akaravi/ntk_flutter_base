@@ -19,7 +19,7 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<String>> getViewModel(fullPath) async {
+  Future<ErrorException<String>> getViewModel(String fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -46,8 +46,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorException<String>> getAll(
-    fullPath,
-    filter,
+    String fullPath,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -76,8 +76,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorException<String>> getAllEditor(
-    fullPath,
-    filter,
+    String fullPath,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -105,7 +105,7 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
   }
 
   @override
-  Future<ErrorException<String>> getOne(fullPath) async {
+  Future<ErrorException<String>> getOne(String fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -131,7 +131,7 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
   }
 
   @override
-  Future<ErrorException<String>> getOneByEdit(fullPath) async {
+  Future<ErrorException<String>> getOneByEdit(String fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'AccessDataType': 'Editor'};
@@ -159,8 +159,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorExceptionBase> exist(
-    fullPath,
-    filter,
+    String fullPath,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -186,8 +186,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorExceptionBase> count(
-    fullPath,
-    filter,
+    String fullPath,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -213,8 +213,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorException<String>> exportFile(
-    fullPath,
-    filter,
+    String fullPath,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -243,8 +243,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorException<String>> add(
-    fullPath,
-    request,
+    String fullPath,
+    Object request,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -272,8 +272,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorException<String>> edit(
-    fullPath,
-    request,
+    String fullPath,
+    Object request,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -300,7 +300,7 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
   }
 
   @override
-  Future<ErrorException<String>> delete(fullPath) async {
+  Future<ErrorException<String>> delete(String fullPath) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -327,8 +327,8 @@ class __SGenericSampleEntityApi implements _SGenericSampleEntityApi {
 
   @override
   Future<ErrorException<String>> deleteAll(
-    fullPath,
-    request,
+    String fullPath,
+    List<dynamic> request,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

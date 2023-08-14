@@ -19,3 +19,5 @@ export 'estate_property_account_type_user_api.dart';
 export 'estate_customer_order_api.dart';
 export 'estate_property_project_api.dart';
 export 'estate_property_company_api.dart';
+export 'estate_category_rack_api.dart';
+export 'estate_category_zone_api.dart';

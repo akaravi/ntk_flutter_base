@@ -19,7 +19,8 @@ class __PollingOtherApi implements _PollingOtherApi {
   String? baseUrl;
 
   @override
-  Future<ErrorException<PollingVoteModel>> addBatch(models) async {
+  Future<ErrorException<PollingVoteModel>> addBatch(
+      List<PollingVoteModel> models) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

@@ -20,8 +20,8 @@ class __OtherEstatePropertyApi implements _OtherEstatePropertyApi {
 
   @override
   Future<ErrorException<EstatePropertyModel>> getWithCustomerId(
-    customerOrderId,
-    filter,
+    String customerOrderId,
+    FilterModel filter,
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

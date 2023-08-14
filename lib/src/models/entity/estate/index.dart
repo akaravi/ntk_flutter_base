@@ -53,3 +53,7 @@ export 'estate_property_type_landuse_model.dart';
 
 
 export 'estate_property_account_type_user_model.dart';
+export 'estate_category_rack_folder_order_model.dart';
+export 'estate_category_rack_folder_property_model.dart';
+export 'estate_category_rack_model.dart';
+export 'estate_category_zone_model.dart';
