@@ -62,22 +62,32 @@ class ApplicationSourceModel extends BaseModuleEntity<int> {
   String? buildKey1String;
   @JsonKey(name: 'buildKey1Value')
   String? buildKey1Value;
+  @JsonKey(name: 'buildKey1Files')
+  String? buildKey1Files;
   @JsonKey(name: 'buildKey2String')
   String? buildKey2String;
   @JsonKey(name: 'buildKey2Value')
   String? buildKey2Value;
+@JsonKey(name: 'buildKey2Files')
+  String? buildKey2Files;
   @JsonKey(name: 'buildKey3String')
   String? buildKey3String;
   @JsonKey(name: 'buildKey3Value')
   String? buildKey3Value;
+@JsonKey(name: 'buildKey3Files')
+  String? buildKey3Files;
   @JsonKey(name: 'buildKey4String')
   String? buildKey4String;
   @JsonKey(name: 'buildKey4Value')
   String? buildKey4Value;
+ @JsonKey(name: 'buildKey4Files')
+  String? buildKey4Files;
   @JsonKey(name: 'buildKey5String')
   String? buildKey5String;
   @JsonKey(name: 'buildKey5Value')
   String? buildKey5Value;
+@JsonKey(name: 'buildKey5Files')
+  String? buildKey5Files;
   @JsonKey(name: 'isPublish')
   bool? isPublish;
   @JsonKey(name: 'sourceNameGit')

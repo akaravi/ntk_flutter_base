@@ -7,6 +7,9 @@ part 'filter_model.g.dart';
 
 @JsonSerializable()
 class FilterModel {
+  @JsonKey(name: 'filters')
+  List<FilterDataModel>? filters;
+
   @JsonKey(name: 'countLoad')
   bool countLoad = false;
 
@@ -31,14 +34,15 @@ class FilterModel {
   @JsonKey(name: 'sortColumn')
   String? sortColumn;
 
-  @JsonKey(name: 'filters')
-  List<FilterDataModel>? filters;
+  @JsonKey(name: 'exportFile')
+  ExportFileModel? exportFile;
 
   FilterModel addFilter(FilterDataModel f) {
     filters ??= [];
     filters!.add(f);
     return this;
   }
+
   FilterModel();
 
   factory FilterModel.fromJson(Map<String, dynamic> json) =>
@@ -49,8 +53,8 @@ class FilterModel {
   bool? _rowPerPageInfinitive;
 
   set rowPerPageInfinitive(bool value) {
-    if (value=true) {
-      rowPerPage=922337203;
+    if (value = true) {
+      rowPerPage = 922337203;
     }
   }
 }

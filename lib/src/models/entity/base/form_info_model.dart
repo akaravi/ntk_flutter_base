@@ -13,10 +13,10 @@ class FormInfoModel {
   String formAlert = "";
   @JsonKey(name: 'formError')
   String formError = "";
-  @JsonKey(name: 'formSubmitAllow')
-  bool formSubmitAllow = true;
   @JsonKey(name: 'formErrorStatus')
   bool formErrorStatus = false;
+  @JsonKey(name: 'formSubmitAllow')
+  bool formSubmitAllow = true;
   @JsonKey(name: 'formSubmitedStatus')
   EnumFormSubmitedStatus? formSubmitedStatus;
   @JsonKey(name: 'buttonSubmittedEnabled')

@@ -6,8 +6,8 @@ part 'field_info_model.g.dart';
 class FieldInfoModel {
   @JsonKey(name: 'fieldName')
   String? fieldName;
-  @JsonKey(name: 'fieldType')
-  String? fieldType;
+  @JsonKey(name: 'fieldTypeString')
+  String? fieldTypeString;
   @JsonKey(name: 'fieldTypeClass')
   String? fieldTypeClass;
   @JsonKey(name: 'fieldTitle')

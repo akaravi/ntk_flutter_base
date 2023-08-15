@@ -74,6 +74,8 @@ class BankPaymentTransactionModel extends BaseEntity<int> {
   DateTime? modelShopInvoiceSaleReleaseDate;
   @JsonKey(name: 'transactionLogs')
   BankPaymentTransactionLogModel? transactionLogs;
+  @JsonKey(name: 'paymentTransactionUrl')
+  String? paymentTransactionUrl;
 
   BankPaymentTransactionModel();
   factory BankPaymentTransactionModel.fromJson(Map<String, dynamic> json) =>
