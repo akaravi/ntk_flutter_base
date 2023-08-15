@@ -12,8 +12,8 @@ class EstatePropertyProjectModel extends BaseModuleEntity<String> {
   int? linkCmsUserId;
   @JsonKey(name: 'linkPropertyCompanyId')
   String? linkPropertyCompanyId;
-  // @JsonKey(name: 'mainAdminRecordStatus')
-  // String? mainAdminRecordStatus;
+  @JsonKey(name: 'mainAdminRecordStatus')
+   String? mainAdminRecordStatus;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'address')
@@ -38,6 +38,10 @@ class EstatePropertyProjectModel extends BaseModuleEntity<String> {
   int? linkFileMovieId;
   @JsonKey(name: 'linkMainImageId')
   int? linkMainImageId;
+  @JsonKey(name: 'file360Views')
+  List<File360ViewModel>? file360Views;
+  @JsonKey(name: 'file360Tour')
+  File360TourModel? file360Tour;
   @JsonKey(name: 'scoreClick')
   int? scoreClick;
   @JsonKey(name: 'scoreSumPercent')

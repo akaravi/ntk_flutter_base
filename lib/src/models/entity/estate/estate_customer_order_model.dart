@@ -20,6 +20,10 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? descriptionHidden;
   @JsonKey(name: 'caseCode')
   String? caseCode;
+
+  @JsonKey(name: 'linkCmsUserId')
+  int? linkCmsUserId;
+
   @JsonKey(name: 'linkEstateUserId')
   String? linkEstateUserId;
   @JsonKey(name: 'linkEstateAgencyId')
@@ -36,6 +40,8 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   List<String>? linkPropertyIdsIgnored;
   @JsonKey(name: 'linkLocationIds')
   List<int>? linkLocationIds;
+  
+  
   @JsonKey(name: "locationTitles")
   List<String>? locationTitles;
   @JsonKey(name: 'linkPropertyTypeLanduseId')
@@ -92,6 +98,19 @@ class EstateCustomerOrderModel extends BaseModuleEntity<String> {
   String? resultSortColumn;
   @JsonKey(name: 'resultSortType')
   EnumSortType? resultSortType;
+  @JsonKey(name: 'accessPublicView')
+  bool? accessPublicView;
+
+  @JsonKey(name: 'scoreRushToBuy')
+  int? scoreRushToBuy;
+  @JsonKey(name: 'scorePurchaseDecision')
+  int? scorePurchaseDecision;
+  @JsonKey(name: 'scoreLiquidityPower')
+  int? scoreLiquidityPower;
+  @JsonKey(name: ' scorePurchasingPower')
+  int?  scorePurchasingPower;
+  @JsonKey(name: '  actionCreateCmsUserId')
+  bool?  actionCreateCmsUserId;
 
   /*Action */
   @JsonKey(name: 'actionSendSmsToCustomer')

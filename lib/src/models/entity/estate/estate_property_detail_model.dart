@@ -36,14 +36,22 @@ class EstatePropertyDetailModel {
   bool? isSearchable;
   @JsonKey(name: 'showInFormOrder')
   int? showInFormOrder;
+  @JsonKey(name: 'showInFastSearch')
+  bool? showInFastSearch;
   @JsonKey(name: 'linkPropertyTypeLanduseId')
   String? linkPropertyTypeLanduseId;
   @JsonKey(name: 'linkPropertyDetailGroupId')
   String? linkPropertyDetailGroupId;
   @JsonKey(name: 'configValueDefaultValueJson')
   String? configValueDefaultValueJson;
-  @JsonKey(name: 'configValueDefaultValue')
-  List<String>? configValueDefaultValue;
+  @JsonKey(name: 'configValueDefaultValues')
+  List<String>? configValueDefaultValues;
+
+  @JsonKey(name: 'configValueNullValueJson')
+  String? configValueNullValueJson;
+  @JsonKey(name: 'configValueNullValues')
+  List<String>? configValueNullValues;
+
   @JsonKey(name: 'configValueForceUseDefaultValue')
   bool? configValueForceUseDefaultValue;
   @JsonKey(name: 'configValueMultipleChoice')

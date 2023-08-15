@@ -14,6 +14,10 @@ class EstateContractTypeModel extends BaseModuleEntity<String> {
   String? titleResourceLanguage;
   @JsonKey(name: 'contentCount')
   int? contentCount;
+
+  @JsonKey(name: 'allowPriceInquiryCalculate')
+  bool? allowPriceInquiryCalculate;
+
   @JsonKey(name: 'titleSoldIt')
   String? titleSoldIt;
   @JsonKey(name: 'titleSoldItML')
