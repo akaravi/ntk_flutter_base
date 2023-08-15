@@ -16,7 +16,7 @@ class SmsMainApiPathPriceServiceModel extends BaseModuleEntity<String> {
   String? linkApiPathId;
  @JsonKey(name: 'linkCoreUserId')
   int? linkCoreUserId;
- @JsonKey(name: 'linkCoreSiteIdlinkCoreSiteId')
+ @JsonKey(name: 'linkCoreSiteId')
   int? linkCoreSiteId;
  @JsonKey(name: 'linkCoreUserGroupId')
   int? linkCoreUserGroupId;

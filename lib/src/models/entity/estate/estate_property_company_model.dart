@@ -10,8 +10,8 @@ class EstatePropertyCompanyModel extends BaseModuleEntity<String> {
   String? title;
   @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  // @JsonKey(name: 'mainAdminRecordStatus')
-  // String? mainAdminRecordStatus;
+  @JsonKey(name: 'mainAdminRecordStatus')
+   String? mainAdminRecordStatus;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'address')
@@ -54,6 +54,12 @@ class EstatePropertyCompanyModel extends BaseModuleEntity<String> {
 
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
+
+  @JsonKey(name: 'file360Views')
+  List<File360ViewModel>? file360Views;
+  @JsonKey(name: 'file360Tour')
+  File360TourModel? file360Tour;
+  
   @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
   @JsonKey(name: 'linkFileMovieIdSrc')

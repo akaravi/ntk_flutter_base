@@ -11,7 +11,7 @@ part 'link_management_accounting_detail_model.g.dart';
 
 @JsonSerializable()
 class LinkManagementAccountingDetailModel extends BaseModuleEntity<int> {
-  @JsonKey(name: 'LinkManagementAccountingDetailModel')
+  @JsonKey(name: 'linkManagementAccountingId')
   int? linkManagementAccountingId;
   // tslint:disable-next-line: variable-name
   @JsonKey(name: 'virtual_Accounting')

@@ -20,6 +20,12 @@ class EstateAccountUserModel extends BaseModuleEntity<String> {
   String? linkLocationIdTitle;
   @JsonKey(name: 'linkLocationIdParentTitle')
   String? linkLocationIdParentTitle;
+  @JsonKey(name: 'linkLocationWorkAreaIds')
+  List<int>? linkLocationWorkAreaIds;
+  @JsonKey(name: 'notificationWorkAreaEstate')
+  bool? notificationWorkAreaEstate;
+  @JsonKey(name: 'notificationWorkAreaCustomerOrder')
+  bool? notificationWorkAreaCustomerOrder;
   @JsonKey(name: 'geolocationlatitude')
   double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')

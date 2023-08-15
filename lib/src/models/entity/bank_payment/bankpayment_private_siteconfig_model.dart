@@ -23,7 +23,7 @@ class BankPaymentPrivateSiteConfigModel extends BaseEntity<int> {
   @JsonKey(name: 'linkPublicConfigId')
   int? linkPublicConfigId;
 
-  @JsonKey(name: ' virtual_PublicConfig')
+  @JsonKey(name: 'virtual_PublicConfig')
   BankPaymentPublicConfigModel? virtual_PublicConfig;
   @JsonKey(name: 'publicConfig')
   BankPaymentPublicConfigModel? publicConfig;

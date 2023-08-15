@@ -51,8 +51,6 @@ class BlogContentModel extends BaseModuleEntity<int> {
   int? viewCount;
   @JsonKey(name: 'favorited')
   bool? favorited;
-  @JsonKey(name: 'linkMainImageIdSrc')
-  String? linkMainImageIdSrc;
   @JsonKey(name: 'expireDate')
   DateTime? expireDate;
   @JsonKey(name: 'moduleCoreCreatedBy')
@@ -77,6 +75,8 @@ class BlogContentModel extends BaseModuleEntity<int> {
   String? otherInfos;
   @JsonKey(name: 'contentAndParameterValues')
   Object? contentAndParameterValues;
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
   @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
   @JsonKey(name: 'linkFileMovieIdSrc')
