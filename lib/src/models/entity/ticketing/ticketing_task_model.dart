@@ -55,8 +55,8 @@ class TicketingTaskModel extends BaseModuleEntity<int> {
   List<String>? uploadFileGUID;
   @JsonKey(name: 'moduleCoreCreatedBy')
   CoreUserModel? moduleCoreCreatedBy;
-  // @JsonKey(name: 'moduleCoreMemberUserId')
-  // MemberUserModel? moduleCoreMemberUserId;
+   @JsonKey(name: 'moduleCoreMemberUserId')
+   MemberUserModel? moduleCoreMemberUserId;
   TicketingTaskModel();
   factory TicketingTaskModel.fromJson(Map<String, dynamic> json) => _$TicketingTaskModelFromJson(json);
 
