@@ -42,16 +42,7 @@ export 'estate_property_detail_group_model.dart';
 export 'estate_property_detail_value_model.dart';
 export 'estate_property_expert_price_model.dart';
 export 'estate_property_share_agency_model.dart';
-
 export 'estate_property_type_landuse_model.dart';
-
-
-
-
-
-
-
-
 export 'estate_property_account_type_user_model.dart';
 export 'estate_category_rack_folder_order_model.dart';
 export 'estate_category_rack_folder_property_model.dart';

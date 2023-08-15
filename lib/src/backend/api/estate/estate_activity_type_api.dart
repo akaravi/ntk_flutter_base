@@ -1,8 +1,9 @@
-import 'package:ntk_cms_flutter_base/src/backend/api/base/base_entity.dart';
 import 'package:ntk_cms_flutter_base/src/index.dart';
 import 'package:dio/dio.dart';
-class  EstateActivityTypeMethodApi
+
+class EstateActivityTypeMethodApi
     extends BaseEntityApi<EstateActivityTypeModel, String> {
   EstateActivityTypeMethodApi.create(Dio dio)
-      : super(dio, 'EstateActivityType', (t) => EstateActivityTypeModel.fromJson(t));
+      : super(dio, 'EstateActivityType',
+            (t) => EstateActivityTypeModel.fromJson(t));
 }

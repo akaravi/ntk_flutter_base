@@ -22,9 +22,9 @@ class MyDialogs {
                           color: Colors.black45.withAlpha(12), spreadRadius: 4)
                     ]),
                 padding: const EdgeInsets.all(32),
-                child: Column(
+                child: const Column(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     CircularProgressIndicator(),
                     SizedBox(height: 32),
                     Text(
