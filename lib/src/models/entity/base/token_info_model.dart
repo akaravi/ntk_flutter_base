@@ -48,7 +48,14 @@ class TokenInfoModel {
   String? title;
   @JsonKey(name: 'photoUrl')
   String? photoUrl;
-
+  @JsonKey(name: 'mobileConfirmed')
+  bool? mobileConfirmed;
+  @JsonKey(name: 'emailConfirmed')
+  bool? emailConfirmed;
+  @JsonKey(name: 'linkMainImageIdSrc')
+  String? linkMainImageIdSrc;
+  @JsonKey(name: 'direction')
+  String? direction;
   TokenInfoModel();
 
   factory TokenInfoModel.fromJson(Map<String, dynamic> json) =>

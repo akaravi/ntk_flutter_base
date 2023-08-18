@@ -16,7 +16,9 @@ ErrorExceptionBase _$ErrorExceptionBaseFromJson(Map<String, dynamic> json) =>
       ..errors = (json['errors'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, (e as List<dynamic>).map((e) => e as String).toList()),
-      );
+      )
+      ..errorType = json['errorType'] as int?
+      ..errorTypeTitle = json['errorTypeTitle'] as String?;
 
 Map<String, dynamic> _$ErrorExceptionBaseToJson(ErrorExceptionBase instance) =>
     <String, dynamic>{
@@ -25,4 +27,6 @@ Map<String, dynamic> _$ErrorExceptionBaseToJson(ErrorExceptionBase instance) =>
       'errorMessage': instance.errorMessage,
       'totalRowCount': instance.totalRowCount,
       'errors': instance.errors,
+      'errorType': instance.errorType,
+      'errorTypeTitle': instance.errorTypeTitle,
     };

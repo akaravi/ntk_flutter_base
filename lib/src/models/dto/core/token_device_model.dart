@@ -17,8 +17,9 @@ class TokenDeviceModel {
   @JsonKey(name: 'deviceToken')
   String? deviceToken;
   @JsonKey(name: 'tokenExpireDate')
-  String? tokenExpireDate;
-
+  DateTime? tokenExpireDate;
+  @JsonKey(name: 'notificationFCMPublicKey')
+  String? notificationFCMPublicKey;
   TokenDeviceModel();
 
   factory TokenDeviceModel.fromJson(Map<String, dynamic> json) =>

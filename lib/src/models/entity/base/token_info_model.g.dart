@@ -32,7 +32,11 @@ TokenInfoModel _$TokenInfoModelFromJson(Map<String, dynamic> json) =>
       ..domain = json['domain'] as String?
       ..subDomain = json['subDomain'] as String?
       ..title = json['title'] as String?
-      ..photoUrl = json['photoUrl'] as String?;
+      ..photoUrl = json['photoUrl'] as String?
+      ..mobileConfirmed = json['mobileConfirmed'] as bool?
+      ..emailConfirmed = json['emailConfirmed'] as bool?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..direction = json['direction'] as String?;
 
 Map<String, dynamic> _$TokenInfoModelToJson(TokenInfoModel instance) =>
     <String, dynamic>{
@@ -59,6 +63,10 @@ Map<String, dynamic> _$TokenInfoModelToJson(TokenInfoModel instance) =>
       'subDomain': instance.subDomain,
       'title': instance.title,
       'photoUrl': instance.photoUrl,
+      'mobileConfirmed': instance.mobileConfirmed,
+      'emailConfirmed': instance.emailConfirmed,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'direction': instance.direction,
     };
 
 const _$EnumManageUserAccessUserTypesEnumMap = {

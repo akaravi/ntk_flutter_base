@@ -162,7 +162,9 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
           json['aboutUsPrivacyPolicyHtmlBody'] as String?
       ..linkFileIdIconSrc = json['linkFileIdIconSrc'] as String?
       ..linkFileIdLogoSrc = json['linkFileIdLogoSrc'] as String?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
+      ..favorited = json['favorited'] as bool?
+      ..scored = json['scored'] as bool?;
 
 Map<String, dynamic> _$ApplicationAppModelToJson(
         ApplicationAppModel instance) =>
@@ -271,6 +273,8 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'linkFileIdIconSrc': instance.linkFileIdIconSrc,
       'linkFileIdLogoSrc': instance.linkFileIdLogoSrc,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'favorited': instance.favorited,
+      'scored': instance.scored,
     };
 
 const _$EnumRecordStatusEnumMap = {

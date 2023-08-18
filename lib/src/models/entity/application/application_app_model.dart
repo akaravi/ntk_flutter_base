@@ -192,6 +192,10 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? linkFileIdLogoSrc;
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
+  @JsonKey(name: 'favorited')
+  bool? favorited;
+  @JsonKey(name: 'scored')
+  bool? scored;
   ApplicationAppModel();
   factory ApplicationAppModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationAppModelFromJson(json);

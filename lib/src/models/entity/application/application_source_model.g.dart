@@ -40,6 +40,7 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
       ..defaultAppId = json['defaultAppId'] as int?
       ..className = json['className'] as String?
       ..packageName = json['packageName'] as String?
+      ..checkUpdate = json['checkUpdate'] as bool?
       ..forceUpdate = json['forceUpdate'] as bool?
       ..linkLastSuccessfullyBuildFileId =
           json['linkLastSuccessfullyBuildFileId'] as int?
@@ -120,6 +121,7 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
       'defaultAppId': instance.defaultAppId,
       'className': instance.className,
       'packageName': instance.packageName,
+      'checkUpdate': instance.checkUpdate,
       'forceUpdate': instance.forceUpdate,
       'linkLastSuccessfullyBuildFileId':
           instance.linkLastSuccessfullyBuildFileId,

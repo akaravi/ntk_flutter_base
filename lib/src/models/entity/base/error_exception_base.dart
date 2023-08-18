@@ -14,6 +14,10 @@ class ErrorExceptionBase {
   int? totalRowCount;
   @JsonKey(name: "errors")
   Map<String, List<String>>? errors;
+  @JsonKey(name: "errorType")
+  int? errorType;
+  @JsonKey(name: "errorTypeTitle")
+  String? errorTypeTitle;
 
   ErrorExceptionBase(this.isSuccess);
 

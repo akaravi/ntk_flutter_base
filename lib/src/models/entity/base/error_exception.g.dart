@@ -20,6 +20,8 @@ ErrorException<TEntity> _$ErrorExceptionFromJson<TEntity>(
         (k, e) =>
             MapEntry(k, (e as List<dynamic>).map((e) => e as String).toList()),
       )
+      ..errorType = json['errorType'] as int?
+      ..errorTypeTitle = json['errorTypeTitle'] as String?
       ..listItems =
           (json['listItems'] as List<dynamic>?)?.map(fromJsonTEntity).toList()
       ..item = _$nullableGenericFromJson(json['item'], fromJsonTEntity)
@@ -39,6 +41,8 @@ Map<String, dynamic> _$ErrorExceptionToJson<TEntity>(
       'errorMessage': instance.errorMessage,
       'totalRowCount': instance.totalRowCount,
       'errors': instance.errors,
+      'errorType': instance.errorType,
+      'errorTypeTitle': instance.errorTypeTitle,
       'listItems': instance.listItems?.map(toJsonTEntity).toList(),
       'item': _$nullableGenericToJson(instance.item, toJsonTEntity),
       'currentPageNumber': instance.currentPageNumber,

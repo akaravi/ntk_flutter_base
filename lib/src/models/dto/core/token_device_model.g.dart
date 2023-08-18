@@ -14,7 +14,10 @@ TokenDeviceModel _$TokenDeviceModelFromJson(Map<String, dynamic> json) =>
       ..rememberOnDevice = json['rememberOnDevice'] as bool?
       ..currentSiteDomainUrl = json['currentSiteDomainUrl'] as String?
       ..deviceToken = json['deviceToken'] as String?
-      ..tokenExpireDate = json['tokenExpireDate'] as String?;
+      ..tokenExpireDate = json['tokenExpireDate'] == null
+          ? null
+          : DateTime.parse(json['tokenExpireDate'] as String)
+      ..notificationFCMPublicKey = json['notificationFCMPublicKey'] as String?;
 
 Map<String, dynamic> _$TokenDeviceModelToJson(TokenDeviceModel instance) =>
     <String, dynamic>{
@@ -24,5 +27,6 @@ Map<String, dynamic> _$TokenDeviceModelToJson(TokenDeviceModel instance) =>
       'rememberOnDevice': instance.rememberOnDevice,
       'currentSiteDomainUrl': instance.currentSiteDomainUrl,
       'deviceToken': instance.deviceToken,
-      'tokenExpireDate': instance.tokenExpireDate,
+      'tokenExpireDate': instance.tokenExpireDate?.toIso8601String(),
+      'notificationFCMPublicKey': instance.notificationFCMPublicKey,
     };
