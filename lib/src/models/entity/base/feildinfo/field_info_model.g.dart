@@ -9,7 +9,7 @@ part of 'field_info_model.dart';
 FieldInfoModel _$FieldInfoModelFromJson(Map<String, dynamic> json) =>
     FieldInfoModel()
       ..fieldName = json['fieldName'] as String?
-      ..fieldType = json['fieldType'] as String?
+      ..fieldTypeString = json['fieldTypeString'] as String?
       ..fieldTypeClass = json['fieldTypeClass'] as String?
       ..fieldTitle = json['fieldTitle'] as String?
       ..fieldDescription = json['fieldDescription'] as String?
@@ -24,7 +24,7 @@ FieldInfoModel _$FieldInfoModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$FieldInfoModelToJson(FieldInfoModel instance) =>
     <String, dynamic>{
       'fieldName': instance.fieldName,
-      'fieldType': instance.fieldType,
+      'fieldTypeString': instance.fieldTypeString,
       'fieldTypeClass': instance.fieldTypeClass,
       'fieldTitle': instance.fieldTitle,
       'fieldDescription': instance.fieldDescription,

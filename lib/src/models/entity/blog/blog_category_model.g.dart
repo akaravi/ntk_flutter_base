@@ -24,6 +24,8 @@ BlogCategoryModel _$BlogCategoryModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -31,14 +33,12 @@ BlogCategoryModel _$BlogCategoryModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..description = json['description'] as String?
-      ..fontIcon = json['fontIcon'] as String?
-      ..linkParentId = json['linkParentId'] as int?
-      ..linkParentIdNode = json['linkParentIdNode'] as String?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..titleResourceLanguage = json['titleResourceLanguage'] as String?
       ..contentCount = json['contentCount'] as int?
+      ..description = json['description'] as String?
+      ..fontIcon = json['fontIcon'] as String?
+      ..linkParentIdNode = json['linkParentIdNode'] as String?
+      ..linkParentId = json['linkParentId'] as int?
       ..children = (json['children'] as List<dynamic>?)
           ?.map((e) => BlogCategoryModel.fromJson(e as Map<String, dynamic>))
           .toList()
@@ -55,7 +55,9 @@ BlogCategoryModel _$BlogCategoryModelFromJson(Map<String, dynamic> json) =>
       ..contentCategores = (json['contentCategores'] as List<dynamic>?)
           ?.map((e) =>
               BlogContentCategoryModel.fromJson(e as Map<String, dynamic>))
-          .toList();
+          .toList()
+      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$BlogCategoryModelToJson(BlogCategoryModel instance) =>
     <String, dynamic>{
@@ -68,25 +70,26 @@ Map<String, dynamic> _$BlogCategoryModelToJson(BlogCategoryModel instance) =>
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
-      'linkMainImageId': instance.linkMainImageId,
-      'description': instance.description,
-      'fontIcon': instance.fontIcon,
-      'linkParentId': instance.linkParentId,
-      'linkParentIdNode': instance.linkParentIdNode,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'titleResourceLanguage': instance.titleResourceLanguage,
       'contentCount': instance.contentCount,
+      'description': instance.description,
+      'fontIcon': instance.fontIcon,
+      'linkParentIdNode': instance.linkParentIdNode,
+      'linkParentId': instance.linkParentId,
       'children': instance.children,
       'category': instance.category,
       ' virtual_Category': instance.virtual_Category,
       'contents': instance.contents,
       'contentCategores': instance.contentCategores,
+      'linkMainImageId': instance.linkMainImageId,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
     };
 
 const _$EnumRecordStatusEnumMap = {

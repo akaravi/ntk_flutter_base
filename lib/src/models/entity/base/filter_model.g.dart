@@ -7,6 +7,9 @@ part of 'filter_model.dart';
 // **************************************************************************
 
 FilterModel _$FilterModelFromJson(Map<String, dynamic> json) => FilterModel()
+  ..filters = (json['filters'] as List<dynamic>?)
+      ?.map((e) => FilterDataModel.fromJson(e as Map<String, dynamic>))
+      .toList()
   ..countLoad = json['countLoad'] as bool
   ..accessLoad = json['accessLoad'] as bool
   ..totalRowData = json['totalRowData'] as int?
@@ -15,12 +18,13 @@ FilterModel _$FilterModelFromJson(Map<String, dynamic> json) => FilterModel()
   ..rowPerPage = json['rowPerPage'] as int
   ..sortType = $enumDecodeNullable(_$EnumSortTypeEnumMap, json['sortType'])
   ..sortColumn = json['sortColumn'] as String?
-  ..filters = (json['filters'] as List<dynamic>?)
-      ?.map((e) => FilterDataModel.fromJson(e as Map<String, dynamic>))
-      .toList();
+  ..exportFile = json['exportFile'] == null
+      ? null
+      : ExportFileModel.fromJson(json['exportFile'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$FilterModelToJson(FilterModel instance) =>
     <String, dynamic>{
+      'filters': instance.filters,
       'countLoad': instance.countLoad,
       'accessLoad': instance.accessLoad,
       'totalRowData': instance.totalRowData,
@@ -29,7 +33,7 @@ Map<String, dynamic> _$FilterModelToJson(FilterModel instance) =>
       'rowPerPage': instance.rowPerPage,
       'sortType': _$EnumSortTypeEnumMap[instance.sortType],
       'sortColumn': instance.sortColumn,
-      'filters': instance.filters,
+      'exportFile': instance.exportFile,
     };
 
 const _$EnumSortTypeEnumMap = {

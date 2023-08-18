@@ -1,7 +1,8 @@
 import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/core/file_360_tour_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/core/file_360_view_model.dart';
 import 'package:ntk_cms_flutter_base/src/models/entity/enums/core/date_type_enum.dart';
 import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
-import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'estate_contract_model.dart';
@@ -16,6 +17,12 @@ part 'estate_property_model.g.dart';
 class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'title')
   String? title;
+  @JsonKey(name: 'scoreEstateLocation')
+  int? scoreEstateLocation;
+  @JsonKey(name: 'scoreEstateBuild')
+  int? scoreEstateBuild;
+  @JsonKey(name: 'scoreEstatePrice')
+  int? scoreEstatePrice;
   @JsonKey(name: 'priority')
   int? priority;
   @JsonKey(name: 'caseCode')
@@ -63,6 +70,11 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'propertyTypeUsage')
   EstatePropertyTypeUsageModel? propertyTypeUsage;
 
+  @JsonKey(name: 'viewContentHidden')
+  bool? viewContentHidden;
+  @JsonKey(name: 'siteAdminViewContentHidden')
+  bool? siteAdminViewContentHidden;
+
   @JsonKey(name: 'sharingKey')
   String? sharingKey;
   @JsonKey(name: 'sharingId')
@@ -86,6 +98,10 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   String? linkExtraImageIds;
   @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
+  @JsonKey(name: 'file360Views')
+  List<File360ViewModel>? file360Views;
+  @JsonKey(name: ' file360Tour')
+  File360TourModel? file360Tour;
 
   /// <summary>
   /// تعداد مجموع آرا
@@ -155,6 +171,8 @@ class EstatePropertyModel extends BaseModuleEntity<String> {
   String? linkLocationIdParentTitle;
   @JsonKey(name: 'favorited')
   bool? favorited;
+  @JsonKey(name: 'actionCreateCmsUserId')
+  bool? actionCreateCmsUserId;
   /**Action */
   @JsonKey(name: 'actionSendSmsToCustomer')
   bool? actionSendSmsToCustomer;

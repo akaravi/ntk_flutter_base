@@ -25,6 +25,8 @@ EstateContractTypeModel _$EstateContractTypeModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -35,6 +37,7 @@ EstateContractTypeModel _$EstateContractTypeModelFromJson(
       ..titleML = json['titleML'] as String?
       ..titleResourceLanguage = json['titleResourceLanguage'] as String?
       ..contentCount = json['contentCount'] as int?
+      ..allowPriceInquiryCalculate = json['allowPriceInquiryCalculate'] as bool?
       ..titleSoldIt = json['titleSoldIt'] as String?
       ..titleSoldItML = json['titleSoldItML'] as String?
       ..titleSoldItResourceLanguage =
@@ -82,6 +85,7 @@ Map<String, dynamic> _$EstateContractTypeModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -91,6 +95,7 @@ Map<String, dynamic> _$EstateContractTypeModelToJson(
       'titleML': instance.titleML,
       'titleResourceLanguage': instance.titleResourceLanguage,
       'contentCount': instance.contentCount,
+      'allowPriceInquiryCalculate': instance.allowPriceInquiryCalculate,
       'titleSoldIt': instance.titleSoldIt,
       'titleSoldItML': instance.titleSoldItML,
       'titleSoldItResourceLanguage': instance.titleSoldItResourceLanguage,

@@ -1,6 +1,7 @@
 import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
 import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/member/member_user_model.dart';
 
 import '../core/core_user_model.dart';
 import 'ticketing_answer_model.dart';
@@ -55,8 +56,8 @@ class TicketingTaskModel extends BaseModuleEntity<int> {
   List<String>? uploadFileGUID;
   @JsonKey(name: 'moduleCoreCreatedBy')
   CoreUserModel? moduleCoreCreatedBy;
-  // @JsonKey(name: 'moduleCoreMemberUserId')
-  // MemberUserModel? moduleCoreMemberUserId;
+   @JsonKey(name: 'moduleCoreMemberUserId')
+   MemberUserModel? moduleCoreMemberUserId;
   TicketingTaskModel();
   factory TicketingTaskModel.fromJson(Map<String, dynamic> json) => _$TicketingTaskModelFromJson(json);
 

@@ -25,6 +25,8 @@ TicketingAnswerModel _$TicketingAnswerModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -70,7 +72,11 @@ TicketingAnswerModel _$TicketingAnswerModelFromJson(
       ..moduleCoreCreatedBy = json['moduleCoreCreatedBy'] == null
           ? null
           : CoreUserModel.fromJson(
-              json['moduleCoreCreatedBy'] as Map<String, dynamic>);
+              json['moduleCoreCreatedBy'] as Map<String, dynamic>)
+      ..moduleCoreMemberUserId = json['moduleCoreMemberUserId'] == null
+          ? null
+          : MemberUserModel.fromJson(
+              json['moduleCoreMemberUserId'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$TicketingAnswerModelToJson(
         TicketingAnswerModel instance) =>
@@ -84,6 +90,7 @@ Map<String, dynamic> _$TicketingAnswerModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -105,6 +112,7 @@ Map<String, dynamic> _$TicketingAnswerModelToJson(
       'linkFileIdsSrc': instance.linkFileIdsSrc,
       'uploadFileGUID': instance.uploadFileGUID,
       'moduleCoreCreatedBy': instance.moduleCoreCreatedBy,
+      'moduleCoreMemberUserId': instance.moduleCoreMemberUserId,
     };
 
 const _$EnumRecordStatusEnumMap = {

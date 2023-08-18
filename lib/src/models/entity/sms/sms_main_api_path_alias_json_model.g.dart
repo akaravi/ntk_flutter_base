@@ -25,6 +25,8 @@ SmsMainApiPathAliasJsonModel _$SmsMainApiPathAliasJsonModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -69,6 +71,8 @@ SmsMainApiPathAliasJsonModel _$SmsMainApiPathAliasJsonModelFromJson(
           json['apiAbilityRegulatorDenayToSend'] as String?
       ..apiAbilityLengthMinToSend = json['apiAbilityLengthMinToSend'] as int?
       ..apiAbilityLengthMaxToSend = json['apiAbilityLengthMaxToSend'] as int?
+      ..apiAbilitySendByQueue = json['apiAbilitySendByQueue'] as bool?
+      ..apiAbilitySendByDirect = json['apiAbilitySendByDirect'] as bool?
       ..apiPathSuperSeders = (json['apiPathSuperSeders'] as List<dynamic>?)
           ?.map((e) =>
               SmsMainApiPathSuperSederModel.fromJson(e as Map<String, dynamic>))
@@ -92,6 +96,11 @@ SmsMainApiPathAliasJsonModel _$SmsMainApiPathAliasJsonModelFromJson(
               e as Map<String, dynamic>))
           .toList()
       ..apiSendMessageIsOn = json['apiSendMessageIsOn'] as bool?
+      ..apiSendMessageAddTextFirst =
+          json['apiSendMessageAddTextFirst'] as String?
+      ..apiSendMessageAddTextEnd = json['apiSendMessageAddTextEnd'] as String?
+      ..sendMessageAddTextFirst = json['sendMessageAddTextFirst'] as String?
+      ..sendMessageAddTextEnd = json['sendMessageAddTextEnd'] as String?
       ..apiDeliveryIsOn = json['apiDeliveryIsOn'] as bool?
       ..apiCreditBackIsOn = json['apiCreditBackIsOn'] as bool?
       ..apiCreditBackCheckOnSend = json['apiCreditBackCheckOnSend']
@@ -161,6 +170,7 @@ Map<String, dynamic> _$SmsMainApiPathAliasJsonModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -194,12 +204,18 @@ Map<String, dynamic> _$SmsMainApiPathAliasJsonModelToJson(
       'apiAbilityRegulatorDenayToSend': instance.apiAbilityRegulatorDenayToSend,
       'apiAbilityLengthMinToSend': instance.apiAbilityLengthMinToSend,
       'apiAbilityLengthMaxToSend': instance.apiAbilityLengthMaxToSend,
+      'apiAbilitySendByQueue': instance.apiAbilitySendByQueue,
+      'apiAbilitySendByDirect': instance.apiAbilitySendByDirect,
       'apiPathSuperSeders': instance.apiPathSuperSeders,
       'apiPathMustSuperSeders': instance.apiPathMustSuperSeders,
       'apiPathPermissions': instance.apiPathPermissions,
       'apiPathAndApiPathNumbers': instance.apiPathAndApiPathNumbers,
       'apiPathPriceServices': instance.apiPathPriceServices,
       'apiSendMessageIsOn': instance.apiSendMessageIsOn,
+      'apiSendMessageAddTextFirst': instance.apiSendMessageAddTextFirst,
+      'apiSendMessageAddTextEnd': instance.apiSendMessageAddTextEnd,
+      'sendMessageAddTextFirst': instance.sendMessageAddTextFirst,
+      'sendMessageAddTextEnd': instance.sendMessageAddTextEnd,
       'apiDeliveryIsOn': instance.apiDeliveryIsOn,
       'apiCreditBackIsOn': instance.apiCreditBackIsOn,
       'apiCreditBackCheckOnSend': instance.apiCreditBackCheckOnSend,

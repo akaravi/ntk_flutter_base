@@ -13,7 +13,7 @@ DataFieldInfoModel _$DataFieldInfoModelFromJson(Map<String, dynamic> json) =>
       json['accessEditField'] as bool,
     )
       ..fieldName = json['fieldName'] as String?
-      ..fieldType = json['fieldType'] as String?
+      ..fieldTypeString = json['fieldTypeString'] as String?
       ..fieldTypeClass = json['fieldTypeClass'] as String?
       ..fieldTitle = json['fieldTitle'] as String?
       ..fieldDescription = json['fieldDescription'] as String?
@@ -30,7 +30,7 @@ DataFieldInfoModel _$DataFieldInfoModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$DataFieldInfoModelToJson(DataFieldInfoModel instance) =>
     <String, dynamic>{
       'fieldName': instance.fieldName,
-      'fieldType': instance.fieldType,
+      'fieldTypeString': instance.fieldTypeString,
       'fieldTypeClass': instance.fieldTypeClass,
       'fieldTitle': instance.fieldTitle,
       'fieldDescription': instance.fieldDescription,

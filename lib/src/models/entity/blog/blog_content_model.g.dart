@@ -24,6 +24,8 @@ BlogContentModel _$BlogContentModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -52,7 +54,6 @@ BlogContentModel _$BlogContentModelFromJson(Map<String, dynamic> json) =>
       ..scoreSumPercent = json['scoreSumPercent'] as int?
       ..viewCount = json['viewCount'] as int?
       ..favorited = json['favorited'] as bool?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..expireDate = json['expireDate'] == null
           ? null
           : DateTime.parse(json['expireDate'] as String)
@@ -88,6 +89,7 @@ BlogContentModel _$BlogContentModelFromJson(Map<String, dynamic> json) =>
           .toList()
       ..otherInfos = json['otherInfos'] as String?
       ..contentAndParameterValues = json['contentAndParameterValues']
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
       ..linkFilePodcastIdSrc = json['linkFilePodcastIdSrc'] as String?
       ..linkFileMovieIdSrc = json['linkFileMovieIdSrc'] as String?
       ..linkFileIdsSrc = (json['linkFileIdsSrc'] as List<dynamic>?)
@@ -109,6 +111,7 @@ Map<String, dynamic> _$BlogContentModelToJson(BlogContentModel instance) =>
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -133,7 +136,6 @@ Map<String, dynamic> _$BlogContentModelToJson(BlogContentModel instance) =>
       'scoreSumPercent': instance.scoreSumPercent,
       'viewCount': instance.viewCount,
       'favorited': instance.favorited,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'expireDate': instance.expireDate?.toIso8601String(),
       'moduleCoreCreatedBy': instance.moduleCoreCreatedBy,
       'moduleCoreUpdatedBy': instance.moduleCoreUpdatedBy,
@@ -146,6 +148,7 @@ Map<String, dynamic> _$BlogContentModelToJson(BlogContentModel instance) =>
       'contentCategores': instance.contentCategores,
       'otherInfos': instance.otherInfos,
       'contentAndParameterValues': instance.contentAndParameterValues,
+      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
       'linkFilePodcastIdSrc': instance.linkFilePodcastIdSrc,
       'linkFileMovieIdSrc': instance.linkFileMovieIdSrc,
       'linkFileIdsSrc': instance.linkFileIdsSrc,

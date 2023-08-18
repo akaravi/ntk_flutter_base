@@ -1,6 +1,8 @@
 import 'package:ntk_cms_flutter_base/src/models/entity/base/base_module_entity.dart';
-import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/core/file_360_tour_model.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/core/file_360_view_model.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:ntk_cms_flutter_base/src/models/entity/enums/enum_record_status.dart';
 
 part 'estate_property_company_model.g.dart';
 
@@ -10,8 +12,8 @@ class EstatePropertyCompanyModel extends BaseModuleEntity<String> {
   String? title;
   @JsonKey(name: 'linkCmsUserId')
   int? linkCmsUserId;
-  // @JsonKey(name: 'mainAdminRecordStatus')
-  // String? mainAdminRecordStatus;
+  @JsonKey(name: 'mainAdminRecordStatus')
+  String? mainAdminRecordStatus;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'address')
@@ -54,6 +56,12 @@ class EstatePropertyCompanyModel extends BaseModuleEntity<String> {
 
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
+
+  @JsonKey(name: 'file360Views')
+  List<File360ViewModel>? file360Views;
+  @JsonKey(name: 'file360Tour')
+  File360TourModel? file360Tour;
+
   @JsonKey(name: 'linkFilePodcastIdSrc')
   String? linkFilePodcastIdSrc;
   @JsonKey(name: 'linkFileMovieIdSrc')

@@ -25,6 +25,8 @@ BiographyContentModel _$BiographyContentModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -41,7 +43,6 @@ BiographyContentModel _$BiographyContentModelFromJson(
       ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
           (json['geolocationlongitude'] as num?)?.toDouble()
-      ..keyword = json['keyword'] as String?
       ..linkFileIds = json['linkFileIds'] as String?
       ..linkFilePodcastId = json['linkFilePodcastId'] as int?
       ..linkFileMovieId = json['linkFileMovieId'] as int?
@@ -113,6 +114,7 @@ Map<String, dynamic> _$BiographyContentModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -125,7 +127,6 @@ Map<String, dynamic> _$BiographyContentModelToJson(
       'fromDate': instance.fromDate?.toIso8601String(),
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
-      'keyword': instance.keyword,
       'linkFileIds': instance.linkFileIds,
       'linkFilePodcastId': instance.linkFilePodcastId,
       'linkFileMovieId': instance.linkFileMovieId,

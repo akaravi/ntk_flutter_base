@@ -24,6 +24,8 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -113,14 +115,19 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..themeConfigJsonValues = json['themeConfigJsonValues'] as String?
       ..buildKey1String = json['buildKey1String'] as String?
       ..buildKey1Value = json['buildKey1Value'] as String?
+      ..buildKey1Files = json['buildKey1Files'] as String?
       ..buildKey2String = json['buildKey2String'] as String?
       ..buildKey2Value = json['buildKey2Value'] as String?
+      ..buildKey2Files = json['buildKey2Files'] as String?
       ..buildKey3String = json['buildKey3String'] as String?
       ..buildKey3Value = json['buildKey3Value'] as String?
+      ..buildKey3Files = json['buildKey3Files'] as String?
       ..buildKey4String = json['buildKey4String'] as String?
       ..buildKey4Value = json['buildKey4Value'] as String?
+      ..buildKey4Files = json['buildKey4Files'] as String?
       ..buildKey5String = json['buildKey5String'] as String?
       ..buildKey5Value = json['buildKey5Value'] as String?
+      ..buildKey5Files = json['buildKey5Files'] as String?
       ..downloadLinkSrcCustomize = json['downloadLinkSrcCustomize'] as String?
       ..downloadLinkSrc = json['downloadLinkSrc'] as String?
       ..downloadLinkUpdateSrc = json['downloadLinkUpdateSrc'] as String?
@@ -144,6 +151,7 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..aboutUsLinkTwitter = json['aboutUsLinkTwitter'] as String?
       ..aboutUsLinkGooglePlus = json['aboutUsLinkGooglePlus'] as String?
       ..aboutUsLinkInstagram = json['aboutUsLinkInstagram'] as String?
+      ..aboutUsLinkWhatsapp = json['aboutUsLinkWhatsapp'] as String?
       ..aboutUsLinklinkedin = json['aboutUsLinklinkedin'] as String?
       ..aboutUsLinkYahoo = json['aboutUsLinkYahoo'] as String?
       ..aboutUsLinkYoutube = json['aboutUsLinkYoutube'] as String?
@@ -168,6 +176,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -218,14 +227,19 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'themeConfigJsonValues': instance.themeConfigJsonValues,
       'buildKey1String': instance.buildKey1String,
       'buildKey1Value': instance.buildKey1Value,
+      'buildKey1Files': instance.buildKey1Files,
       'buildKey2String': instance.buildKey2String,
       'buildKey2Value': instance.buildKey2Value,
+      'buildKey2Files': instance.buildKey2Files,
       'buildKey3String': instance.buildKey3String,
       'buildKey3Value': instance.buildKey3Value,
+      'buildKey3Files': instance.buildKey3Files,
       'buildKey4String': instance.buildKey4String,
       'buildKey4Value': instance.buildKey4Value,
+      'buildKey4Files': instance.buildKey4Files,
       'buildKey5String': instance.buildKey5String,
       'buildKey5Value': instance.buildKey5Value,
+      'buildKey5Files': instance.buildKey5Files,
       'downloadLinkSrcCustomize': instance.downloadLinkSrcCustomize,
       'downloadLinkSrc': instance.downloadLinkSrc,
       'downloadLinkUpdateSrc': instance.downloadLinkUpdateSrc,
@@ -246,6 +260,7 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'aboutUsLinkTwitter': instance.aboutUsLinkTwitter,
       'aboutUsLinkGooglePlus': instance.aboutUsLinkGooglePlus,
       'aboutUsLinkInstagram': instance.aboutUsLinkInstagram,
+      'aboutUsLinkWhatsapp': instance.aboutUsLinkWhatsapp,
       'aboutUsLinklinkedin': instance.aboutUsLinklinkedin,
       'aboutUsLinkYahoo': instance.aboutUsLinkYahoo,
       'aboutUsLinkYoutube': instance.aboutUsLinkYoutube,

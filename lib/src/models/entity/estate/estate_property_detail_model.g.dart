@@ -23,12 +23,18 @@ EstatePropertyDetailModel _$EstatePropertyDetailModelFromJson(
       ..isHistoryable = json['isHistoryable'] as bool?
       ..isSearchable = json['isSearchable'] as bool?
       ..showInFormOrder = json['showInFormOrder'] as int?
+      ..showInFastSearch = json['showInFastSearch'] as bool?
       ..linkPropertyTypeLanduseId = json['linkPropertyTypeLanduseId'] as String?
       ..linkPropertyDetailGroupId = json['linkPropertyDetailGroupId'] as String?
       ..configValueDefaultValueJson =
           json['configValueDefaultValueJson'] as String?
-      ..configValueDefaultValue =
-          (json['configValueDefaultValue'] as List<dynamic>?)
+      ..configValueDefaultValues =
+          (json['configValueDefaultValues'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
+      ..configValueNullValueJson = json['configValueNullValueJson'] as String?
+      ..configValueNullValues =
+          (json['configValueNullValues'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
       ..configValueForceUseDefaultValue =
@@ -54,10 +60,13 @@ Map<String, dynamic> _$EstatePropertyDetailModelToJson(
       'isHistoryable': instance.isHistoryable,
       'isSearchable': instance.isSearchable,
       'showInFormOrder': instance.showInFormOrder,
+      'showInFastSearch': instance.showInFastSearch,
       'linkPropertyTypeLanduseId': instance.linkPropertyTypeLanduseId,
       'linkPropertyDetailGroupId': instance.linkPropertyDetailGroupId,
       'configValueDefaultValueJson': instance.configValueDefaultValueJson,
-      'configValueDefaultValue': instance.configValueDefaultValue,
+      'configValueDefaultValues': instance.configValueDefaultValues,
+      'configValueNullValueJson': instance.configValueNullValueJson,
+      'configValueNullValues': instance.configValueNullValues,
       'configValueForceUseDefaultValue':
           instance.configValueForceUseDefaultValue,
       'configValueMultipleChoice': instance.configValueMultipleChoice,

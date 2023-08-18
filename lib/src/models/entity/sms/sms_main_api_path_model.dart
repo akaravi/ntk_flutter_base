@@ -74,6 +74,10 @@ part 'sms_main_api_path_model.g.dart';
   int?apiAbilityLengthMinToSend ;
   @JsonKey(name: 'apiAbilityLengthMaxToSend')
   int?apiAbilityLengthMaxToSend ;
+  @JsonKey(name: 'apiAbilitySendByQueue')
+  bool? apiAbilitySendByQueue ;
+  @JsonKey(name: 'apiAbilitySendByDirect')
+  bool? apiAbilitySendByDirect ;
   @JsonKey(name: 'apiPathSuperSeders')
   List<SmsMainApiPathSuperSederModel>? apiPathSuperSeders;
   @JsonKey(name: 'apiPathMustSuperSeders')
@@ -86,6 +90,14 @@ part 'sms_main_api_path_model.g.dart';
    List<SmsMainApiPathPriceServiceModel>? apiPathPriceServices;
   @JsonKey(name: 'apiSendMessageIsOn')
   bool? apiSendMessageIsOn;
+  @JsonKey(name: 'apiSendMessageAddTextFirst')
+  String? apiSendMessageAddTextFirst;
+  @JsonKey(name: 'apiSendMessageAddTextEnd')
+  String? apiSendMessageAddTextEnd;
+  @JsonKey(name: 'sendMessageAddTextFirst')
+  String? sendMessageAddTextFirst;
+  @JsonKey(name: 'sendMessageAddTextEnd')
+  String? sendMessageAddTextEnd;
 
 
   @JsonKey(name: 'apiDeliveryIsOn')

@@ -25,6 +25,8 @@ LinkManagementAccountingDetailModel
           ..antiInjectionDate = json['antiInjectionDate'] == null
               ? null
               : DateTime.parse(json['antiInjectionDate'] as String)
+          ..antiInjectionTokenActionState =
+              json['antiInjectionTokenActionState'] as bool?
           ..antiInjectionExpiredMinute =
               json['antiInjectionExpiredMinute'] as int?
           ..antiInjectionToken = json['antiInjectionToken'] as String?
@@ -33,7 +35,7 @@ LinkManagementAccountingDetailModel
               : DateTime.parse(json['antiInjectionExpireDate'] as String)
           ..linkSiteId = json['linkSiteId'] as int?
           ..linkManagementAccountingId =
-              json['LinkManagementAccountingDetailModel'] as int?
+              json['linkManagementAccountingId'] as int?
           ..virtual_Accounting = json['virtual_Accounting'] == null
               ? null
               : LinkManagementAccountingModel.fromJson(
@@ -66,13 +68,13 @@ Map<String, dynamic> _$LinkManagementAccountingDetailModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'LinkManagementAccountingDetailModel':
-          instance.linkManagementAccountingId,
+      'linkManagementAccountingId': instance.linkManagementAccountingId,
       'virtual_Accounting': instance.virtual_Accounting,
       'accounting': instance.accounting,
       'accountingType':

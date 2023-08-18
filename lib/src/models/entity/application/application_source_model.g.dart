@@ -25,6 +25,8 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -72,14 +74,19 @@ ApplicationSourceModel _$ApplicationSourceModelFromJson(
           json['defaultConfigRuntimeSiteJsonValues'] as String?
       ..buildKey1String = json['buildKey1String'] as String?
       ..buildKey1Value = json['buildKey1Value'] as String?
+      ..buildKey1Files = json['buildKey1Files'] as String?
       ..buildKey2String = json['buildKey2String'] as String?
       ..buildKey2Value = json['buildKey2Value'] as String?
+      ..buildKey2Files = json['buildKey2Files'] as String?
       ..buildKey3String = json['buildKey3String'] as String?
       ..buildKey3Value = json['buildKey3Value'] as String?
+      ..buildKey3Files = json['buildKey3Files'] as String?
       ..buildKey4String = json['buildKey4String'] as String?
       ..buildKey4Value = json['buildKey4Value'] as String?
+      ..buildKey4Files = json['buildKey4Files'] as String?
       ..buildKey5String = json['buildKey5String'] as String?
       ..buildKey5Value = json['buildKey5Value'] as String?
+      ..buildKey5Files = json['buildKey5Files'] as String?
       ..isPublish = json['isPublish'] as bool?
       ..sourceNameGit = json['sourceNameGit'] as String?
       ..oSType =
@@ -100,6 +107,7 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -138,14 +146,19 @@ Map<String, dynamic> _$ApplicationSourceModelToJson(
           instance.defaultConfigRuntimeSiteJsonValues,
       'buildKey1String': instance.buildKey1String,
       'buildKey1Value': instance.buildKey1Value,
+      'buildKey1Files': instance.buildKey1Files,
       'buildKey2String': instance.buildKey2String,
       'buildKey2Value': instance.buildKey2Value,
+      'buildKey2Files': instance.buildKey2Files,
       'buildKey3String': instance.buildKey3String,
       'buildKey3Value': instance.buildKey3Value,
+      'buildKey3Files': instance.buildKey3Files,
       'buildKey4String': instance.buildKey4String,
       'buildKey4Value': instance.buildKey4Value,
+      'buildKey4Files': instance.buildKey4Files,
       'buildKey5String': instance.buildKey5String,
       'buildKey5Value': instance.buildKey5Value,
+      'buildKey5Files': instance.buildKey5Files,
       'isPublish': instance.isPublish,
       'sourceNameGit': instance.sourceNameGit,
       'oSType;': _$EnumOperatingSystemTypeEnumMap[instance.oSType],

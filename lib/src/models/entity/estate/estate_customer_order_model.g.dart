@@ -25,6 +25,8 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -35,6 +37,7 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..description = json['description'] as String?
       ..descriptionHidden = json['descriptionHidden'] as String?
       ..caseCode = json['caseCode'] as String?
+      ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..linkEstateUserId = json['linkEstateUserId'] as String?
       ..linkEstateAgencyId = json['linkEstateAgencyId'] as String?
       ..linkEstateCustomerCategoryId =
@@ -91,6 +94,12 @@ EstateCustomerOrderModel _$EstateCustomerOrderModelFromJson(
       ..resultSortColumn = json['resultSortColumn'] as String?
       ..resultSortType =
           $enumDecodeNullable(_$EnumSortTypeEnumMap, json['resultSortType'])
+      ..accessPublicView = json['accessPublicView'] as bool?
+      ..scoreRushToBuy = json['scoreRushToBuy'] as int?
+      ..scorePurchaseDecision = json['scorePurchaseDecision'] as int?
+      ..scoreLiquidityPower = json['scoreLiquidityPower'] as int?
+      ..scorePurchasingPower = json[' scorePurchasingPower'] as int?
+      ..actionCreateCmsUserId = json['  actionCreateCmsUserId'] as bool?
       ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?
       ..actionSendSmsToContactNumber =
           json['actionSendSmsToContactNumber'] as String?
@@ -115,6 +124,7 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -124,6 +134,7 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'description': instance.description,
       'descriptionHidden': instance.descriptionHidden,
       'caseCode': instance.caseCode,
+      'linkCmsUserId': instance.linkCmsUserId,
       'linkEstateUserId': instance.linkEstateUserId,
       'linkEstateAgencyId': instance.linkEstateAgencyId,
       'linkEstateCustomerCategoryId': instance.linkEstateCustomerCategoryId,
@@ -160,6 +171,12 @@ Map<String, dynamic> _$EstateCustomerOrderModelToJson(
       'lastResultRowCount': instance.lastResultRowCount,
       'resultSortColumn': instance.resultSortColumn,
       'resultSortType': _$EnumSortTypeEnumMap[instance.resultSortType],
+      'accessPublicView': instance.accessPublicView,
+      'scoreRushToBuy': instance.scoreRushToBuy,
+      'scorePurchaseDecision': instance.scorePurchaseDecision,
+      'scoreLiquidityPower': instance.scoreLiquidityPower,
+      ' scorePurchasingPower': instance.scorePurchasingPower,
+      '  actionCreateCmsUserId': instance.actionCreateCmsUserId,
       'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
       'actionSendSmsToContactNumber': instance.actionSendSmsToContactNumber,
       'propertyTypeLanduse': instance.propertyTypeLanduse,

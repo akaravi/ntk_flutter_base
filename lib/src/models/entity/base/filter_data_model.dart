@@ -6,20 +6,20 @@ part 'filter_data_model.g.dart';
 
 @JsonSerializable()
 class FilterDataModel {
-  @JsonKey(name: 'propertyName')
-  String? propertyName;
-  @JsonKey(name: 'clauseType')
-  EnumClauseType? clauseType;
-  @JsonKey(name: 'propertyAnyName')
-  String? propertyAnyName;
-  @JsonKey(name: 'searchType')
-  EnumFilterDataModelSearchTypes? searchType;
   @JsonKey(name: 'filters')
   List<FilterDataModel>? filters;
   @JsonKey(name: 'value')
   Object? value;
   @JsonKey(name: 'values')
   List<Object>? values;
+  @JsonKey(name: 'propertyName')
+  String? propertyName;
+  @JsonKey(name: 'propertyAnyName')
+  String? propertyAnyName;
+  @JsonKey(name: 'clauseType')
+  EnumClauseType? clauseType;
+  @JsonKey(name: 'searchType')
+  EnumFilterDataModelSearchTypes? searchType;
   @JsonKey(name: 'latitudeValue')
   int? latitudeValue;
   @JsonKey(name: 'longitudeValue')

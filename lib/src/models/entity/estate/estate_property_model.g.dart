@@ -24,6 +24,8 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -31,6 +33,9 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
+      ..scoreEstateLocation = json['scoreEstateLocation'] as int?
+      ..scoreEstateBuild = json['scoreEstateBuild'] as int?
+      ..scoreEstatePrice = json['scoreEstatePrice'] as int?
       ..priority = json['priority'] as int?
       ..caseCode = json['caseCode'] as String?
       ..mainAdminRecordStatus = $enumDecodeNullable(
@@ -64,6 +69,8 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
           ? null
           : EstatePropertyTypeUsageModel.fromJson(
               json['propertyTypeUsage'] as Map<String, dynamic>)
+      ..viewContentHidden = json['viewContentHidden'] as bool?
+      ..siteAdminViewContentHidden = json['siteAdminViewContentHidden'] as bool?
       ..sharingKey = json['sharingKey'] as String?
       ..sharingId = json['sharingId'] as int?
       ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
@@ -74,6 +81,13 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..linkMainImageId = json['linkMainImageId'] as int?
       ..linkExtraImageIds = json['linkExtraImageIds'] as String?
       ..linkFileIds = json['linkFileIds'] as String?
+      ..file360Views = (json['file360Views'] as List<dynamic>?)
+          ?.map((e) => File360ViewModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..file360Tour = json[' file360Tour'] == null
+          ? null
+          : File360TourModel.fromJson(
+              json[' file360Tour'] as Map<String, dynamic>)
       ..scoreClick = json['scoreClick'] as int?
       ..scoreSumPercent = json['scoreSumPercent'] as int?
       ..adsActive = json['adsActive'] as bool?
@@ -115,6 +129,7 @@ EstatePropertyModel _$EstatePropertyModelFromJson(Map<String, dynamic> json) =>
       ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
       ..favorited = json['favorited'] as bool?
+      ..actionCreateCmsUserId = json['actionCreateCmsUserId'] as bool?
       ..actionSendSmsToCustomer = json['actionSendSmsToCustomer'] as bool?
       ..actionSendSmsToAgent = json['actionSendSmsToAgent'] as bool?
       ..actionSendSmsToCustomerOrder =
@@ -134,12 +149,16 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
+      'scoreEstateLocation': instance.scoreEstateLocation,
+      'scoreEstateBuild': instance.scoreEstateBuild,
+      'scoreEstatePrice': instance.scoreEstatePrice,
       'priority': instance.priority,
       'caseCode': instance.caseCode,
       'mainAdminRecordStatus':
@@ -165,6 +184,8 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkPropertyCompanyId': instance.linkPropertyCompanyId,
       'propertyTypeLanduse': instance.propertyTypeLanduse,
       'propertyTypeUsage': instance.propertyTypeUsage,
+      'viewContentHidden': instance.viewContentHidden,
+      'siteAdminViewContentHidden': instance.siteAdminViewContentHidden,
       'sharingKey': instance.sharingKey,
       'sharingId': instance.sharingId,
       'geolocationlatitude': instance.geolocationlatitude,
@@ -174,6 +195,8 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkMainImageId': instance.linkMainImageId,
       'linkExtraImageIds': instance.linkExtraImageIds,
       'linkFileIds': instance.linkFileIds,
+      'file360Views': instance.file360Views,
+      ' file360Tour': instance.file360Tour,
       'scoreClick': instance.scoreClick,
       'scoreSumPercent': instance.scoreSumPercent,
       'adsActive': instance.adsActive,
@@ -197,6 +220,7 @@ Map<String, dynamic> _$EstatePropertyModelToJson(
       'linkLocationIdTitle': instance.linkLocationIdTitle,
       'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
       'favorited': instance.favorited,
+      'actionCreateCmsUserId': instance.actionCreateCmsUserId,
       'actionSendSmsToCustomer': instance.actionSendSmsToCustomer,
       'actionSendSmsToAgent': instance.actionSendSmsToAgent,
       'actionSendSmsToCustomerOrder': instance.actionSendSmsToCustomerOrder,

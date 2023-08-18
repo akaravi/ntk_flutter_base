@@ -10,7 +10,7 @@ GetPropertiesInfoModel _$GetPropertiesInfoModelFromJson(
         Map<String, dynamic> json) =>
     GetPropertiesInfoModel()
       ..fieldName = json['fieldName'] as String?
-      ..fieldType = json['fieldType'] as String?
+      ..fieldTypeString = json['fieldTypeString'] as String?
       ..fieldTypeClass = json['fieldTypeClass'] as String?
       ..fieldTitle = json['fieldTitle'] as String?
       ..fieldDescription = json['fieldDescription'] as String?
@@ -32,7 +32,7 @@ Map<String, dynamic> _$GetPropertiesInfoModelToJson(
         GetPropertiesInfoModel instance) =>
     <String, dynamic>{
       'fieldName': instance.fieldName,
-      'fieldType': instance.fieldType,
+      'fieldTypeString': instance.fieldTypeString,
       'fieldTypeClass': instance.fieldTypeClass,
       'fieldTitle': instance.fieldTitle,
       'fieldDescription': instance.fieldDescription,

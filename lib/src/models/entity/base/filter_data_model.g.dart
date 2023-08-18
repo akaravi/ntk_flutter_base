@@ -8,18 +8,18 @@ part of 'filter_data_model.dart';
 
 FilterDataModel _$FilterDataModelFromJson(Map<String, dynamic> json) =>
     FilterDataModel()
-      ..propertyName = json['propertyName'] as String?
-      ..clauseType =
-          $enumDecodeNullable(_$EnumClauseTypeEnumMap, json['clauseType'])
-      ..propertyAnyName = json['propertyAnyName'] as String?
-      ..searchType = $enumDecodeNullable(
-          _$EnumFilterDataModelSearchTypesEnumMap, json['searchType'])
       ..filters = (json['filters'] as List<dynamic>?)
           ?.map((e) => FilterDataModel.fromJson(e as Map<String, dynamic>))
           .toList()
       ..value = json['value']
       ..values =
           (json['values'] as List<dynamic>?)?.map((e) => e as Object).toList()
+      ..propertyName = json['propertyName'] as String?
+      ..propertyAnyName = json['propertyAnyName'] as String?
+      ..clauseType =
+          $enumDecodeNullable(_$EnumClauseTypeEnumMap, json['clauseType'])
+      ..searchType = $enumDecodeNullable(
+          _$EnumFilterDataModelSearchTypesEnumMap, json['searchType'])
       ..latitudeValue = json['latitudeValue'] as int?
       ..longitudeValue = json['longitudeValue'] as int?
       ..latitudeLongitudeDistanceValue =
@@ -27,14 +27,14 @@ FilterDataModel _$FilterDataModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$FilterDataModelToJson(FilterDataModel instance) =>
     <String, dynamic>{
-      'propertyName': instance.propertyName,
-      'clauseType': _$EnumClauseTypeEnumMap[instance.clauseType],
-      'propertyAnyName': instance.propertyAnyName,
-      'searchType':
-          _$EnumFilterDataModelSearchTypesEnumMap[instance.searchType],
       'filters': instance.filters,
       'value': instance.value,
       'values': instance.values,
+      'propertyName': instance.propertyName,
+      'propertyAnyName': instance.propertyAnyName,
+      'clauseType': _$EnumClauseTypeEnumMap[instance.clauseType],
+      'searchType':
+          _$EnumFilterDataModelSearchTypesEnumMap[instance.searchType],
       'latitudeValue': instance.latitudeValue,
       'longitudeValue': instance.longitudeValue,
       'latitudeLongitudeDistanceValue': instance.latitudeLongitudeDistanceValue,

@@ -25,6 +25,8 @@ EstateAccountAgencyModel _$EstateAccountAgencyModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -39,6 +41,13 @@ EstateAccountAgencyModel _$EstateAccountAgencyModelFromJson(
       ..linkLocationId = json['linkLocationId'] as int?
       ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
       ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
+      ..linkLocationWorkAreaIds =
+          (json['linkLocationWorkAreaIds'] as List<dynamic>?)
+              ?.map((e) => e as int)
+              .toList()
+      ..notificationWorkAreaEstate = json['notificationWorkAreaEstate'] as bool?
+      ..notificationWorkAreaCustomerOrder =
+          json['notificationWorkAreaCustomerOrder'] as bool?
       ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
           (json['geolocationlongitude'] as num?)?.toDouble()
@@ -71,6 +80,7 @@ Map<String, dynamic> _$EstateAccountAgencyModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -84,6 +94,10 @@ Map<String, dynamic> _$EstateAccountAgencyModelToJson(
       'linkLocationId': instance.linkLocationId,
       'linkLocationIdTitle': instance.linkLocationIdTitle,
       'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'linkLocationWorkAreaIds': instance.linkLocationWorkAreaIds,
+      'notificationWorkAreaEstate': instance.notificationWorkAreaEstate,
+      'notificationWorkAreaCustomerOrder':
+          instance.notificationWorkAreaCustomerOrder,
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
       'address': instance.address,

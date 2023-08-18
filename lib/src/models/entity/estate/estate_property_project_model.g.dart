@@ -25,6 +25,8 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -34,6 +36,7 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..title = json['title'] as String?
       ..linkCmsUserId = json['linkCmsUserId'] as int?
       ..linkPropertyCompanyId = json['linkPropertyCompanyId'] as String?
+      ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
       ..description = json['description'] as String?
       ..address = json['address'] as String?
       ..body = json['body'] as String?
@@ -47,6 +50,13 @@ EstatePropertyProjectModel _$EstatePropertyProjectModelFromJson(
       ..linkFilePodcastId = json['linkFilePodcastId'] as int?
       ..linkFileMovieId = json['linkFileMovieId'] as int?
       ..linkMainImageId = json['linkMainImageId'] as int?
+      ..file360Views = (json['file360Views'] as List<dynamic>?)
+          ?.map((e) => File360ViewModel.fromJson(e as Map<String, dynamic>))
+          .toList()
+      ..file360Tour = json['file360Tour'] == null
+          ? null
+          : File360TourModel.fromJson(
+              json['file360Tour'] as Map<String, dynamic>)
       ..scoreClick = json['scoreClick'] as int?
       ..scoreSumPercent = json['scoreSumPercent'] as int?
       ..viewCount = json['viewCount'] as int?
@@ -95,6 +105,7 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -103,6 +114,7 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'title': instance.title,
       'linkCmsUserId': instance.linkCmsUserId,
       'linkPropertyCompanyId': instance.linkPropertyCompanyId,
+      'mainAdminRecordStatus': instance.mainAdminRecordStatus,
       'description': instance.description,
       'address': instance.address,
       'body': instance.body,
@@ -115,6 +127,8 @@ Map<String, dynamic> _$EstatePropertyProjectModelToJson(
       'linkFilePodcastId': instance.linkFilePodcastId,
       'linkFileMovieId': instance.linkFileMovieId,
       'linkMainImageId': instance.linkMainImageId,
+      'file360Views': instance.file360Views,
+      'file360Tour': instance.file360Tour,
       'scoreClick': instance.scoreClick,
       'scoreSumPercent': instance.scoreSumPercent,
       'viewCount': instance.viewCount,

@@ -8,8 +8,8 @@ part 'datafield_info_model.g.dart';
 class DataFieldInfoModel {
   @JsonKey(name: 'fieldName')
   String? fieldName;
-  @JsonKey(name: 'fieldType')
-  String? fieldType;
+  @JsonKey(name: 'fieldTypeString')
+  String? fieldTypeString;
   @JsonKey(name: 'fieldTypeClass')
   String? fieldTypeClass;
   @JsonKey(name: 'fieldTitle')

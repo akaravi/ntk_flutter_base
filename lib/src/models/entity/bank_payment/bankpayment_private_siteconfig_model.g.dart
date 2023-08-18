@@ -25,6 +25,8 @@ BankPaymentPrivateSiteConfigModel _$BankPaymentPrivateSiteConfigModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -38,10 +40,10 @@ BankPaymentPrivateSiteConfigModel _$BankPaymentPrivateSiteConfigModelFromJson(
       ..percentFeeTransactionAmount =
           json['percentFeeTransactionAmount'] as int?
       ..linkPublicConfigId = json['linkPublicConfigId'] as int?
-      ..virtual_PublicConfig = json[' virtual_PublicConfig'] == null
+      ..virtual_PublicConfig = json['virtual_PublicConfig'] == null
           ? null
           : BankPaymentPublicConfigModel.fromJson(
-              json[' virtual_PublicConfig'] as Map<String, dynamic>)
+              json['virtual_PublicConfig'] as Map<String, dynamic>)
       ..publicConfig = json['publicConfig'] == null
           ? null
           : BankPaymentPublicConfigModel.fromJson(
@@ -66,6 +68,7 @@ Map<String, dynamic> _$BankPaymentPrivateSiteConfigModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -77,7 +80,7 @@ Map<String, dynamic> _$BankPaymentPrivateSiteConfigModelToJson(
       'fixFeeTransactionAmount': instance.fixFeeTransactionAmount,
       'percentFeeTransactionAmount': instance.percentFeeTransactionAmount,
       'linkPublicConfigId': instance.linkPublicConfigId,
-      ' virtual_PublicConfig': instance.virtual_PublicConfig,
+      'virtual_PublicConfig': instance.virtual_PublicConfig,
       'publicConfig': instance.publicConfig,
       'privateConfigJsonValues': instance.privateConfigJsonValues,
       'memo': instance.memo,

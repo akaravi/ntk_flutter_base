@@ -25,6 +25,8 @@ SmsMainApiPathPriceServiceModel _$SmsMainApiPathPriceServiceModelFromJson(
       ..antiInjectionDate = json['antiInjectionDate'] == null
           ? null
           : DateTime.parse(json['antiInjectionDate'] as String)
+      ..antiInjectionTokenActionState =
+          json['antiInjectionTokenActionState'] as bool?
       ..antiInjectionExpiredMinute = json['antiInjectionExpiredMinute'] as int?
       ..antiInjectionToken = json['antiInjectionToken'] as String?
       ..antiInjectionExpireDate = json['antiInjectionExpireDate'] == null
@@ -33,7 +35,7 @@ SmsMainApiPathPriceServiceModel _$SmsMainApiPathPriceServiceModelFromJson(
       ..linkSiteId = json['linkSiteId'] as int?
       ..linkApiPathId = json['linkApiPathId'] as String?
       ..linkCoreUserId = json['linkCoreUserId'] as int?
-      ..linkCoreSiteId = json['linkCoreSiteIdlinkCoreSiteId'] as int?
+      ..linkCoreSiteId = json['linkCoreSiteId'] as int?
       ..linkCoreUserGroupId = json['linkCoreUserGroupId'] as int?
       ..linkCoreSiteCategoryId = json['linkCoreSiteCategoryId'] as int?
       ..regulatorNumber = json['regulatorNumber'] as String?
@@ -66,6 +68,7 @@ Map<String, dynamic> _$SmsMainApiPathPriceServiceModelToJson(
       'antiInjectionRun': instance.antiInjectionRun,
       'antiInjectionGuid': instance.antiInjectionGuid,
       'antiInjectionDate': instance.antiInjectionDate?.toIso8601String(),
+      'antiInjectionTokenActionState': instance.antiInjectionTokenActionState,
       'antiInjectionExpiredMinute': instance.antiInjectionExpiredMinute,
       'antiInjectionToken': instance.antiInjectionToken,
       'antiInjectionExpireDate':
@@ -73,7 +76,7 @@ Map<String, dynamic> _$SmsMainApiPathPriceServiceModelToJson(
       'linkSiteId': instance.linkSiteId,
       'linkApiPathId': instance.linkApiPathId,
       'linkCoreUserId': instance.linkCoreUserId,
-      'linkCoreSiteIdlinkCoreSiteId': instance.linkCoreSiteId,
+      'linkCoreSiteId': instance.linkCoreSiteId,
       'linkCoreUserGroupId': instance.linkCoreUserGroupId,
       'linkCoreSiteCategoryId': instance.linkCoreSiteCategoryId,
       'regulatorNumber': instance.regulatorNumber,
