@@ -24,7 +24,7 @@ class BaseEntity<TKey> {
   @JsonKey(name: 'antiInjectionDate')
   DateTime? antiInjectionDate;
   @JsonKey(name: 'antiInjectionTokenActionState')
-  bool? antiInjectionTokenActionState;
+  int? antiInjectionTokenActionState;
   @JsonKey(name: 'antiInjectionExpiredMinute')
   int? antiInjectionExpiredMinute;
   @JsonKey(name: 'antiInjectionToken')

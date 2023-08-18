@@ -27,7 +27,7 @@ LinkManagementBillboardTargetCategoryModel
               ? null
               : DateTime.parse(json['antiInjectionDate'] as String)
           ..antiInjectionTokenActionState =
-              json['antiInjectionTokenActionState'] as bool?
+              json['antiInjectionTokenActionState'] as int?
           ..antiInjectionExpiredMinute =
               json['antiInjectionExpiredMinute'] as int?
           ..antiInjectionToken = json['antiInjectionToken'] as String?

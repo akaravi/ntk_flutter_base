@@ -20,15 +20,14 @@ class ErrorException<TEntity> extends ErrorExceptionBase {
 
   ErrorException(bool isSuccess) : super(isSuccess);
 
-  factory   ErrorException.fromJson(
-      Map<String, dynamic> json,
-      TEntity Function(Object? json) fromJsonTEntity,
-      ) => _$ErrorExceptionFromJson(json, fromJsonTEntity);
+  factory ErrorException.fromJson(
+    Map<String, dynamic> json,
+    TEntity Function(Object? json) fromJsonTEntity,
+  ) =>
+      _$ErrorExceptionFromJson(json, fromJsonTEntity);
 
-      // factory ErrorException.fromJson(
-      //     Map<String, dynamic> map, String Function(dynamic json) param1) =>
-
+  // factory ErrorException.fromJson(
+  //     Map<String, dynamic> map, String Function(dynamic json) param1) =>
 
 // ErrorException.fromJson(Map<String, dynamic> map, String Function(dynamic json) param1);
-
 }
