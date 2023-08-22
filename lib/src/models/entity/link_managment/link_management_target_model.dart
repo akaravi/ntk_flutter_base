@@ -27,7 +27,7 @@ class LinkManagementTargetModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'linkBillboardPatternId')
   int? linkBillboardPatternId;
   @JsonKey(name: 'webAddress')
-  int? webAddress;
+  String? webAddress;
   @JsonKey(name: 'smallPreview')
   String? smallPreview;
   @JsonKey(name: 'shareBeginDate')

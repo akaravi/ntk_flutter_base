@@ -10,9 +10,9 @@ class DataProviderLogClientModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkLogDataId')
   String? linkLogDataId;
   @JsonKey(name: 'linkClientId')
-  int? linkClientId;
+  num? linkClientId;
   @JsonKey(name: 'linkPlanId')
-  int? linkPlanId;
+  num? linkPlanId;
   @JsonKey(name: 'dataJson')
   String? dataJson;
   @JsonKey(name: 'otherDataJson')

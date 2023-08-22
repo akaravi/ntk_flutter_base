@@ -36,8 +36,8 @@ DataProviderPlanClientModel _$DataProviderPlanClientModelFromJson(
       ..expireDate = json['expireDate'] == null
           ? null
           : DateTime.parse(json['expireDate'] as String)
-      ..linkPlanId = json['linkPlanId'] as int?
-      ..linkClientId = json['linkClientId'] as int?
+      ..linkPlanId = json['linkPlanId'] as num?
+      ..linkClientId = json['linkClientId'] as num?
       ..plan = json['plan'] == null
           ? null
           : DataProviderPlanModel.fromJson(json['plan'] as Map<String, dynamic>)

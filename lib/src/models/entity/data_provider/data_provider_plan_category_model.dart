@@ -11,13 +11,13 @@ class DataProviderPlanCategoryModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'title')
   String? title;
   @JsonKey(name: 'linkMainImageId')
-  int? linkMainImageId;
+  num? linkMainImageId;
   @JsonKey(name: 'description')
   String? description;
   @JsonKey(name: 'fontIcon')
   String? fontIcon;
   @JsonKey(name: 'linkParentId')
-  int? linkParentId;
+  num? linkParentId;
   //tslint:disable-next-line: variable-name
   @JsonKey(name: 'virtual_PlanCategory')
   DataProviderPlanCategoryModel? virtual_PlanCategory;

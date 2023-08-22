@@ -14,7 +14,7 @@ part 'member_user_model.g.dart';
 @JsonSerializable()
 class MemberUserModel extends BaseModuleEntity<int> {
  @JsonKey(name: 'linkCmsUserId')
-  String?linkCmsUserId ;
+  num?linkCmsUserId ;
  @JsonKey(name: 'deviceId')
   String? deviceId;
  @JsonKey(name: 'joinId')

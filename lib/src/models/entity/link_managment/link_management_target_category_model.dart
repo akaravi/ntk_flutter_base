@@ -19,9 +19,9 @@ class LinkManagementTargetCategoryModel extends BaseModuleEntity<int> {
  @JsonKey(name: 'description')
   String? description;
  @JsonKey(name: 'fontIcon')
-  int? fontIcon;
+  String? fontIcon;
  @JsonKey(name: 'linkParentId')
-  String? linkParentId;
+  int? linkParentId;
   // tslint:disable-next-line: variable-name
  @JsonKey(name: 'virtual_TargetCategory')
   LinkManagementTargetCategoryModel? virtual_TargetCategory;

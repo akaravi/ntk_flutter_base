@@ -134,12 +134,10 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? downloadLinkSrcQRCodeBase64;
   @JsonKey(name: 'linkFileIdSplashScreenSrc')
   String? linkFileIdSplashScreenSrc;
-  // @JsonKey(name: 'downloadLinkSrcByDomainQRCodeBase64')
-  // String? downloadLinkSrcByDomainQRCodeBase64;
-
-  // @JsonKey(name: 'filePathOnServer')
-  // String? filePathOnServer;
-
+  @JsonKey(name: 'downloadLinkSrcByDomainQRCodeBase64')
+  String? favorited;
+  @JsonKey(name: 'filePathOnServer')
+  String? scored;
   @JsonKey(name: 'aboutUsTitle')
   String? aboutUsTitle;
   @JsonKey(name: 'aboutUsDescription')
@@ -192,10 +190,6 @@ class ApplicationAppModel extends BaseModuleEntity<int> {
   String? linkFileIdLogoSrc;
   @JsonKey(name: 'linkMainImageIdSrc')
   String? linkMainImageIdSrc;
-  @JsonKey(name: 'favorited')
-  bool? favorited;
-  @JsonKey(name: 'scored')
-  bool? scored;
   ApplicationAppModel();
   factory ApplicationAppModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationAppModelFromJson(json);

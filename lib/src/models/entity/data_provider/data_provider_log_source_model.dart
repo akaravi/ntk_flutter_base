@@ -10,7 +10,7 @@ class DataProviderLogSourceModel extends BaseModuleEntity<String> {
   @JsonKey(name: 'linkLogDataId')
   String? linkLogDataId;
   @JsonKey(name: 'linkSourceId')
-  int? linkSourceId;
+  num? linkSourceId;
   @JsonKey(name: 'dataJson')
   String? dataJson;
   @JsonKey(name: 'otherDataJson')

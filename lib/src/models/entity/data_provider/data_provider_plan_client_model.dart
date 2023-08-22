@@ -12,9 +12,9 @@ class DataProviderPlanClientModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'expireDate')
   DateTime? expireDate;
   @JsonKey(name: 'linkPlanId')
-  int? linkPlanId;
+  num? linkPlanId;
   @JsonKey(name: 'linkClientId')
-  int? linkClientId;
+  num? linkClientId;
   @JsonKey(name: 'plan')
   DataProviderPlanModel? plan;
   @JsonKey(name: 'virtual_Plan')

@@ -39,15 +39,7 @@ ArticleShareMainAdminSettingModel _$ArticleShareMainAdminSettingModelFromJson(
       ..paymentMethod =
           $enumDecodeNullable(_$EnumPaymentMethodEnumMap, json['paymentMethod'])
       ..reciverPriceCost = json['reciverPriceCost'] as int?
-      ..title = json['title'] as String?
-      ..virtual_Content = json[' virtual_Content'] == null
-          ? null
-          : ArticleContentModel.fromJson(
-              json[' virtual_Content'] as Map<String, dynamic>)
-      ..content = json['content'] == null
-          ? null
-          : ArticleContentModel.fromJson(
-              json['content'] as Map<String, dynamic>);
+      ..title = json['title'] as String?;
 
 Map<String, dynamic> _$ArticleShareMainAdminSettingModelToJson(
         ArticleShareMainAdminSettingModel instance) =>
@@ -73,8 +65,6 @@ Map<String, dynamic> _$ArticleShareMainAdminSettingModelToJson(
       'paymentMethod': _$EnumPaymentMethodEnumMap[instance.paymentMethod],
       'reciverPriceCost': instance.reciverPriceCost,
       'title': instance.title,
-      ' virtual_Content': instance.virtual_Content,
-      'content': instance.content,
     };
 
 const _$EnumRecordStatusEnumMap = {

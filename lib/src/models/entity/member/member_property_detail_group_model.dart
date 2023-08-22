@@ -21,7 +21,7 @@ class MemberPropertyDetailGroupModel extends BaseModuleEntity<int> {
   int? linkPropertyTypeId;
     // tslint:disable-next-line: variable-name
   @JsonKey(name: 'virtual_PropertyType')
-  List<MemberPropertyTypeModel>? virtual_PropertyType;
+  MemberPropertyTypeModel? virtual_PropertyType;
   // tslint:disable-next-line: variable-name
     @JsonKey(name: 'virtual_PropertyDetails')
   List<MemberPropertyDetailModel>? virtual_PropertyDetails;

@@ -54,10 +54,10 @@ class NewsContentModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'expireDate')
   DateTime? expireDate;
   @JsonKey(name: 'moduleCoreCreatedBy')
-  CoreUserModel? moduleCoreCreatedBy;
+  String? moduleCoreCreatedBy;
 
   @JsonKey(name: 'moduleCoreUpdatedBy')
-  CoreUserModel? moduleCoreUpdatedBy;
+  String? moduleCoreUpdatedBy;
 
   @JsonKey(name: 'source')
   String? source;

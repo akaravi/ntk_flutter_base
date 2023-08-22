@@ -42,7 +42,7 @@ LinkManagementTargetModel _$LinkManagementTargetModelFromJson(
       ..linkManagementMemberId = json['linkManagementMemberId'] as int?
       ..linkTargetCategoryId = json['linkTargetCategoryId'] as int?
       ..linkBillboardPatternId = json['linkBillboardPatternId'] as int?
-      ..webAddress = json['webAddress'] as int?
+      ..webAddress = json['webAddress'] as String?
       ..smallPreview = json['smallPreview'] as String?
       ..shareBeginDate = json['shareBeginDate'] == null
           ? null

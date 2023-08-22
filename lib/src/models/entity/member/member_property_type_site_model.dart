@@ -12,10 +12,10 @@ part 'member_property_type_site_model.g.dart';
 class MemberPropertyTypeSiteModel extends BaseModuleEntity<int> {
 
 @JsonKey(name: 'linkCmsSiteId')
-  String?linkCmsSiteId ;
+  num?linkCmsSiteId ;
 
  @JsonKey(name: 'linkMemberPropertyTypeId')
-  String? linkMemberPropertyTypeId;
+  num? linkMemberPropertyTypeId;
  @JsonKey(name: 'memberPropertyType')
   MemberPropertyTypeModel? memberPropertyType;
  

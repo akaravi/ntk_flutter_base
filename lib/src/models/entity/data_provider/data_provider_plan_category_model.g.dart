@@ -34,10 +34,10 @@ DataProviderPlanCategoryModel _$DataProviderPlanCategoryModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkMainImageId = json['linkMainImageId'] as num?
       ..description = json['description'] as String?
       ..fontIcon = json['fontIcon'] as String?
-      ..linkParentId = json['linkParentId'] as int?
+      ..linkParentId = json['linkParentId'] as num?
       ..virtual_PlanCategory = json['virtual_PlanCategory'] == null
           ? null
           : DataProviderPlanCategoryModel.fromJson(

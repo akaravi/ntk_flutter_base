@@ -33,8 +33,8 @@ MemberPropertyTypeSiteModel _$MemberPropertyTypeSiteModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..linkCmsSiteId = json['linkCmsSiteId'] as String?
-      ..linkMemberPropertyTypeId = json['linkMemberPropertyTypeId'] as String?
+      ..linkCmsSiteId = json['linkCmsSiteId'] as num?
+      ..linkMemberPropertyTypeId = json['linkMemberPropertyTypeId'] as num?
       ..memberPropertyType = json['memberPropertyType'] == null
           ? null
           : MemberPropertyTypeModel.fromJson(

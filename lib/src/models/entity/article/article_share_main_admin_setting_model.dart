@@ -22,11 +22,11 @@ class ArticleShareMainAdminSettingModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'title')
   String? title;
 
-  @JsonKey(name: ' virtual_Content')
-  ArticleContentModel? virtual_Content;
+  // @JsonKey(name: ' virtual_Content')
+  // ArticleContentModel? virtual_Content;
 
-  @JsonKey(name: 'content')
-  ArticleContentModel? content;
+  // @JsonKey(name: 'content')
+  // ArticleContentModel? content;
   ArticleShareMainAdminSettingModel();
   factory ArticleShareMainAdminSettingModel.fromJson(Map<String, dynamic> json) =>
       _$ArticleShareMainAdminSettingModelFromJson(json);

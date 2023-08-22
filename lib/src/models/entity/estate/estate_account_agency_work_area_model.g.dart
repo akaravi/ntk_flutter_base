@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'link_management_target_category_model.dart';
+part of 'estate_account_agency_work_area_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-LinkManagementTargetCategoryModel _$LinkManagementTargetCategoryModelFromJson(
+EstateAccountAgencyWorkAreaModel _$EstateAccountAgencyWorkAreaModelFromJson(
         Map<String, dynamic> json) =>
-    LinkManagementTargetCategoryModel()
-      ..id = json['id'] as int?
+    EstateAccountAgencyWorkAreaModel()
+      ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -33,36 +33,11 @@ LinkManagementTargetCategoryModel _$LinkManagementTargetCategoryModelFromJson(
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..title = json['title'] as String?
-      ..linkMainImageId = json['linkMainImageId'] as int?
-      ..description = json['description'] as String?
-      ..fontIcon = json['fontIcon'] as String?
-      ..linkParentId = json['linkParentId'] as int?
-      ..virtual_TargetCategory = json['virtual_TargetCategory'] == null
-          ? null
-          : LinkManagementTargetCategoryModel.fromJson(
-              json['virtual_TargetCategory'] as Map<String, dynamic>)
-      ..targetCategory = json['targetCategory'] == null
-          ? null
-          : LinkManagementTargetCategoryModel.fromJson(
-              json['targetCategory'] as Map<String, dynamic>)
-      ..children = (json['children'] as List<dynamic>?)
-          ?.map((e) => LinkManagementTargetCategoryModel.fromJson(
-              e as Map<String, dynamic>))
-          .toList()
-      ..target = (json['target'] as List<dynamic>?)
-          ?.map((e) =>
-              LinkManagementTargetModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..billboardTargetCategory =
-          (json['billboardTargetCategory'] as List<dynamic>?)
-              ?.map((e) => LinkManagementBillboardTargetCategoryModel.fromJson(
-                  e as Map<String, dynamic>))
-              .toList()
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..linkEstateAccountAgencyId = json['linkEstateAccountAgencyId'] as String?
+      ..linkCoreLocationId = json['linkCoreLocationId'] as num?;
 
-Map<String, dynamic> _$LinkManagementTargetCategoryModelToJson(
-        LinkManagementTargetCategoryModel instance) =>
+Map<String, dynamic> _$EstateAccountAgencyWorkAreaModelToJson(
+        EstateAccountAgencyWorkAreaModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -79,17 +54,8 @@ Map<String, dynamic> _$LinkManagementTargetCategoryModelToJson(
       'antiInjectionExpireDate':
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
-      'title': instance.title,
-      'linkMainImageId': instance.linkMainImageId,
-      'description': instance.description,
-      'fontIcon': instance.fontIcon,
-      'linkParentId': instance.linkParentId,
-      'virtual_TargetCategory': instance.virtual_TargetCategory,
-      'targetCategory': instance.targetCategory,
-      'children': instance.children,
-      'target': instance.target,
-      'billboardTargetCategory': instance.billboardTargetCategory,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'linkEstateAccountAgencyId': instance.linkEstateAccountAgencyId,
+      'linkCoreLocationId': instance.linkCoreLocationId,
     };
 
 const _$EnumRecordStatusEnumMap = {

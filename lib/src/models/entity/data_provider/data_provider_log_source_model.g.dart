@@ -34,7 +34,7 @@ DataProviderLogSourceModel _$DataProviderLogSourceModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..linkLogDataId = json['linkLogDataId'] as String?
-      ..linkSourceId = json['linkSourceId'] as int?
+      ..linkSourceId = json['linkSourceId'] as num?
       ..dataJson = json['dataJson'] as String?
       ..otherDataJson = json['otherDataJson'] as String?;
 

@@ -26,8 +26,14 @@ class BiographyContentModel extends BaseModuleEntity<int> {
   double? geolocationlatitude;
   @JsonKey(name: 'geolocationlongitude')
   double? geolocationlongitude;
-  // @JsonKey(name: 'keyword')
-  // String? keyword;
+  @JsonKey(name: 'linkLocationId')
+  int? linkLocationId;
+  @JsonKey(name: 'linkLocationIdTitle')
+  String? linkLocationIdTitle;
+  @JsonKey(name: 'linkLocationIdParentTitle')
+  String? linkLocationIdParentTitle;
+  @JsonKey(name: 'keyword')
+  String? keyword;
   @JsonKey(name: 'linkFileIds')
   String? linkFileIds;
   @JsonKey(name: 'linkFilePodcastId')

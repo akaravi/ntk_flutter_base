@@ -35,9 +35,9 @@ class HyperShopOrderModel extends BaseModuleEntity<int> {
   @JsonKey(name: 'mobile')
   String? mobile;
   @JsonKey(name: 'geoLocationLatitude')
-  double? geoLocationLatitude;
+  String? geoLocationLatitude;
   @JsonKey(name: 'geoLocationLongitude')
-  double? geoLocationLongitude;
+  String? geoLocationLongitude;
   @JsonKey(name: 'address')
   String? address;
   @JsonKey(name: 'amount')

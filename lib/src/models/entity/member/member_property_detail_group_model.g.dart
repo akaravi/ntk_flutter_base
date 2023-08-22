@@ -37,10 +37,10 @@ MemberPropertyDetailGroupModel _$MemberPropertyDetailGroupModelFromJson(
       ..iconFont = json['iconFont'] as String?
       ..showInFormOrder = json['showInFormOrder'] as int?
       ..linkPropertyTypeId = json['linkPropertyTypeId'] as int?
-      ..virtual_PropertyType = (json['virtual_PropertyType'] as List<dynamic>?)
-          ?.map((e) =>
-              MemberPropertyTypeModel.fromJson(e as Map<String, dynamic>))
-          .toList()
+      ..virtual_PropertyType = json['virtual_PropertyType'] == null
+          ? null
+          : MemberPropertyTypeModel.fromJson(
+              json['virtual_PropertyType'] as Map<String, dynamic>)
       ..virtual_PropertyDetails =
           (json['virtual_PropertyDetails'] as List<dynamic>?)
               ?.map((e) =>

@@ -52,20 +52,16 @@ class BankPaymentTransactionModel extends BaseEntity<int> {
   String? requestBackUserFromBankJsonValues;
   @JsonKey(name: 'requestBackUserFromBankJsonFormatter')
   List<GetPropertiesInfoModel>? requestBackUserFromBankJsonFormatter;
-
   @JsonKey(name: 'onlineDateLock')
   DateTime? onlineDateLock;
   @JsonKey(name: 'onlineDateUnlock')
   DateTime? onlineDateUnlock;
   @JsonKey(name: 'lastUrlAddressInUse')
   String? lastUrlAddressInUse;
-
   @JsonKey(name: 'virtual_PrivateSiteConfig')
   BankPaymentPrivateSiteConfigModel? virtual_PrivateSiteConfig;
-
   @JsonKey(name: 'privateSiteConfig')
   BankPaymentPrivateSiteConfigModel? privateSiteConfig;
-
   @JsonKey(name: 'linkModelShopCartId')
   int? linkModelShopCartId;
   @JsonKey(name: 'modelShopInvoiceSaleRelease')

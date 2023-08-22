@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'link_management_target_category_model.dart';
+part of 'estate_property_supplier_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-LinkManagementTargetCategoryModel _$LinkManagementTargetCategoryModelFromJson(
+EstatePropertySupplierModel _$EstatePropertySupplierModelFromJson(
         Map<String, dynamic> json) =>
-    LinkManagementTargetCategoryModel()
-      ..id = json['id'] as int?
+    EstatePropertySupplierModel()
+      ..id = json['id'] as String?
       ..createdDate = json['createdDate'] == null
           ? null
           : DateTime.parse(json['createdDate'] as String)
@@ -34,35 +34,31 @@ LinkManagementTargetCategoryModel _$LinkManagementTargetCategoryModelFromJson(
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
       ..title = json['title'] as String?
-      ..linkMainImageId = json['linkMainImageId'] as int?
+      ..linkCmsUserId = json['linkCmsUserId'] as num?
+      ..linkEstatePropertySupplierCategoryIds =
+          json['linkEstatePropertySupplierCategoryIds'] as String?
+      ..mainAdminRecordStatus = json['mainAdminRecordStatus'] as String?
       ..description = json['description'] as String?
-      ..fontIcon = json['fontIcon'] as String?
-      ..linkParentId = json['linkParentId'] as int?
-      ..virtual_TargetCategory = json['virtual_TargetCategory'] == null
-          ? null
-          : LinkManagementTargetCategoryModel.fromJson(
-              json['virtual_TargetCategory'] as Map<String, dynamic>)
-      ..targetCategory = json['targetCategory'] == null
-          ? null
-          : LinkManagementTargetCategoryModel.fromJson(
-              json['targetCategory'] as Map<String, dynamic>)
-      ..children = (json['children'] as List<dynamic>?)
-          ?.map((e) => LinkManagementTargetCategoryModel.fromJson(
-              e as Map<String, dynamic>))
-          .toList()
-      ..target = (json['target'] as List<dynamic>?)
-          ?.map((e) =>
-              LinkManagementTargetModel.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..billboardTargetCategory =
-          (json['billboardTargetCategory'] as List<dynamic>?)
-              ?.map((e) => LinkManagementBillboardTargetCategoryModel.fromJson(
-                  e as Map<String, dynamic>))
-              .toList()
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
+      ..address = json['address'] as String?
+      ..body = json['body'] as String?
+      ..geolocationlatitude = json['geolocationlatitude'] as num?
+      ..geolocationlongitude = json['geolocationlongitude'] as num?
+      ..linkLocationId = json['linkLocationId'] as num?
+      ..keyword = json['keyword'] as String?
+      ..linkFileIds = json['linkFileIds'] as String?
+      ..linkExtraImageIds = json['linkExtraImageIds'] as String?
+      ..linkFilePodcastId = json['linkFilePodcastId'] as num?
+      ..linkFileMovieId = json['linkFileMovieId'] as num?
+      ..linkMainImageId = json['linkMainImageId'] as num?
+      ..scoreClick = json['scoreClick'] as num?
+      ..scoreSumPercent = json['scoreSumPercent'] as num?
+      ..viewCount = json['viewCount'] as num?
+      ..viewConfigHiddenInList = json['viewConfigHiddenInList'] as bool?
+      ..favorited = json['favorited'] as bool?
+      ..source = json['source'] as String?;
 
-Map<String, dynamic> _$LinkManagementTargetCategoryModelToJson(
-        LinkManagementTargetCategoryModel instance) =>
+Map<String, dynamic> _$EstatePropertySupplierModelToJson(
+        EstatePropertySupplierModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'createdDate': instance.createdDate?.toIso8601String(),
@@ -80,16 +76,28 @@ Map<String, dynamic> _$LinkManagementTargetCategoryModelToJson(
           instance.antiInjectionExpireDate?.toIso8601String(),
       'linkSiteId': instance.linkSiteId,
       'title': instance.title,
-      'linkMainImageId': instance.linkMainImageId,
+      'linkCmsUserId': instance.linkCmsUserId,
+      'linkEstatePropertySupplierCategoryIds':
+          instance.linkEstatePropertySupplierCategoryIds,
+      'mainAdminRecordStatus': instance.mainAdminRecordStatus,
       'description': instance.description,
-      'fontIcon': instance.fontIcon,
-      'linkParentId': instance.linkParentId,
-      'virtual_TargetCategory': instance.virtual_TargetCategory,
-      'targetCategory': instance.targetCategory,
-      'children': instance.children,
-      'target': instance.target,
-      'billboardTargetCategory': instance.billboardTargetCategory,
-      'linkMainImageIdSrc': instance.linkMainImageIdSrc,
+      'address': instance.address,
+      'body': instance.body,
+      'geolocationlatitude': instance.geolocationlatitude,
+      'geolocationlongitude': instance.geolocationlongitude,
+      'linkLocationId': instance.linkLocationId,
+      'keyword': instance.keyword,
+      'linkFileIds': instance.linkFileIds,
+      'linkExtraImageIds': instance.linkExtraImageIds,
+      'linkFilePodcastId': instance.linkFilePodcastId,
+      'linkFileMovieId': instance.linkFileMovieId,
+      'linkMainImageId': instance.linkMainImageId,
+      'scoreClick': instance.scoreClick,
+      'scoreSumPercent': instance.scoreSumPercent,
+      'viewCount': instance.viewCount,
+      'viewConfigHiddenInList': instance.viewConfigHiddenInList,
+      'favorited': instance.favorited,
+      'source': instance.source,
     };
 
 const _$EnumRecordStatusEnumMap = {

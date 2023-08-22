@@ -43,6 +43,10 @@ BiographyContentModel _$BiographyContentModelFromJson(
       ..geolocationlatitude = (json['geolocationlatitude'] as num?)?.toDouble()
       ..geolocationlongitude =
           (json['geolocationlongitude'] as num?)?.toDouble()
+      ..linkLocationId = json['linkLocationId'] as int?
+      ..linkLocationIdTitle = json['linkLocationIdTitle'] as String?
+      ..linkLocationIdParentTitle = json['linkLocationIdParentTitle'] as String?
+      ..keyword = json['keyword'] as String?
       ..linkFileIds = json['linkFileIds'] as String?
       ..linkFilePodcastId = json['linkFilePodcastId'] as int?
       ..linkFileMovieId = json['linkFileMovieId'] as int?
@@ -127,6 +131,10 @@ Map<String, dynamic> _$BiographyContentModelToJson(
       'fromDate': instance.fromDate?.toIso8601String(),
       'geolocationlatitude': instance.geolocationlatitude,
       'geolocationlongitude': instance.geolocationlongitude,
+      'linkLocationId': instance.linkLocationId,
+      'linkLocationIdTitle': instance.linkLocationIdTitle,
+      'linkLocationIdParentTitle': instance.linkLocationIdParentTitle,
+      'keyword': instance.keyword,
       'linkFileIds': instance.linkFileIds,
       'linkFilePodcastId': instance.linkFilePodcastId,
       'linkFileMovieId': instance.linkFileMovieId,

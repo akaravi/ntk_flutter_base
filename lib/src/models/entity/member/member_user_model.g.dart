@@ -32,7 +32,7 @@ MemberUserModel _$MemberUserModelFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['antiInjectionExpireDate'] as String)
       ..linkSiteId = json['linkSiteId'] as int?
-      ..linkCmsUserId = json['linkCmsUserId'] as String?
+      ..linkCmsUserId = json['linkCmsUserId'] as num?
       ..deviceId = json['deviceId'] as String?
       ..joinId = json['joinId'] as String?
       ..gender = $enumDecodeNullable(_$EnumGenderTypeEnumMap, json['gender'])

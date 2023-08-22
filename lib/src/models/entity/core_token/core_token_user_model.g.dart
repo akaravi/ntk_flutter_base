@@ -38,9 +38,9 @@ CoreTokenUserModel _$CoreTokenUserModelFromJson(Map<String, dynamic> json) =>
       ..linkDeviceId = json['linkDeviceId'] as int?
       ..linkApplicationId = json['linkApplicationId'] as int?
       ..token = json['token'] as String?
-      ..expireDate = json['expireDate'] == null
+      ..tokenExpireDate = json['tokenExpireDate'] == null
           ? null
-          : DateTime.parse(json['expireDate'] as String)
+          : DateTime.parse(json['tokenExpireDate'] as String)
       ..userAccessAreaType = $enumDecodeNullable(
           _$EnumManageUserAccessAreaTypesEnumMap, json['userAccessAreaType'])
       ..userAccessUserType = $enumDecodeNullable(
@@ -78,7 +78,7 @@ Map<String, dynamic> _$CoreTokenUserModelToJson(CoreTokenUserModel instance) =>
       'linkDeviceId': instance.linkDeviceId,
       'linkApplicationId': instance.linkApplicationId,
       'token': instance.token,
-      'expireDate': instance.expireDate?.toIso8601String(),
+      'tokenExpireDate': instance.tokenExpireDate?.toIso8601String(),
       'userAccessAreaType':
           _$EnumManageUserAccessAreaTypesEnumMap[instance.userAccessAreaType],
       'userAccessUserType':

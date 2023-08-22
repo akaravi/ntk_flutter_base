@@ -57,14 +57,8 @@ NewsContentModel _$NewsContentModelFromJson(Map<String, dynamic> json) =>
       ..expireDate = json['expireDate'] == null
           ? null
           : DateTime.parse(json['expireDate'] as String)
-      ..moduleCoreCreatedBy = json['moduleCoreCreatedBy'] == null
-          ? null
-          : CoreUserModel.fromJson(
-              json['moduleCoreCreatedBy'] as Map<String, dynamic>)
-      ..moduleCoreUpdatedBy = json['moduleCoreUpdatedBy'] == null
-          ? null
-          : CoreUserModel.fromJson(
-              json['moduleCoreUpdatedBy'] as Map<String, dynamic>)
+      ..moduleCoreCreatedBy = json['moduleCoreCreatedBy'] as String?
+      ..moduleCoreUpdatedBy = json['moduleCoreUpdatedBy'] as String?
       ..source = json['source'] as String?
       ..comments = json['comments'] == null
           ? null

@@ -134,6 +134,8 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
       ..downloadLinkSrcQRCodeBase64 =
           json['downloadLinkSrcQRCodeBase64'] as String?
       ..linkFileIdSplashScreenSrc = json['linkFileIdSplashScreenSrc'] as String?
+      ..favorited = json['downloadLinkSrcByDomainQRCodeBase64'] as String?
+      ..scored = json['filePathOnServer'] as String?
       ..aboutUsTitle = json['aboutUsTitle'] as String?
       ..aboutUsDescription = json['aboutUsDescription'] as String?
       ..aboutUsTel = json['aboutUsTel'] as String?
@@ -162,9 +164,7 @@ ApplicationAppModel _$ApplicationAppModelFromJson(Map<String, dynamic> json) =>
           json['aboutUsPrivacyPolicyHtmlBody'] as String?
       ..linkFileIdIconSrc = json['linkFileIdIconSrc'] as String?
       ..linkFileIdLogoSrc = json['linkFileIdLogoSrc'] as String?
-      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?
-      ..favorited = json['favorited'] as bool?
-      ..scored = json['scored'] as bool?;
+      ..linkMainImageIdSrc = json['linkMainImageIdSrc'] as String?;
 
 Map<String, dynamic> _$ApplicationAppModelToJson(
         ApplicationAppModel instance) =>
@@ -247,6 +247,8 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'downloadLinkUpdateSrc': instance.downloadLinkUpdateSrc,
       'downloadLinkSrcQRCodeBase64': instance.downloadLinkSrcQRCodeBase64,
       'linkFileIdSplashScreenSrc': instance.linkFileIdSplashScreenSrc,
+      'downloadLinkSrcByDomainQRCodeBase64': instance.favorited,
+      'filePathOnServer': instance.scored,
       'aboutUsTitle': instance.aboutUsTitle,
       'aboutUsDescription': instance.aboutUsDescription,
       'aboutUsTel': instance.aboutUsTel,
@@ -273,8 +275,6 @@ Map<String, dynamic> _$ApplicationAppModelToJson(
       'linkFileIdIconSrc': instance.linkFileIdIconSrc,
       'linkFileIdLogoSrc': instance.linkFileIdLogoSrc,
       'linkMainImageIdSrc': instance.linkMainImageIdSrc,
-      'favorited': instance.favorited,
-      'scored': instance.scored,
     };
 
 const _$EnumRecordStatusEnumMap = {

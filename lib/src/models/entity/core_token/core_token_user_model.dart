@@ -22,8 +22,8 @@ class CoreTokenUserModel extends BaseEntity<String> {
  int? linkApplicationId;
   @JsonKey(name: 'token')
   String? token;
-  @JsonKey(name: 'expireDate')
-  DateTime? expireDate;
+  @JsonKey(name: 'tokenExpireDate')
+  DateTime? tokenExpireDate;
   @JsonKey(name: 'userAccessAreaType')
   EnumManageUserAccessAreaTypes? userAccessAreaType;
   @JsonKey(name: 'userAccessUserType')
