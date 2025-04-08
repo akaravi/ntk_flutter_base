@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:ntk_cms_flutter_base/src/models/entity/base/filter_model.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -5,17 +7,27 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'base_controller.dart';
 
 abstract class BaseListController<model> extends BaseController {
-  PagingController pagingController =
-      PagingController<int, model>(firstPageKey: 1);
+  late PagingController pagingController;
   late FilterModel filter;
+  var error;
 
   void showFilters(BuildContext context);
 
   BaseListController({FilterModel? filterModel})
-      : this.filter = filterModel ?? FilterModel();
-
-
-
+      : this.filter = filterModel ?? FilterModel() {
+    pagingController = PagingController<int, model>(
+      getNextPageKey: (state) => (state.keys?.last ?? 0) + 1,
+      fetchPage: (pageKey) {
+        filter.currentPageNumber = pageKey;
+        try {
+          return service(filter);
+        } catch (e) {
+          error = e;
+          return List.empty();
+        }
+      },
+    );
+  }
 
   initPageController() {
     //karavi filter ??= FilterModel();
@@ -26,13 +38,13 @@ abstract class BaseListController<model> extends BaseController {
     filter.currentPageNumber = pageKey;
     try {
       var list = await service(filter);
-      if (list.length == filter.rowPerPage) {
-        pagingController.appendPage(list, (filter.rowPerPage + 1));
-      } else {
-        pagingController.appendLastPage(list);
-      }
+      // if (list.length == filter.rowPerPage) {
+      // pagingController.appendPage(list, (filter.rowPerPage + 1));
+      // } else {
+      // pagingController.appendLastPage(list);
+      // }
     } catch (error) {
-      pagingController.error = error;
+      // pagingController.error = error;
     }
   }
 

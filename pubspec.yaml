@@ -56,7 +56,7 @@ dependencies:
   #for intro view
   intro_slider: ^3.0.3
   #for pagination
-  infinite_scroll_pagination: ^3.2.0
+  infinite_scroll_pagination: ^5.0.0
   #for lunch urls
   url_launcher: ^6.1.10
   #for format date

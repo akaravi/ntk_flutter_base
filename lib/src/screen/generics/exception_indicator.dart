@@ -32,7 +32,7 @@ class ExceptionIndicator extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
               if (message != null)
                 const SizedBox(

@@ -46,7 +46,7 @@ class _BaseNewsModelAdapterState extends State<BaseNewsModelAdapter> {
                   Expanded(
                     child: Text(
                       widget.model.title!,
-                      style: textTheme.subtitle1,
+                      style: textTheme.displayMedium,
                     ),
                   ),
                   if (widget.model.linkMainImageIdSrc != null)
@@ -67,11 +67,11 @@ class _BaseNewsModelAdapterState extends State<BaseNewsModelAdapter> {
               ),
               Text(
                 widget.model.description!,
-                style: textTheme.bodyText2,
+                style: textTheme.bodyMedium,
               ),
               Text(
                 '$_formattedReleaseDate ($_formattedDurationInMinutes)',
-                style: textTheme.bodyText2,
+                style: textTheme.bodyMedium,
               )
             ],
           ),

@@ -1,6 +1,6 @@
 {
-    "name": "ntk_flutter_base",
-    "short_name": "ntk_flutter_base",
+    "name": "ntk_cms_flutter_base",
+    "short_name": "ntk_cms_flutter_base",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

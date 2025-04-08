@@ -46,7 +46,7 @@ class _TicketModelAdapterState extends State<TicketModelAdapter> {
                   Expanded(
                     child: Text(
                       widget.model.title!,
-                      style: textTheme.subtitle1,
+                      style: textTheme.displayMedium,
                     ),
                   ),
                   if (widget.model.linkFileIdsSrc != null)
@@ -67,11 +67,11 @@ class _TicketModelAdapterState extends State<TicketModelAdapter> {
               ),
               Text(
                 widget.model.email!,
-                style: textTheme.bodyText2,
+                style: textTheme.bodyMedium,
               ),
               Text(
                 '$_formattedReleaseDate ($_formattedDurationInMinutes)',
-                style: textTheme.bodyText2,
+                style: textTheme.bodyMedium,
               )
             ],
           ),

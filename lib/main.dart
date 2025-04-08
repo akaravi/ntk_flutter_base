@@ -10,14 +10,15 @@ void main() async {
   await runZonedGuarded(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
+      NTKApplication.get(packageName: "ntk.android.base");
       //read static data of app
       await MyApplicationPreference().read();
-
+String s="";
       //main thread of creating app
       runApp(const MyApp());
       // runApp( Test());
     },
-    (error, st) => print(error),
+    (error, st) => print(error.toString()+"mmmm"),
   );
 }
 
