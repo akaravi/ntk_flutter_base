@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:ntk_cms_flutter_base/src/index.dart';
 import 'package:ntk_cms_flutter_base/src/ntk_application.dart';
 import 'package:flutter/material.dart';
+import 'package:ntk_cms_flutter_base/test_base_module.dart';
 import 'src/backend/config/my_application_preference.dart';
 import 'src/screen/splash.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: NewsList(),
+      home: Tati(),
       // home: ( ArticleList()),
     );
   }

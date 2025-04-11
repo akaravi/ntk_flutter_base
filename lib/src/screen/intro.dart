@@ -22,10 +22,10 @@ class Intro extends StatelessWidget {
   }
 
   createSlides(List<ApplicationIntroModel>? data) {
-    List<Slide> list = [];
+    List<ContentConfig> list = [];
     data = data ?? [];
     for (var element in data) {
-      list.add(Slide(
+      list.add(ContentConfig(
         title: element.title,
         maxLineTitle: 2,
         pathImage: element.linkMainImageIdSrc,
@@ -49,7 +49,7 @@ class Intro extends StatelessWidget {
 }
 
 class IntroWidget extends StatelessWidget {
-  List<Slide> slides;
+  List<ContentConfig> slides;
 
   IntroWidget(this.slides, {Key? key}) : super(key: key);
 
@@ -57,7 +57,7 @@ class IntroWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntroSlider(
       // List slides
-      slides: slides,
+      listContentConfig: slides,
 
       // Skip button
       renderSkipBtn: renderSkipBtn(),
@@ -73,13 +73,13 @@ class IntroWidget extends StatelessWidget {
       doneButtonStyle: myButtonStyle(),
       scrollPhysics: const BouncingScrollPhysics(),
       // Dot indicator
-      colorDot: const Color(0x33FFA8B0),
-      colorActiveDot: const Color(0xffFFA8B0),
-      sizeDot: 13.0,
+      // colorDot: const Color(0x33FFA8B0),
+      // colorActiveDot: const Color(0xffFFA8B0),
+      // sizeDot: 13.0,
 
       // Show or hide status bar
-      hideStatusBar: true,
-      backgroundColorAllSlides: Colors.grey,
+      // hideStatusBar: true,
+      backgroundColorAllTabs: Colors.grey,
 
     );
   }

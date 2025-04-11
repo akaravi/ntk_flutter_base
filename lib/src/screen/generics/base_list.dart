@@ -23,11 +23,15 @@ abstract class BaseModelListScreen<model> extends StatefulWidget {
 
 class _BaseListScreenState<model> extends State<BaseModelListScreen> {
   PagingState<int, model> _state = PagingState();
+_BaseListScreenState(){
+  widget.controller.state=_state;
+}
   @override
   void initState() {
     widget.controller.initPageController();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,28 +57,19 @@ class _BaseListScreenState<model> extends State<BaseModelListScreen> {
         onRefresh: () => Future.sync(
           () => widget.controller.pagingController.refresh(),
         ),
-        // child: PagedListView.separated(
-        //   pagingController: widget.controller.pagingController,
-        //   builderDelegate: PagedChildBuilderDelegate(
-        //     itemBuilder: (context, article, index) =>
-        //         widget.controller.widgetAdapter(context, article, index),
-        //     firstPageErrorIndicatorBuilder: (context) => ErrorIndicator(
-        //       error: widget.controller.pagingController.error,
-        //       onTryAgain: () => widget.controller.pagingController.refresh(),
-        //     ),
-        //     noItemsFoundIndicatorBuilder: (context) => EmptyListIndicator(),
-        //   ),
-        //   padding: const EdgeInsets.all(16),
-        //   separatorBuilder: (context, index) => const SizedBox(
-        //     height: 16,
-        //   ),
-        // ),
+
         child: PagingListener(
           controller: widget.controller.pagingController,
-          builder: (context, state, fetchNextPage) => PagedListView<int, model>(
-            state: _state,
+          builder: (context, state, fetchNextPage) => PagedListView(
+            padding: const EdgeInsets.all(16),
+            state: state,
             fetchNextPage: fetchNextPage,
             builderDelegate: PagedChildBuilderDelegate(
+              firstPageErrorIndicatorBuilder: (context) => ErrorIndicator(
+                error: widget.controller.pagingController.error,
+                onTryAgain: () => widget.controller.pagingController.refresh(),
+              ),
+              noItemsFoundIndicatorBuilder: (context) => EmptyListIndicator(),
               itemBuilder: (context, item, index) =>
                   widget.controller.widgetAdapter(context, item, index),
             ),

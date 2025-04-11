@@ -10,7 +10,7 @@ abstract class BaseListController<model> extends BaseController {
   late PagingController pagingController;
   late FilterModel filter;
   var error;
-
+  PagingState<int,model> state=  PagingState<int,model>();
   void showFilters(BuildContext context);
 
   BaseListController({FilterModel? filterModel})
@@ -18,13 +18,10 @@ abstract class BaseListController<model> extends BaseController {
     pagingController = PagingController<int, model>(
       getNextPageKey: (state) => (state.keys?.last ?? 0) + 1,
       fetchPage: (pageKey) {
+
         filter.currentPageNumber = pageKey;
-        try {
-          return service(filter);
-        } catch (e) {
-          error = e;
-          return List.empty();
-        }
+        return service(filter);
+
       },
     );
   }
