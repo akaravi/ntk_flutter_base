@@ -7,20 +7,19 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'base_controller.dart';
 
 abstract class BaseListController<model> extends BaseController {
-  late PagingController pagingController;
+  late PagingController<int,model> pagingController;
   late FilterModel filter;
   var error;
-  PagingState<int,model> state=  PagingState<int,model>();
   void showFilters(BuildContext context);
 
   BaseListController({FilterModel? filterModel})
       : this.filter = filterModel ?? FilterModel() {
     pagingController = PagingController<int, model>(
       getNextPageKey: (state) => (state.keys?.last ?? 0) + 1,
-      fetchPage: (pageKey) {
+      fetchPage: (pageKey) async {
 
         filter.currentPageNumber = pageKey;
-        return service(filter);
+        return await service(filter);
 
       },
     );
@@ -31,19 +30,19 @@ abstract class BaseListController<model> extends BaseController {
     filter = FilterModel();
   }
 
-  Future<void> fetchPage(int pageKey) async {
-    filter.currentPageNumber = pageKey;
-    try {
-      var list = await service(filter);
-      // if (list.length == filter.rowPerPage) {
-      // pagingController.appendPage(list, (filter.rowPerPage + 1));
-      // } else {
-      // pagingController.appendLastPage(list);
-      // }
-    } catch (error) {
-      // pagingController.error = error;
-    }
-  }
+  // Future<void> fetchPage(int pageKey) async {
+  //   filter.currentPageNumber = pageKey;
+  //   try {
+  //     var list = await service(filter);
+  //     // if (list.length == filter.rowPerPage) {
+  //     // pagingController.appendPage(list, (filter.rowPerPage + 1));
+  //     // } else {
+  //     // pagingController.appendLastPage(list);
+  //     // }
+  //   } catch (error) {
+  //     // pagingController.error = error;
+  //   }
+  // }
 
   Future<List<model>> service(FilterModel filter);
 

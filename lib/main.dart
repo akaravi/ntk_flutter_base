@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Tati(),
-      // home: ( ArticleList()),
+      // home: Tati(),
+      home: ( NewsList()),
     );
   }
 }

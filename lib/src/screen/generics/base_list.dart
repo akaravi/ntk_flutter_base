@@ -22,9 +22,9 @@ abstract class BaseModelListScreen<model> extends StatefulWidget {
 }
 
 class _BaseListScreenState<model> extends State<BaseModelListScreen> {
-  PagingState<int, model> _state = PagingState();
+
 _BaseListScreenState(){
-  widget.controller.state=_state;
+
 }
   @override
   void initState() {
